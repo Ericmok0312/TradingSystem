@@ -27,7 +27,7 @@ This trading_system plans to use the interface from FUTU to implement the trade 
 
 
 
-### File Structure explaination:
+### File Structure Explaination:
 
 **API**
 
