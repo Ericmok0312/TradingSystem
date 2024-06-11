@@ -30,22 +30,29 @@ This trading_system plans to use the interface from FUTU to implement the trade 
 ### File Structure explaination:
 
 **API**
+
 Contains APIs from Brokerage platforms
+
 Futu : 富途牛牛
 
 **DataStruct**
+
 Definition of all base data structure used in the system
 
 **Helper**
+
 Definition of all common helper functions
 
 **Interface**
+
 Interfaces of the system, all classes should inherit from the interface
 
 **Log**
+
 Log functions used in the system
 
 **Trader**
+
 Encapuslation of brokerage apis to accomodate the system
 
 ### System structure:
