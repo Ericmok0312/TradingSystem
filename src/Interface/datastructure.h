@@ -46,19 +46,19 @@ namespace ts{
 
             string symbol_;
             string time_;
-            double hPrice {0.0}; 
-            double oPrice {0.0};
-            double lPrice {0.0};
-            double cPrice {0.0};
-            double lcPrice {0.0};
+            double hPrice_ {0.0}; 
+            double oPrice_ {0.0};
+            double lPrice_ {0.0};
+            double cPrice_ {0.0};
+            double lcPrice_ {0.0};
 
-            int64_t volume {0}; 
+            int64_t volume_ {0}; 
 
-            double turnover {0.0};
-            double turnoverRate {0.0};
-            double pe {0.0};
-            double changeRate {0.0};
-            double timestamp {0.0};
+            double turnover_ {0.0};
+            double turnoverRate_ {0.0};
+            double pe_ {0.0};
+            double changeRate_ {0.0};
+            double timestamp_ {0.0};
 
     };
 
@@ -86,8 +86,8 @@ namespace ts{
 
     Special indicators for options
     sPrice : strike price
-    contractSize : contract size
-    openInterest :  total number of open derivative contracts that haven't been settled
+    conSize : contract size
+    opInterest :  total number of open derivative contracts that haven't been settled
     impVolatility : implied volatility
 
 
@@ -99,7 +99,7 @@ namespace ts{
 
     
     */
-   class DLL_EXPORT_IMPORT Quote{
+    class DLL_EXPORT_IMPORT Quote{
         public:
             Quote(){};
             ~Quote(){};
@@ -107,42 +107,42 @@ namespace ts{
 
             string symbol_;
             string time_;
-            double hPrice {0.0}; 
-            double oPrice {0.0};
-            double lPrice {0.0};
-            double cPrice {0.0};
-            double lcPrice {0.0};
-            double pSpread {0.0};
+            double hPrice_ {0.0}; 
+            double oPrice_ {0.0};
+            double lPrice_ {0.0};
+            double cPrice_ {0.0};
+            double lcPrice_ {0.0};
+            double pSpread_ {0.0};
 
 
-            int64_t volume {0}; 
+            int64_t volume_ {0}; 
 
-            double turnover {0.0};
-            double turnoverRate {0.0};
-            double amplitude {0.0};
+            double turnover_ {0.0};
+            double turnoverRate_ {0.0};
+            double amplitude_ {0.0};
             
-            double pe {0.0};
-            double changeRate {0.0};
-            double timestamp {0.0};
+            double pe_ {0.0};
+            double changeRate_ {0.0};
+            double timestamp_ {0.0};
 
             //special indicators for options
 
-            double sPrice {0.0};
-            double contractSize {0.0};
-            int32_t openInterest {0};
-            double impVolatility {0.0};
-            double premium {0.0};
-            double delta {0.0};
-            double gamma {0.0};
-            double vega {0.0};
-            double theta {0.0};
-            double rho {0.0};
+            double sPrice_ {0.0};
+            double conSize_ {0.0};
+            int32_t opInterest_ {0};
+            double impVolatility_ {0.0};
+            double premium_ {0.0};
+            double delta_ {0.0};
+            double gamma_ {0.0};
+            double vega_ {0.0};
+            double theta_ {0.0};
+            double rho_ {0.0};
 
 
             //special indicators for futures
-            double lsprice  {0.0};
-            int32_t position {0};
-            int32_t pChange {0};
+            double lsprice_  {0.0};
+            int32_t position_ {0};
+            int32_t pChange_ {0};
    };
 }
 
