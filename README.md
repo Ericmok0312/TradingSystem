@@ -35,21 +35,19 @@ Contains APIs from Brokerage platforms
 
 Futu : 富途牛牛
 
-**DataStruct**
-
-Definition of all base data structure used in the system
 
 **Helper**
 
 Definition of all common helper functions
 
+Log functions used in the system
+
 **Interface**
 
 Interfaces of the system, all classes should inherit from the interface
 
-**Log**
+Data strucutre used in the system
 
-Log functions used in the system
 
 **Trader**
 
@@ -63,9 +61,13 @@ The system plan to have an C-S desgin, where the client is written in Python, se
 
 The hierarchy of the system is described as below
 
-Trade system engine <- Managers/Components <- individual processes for strategy / data etc
+Trade system engine <- Managers/Components <- individual processes for strategy / data /trader etc
 
 The communication within the server is done by memory sharing(kungfu) and message(nanomsg)
 
 
 
+## TODO
+1. Define basic data structures
+2. Define trader interfaces
+3. Encapsulate Futu api
