@@ -19,7 +19,41 @@ using namespace std;
 
 
 namespace ts{
-    
+    /*
+        Engine state
+        For futu, the connection is done on its OpenD software, no need to handle other situations 
+
+        DISCONNECTED = not connected to the futu's OpenD
+        CONNECTED = connected to OpenD
+        STOP = Engine stop
+    */
+
+    enum Estate :int32_t{
+        DISCONNECTED = 0,
+        CONNECTED ,
+        STOP 
+    };
+    /*
+        Engine trading mode
+        HISTORY = using history data from data base to simulate trade, used for testing
+        SIMULATION = using FUTU's simulation mode for trading on real market
+        REAL = trading in the real market
+    */
+    enum ETmode :int32_t{
+        HISTORY = 0,
+        SIMULATION,
+        REAL
+    };
+    /*
+    Whenther trading is allowed in the API
+        LOCKED = not allowed
+        UNLOCKED = allowed
+    */
+    enum ETlock: int32_t{
+        LOCKED =0,
+        UNLOCKED
+    };
+
 
     /*
     Kline - K-line for stock transection. This system uses kline due to authentication limitation of FUTU api
