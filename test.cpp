@@ -1,11 +1,34 @@
 #include<Helper/logger.h>
 using namespace std;
 using namespace ts;
-int main(){
+#include <thread>
 
+void func_1(){
     std::shared_ptr<spdlog::logger> LOG = Logger::getInstance();
 
-    LOG->info("this is test");
+    for(int i=0; i<100; i++){
+        LOG->info("this is test 1");
+        std::this_thread::sleep_for(std::chrono::milliseconds(5));
+    }
+}
+
+void func_2(){
+    std::shared_ptr<spdlog::logger> LOG = Logger::getInstance();
+
+    for(int i=0; i<50; i++){
+        LOG->info("this is test 2");
+        std::this_thread::sleep_for(std::chrono::milliseconds(10));
+    }
+}
+
+
+int main(){
+
+    std::thread t1(func_1);
+    std::thread t2(func_2);
+
+    t1.join();
+    t2.join();
 
     return 0;
 }

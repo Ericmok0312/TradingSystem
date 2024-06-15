@@ -1,0 +1,3 @@
+/data/home/emk/Coding/Trading_system/TradingSystem/build/CMakeFiles/test.dir
+/data/home/emk/Coding/Trading_system/TradingSystem/build/CMakeFiles/edit_cache.dir
+/data/home/emk/Coding/Trading_system/TradingSystem/build/CMakeFiles/rebuild_cache.dir

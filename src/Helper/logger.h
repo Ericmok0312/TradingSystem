@@ -11,6 +11,7 @@
 #include "spdlog/logger.h"
 #include "spdlog/sinks/basic_file_sink.h"
 
+#define LOG_PATH "./logfiles"
 
 
 namespace ts
