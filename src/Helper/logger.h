@@ -11,7 +11,6 @@
 #include "spdlog/logger.h"
 #include "spdlog/sinks/basic_file_sink.h"
 
-#define LOG_PATH "./logfiles"
 
 
 namespace ts
@@ -24,8 +23,12 @@ namespace ts
             ~Logger: destructor
             log, error, warn : corresponding logging function
             getInstance: used for getting the same, firstly instantiated Logger object
-            init: used to initialize Logger
-    
+            logger_: a static shared pointer to spdlogger created
+            logFile_: file name of log file
+
+        NOTE: This Logger class make use of spdlog for safe logging in multithread system. 
+
+        spdlog is used instead of writing my own one for focusing on other more important part.
    
     */
     class Logger{
@@ -33,9 +36,10 @@ namespace ts
             Logger();
             ~Logger();
 
-            std::string logFile_;
             static std::shared_ptr<spdlog::logger> logger_;
             
+            static std::mutex mutex_;
+
             static std::shared_ptr<spdlog::logger> getInstance();
 
             inline void info(const char* context){

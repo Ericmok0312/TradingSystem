@@ -6,7 +6,7 @@ using namespace ts;
 void func_1(){
     std::shared_ptr<spdlog::logger> LOG = Logger::getInstance();
 
-    for(int i=0; i<100; i++){
+    while(true){
         LOG->info("this is test 1");
         std::this_thread::sleep_for(std::chrono::milliseconds(5));
     }
@@ -15,7 +15,7 @@ void func_1(){
 void func_2(){
     std::shared_ptr<spdlog::logger> LOG = Logger::getInstance();
 
-    for(int i=0; i<50; i++){
+    while(true){
         LOG->info("this is test 2");
         std::this_thread::sleep_for(std::chrono::milliseconds(10));
     }

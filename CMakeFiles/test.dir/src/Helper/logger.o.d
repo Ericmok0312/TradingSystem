@@ -263,4 +263,5 @@ CMakeFiles/test.dir/src/Helper/logger.o: \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/sinks/base_sink.h \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/sinks/base_sink-inl.h \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/sinks/basic_file_sink-inl.h \
- /usr/include/c++/8/sstream /usr/include/c++/8/bits/sstream.tcc
+ /usr/include/c++/8/sstream /usr/include/c++/8/bits/sstream.tcc \
+ /usr/include/c++/8/iomanip
