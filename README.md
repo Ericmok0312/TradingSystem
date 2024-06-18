@@ -25,7 +25,15 @@ hikyuu
 
 This trading_system plans to use the interface from FUTU to implement the trade operations, quotings and data.
 
+### Dependencies
 
+**spdlog**
+
+This is a thread-safe light-weight log lib.
+
+**NNG**
+
+This is a successor of nanomsg. It is a lightweight, broker-less library,offering a simple API to solve common recurring messaging problems. This library is used to achieve the in-system communication as an aid of sharing memory approach.
 
 ### File Structure Explaination:
 
