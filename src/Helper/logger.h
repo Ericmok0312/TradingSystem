@@ -12,6 +12,12 @@
 #include "spdlog/sinks/basic_file_sink.h"
 
 
+#define LOG_FATAL(sqLogger, content) LOG4CPLUS_FATAL(sqLogger->getLogger(), content)
+#define LOG_ERROR(sqLogger, content) LOG4CPLUS_ERROR(sqLogger->getLogger(), content)
+#define LOG_INFO(sqLogger, content) LOG4CPLUS_INFO(sqLogger->getLogger(), content)
+#define LOG_DEBUG(sqLogger, content) LOG4CPLUS_DEBUG(sqLogger->getLogger(), content)
+
+
 
 namespace ts
 {
@@ -36,20 +42,29 @@ namespace ts
             Logger();
             ~Logger();
 
-            static std::shared_ptr<spdlog::logger> logger_;
+            static std::shared_ptr<spdlog::logger> spdlogger_;
             
+            static std::shared_ptr<Logger> logger_;
+
             static std::mutex mutex_;
 
-            static std::shared_ptr<spdlog::logger> getInstance();
+            static std::shared_ptr<Logger> getInstance();
 
             inline void info(const char* context){
-                logger_->info(context);
+                std::lock_guard<std::mutex> lock(mutex_);
+                spdlogger_->info(context);
             }
             inline void warn(const char* context){
-                logger_->warn(context);
+                std::lock_guard<std::mutex> lock(mutex_);
+                spdlogger_->warn(context);
+            }
+            inline void error(const char* context){
+                std::lock_guard<std::mutex> lock(mutex_);
+                spdlogger_->error(context);
             }
             inline void debug(const char* context){
-                logger_->debug(context);
+                std::lock_guard<std::mutex> lock(mutex_);
+                spdlogger_->debug(context);
             }
 
     };

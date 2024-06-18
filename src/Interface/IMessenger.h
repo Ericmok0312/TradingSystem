@@ -6,6 +6,7 @@
 #include <mutex>
 #include <memory>
 #include <string>
+#include <nng/nng.h>
 
 using namespace std;
 
@@ -35,7 +36,7 @@ IMessenger
 class IMessenger{
     protected:
 
-        std::shared_ptr<spdlog::logger> logger_;
+        std::shared_ptr<Logger> logger_;
 
     public:
         string name_;
@@ -56,7 +57,7 @@ IMsgq
 
     protected:
         protocol_: MSGQ_PROTOCOL type, indicating the protocol used
-        url : string indicating the location of this Msgq
+        url : string indicating the endpoint url
         logger_ : pointer to the logger
     
     public:
@@ -75,7 +76,7 @@ class IMsgq{
     protected:
         MSGQ_PROTOCOL protocol_;
         string url_;
-        std::shared_ptr<spdlog::logger> logger_;
+        std::shared_ptr<Logger> logger_;
 
     public:
         IMsgq(MSGQ_PROTOCOL protocol, string url);
@@ -94,14 +95,14 @@ MsgqNNG
 
     private:
         socket_ : indicating whether socket is initialized correctly
-        eid_ : indicating the endpoint id of the socket adding to
-        endpoint_ : url of the endpoint
+        id_ : indicating the id of the listener/dialer
+
     
     public:
         MsgqNNG(MSGQ_PROTOCOL protocol, string url, bool binding = true)
             -constructor, receiving 3 inputs
                 - protocol -> indicating protocol used by this object
-                - url -> indicating the DESTINATION url
+                - url -> indicating the url where the listener listen at / dialer connect to 
                 - binding -> indicating whether the endpoint can be used by other applications
 
         ~MsgqNNG(): destructor, handling proper destruction of NNG socket
@@ -117,9 +118,9 @@ MsgqNNG
 
 class MsgqNNG : public IMsgq {
     private:
-        int32_t sock_ = -1;
-        int32_t eid_ = 0;
-        string endpoint_;
+        nng_socket sock_ = NNG_SOCKET_INITIALIZER;
+        nng_listener Lid_ = NNG_LISTENER_INITIALIZER;
+        nng_dialer Did_ = NNG_DIALER_INITIALIZER;
 
     public:
         MsgqNNG(MSGQ_PROTOCOL protocol, string url, bool binding = true);

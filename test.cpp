@@ -4,19 +4,19 @@ using namespace ts;
 #include <thread>
 
 void func_1(){
-    std::shared_ptr<spdlog::logger> LOG = Logger::getInstance();
-
+    std::shared_ptr<Logger> LOG = Logger::getInstance();
+    int i =0;
     while(true){
-        LOG->info("this is test 1");
+        LOG->error(fmt::format("NNG connect sock {} error", i).c_str());
         std::this_thread::sleep_for(std::chrono::milliseconds(5));
     }
 }
 
 void func_2(){
-    std::shared_ptr<spdlog::logger> LOG = Logger::getInstance();
-
+    std::shared_ptr<Logger> LOG = Logger::getInstance();
+    int i=1;
     while(true){
-        LOG->info("this is test 2");
+        LOG->error(fmt::format("NNG connect sock {} error", i).c_str());
         std::this_thread::sleep_for(std::chrono::milliseconds(10));
     }
 }

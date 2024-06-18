@@ -12,7 +12,16 @@ namespace ts
     
     */
 
-    std::shared_ptr<spdlog::logger> Logger::logger_ = nullptr;
+    std::shared_ptr<Logger> Logger::logger_ = nullptr;
+
+    /*
+    
+    Logger::spdlogger_ : initialized into  nullptr
+    
+    */
+
+    std::shared_ptr<spdlog::logger> Logger::spdlogger_ = nullptr;
+
 
     /*
     
@@ -31,10 +40,10 @@ namespace ts
     */
    
 
-    std::shared_ptr<spdlog::logger> Logger::getInstance(){
+    std::shared_ptr<Logger> Logger::getInstance(){
         std::lock_guard<std::mutex> lock(mutex_);
         if(logger_==nullptr){
-            Logger{};
+            logger_ = std::make_shared<Logger>(Logger());
         }
         return logger_;
     }
@@ -75,7 +84,7 @@ namespace ts
 
         sinks.push_back(console_sink);
         sinks.push_back(file_sink);
-        logger_ = std::make_shared<spdlog::logger>("tslogger", begin(sinks), end(sinks));
+        spdlogger_ = std::make_shared<spdlog::logger>("tslogger", begin(sinks), end(sinks));
 
     }
 
