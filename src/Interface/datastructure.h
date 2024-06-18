@@ -3,8 +3,6 @@
 
 #include <string>
 #include <iostream>
-
-
 #if defined(_WIN32) || defined(_WIN64)
 #ifdef DLL_EXPORT
 #define DLL_EXPORT_IMPORT  __declspec(dllexport)   // export DLL information
@@ -53,6 +51,91 @@ namespace ts{
         LOCKED =0,
         UNLOCKED
     };
+
+    /*
+    MSG_TYPE: used to indicate which type of message the Msg object belongs to
+    
+    */
+
+    enum MSG_TYPE: int32_t
+    {
+        //futures
+        MSG_TYPE_FUTURE_KLINE = 1000,
+        MSG_TYPE_FUTURE_QUOTE = 1001,
+
+        //stocks
+        MSG_TYPE_STOCK_KLINE = 1002,
+        MSG_TYPE_STOCK_QUOTE = 1003,
+
+        //options
+        MSG_TYPE_OPTIONS_KLINE = 1004,
+        MSG_TYPE_OPTIONS_QUOTE = 1005,
+
+
+        //debug
+        MSG_TYPE_DEBUG = 4000
+
+    };
+
+
+
+    /*
+    Msg
+    Class for all message object in the system
+
+    Public: 
+        - destination_ : string indicating where the message goes to
+        - source_ : string indicating where the message comes from
+        - msgtype_ : MSG_TYPE (int32_t) inidcating which type of message it is.
+
+        Msg() : default constructor
+
+        Msg(const string& des, const string& src, MSG_TYPE type): constructor creatingt the message
+
+        ~Msg() : default destructor
+
+        virtual string serialize() : function used to convert Msg object into string
+
+        irtual void deserialize(const string& msgin) : function to unpack string-type message passed in.
+    */
+     
+
+    class Msg{
+        public:
+            string destination_;
+            string source_;
+            MSG_TYPE msgtype_;
+        
+        Msg(){};
+
+        Msg(const string& des, const string& src, MSG_TYPE type){
+            destination_ = des;
+            source_ = src;
+            msgtype_ = type;
+        }
+
+        virtual ~Msg(){};
+
+        virtual string serialize(){
+            return destination_ + "|" + source_ + "|" + std::to_string(msgtype_);
+            
+        }
+
+        virtual void deserialize(const string& msgin){}
+
+    };
+
+
+    /*
+    Msgq_protocol: enum class type indiocating the protocol used for the message delivery
+
+    enum class is used to avoid converting to int and compare with other enum/int
+    */
+
+   enum class MSGQ_PROTOCOL : uint8_t {
+    PAIR = 0, REQ, REP, PUB, SUB, PUSH, PULL
+   }
+
 
 
     /*
