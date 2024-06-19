@@ -1,5 +1,6 @@
 #include "Interface/IMessenger.h"
 #include "Helper/logger.h"
+#include "datastructure.h"
 #include <string>
 #include <sstream>
 #include <iostream>
@@ -67,7 +68,7 @@ namespace ts{
                 svalid += nng_listener_create(&Lid_, sock_, url_.c_str());
                 svalid += nng_listener_set_size(Lid_, NNG_OPT_SENDBUF, 8192);
                 svalid += nng_listener_start(Lid_,-1);
-
+                break;
 
             /*
             SUB:
@@ -82,7 +83,7 @@ namespace ts{
                 svalid += nng_dialer_create(&Did_, sock_, url_.c_str());
                 svalid += nng_dialer_set_ms(Did_, NNG_OPT_RECVTIMEO, nng_duration(100));
                 svalid += nng_dialer_start(Did_,-1);
-
+                break;
 
             /*
             PUSH
@@ -94,6 +95,7 @@ namespace ts{
                 svalid += nng_dialer_create(&Did_, sock_, url_.c_str());
                 svalid += nng_dialer_set_ms(Did_, NNG_OPT_RECVTIMEO, nng_duration(100));
                 svalid += nng_dialer_start(Did_,-1);
+                break;
             /*
             PULL
                 Similar to PUB
@@ -104,7 +106,7 @@ namespace ts{
                 svalid += nng_listener_create(&Lid_, sock_, url_.c_str());
                 svalid += nng_listener_set_size(Lid_, NNG_OPT_SENDBUF, 8192);
                 svalid += nng_listener_start(Lid_,-1);
-
+                break;
         }
         if (svalid ){
             logger_->error(fmt::format("NNG connect sock {} error", url_).c_str());
@@ -124,5 +126,194 @@ namespace ts{
     }
 
 
+    /*
+    void MsgqNNG::sendmsg(const string& str, int32_t immediate)
+    void MsgqNNG::sendmsg(const char* str, int32_t immediate)
+        - overloading fucntions for send
+        - immediate is the flag indicating that non-blocking mode is used
+        - const string / const char* are casted to char* via const_cast
+    */
+    void MsgqNNG::sendmsg(const string& str, int32_t immediate){
+        int success = nng_send(sock_, const_cast<char*>(str.data()), str.size()+1, immediate);
+        if (success){
+            logger_ ->error(fmt::format("NNG {} send msg error, return: {}", sock_.id, success).c_str());
+        }
+    }
 
+    void MsgqNNG::sendmsg(const char* str, int32_t immediate){
+        int success = nng_send(sock_, const_cast<char*>(str), strlen(str), immediate);
+        if (success){
+            logger_ ->error(fmt::format("NNG {} send msg error, return: {}", sock_.id, success).c_str());
+        }
+    }   
+
+    /*
+    
+    string MsgqNNG::recmsg(int32_t blockingflags)
+        - function used when message is received
+        - char* is created serving as buffer
+        - size_t len is used to store the size of the message
+        - temporary string msg is created from buf
+        - nng_free need to be used to free the memory allocated to buf in nng_recv
+        - Nonblocking mode is used
+
+        - if no message, empty string is returned
+
+    */
+
+    string MsgqNNG::recmsg(int32_t blockingflags){
+        char* buf = nullptr;
+        size_t len;
+        int success = nng_recv(sock_, buf, &len, blockingflags);
+        if (success==0 && buf){
+            string msg(buf, len);
+            nng_free(buf, len);
+            return msg;
+        }
+        else{
+            return string{};
+        }
+    }
+
+
+    //End of MsgqNNG
+
+
+    //Start of MsgqRMessenger
+
+    std::mutex MsgqRMessenger::sendlock_; //initialize static sendlock_
+
+    std::unique_ptr<IMsgq> MsgqRMessenger::msgq_server_; // sender used, shared by all engine
+
+    /*
+    Constructor
+        - initialize msgq_receiver
+        - msgq_sender are intialized by core engine later
+    */
+    MsgqRMessenger::MsgqRMessenger(string url_recv){
+        msgq_receiver_ = std::make_unique<MsgqNNG>(MSGQ_PROTOCOL::PULL, url_recv);
+    }
+
+
+    /*
+    Default destructor
+    */
+    MsgqRMessenger::~MsgqRMessenger(){}
+
+
+    /*
+    static void Send(std::shared_ptr<Msg> pmsg, int32_t mode = 0);
+        - static function used to send message out
+        - NOTE: mode : 1 -> zero-copy mode  2->Non-blocking mode
+        - sendlock_ is locked for thread-safety
+        - msgq_server->sendmsg is calledd
+    */
+
+    void MsgqRMessenger::Send(std::shared_ptr<Msg> pmsg, int flag){
+        string msg = pmsg->serialize();
+        lock_guard<std::mutex> lock(MsgqRMessenger::sendlock_);
+        MsgqRMessenger::msgq_server_->sendmsg(msg, flag);
+    }
+
+    /*
+    non-static void send(std::shared_ptr<Msg> pmsg, int32_t mode = 0);
+        - static function used to send message out
+        - NOTE: mode : 1 -> zero-copy mode  2->Non-blocking mode
+        - sendlock_ is locked for thread-safety
+        - msgq_server->sendmsg is calledd
+    */
+    void MsgqRMessenger::send(std::shared_ptr<Msg> pmsg, int flag){
+        string msg = pmsg->serialize();
+        lock_guard<std::mutex> lock(MsgqRMessenger::sendlock_);
+        MsgqRMessenger::msgq_server_->sendmsg(msg, flag);
+    }
+
+    /*
+    std::shared_ptr<Msg> MsgqRMessenger::recv(int32_t mode)
+        - recv function of MsgqRMessenger should NOT be called, as this will be done by rely
+        -NOTE: need to find why two different messenger are used
+    */
+    std::shared_ptr<Msg> MsgqRMessenger::recv(int flag){return nullptr;}
+
+
+    void MsgqRMessenger::relay(){
+        string msgpull = msgq_receiver_->recmsg(NNG_FLAG_ALLOC);
+        if(msgpull.empty()){
+            return;
+        }
+
+        if(msgpull[0] == RELAY_DESTINATION){
+            lock_guard<std::mutex> lock (MsgqTSMessenger::sendlock_);
+            MsgqTSMessenger::msgq_server_ -> sendmsg(msgpull);
+        }
+        else{
+            lock_guard<std::mutex> lock (MsgqRMessenger::sendlock_);
+            MsgqRMessenger::msgq_server_ -> sendmsg(msgpull);
+        }
+
+    }
+
+    //End of MsgqRMessenger
+
+    //Start of MsgqTSMessenger
+    std::mutex MsgqTSMessenger::sendlock_; //initialize sendlock_
+
+    std::unique_ptr<IMsgq> MsgqTSMessenger::msgq_server_; //initialize msgq_server_
+
+    //Construcotor of MsgqTSMessenger
+    MsgqTSMessenger::MsgqTSMessenger(string url_recv){
+        msgq_receiver_ = std::make_unique<MsgqNNG>(MSGQ_PROTOCOL::SUB, url_recv);
+    }
+
+    //Default destructor
+    MsgqTSMessenger::~MsgqTSMessenger(){}
+
+
+    //Send function similar to MsgqRMessenger
+    void MsgqTSMessenger::Send(std::shared_ptr<Msg> pmsg, int flag){
+        string msg = pmsg->serialize();
+        lock_guard<std::mutex> lock(MsgqTSMessenger::sendlock_);
+        MsgqTSMessenger::msgq_server_->sendmsg(msg, flag);
+    }
+    //send function similar to MsgqRMessenger
+    void MsgqTSMessenger::send(std::shared_ptr<Msg> pmsg, int flag){
+        string msg = pmsg->serialize();
+        lock_guard<std::mutex> lock(MsgqTSMessenger::sendlock_);
+        MsgqTSMessenger::msgq_server_->sendmsg(msg, flag);
+    }
+
+    std::shared_ptr<Msg> MsgqTSMessenger::recv(int flag){
+        string msgin = msgq_receiver_->recmsg(flag);
+        if (msgin.empty()) return nullptr;
+        try{
+            
+            string des;
+            string src;
+            string type;
+            stringstream stream_msgin(msgin);
+            getline(stream_msgin, des, SERIALIZATION_SEP);
+            getline(stream_msgin, src, SERIALIZATION_SEP);
+            getline(stream_msgin, type, SERIALIZATION_SEP);
+            MSG_TYPE msgtype = MSG_TYPE(stoi(type));
+
+            std::shared_ptr<Msg> msgheader;
+
+            switch (msgtype){
+                case MSG_TYPE_SUBSCRIBE_MARKET_DATA:
+                    msgheader = std::make_shared<SubscribeMsg>(des, src);
+                    break;
+            }
+            return msgheader;
+        }
+        catch(std::exception& e){
+            logger_->error(fmt::format("{} [Original msg]: {}",e.what(),msgin).c_str());
+        }
+    }
+
+
+
+    void MsgqTSMessenger::relay(){}; // relay function will not be called in MsgqTSMessenger
+    //End of MsgqTSMessenger
+
+    //
 }

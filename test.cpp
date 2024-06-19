@@ -7,7 +7,7 @@ void func_1(){
     std::shared_ptr<Logger> LOG = Logger::getInstance();
     int i =0;
     while(true){
-        LOG->error(fmt::format("NNG connect sock {} error", i).c_str());
+        LOG->error(fmt::format("NNG connect sock {} error {}", i, "error_code").c_str());
         std::this_thread::sleep_for(std::chrono::milliseconds(5));
     }
 }

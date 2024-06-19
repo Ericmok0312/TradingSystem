@@ -16,7 +16,15 @@
 using namespace std;
 
 
+
+
 namespace ts{
+
+
+    #define SERIALIZATION_SEP '|'
+    #define RELAY_DESTINATION '@'
+    #define DESTINATION_ALL '*'
+    #define DESTINATION_SEP '.'
     /*
         Engine state
         For futu, the connection is done on its OpenD software, no need to handle other situations 
@@ -71,6 +79,9 @@ namespace ts{
         MSG_TYPE_OPTIONS_KLINE = 1004,
         MSG_TYPE_OPTIONS_QUOTE = 1005,
 
+        //operations on TS
+
+        MSG_TYPE_SUBSCRIBE_MARKET_DATA = 2000,
 
         //debug
         MSG_TYPE_DEBUG = 4000
@@ -95,8 +106,6 @@ namespace ts{
         ~Msg() : default destructor
 
         virtual string serialize() : function used to convert Msg object into string
-
-        irtual void deserialize(const string& msgin) : function to unpack string-type message passed in.
     */
      
 
@@ -117,14 +126,24 @@ namespace ts{
         virtual ~Msg(){};
 
         virtual string serialize(){
-            return destination_ + "|" + source_ + "|" + std::to_string(msgtype_);
-            
+            return destination_ + SERIALIZATION_SEP + source_ + SERIALIZATION_SEP + std::to_string(msgtype_);
         }
 
-        virtual void deserialize(const string& msgin){}
 
     };
+    /*
+    SubscibeMsg
+        - Class inheriting Msg, specialize for subscribe market messgae
+    */
 
+    class SubscribeMsg: public Msg{
+        public:
+            SubscribeMsg(string des, string src):Msg(des, src, MSG_TYPE_SUBSCRIBE_MARKET_DATA), data_(){};
+            SubscribeMsg():Msg(){
+                msgtype_ = MSG_TYPE_STOCK_QUOTE;
+            }
+            ~SubscribeMsg(){}
+    };
 
     /*
     Msgq_protocol: enum class type indiocating the protocol used for the message delivery
@@ -134,8 +153,7 @@ namespace ts{
 
    enum class MSGQ_PROTOCOL : uint8_t {
     PAIR = 0, REQ, REP, PUB, SUB, PUSH, PULL
-   }
-
+   };
 
 
     /*
@@ -177,6 +195,17 @@ namespace ts{
             double changeRate_ {0.0};
             double timestamp_ {0.0};
 
+    };
+
+
+
+    class KlineMsg: public Msg{
+        public:
+            KlineMsg(string des, string src, MSG_TYPE klinetype):Msg(des, src, klinetype){};
+            KlineMsg():Msg(){
+                msgtype_ = MSG_TYPE_STOCK_KLINE;
+            }
+            ~KlineMsg(){}
     };
 
     /*

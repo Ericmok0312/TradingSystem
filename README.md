@@ -77,6 +77,6 @@ The communication within the server is done by memory sharing(kungfu) and messag
 
 ## TODO
 1. Define basic data structures (done)
-2. Deinfe logger and messager
+2. Deinfe logger (done) and messager
 3. Define trader interfaces
 4. Encapsulate Futu api

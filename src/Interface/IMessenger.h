@@ -15,20 +15,18 @@ namespace ts{
 /*
 
 IMessenger
-    Interface for MsgqEMessenger (Messenger used for the engine, except on trading strategy) and MsgqTSMessenger (Messenger used by trading strategy engine)
+    Interface for MsgqRMessenger (Messenger used for the engine, except on trading strategy) and MsgqTSMessenger (Messenger used by trading strategy engine)
 
     protected:
         logger_ : shared_ptr to the logger
 
     public:
-        name_ : string identifing the Messenger object
-
         IMessenger(): constructor
         virtual ~IMessenger(): destructor
 
         virtual void send(std::shared_ptr<ts::Msg>, int32_t mode = 0): pure virtual function for sending message, encapsulated the NNG functions
         virtual std::shared_ptr<Msg> recv(int32_t mode = 0) = 0: pure virtual function for receving message, encapsulated the NNG functions
-        virtual void relay() : pure virtual function for relaying the message -> all message are sent using MsgqEMessenger and cetain message is relayed by MsgqEMessenger to msgqTSMessenger
+        virtual void relay() : pure virtual function for relaying the message -> all message are sent using MsgqRMessenger and cetain message is relayed by MsgqRMessenger to msgqTSMessenger
                                by calling the static shared_ptr msgq_send_
 
 
@@ -39,7 +37,6 @@ class IMessenger{
         std::shared_ptr<Logger> logger_;
 
     public:
-        string name_;
         IMessenger();
         virtual ~IMessenger();
 
@@ -127,15 +124,15 @@ class MsgqNNG : public IMsgq {
         ~MsgqNNG();
 
         
-        virtual void sendmsg(const string& str, int32_t immediate = 1) override;
-        virtual void sendmsg(const char* str, int32_t immediate = 1) override;
-        virtual string recmsg(int32_t blockingflags = 1) override;
+        virtual void sendmsg(const string& str, int32_t flag) override;
+        virtual void sendmsg(const char* str, int32_t flag) override;
+        virtual string recmsg(int32_t flag) override;
 };
 
 
 /*
 
-MsgqEMessenger 
+MsgqRMessenger 
     Messenger class used in the system, msgq_server_ are set to static, the whole system will use the same msgq_server througout the system
     msgq_receiver is the unique IMsgq object registered within each engine, each engine has their own one.
     msgq_server is set up when the core engine is set up, all other peritheral engines will use this engine to push message to different destination msgq_receiver
@@ -147,8 +144,8 @@ MsgqEMessenger
         sendlock_ : static mutex ensuring thread-safe sending message
         msgq_server_ : static unique_ptr shared by the whole system, thread-safe sending is ensured with sendlock_
 
-        explicit MsgqEMessenger(string url_recv): constructor, with url of this messenger as input
-        virtual ~MsgqEMessenger() {}: default destructor
+        explicit MsgqRMessenger(string url_recv): constructor, with url of this messenger as input
+        virtual ~MsgqRMessenger() {}: default destructor
 
         
         static void Send(std::shared_ptr<Msg> pmsg, int32_t mode = 0): static send function for special uses, avoid to use, may delete later
@@ -156,24 +153,27 @@ MsgqEMessenger
 
         virtual void send(std::shared_ptr<Msg> pmsg, int32_t mode = 0): send function used by the messenger, sendlock_ will be locked before sending message
         virtual std::shared_ptr<Msg> recv(int32_t mode = 0) {return nullptr;}: only useful in MsgqTSMessenger.
-        virtual void relay(): used in MsgqEMessenger to call MsgqTSMessenger for certain cases, calling the send function respectively
+        virtual void relay(): used in MsgqRMessenger to call MsgqTSMessenger for certain cases, calling the send function respectively
 */
 
-class MsgqEMessenger : public IMessenger {
+class MsgqRMessenger : public IMessenger {
  private:
     std::unique_ptr<IMsgq> msgq_receiver_;
 
  public:
-    explicit MsgqEMessenger(string url_recv);
-    virtual ~MsgqEMessenger() {}
 
     static mutex sendlock_;
     static std::unique_ptr<IMsgq> msgq_server_;
-    static void Send(std::shared_ptr<Msg> pmsg, int32_t mode = 0);
+
+    explicit MsgqRMessenger(string url_recv);
+    virtual ~MsgqRMessenger();
 
 
-    virtual void send(std::shared_ptr<Msg> pmsg, int32_t mode = 0);
-    virtual std::shared_ptr<Msg> recv(int32_t mode = 0) {return nullptr;}
+    static void Send(std::shared_ptr<Msg> pmsg, int flag);
+
+
+    virtual void send(std::shared_ptr<Msg> pmsg, int flag);
+    virtual std::shared_ptr<Msg> recv(int flag);
     virtual void relay();
 };
 
@@ -184,16 +184,16 @@ class MsgqTSMessenger : public IMessenger {
     std::unique_ptr<IMsgq> msgq_receiver_;
 
  public:
-    explicit MsgqTSMessenger(string url_recv);
-    virtual ~MsgqTSMessenger() {}
 
     static mutex sendlock_;
     static std::unique_ptr<IMsgq> msgq_server_;
-    static void Send(std::shared_ptr<Msg> pmsg, int32_t mode = 0);
+    
+    explicit MsgqTSMessenger(string url_recv);
+    virtual ~MsgqTSMessenger();
 
-
-    virtual void send(std::shared_ptr<Msg> pmsg, int32_t mode = 0);
-    virtual std::shared_ptr<Msg> recv(int32_t mode = 0);
+    static void Send(std::shared_ptr<Msg> pmsg, int flag);
+    virtual void send(std::shared_ptr<Msg> pmsg, int flag);
+    virtual std::shared_ptr<Msg> recv(int flag);
     virtual void relay();
 };
 
