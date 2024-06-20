@@ -1,1 +1,1 @@
-/usr/bin/c++ -rdynamic CMakeFiles/test.dir/test.o CMakeFiles/test.dir/src/Helper/logger.o -o test  -lpthread 
+/usr/bin/c++ -rdynamic CMakeFiles/test.dir/test.o CMakeFiles/test.dir/src/Helper/logger.o CMakeFiles/test.dir/src/Interface/IEngine.o CMakeFiles/test.dir/src/Interface/IMessenger.o -o test   -L/data/home/emk/Coding/Trading_system/TradingSystem/src/lib  -Wl,-rpath,/data/home/emk/Coding/Trading_system/TradingSystem/src/lib -lpthread -Wl,-Bstatic -lnng -Wl,-Bdynamic 

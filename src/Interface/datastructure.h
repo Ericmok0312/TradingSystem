@@ -138,7 +138,7 @@ namespace ts{
 
     class SubscribeMsg: public Msg{
         public:
-            SubscribeMsg(string des, string src):Msg(des, src, MSG_TYPE_SUBSCRIBE_MARKET_DATA), data_(){};
+            SubscribeMsg(string des, string src):Msg(des, src, MSG_TYPE_SUBSCRIBE_MARKET_DATA){};
             SubscribeMsg():Msg(){
                 msgtype_ = MSG_TYPE_STOCK_QUOTE;
             }

@@ -207,6 +207,9 @@ CMAKE_STATIC_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 //Path to a program.
 CMAKE_STRIP:FILEPATH=/usr/bin/strip
 
+//Vcpkg toolchain file
+CMAKE_TOOLCHAIN_FILE:STRING=/data/home/emk/Coding/Trading_system/TradingSystem/vcpkg/scripts/buildsystems/vcpkg.cmake
+
 //If this value is on, makefiles will be generated without the
 // .SILENT directive, and all commands will be echoed to the console
 // during the make.  This is useful for debugging only. With Visual
@@ -218,6 +221,9 @@ EXECUTABLE_OUTPUT_PATH:PATH=
 
 //Single output directory for building all libraries.
 LIBRARY_OUTPUT_PATH:PATH=
+
+//The directory containing a CMake configuration file for nng.
+nng_DIR:PATH=nng_DIR-NOTFOUND
 
 //Value Computed by CMake
 ts_BINARY_DIR:STATIC=/data/home/emk/Coding/Trading_system/TradingSystem

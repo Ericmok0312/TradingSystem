@@ -52,7 +52,7 @@ namespace ts{
 
     //Start of MsgqNNG
 
-    MsgqNNG::MsgqNNG(MSGQ_PROTOCOL protocol, string url, bool binding = true):IMsgq(protocol, url){
+    MsgqNNG::MsgqNNG(MSGQ_PROTOCOL protocol, string url, bool binding):IMsgq(protocol, url){
         int svalid = 0;
         switch(protocol_){
             /*
@@ -63,25 +63,28 @@ namespace ts{
                 Start the listener, -1 is dummy input
             */  
             case MSGQ_PROTOCOL::PUB :
-
-                svalid += nng_pub0_open(&sock_);
-                svalid += nng_listener_create(&Lid_, sock_, url_.c_str());
-                svalid += nng_listener_set_size(Lid_, NNG_OPT_SENDBUF, 8192);
-                svalid += nng_listener_start(Lid_,-1);
+                svalid = nng_pub0_open(&sock_);
+                svalid = nng_listener_create(&Lid_, sock_, url_.c_str());   
+                svalid = nng_socket_set_size(sock_, NNG_OPT_SENDBUF, size_t(8192));
+                svalid = nng_listener_start(Lid_,0);
                 break;
 
             /*
             SUB:
                 Create a sub socket with nng_pub0_open
                 Create a dialer with nng_dialer_create
-                Setting the timeout (100ms) for the dialer
+                Setting the timeout (100ms) for the socket (not dialer, will lead to error)
+                Setting receive buffer for the socket
+                NOTE: setting subscribe for the socket (This is important)
                 Start the dialer, -1 is dummy input
             */  
             case MSGQ_PROTOCOL::SUB :
 
                 svalid += nng_sub0_open(&sock_);
                 svalid += nng_dialer_create(&Did_, sock_, url_.c_str());
-                svalid += nng_dialer_set_ms(Did_, NNG_OPT_RECVTIMEO, nng_duration(100));
+                svalid += nng_socket_set(sock_, NNG_OPT_SUB_SUBSCRIBE, "", 0);
+                svalid += nng_socket_set_ms(sock_, NNG_OPT_RECVTIMEO, nng_duration(100));
+                //svalid += nng_socket_set_size(sock_, NNG_OPT_RECVBUF, size_t(8192));
                 svalid += nng_dialer_start(Did_,-1);
                 break;
 
@@ -90,28 +93,27 @@ namespace ts{
                 Similar to SUB
             */
             case MSGQ_PROTOCOL::PUSH :
-
-                svalid += nng_push0_open(&sock_);
+                svalid += nng_sub0_open(&sock_);
                 svalid += nng_dialer_create(&Did_, sock_, url_.c_str());
-                svalid += nng_dialer_set_ms(Did_, NNG_OPT_RECVTIMEO, nng_duration(100));
+                svalid += nng_socket_set_ms(sock_, NNG_OPT_RECVTIMEO, nng_duration(100));
                 svalid += nng_dialer_start(Did_,-1);
                 break;
+
             /*
             PULL
                 Similar to PUB
             */
             case MSGQ_PROTOCOL::PULL :
-
-                svalid += nng_pull0_open(&sock_);
-                svalid += nng_listener_create(&Lid_, sock_, url_.c_str());
-                svalid += nng_listener_set_size(Lid_, NNG_OPT_SENDBUF, 8192);
-                svalid += nng_listener_start(Lid_,-1);
+                svalid = nng_pub0_open(&sock_);
+                svalid = nng_listener_create(&Lid_, sock_, url_.c_str());   
+                svalid = nng_socket_set_size(sock_, NNG_OPT_SENDBUF, size_t(8192));
+                svalid = nng_listener_start(Lid_,0);
                 break;
         }
-        if (svalid ){
-            logger_->error(fmt::format("NNG connect sock {} error", url_).c_str());
+        if (svalid){
+            logger_->error(fmt::format("NNG connect sock {} error, error {}", url_, std::to_string(svalid).c_str()).c_str());
         }
-        assert(svalid);
+        assert(svalid==0);
 
     }
 
@@ -132,6 +134,7 @@ namespace ts{
         - overloading fucntions for send
         - immediate is the flag indicating that non-blocking mode is used
         - const string / const char* are casted to char* via const_cast
+        NOTE: the buffer size is IMPORTANT, else will lead to error
     */
     void MsgqNNG::sendmsg(const string& str, int32_t immediate){
         int success = nng_send(sock_, const_cast<char*>(str.data()), str.size()+1, immediate);
@@ -141,7 +144,7 @@ namespace ts{
     }
 
     void MsgqNNG::sendmsg(const char* str, int32_t immediate){
-        int success = nng_send(sock_, const_cast<char*>(str), strlen(str), immediate);
+        int success = nng_send(sock_, const_cast<char*>(str), strlen(str)+1, immediate);
         if (success){
             logger_ ->error(fmt::format("NNG {} send msg error, return: {}", sock_.id, success).c_str());
         }
@@ -162,11 +165,12 @@ namespace ts{
     */
 
     string MsgqNNG::recmsg(int32_t blockingflags){
-        char* buf = nullptr;
+        void* buf = nullptr;
         size_t len;
-        int success = nng_recv(sock_, buf, &len, blockingflags);
-        if (success==0 && buf){
-            string msg(buf, len);
+        int success = nng_recv(sock_, &buf, &len, blockingflags);
+
+        if (success==0){
+            string msg(static_cast<char*>(buf));
             nng_free(buf, len);
             return msg;
         }
@@ -286,7 +290,6 @@ namespace ts{
         string msgin = msgq_receiver_->recmsg(flag);
         if (msgin.empty()) return nullptr;
         try{
-            
             string des;
             string src;
             string type;
@@ -301,6 +304,9 @@ namespace ts{
             switch (msgtype){
                 case MSG_TYPE_SUBSCRIBE_MARKET_DATA:
                     msgheader = std::make_shared<SubscribeMsg>(des, src);
+                    break;
+                case MSG_TYPE_DEBUG:
+                    msgheader = std::make_shared<Msg>(des, src,MSG_TYPE_DEBUG);
                     break;
             }
             return msgheader;

@@ -145,6 +145,36 @@ src/Helper/logger.s:
 .PHONY : src/Helper/logger.s
 
 # target to build an object file
+src/Interface/IEngine.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Interface/IEngine.o
+.PHONY : src/Interface/IEngine.o
+
+# target to preprocess a source file
+src/Interface/IEngine.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Interface/IEngine.i
+.PHONY : src/Interface/IEngine.i
+
+# target to generate assembly for a file
+src/Interface/IEngine.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Interface/IEngine.s
+.PHONY : src/Interface/IEngine.s
+
+# target to build an object file
+src/Interface/IMessenger.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Interface/IMessenger.o
+.PHONY : src/Interface/IMessenger.o
+
+# target to preprocess a source file
+src/Interface/IMessenger.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Interface/IMessenger.i
+.PHONY : src/Interface/IMessenger.i
+
+# target to generate assembly for a file
+src/Interface/IMessenger.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Interface/IMessenger.s
+.PHONY : src/Interface/IMessenger.s
+
+# target to build an object file
 test.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test.o
 .PHONY : test.o
@@ -171,6 +201,12 @@ help:
 	@echo "... src/Helper/logger.o"
 	@echo "... src/Helper/logger.i"
 	@echo "... src/Helper/logger.s"
+	@echo "... src/Interface/IEngine.o"
+	@echo "... src/Interface/IEngine.i"
+	@echo "... src/Interface/IEngine.s"
+	@echo "... src/Interface/IMessenger.o"
+	@echo "... src/Interface/IMessenger.i"
+	@echo "... src/Interface/IMessenger.s"
 	@echo "... test.o"
 	@echo "... test.i"
 	@echo "... test.s"

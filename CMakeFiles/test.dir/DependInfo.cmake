@@ -9,6 +9,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/data/home/emk/Coding/Trading_system/TradingSystem/src/Helper/logger.cpp" "CMakeFiles/test.dir/src/Helper/logger.o" "gcc" "CMakeFiles/test.dir/src/Helper/logger.o.d"
+  "/data/home/emk/Coding/Trading_system/TradingSystem/src/Interface/IEngine.cpp" "CMakeFiles/test.dir/src/Interface/IEngine.o" "gcc" "CMakeFiles/test.dir/src/Interface/IEngine.o.d"
+  "/data/home/emk/Coding/Trading_system/TradingSystem/src/Interface/IMessenger.cpp" "CMakeFiles/test.dir/src/Interface/IMessenger.o" "gcc" "CMakeFiles/test.dir/src/Interface/IMessenger.o.d"
   "/data/home/emk/Coding/Trading_system/TradingSystem/test.cpp" "CMakeFiles/test.dir/test.o" "gcc" "CMakeFiles/test.dir/test.o.d"
   )
 

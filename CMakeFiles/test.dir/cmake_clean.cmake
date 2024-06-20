@@ -1,6 +1,10 @@
 file(REMOVE_RECURSE
   "CMakeFiles/test.dir/src/Helper/logger.o"
   "CMakeFiles/test.dir/src/Helper/logger.o.d"
+  "CMakeFiles/test.dir/src/Interface/IEngine.o"
+  "CMakeFiles/test.dir/src/Interface/IEngine.o.d"
+  "CMakeFiles/test.dir/src/Interface/IMessenger.o"
+  "CMakeFiles/test.dir/src/Interface/IMessenger.o.d"
   "CMakeFiles/test.dir/test.o"
   "CMakeFiles/test.dir/test.o.d"
   "test"

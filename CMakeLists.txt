@@ -1,16 +1,18 @@
+set(CMAKE_TOOLCHAIN_FILE "${CMAKE_CURRENT_SOURCE_DIR}/vcpkg/scripts/buildsystems/vcpkg.cmake"
+  CACHE STRING "Vcpkg toolchain file")
 project(ts)
 set(CMAKE_MINIMUM_REQUIRED_VERSION 3.10.0)
 
-add_definitions(-std=c++11 -pthread)
+add_definitions(-pthread)
 
 
 include_directories(${PROJECT_SOURCE_DIR}/libs/spdlog-1.14.1/include)
+include_directories(${PROJECT_SOURCE_DIR}/libs/nng-1.8.0/include)
 include_directories(${PROJECT_SOURCE_DIR}/src)
 
-set (SRC test.cpp ./src/Helper/logger.cpp ./src/Interface/*.cpp )
+link_directories(${PROJECT_SOURCE_DIR}/src/lib/)
 
-add_executable(test test.cpp ./src/Helper/logger.cpp )
+file(GLOB SRC "${PROJECT_SOURCE_DIR}/src/Interface/*.cpp" "${PROJECT_SOURCE_DIR}/src/Helper/*.cpp")
+add_executable(test test.cpp ${SRC})
 target_link_libraries(test PRIVATE pthread)
-
-
-#target_link_libraries(test PRIVATE spdlog)
+target_link_libraries(test PRIVATE nng.a)

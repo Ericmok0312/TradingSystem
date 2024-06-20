@@ -1,6 +1,6 @@
 #include <cstdint>
 #include <atomic>
-#include <src/Interface/datastructure.h>
+#include <Interface/datastructure.h>
 
 #ifndef TRADINGSYSTEM_SRC_INTERFACE_IENGINE_H
 #define TRADINGSYSTEM_SRC_INTERFACEIENGINE_H

@@ -115,11 +115,12 @@ MsgqNNG
 
 class MsgqNNG : public IMsgq {
     private:
+        
+
+    public:
         nng_socket sock_ = NNG_SOCKET_INITIALIZER;
         nng_listener Lid_ = NNG_LISTENER_INITIALIZER;
         nng_dialer Did_ = NNG_DIALER_INITIALIZER;
-
-    public:
         MsgqNNG(MSGQ_PROTOCOL protocol, string url, bool binding = true);
         ~MsgqNNG();
 
