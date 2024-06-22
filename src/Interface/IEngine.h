@@ -1,6 +1,8 @@
 #include <cstdint>
 #include <atomic>
 #include <Interface/datastructure.h>
+#include <Helper/logger.h>
+#include <Interface/IMessenger.h>
 
 #ifndef TRADINGSYSTEM_SRC_INTERFACE_IENGINE_H
 #define TRADINGSYSTEM_SRC_INTERFACEIENGINE_H
@@ -61,14 +63,16 @@ namespace ts
             virtual void setTradeMode()= 0;
             virtual void lockTXN()= 0;
             virtual void unlockTXN()= 0;
+            virtual void subscribe(const string& code, Market market) = 0;
             //virtual bool connect() = 0;
         
         protected: 
-            //pointer to logger later
+
+            std::shared_ptr<ts::Logger> logger_;
             std::atomic<ts::Estate> estate_;
             std::atomic<ts::ETmode> etrademode_;
             std::atomic<ts::ETlock> etradelock_;
-            //pointer to messanger added later
+            std::unique_ptr<ts::IMessenger> messenger_;
     };
 
 } // namespace ts

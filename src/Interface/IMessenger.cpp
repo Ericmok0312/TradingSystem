@@ -84,7 +84,6 @@ namespace ts{
                 svalid += nng_dialer_create(&Did_, sock_, url_.c_str());
                 svalid += nng_socket_set(sock_, NNG_OPT_SUB_SUBSCRIBE, "", 0);
                 svalid += nng_socket_set_ms(sock_, NNG_OPT_RECVTIMEO, nng_duration(100));
-                //svalid += nng_socket_set_size(sock_, NNG_OPT_RECVBUF, size_t(8192));
                 svalid += nng_dialer_start(Did_,-1);
                 break;
 

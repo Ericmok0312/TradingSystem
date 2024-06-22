@@ -34,6 +34,7 @@ namespace ts{
         STOP = Engine stop
     */
 
+
     enum Estate :int32_t{
         DISCONNECTED = 0,
         CONNECTED ,
@@ -80,15 +81,20 @@ namespace ts{
         MSG_TYPE_OPTIONS_QUOTE = 1005,
 
         //operations on TS
-
-        MSG_TYPE_SUBSCRIBE_MARKET_DATA = 2000,
+        MSG_TYPE_ACCOUNTINFO = 2000,
+        MSG_TYPE_SUBSCRIBE_MARKET_DATA = 2001,
+        MSG_TYPE_GET_ACCOUNTINFO = 2002,
 
         //debug
         MSG_TYPE_DEBUG = 4000
 
     };
 
-
+    enum Market:int32_t {
+        HKSTOCK = 0,
+        HKOPTIONS = 1,
+        HKFUTURES = 2
+    };
 
     /*
     Msg
@@ -114,6 +120,7 @@ namespace ts{
             string destination_;
             string source_;
             MSG_TYPE msgtype_;
+            string data_;
         
         Msg(){};
 
@@ -126,23 +133,62 @@ namespace ts{
         virtual ~Msg(){};
 
         virtual string serialize(){
-            return destination_ + SERIALIZATION_SEP + source_ + SERIALIZATION_SEP + std::to_string(msgtype_);
+            return destination_ + SERIALIZATION_SEP + source_ + SERIALIZATION_SEP + std::to_string(msgtype_) + SERIALIZATION_SEP + data_;
         }
 
+        virtual void deserialize(const string& msgin);
+    };
 
+
+    class Subscribe{
+        public:
+            string code_;
+            Market market_;
+            Subscribe(string code, Market market):code_(code),market_(market){};
+            Subscribe() {};
+            ~Subscribe() {};
     };
     /*
     SubscibeMsg
         - Class inheriting Msg, specialize for subscribe market messgae
     */
-
     class SubscribeMsg: public Msg{
         public:
             SubscribeMsg(string des, string src):Msg(des, src, MSG_TYPE_SUBSCRIBE_MARKET_DATA){};
             SubscribeMsg():Msg(){
-                msgtype_ = MSG_TYPE_STOCK_QUOTE;
+                msgtype_ = MSG_TYPE_SUBSCRIBE_MARKET_DATA;
             }
             ~SubscribeMsg(){}
+            Subscribe data_;
+
+            virtual string serialize();
+            virtual void deserialize(const string& msgin);
+    };
+
+
+    class AccountInfo{
+        public:
+            AccountInfo(){};
+            ~AccountInfo(){};
+
+            double cash_ = 0.0;
+            double totalAssets_ = 0.0;
+            double power_ = 0.0;
+            double securitiesAssets_ = 0.0;
+            double fundAssets_ = 0.0;
+            double bondAssets_ = 0.0;
+    };
+
+    class AccountInfoMsg: public Msg{
+        public:
+            AccountInfoMsg(string des, string src);
+            AccountInfoMsg();
+            ~AccountInfoMsg();
+
+            AccountInfo data_;
+
+            virtual string serialize();
+            virtual void deserialize(const string& msgin);
     };
 
     /*
