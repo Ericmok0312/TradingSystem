@@ -13,20 +13,20 @@ namespace ts
 
     class FutuEngine: public IEngine, public Futu::FTSPI_Qot, public Futu::FTSPI_Trd, public Futu::FTSPI_Conn {
         protected:
-            Futu::FTAPI_Qot *futuQotApi_;
-        
+            Futu::FTAPI_Qot* futuQotApi_;
+            Futu::FTAPI_Trd* futuTrdApi_;
         public:
             FutuEngine();
             virtual ~FutuEngine();
 
-            virtual void init() override;
-            virtual void start() override;
-            virtual void stop() override;
-            virtual void setTradeMode() override;
-            virtual void lockTXN() override;
-            virtual void unlockTXN() override;
-            virtual void subscribe(const string& code, Market market) override;
-
+            virtual void init() {};
+            virtual void start() {};
+            virtual void stop() {}; 
+            virtual void setTradeMode(){};
+            virtual void lockTXN(){};
+            virtual void unlockTXN(){};
+            virtual void subscribe(const string& code, SubType subtype) {};
+            virtual void getFund(Market market, ETmode mode) {};
 
             // overriding Futu's pure virtual functions
 

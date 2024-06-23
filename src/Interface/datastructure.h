@@ -25,6 +25,8 @@ namespace ts{
     #define RELAY_DESTINATION '@'
     #define DESTINATION_ALL '*'
     #define DESTINATION_SEP '.'
+
+
     /*
         Engine state
         For futu, the connection is done on its OpenD software, no need to handle other situations 
@@ -47,9 +49,10 @@ namespace ts{
         REAL = trading in the real market
     */
     enum ETmode :int32_t{
-        HISTORY = 0,
-        SIMULATION,
-        REAL
+
+        SIMULATION =0,
+        REAL = 1,
+        HISTORY = 2
     };
     /*
     Whenther trading is allowed in the API
@@ -90,10 +93,26 @@ namespace ts{
 
     };
 
+
+    enum SubType:int32_t{
+        KLINE_1MIN = 0,
+        KLINE_1D = 1
+    };
+
+
     enum Market:int32_t {
-        HKSTOCK = 0,
-        HKOPTIONS = 1,
-        HKFUTURES = 2
+        TrdMarket_Unknown = 0, //Unknown market
+        TrdMarket_HK = 1, //HK market (securities, options)
+        TrdMarket_US = 2, //US market (securities, options)
+        TrdMarket_CN = 3, //A-share market (only used in paper trading)
+        TrdMarket_HKCC = 4, //HKCC market (stocks)
+        TrdMarket_Futures = 5, //Futures market (global futures)
+        TrdMarket_Futures_Simulate_HK = 10, //Hong Kong futures simulated market
+        TrdMarket_Futures_Simulate_US = 11, //US futures simulated market
+        TrdMarket_Futures_Simulate_SG = 12, //Singapore futures simulated market
+        TrdMarket_Futures_Simulate_JP = 13, //Japan futures simulated market
+        TrdMarket_HK_Fund = 113, //Hong Kong fund market
+        TrdMarket_US_Fund = 123, //US fund market	
     };
 
     /*

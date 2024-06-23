@@ -5,7 +5,7 @@ using namespace ts;
 #include <thread>
 #include <memory>
 
-#define PROXY_SERVER_URL "tcp://localhost:8888"
+
 
 void func_1(){
     std::shared_ptr<Logger> LOG = Logger::getInstance();

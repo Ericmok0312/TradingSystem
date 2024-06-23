@@ -8,6 +8,9 @@
 #include <string>
 #include <nng/nng.h>
 
+
+#define PROXY_SERVER_URL "tcp://localhost:8888"
+
 using namespace std;
 
 namespace ts{
