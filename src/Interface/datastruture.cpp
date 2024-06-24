@@ -1,7 +1,7 @@
-#include <datastructure.h>
+#include <Interface/datastructure.h>
 #include <string>
 #include <vector>
-#include <util.h>
+#include <Helper/util.h>
 
 
 using namespace std;
@@ -50,19 +50,19 @@ namespace ts{
 
         switch (stoi(info[4])){
             case 0:
-                data_.market_ = HKSTOCK;
+                data_.market_ = TrdMarket_HK;
                 break;
             case 1:
-                data_.market_ = HKOPTIONS;
+                data_.market_ = TrdMarket_HK;
                 break;
             case 2:
-                data_.market_ = HKOPTIONS;
+                data_.market_ = TrdMarket_Futures;
                 break;
         }
     }
     
 
-    AccountInfoMsg::AccountInfoMsg(string des, string src){
+    AccountInfoMsg::AccountInfoMsg(const string& des, const string& src){
         destination_ = des;
         source_ = src;
         msgtype_ = MSG_TYPE_ACCOUNTINFO;
@@ -87,7 +87,7 @@ namespace ts{
         vector<string> info = split(msgin, SERIALIZATION_SEP);
 
         if(info.size()<9){
-            throw std::out_of_range("OutofRange in SubscribeMsg deserialize.");
+            throw std::out_of_range("OutofRange in AccountInfoMsg deserialize.");
         }
 
         destination_ = info[0];
@@ -101,5 +101,30 @@ namespace ts{
 
     }
 
+    EngineOperationMsg::EngineOperationMsg(const string& des, const string& src, MSG_TYPE msgtype,const string& data){
+        destination_ = des;
+        source_ = src;
+        msgtype_ = msgtype;
+        data_ = data;
+    }
+
+    EngineOperationMsg::EngineOperationMsg(){};
+
+    EngineOperationMsg::~EngineOperationMsg(){};
+
+    string EngineOperationMsg::serialize(){
+         return destination_ + SERIALIZATION_SEP + source_ + SERIALIZATION_SEP + std::to_string(msgtype_)
+         + SERIALIZATION_SEP + data_;
+    }
+
+    void EngineOperationMsg::deserialize(const string& msgin){
+        vector<string> info = split(msgin, SERIALIZATION_SEP);
+        if(info.size()<4){
+            throw std::out_of_range(to_string(info.size()));
+        }
+        destination_ = info[0];
+        source_ = info[1];
+        data_ = info[3]; 
+    }
 
 }

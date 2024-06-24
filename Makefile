@@ -129,65 +129,149 @@ test/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/build
 .PHONY : test/fast
 
+src/FUTU/FutuEngine.o: src/FUTU/FutuEngine.cpp.o
+.PHONY : src/FUTU/FutuEngine.o
+
 # target to build an object file
-src/Helper/logger.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Helper/logger.o
+src/FUTU/FutuEngine.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/FUTU/FutuEngine.cpp.o
+.PHONY : src/FUTU/FutuEngine.cpp.o
+
+src/FUTU/FutuEngine.i: src/FUTU/FutuEngine.cpp.i
+.PHONY : src/FUTU/FutuEngine.i
+
+# target to preprocess a source file
+src/FUTU/FutuEngine.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/FUTU/FutuEngine.cpp.i
+.PHONY : src/FUTU/FutuEngine.cpp.i
+
+src/FUTU/FutuEngine.s: src/FUTU/FutuEngine.cpp.s
+.PHONY : src/FUTU/FutuEngine.s
+
+# target to generate assembly for a file
+src/FUTU/FutuEngine.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/FUTU/FutuEngine.cpp.s
+.PHONY : src/FUTU/FutuEngine.cpp.s
+
+src/Helper/logger.o: src/Helper/logger.cpp.o
 .PHONY : src/Helper/logger.o
 
-# target to preprocess a source file
-src/Helper/logger.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Helper/logger.i
+# target to build an object file
+src/Helper/logger.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Helper/logger.cpp.o
+.PHONY : src/Helper/logger.cpp.o
+
+src/Helper/logger.i: src/Helper/logger.cpp.i
 .PHONY : src/Helper/logger.i
 
-# target to generate assembly for a file
-src/Helper/logger.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Helper/logger.s
+# target to preprocess a source file
+src/Helper/logger.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Helper/logger.cpp.i
+.PHONY : src/Helper/logger.cpp.i
+
+src/Helper/logger.s: src/Helper/logger.cpp.s
 .PHONY : src/Helper/logger.s
 
-# target to build an object file
-src/Interface/IEngine.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Interface/IEngine.o
+# target to generate assembly for a file
+src/Helper/logger.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Helper/logger.cpp.s
+.PHONY : src/Helper/logger.cpp.s
+
+src/Interface/IEngine.o: src/Interface/IEngine.cpp.o
 .PHONY : src/Interface/IEngine.o
 
-# target to preprocess a source file
-src/Interface/IEngine.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Interface/IEngine.i
+# target to build an object file
+src/Interface/IEngine.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Interface/IEngine.cpp.o
+.PHONY : src/Interface/IEngine.cpp.o
+
+src/Interface/IEngine.i: src/Interface/IEngine.cpp.i
 .PHONY : src/Interface/IEngine.i
 
-# target to generate assembly for a file
-src/Interface/IEngine.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Interface/IEngine.s
+# target to preprocess a source file
+src/Interface/IEngine.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Interface/IEngine.cpp.i
+.PHONY : src/Interface/IEngine.cpp.i
+
+src/Interface/IEngine.s: src/Interface/IEngine.cpp.s
 .PHONY : src/Interface/IEngine.s
 
-# target to build an object file
-src/Interface/IMessenger.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Interface/IMessenger.o
+# target to generate assembly for a file
+src/Interface/IEngine.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Interface/IEngine.cpp.s
+.PHONY : src/Interface/IEngine.cpp.s
+
+src/Interface/IMessenger.o: src/Interface/IMessenger.cpp.o
 .PHONY : src/Interface/IMessenger.o
 
-# target to preprocess a source file
-src/Interface/IMessenger.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Interface/IMessenger.i
+# target to build an object file
+src/Interface/IMessenger.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Interface/IMessenger.cpp.o
+.PHONY : src/Interface/IMessenger.cpp.o
+
+src/Interface/IMessenger.i: src/Interface/IMessenger.cpp.i
 .PHONY : src/Interface/IMessenger.i
 
-# target to generate assembly for a file
-src/Interface/IMessenger.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Interface/IMessenger.s
+# target to preprocess a source file
+src/Interface/IMessenger.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Interface/IMessenger.cpp.i
+.PHONY : src/Interface/IMessenger.cpp.i
+
+src/Interface/IMessenger.s: src/Interface/IMessenger.cpp.s
 .PHONY : src/Interface/IMessenger.s
 
+# target to generate assembly for a file
+src/Interface/IMessenger.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Interface/IMessenger.cpp.s
+.PHONY : src/Interface/IMessenger.cpp.s
+
+src/Interface/datastruture.o: src/Interface/datastruture.cpp.o
+.PHONY : src/Interface/datastruture.o
+
 # target to build an object file
-test.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test.o
-.PHONY : test.o
+src/Interface/datastruture.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Interface/datastruture.cpp.o
+.PHONY : src/Interface/datastruture.cpp.o
+
+src/Interface/datastruture.i: src/Interface/datastruture.cpp.i
+.PHONY : src/Interface/datastruture.i
 
 # target to preprocess a source file
-test.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test.i
-.PHONY : test.i
+src/Interface/datastruture.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Interface/datastruture.cpp.i
+.PHONY : src/Interface/datastruture.cpp.i
+
+src/Interface/datastruture.s: src/Interface/datastruture.cpp.s
+.PHONY : src/Interface/datastruture.s
 
 # target to generate assembly for a file
-test.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test.s
+src/Interface/datastruture.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Interface/datastruture.cpp.s
+.PHONY : src/Interface/datastruture.cpp.s
+
+test.o: test.cpp.o
+.PHONY : test.o
+
+# target to build an object file
+test.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test.cpp.o
+.PHONY : test.cpp.o
+
+test.i: test.cpp.i
+.PHONY : test.i
+
+# target to preprocess a source file
+test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test.cpp.i
+.PHONY : test.cpp.i
+
+test.s: test.cpp.s
 .PHONY : test.s
+
+# target to generate assembly for a file
+test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test.cpp.s
+.PHONY : test.cpp.s
 
 # Help Target
 help:
@@ -198,6 +282,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... test"
+	@echo "... src/FUTU/FutuEngine.o"
+	@echo "... src/FUTU/FutuEngine.i"
+	@echo "... src/FUTU/FutuEngine.s"
 	@echo "... src/Helper/logger.o"
 	@echo "... src/Helper/logger.i"
 	@echo "... src/Helper/logger.s"
@@ -207,6 +294,9 @@ help:
 	@echo "... src/Interface/IMessenger.o"
 	@echo "... src/Interface/IMessenger.i"
 	@echo "... src/Interface/IMessenger.s"
+	@echo "... src/Interface/datastruture.o"
+	@echo "... src/Interface/datastruture.i"
+	@echo "... src/Interface/datastruture.s"
 	@echo "... test.o"
 	@echo "... test.i"
 	@echo "... test.s"

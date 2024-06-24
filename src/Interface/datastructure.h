@@ -25,6 +25,7 @@ namespace ts{
     #define RELAY_DESTINATION '@'
     #define DESTINATION_ALL '*'
     #define DESTINATION_SEP '.'
+    #define ARGV_SEP '^'
 
 
     /*
@@ -39,7 +40,7 @@ namespace ts{
 
     enum Estate :int32_t{
         DISCONNECTED = 0,
-        CONNECTED ,
+        CONNECTED,
         STOP 
     };
     /*
@@ -83,10 +84,12 @@ namespace ts{
         MSG_TYPE_OPTIONS_KLINE = 1004,
         MSG_TYPE_OPTIONS_QUOTE = 1005,
 
+
+        //account information
+        MSG_TYPE_ACCOUNTINFO = 1999,
         //operations on TS
-        MSG_TYPE_ACCOUNTINFO = 2000,
-        MSG_TYPE_SUBSCRIBE_MARKET_DATA = 2001,
-        MSG_TYPE_GET_ACCOUNTINFO = 2002,
+        MSG_TYPE_SUBSCRIBE_MARKET_DATA = 2000,
+        MSG_TYPE_GET_ACCOUNTINFO = 2001,
 
         //debug
         MSG_TYPE_DEBUG = 4000
@@ -173,7 +176,7 @@ namespace ts{
     */
     class SubscribeMsg: public Msg{
         public:
-            SubscribeMsg(string des, string src):Msg(des, src, MSG_TYPE_SUBSCRIBE_MARKET_DATA){};
+            SubscribeMsg(const string& des, const string& src):Msg(des, src, MSG_TYPE_SUBSCRIBE_MARKET_DATA){};
             SubscribeMsg():Msg(){
                 msgtype_ = MSG_TYPE_SUBSCRIBE_MARKET_DATA;
             }
@@ -200,14 +203,29 @@ namespace ts{
 
     class AccountInfoMsg: public Msg{
         public:
-            AccountInfoMsg(string des, string src);
+            AccountInfoMsg(const string& des, const string& src);
             AccountInfoMsg();
             ~AccountInfoMsg();
 
             AccountInfo data_;
 
             virtual string serialize();
-            virtual void deserialize(const string& msgin);
+            virtual void deserialize(const string& msgin)override;
+    };
+
+
+
+
+    class EngineOperationMsg: public Msg{
+        public:
+            EngineOperationMsg(const string& des, const string& src, MSG_TYPE msgtype, const string& data="");
+            EngineOperationMsg();
+            ~EngineOperationMsg();
+
+            string data_;
+
+            virtual string serialize();
+            virtual void deserialize(const string& msgin) override;
     };
 
     /*

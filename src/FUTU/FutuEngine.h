@@ -2,8 +2,8 @@
 #include <Interface/IMessenger.h>
 #include <Interface/IEngine.h>
 #include <Helper/logger.h>
-#include <API/Include/FTAPI.h>
-#include <API/Include/FTSPI.h>
+#include <futu/FTAPI.h>
+#include <futu/FTSPI.h>
 
 using namespace Futu;
 
@@ -19,29 +19,29 @@ namespace ts
             FutuEngine();
             virtual ~FutuEngine();
 
-            virtual void init() {};
-            virtual void start() {};
+            virtual void init();
+            virtual void start();
             virtual void stop() {}; 
             virtual void setTradeMode(){};
             virtual void lockTXN(){};
             virtual void unlockTXN(){};
-            virtual void subscribe(const string& code, SubType subtype) {};
-            virtual void getFund(Market market, ETmode mode) {};
+            virtual void subscribe(const string& code, int32_t subtype);
+            virtual void getFund(int id, int32_t market, int32_t mode);
 
             // overriding Futu's pure virtual functions
 
-            virtual void OnInitConnect(Futu::FTAPI_Conn* pConnect, Futu::i64_t nErrCode, const char* strDesc);
-            virtual void OnDisConnect(FTAPI_Conn* pConn, Futu::i64_t nErrCode){}virtual void OnDisConnect(FTAPI_Conn* pConn, Futu::i64_t nErrCode){}
+            virtual void OnInitConnect(Futu::FTAPI_Conn* pConnect, Futu::i64_t nErrCode, const char* strDesc){};
+            virtual void OnDisConnect(FTAPI_Conn* pConn, Futu::i64_t nErrCode){}
 
 
             virtual void OnReply_GetGlobalState(Futu::u32_t nSerialNo, const GetGlobalState::Response &stRsp){}
-            virtual void OnReply_Sub(Futu::u32_t nSerialNo, const Qot_Sub::Response &stRsp) override;
+            virtual void OnReply_Sub(Futu::u32_t nSerialNo, const Qot_Sub::Response &stRsp);
             virtual void OnReply_RegQotPush(Futu::u32_t nSerialNo, const Qot_RegQotPush::Response &stRsp){}
             virtual void OnReply_GetSubInfo(Futu::u32_t nSerialNo, const Qot_GetSubInfo::Response &stRsp){}
             virtual void OnReply_GetTicker(Futu::u32_t nSerialNo, const Qot_GetTicker::Response &stRsp){}
-            virtual void OnReply_GetBasicQot(Futu::u32_t nSerialNo, const Qot_GetBasicQot::Response &stRsp) override;
+            virtual void OnReply_GetBasicQot(Futu::u32_t nSerialNo, const Qot_GetBasicQot::Response &stRsp){};
             virtual void OnReply_GetOrderBook(Futu::u32_t nSerialNo, const Qot_GetOrderBook::Response &stRsp){}
-            virtual void OnReply_GetKL(Futu::u32_t nSerialNo, const Qot_GetKL::Response &stRsp) override;
+            virtual void OnReply_GetKL(Futu::u32_t nSerialNo, const Qot_GetKL::Response &stRsp) {};
             virtual void OnReply_GetRT(Futu::u32_t nSerialNo, const Qot_GetRT::Response &stRsp){}
             virtual void OnReply_GetBroker(Futu::u32_t nSerialNo, const Qot_GetBroker::Response &stRsp){}
             virtual void OnReply_RequestRehab(Futu::u32_t nSerialNo, const Qot_RequestRehab::Response &stRsp){}
@@ -49,7 +49,7 @@ namespace ts
             virtual void OnReply_RequestHistoryKLQuota(Futu::u32_t nSerialNo, const Qot_RequestHistoryKLQuota::Response &stRsp){}
             virtual void OnReply_GetTradeDate(Futu::u32_t nSerialNo, const Qot_GetTradeDate::Response &stRsp){}
             virtual void OnReply_GetStaticInfo(Futu::u32_t nSerialNo, const Qot_GetStaticInfo::Response &stRsp){}
-            virtual void OnReply_GetSecuritySnapshot(Futu::u32_t nSerialNo, const Qot_GetSecuritySnapshot::Response &stRsp) override;
+            virtual void OnReply_GetSecuritySnapshot(Futu::u32_t nSerialNo, const Qot_GetSecuritySnapshot::Response &stRsp) {};
             virtual void OnReply_GetPlateSet(Futu::u32_t nSerialNo, const Qot_GetPlateSet::Response &stRsp){}
             virtual void OnReply_GetPlateSecurity(Futu::u32_t nSerialNo, const Qot_GetPlateSecurity::Response &stRsp){}
             virtual void OnReply_GetReference(Futu::u32_t nSerialNo, const Qot_GetReference::Response &stRsp){}
@@ -81,10 +81,10 @@ namespace ts
             virtual void OnPush_UpdateBroker(const Qot_UpdateBroker::Response &stRsp){}
             virtual void OnPush_UpdatePriceReminder(const Qot_UpdatePriceReminder::Response &stRsp){}
 
-            virtual void OnReply_GetAccList(Futu::u32_t nSerialNo, const Trd_GetAccList::Response &stRsp){};
+            virtual void OnReply_GetAccList(Futu::u32_t nSerialNo, const Trd_GetAccList::Response &stRsp);
             virtual void OnReply_UnlockTrade(Futu::u32_t nSerialNo, const Trd_UnlockTrade::Response &stRsp){};
             virtual void OnReply_SubAccPush(Futu::u32_t nSerialNo, const Trd_SubAccPush::Response &stRsp){};
-            virtual void OnReply_GetFunds(Futu::u32_t nSerialNo, const Trd_GetFunds::Response &stRsp){}
+            virtual void OnReply_GetFunds(Futu::u32_t nSerialNo, const Trd_GetFunds::Response &stRsp);
             virtual void OnReply_GetPositionList(Futu::u32_t nSerialNo, const Trd_GetPositionList::Response &stRsp){}
             virtual void OnReply_GetMaxTrdQtys(Futu::u32_t nSerialNo, const Trd_GetMaxTrdQtys::Response &stRsp){}
             virtual void OnReply_GetOrderList(Futu::u32_t nSerialNo, const Trd_GetOrderList::Response &stRsp){}

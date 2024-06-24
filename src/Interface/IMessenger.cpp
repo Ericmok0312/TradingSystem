@@ -168,7 +168,7 @@ namespace ts{
         size_t len;
         int success = nng_recv(sock_, &buf, &len, blockingflags);
 
-        if (success==0){
+        if (success==0 && buf){
             string msg(static_cast<char*>(buf));
             nng_free(buf, len);
             return msg;
@@ -306,6 +306,14 @@ namespace ts{
                     break;
                 case MSG_TYPE_DEBUG:
                     msgheader = std::make_shared<Msg>(des, src,MSG_TYPE_DEBUG);
+                    break;
+                case MSG_TYPE_ACCOUNTINFO:
+                    msgheader = std::make_shared<AccountInfoMsg>(des, src);
+                    msgheader->deserialize(msgin);
+                    break;
+                case MSG_TYPE_GET_ACCOUNTINFO:
+                    msgheader = std::make_shared<EngineOperationMsg>(des, src, msgtype);
+                    msgheader->deserialize(msgin);
                     break;
             }
             return msgheader;

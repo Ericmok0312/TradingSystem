@@ -1,20 +1,29 @@
-set(CMAKE_TOOLCHAIN_FILE "${CMAKE_CURRENT_SOURCE_DIR}/vcpkg/scripts/buildsystems/vcpkg.cmake"
+set(CMAKE_TOOLCHAIN_FILE "./home/emk/vcpkg/scripts/buildsystems/vcpkg.cmake"
   CACHE STRING "Vcpkg toolchain file")
+
 project(ts)
-set(CMAKE_MINIMUM_REQUIRED_VERSION 3.10.0)
-
+cmake_minimum_required(VERSION 3.22)
+set(CMAKE_GENERATOR_PLATFORM "x64-linux")
 add_definitions(-pthread)
+include(/home/emk/vcpkg/scripts/buildsystems/vcpkg.cmake)
 
-find_package(jsoncpp CONFIG REQUIRED)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -fsanitize=address")
+
+find_package(jsoncpp REQUIRED)
 
 include_directories(${PROJECT_SOURCE_DIR}/libs/spdlog-1.14.1/include)
 include_directories(${PROJECT_SOURCE_DIR}/libs/nng-1.8.0/include)
+include_directories(${PROJECT_SOURCE_DIR}/libs/futu/include)
 include_directories(${PROJECT_SOURCE_DIR}/src)
 
 link_directories(${PROJECT_SOURCE_DIR}/src/lib/)
 
-file(GLOB SRC "${PROJECT_SOURCE_DIR}/src/Interface/*.cpp" "${PROJECT_SOURCE_DIR}/src/Helper/*.cpp")
+file(GLOB SRC "${PROJECT_SOURCE_DIR}/src/Interface/*.cpp" "${PROJECT_SOURCE_DIR}/src/Helper/*.cpp" "${PROJECT_SOURCE_DIR}/src/FUTU/*.cpp")
 add_executable(test test.cpp ${SRC})
+
 target_link_libraries(test PRIVATE pthread)
 target_link_libraries(test PRIVATE nng.a)
-target_link_libraries(test PRIVATE jsoncpp::jsoncpp)
+target_link_libraries(test PRIVATE FTAPI.a)
+target_link_libraries(test PRIVATE FTAPIChannel.so)
+target_link_libraries(test PRIVATE protobuf.a)
+target_link_libraries(test PRIVATE JsonCpp::JsonCpp)

@@ -1,5 +1,5 @@
-#include <FutuEngine.h>
-#include <util.h>
+#include <FUTU/FutuEngine.h>
+#include <Helper/util.h>
 #include <json/json.h>
 using namespace std;
 
@@ -47,10 +47,29 @@ namespace ts{
     void FutuEngine::start(){
         futuQotApi_->InitConnect("127.0.0.1", 11111, false);
         futuTrdApi_->InitConnect("127.0.0.1", 11111, false);
+        std::shared_ptr<Msg> msg;
+        while(true){
+            msg = messenger_->recv(NNG_FLAG_NONBLOCK+NNG_FLAG_ALLOC); // nonblock + ALLOC
+            if(!msg || msg->destination_!="FutuEngine"){
+                continue;
+            }
+            else{
+                //vector<string> temp = split(msg->data_, ARGV_SEP);
+                switch(msg->msgtype_){
+                    case MSG_TYPE_GET_ACCOUNTINFO:
+                        this->getFund(8865506, 1, 0);
+                        break;
+                    case MSG_TYPE_SUBSCRIBE_MARKET_DATA:
+                        break;
+                    case MSG_TYPE_DEBUG:
+                        logger_->info(msg->serialize().c_str());
+                }
+            }
+        }
     }
 
 
-    void FutuEngine::subscribe(const string& code, SubType subtype){
+    void FutuEngine::subscribe(const string& code, int32_t subtype){
         Qot_Sub::Request req;
         Qot_Sub::C2S *c2s = req.mutable_c2s();
         auto secList = c2s->mutable_securitylist();
@@ -59,7 +78,7 @@ namespace ts{
         sec->set_code(code);
         sec->set_market(Qot_Common::QotMarket::QotMarket_HK_Security);
         
-        switch(subtype){
+        switch(static_cast<SubType>(subtype)){
             case KLINE_1MIN:
                 c2s->add_subtypelist(Qot_Common::SubType::SubType_KL_1Min);
                 break;
@@ -71,7 +90,7 @@ namespace ts{
 		c2s->set_issuborunsub(true);
 
         int32_t serial = futuQotApi_->Sub(req);
-        logger_->info(fmt::format("Subscribing: {} for SubType: {} Serial No. {}",code,subtype,serial).c_str());
+        logger_->info(fmt::format("Subscribing: {} for SubType: {} Serial No. {}",code,to_string(subtype),to_string(serial)).c_str());
     }
 
 
@@ -84,31 +103,28 @@ namespace ts{
         }
     }
 
-    void FutuEngine::getFund(Market market, ETmode mode){
-
+    void FutuEngine::getFund(int id, int32_t market, int32_t mode){
         Trd_GetFunds::Request req;
-		Trd_GetFunds::C2S *c2s = req.mutable_c2s();
-		Trd_Common::TrdHeader *header = c2s->mutable_header();
-		header->set_accid(33218935);
+        Trd_GetFunds:: C2S * c2s = req.mutable_c2s();
+        Trd_Common::TrdHeader *header = c2s->mutable_header();
+		header->set_accid(id);
 		header->set_trdenv(mode);
 		header->set_trdmarket(market);
 
+
         int serial = futuTrdApi_->GetFunds(req);
-        logger_->info(fmt::format("Get fund of id: {}  In market: {} For mode: {}", 33218935, market, mode).c_str());
+
 
     }
 
 
     void FutuEngine::OnReply_GetFunds(Futu::u32_t nSerialNo, const Trd_GetFunds::Response &stRs){
 
-        logger_->info(fmt::format("Get funds serial: {}  returned", nSerialNo).c_str());
-
         Json::Value res;
 
         ProtoBufToJson(stRs, res);
 
-        std::shared_ptr<AccountInfoMsg> msg = std::make_shared<AccountInfoMsg>("EngineExecution", "FutuEngine");
-
+        std::shared_ptr<AccountInfoMsg> msg = std::make_shared<AccountInfoMsg>("Main", "FutuEngine");
         msg->data_.bondAssets_= res["s2c"]["funds"]["bondAssets"].asDouble();
         msg->data_.cash_ = res["s2c"]["funds"]["cash"].asDouble();
         msg->data_.fundAssets_ = res["s2c"]["funds"]["fundAssets"].asDouble();
@@ -117,7 +133,27 @@ namespace ts{
         msg->data_.totalAssets_ = res["s2c"]["funds"]["totalAssets"].asDouble();
 
         messenger_->send(msg, 0);
-
     }
     
+
+    void FutuEngine::OnReply_GetAccList(Futu::u32_t nSerialNo, const Trd_GetAccList::Response &stRsp){
+        logger_->info(fmt::format("Get access serial: {}  returned", nSerialNo).c_str());
+
+        string res;
+
+        ProtoBufToString(stRsp, res);
+
+        // std::shared_ptr<AccountInfoMsg> msg = std::make_shared<AccountInfoMsg>("EngineExecution", "FutuEngine");
+        std::shared_ptr<Msg> msg  = std::make_shared<Msg>("EngineExecution", "FutuEngine",  MSG_TYPE_DEBUG);
+        msg->data_ = res;
+        // msg->data_.bondAssets_= res["s2c"]["funds"]["bondAssets"].asDouble();
+        // msg->data_.cash_ = res["s2c"]["funds"]["cash"].asDouble();
+        // msg->data_.fundAssets_ = res["s2c"]["funds"]["fundAssets"].asDouble();
+        // msg->data_.power_ = res["s2c"]["funds"]["power"].asDouble();
+        // msg->data_.securitiesAssets_= res["s2c"]["funds"]["securitiesAssets"].asDouble();
+        // msg->data_.totalAssets_ = res["s2c"]["funds"]["totalAssets"].asDouble();
+        logger_->info(msg->serialize().c_str());
+        //messenger_->send(msg, 0);
+    }
+
 }
