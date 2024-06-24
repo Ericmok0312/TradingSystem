@@ -54,10 +54,9 @@ namespace ts{
                 continue;
             }
             else{
-                //vector<string> temp = split(msg->data_, ARGV_SEP);
                 switch(msg->msgtype_){
                     case MSG_TYPE_GET_ACCOUNTINFO:
-                        this->getFund(8865506, 1, 0);
+                        this->getFund(stoi(msg->data_["id"].asString()), stoi(msg->data_["Market"].asString()), stoi(msg->data_["mode"].asString()));
                         break;
                     case MSG_TYPE_SUBSCRIBE_MARKET_DATA:
                         break;
@@ -104,6 +103,7 @@ namespace ts{
     }
 
     void FutuEngine::getFund(int id, int32_t market, int32_t mode){
+        logger_->info((to_string(id)+to_string(market)+to_string(mode)).c_str());
         Trd_GetFunds::Request req;
         Trd_GetFunds:: C2S * c2s = req.mutable_c2s();
         Trd_Common::TrdHeader *header = c2s->mutable_header();
@@ -121,17 +121,8 @@ namespace ts{
     void FutuEngine::OnReply_GetFunds(Futu::u32_t nSerialNo, const Trd_GetFunds::Response &stRs){
 
         Json::Value res;
-
-        ProtoBufToJson(stRs, res);
-
         std::shared_ptr<AccountInfoMsg> msg = std::make_shared<AccountInfoMsg>("Main", "FutuEngine");
-        msg->data_.bondAssets_= res["s2c"]["funds"]["bondAssets"].asDouble();
-        msg->data_.cash_ = res["s2c"]["funds"]["cash"].asDouble();
-        msg->data_.fundAssets_ = res["s2c"]["funds"]["fundAssets"].asDouble();
-        msg->data_.power_ = res["s2c"]["funds"]["power"].asDouble();
-        msg->data_.securitiesAssets_= res["s2c"]["funds"]["securitiesAssets"].asDouble();
-        msg->data_.totalAssets_ = res["s2c"]["funds"]["totalAssets"].asDouble();
-
+        ProtoBufToJson(stRs, msg->data_);
         messenger_->send(msg, 0);
     }
     

@@ -268,11 +268,76 @@ CMakeFiles/test.dir/src/Interface/IMessenger.cpp.o: \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/sinks/base_sink-inl.h \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/sinks/basic_file_sink-inl.h \
  /data/home/emk/Coding/Trading_system/TradingSystem/src/Interface/datastructure.h \
+ /home/emk/vcpkg/installed/x64-linux/include/json/json.h \
+ /home/emk/vcpkg/installed/x64-linux/include/json/config.h \
+ /usr/include/c++/8/sstream /usr/include/c++/8/bits/sstream.tcc \
+ /home/emk/vcpkg/installed/x64-linux/include/json/allocator.h \
+ /home/emk/vcpkg/installed/x64-linux/include/json/version.h \
+ /home/emk/vcpkg/installed/x64-linux/include/json/json_features.h \
+ /home/emk/vcpkg/installed/x64-linux/include/json/forwards.h \
+ /home/emk/vcpkg/installed/x64-linux/include/json/reader.h \
+ /home/emk/vcpkg/installed/x64-linux/include/json/value.h \
+ /usr/include/c++/8/deque /usr/include/c++/8/bits/stl_deque.h \
+ /usr/include/c++/8/bits/deque.tcc /usr/include/c++/8/stack \
+ /usr/include/c++/8/bits/stl_stack.h \
+ /home/emk/vcpkg/installed/x64-linux/include/json/writer.h \
  /usr/include/c++/8/iostream \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/nng-1.8.0/include/nng/nng.h \
  /usr/lib/gcc/x86_64-linux-gnu/8/include/stdbool.h \
  /data/home/emk/Coding/Trading_system/TradingSystem/src/Interface/datastructure.h \
- /usr/include/c++/8/sstream /usr/include/c++/8/bits/sstream.tcc \
+ /data/home/emk/Coding/Trading_system/TradingSystem/src/Helper/util.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/stubs/common.h \
+ /usr/include/c++/8/set /usr/include/c++/8/bits/stl_set.h \
+ /usr/include/c++/8/bits/stl_multiset.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/stubs/port.h \
+ /usr/include/c++/8/stdlib.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/stubs/platform_macros.h \
+ /usr/include/x86_64-linux-gnu/sys/param.h /usr/include/signal.h \
+ /usr/include/x86_64-linux-gnu/bits/signum.h \
+ /usr/include/x86_64-linux-gnu/bits/signum-generic.h \
+ /usr/include/x86_64-linux-gnu/bits/types/sig_atomic_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/__sigval_t.h \
+ /usr/include/x86_64-linux-gnu/bits/siginfo-arch.h \
+ /usr/include/x86_64-linux-gnu/bits/siginfo-consts.h \
+ /usr/include/x86_64-linux-gnu/bits/siginfo-consts-arch.h \
+ /usr/include/x86_64-linux-gnu/bits/types/sigval_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/sigevent_t.h \
+ /usr/include/x86_64-linux-gnu/bits/sigevent-consts.h \
+ /usr/include/x86_64-linux-gnu/bits/sigaction.h \
+ /usr/include/x86_64-linux-gnu/bits/sigcontext.h \
+ /usr/include/x86_64-linux-gnu/bits/types/stack_t.h \
+ /usr/include/x86_64-linux-gnu/sys/ucontext.h \
+ /usr/include/x86_64-linux-gnu/bits/sigstack.h \
+ /usr/include/x86_64-linux-gnu/bits/ss_flags.h \
+ /usr/include/x86_64-linux-gnu/bits/types/struct_sigstack.h \
+ /usr/include/x86_64-linux-gnu/bits/sigthread.h \
+ /usr/include/x86_64-linux-gnu/bits/param.h /usr/include/linux/param.h \
+ /usr/include/x86_64-linux-gnu/asm/param.h \
+ /usr/include/asm-generic/param.h /usr/include/byteswap.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/stubs/macros.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/stubs/logging.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/stubs/scoped_ptr.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/stubs/mutex.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/stubs/callback.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/stubs/type_traits.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/stubs/template_util.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/message_lite.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/stubs/once.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/stubs/atomicops.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/stubs/atomicops_internals_x86_gcc.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/message.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/arena.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/arena_impl.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/stubs/atomic_sequence_num.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/descriptor.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/util/json_util.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/util/type_resolver.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/stubs/status.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/stubs/stringpiece.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/stubs/hash.h \
+ /usr/include/c++/8/unordered_set /usr/include/c++/8/bits/unordered_set.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/stubs/bytestream.h \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/nng-1.8.0/include/nng/protocol/pubsub0/pub.h \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/nng-1.8.0/include/nng/protocol/pubsub0/sub.h \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/nng-1.8.0/include/nng/protocol/pipeline0/pull.h \

@@ -268,6 +268,19 @@ CMakeFiles/test.dir/test.cpp.o: \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/sinks/basic_file_sink-inl.h \
  /data/home/emk/Coding/Trading_system/TradingSystem/src/Interface/IMessenger.h \
  /data/home/emk/Coding/Trading_system/TradingSystem/src/Interface/datastructure.h \
+ /home/emk/vcpkg/installed/x64-linux/include/json/json.h \
+ /home/emk/vcpkg/installed/x64-linux/include/json/config.h \
+ /usr/include/c++/8/sstream /usr/include/c++/8/bits/sstream.tcc \
+ /home/emk/vcpkg/installed/x64-linux/include/json/allocator.h \
+ /home/emk/vcpkg/installed/x64-linux/include/json/version.h \
+ /home/emk/vcpkg/installed/x64-linux/include/json/json_features.h \
+ /home/emk/vcpkg/installed/x64-linux/include/json/forwards.h \
+ /home/emk/vcpkg/installed/x64-linux/include/json/reader.h \
+ /home/emk/vcpkg/installed/x64-linux/include/json/value.h \
+ /usr/include/c++/8/deque /usr/include/c++/8/bits/stl_deque.h \
+ /usr/include/c++/8/bits/deque.tcc /usr/include/c++/8/stack \
+ /usr/include/c++/8/bits/stl_stack.h \
+ /home/emk/vcpkg/installed/x64-linux/include/json/writer.h \
  /usr/include/c++/8/iostream \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/nng-1.8.0/include/nng/nng.h \
  /usr/lib/gcc/x86_64-linux-gnu/8/include/stdbool.h \

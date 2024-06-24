@@ -66,6 +66,21 @@ namespace ts{
         
     }
 
+
+    inline string Json2String(const Json::Value& json){
+        Json::StreamWriterBuilder writer;
+        std::string s_param = Json::writeString(writer, json);
+        return s_param;
+    }
+
+    inline Json::Value String2Json(const string& res){
+        Json::CharReaderBuilder reader;
+        std::istringstream jsonStream(res);
+        Json::Value root;
+        Json::parseFromStream(reader, jsonStream, &root, nullptr);
+        return root;
+    }
+
 }
 
 

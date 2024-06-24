@@ -5,6 +5,7 @@
 #include <sstream>
 #include <iostream>
 #include <cassert>
+#include <Helper/util.h>
 #include "nng/protocol/pubsub0/pub.h"
 #include "nng/protocol/pubsub0/sub.h"
 #include "nng/protocol/pipeline0/pull.h"
@@ -292,10 +293,12 @@ namespace ts{
             string des;
             string src;
             string type;
+            string data;
             stringstream stream_msgin(msgin);
             getline(stream_msgin, des, SERIALIZATION_SEP);
             getline(stream_msgin, src, SERIALIZATION_SEP);
             getline(stream_msgin, type, SERIALIZATION_SEP);
+            getline(stream_msgin, data, SERIALIZATION_SEP);
             MSG_TYPE msgtype = MSG_TYPE(stoi(type));
 
             std::shared_ptr<Msg> msgheader;
@@ -312,7 +315,7 @@ namespace ts{
                     msgheader->deserialize(msgin);
                     break;
                 case MSG_TYPE_GET_ACCOUNTINFO:
-                    msgheader = std::make_shared<EngineOperationMsg>(des, src, msgtype);
+                    msgheader = std::make_shared<EngineOperationMsg>(des, src, msgtype, String2Json(data));
                     msgheader->deserialize(msgin);
                     break;
             }

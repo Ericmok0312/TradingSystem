@@ -1,6 +1,7 @@
 #ifndef SRC_INTERFACE_DATASTRUCTURE_H
 #define SRC_INTERFACE_DATASTRUCTURE_H
 
+#include <json/json.h>
 #include <string>
 #include <iostream>
 #if defined(_WIN32) || defined(_WIN64)
@@ -142,7 +143,7 @@ namespace ts{
             string destination_;
             string source_;
             MSG_TYPE msgtype_;
-            string data_;
+            Json::Value data_;
         
         Msg(){};
 
@@ -155,7 +156,7 @@ namespace ts{
         virtual ~Msg(){};
 
         virtual string serialize(){
-            return destination_ + SERIALIZATION_SEP + source_ + SERIALIZATION_SEP + std::to_string(msgtype_) + SERIALIZATION_SEP + data_;
+            return destination_ + SERIALIZATION_SEP + source_ + SERIALIZATION_SEP + std::to_string(msgtype_);
         }
 
         virtual void deserialize(const string& msgin);
@@ -207,10 +208,9 @@ namespace ts{
             AccountInfoMsg();
             ~AccountInfoMsg();
 
-            AccountInfo data_;
 
             virtual string serialize();
-            virtual void deserialize(const string& msgin)override;
+
     };
 
 
@@ -218,14 +218,12 @@ namespace ts{
 
     class EngineOperationMsg: public Msg{
         public:
-            EngineOperationMsg(const string& des, const string& src, MSG_TYPE msgtype, const string& data="");
+            EngineOperationMsg(const string& des, const string& src, MSG_TYPE msgtype, Json::Value data);
             EngineOperationMsg();
             ~EngineOperationMsg();
 
-            string data_;
-
             virtual string serialize();
-            virtual void deserialize(const string& msgin) override;
+
     };
 
     /*

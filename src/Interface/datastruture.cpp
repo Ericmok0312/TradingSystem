@@ -23,11 +23,12 @@ namespace ts{
         vector<string> info = split(msgin, SERIALIZATION_SEP);
 
         if(info.size()<4){
-            throw std::out_of_range("OutofRange in Msg deserialize.");
+            throw std::out_of_range("OutofRange in message deserialize.");
         }
+
         destination_ = info[0];
         source_ = info[1];
-        data_ = info[3];
+        data_ = String2Json(info[3]);
     }
 
 
@@ -76,32 +77,12 @@ namespace ts{
 
     string AccountInfoMsg::serialize(){
         return destination_ + SERIALIZATION_SEP + source_ + SERIALIZATION_SEP + std::to_string(msgtype_)
-         + SERIALIZATION_SEP + to_string(data_.cash_) + SERIALIZATION_SEP +
-         to_string(data_.totalAssets_) + SERIALIZATION_SEP + to_string(data_.power_)
-         + SERIALIZATION_SEP + to_string(data_.securitiesAssets_) + SERIALIZATION_SEP
-         + to_string(data_.fundAssets_) + SERIALIZATION_SEP + to_string(data_.bondAssets_);
-    }
-
-    void AccountInfoMsg::deserialize(const string& msgin){
-
-        vector<string> info = split(msgin, SERIALIZATION_SEP);
-
-        if(info.size()<9){
-            throw std::out_of_range("OutofRange in AccountInfoMsg deserialize.");
+         + SERIALIZATION_SEP + Json2String(data_);
         }
 
-        destination_ = info[0];
-        source_ = info[1];
-        data_.cash_ = stod(info[3]);
-        data_.totalAssets_ = stod(info[4]);
-        data_.power_ = stod(info[5]);
-        data_.securitiesAssets_ = stod(info[6]);
-        data_.fundAssets_ = stod(info[7]);
-        data_.bondAssets_ = stod(info[8]);
 
-    }
 
-    EngineOperationMsg::EngineOperationMsg(const string& des, const string& src, MSG_TYPE msgtype,const string& data){
+    EngineOperationMsg::EngineOperationMsg(const string& des, const string& src, MSG_TYPE msgtype,Json::Value data){
         destination_ = des;
         source_ = src;
         msgtype_ = msgtype;
@@ -114,17 +95,8 @@ namespace ts{
 
     string EngineOperationMsg::serialize(){
          return destination_ + SERIALIZATION_SEP + source_ + SERIALIZATION_SEP + std::to_string(msgtype_)
-         + SERIALIZATION_SEP + data_;
+         + SERIALIZATION_SEP + Json2String(data_);
     }
 
-    void EngineOperationMsg::deserialize(const string& msgin){
-        vector<string> info = split(msgin, SERIALIZATION_SEP);
-        if(info.size()<4){
-            throw std::out_of_range(to_string(info.size()));
-        }
-        destination_ = info[0];
-        source_ = info[1];
-        data_ = info[3]; 
-    }
 
 }
