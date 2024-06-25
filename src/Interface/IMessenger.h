@@ -79,7 +79,7 @@ class IMsgq{
         std::shared_ptr<Logger> logger_;
 
     public:
-        IMsgq(MSGQ_PROTOCOL protocol, string url);
+        IMsgq(MSGQ_PROTOCOL protocol, const string& url);
         virtual ~IMsgq();
 
         virtual void sendmsg(const string& str, int32_t immediate = 1) = 0;
@@ -124,7 +124,7 @@ class MsgqNNG : public IMsgq {
         nng_socket sock_ = NNG_SOCKET_INITIALIZER;
         nng_listener Lid_ = NNG_LISTENER_INITIALIZER;
         nng_dialer Did_ = NNG_DIALER_INITIALIZER;
-        MsgqNNG(MSGQ_PROTOCOL protocol, string url, bool binding = true);
+        MsgqNNG(MSGQ_PROTOCOL protocol, const string& url, bool binding = true);
         ~MsgqNNG();
 
         
@@ -169,7 +169,7 @@ class MsgqRMessenger : public IMessenger {
     static mutex sendlock_;
     static std::unique_ptr<IMsgq> msgq_server_;
 
-    explicit MsgqRMessenger(string url_recv);
+    explicit MsgqRMessenger(const string& url_recv);
     virtual ~MsgqRMessenger();
 
 
@@ -192,7 +192,7 @@ class MsgqTSMessenger : public IMessenger {
     static mutex sendlock_;
     static std::unique_ptr<IMsgq> msgq_server_;
     
-    explicit MsgqTSMessenger(string url_recv);
+    explicit MsgqTSMessenger(const string& url_recv);
     virtual ~MsgqTSMessenger();
 
     static void Send(std::shared_ptr<Msg> pmsg, int flag);

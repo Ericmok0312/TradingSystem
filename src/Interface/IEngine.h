@@ -63,7 +63,7 @@ namespace ts
             virtual void setTradeMode()= 0;
             virtual void lockTXN()= 0;
             virtual void unlockTXN()= 0;
-            virtual void subscribe(const string& code, int32_t subtype) = 0;
+            virtual void subscribe(const char* code, int32_t subtype) = 0;
             //virtual bool connect() = 0;
         
         protected: 

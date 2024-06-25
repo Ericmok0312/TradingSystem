@@ -37,7 +37,7 @@ namespace ts{
     -set up url and protocol with parameters
     -set up logger using getInstance();
     */
-    IMsgq::IMsgq(MSGQ_PROTOCOL protocol, string url){
+    IMsgq::IMsgq(MSGQ_PROTOCOL protocol, const string& url){
 
         protocol_ = protocol;
         url_ = url;
@@ -53,7 +53,7 @@ namespace ts{
 
     //Start of MsgqNNG
 
-    MsgqNNG::MsgqNNG(MSGQ_PROTOCOL protocol, string url, bool binding):IMsgq(protocol, url){
+    MsgqNNG::MsgqNNG(MSGQ_PROTOCOL protocol,const string& url, bool binding):IMsgq(protocol, url){
         int svalid = 0;
         switch(protocol_){
             /*
@@ -194,7 +194,7 @@ namespace ts{
         - initialize msgq_receiver
         - msgq_sender are intialized by core engine later
     */
-    MsgqRMessenger::MsgqRMessenger(string url_recv){
+    MsgqRMessenger::MsgqRMessenger(const string& url_recv){
         msgq_receiver_ = std::make_unique<MsgqNNG>(MSGQ_PROTOCOL::PULL, url_recv);
     }
 
@@ -265,7 +265,7 @@ namespace ts{
     std::unique_ptr<IMsgq> MsgqTSMessenger::msgq_server_; //initialize msgq_server_
 
     //Construcotor of MsgqTSMessenger
-    MsgqTSMessenger::MsgqTSMessenger(string url_recv){
+    MsgqTSMessenger::MsgqTSMessenger(const string& url_recv){
         msgq_receiver_ = std::make_unique<MsgqNNG>(MSGQ_PROTOCOL::SUB, url_recv);
     }
 
@@ -286,39 +286,20 @@ namespace ts{
         MsgqTSMessenger::msgq_server_->sendmsg(msg, flag);
     }
 
+    /*
+    
+    shared_ptr<Msg> MsgqTSMessenger::recv(int flag)
+    - Function for capturing message transmitted in NNG
+    - As all messages shares the same structure, no need to generate different message based on msgtype_
+    
+    */
+
     std::shared_ptr<Msg> MsgqTSMessenger::recv(int flag){
         string msgin = msgq_receiver_->recmsg(flag);
         if (msgin.empty()) return nullptr;
         try{
-            string des;
-            string src;
-            string type;
-            string data;
-            stringstream stream_msgin(msgin);
-            getline(stream_msgin, des, SERIALIZATION_SEP);
-            getline(stream_msgin, src, SERIALIZATION_SEP);
-            getline(stream_msgin, type, SERIALIZATION_SEP);
-            getline(stream_msgin, data, SERIALIZATION_SEP);
-            MSG_TYPE msgtype = MSG_TYPE(stoi(type));
-
-            std::shared_ptr<Msg> msgheader;
-
-            switch (msgtype){
-                case MSG_TYPE_SUBSCRIBE_MARKET_DATA:
-                    msgheader = std::make_shared<SubscribeMsg>(des, src);
-                    break;
-                case MSG_TYPE_DEBUG:
-                    msgheader = std::make_shared<Msg>(des, src,MSG_TYPE_DEBUG);
-                    break;
-                case MSG_TYPE_ACCOUNTINFO:
-                    msgheader = std::make_shared<AccountInfoMsg>(des, src);
-                    msgheader->deserialize(msgin);
-                    break;
-                case MSG_TYPE_GET_ACCOUNTINFO:
-                    msgheader = std::make_shared<EngineOperationMsg>(des, src, msgtype, String2Json(data));
-                    msgheader->deserialize(msgin);
-                    break;
-            }
+            std::shared_ptr<Msg> msgheader = std::make_shared<Msg>();
+            msgheader->deserialize(msgin);
             return msgheader;
         }
         catch(std::exception& e){

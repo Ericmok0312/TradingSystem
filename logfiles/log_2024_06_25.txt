@@ -1,0 +1,1846 @@
+[2024-06-25 16:48:22][info]dialer2 created
+[2024-06-25 16:48:22][info]dialer3 created
+[2024-06-25 16:48:22][info]futu created
+[2024-06-25 16:48:25][info]function2 received Main|FutuEngine|1999|{
+	"errCode" : 0,
+	"retMsg" : "",
+	"retType" : 0,
+	"s2c" : 
+	{
+		"funds" : 
+		{
+			"avlWithdrawalCash" : 0,
+			"cash" : 1000000,
+			"debtCash" : 0,
+			"frozenCash" : 0,
+			"marketVal" : 0,
+			"power" : 0,
+			"securitiesAssets" : 1000000,
+			"totalAssets" : 1000000
+		},
+		"header" : 
+		{
+			"accID" : "8865506",
+			"trdEnv" : 0,
+			"trdMarket" : 1
+		}
+	}
+}
+[2024-06-25 16:48:28][info]function2 received Main|FutuEngine|1999|{
+	"errCode" : 0,
+	"retMsg" : "",
+	"retType" : 0,
+	"s2c" : 
+	{
+		"funds" : 
+		{
+			"avlWithdrawalCash" : 0,
+			"cash" : 1000000,
+			"debtCash" : 0,
+			"frozenCash" : 0,
+			"marketVal" : 0,
+			"power" : 0,
+			"securitiesAssets" : 1000000,
+			"totalAssets" : 1000000
+		},
+		"header" : 
+		{
+			"accID" : "8865506",
+			"trdEnv" : 0,
+			"trdMarket" : 1
+		}
+	}
+}
+[2024-06-25 16:48:31][info]function2 received Main|FutuEngine|1999|{
+	"errCode" : 0,
+	"retMsg" : "",
+	"retType" : 0,
+	"s2c" : 
+	{
+		"funds" : 
+		{
+			"avlWithdrawalCash" : 0,
+			"cash" : 1000000,
+			"debtCash" : 0,
+			"frozenCash" : 0,
+			"marketVal" : 0,
+			"power" : 0,
+			"securitiesAssets" : 1000000,
+			"totalAssets" : 1000000
+		},
+		"header" : 
+		{
+			"accID" : "8865506",
+			"trdEnv" : 0,
+			"trdMarket" : 1
+		}
+	}
+}
+[2024-06-25 16:48:34][info]function2 received Main|FutuEngine|1999|{
+	"errCode" : 0,
+	"retMsg" : "",
+	"retType" : 0,
+	"s2c" : 
+	{
+		"funds" : 
+		{
+			"avlWithdrawalCash" : 0,
+			"cash" : 1000000,
+			"debtCash" : 0,
+			"frozenCash" : 0,
+			"marketVal" : 0,
+			"power" : 0,
+			"securitiesAssets" : 1000000,
+			"totalAssets" : 1000000
+		},
+		"header" : 
+		{
+			"accID" : "8865506",
+			"trdEnv" : 0,
+			"trdMarket" : 1
+		}
+	}
+}
+[2024-06-25 16:48:37][info]function2 received Main|FutuEngine|1999|{
+	"errCode" : 0,
+	"retMsg" : "",
+	"retType" : 0,
+	"s2c" : 
+	{
+		"funds" : 
+		{
+			"avlWithdrawalCash" : 0,
+			"cash" : 1000000,
+			"debtCash" : 0,
+			"frozenCash" : 0,
+			"marketVal" : 0,
+			"power" : 0,
+			"securitiesAssets" : 1000000,
+			"totalAssets" : 1000000
+		},
+		"header" : 
+		{
+			"accID" : "8865506",
+			"trdEnv" : 0,
+			"trdMarket" : 1
+		}
+	}
+}
+[2024-06-25 16:48:40][info]function2 received Main|FutuEngine|1999|{
+	"errCode" : 0,
+	"retMsg" : "",
+	"retType" : 0,
+	"s2c" : 
+	{
+		"funds" : 
+		{
+			"avlWithdrawalCash" : 0,
+			"cash" : 1000000,
+			"debtCash" : 0,
+			"frozenCash" : 0,
+			"marketVal" : 0,
+			"power" : 0,
+			"securitiesAssets" : 1000000,
+			"totalAssets" : 1000000
+		},
+		"header" : 
+		{
+			"accID" : "8865506",
+			"trdEnv" : 0,
+			"trdMarket" : 1
+		}
+	}
+}
+[2024-06-25 16:48:43][info]function2 received Main|FutuEngine|1999|{
+	"errCode" : 0,
+	"retMsg" : "",
+	"retType" : 0,
+	"s2c" : 
+	{
+		"funds" : 
+		{
+			"avlWithdrawalCash" : 0,
+			"cash" : 1000000,
+			"debtCash" : 0,
+			"frozenCash" : 0,
+			"marketVal" : 0,
+			"power" : 0,
+			"securitiesAssets" : 1000000,
+			"totalAssets" : 1000000
+		},
+		"header" : 
+		{
+			"accID" : "8865506",
+			"trdEnv" : 0,
+			"trdMarket" : 1
+		}
+	}
+}
+[2024-06-25 16:48:46][info]function2 received Main|FutuEngine|1999|{
+	"errCode" : 0,
+	"retMsg" : "",
+	"retType" : 0,
+	"s2c" : 
+	{
+		"funds" : 
+		{
+			"avlWithdrawalCash" : 0,
+			"cash" : 1000000,
+			"debtCash" : 0,
+			"frozenCash" : 0,
+			"marketVal" : 0,
+			"power" : 0,
+			"securitiesAssets" : 1000000,
+			"totalAssets" : 1000000
+		},
+		"header" : 
+		{
+			"accID" : "8865506",
+			"trdEnv" : 0,
+			"trdMarket" : 1
+		}
+	}
+}
+[2024-06-25 16:48:49][info]function2 received Main|FutuEngine|1999|{
+	"errCode" : 0,
+	"retMsg" : "",
+	"retType" : 0,
+	"s2c" : 
+	{
+		"funds" : 
+		{
+			"avlWithdrawalCash" : 0,
+			"cash" : 1000000,
+			"debtCash" : 0,
+			"frozenCash" : 0,
+			"marketVal" : 0,
+			"power" : 0,
+			"securitiesAssets" : 1000000,
+			"totalAssets" : 1000000
+		},
+		"header" : 
+		{
+			"accID" : "8865506",
+			"trdEnv" : 0,
+			"trdMarket" : 1
+		}
+	}
+}
+[2024-06-25 16:48:52][info]function2 received Main|FutuEngine|1999|{
+	"errCode" : 0,
+	"retMsg" : "",
+	"retType" : 0,
+	"s2c" : 
+	{
+		"funds" : 
+		{
+			"avlWithdrawalCash" : 0,
+			"cash" : 1000000,
+			"debtCash" : 0,
+			"frozenCash" : 0,
+			"marketVal" : 0,
+			"power" : 0,
+			"securitiesAssets" : 1000000,
+			"totalAssets" : 1000000
+		},
+		"header" : 
+		{
+			"accID" : "8865506",
+			"trdEnv" : 0,
+			"trdMarket" : 1
+		}
+	}
+}
+[2024-06-25 16:48:55][info]function2 received Main|FutuEngine|1999|{
+	"errCode" : 0,
+	"retMsg" : "",
+	"retType" : 0,
+	"s2c" : 
+	{
+		"funds" : 
+		{
+			"avlWithdrawalCash" : 0,
+			"cash" : 1000000,
+			"debtCash" : 0,
+			"frozenCash" : 0,
+			"marketVal" : 0,
+			"power" : 0,
+			"securitiesAssets" : 1000000,
+			"totalAssets" : 1000000
+		},
+		"header" : 
+		{
+			"accID" : "8865506",
+			"trdEnv" : 0,
+			"trdMarket" : 1
+		}
+	}
+}
+[2024-06-25 16:48:58][info]function2 received Main|FutuEngine|1999|{
+	"errCode" : 0,
+	"retMsg" : "",
+	"retType" : 0,
+	"s2c" : 
+	{
+		"funds" : 
+		{
+			"avlWithdrawalCash" : 0,
+			"cash" : 1000000,
+			"debtCash" : 0,
+			"frozenCash" : 0,
+			"marketVal" : 0,
+			"power" : 0,
+			"securitiesAssets" : 1000000,
+			"totalAssets" : 1000000
+		},
+		"header" : 
+		{
+			"accID" : "8865506",
+			"trdEnv" : 0,
+			"trdMarket" : 1
+		}
+	}
+}
+[2024-06-25 16:49:01][info]function2 received Main|FutuEngine|1999|{
+	"errCode" : 0,
+	"retMsg" : "",
+	"retType" : 0,
+	"s2c" : 
+	{
+		"funds" : 
+		{
+			"avlWithdrawalCash" : 0,
+			"cash" : 1000000,
+			"debtCash" : 0,
+			"frozenCash" : 0,
+			"marketVal" : 0,
+			"power" : 0,
+			"securitiesAssets" : 1000000,
+			"totalAssets" : 1000000
+		},
+		"header" : 
+		{
+			"accID" : "8865506",
+			"trdEnv" : 0,
+			"trdMarket" : 1
+		}
+	}
+}
+[2024-06-25 16:49:04][info]function2 received Main|FutuEngine|1999|{
+	"errCode" : 0,
+	"retMsg" : "",
+	"retType" : 0,
+	"s2c" : 
+	{
+		"funds" : 
+		{
+			"avlWithdrawalCash" : 0,
+			"cash" : 1000000,
+			"debtCash" : 0,
+			"frozenCash" : 0,
+			"marketVal" : 0,
+			"power" : 0,
+			"securitiesAssets" : 1000000,
+			"totalAssets" : 1000000
+		},
+		"header" : 
+		{
+			"accID" : "8865506",
+			"trdEnv" : 0,
+			"trdMarket" : 1
+		}
+	}
+}
+[2024-06-25 16:49:07][info]function2 received Main|FutuEngine|1999|{
+	"errCode" : 0,
+	"retMsg" : "",
+	"retType" : 0,
+	"s2c" : 
+	{
+		"funds" : 
+		{
+			"avlWithdrawalCash" : 0,
+			"cash" : 1000000,
+			"debtCash" : 0,
+			"frozenCash" : 0,
+			"marketVal" : 0,
+			"power" : 0,
+			"securitiesAssets" : 1000000,
+			"totalAssets" : 1000000
+		},
+		"header" : 
+		{
+			"accID" : "8865506",
+			"trdEnv" : 0,
+			"trdMarket" : 1
+		}
+	}
+}
+[2024-06-25 16:49:10][info]function2 received Main|FutuEngine|1999|{
+	"errCode" : 0,
+	"retMsg" : "",
+	"retType" : 0,
+	"s2c" : 
+	{
+		"funds" : 
+		{
+			"avlWithdrawalCash" : 0,
+			"cash" : 1000000,
+			"debtCash" : 0,
+			"frozenCash" : 0,
+			"marketVal" : 0,
+			"power" : 0,
+			"securitiesAssets" : 1000000,
+			"totalAssets" : 1000000
+		},
+		"header" : 
+		{
+			"accID" : "8865506",
+			"trdEnv" : 0,
+			"trdMarket" : 1
+		}
+	}
+}
+[2024-06-25 16:49:13][info]function2 received Main|FutuEngine|1999|{
+	"errCode" : 0,
+	"retMsg" : "",
+	"retType" : 0,
+	"s2c" : 
+	{
+		"funds" : 
+		{
+			"avlWithdrawalCash" : 0,
+			"cash" : 1000000,
+			"debtCash" : 0,
+			"frozenCash" : 0,
+			"marketVal" : 0,
+			"power" : 0,
+			"securitiesAssets" : 1000000,
+			"totalAssets" : 1000000
+		},
+		"header" : 
+		{
+			"accID" : "8865506",
+			"trdEnv" : 0,
+			"trdMarket" : 1
+		}
+	}
+}
+[2024-06-25 16:49:16][info]function2 received Main|FutuEngine|1999|{
+	"errCode" : 0,
+	"retMsg" : "",
+	"retType" : 0,
+	"s2c" : 
+	{
+		"funds" : 
+		{
+			"avlWithdrawalCash" : 0,
+			"cash" : 1000000,
+			"debtCash" : 0,
+			"frozenCash" : 0,
+			"marketVal" : 0,
+			"power" : 0,
+			"securitiesAssets" : 1000000,
+			"totalAssets" : 1000000
+		},
+		"header" : 
+		{
+			"accID" : "8865506",
+			"trdEnv" : 0,
+			"trdMarket" : 1
+		}
+	}
+}
+[2024-06-25 16:49:19][info]function2 received Main|FutuEngine|1999|{
+	"errCode" : 0,
+	"retMsg" : "",
+	"retType" : 0,
+	"s2c" : 
+	{
+		"funds" : 
+		{
+			"avlWithdrawalCash" : 0,
+			"cash" : 1000000,
+			"debtCash" : 0,
+			"frozenCash" : 0,
+			"marketVal" : 0,
+			"power" : 0,
+			"securitiesAssets" : 1000000,
+			"totalAssets" : 1000000
+		},
+		"header" : 
+		{
+			"accID" : "8865506",
+			"trdEnv" : 0,
+			"trdMarket" : 1
+		}
+	}
+}
+[2024-06-25 16:49:22][info]function2 received Main|FutuEngine|1999|{
+	"errCode" : 0,
+	"retMsg" : "",
+	"retType" : 0,
+	"s2c" : 
+	{
+		"funds" : 
+		{
+			"avlWithdrawalCash" : 0,
+			"cash" : 1000000,
+			"debtCash" : 0,
+			"frozenCash" : 0,
+			"marketVal" : 0,
+			"power" : 0,
+			"securitiesAssets" : 1000000,
+			"totalAssets" : 1000000
+		},
+		"header" : 
+		{
+			"accID" : "8865506",
+			"trdEnv" : 0,
+			"trdMarket" : 1
+		}
+	}
+}
+[2024-06-25 16:49:25][info]function2 received Main|FutuEngine|1999|{
+	"errCode" : 0,
+	"retMsg" : "",
+	"retType" : 0,
+	"s2c" : 
+	{
+		"funds" : 
+		{
+			"avlWithdrawalCash" : 0,
+			"cash" : 1000000,
+			"debtCash" : 0,
+			"frozenCash" : 0,
+			"marketVal" : 0,
+			"power" : 0,
+			"securitiesAssets" : 1000000,
+			"totalAssets" : 1000000
+		},
+		"header" : 
+		{
+			"accID" : "8865506",
+			"trdEnv" : 0,
+			"trdMarket" : 1
+		}
+	}
+}
+[2024-06-25 16:49:28][info]function2 received Main|FutuEngine|1999|{
+	"errCode" : 0,
+	"retMsg" : "",
+	"retType" : 0,
+	"s2c" : 
+	{
+		"funds" : 
+		{
+			"avlWithdrawalCash" : 0,
+			"cash" : 1000000,
+			"debtCash" : 0,
+			"frozenCash" : 0,
+			"marketVal" : 0,
+			"power" : 0,
+			"securitiesAssets" : 1000000,
+			"totalAssets" : 1000000
+		},
+		"header" : 
+		{
+			"accID" : "8865506",
+			"trdEnv" : 0,
+			"trdMarket" : 1
+		}
+	}
+}
+[2024-06-25 16:49:31][info]function2 received Main|FutuEngine|1999|{
+	"errCode" : 0,
+	"retMsg" : "",
+	"retType" : 0,
+	"s2c" : 
+	{
+		"funds" : 
+		{
+			"avlWithdrawalCash" : 0,
+			"cash" : 1000000,
+			"debtCash" : 0,
+			"frozenCash" : 0,
+			"marketVal" : 0,
+			"power" : 0,
+			"securitiesAssets" : 1000000,
+			"totalAssets" : 1000000
+		},
+		"header" : 
+		{
+			"accID" : "8865506",
+			"trdEnv" : 0,
+			"trdMarket" : 1
+		}
+	}
+}
+[2024-06-25 16:49:34][info]function2 received Main|FutuEngine|1999|{
+	"errCode" : 0,
+	"retMsg" : "",
+	"retType" : 0,
+	"s2c" : 
+	{
+		"funds" : 
+		{
+			"avlWithdrawalCash" : 0,
+			"cash" : 1000000,
+			"debtCash" : 0,
+			"frozenCash" : 0,
+			"marketVal" : 0,
+			"power" : 0,
+			"securitiesAssets" : 1000000,
+			"totalAssets" : 1000000
+		},
+		"header" : 
+		{
+			"accID" : "8865506",
+			"trdEnv" : 0,
+			"trdMarket" : 1
+		}
+	}
+}
+[2024-06-25 16:49:37][info]function2 received Main|FutuEngine|1999|{
+	"errCode" : 0,
+	"retMsg" : "",
+	"retType" : 0,
+	"s2c" : 
+	{
+		"funds" : 
+		{
+			"avlWithdrawalCash" : 0,
+			"cash" : 1000000,
+			"debtCash" : 0,
+			"frozenCash" : 0,
+			"marketVal" : 0,
+			"power" : 0,
+			"securitiesAssets" : 1000000,
+			"totalAssets" : 1000000
+		},
+		"header" : 
+		{
+			"accID" : "8865506",
+			"trdEnv" : 0,
+			"trdMarket" : 1
+		}
+	}
+}
+[2024-06-25 16:49:40][info]function2 received Main|FutuEngine|1999|{
+	"errCode" : 0,
+	"retMsg" : "",
+	"retType" : 0,
+	"s2c" : 
+	{
+		"funds" : 
+		{
+			"avlWithdrawalCash" : 0,
+			"cash" : 1000000,
+			"debtCash" : 0,
+			"frozenCash" : 0,
+			"marketVal" : 0,
+			"power" : 0,
+			"securitiesAssets" : 1000000,
+			"totalAssets" : 1000000
+		},
+		"header" : 
+		{
+			"accID" : "8865506",
+			"trdEnv" : 0,
+			"trdMarket" : 1
+		}
+	}
+}
+[2024-06-25 16:49:43][info]function2 received Main|FutuEngine|1999|{
+	"errCode" : 0,
+	"retMsg" : "",
+	"retType" : 0,
+	"s2c" : 
+	{
+		"funds" : 
+		{
+			"avlWithdrawalCash" : 0,
+			"cash" : 1000000,
+			"debtCash" : 0,
+			"frozenCash" : 0,
+			"marketVal" : 0,
+			"power" : 0,
+			"securitiesAssets" : 1000000,
+			"totalAssets" : 1000000
+		},
+		"header" : 
+		{
+			"accID" : "8865506",
+			"trdEnv" : 0,
+			"trdMarket" : 1
+		}
+	}
+}
+[2024-06-25 16:49:46][info]function2 received Main|FutuEngine|1999|{
+	"errCode" : 0,
+	"retMsg" : "",
+	"retType" : 0,
+	"s2c" : 
+	{
+		"funds" : 
+		{
+			"avlWithdrawalCash" : 0,
+			"cash" : 1000000,
+			"debtCash" : 0,
+			"frozenCash" : 0,
+			"marketVal" : 0,
+			"power" : 0,
+			"securitiesAssets" : 1000000,
+			"totalAssets" : 1000000
+		},
+		"header" : 
+		{
+			"accID" : "8865506",
+			"trdEnv" : 0,
+			"trdMarket" : 1
+		}
+	}
+}
+[2024-06-25 16:49:49][info]function2 received Main|FutuEngine|1999|{
+	"errCode" : 0,
+	"retMsg" : "",
+	"retType" : 0,
+	"s2c" : 
+	{
+		"funds" : 
+		{
+			"avlWithdrawalCash" : 0,
+			"cash" : 1000000,
+			"debtCash" : 0,
+			"frozenCash" : 0,
+			"marketVal" : 0,
+			"power" : 0,
+			"securitiesAsse[2024-06-25 16:54:33][info]dialer2 created
+[2024-06-25 16:54:33][info]dialer3 created
+[2024-06-25 16:54:33][info]futu created
+[2024-06-25 16:54:36][info]function2 received Main|FutuEngine|1999|{
+	"errCode" : 0,
+	"retMsg" : "",
+	"retType" : 0,
+	"s2c" : 
+	{
+		"funds" : 
+		{
+			"avlWithdrawalCash" : 0,
+			"cash" : 1000000,
+			"debtCash" : 0,
+			"frozenCash" : 0,
+			"marketVal" : 0,
+			"power" : 0,
+			"securitiesAssets" : 1000000,
+			"totalAssets" : 1000000
+		},
+		"header" : 
+		{
+			"accID" : "8865506",
+			"trdEnv" : 0,
+			"trdMarket" : 1
+		}
+	}
+}
+[2024-06-25 16:54:39][info]function2 received Main|FutuEngine|1999|{
+	"errCode" : 0,
+	"retMsg" : "",
+	"retType" : 0,
+	"s2c" : 
+	{
+		"funds" : 
+		{
+			"avlWithdrawalCash" : 0,
+			"cash" : 1000000,
+			"debtCash" : 0,
+			"frozenCash" : 0,
+			"marketVal" : 0,
+			"power" : 0,
+			"securitiesAssets" : 1000000,
+			"totalAssets" : 1000000
+		},
+		"header" : 
+		{
+			"accID" : "8865506",
+			"trdEnv" : 0,
+			"trdMarket" : 1
+		}
+	}
+}
+[2024-06-25 16:54:42][info]function2 received Main|FutuEngine|1999|{
+	"errCode" : 0,
+	"retMsg" : "",
+	"retType" : 0,
+	"s2c" : 
+	{
+		"funds" : 
+		{
+			"avlWithdrawalCash" : 0,
+			"cash" : 1000000,
+			"debtCash" : 0,
+			"frozenCash" : 0,
+			"marketVal" : 0,
+			"power" : 0,
+			"securitiesAssets" : 1000000,
+			"totalAssets" : 1000000
+		},
+		"header" : 
+		{
+			"accID" : "8865506",
+			"trdEnv" : 0,
+			"trdMarket" : 1
+		}
+	}
+}
+[2024-06-25 16:54:45][info]function2 received Main|FutuEngine|1999|{
+	"errCode" : 0,
+	"retMsg" : "",
+	"retType" : 0,
+	"s2c" : 
+	{
+		"funds" : 
+		{
+			"avlWithdrawalCash" : 0,
+			"cash" : 1000000,
+			"debtCash" : 0,
+			"frozenCash" : 0,
+			"marketVal" : 0,
+			"power" : 0,
+			"securitiesAssets" : 1000000,
+			"totalAssets" : 1000000
+		},
+		"header" : 
+		{
+			"accID" : "8865506",
+			"trdEnv" : 0,
+			"trdMarket" : 1
+		}
+	}
+}
+[2024-06-25 16:54:48][info]function2 received Main|FutuEngine|1999|{
+	"errCode" : 0,
+	"retMsg" : "",
+	"retType" : 0,
+	"s2c" : 
+	{
+		"funds" : 
+		{
+			"avlWithdrawalCash" : 0,
+			"cash" : 1000000,
+			"debtCash" : 0,
+			"frozenCash" : 0,
+			"marketVal" : 0,
+			"power" : 0,
+			"securitiesAssets" : 1000000,
+			"totalAssets" : 1000000
+		},
+		"header" : 
+		{
+			"accID" : "8865506",
+			"trdEnv" : 0,
+			"trdMarket" : 1
+		}
+	}
+}
+[2024-06-25 16:54:51][info]function2 received Main|FutuEngine|1999|{
+	"errCode" : 0,
+	"retMsg" : "",
+	"retType" : 0,
+	"s2c" : 
+	{
+		"funds" : 
+		{
+			"avlWithdrawalCash" : 0,
+			"cash" : 1000000,
+			"debtCash" : 0,
+			"frozenCash" : 0,
+			"marketVal" : 0,
+			"power" : 0,
+			"securitiesAssets" : 1000000,
+			"totalAssets" : 1000000
+		},
+		"header" : 
+		{
+			"accID" : "8865506",
+			"trdEnv" : 0,
+			"trdMarket" : 1
+		}
+	}
+}
+[2024-06-25 16:54:54][info]function2 received Main|FutuEngine|1999|{
+	"errCode" : 0,
+	"retMsg" : "",
+	"retType" : 0,
+	"s2c" : 
+	{
+		"funds" : 
+		{
+			"avlWithdrawalCash" : 0,
+			"cash" : 1000000,
+			"debtCash" : 0,
+			"frozenCash" : 0,
+			"marketVal" : 0,
+			"power" : 0,
+			"securitiesAssets" : 1000000,
+			"totalAssets" : 1000000
+		},
+		"header" : 
+		{
+			"accID" : "8865506",
+			"trdEnv" : 0,
+			"trdMarket" : 1
+		}
+	}
+}
+[2024-06-25 16:54:57][info]function2 received Main|FutuEngine|1999|{
+	"errCode" : 0,
+	"retMsg" : "",
+	"retType" : 0,
+	"s2c" : 
+	{
+		"funds" : 
+		{
+			"avlWithdrawalCash" : 0,
+			"cash" : 1000000,
+			"debtCash" : 0,
+			"frozenCash" : 0,
+			"marketVal" : 0,
+			"power" : 0,
+			"securitiesAssets" : 1000000,
+			"totalAssets" : 1000000
+		},
+		"header" : 
+		{
+			"accID" : "8865506",
+			"trdEnv" : 0,
+			"trdMarket" : 1
+		}
+	}
+}
+[2024-06-25 16:55:00][info]function2 received Main|FutuEngine|1999|{
+	"errCode" : 0,
+	"retMsg" : "",
+	"retType" : 0,
+	"s2c" : 
+	{
+		"funds" : 
+		{
+			"avlWithdrawalCash" : 0,
+			"cash" : 1000000,
+			"debtCash" : 0,
+			"frozenCash" : 0,
+			"marketVal" : 0,
+			"power" : 0,
+			"securitiesAssets" : 1000000,
+			"totalAssets" : 1000000
+		},
+		"header" : 
+		{
+			"accID" : "8865506",
+			"trdEnv" : 0,
+			"trdMarket" : 1
+		}
+	}
+}
+[2024-06-25 16:55:03][info]function2 received Main|FutuEngine|1999|{
+	"errCode" : 0,
+	"retMsg" : "",
+	"retType" : 0,
+	"s2c" : 
+	{
+		"funds" : 
+		{
+			"avl[2024-06-25 16:56:28][info]dialer2 created
+[2024-06-25 16:56:28][info]dialer3 created
+[2024-06-25 16:56:28][info]futu created
+[2024-06-25 16:56:31][info]function2 received Main|FutuEngine|1999|{
+	"errCode" : 0,
+	"retMsg" : "",
+	"retType" : 0,
+	"s2c" : 
+	{
+		"funds" : 
+		{
+			"avlWithdrawalCash" : 0,
+			"cash" : 1000000,
+			"debtCash" : 0,
+			"frozenCash" : 0,
+			"marketVal" : 0,
+			"power" : 0,
+			"securitiesAssets" : 1000000,
+			"totalAssets" : 1000000
+		},
+		"header" : 
+		{
+			"accID" : "8865506",
+			"trdEnv" : 0,
+			"trdMarket" : 1
+		}
+	}
+}
+[2024-06-25 16:56:34][info]function2 received Main|FutuEngine|1999|{
+	"errCode" : 0,
+	"retMsg" : "",
+	"retType" : 0,
+	"s2c" : 
+	{
+		"funds" : 
+		{
+			"avlWithdrawalCash" : 0,
+			"cash" : 1000000,
+			"debtCash" : 0,
+			"frozenCash" : 0,
+			"marketVal" : 0,
+			"power" : 0,
+			"securitiesAssets" : 1000000,
+			"totalAssets" : 1000000
+		},
+		"header" : 
+		{
+			"accID" : "8865506",
+			"trdEnv" : 0,
+			"trdMarket" : 1
+		}
+	}
+}
+[2024-06-25 16:56:37][info]function2 received Main|FutuEngine|1999|{
+	"errCode" : 0,
+	"retMsg" : "",
+	"retType" : 0,
+	"s2c" : 
+	{
+		"funds" : 
+		{
+			"avlWithdrawalCash" : 0,
+			"cash" : 1000000,
+			"debtCash" : 0,
+			"frozenCash" : 0,
+			"marketVal" : 0,
+			"power" : 0,
+			"securitiesAssets" : 1000000,
+			"totalAssets" : 1000000
+		},
+		"header" : 
+		{
+			"accID" : "8865506",
+			"trdEnv" : 0,
+			"trdMarket" : 1
+		}
+	}
+}
+[2024-06-25 16:56:40][info]function2 received Main|FutuEngine|1999|{
+	"errCode" : 0,
+	"retMsg" : "",
+	"retType" : 0,
+	"s2c" : 
+	{
+		"funds" : 
+		{
+			"avlWithdrawalCash" : 0,
+			"cash" : 1000000,
+			"debtCash" : 0,
+			"frozenCash" : 0,
+			"marketVal" : 0,
+			"power" : 0,
+			"securitiesAssets" : 1000000,
+			"totalAssets" : 1000000
+		},
+		"header" : 
+		{
+			"accID" : "8865506",
+			"trdEnv" : 0,
+			"trdMarket" : 1
+		}
+	}
+}
+[2024-06-25 16:56:43][info]function2 received Main|FutuEngine|1999|{
+	"errCode" : 0,
+	"retMsg" : "",
+	"retType" : 0,
+	"s2c" : 
+	{
+		"funds" : 
+		{
+			"avlWithdrawalCash" : 0,
+			"cash" : 1000000,
+			"debtCash" : 0,
+			"frozenCash" : 0,
+			"marketVal" : 0,
+			"power" : 0,
+			"securitiesAssets" : 1000000,
+			"totalAssets" : 1000000
+		},
+		"header" : 
+		{
+			"accID" : "8865506",
+			"trdEnv" : 0,
+			"trdMarket" : 1
+		}
+	}
+}
+[2024-06-25 16:56:46][info]function2 received Main|FutuEngine|1999|{
+	"errCode" : 0,
+	"retMsg" : "",
+	"retType" : 0,
+	"s2c" : 
+	{
+		"funds" : 
+		{
+			"avlWithdrawalCash" : 0,
+			"cash" : 1000000,
+			"debtCash" : 0,
+			"frozenCash" : 0,
+			"marketVal" : 0,
+			"power" : 0,
+			"securitiesAssets" : 1000000,
+			"totalAssets" : 1000000
+		},
+		"header" : 
+		{
+			"accID" : "8865506",
+			"trdEnv" : 0,
+			"trdMarket" : 1
+		}
+	}
+}
+[2024-06-25 16:56:49][info]function2 received Main|FutuEngine|1999|{
+	"errCode" : 0,
+	"retMsg" : "",
+	"retType" : 0,
+	"s2c" : 
+	{
+		"funds" : 
+		{
+			"avlWithdrawalCash" : 0,
+			"cash" : 1000000,
+			"debtCash" : 0,
+			"frozenCash" : 0,
+			"marketVal" : 0,
+			"power" : 0,
+			"securitiesAssets" : 1000000,
+			"totalAssets" : 1000000
+		},
+		"header" : 
+		{
+			"accID" : "8865506",
+			"trdEnv" : 0,
+			"trdMarket" : 1
+		}
+	}
+}
+[2024-06-25 16:56:52][info]function2 received Main|FutuEngine|1999|{
+	"errCode" : 0,
+	"retMsg" : "",
+	"retType" : 0,
+	"s2c" : 
+	{
+		"funds" : 
+		{
+			"avlWithdrawalCash" : 0,
+			"cash" : 1000000,
+			"debtCash" : 0,
+			"frozenCash" : 0,
+			"marketVal" : 0,
+			"power" : 0,
+			"securitiesAssets" : 1000000,
+			"totalAssets" : 1000000
+		},
+		"header" : 
+		{
+			"accID" : "8865506",
+			"trdEnv" : 0,
+			"trdMarket" : 1
+		}
+	}
+}
+[2024-06-25 16:56:55][info]function2 received Main|FutuEngine|1999|{
+	"errCode" : 0,
+	"retMsg" : "",
+	"retType" : 0,
+	"s2c" : 
+	{
+		"funds" : 
+		{
+			"avlWithdrawalCash" : 0,
+			"cash" : 1000000,
+			"debtCash" : 0,
+			"frozenCash" : 0,
+			"marketVal" : 0,
+			"power" : 0,
+			"securitiesAssets" : 1000000,
+			"totalAssets" : 1000000
+		},
+		"header" : 
+		{
+			"accID" : "8865506",
+			"trdEnv" : 0,
+			"trdMarket" : 1
+		}
+	}
+}
+[2024-06-25 16:56:58][info]function2 received Main|FutuEngine|1999|{
+	"errCode" : 0,
+	"retMsg" : "",
+	"retType" : 0,
+	"s2c" : 
+	{
+		"funds" : 
+		{
+			"avl[2024-06-25 16:58:20][info]dialer2 created
+[2024-06-25 16:58:20][info]dialer3 created
+[2024-06-25 16:58:20][info]futu created
+[2024-06-25 16:58:23][info]function2 received Main|FutuEngine|1999|{
+	"errCode" : 0,
+	"retMsg" : "",
+	"retType" : 0,
+	"s2c" : 
+	{
+		"funds" : 
+		{
+			"avlWithdrawalCash" : 0,
+			"cash" : 1000000,
+			"debtCash" : 0,
+			"frozenCash" : 0,
+			"marketVal" : 0,
+			"power" : 0,
+			"securitiesAssets" : 1000000,
+			"totalAssets" : 1000000
+		},
+		"header" : 
+		{
+			"accID" : "8865506",
+			"trdEnv" : 0,
+			"trdMarket" : 1
+		}
+	}
+}
+[2024-06-25 16:58:26][info]function2 received Main|FutuEngine|1999|{
+	"errCode" : 0,
+	"retMsg" : "",
+	"retType" : 0,
+	"s2c" : 
+	{
+		"funds" : 
+		{
+			"avlWithdrawalCash" : 0,
+			"cash" : 1000000,
+			"debtCash" : 0,
+			"frozenCash" : 0,
+			"marketVal" : 0,
+			"power" : 0,
+			"securitiesAssets" : 1000000,
+			"totalAssets" : 1000000
+		},
+		"header" : 
+		{
+			"accID" : "8865506",
+			"trdEnv" : 0,
+			"trdMarket" : 1
+		}
+	}
+}
+[2024-06-25 16:58:29][info]function2 received Main|FutuEngine|1999|{
+	"errCode" : 0,
+	"retMsg" : "",
+	"retType" : 0,
+	"s2c" : 
+	{
+		"funds" : 
+		{
+			"avlWithdrawalCash" : 0,
+			"cash" : 1000000,
+			"debtCash" : 0,
+			"frozenCash" : 0,
+			"marketVal" : 0,
+			"power" : 0,
+			"securitiesAssets" : 1000000,
+			"totalAssets" : 1000000
+		},
+		"header" : 
+		{
+			"accID" : "8865506",
+			"trdEnv" : 0,
+			"trdMarket" : 1
+		}
+	}
+}
+[2024-06-25 16:58:32][info]function2 received Main|FutuEngine|1999|{
+	"errCode" : 0,
+	"retMsg" : "",
+	"retType" : 0,
+	"s2c" : 
+	{
+		"funds" : 
+		{
+			"avlWithdrawalCash" : 0,
+			"cash" : 1000000,
+			"debtCash" : 0,
+			"frozenCash" : 0,
+			"marketVal" : 0,
+			"power" : 0,
+			"securitiesAssets" : 1000000,
+			"totalAssets" : 1000000
+		},
+		"header" : 
+		{
+			"accID" : "8865506",
+			"trdEnv" : 0,
+			"trdMarket" : 1
+		}
+	}
+}
+[2024-06-25 16:58:35][info]function2 received Main|FutuEngine|1999|{
+	"errCode" : 0,
+	"retMsg" : "",
+	"retType" : 0,
+	"s2c" : 
+	{
+		"funds" : 
+		{
+			"avlWithdrawalCash" : 0,
+			"cash" : 1000000,
+			"debtCash" : 0,
+			"frozenCash" : 0,
+			"marketVal" : 0,
+			"power" : 0,
+			"securitiesAssets" : 1000000,
+			"totalAssets" : 1000000
+		},
+		"header" : 
+		{
+			"accID" : "8865506",
+			"trdEnv" : 0,
+			"trdMarket" : 1
+		}
+	}
+}
+[2024-06-25 16:58:38][info]function2 received Main|FutuEngine|1999|{
+	"errCode" : 0,
+	"retMsg" : "",
+	"retType" : 0,
+	"s2c" : 
+	{
+		"funds" : 
+		{
+			"avlWithdrawalCash" : 0,
+			"cash" : 1000000,
+			"debtCash" : 0,
+			"frozenCash" : 0,
+			"marketVal" : 0,
+			"power" : 0,
+			"securitiesAssets" : 1000000,
+			"totalAssets" : 1000000
+		},
+		"header" : 
+		{
+			"accID" : "8865506",
+			"trdEnv" : 0,
+			"trdMarket" : 1
+		}
+	}
+}
+[2024-06-25 16:58:41][info]function2 received Main|FutuEngine|1999|{
+	"errCode" : 0,
+	"retMsg" : "",
+	"retType" : 0,
+	"s2c" : 
+	{
+		"funds" : 
+		{
+			"avlWithdrawalCash" : 0,
+			"cash" : 1000000,
+			"debtCash" : 0,
+			"frozenCash" : 0,
+			"marketVal" : 0,
+			"power" : 0,
+			"securitiesAssets" : 1000000,
+			"totalAssets" : 1000000
+		},
+		"header" : 
+		{
+			"accID" : "8865506",
+			"trdEnv" : 0,
+			"trdMarket" : 1
+		}
+	}
+}
+[2024-06-25 16:58:44][info]function2 received Main|FutuEngine|1999|{
+	"errCode" : 0,
+	"retMsg" : "",
+	"retType" : 0,
+	"s2c" : 
+	{
+		"funds" : 
+		{
+			"avlWithdrawalCash" : 0,
+			"cash" : 1000000,
+			"debtCash" : 0,
+			"frozenCash" : 0,
+			"marketVal" : 0,
+			"power" : 0,
+			"securitiesAssets" : 1000000,
+			"totalAssets" : 1000000
+		},
+		"header" : 
+		{
+			"accID" : "8865506",
+			"trdEnv" : 0,
+			"trdMarket" : 1
+		}
+	}
+}
+[2024-06-25 16:58:47][info]function2 received Main|FutuEngine|1999|{
+	"errCode" : 0,
+	"retMsg" : "",
+	"retType" : 0,
+	"s2c" : 
+	{
+		"funds" : 
+		{
+			"avlWithdrawalCash" : 0,
+			"cash" : 1000000,
+			"debtCash" : 0,
+			"frozenCash" : 0,
+			"marketVal" : 0,
+			"power" : 0,
+			"securitiesAssets" : 1000000,
+			"totalAssets" : 1000000
+		},
+		"header" : 
+		{
+			"accID" : "8865506",
+			"trdEnv" : 0,
+			"trdMarket" : 1
+		}
+	}
+}
+[2024-06-25 16:58:50][info]function2 received Main|FutuEngine|1999|{
+	"errCode" : 0,
+	"retMsg" : "",
+	"retType" : 0,
+	"s2c" : 
+	{
+		"funds" : 
+		{
+			"avl[2024-06-25 17:02:28][info]dialer2 created
+[2024-06-25 17:02:28][info]dialer3 created
+[2024-06-25 17:02:28][info]futu created
+[2024-06-25 17:02:31][info]function2 received Main|FutuEngine|1999|{
+	"errCode" : 0,
+	"retMsg" : "",
+	"retType" : 0,
+	"s2c" : 
+	{
+		"funds" : 
+		{
+			"avlWithdrawalCash" : 0,
+			"cash" : 1000000,
+			"debtCash" : 0,
+			"frozenCash" : 0,
+			"marketVal" : 0,
+			"power" : 0,
+			"securitiesAssets" : 1000000,
+			"totalAssets" : 1000000
+		},
+		"header" : 
+		{
+			"accID" : "8865506",
+			"trdEnv" : 0,
+			"trdMarket" : 1
+		}
+	}
+}
+[2024-06-25 17:02:34][info]function2 received Main|FutuEngine|1999|{
+	"errCode" : 0,
+	"retMsg" : "",
+	"retType" : 0,
+	"s2c" : 
+	{
+		"funds" : 
+		{
+			"avlWithdrawalCash" : 0,
+			"cash" : 1000000,
+			"debtCash" : 0,
+			"frozenCash" : 0,
+			"marketVal" : 0,
+			"power" : 0,
+			"securitiesAssets" : 1000000,
+			"totalAssets" : 1000000
+		},
+		"header" : 
+		{
+			"accID" : "8865506",
+			"trdEnv" : 0,
+			"trdMarket" : 1
+		}
+	}
+}
+[2024-06-25 17:02:37][info]function2 received Main|FutuEngine|1999|{
+	"errCode" : 0,
+	"retMsg" : "",
+	"retType" : 0,
+	"s2c" : 
+	{
+		"funds" : 
+		{
+			"avlWithdrawalCash" : 0,
+			"cash" : 1000000,
+			"debtCash" : 0,
+			"frozenCash" : 0,
+			"marketVal" : 0,
+			"power" : 0,
+			"securitiesAssets" : 1000000,
+			"totalAssets" : 1000000
+		},
+		"header" : 
+		{
+			"accID" : "8865506",
+			"trdEnv" : 0,
+			"trdMarket" : 1
+		}
+	}
+}
+[2024-06-25 17:02:40][info]function2 received Main|FutuEngine|1999|{
+	"errCode" : 0,
+	"retMsg" : "",
+	"retType" : 0,
+	"s2c" : 
+	{
+		"funds" : 
+		{
+			"avlWithdrawalCash" : 0,
+			"cash" : 1000000,
+			"debtCash" : 0,
+			"frozenCash" : 0,
+			"marketVal" : 0,
+			"power" : 0,
+			"securitiesAssets" : 1000000,
+			"totalAssets" : 1000000
+		},
+		"header" : 
+		{
+			"accID" : "8865506",
+			"trdEnv" : 0,
+			"trdMarket" : 1
+		}
+	}
+}
+[2024-06-25 17:02:43][info]function2 received Main|FutuEngine|1999|{
+	"errCode" : 0,
+	"retMsg" : "",
+	"retType" : 0,
+	"s2c" : 
+	{
+		"funds" : 
+		{
+			"avlWithdrawalCash" : 0,
+			"cash" : 1000000,
+			"debtCash" : 0,
+			"frozenCash" : 0,
+			"marketVal" : 0,
+			"power" : 0,
+			"securitiesAssets" : 1000000,
+			"totalAssets" : 1000000
+		},
+		"header" : 
+		{
+			"accID" : "8865506",
+			"trdEnv" : 0,
+			"trdMarket" : 1
+		}
+	}
+}
+[2024-06-25 17:02:46][info]function2 received Main|FutuEngine|1999|{
+	"errCode" : 0,
+	"retMsg" : "",
+	"retType" : 0,
+	"s2c" : 
+	{
+		"funds" : 
+		{
+			"avlWithdrawalCash" : 0,
+			"cash" : 1000000,
+			"debtCash" : 0,
+			"frozenCash" : 0,
+			"marketVal" : 0,
+			"power" : 0,
+			"securitiesAssets" : 1000000,
+			"totalAssets" : 1000000
+		},
+		"header" : 
+		{
+			"accID" : "8865506",
+			"trdEnv" : 0,
+			"trdMarket" : 1
+		}
+	}
+}
+[2024-06-25 17:02:49][info]function2 received Main|FutuEngine|1999|{
+	"errCode" : 0,
+	"retMsg" : "",
+	"retType" : 0,
+	"s2c" : 
+	{
+		"funds" : 
+		{
+			"avlWithdrawalCash" : 0,
+			"cash" : 1000000,
+			"debtCash" : 0,
+			"frozenCash" : 0,
+			"marketVal" : 0,
+			"power" : 0,
+			"securitiesAssets" : 1000000,
+			"totalAssets" : 1000000
+		},
+		"header" : 
+		{
+			"accID" : "8865506",
+			"trdEnv" : 0,
+			"trdMarket" : 1
+		}
+	}
+}
+[2024-06-25 17:02:52][info]function2 received Main|FutuEngine|1999|{
+	"errCode" : 0,
+	"retMsg" : "",
+	"retType" : 0,
+	"s2c" : 
+	{
+		"funds" : 
+		{
+			"avlWithdrawalCash" : 0,
+			"cash" : 1000000,
+			"debtCash" : 0,
+			"frozenCash" : 0,
+			"marketVal" : 0,
+			"power" : 0,
+			"securitiesAssets" : 1000000,
+			"totalAssets" : 1000000
+		},
+		"header" : 
+		{
+			"accID" : "8865506",
+			"trdEnv" : 0,
+			"trdMarket" : 1
+		}
+	}
+}
+[2024-06-25 17:02:55][info]function2 received Main|FutuEngine|1999|{
+	"errCode" : 0,
+	"retMsg" : "",
+	"retType" : 0,
+	"s2c" : 
+	{
+		"funds" : 
+		{
+			"avlWithdrawalCash" : 0,
+			"cash" : 1000000,
+			"debtCash" : 0,
+			"frozenCash" : 0,
+			"marketVal" : 0,
+			"power" : 0,
+			"securitiesAssets" : 1000000,
+			"totalAssets" : 1000000
+		},
+		"header" : 
+		{
+			"accID" : "8865506",
+			"trdEnv" : 0,
+			"trdMarket" : 1
+		}
+	}
+}
+[2024-06-25 17:02:58][info]function2 received Main|FutuEngine|1999|{
+	"errCode" : 0,
+	"retMsg" : "",
+	"retType" : 0,
+	"s2c" : 
+	{
+		"funds" : 
+		{
+			"avl[2024-06-25 17:06:55][info]dialer2 created
+[2024-06-25 17:06:55][info]dialer3 created
+[2024-06-25 17:06:56][info]futu created
+[2024-06-25 17:06:58][info]getFund called, with id: 8865506, market: 1, mode: 0. Return serial: 3
+[2024-06-25 17:06:58][info]OnReply_GetFunds, serial: 3
+[2024-06-25 17:06:59][info]function2 received Main|FutuEngine|1999|{
+	"errCode" : 0,
+	"retMsg" : "",
+	"retType" : 0,
+	"s2c" : 
+	{
+		"funds" : 
+		{
+			"avlWithdrawalCash" : 0,
+			"cash" : 1000000,
+			"debtCash" : 0,
+			"frozenCash" : 0,
+			"marketVal" : 0,
+			"power" : 0,
+			"securitiesAssets" : 1000000,
+			"totalAssets" : 1000000
+		},
+		"header" : 
+		{
+			"accID" : "8865506",
+			"trdEnv" : 0,
+			"trdMarket" : 1
+		}
+	}
+}
+[2024-06-25 17:07:01][info]getFund called, with id: 8865506, market: 1, mode: 0. Return serial: 4
+[2024-06-25 17:07:01][info]OnReply_GetFunds, serial: 4
+[2024-06-25 17:07:01][info]function2 received Main|FutuEngine|1999|{
+	"errCode" : 0,
+	"retMsg" : "",
+	"retType" : 0,
+	"s2c" : 
+	{
+		"funds" : 
+		{
+			"avlWithdrawalCash" : 0,
+			"cash" : 1000000,
+			"debtCash" : 0,
+			"frozenCash" : 0,
+			"marketVal" : 0,
+			"power" : 0,
+			"securitiesAssets" : 1000000,
+			"totalAssets" : 1000000
+		},
+		"header" : 
+		{
+			"accID" : "8865506",
+			"trdEnv" : 0,
+			"trdMarket" : 1
+		}
+	}
+}
+[2024-06-25 17:07:05][info]OnReply_GetFunds, serial: 6
+[2024-06-25 17:07:05][info]getFund called, with id: 8865506, market: 1, mode: 0. Return serial: 6
+[2024-06-25 17:07:05][info]function2 received Main|FutuEngine|1999|{
+	"errCode" : 0,
+	"retMsg" : "",
+	"retType" : 0,
+	"s2c" : 
+	{
+		"funds" : 
+		{
+			"avlWithdrawalCash" : 0,
+			"cash" : 1000000,
+			"debtCash" : 0,
+			"frozenCash" : 0,
+			"marketVal" : 0,
+			"power" : 0,
+			"securitiesAssets" : 1000000,
+			"totalAssets" : 1000000
+		},
+		"header" : 
+		{
+			"accID" : "8865506",
+			"trdEnv" : 0,
+			"trdMarket" : 1
+		}
+	}
+}
+[2024-06-25 17:07:08][info]getFund called, with id: 8865506, market: 1, mode: 0. Return serial: 7
+[2024-06-25 17:07:08][info]OnReply_GetFunds, serial: 7
+[2024-06-25 17:07:08][info]function2 received Main|FutuEngine|1999|{
+	"errCode" : 0,
+	"retMsg" : "",
+	"retType" : 0,
+	"s2c" : 
+	{
+		"funds" : 
+		{
+			"avlWithdrawalCash" : 0,
+			"cash" : 1000000,
+			"debtCash" : 0,
+			"frozenCash" : 0,
+			"marketVal" : 0,
+			"power" : 0,
+			"securitiesAssets" : 1000000,
+			"totalAssets" : 1000000
+		},
+		"header" : 
+		{
+			"accID" : "8865506",
+			"trdEnv" : 0,
+			"trdMarket" : 1
+		}
+	}
+}
+[2024-06-25 17:07:11][info]getFund called, with id: 8865506, market: 1, mode: 0. Return serial: 9
+[2024-06-25 17:07:11][info]OnReply_GetFunds, serial: 9
+[2024-06-25 17:07:11][info]function2 received Main|FutuEngine|1999|{
+	"errCode" : 0,
+	"retMsg" : "",
+	"retType" : 0,
+	"s2c" : 
+	{
+		"funds" : 
+		{
+			"avlWithdrawalCash" : 0,
+			"cash" : 1000000,
+			"debtCash" : 0,
+			"frozenCash" : 0,
+			"marketVal" : 0,
+			"power" : 0,
+			"securitiesAssets" : 1000000,
+			"totalAssets" : 1000000
+		},
+		"header" : 
+		{
+			"accID" : "8865506",
+			"trdEnv" : 0,
+			"trdMarket" : 1
+		}
+	}
+}
+[2024-06-25 17:07:14][info]getFund called, with id: 8865506, market: 1, mode: 0. Return serial: 10
+[2024-06-25 17:07:14][info]OnReply_GetFunds, serial: 10
+[2024-06-25 17:07:14][info]function2 received Main|FutuEngine|1999|{
+	"errCode" : 0,
+	"retMsg" : "",
+	"retType" : 0,
+	"s2c" : 
+	{
+		"funds" : 
+		{
+			"avlWithdrawalCash" : 0,
+			"cash" : 1000000,
+			"debtCash" : 0,
+			"frozenCash" : 0,
+			"marketVal" : 0,
+			"power" : 0,
+			"securitiesAssets" : 1000000,
+			"totalAssets" : 1000000
+		},
+		"header" : 
+		{
+			"accID" : "8865506",
+			"trdEnv" : 0,
+			"trdMarket" : 1
+		}
+	}
+}
+[2024-06-25 17:07:17][info]getFund called, with id: 8865506, market: 1, mode: 0. Return serial: 11
+[2024-06-25 17:07:17][info]OnReply_GetFunds, serial: 11
+[2024-06-25 17:07:17][info]function2 received Main|FutuEngine|1999|{
+	"errCode" : 0,
+	"retMsg" : "",
+	"retType" : 0,
+	"s2c" : 
+	{
+		"funds" : 
+		{
+			"avlWithdrawalCash" : 0,
+			"cash" : 1000000,
+			"debtCash" : 0,
+			"frozenCash" : 0,
+			"marketVal" : 0,
+			"power" : 0,
+			"securitiesAssets" : 1000000,
+			"totalAssets" : 1000000
+		},
+		"header" : 

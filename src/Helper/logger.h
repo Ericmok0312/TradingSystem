@@ -10,12 +10,8 @@
 #include "spdlog/spdlog.h"
 #include "spdlog/logger.h"
 #include "spdlog/sinks/basic_file_sink.h"
-
-
-#define LOG_FATAL(sqLogger, content) LOG4CPLUS_FATAL(sqLogger->getLogger(), content)
-#define LOG_ERROR(sqLogger, content) LOG4CPLUS_ERROR(sqLogger->getLogger(), content)
-#define LOG_INFO(sqLogger, content) LOG4CPLUS_INFO(sqLogger->getLogger(), content)
-#define LOG_DEBUG(sqLogger, content) LOG4CPLUS_DEBUG(sqLogger->getLogger(), content)
+#define SPDLOG_TRACE_ON
+#define SPDLOG_DEBUG_ON
 
 
 
@@ -64,7 +60,11 @@ namespace ts
             }
             inline void debug(const char* context){
                 std::lock_guard<std::mutex> lock(mutex_);
-                spdlogger_->debug(context);
+                SPDLOG_DEBUG(spdlogger_, context);
+            }
+            inline void trace(const char* context){
+                std::lock_guard<std::mutex> lock(mutex_);
+                SPDLOG_TRACE(spdlogger_, context);
             }
 
     };

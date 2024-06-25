@@ -85,12 +85,17 @@ namespace ts{
         MSG_TYPE_OPTIONS_KLINE = 1004,
         MSG_TYPE_OPTIONS_QUOTE = 1005,
 
+        MSG_TYPE_TICKER = 1500,
 
         //account information
+        MSG_TYPE_ACCESSLIST = 1998,
         MSG_TYPE_ACCOUNTINFO = 1999,
+        
         //operations on TS
         MSG_TYPE_SUBSCRIBE_MARKET_DATA = 2000,
         MSG_TYPE_GET_ACCOUNTINFO = 2001,
+        MSG_TYPE_GET_ACCESSLIST = 2002,
+        MSG_TYPE_REGCALLBACK = 2003,
 
         //debug
         MSG_TYPE_DEBUG = 4000
@@ -99,8 +104,13 @@ namespace ts{
 
 
     enum SubType:int32_t{
-        KLINE_1MIN = 0,
-        KLINE_1D = 1
+        TICKER = 0,
+        KLINE_1MIN = 1,
+        KLINE_1D = 2,
+
+
+
+        ALL = 1000
     };
 
 
@@ -121,12 +131,13 @@ namespace ts{
 
     /*
     Msg
-    Class for all message object in the system
+    Class for all message object in the system, identified by msgtype_
 
     Public: 
         - destination_ : string indicating where the message goes to
         - source_ : string indicating where the message comes from
         - msgtype_ : MSG_TYPE (int32_t) inidcating which type of message it is.
+        - data_ : Json::Value type variable, containing data to be transmitted
 
         Msg() : default constructor
 
@@ -145,47 +156,15 @@ namespace ts{
             MSG_TYPE msgtype_;
             Json::Value data_;
         
-        Msg(){};
+        Msg();
 
-        Msg(const string& des, const string& src, MSG_TYPE type){
-            destination_ = des;
-            source_ = src;
-            msgtype_ = type;
-        }
+        Msg(const string& des, const string& src, MSG_TYPE type, Json::Value data);
 
         virtual ~Msg(){};
 
-        virtual string serialize(){
-            return destination_ + SERIALIZATION_SEP + source_ + SERIALIZATION_SEP + std::to_string(msgtype_);
-        }
+        virtual string serialize();
 
         virtual void deserialize(const string& msgin);
-    };
-
-
-    class Subscribe{
-        public:
-            string code_;
-            Market market_;
-            Subscribe(string code, Market market):code_(code),market_(market){};
-            Subscribe() {};
-            ~Subscribe() {};
-    };
-    /*
-    SubscibeMsg
-        - Class inheriting Msg, specialize for subscribe market messgae
-    */
-    class SubscribeMsg: public Msg{
-        public:
-            SubscribeMsg(const string& des, const string& src):Msg(des, src, MSG_TYPE_SUBSCRIBE_MARKET_DATA){};
-            SubscribeMsg():Msg(){
-                msgtype_ = MSG_TYPE_SUBSCRIBE_MARKET_DATA;
-            }
-            ~SubscribeMsg(){}
-            Subscribe data_;
-
-            virtual string serialize();
-            virtual void deserialize(const string& msgin);
     };
 
 
@@ -202,29 +181,6 @@ namespace ts{
             double bondAssets_ = 0.0;
     };
 
-    class AccountInfoMsg: public Msg{
-        public:
-            AccountInfoMsg(const string& des, const string& src);
-            AccountInfoMsg();
-            ~AccountInfoMsg();
-
-
-            virtual string serialize();
-
-    };
-
-
-
-
-    class EngineOperationMsg: public Msg{
-        public:
-            EngineOperationMsg(const string& des, const string& src, MSG_TYPE msgtype, Json::Value data);
-            EngineOperationMsg();
-            ~EngineOperationMsg();
-
-            virtual string serialize();
-
-    };
 
     /*
     Msgq_protocol: enum class type indiocating the protocol used for the message delivery
@@ -278,16 +234,6 @@ namespace ts{
 
     };
 
-
-
-    class KlineMsg: public Msg{
-        public:
-            KlineMsg(string des, string src, MSG_TYPE klinetype):Msg(des, src, klinetype){};
-            KlineMsg():Msg(){
-                msgtype_ = MSG_TYPE_STOCK_KLINE;
-            }
-            ~KlineMsg(){}
-    };
 
     /*
     

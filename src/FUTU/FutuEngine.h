@@ -25,9 +25,12 @@ namespace ts
             virtual void setTradeMode(){};
             virtual void lockTXN(){};
             virtual void unlockTXN(){};
-            virtual void subscribe(const string& code, int32_t subtype);
+            virtual void subscribe(const char* code, int32_t subtype);
             virtual void getFund(int id, int32_t market, int32_t mode);
+            virtual void getAccessList();
 
+
+            virtual void regCallBack(const char* code, int32_t subtype);
             // overriding Futu's pure virtual functions
 
             virtual void OnInitConnect(Futu::FTAPI_Conn* pConnect, Futu::i64_t nErrCode, const char* strDesc){};
@@ -75,7 +78,7 @@ namespace ts
             virtual void OnPush_Notify(const Notify::Response &stRsp){}
             virtual void OnPush_UpdateBasicQot(const Qot_UpdateBasicQot::Response &stRsp){}
             virtual void OnPush_UpdateOrderBook(const Qot_UpdateOrderBook::Response &stRsp){}
-            virtual void OnPush_UpdateTicker(const Qot_UpdateTicker::Response &stRsp){}
+            virtual void OnPush_UpdateTicker(const Qot_UpdateTicker::Response &stRsp);
             virtual void OnPush_UpdateKL(const Qot_UpdateKL::Response &stRsp){}
             virtual void OnPush_UpdateRT(const Qot_UpdateRT::Response &stRsp){}
             virtual void OnPush_UpdateBroker(const Qot_UpdateBroker::Response &stRsp){}
