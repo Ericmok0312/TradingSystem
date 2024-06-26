@@ -18,7 +18,7 @@ include_directories(${PROJECT_SOURCE_DIR}/src)
 
 link_directories(${PROJECT_SOURCE_DIR}/src/lib/)
 
-file(GLOB SRC "${PROJECT_SOURCE_DIR}/src/Interface/*.cpp" "${PROJECT_SOURCE_DIR}/src/Helper/*.cpp" "${PROJECT_SOURCE_DIR}/src/FUTU/*.cpp")
+file(GLOB SRC "${PROJECT_SOURCE_DIR}/src/Interface/*.cpp" "${PROJECT_SOURCE_DIR}/src/Helper/*.cpp" "${PROJECT_SOURCE_DIR}/src/FUTU/*.cpp" "${PROJECT_SOURCE_DIR}/src/DataManager/*.cpp")
 add_executable(test test.cpp ${SRC})
 
 target_link_libraries(test PRIVATE pthread)

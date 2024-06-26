@@ -26,7 +26,9 @@ namespace ts
             virtual void lockTXN(){};
             virtual void unlockTXN(){};
             virtual void subscribe(const char* code, int32_t subtype);
+            //virtual void subscribe(Json::Value&& param);
             virtual void getFund(int id, int32_t market, int32_t mode);
+            //virtual void getFund(Json::Value&& param);
             virtual void getAccessList();
 
 

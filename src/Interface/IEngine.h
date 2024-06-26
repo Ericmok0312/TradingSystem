@@ -5,7 +5,7 @@
 #include <Interface/IMessenger.h>
 
 #ifndef TRADINGSYSTEM_SRC_INTERFACE_IENGINE_H
-#define TRADINGSYSTEM_SRC_INTERFACEIENGINE_H
+#define TRADINGSYSTEM_SRC_INTERFACE_IENGINE_H
 
 #if defined(_WIN32) || defined(_WIN64)
 #ifdef DLL_EXPORT

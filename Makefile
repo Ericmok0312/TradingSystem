@@ -129,6 +129,30 @@ test/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/build
 .PHONY : test/fast
 
+src/DataManager/DataManager.o: src/DataManager/DataManager.cpp.o
+.PHONY : src/DataManager/DataManager.o
+
+# target to build an object file
+src/DataManager/DataManager.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/DataManager/DataManager.cpp.o
+.PHONY : src/DataManager/DataManager.cpp.o
+
+src/DataManager/DataManager.i: src/DataManager/DataManager.cpp.i
+.PHONY : src/DataManager/DataManager.i
+
+# target to preprocess a source file
+src/DataManager/DataManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/DataManager/DataManager.cpp.i
+.PHONY : src/DataManager/DataManager.cpp.i
+
+src/DataManager/DataManager.s: src/DataManager/DataManager.cpp.s
+.PHONY : src/DataManager/DataManager.s
+
+# target to generate assembly for a file
+src/DataManager/DataManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/DataManager/DataManager.cpp.s
+.PHONY : src/DataManager/DataManager.cpp.s
+
 src/FUTU/FutuEngine.o: src/FUTU/FutuEngine.cpp.o
 .PHONY : src/FUTU/FutuEngine.o
 
@@ -152,6 +176,30 @@ src/FUTU/FutuEngine.s: src/FUTU/FutuEngine.cpp.s
 src/FUTU/FutuEngine.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/FUTU/FutuEngine.cpp.s
 .PHONY : src/FUTU/FutuEngine.cpp.s
+
+src/Helper/ThreadPool.o: src/Helper/ThreadPool.cpp.o
+.PHONY : src/Helper/ThreadPool.o
+
+# target to build an object file
+src/Helper/ThreadPool.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Helper/ThreadPool.cpp.o
+.PHONY : src/Helper/ThreadPool.cpp.o
+
+src/Helper/ThreadPool.i: src/Helper/ThreadPool.cpp.i
+.PHONY : src/Helper/ThreadPool.i
+
+# target to preprocess a source file
+src/Helper/ThreadPool.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Helper/ThreadPool.cpp.i
+.PHONY : src/Helper/ThreadPool.cpp.i
+
+src/Helper/ThreadPool.s: src/Helper/ThreadPool.cpp.s
+.PHONY : src/Helper/ThreadPool.s
+
+# target to generate assembly for a file
+src/Helper/ThreadPool.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Helper/ThreadPool.cpp.s
+.PHONY : src/Helper/ThreadPool.cpp.s
 
 src/Helper/logger.o: src/Helper/logger.cpp.o
 .PHONY : src/Helper/logger.o
@@ -282,9 +330,15 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... test"
+	@echo "... src/DataManager/DataManager.o"
+	@echo "... src/DataManager/DataManager.i"
+	@echo "... src/DataManager/DataManager.s"
 	@echo "... src/FUTU/FutuEngine.o"
 	@echo "... src/FUTU/FutuEngine.i"
 	@echo "... src/FUTU/FutuEngine.s"
+	@echo "... src/Helper/ThreadPool.o"
+	@echo "... src/Helper/ThreadPool.i"
+	@echo "... src/Helper/ThreadPool.s"
 	@echo "... src/Helper/logger.o"
 	@echo "... src/Helper/logger.i"
 	@echo "... src/Helper/logger.s"

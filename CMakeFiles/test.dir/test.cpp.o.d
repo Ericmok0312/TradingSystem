@@ -435,4 +435,13 @@ CMakeFiles/test.dir/test.cpp.o: \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/futu/Include_FTAPIChannel.h \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/futu/FTAPIChannel.h \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/futu/FTAPIChannel_Define.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/futu/FTSPI.h
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/futu/FTSPI.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/src/DataManager/DataManager.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/src/Helper/ThreadPool.h \
+ /usr/include/c++/8/queue /usr/include/c++/8/bits/stl_queue.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/src/Helper/util.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/util/json_util.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/util/type_resolver.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/stubs/status.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/stubs/stringpiece.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/stubs/bytestream.h

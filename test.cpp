@@ -6,7 +6,7 @@ using namespace ts;
 #include <memory>
 #include <FUTU/FutuEngine.h>
 #include <json/json.h>
-
+#include <DataManager/DataManager.h>
 
 void func_1(){
     if(!MsgqTSMessenger::msgq_server_){
@@ -23,6 +23,10 @@ void func_1(){
     msg->source_ = "Main";
     msg->msgtype_ = MSG_TYPE_REGCALLBACK;
     MsgqTSMessenger::msgq_server_->sendmsg(msg->serialize().c_str(), 0);
+    msg->data_["code"] = "09999";
+    MsgqTSMessenger::msgq_server_->sendmsg(msg->serialize().c_str(), 0);
+    msg->data_["code"] = "02319";
+    MsgqTSMessenger::msgq_server_->sendmsg(msg->serialize().c_str(), 0);    
     while(true){
     }
 }
@@ -43,22 +47,22 @@ void func_11(){
     msg->source_ = "Main";
     msg->msgtype_ = MSG_TYPE_GET_ACCOUNTINFO;
     while(true){
-    MsgqTSMessenger::msgq_server_->sendmsg(msg->serialize().c_str(), 0);
+    MsgqTSMessenger::msgq_server_->sendmsg(msg->serialize(), 0);
     sleep(3);
     }
 }
 
 void func_2(){
-    std::shared_ptr<Logger> LOG = Logger::getInstance();
-    ts::MsgqTSMessenger rec2 (PROXY_SERVER_URL);
-    LOG->info("dialer2 created");
+    // std::shared_ptr<Logger> LOG = Logger::getInstance();
+    // ts::MsgqTSMessenger rec2 (PROXY_SERVER_URL);
+    // LOG->info("dialer2 created");
  
-    while(true){ 
-        std::shared_ptr<Msg> msg2 = rec2.recv(NNG_FLAG_NONBLOCK+NNG_FLAG_ALLOC); // nonblock + ALLOC
-        if(msg2 && msg2->destination_=="Main"){
-            LOG->info(fmt::format("function2 received {}",msg2->serialize()).c_str());
-        }
-    }
+    // while(true){ 
+    //     std::shared_ptr<Msg> msg2 = rec2.recv(NNG_FLAG_NONBLOCK+NNG_FLAG_ALLOC); // nonblock + ALLOC
+    //     if(msg2 && msg2->destination_=="Main"){
+    //         LOG->info(fmt::format("function2 received {}",msg2->serialize()).c_str());
+    //     }
+    // }
 }
 
 
@@ -67,7 +71,8 @@ void func_2(){
 void func_3(){
     std::shared_ptr<Logger> LOG = Logger::getInstance();
     FutuEngine eng;
-    LOG->info("futu created");
+    std::chrono::microseconds ms = std::chrono::duration_cast< std::chrono::microseconds >(std::chrono::system_clock::now().time_since_epoch());
+    LOG->info(fmt::format("futu created, current timestamp:{}", to_string(ms.count())).c_str());
     eng.start();
     
 }
@@ -76,15 +81,20 @@ void func_3(){
 void func_4(){
 
     std::shared_ptr<Logger> LOG = Logger::getInstance();
-    ts::MsgqTSMessenger rec (PROXY_SERVER_URL);
-    LOG->info("dialer3 created");
+    // ts::MsgqTSMessenger rec (PROXY_SERVER_URL);
+    // LOG->info("dialer3 created");
  
-    while(true){ 
-        std::shared_ptr<Msg> msg = rec.recv(NNG_FLAG_NONBLOCK+NNG_FLAG_ALLOC); // nonblock + ALLOC
-        if(msg && msg->destination_=="DataManager"){
-            LOG->info(fmt::format("DataManager received {}",msg->serialize()).c_str());
-        }
-    }
+    // while(true){ 
+    //     std::shared_ptr<Msg> msg = rec.recv(NNG_FLAG_NONBLOCK+NNG_FLAG_ALLOC); // nonblock + ALLOC
+    //     if(msg && msg->destination_=="DataManager"){
+    //         LOG->info(fmt::format("DataManager received {}",msg->serialize()).c_str());
+    //     }
+    // }
+
+    DataManager dm;
+    LOG->info("dm created");
+    dm.start();
+
 }
 
 

@@ -1,0 +1,7069 @@
+[2024-06-26 11:27:47][info]dialer2 created
+[2024-06-26 11:27:47][info]dialer3 created
+[2024-06-26 11:27:47][info]futu created
+[2024-06-26 11:27:57][info]regCallBack called with code: 00700, subtype: 0
+[2024-06-26 11:27:57][info]Subscribing: 00700 for SubType: 0 Serial No. 4
+[2024-06-26 11:27:57][info]Subscribe Succeed. Serial: 4
+[2024-06-26 11:27:57][info]DataManager received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u817e\u8baf\u63a7\u80a1",
+		"security" : 
+		{
+			"code" : "00700",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 1,
+				"price" : 379,
+				"pushDataType" : 3,
+				"recvTime" : 1719372477.319386,
+				"sequence" : "7384648554062549897",
+				"time" : "2024-06-26 11:27:56.651",
+				"timestamp" : 1719372476.651,
+				"turnover" : 189500,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "500"
+			}
+		]
+	}
+}
+[2024-06-26 11:27:57][info]DataManager received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u817e\u8baf\u63a7\u80a1",
+		"security" : 
+		{
+			"code" : "00700",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 1,
+				"price" : 379,
+				"pushDataType" : 1,
+				"recvTime" : 1719372477.532974,
+				"sequence" : "7384648558357517194",
+				"time" : "2024-06-26 11:27:57.436",
+				"timestamp" : 1719372477.4360001,
+				"turnover" : 1895000,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "5000"
+			}
+		]
+	}
+}
+[2024-06-26 11:28:00][info]DataManager received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u817e\u8baf\u63a7\u80a1",
+		"security" : 
+		{
+			"code" : "00700",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 1,
+				"price" : 379,
+				"pushDataType" : 1,
+				"recvTime" : 1719372480.3173771,
+				"sequence" : "7384648571242419083",
+				"time" : "2024-06-26 11:28:00.175",
+				"timestamp" : 1719372480.175,
+				"turnover" : 37900,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "100"
+			}
+		]
+	}
+}
+[2024-06-26 11:28:00][info]DataManager received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u817e\u8baf\u63a7\u80a1",
+		"security" : 
+		{
+			"code" : "00700",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 1,
+				"price" : 379,
+				"pushDataType" : 1,
+				"recvTime" : 1719372480.3654611,
+				"sequence" : "7384648571242419084",
+				"time" : "2024-06-26 11:28:00.191",
+				"timestamp" : 1719372480.191,
+				"turnover" : 37900,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "100"
+			}
+		]
+	}
+}
+[2024-06-26 11:28:01][info]DataManager received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u817e\u8baf\u63a7\u80a1",
+		"security" : 
+		{
+			"code" : "00700",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 3,
+				"price" : 379,
+				"pushDataType" : 1,
+				"recvTime" : 1719372481.0041151,
+				"sequence" : "7384648571242419085",
+				"time" : "2024-06-26 11:28:00.918",
+				"timestamp" : 1719372480.918,
+				"turnover" : 37900,
+				"type" : 4,
+				"typeSign" : 89,
+				"volume" : "100"
+			},
+			{
+				"dir" : 1,
+				"price" : 379,
+				"pushDataType" : 1,
+				"recvTime" : 1719372481.0041151,
+				"sequence" : "7384648571242419086",
+				"time" : "2024-06-26 11:28:00.918",
+				"timestamp" : 1719372480.918,
+				"turnover" : 1857100,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "4900"
+			}
+		]
+	}
+}
+[2024-06-26 11:28:03][info]DataManager received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u817e\u8baf\u63a7\u80a1",
+		"security" : 
+		{
+			"code" : "00700",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 378.80000000000001,
+				"pushDataType" : 1,
+				"recvTime" : 1719372483.3505421,
+				"sequence" : "7384648584127320975",
+				"time" : "2024-06-26 11:28:03.161",
+				"timestamp" : 1719372483.161,
+				"turnover" : 189400,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "500"
+			}
+		]
+	}
+}
+[2024-06-26 11:28:04][info]DataManager received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u817e\u8baf\u63a7\u80a1",
+		"security" : 
+		{
+			"code" : "00700",
+			"market"[2024-06-26 11:33:38][info]dialer2 created
+[2024-06-26 11:33:38][info]dialer3 created
+[2024-06-26 11:33:38][info]futu created
+[2024-06-26 11:33:48][info]regCallBack called with code: 00700, subtype: 0
+[2024-06-26 11:33:48][info]Subscribing: 00700 for SubType: 0 Serial No. 4
+[2024-06-26 11:33:48][info]regCallBack called with code: 09999, subtype: 0
+[2024-06-26 11:33:48][info]Subscribing: 09999 for SubType: 0 Serial No. 5
+[2024-06-26 11:33:48][info]Subscribe Succeed. Serial: 4
+[2024-06-26 11:33:48][info]Subscribe Succeed. Serial: 5
+[2024-06-26 11:33:48][info]DataManager received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u817e\u8baf\u63a7\u80a1",
+		"security" : 
+		{
+			"code" : "00700",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 379.39999999999998,
+				"pushDataType" : 3,
+				"recvTime" : 1719372828.3154221,
+				"sequence" : "7384650053006136315",
+				"time" : "2024-06-26 11:33:45.205",
+				"timestamp" : 1719372825.2049999,
+				"turnover" : 872620,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "2300"
+			}
+		]
+	}
+}
+[2024-06-26 11:33:48][info]DataManager received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u7f51\u6613-S",
+		"security" : 
+		{
+			"code" : "09999",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 147.80000000000001,
+				"pushDataType" : 3,
+				"recvTime" : 1719372828.3863659,
+				"sequence" : "7384650035826264347",
+				"time" : "2024-06-26 11:33:41.675",
+				"timestamp" : 1719372821.675,
+				"turnover" : 29560.000000000004,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "200"
+			}
+		]
+	}
+}
+[2024-06-26 11:33:55][info]DataManager received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u817e\u8baf\u63a7\u80a1",
+		"security" : 
+		{
+			"code" : "00700",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 379.39999999999998,
+				"pushDataType" : 1,
+				"recvTime" : 1719372835.1321449,
+				"sequence" : "7384650095955809276",
+				"time" : "2024-06-26 11:33:55.178",
+				"timestamp" : 1719372835.178,
+				"turnover" : 37940,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "100"
+			}
+		]
+	}
+}
+[2024-06-26 11:33:58][info]DataManager received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u817e\u8baf\u63a7\u80a1",
+		"security" : 
+		{
+			"code" : "00700",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 379.39999999999998,
+				"pushDataType" : 1,
+				"recvTime" : 1719372838.905122,
+				"sequence" : "7384650108840711165",
+				"time" : "2024-06-26 11:33:58.880",
+				"timestamp" : 1719372838.8800001,
+				"turnover" : 379400,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "1000"
+			}
+		]
+	}
+}
+[2024-06-26 11:34:05][info]DataManager received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u7f51\u6613-S",
+		"security" : 
+		{
+			"code" : "09999",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 147.90000000000001,
+				"pushDataType" : 1,
+				"recvTime" : 1719372845.3702619,
+				"sequence" : "7384650138905479452",
+				"time" : "2024-06-26 11:34:05.322",
+				"timestamp" : 1719372845.322,
+				"turnover" : 29580,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "200"
+			},
+			{
+				"dir" : 2,
+				"price" : 147.90000000000001,
+				"pushDataType" : 1,
+				"recvTime" : 1719372845.3702619,
+				"sequence" : "7384650138905479453",
+				"time" : "2024-06-26 11:34:05.323",
+				"timestamp" : 1719372845.323,
+				"turnover" : 73950,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "500"
+			}
+		]
+	}
+}
+[2024-06-26 11:34:06][info]DataManager received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u7f51\u6613-S",
+		"security" : 
+		{
+			"code" : "09999",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 147.80000000000001,
+				"pushDataType" : 1,
+				"recvTime" : 1719372846.0582099,
+				"sequence" : "7384650143200446750",
+				"time" : "2024-06-26 11:34:06.109",
+				"timestamp" : 1719372846.109,
+				"turnover" [2024-06-26 11:38:16.177] [tslogger] [info] dialer2 created
+[2024-06-26 11:38:16.190] [tslogger] [info] dialer3 created
+[2024-06-26 11:38:16.197] [tslogger] [info] futu created
+[2024-06-26 11:38:26.209] [tslogger] [info] regCallBack called with code: 00700, subtype: 0
+[2024-06-26 11:38:26.211] [tslogger] [info] Subscribing: 00700 for SubType: 0 Serial No. 4
+[2024-06-26 11:38:26.212] [tslogger] [info] regCallBack called with code: 09999, subtype: 0
+[2024-06-26 11:38:26.212] [tslogger] [info] Subscribing: 09999 for SubType: 0 Serial No. 5
+[2024-06-26 11:38:26.213] [tslogger] [info] regCallBack called with code: 02319, subtype: 0
+[2024-06-26 11:38:26.213] [tslogger] [info] Subscribing: 02319 for SubType: 0 Serial No. 6
+[2024-06-26 11:38:26.267] [tslogger] [info] Subscribe Succeed. Serial: 4
+[2024-06-26 11:38:26.289] [tslogger] [info] Subscribe Succeed. Serial: 5
+[2024-06-26 11:38:26.307] [tslogger] [info] Subscribe Succeed. Serial: 6
+[2024-06-26 11:38:26.446] [tslogger] [info] DataManager received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u817e\u8baf\u63a7\u80a1",
+		"security" : 
+		{
+			"code" : "00700",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 1,
+				"price" : 379.39999999999998,
+				"pushDataType" : 3,
+				"recvTime" : 1719373106.3509729,
+				"sequence" : "7384651242712077353",
+				"time" : "2024-06-26 11:38:22.318",
+				"timestamp" : 1719373102.3180001,
+				"turnover" : 75880,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "200"
+			}
+		]
+	}
+}
+[2024-06-26 11:38:26.447] [tslogger] [info] DataManager received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u7f51\u6613-S",
+		"security" : 
+		{
+			"code" : "09999",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 1,
+				"price" : 147.90000000000001,
+				"pushDataType" : 3,
+				"recvTime" : 1719373106.386847,
+				"sequence" : "7384651238417107268",
+				"time" : "2024-06-26 11:38:21.393",
+				"timestamp" : 1719373101.3929999,
+				"turnover" : 29580,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "200"
+			}
+		]
+	}
+}
+[2024-06-26 11:38:26.447] [tslogger] [info] DataManager received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u8499\u725b\u4e73\u4e1a",
+		"security" : 
+		{
+			"code" : "02319",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 1,
+				"price" : 14.58,
+				"pushDataType" : 3,
+				"recvTime" : 1719373106.4416399,
+				"sequence" : "7384651238417107075",
+				"time" : "2024-06-26 11:38:21.178",
+				"timestamp" : 1719373101.178,
+				"turnover" : 43740,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "3000"
+			}
+		]
+	}
+}
+[2024-06-26 11:38:28.471] [tslogger] [info] DataManager received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u817e\u8baf\u63a7\u80a1",
+		"security" : 
+		{
+			"code" : "00700",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 1,
+				"price" : 379.39999999999998,
+				"pushDataType" : 1,
+				"recvTime" : 1719373108.4677169,
+				"sequence" : "7384651268481881130",
+				"time" : "2024-06-26 11:38:28.403",
+				"timestamp" : 1719373108.4030001,
+				"turnover" : 113820,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "300"
+			}
+		]
+	}
+}
+[2024-06-26 11:38:28.618] [tslogger] [info] DataManager received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u7f51\u6613-S",
+		"security" : 
+		{
+			"code" : "09999",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 1,
+				"price" : 147.90000000000001,
+				"pushDataType" : 1,
+				"recvTime" : 1719373108.6166201,
+				"sequence" : "7384651268481878341",
+				"time" : "2024-06-26 11:38:28.553",
+				"timestamp" : 1719373108.553,
+				"turnover" : 14790,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "100"
+			}
+		]
+	}
+}
+[2024-06-26 11:38:33.106] [tslogger] [info] DataManager received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u817e\u8baf\u63a7\u80a1",
+		"security" : 
+		{
+			"code" : "00700",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 1,
+				"price" : 379.39999999999998,
+				"pushDataType" : 1,
+				"recvTime" : 1719373113.1046319,
+				"sequence" : "7384651289956717611",
+				"time" : "2024-06-26 11:38:33.041",
+				"timestamp" : 1719373113.0409999,
+				"turnover" : 379400,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "1000"
+			}
+		]
+	}
+}
+[2024-06-26 11:38:35.577] [tslogger] [info] DataManager received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u817e\u8baf\u63a7\u80a1",
+		"security" : 
+		{
+			"code" : "00700",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 379.19999999999999,
+				"pushDataType" : 1,
+				"recvTime" : 1719373115.5756831,
+				"sequence" : "7384651298546652204",
+				"time" : "2024-06-26 11:38:35.516",
+				"timestamp" : 1719373115.516,
+				"turnover" : 379200,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "1000"
+			}
+		]
+	}
+}
+[2024-06-26 11:38:38.868] [tslogger] [info] DataManager received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u7f51\u6613-S",
+		"security" : 
+		{
+			"code" : "09999",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 1,
+				"price" : 147.90000000000001,
+				"pushDataType" : 1,
+				"recvTime" : 1719373118.857811,
+				"sequence" : "7384651311431551302",
+				"time" : "2024-06-26 11:38:38.794",
+				"timestamp" : 1719373118.7939999,
+				"turnover" : 14790,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "100"
+			}
+		]
+	}
+}
+[2024-06-26 11:38:39.917] [tslogger] [info] DataManager received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u817e\u8baf\u63a7\u80a1",
+		"security" : 
+		{
+			"code" : "00700",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 3,
+				"price" : 379.30000000000001,
+				"pushDataType" : 1,
+				"recvTime" : 1719373119.912379,
+				"sequence" : "7384651315726521389",
+				"time" : "2024-06-26 11:38:39.852",
+				"timestamp" : 1719373119.852,
+				"turnover" : 37930,
+				"type" : 5,
+				"typeSign" : 88,
+				"volume" : "100"
+			}
+		]
+	}
+}
+[2024-06-26 11:38:40.655] [tslogger] [info] DataManager received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u8499\u725b\u4e73\u4e1a",
+		"security" : 
+		{
+			"code" : "02319",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 1,
+				"price" : 14.58,
+				"pushDataType" : 1,
+				"recvTime" : 1719373120.6536191,
+				"sequence" : "7384651320021485700",
+				"time" : "2024-06-26 11:38:40.590",
+				"timestamp" : 1719373120.5899999,
+				"turnover" : 43740,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "3000"
+			}
+		]
+	}
+}
+[2024-06-26 11:38:42.599] [tslogger] [info] DataManager received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u8499\u725b\u4e73\u4e1a",
+		"security" : 
+		{
+			"code" : "02319",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 1,
+				"price" : 14.58,
+				"pushDataType" : 1,
+				"recvTime" : 1719373122.597919,
+				"sequence" : "7384651328611420293",
+				"time" : "2024-06-26 11:38:42.534",
+				"timestamp" : 1719373122.5339999,
+				"turnover" : 72900,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "5000"
+			}
+		]
+	}
+}
+[2024-06-26 11:38:43.201] [tslogger] [info] DataManager received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u817e\u8baf\u63a7\u80a1",
+		"security" : 
+		{
+			"code" : "00700",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 1,
+				"price" : 379.39999999999998,
+				"pushDataType" : 1,
+				"recvTime" : 1719373123.1987989,
+				"sequence" : "7384651332906390574",
+				"time" : "2024-06-26 11:38:43.135",
+				"timestamp" : 1719373123.135,
+				"turnover" : 37940,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "100"
+			}
+		]
+	}
+}
+[2024-06-26 11:38:52.452] [tslogger] [info] DataManager received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u7f51\u6613-S",
+		"security" : 
+		{
+			"code" : "09999",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 1,
+				"price" : 147.90000000000001,
+				"pushDataType" : 1,
+				"recvTime" : 1719373132.4509411,
+				"sequence" : "7384651371561093447",
+				"time" : "2024-06-26 11:38:52.387",
+				"timestamp" : 1719373132.3870001,
+				"turnover" : 73950,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "500"
+			}
+		]
+	}
+}
+[2024-06-26 11:38:54.230] [tslogger] [info] DataManager received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u7f51\u6613-S",
+		"security" : 
+		{
+			"code" : "09999",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 147.80000000000001,
+				"pushDataType" : 1,
+				"recvTime" : 1719373134.228637,
+				"sequence" : "7384651380151028040",
+				"time" : "2024-06-26 11:38:54.167",
+				"timestamp" : 1719373134.1670001,
+				"turnover" : 73900,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "500"
+			}
+		]
+	}
+}
+[2024-06-26 11:38:54.457] [tslogger] [info] DataManager received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u7f51\u6613-S",
+		"security" : 
+		{
+			"code" : "09999",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 1,
+				"price" : 147.90000000000001,
+				"pushDataType" : 1,
+				"recvTime" : 1719373134.456084,
+				"sequence" : "7384651380151028041",
+				"time" : "2024-06-26 11:38:54.388",
+				"timestamp" : 1719373134.388,
+				"turnover" : 44370,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "300"
+			}
+		]
+	}
+}
+[2024-06-26 11:38:55.464] [tslogger] [info] DataManager received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u817e\u8baf\u63a7\u80a1",
+		"security" : 
+		{
+			"code" : "00700",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 379.19999999999999,
+				"pushDataType" : 1,
+				"recvTime" : 1719373135.462065,
+				"sequence" : "7384651384445998127",
+				"time" : "2024-06-26 11:38:55.373",
+				"timestamp" : 1719373135.3729999,
+				"turnover" : 37920,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "100"
+			}
+		]
+	}
+}
+[2024-06-26 11:38:58.017] [tslogger] [info] DataManager received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u817e\u8baf\u63a7\u80a1",
+		"security" : 
+		{
+			"code" : "00700",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 1,
+				"price" : 379.39999999999998,
+				"pushDataType" : 1,
+				"recvTime" : 1719373138.012538,
+				"sequence" : "7384651393035932720",
+				"time" : "2024-06-26 11:38:57.936",
+				"timestamp" : 1719373137.9360001,
+				"turnover" : 75880,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "200"
+			}
+		]
+	}
+}
+[2024-06-26 11:38:59.450] [tslogger] [info] DataManager received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u7f51\u6613-S",
+		"security" : 
+		{
+			"code" : "09999",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 147.80000000000001,
+				"pushDataType" : 1,
+				"recvTime" : 1719373139.448791,
+				"sequence" : "7384651401625864522",
+				"time" : "2024-06-26 11:38:59.307",
+				"timestamp" : 1719373139.3069999,
+				"turnover" : 44340,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "300"
+			}
+		]
+	}
+}
+[2024-06-26 11:39:00.170] [tslogger] [info] DataManager received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u817e\u8baf\u63a7\u80a1",
+		"security" : 
+		{
+			"code" : "00700",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 379.19999999999999,
+				"pushDataType" : 1,
+				"recvTime" : 1719373140.161962,
+				"sequence" : "7384651405920834609",
+				"time" : "2024-06-26 11:39:00.019",
+				"timestamp" : 1719373140.0190001,
+				"turnover" : 948000,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "2500"
+			},
+			{
+				"dir" : 2,
+				"price" : 379.19999999999999,
+				"pushDataType" : 1,
+				"recvTime" : 1719373140.161962,
+				"sequence" : "7384651405920834610",
+				"time" : "2024-06-26 11:39:00.019",
+				"timestamp" : 1719373140.0190001,
+				"turnover" : 189600,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "500"
+			}
+		]
+	}
+}
+[2024-06-26 11:39:01.229] [tslogger] [info] DataManager received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u7f51\u6613-S",
+		"security" : 
+		{
+			"code" : "09999",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 147.90000000000001,
+				"pushDataType" : 1,
+				"recvTime" : 1719373141.2228899,
+				"sequence" : "7384651410215799115",
+				"time" : "2024-06-26 11:39:01.125",
+				"timestamp" : 1719373141.125,
+				"turnover" : 44370,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "300"
+			}
+		]
+	}
+}
+[2024-06-26 11:39:03.748] [tslogger] [info] DataManager received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u8499\u725b\u4e73\u4e1a",
+		"security" : 
+		{
+			"code" : "02319",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 3,
+				"price" : 14.58,
+				"pushDataType" : 1,
+				"recvTime" : 1719373143.739301,
+				"sequence" : "7384651418805733510",
+				"time" : "2024-06-26 11:39:03.658",
+				"timestamp" : 1719373143.658,
+				"turnover" : 29160,
+				"type" : 4,
+				"typeSign" : 89,
+				"volume" : "2000"
+			},
+			{
+				"dir" : 1,
+				"price" : 14.58,
+				"pushDataType" : 1,
+				"recvTime" : 1719373143.739301,
+				"sequence" : "7384651418805733511",
+				"time" : "2024-06-26 11:39:03.658",
+				"timestamp" : 1719373143.658,
+				"turnover" : 87480,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "6000"
+			}
+		]
+	}
+}
+[2024-06-26 11:39:03.930] [tslogger] [info] DataManager received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u8499\u725b\u4e73\u4e1a",
+		"security" : 
+		{
+			"code" : "02319",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 14.56,
+				"pushDataType" : 1,
+				"recvTime" : 1719373143.9190929,
+				"sequence" : "7384651418805733512",
+				"time" : "2024-06-26 11:39:03.834",
+				"timestamp" : 1719373143.8340001,
+				"turnover" : 14560,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "1000"
+			}
+		]
+	}
+}
+[2024-06-26 11:39:05.333] [tslogger] [info] DataManager received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u7f51\u6613-S",
+		"security" : 
+		{
+			"code" : "09999",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 3,
+				"price" : 147.90000000000001,
+				"pushDataType" : 1,
+				"recvTime" : 1719373145.3284891,
+				"sequence" : "7384651427395668300",
+				"time" : "2024-06-26 11:39:05.264",
+				"timestamp" : 1719373145.2639999,
+				"turnover" : 73950,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "500"
+			}
+		]
+	}
+}
+[2024-06-26 11:39:08.085] [tslogger] [info] DataManager received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u7f51\u6613-S",
+		"security" : 
+		{
+			"code" : "09999",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 3,
+				"price" : 147.90000000000001,
+				"pushDataType" : 1,
+				"recvTime" : 1719373148.083566,
+				"sequence" : "7384651440280570189",
+				"time" : "2024-06-26 11:39:08.006",
+				"timestamp" : 1719373148.006,
+				"turnover" : 14790,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "100"
+			}
+		]
+	}
+}
+[2024-06-26 11:39:11.996] [tslogger] [info] DataManager received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u8499\u725b\u4e73\u4e1a",
+		"security" : 
+		{
+			"code" : "02319",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 3,
+				"price" : 14.58,
+				"pushDataType" : 1,
+				"recvTime" : 1719373151.99491,
+				"sequence" : "7384651453165471881",
+				"time" : "2024-06-26 11:39:11.931",
+				"timestamp" : 1719373151.931,
+				"turnover" : 87480,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "6000"
+			}
+		]
+	}
+}
+[2024-06-26 11:39:13.668] [tslogger] [info] DataManager received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u8499\u725b\u4e73\u4e1a",
+		"security" : 
+		{
+			"code" : "02319",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 14.56,
+				"pushDataType" : 1,
+				"recvTime" : 1719373153.65674,
+				"sequence" : "7384651461755406474",
+				"time" : "2024-06-26 11:39:13.588",
+				"timestamp" : 1719373153.5880001,
+				"turnover" : 349440,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "24000"
+			},
+			{
+				"dir" : 2,
+				"price" : 14.56,
+				"pushDataType" : 1,
+				"recvTime" : 1719373153.65674,
+				"sequence" : "7384651461755406475",
+				"time" : "2024-06-26 11:39:13.589",
+				"timestamp" : 1719373153.589,
+				"turnover" : 815360,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "56000"
+			}
+		]
+	}
+}
+[2024-06-26 11:39:14.342] [tslogger] [info] DataManager received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u8499\u725b\u4e73\u4e1a",
+		"security" : 
+		{
+			"code" : "02319",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 14.539999999999999,
+				"pushDataType" : 1,
+				"recvTime" : 1719373154.3405111,
+				"sequence" : "7384651466050373772",
+				"time" : "2024-06-26 11:39:14.271",
+				"timestamp" : 1719373154.2709999,
+				"turnover" : 101780,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "7000"
+			}
+		]
+	}
+}
+[2024-06-26 11:39:16.197] [tslogger] [info] DataManager received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u817e\u8baf\u63a7\u80a1",
+		"security" : 
+		{
+			"code" : "00700",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 1,
+				"price" : 379.19999999999999,
+				"pushDataType" : 1,
+				"recvTime" : 1719373156.194557,
+				"sequence" : "7384651474640311347",
+				"time" : "2024-06-26 11:39:16.129",
+				"timestamp" : 1719373156.1289999,
+				"turnover" : 37920,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "100"
+			}
+		]
+	}
+}
+[2024-06-26 11:39:18.429] [tslogger] [info] DataManager received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u7f51\u6613-S",
+		"security" : 
+		{
+			"code" : "09999",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 3,
+				"price" : 147.90000000000001,
+				"pushDataType" : 1,
+				"recvTime" : 1719373158.425209,
+				"sequence" : "7384651483230243150",
+				"time" : "2024-06-26 11:39:18.341",
+				"timestamp" : 1719373158.3410001,
+				"turnover" : 59160,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "400"
+			}
+		]
+	}
+}
+[2024-06-26 11:39:19.092] [tslogger] [info] DataManager received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u817e\u8baf\u63a7\u80a1",
+		"security" : 
+		{
+			"code" : "00700",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 3,
+				"price" : 379,
+				"pushDataType" : 1,
+				"recvTime" : 1719373159.0894139,
+				"sequence" : "7384651487525213236",
+				"time" : "2024-06-26 11:39:19.015",
+				"timestamp" : 1719373159.0150001,
+				"turnover" : 75800,
+				"type" : 4,
+				"typeSign" : 89,
+				"volume" : "200"
+			}
+		]
+	}
+}
+[2024-06-26 11:39:19.618] [tslogger] [info] DataManager received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u7f51\u6613-S",
+		"security" : 
+		{
+			"code" : "09999",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 147.80000000000001,
+				"pushDataType" : 1,
+				"recvTime" : 1719373159.6172099,
+				"sequence" : "7384651487525210447",
+				"time" : "2024-06-26 11:39:19.541",
+				"timestamp" : 1719373159.5409999,
+				"turnover" : 206920.00000000003,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "1400"
+			},
+			{
+				"dir" : 2,
+				"price" : 147.80000000000001,
+				"pushDataType" : 1,
+				"recvTime" : 1719373159.6172099,
+				"sequence" : "7384651487525210448",
+				"time" : "2024-06-26 11:39:19.542",
+				"timestamp" : 1719373159.5420001,
+				"turnover" : 768560.00000000012,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "5200"
+			}
+		]
+	}
+}
+[2024-06-26 11:39:19.735] [tslogger] [info] DataManager received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u7f51\u6613-S",
+		"security" : 
+		{
+			"code" : "09999",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 3,
+				"price" : 147.80000000000001,
+				"pushDataType" : 1,
+				"recvTime" : 1719373159.7330239,
+				"sequence" : "7384651487525210449",
+				"time" : "2024-06-26 11:39:19.653",
+				"timestamp" : 1719373159.6530001,
+				"turnover" : 88680,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "600"
+			}
+		]
+	}
+}
+[2024-06-26 11:39:20.172] [tslogger] [info] DataManager received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u817e\u8baf\u63a7\u80a1",
+		"security" : 
+		{
+			"code" : "00700",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 379,
+				"pushDataType" : 1,
+				"recvTime" : 1719373160.1655531,
+				"sequence" : "7384651491820180533",
+				"time" : "2024-06-26 11:39:20.094",
+				"timestamp" : 1719373160.0940001,
+				"turnover" : 37900,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "100"
+			}
+		]
+	}
+}
+[2024-06-26 11:39:20.218] [tslogger] [info] DataManager received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u7f51\u6613-S",
+		"security" : 
+		{
+			"code" : "09999",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 1,
+				"price" : 147.80000000000001,
+				"pushDataType" : 1,
+				"recvTime" : 1719373160.215925,
+				"sequence" : "7384651491820177746",
+				"time" : "2024-06-26 11:39:20.125",
+				"timestamp" : 1719373160.125,
+				"turnover" : 14780.000000000002,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "100"
+			}
+		]
+	}
+}
+[2024-06-26 11:39:20.260] [tslogger] [info] DataManager received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u7f51\u6613-S",
+		"security" : 
+		{
+			"code" : "09999",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 147.69999999999999,
+				"pushDataType" : 1,
+				"recvTime" : 1719373160.2584529,
+				"sequence" : "7384651491820177747",
+				"time" : "2024-06-26 11:39:20.149",
+				"timestamp" : 1719373160.1489999,
+				"turnover" : 44310,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "300"
+			}
+		]
+	}
+}
+[2024-06-26 11:39:23.009] [tslogger] [info] DataManager received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u8499\u725b\u4e73\u4e1a",
+		"security" : 
+		{
+			"code" : "02319",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 1,
+				"price" : 14.56,
+				"pushDataType" : 1,
+				"recvTime" : 1719373163.0076849,
+				"sequence" : "7384651500410112141",
+				"time" : "2024-06-26 11:39:22.931",
+				"timestamp" : 1719373162.931,
+				"turnover" : 29120,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "2000"
+			},
+			{
+				"dir" : 1,
+				"price" : 14.56,
+				"pushDataType" : 1,
+				"recvTime" : 1719373163.0076849,
+				"sequence" : "7384651500410112142",
+				"time" : "2024-06-26 11:39:22.932",
+				"timestamp" : 1719373162.9319999,
+				"turnover" : 29120,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "2000"
+			}
+		]
+	}
+}
+[2024-06-26 11:39:26.064] [tslogger] [info] DataManager received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u8499\u725b\u4e73\u4e1a",
+		"security" : 
+		{
+			"code" : "02319",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 3,
+				"price" : 14.56,
+				"pushDataType" : 1,
+				"recvTime" : 1719373166.05808,
+				"sequence" : "7384651513295014031",
+				"time" : "2024-06-26 11:39:25.980",
+				"timestamp" : 1719373165.98,
+				"turnover" : 14560,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "1000"
+			}
+		]
+	}
+}
+[2024-06-26 11:39:26.524] [tslogger] [info] DataManager received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u817e\u8baf\u63a7\u80a1",
+		"security" : 
+		{
+			"code" : "00700",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 3,
+				"price" : 379.19999999999999,
+				"pushDataType" : 1,
+				"recvTime" : 1719373166.5176001,
+				"sequence" : "7384651517589984310",
+				"time" : "2024-06-26 11:39:26.444",
+				"timestamp" : 1719373166.444,
+				"turnover" : 189600,
+				"type" : 4,
+				"typeSign" : 89,
+				"volume" : "500"
+			},
+			{
+				"dir" : 1,
+				"price" : 379.19999999999999,
+				"pushDataType" : 1,
+				"recvTime" : 1719373166.5176001,
+				"sequence" : "7384651517589984311",
+				"time" : "2024-06-26 11:39:26.444",
+				"timestamp" : 1719373166.444,
+				"turnover" : 2616480,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "6900"
+			}
+		]
+	}
+}
+[2024-06-26 11:39:31.404] [tslogger] [info] DataManager received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u817e\u8baf\u63a7\u80a1",
+		"security" : 
+		{
+			"code" : "00700",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 1,
+				"price" : 379.19999999999999,
+				"pushDataType" : 1,
+				"recvTime" : 1719373171.4026599,
+				"sequence" : "7384651539064820792",
+				"time" : "2024-06-26 11:39:31.322",
+				"timestamp" : 1719373171.322,
+				"turnover" : 227520,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "600"
+			}
+		]
+	}
+}
+[2024-06-26 11:39:34.937] [tslogger] [info] DataManager received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u8499\u725b\u4e73\u4e1a",
+		"security" : 
+		{
+			"code" : "02319",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 1,
+				"price" : 14.56,
+				"pushDataType" : 1,
+				"recvTime" : 1719373174.9251511,
+				"sequence" : "7384651551949719696",
+				"time" : "2024-06-26 11:39:34.768",
+				"timestamp" : 1719373174.7679999,
+				"turnover" : 14560,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "1000"
+			}
+		]
+	}
+}
+[2024-06-26 11:39:36.416] [tslogger] [info] DataManager received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u817e\u8baf\u63a7\u80a1",
+		"security" : 
+		{
+			"code" : "00700",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 379,
+				"pushDataType" : 1,
+				"recvTime" : 1719373176.4146891,
+				"sequence" : "7384651560539657273",
+				"time" : "2024-06-26 11:39:36.178",
+				"timestamp" : 1719373176.178,
+				"turnover" : 379000,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "1000"
+			}
+		]
+	}
+}
+[2024-06-26 11:39:38.279] [tslogger] [info] DataManager received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u817e\u8baf\u63a7\u80a1",
+		"security" : 
+		{
+			"code" : "00700",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 3,
+				"price" : 379.19999999999999,
+				"pushDataType" : 1,
+				"recvTime" : 1719373178.275178,
+				"sequence" : "7384651564834624570",
+				"time" : "2024-06-26 11:39:37.999",
+				"timestamp" : 1719373177.9990001,
+				"turnover" : 75840,
+				"type" : 4,
+				"typeSign" : 89,
+				"volume" : "200"
+			},
+			{
+				"dir" : 1,
+				"price" : 379.19999999999999,
+				"pushDataType" : 1,
+				"recvTime" : 1719373178.275178,
+				"sequence" : "7384651564834624571",
+				"time" : "2024-06-26 11:39:37.999",
+				"timestamp" : 1719373177.9990001,
+				"turnover" : 1251360,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "3300"
+			}
+		]
+	}
+}
+[2024-06-26 11:39:38.321] [tslogger] [info] DataManager received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u7f51\u6613-S",
+		"security" : 
+		{
+			"code" : "09999",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 1,
+				"price" : 147.80000000000001,
+				"pushDataType" : 1,
+				"recvTime" : 1719373178.316853,
+				"sequence" : "7384651569129589076",
+				"time" : "2024-06-26 11:39:38.124",
+				"timestamp" : 1719373178.1240001,
+				"turnover" : 29560.000000000004,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "200"
+			}
+		]
+	}
+}
+[2024-06-26 11:39:42.877] [tslogger] [info] DataManager received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u8499\u725b\u4e73\u4e1a",
+		"security" : 
+		{
+			"code" : "02319",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 1,
+				"price" : 14.56,
+				"pushDataType" : 1,
+				"recvTime" : 1719373182.860781,
+				"sequence" : "7384651586309458065",
+				"time" : "2024-06-26 11:39:42.779",
+				"timestamp" : 1719373182.779,
+				"turnover" : 14560,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "1000"
+			}
+		]
+	}
+}
+[2024-06-26 11:39:43.319] [tslogger] [info] DataManager received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u817e\u8baf\u63a7\u80a1",
+		"security" : 
+		{
+			"code" : "00700",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 379.19999999999999,
+				"pushDataType" : 1,
+				"recvTime" : 1719373183.311281,
+				"sequence" : "7384651590604428348",
+				"time" : "2024-06-26 11:39:43.234",
+				"timestamp" : 1719373183.234,
+				"turnover" : 37920,
+				"type" : 1,
+				"typeSign" : 32,
+				"[2024-06-26 11:46:48.913] [tslogger] [info] dialer2 created
+[2024-06-26 11:46:48.914] [tslogger] [info] dialer3 created
+[2024-06-26 11:46:48.915] [tslogger] [info] futu created
+[2024-06-26 11:46:58.928] [tslogger] [info] regCallBack called with code: 00700, subtype: 0
+[2024-06-26 11:46:58.928] [tslogger] [info] Subscribing: 00700 for SubType: 0 Serial No. 4
+[2024-06-26 11:46:58.928] [tslogger] [info] regCallBack called with code: 09999, subtype: 0
+[2024-06-26 11:46:58.929] [tslogger] [info] Subscribing: 09999 for SubType: 0 Serial No. 5
+[2024-06-26 11:46:58.929] [tslogger] [info] regCallBack called with code: 02319, subtype: 0
+[2024-06-26 11:46:58.929] [tslogger] [info] Subscribing: 02319 for SubType: 0 Serial No. 6
+[2024-06-26 11:46:58.939] [tslogger] [info] Subscribe Succeed. Serial: 4
+[2024-06-26 11:46:58.942] [tslogger] [info] Subscribe Succeed. Serial: 5
+[2024-06-26 11:46:58.948] [tslogger] [info] Subscribe Succeed. Serial: 6
+[2024-06-26 11:46:59.018] [tslogger] [info] DataManager received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u817e\u8baf\u63a7\u80a1",
+		"security" : 
+		{
+			"code" : "00700",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 379.19999999999999,
+				"pushDataType" : 3,
+				"recvTime" : 1719373618.984261,
+				"sequence" : "7384653415965529201",
+				"time" : "2024-06-26 11:46:48.506",
+				"timestamp" : 1719373608.506,
+				"turnover" : 303360,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "800"
+			}
+		]
+	}
+}
+[2024-06-26 11:46:59.033] [tslogger] [info] DataManager received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u8499\u725b\u4e73\u4e1a",
+		"security" : 
+		{
+			"code" : "02319",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 14.539999999999999,
+				"pushDataType" : 3,
+				"recvTime" : 1719373619.031898,
+				"sequence" : "7384653458915199169",
+				"time" : "2024-06-26 11:46:58.185",
+				"timestamp" : 1719373618.1849999,
+				"turnover" : 14540,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "1000"
+			}
+		]
+	}
+}
+[2024-06-26 11:46:59.077] [tslogger] [info] DataManager received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u7f51\u6613-S",
+		"security" : 
+		{
+			"code" : "09999",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 147.90000000000001,
+				"pushDataType" : 3,
+				"recvTime" : 1719373619.075284,
+				"sequence" : "7384653424555461044",
+				"time" : "2024-06-26 11:46:50.751",
+				"timestamp" : 1719373610.7509999,
+				"turnover" : 147900,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "1000"
+			}
+		]
+	}
+}
+[2024-06-26 11:47:05.058] [tslogger] [info] DataManager received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u8499\u725b\u4e73\u4e1a",
+		"security" : 
+		{
+			"code" : "02319",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 14.539999999999999,
+				"pushDataType" : 1,
+				"recvTime" : 1719373625.0560069,
+				"sequence" : "7384653488979970243",
+				"time" : "2024-06-26 11:47:05.023",
+				"timestamp" : 1719373625.023,
+				"turnover" : 189020,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "13000"
+			}
+		]
+	}
+}
+[2024-06-26 11:47:05.252] [tslogger] [info] DataManager received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u8499\u725b\u4e73\u4e1a",
+		"security" : 
+		{
+			"code" : "02319",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 14.539999999999999,
+				"pushDataType" : 1,
+				"recvTime" : 1719373625.250221,
+				"sequence" : "7384653488979970244",
+				"time" : "2024-06-26 11:47:05.215",
+				"timestamp" : 1719373625.2149999,
+				"turnover" : 29080,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "2000"
+			}
+		]
+	}
+}
+[2024-06-26 11:47:21.903] [tslogger] [info] DataManager received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u8499\u725b\u4e73\u4e1a",
+		"security" : 
+		{
+			"code" : "02319",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 1,
+				"price" : 14.56,
+				"pushDataType" : 1,
+				"recvTime" : 1719373641.901834,
+				"sequence" : "7384653557699446981",
+				"time" : "2024-06-26 11:47:21.887",
+				"timestamp" : 1719373641.8870001,
+				"turnover" : 43680,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "3000"
+			}
+		]
+	}
+}
+[2024-06-26 11:47:21.988] [tslogger] [info] DataManager received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u8499\u725b\u4e73\u4e1a",
+		"security" : 
+		{
+			"code" : "02319",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 3,
+				"price" : 14.539999999999999,
+				"pushDataType" : 1,
+				"recvTime" : 1719373641.9862659,
+				"sequence" : "7384653557699446982",
+				"time" : "2024-06-26 11:47:21.975",
+				"timestamp" : 1719373641.9749999,
+				"turnover" : 43620,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "3000"
+			}
+		]
+	}
+}
+[2024-06-26 11:47:26.596] [tslogger] [info] DataManager received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u7f51\u6613-S",
+		"security" : 
+		{
+			"code" : "09999",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 147.90000000000001,
+				"pushDataType" : 1,
+				"recvTime" : 1719373646.5941341,
+				"sequence" : "7384653579174283701",
+				"time" : "2024-06-26 11:47:26.580",
+				"timestamp" : 1719373646.5799999,
+				"turnover" : 14790,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "100"
+			},
+			{
+				"dir" : 2,
+				"price" : 147.90000000000001,
+				"pushDataType" : 1,
+				"recvTime" : 1719373646.5941341,
+				"sequence" : "7384653579174283702",
+				"time" : "2024-06-26 11:47:26.588",
+				"timestamp" : 1719373646.5880001,
+				"turnover" : 103530,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "700"
+			}
+		]
+	}
+}
+[2024-06-26 11:47:27.468] [tslogger] [info] DataManager received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u817e\u8baf\u63a7\u80a1",
+		"security" : 
+		{
+			"code" : "00700",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 3,
+				"price" : 379.10000000000002,
+				"pushDataType" : 1,
+				"recvTime" : 1719373647.4667771,
+				"sequence" : "7384653583469253746",
+				"time" : "2024-06-26 11:47:27.456",
+				"timestamp" : 1719373647.4560001,
+				"turnover" : 37910,
+				"type" : 5,
+				"typeSign" : 88,
+				"volume" : "100"
+			}
+		]
+	}
+}
+[2024-06-26 11:47:34.882] [tslogger] [info] DataManager received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u817e\u8baf\u63a7\u80a1",
+		"security" : 
+		{
+			"code" : "00700",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 379,
+				"pushDataType" : 1,
+				"recvTime" : 1719373654.8799689,
+				"sequence" : "7384653613534024819",
+				"time" : "2024-06-26 11:47:34.876",
+				"timestamp" : 1719373654.8759999,
+				"turnover" : 379000,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "1000"
+			}
+		]
+	}
+}
+[2024-06-26 11:47:36.979] [tslogger] [info] DataManager received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u817e\u8baf\u63a7\u80a1",
+		"security" : 
+		{
+			"code" : "00700",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 1,
+				"price" : 379.19999999999999,
+				"pushDataType" : 1,
+				"recvTime" : 1719373656.977891,
+				"sequence" : "7384653622123959412",
+				"time" : "2024-06-26 11:47:36.977",
+				"timestamp" : 1719373656.977,
+				"turnover" : 2844000,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "7500"
+			}
+		]
+	}
+}
+[2024-06-26 11:47:44.777] [tslogger] [info] DataManager received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u817e\u8baf\u63a7\u80a1",
+		"security" : 
+		{
+			"code" : "00700",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 3,
+				"price" : 379.14600000000002,
+				"pushDataType" : 1,
+				"recvTime" : 1719373664.776082,
+				"sequence" : "7384653656483697781",
+				"time" : "2024-06-26 11:47:44.781",
+				"timestamp" : 1719373664.7809999,
+				"turnover" : 75829.199999999997,
+				"type" : 5,
+				"typeSign" : 88,
+				"volume" : "200"
+			}
+		]
+	}
+}
+[2024-06-26 11:47:47.498] [tslogger] [info] DataManager received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u817e\u8baf\u63a7\u80a1",
+		"security" : 
+		{
+			"code" : "00700",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 379,
+				"pushDataType" : 1,
+				"recvTime" : 1719373667.4966519,
+				"sequence" : "7384653669368599670",
+				"time" : "2024-06-26 11:47:47.499",
+				"timestamp" : 1719373667.4990001,
+				"turnover" : 75800,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "200"
+			}
+		]
+	}
+}
+[2024-06-26 11:47:49.922] [tslogger] [info] DataManager received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u7f51\u6613-S",
+		"security" : 
+		{
+			"code" : "09999",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 147.90000000000001,
+				"pushDataType" : 1,
+				"recvTime" : 1719373669.920378,
+				"sequence" : "7384653677958531511",
+				"time" : "2024-06-26 11:47:49.918",
+				"timestamp" : 1719373669.918,
+				"turnover" : 73950,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "500"
+			}
+		]
+	}
+}
+[2024-06-26 11:47:52.677] [tslogger] [info] DataManager received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u8499\u725b\u4e73\u4e1a",
+		"security" : 
+		{
+			"code" : "02319",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 14.539999999999999,
+				"pushDataType" : 1,
+				"recvTime" : 1719373672.6751411,
+				"sequence" : "7384653690843433159",
+				"time" : "2024-06-26 11:47:52.675",
+				"timestamp" : 1719373672.675,
+				"turnover" : 14540,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "1000"
+			}
+		]
+	}
+}
+[2024-06-26 11:47:53.938] [tslogger] [info] DataManager received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u8499\u725b\u4e73\u4e1a",
+		"security" : 
+		{
+			"code" : "02319",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 1,
+				"price" : 14.56,
+				"pushDataType" : 1,
+				"recvTime" : 1719373673.9364281,
+				"sequence" : "7384653695138400456",
+				"time" : "2024-06-26 11:47:53.929",
+				"timestamp" : 1719373673.9289999,
+				"turnover" : 14560,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "1000"
+			}
+		]
+	}
+}
+[2024-06-26 11:48:00.448] [tslogger] [info] DataManager received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u817e\u8baf\u63a7\u80a1",
+		"security" : 
+		{
+			"code" : "00700",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 379,
+				"pushDataType" : 1,
+				"recvTime" : 1719373680.446538,
+				"sequence" : "7384653725203174519",
+				"time" : "2024-06-26 11:48:00.429",
+				"timestamp" : 1719373680.4289999,
+				"turnover" : 189500,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "500"
+			}
+		]
+	}
+}
+[2024-06-26 11:48:01.699] [tslogger] [info] DataManager received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u7f51\u6613-S",
+		"security" : 
+		{
+			"code" : "09999",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 1,
+				"price" : 148,
+				"pushDataType" : 1,
+				"recvTime" : 1719373681.697824,
+				"sequence" : "7384653729498139064",
+				"time" : "2024-06-26 11:48:01.606",
+				"timestamp" : 1719373681.6059999,
+				"turnover" : 222000,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "1500"
+			},
+			{
+				"dir" : 1,
+				"price" : 148,
+				"pushDataType" : 1,
+				"recvTime" : 1719373681.697824,
+				"sequence" : "7384653729498139065",
+				"time" : "2024-06-26 11:48:01.607",
+				"timestamp" : 1719373681.6070001,
+				"turnover" : 14800,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "100"
+			}
+		]
+	}
+}
+[2024-06-26 11:48:20.075] [tslogger] [info] DataManager received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u8499\u725b\u4e73\u4e1a",
+		"security" : 
+		{
+			"code" : "02319",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 14.539999999999999,
+				"pushDataType" : 1,
+				"recvTime" : 1719373700.0686851,
+				"sequence" : "7384653811102517449",
+				"time" : "2024-06-26 11:48:20.064",
+				"timestamp" : 1719373700.0639999,
+				"turnover" : 43620,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "3000"
+			}
+		]
+	}
+}
+[2024-06-26 11:48:22.314] [tslogger] [info] DataManager received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u8499\u725b\u4e73\u4e1a",
+		"security" : 
+		{
+			"code" : "02319",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 3,
+				"price" : 14.56,
+				"pushDataType" : 1,
+				"recvTime" : 1719373702.3121209,
+				"sequence" : "7384653819692452042",
+				"time" : "2024-06-26 11:48:22.286",
+				"timestamp" : 1719373702.286,
+				"turnover" : 14560,
+				"type" : 4,
+				"typeSign" : 89,
+				"volume" : "1000"
+			},
+			{
+				"dir" : 1,
+				"price" : 14.56,
+				"pushDataType" : 1,
+				"recvTime" : 1719373702.3121209,
+				"sequence" : "7384653819692452043",
+				"time" : "2024-06-26 11:48:22.286",
+				"timestamp" : 1719373702.286,
+				"turnover" : 116480,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "8000"
+			},
+			{
+				"dir" : 1,
+				"price" : 14.56,
+				"pushDataType" : 1,
+				"recvTime" : 1719373702.3121209,
+				"sequence" : "7384653819692452044",
+				"time" : "2024-06-26 11:48:22.286",
+				"timestamp" : 1719373702.286,
+				"turnover" : 291200,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "20000"
+			}
+		]
+	}
+}
+[2024-06-26 11:48:22.577] [tslogger] [info] DataManager received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u8499\u725b\u4e73\u4e1a",
+		"security" : 
+		{
+			"code" : "02319",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 14.539999999999999,
+				"pushDataType" : 1,
+				"recvTime" : 1719373702.574847,
+				"sequence" : "7384653819692452045",
+				"time" : "2024-06-26 11:48:22.559",
+				"timestamp" : 1719373702.559,
+				"turnover" : 14540,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "1000"
+			}
+		]
+	}
+}
+[2024-06-26 11:48:22.709] [tslogger] [info] DataManager received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u8499\u725b\u4e73\u4e1a",
+		"security" : 
+		{
+			"code" : "02319",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 14.539999999999999,
+				"pushDataType" : 1,
+				"recvTime" : 1719373702.7072661,
+				"sequence" : "7384653819692452046",
+				"time" : "2024-06-26 11:48:22.693",
+				"timestamp" : 1719373702.6930001,
+				"turnover" : 29080,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "2000"
+			}
+		]
+	}
+}
+[2024-06-26 11:48:23.284] [tslogger] [info] DataManager received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u8499\u725b\u4e73\u4e1a",
+		"security" : 
+		{
+			"code" : "02319",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 3,
+				"price" : 14.56,
+				"pushDataType" : 1,
+				"recvTime" : 1719373703.2791309,
+				"sequence" : "7384653823987419343",
+				"time" : "2024-06-26 11:48:23.266",
+				"timestamp" : 1719373703.266,
+				"turnover" : 58240,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "4000"
+			}
+		]
+	}
+}
+[2024-06-26 11:48:25.679] [tslogger] [info] DataManager received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u8499\u725b\u4e73\u4e1a",
+		"security" : 
+		{
+			"code" : "02319",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 14.539999999999999,
+				"pushDataType" : 1,
+				"recvTime" : 1719373705.6768961,
+				"sequence" : "7384653832577353936",
+				"time" : "2024-06-26 11:48:25.646",
+				"timestamp" : 1719373705.6459999,
+				"turnover" : 14540,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "1000"
+			}
+		]
+	}
+}
+[2024-06-26 11:48:29.374] [tslogger] [info] DataManager received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u7f51\u6613-S",
+		"security" : 
+		{
+			"code" : "09999",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 147.90000000000001,
+				"pushDataType" : 1,
+				"recvTime" : 1719373709.3727341,
+				"sequence" : "7384653849757223354",
+				"time" : "2024-06-26 11:48:29.356",
+				"timestamp" : 1719373709.3559999,
+				"turnover" : 29580,
+				"type" : 1,
+				"typeSign" : 32,
+[2024-06-26 15:54:45.172] [tslogger] [info] dm created
+[2024-06-26 15:54:45.173] [tslogger] [info] futu created
+[2024-06-26 15:54:55.176] [tslogger] [info] regCallBack called with code: 00700, subtype: 0
+[2024-06-26 15:54:55.176] [tslogger] [info] Subscribing: 00700 for SubType: 0 Serial No. 4
+[2024-06-26 15:54:55.177] [tslogger] [info] regCallBack called with code: 09999, subtype: 0
+[2024-06-26 15:54:55.177] [tslogger] [info] Subscribing: 09999 for SubType: 0 Serial No. 5
+[2024-06-26 15:54:55.177] [tslogger] [info] regCallBack called with code: 02319, subtype: 0
+[2024-06-26 15:54:55.177] [tslogger] [info] Subscribing: 02319 for SubType: 0 Serial No. 6
+[2024-06-26 15:54:55.181] [tslogger] [info] Subscribe Succeed. Serial: 4
+[2024-06-26 15:54:55.183] [tslogger] [info] Subscribe Succeed. Serial: 5
+[2024-06-26 15:54:55.187] [tslogger] [info] Subscribe Succeed. Serial: 6
+[2024-06-26 15:54:56.040] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u817e\u8baf\u63a7\u80a1",
+		"security" : 
+		{
+			"code" : "00700",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 381.39999999999998,
+				"pushDataType" : 3,
+				"recvTime" : 1719388496.0175409,
+				"sequence" : "7384717346553734298",
+				"time" : "2024-06-26 15:54:53.364",
+				"timestamp" : 1719388493.3640001,
+				"turnover" : 38140,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "100"
+			}
+		]
+	}
+}
+[2024-06-26 15:54:56.076] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u8499\u725b\u4e73\u4e1a",
+		"security" : 
+		{
+			"code" : "02319",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 1,
+				"price" : 14.66,
+				"pushDataType" : 3,
+				"recvTime" : 1719388496.074132,
+				"sequence" : "7384717316488957924",
+				"time" : "2024-06-26 15:54:46.497",
+				"timestamp" : 1719388486.497,
+				"turnover" : 14660,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "1000"
+			}
+		]
+	}
+}
+[2024-06-26 15:54:56.077] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u7f51\u6613-S",
+		"security" : 
+		{
+			"code" : "09999",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 150.5,
+				"pushDataType" : 3,
+				"recvTime" : 1719388496.0741911,
+				"sequence" : "7384717355143667027",
+				"time" : "2024-06-26 15:54:55.122",
+				"timestamp" : 1719388495.122,
+				"turnover" : 15050,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "100"
+			}
+		]
+	}
+}
+[2024-06-26 15:54:56.083] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u8499\u725b\u4e73\u4e1a",
+		"security" : 
+		{
+			"code" : "02319",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 1,
+				"price" : 14.66,
+				"pushDataType" : 1,
+				"recvTime" : 1719388496.0741589,
+				"sequence" : "7384717355143663589",
+				"time" : "2024-06-26 15:54:55.862",
+				"timestamp" : 1719388495.862,
+				"turnover" : 14660,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "1000"
+			}
+		]
+	}
+}
+[2024-06-26 15:54:56.086] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u7f51\u6613-S",
+		"security" : 
+		{
+			"code" : "09999",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 150.5,
+				"pushDataType" : 1,
+				"recvTime" : 1719388496.074398,
+				"sequence" : "7384717355143667028",
+				"time" : "2024-06-26 15:54:55.766",
+				"timestamp" : 1719388495.766,
+				"turnover" : 60200,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "400"
+			}
+		]
+	}
+}
+[2024-06-26 15:54:57.153] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u7f51\u6613-S",
+		"security" : 
+		{
+			"code" : "09999",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 150.5,
+				"pushDataType" : 1,
+				"recvTime" : 1719388497.1476009,
+				"sequence" : "7384717363733601621",
+				"time" : "2024-06-26 15:54:57.098",
+				"timestamp" : 1719388497.098,
+				"turnover" : 30100,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "200"
+			},
+			{
+				"dir" : 2,
+				"price" : 150.5,
+				"pushDataType" : 1,
+				"recvTime" : 1719388497.1476009,
+				"sequence" : "7384717363733601622",
+				"time" : "2024-06-26 15:54:57.098",
+				"timestamp" : 1719388497.098,
+				"turnover" : 331100,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "2200"
+			}
+		]
+	}
+}
+[2024-06-26 15:54:57.637] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u817e\u8baf\u63a7\u80a1",
+		"security" : 
+		{
+			"code" : "00700",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 381.39999999999998,
+				"pushDataType" : 1,
+				"recvTime" : 1719388497.6296151,
+				"sequence" : "7384717363733603483",
+				"time" : "2024-06-26 15:54:57.237",
+				"timestamp" : 1719388497.237,
+				"turnover" : 38140,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "100"
+			}
+		]
+	}
+}
+[2024-06-26 15:54:57.676] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u7f51\u6613-S",
+		"security" : 
+		{
+			"code" : "09999",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 150.5,
+				"pushDataType" : 1,
+				"recvTime" : 1719388497.670413,
+				"sequence" : "7384717363733601623",
+				"time" : "2024-06-26 15:54:57.330",
+				"timestamp" : 1719388497.3299999,
+				"turnover" : 15050,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "100"
+			}
+		]
+	}
+}
+[2024-06-26 15:54:57.683] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u817e\u8baf\u63a7\u80a1",
+		"security" : 
+		{
+			"code" : "00700",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 381.39999999999998,
+				"pushDataType" : 1,
+				"recvTime" : 1719388497.6716681,
+				"sequence" : "7384717363733603484",
+				"time" : "2024-06-26 15:54:57.492",
+				"timestamp" : 1719388497.4920001,
+				"turnover" : 38140,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "100"
+			}
+		]
+	}
+}
+[2024-06-26 15:54:58.135] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u7f51\u6613-S",
+		"security" : 
+		{
+			"code" : "09999",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 150.40000000000001,
+				"pushDataType" : 1,
+				"recvTime" : 1719388498.125499,
+				"sequence" : "7384717368028568920",
+				"time" : "2024-06-26 15:54:58.078",
+				"timestamp" : 1719388498.0780001,
+				"turnover" : 45120,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "300"
+			}
+		]
+	}
+}
+[2024-06-26 15:54:58.668] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u817e\u8baf\u63a7\u80a1",
+		"security" : 
+		{
+			"code" : "00700",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 381.39999999999998,
+				"pushDataType" : 1,
+				"recvTime" : 1719388498.661958,
+				"sequence" : "7384717368028570781",
+				"time" : "2024-06-26 15:54:58.489",
+				"timestamp" : 1719388498.4890001,
+				"turnover" : 38140,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "100"
+			}
+		]
+	}
+}
+[2024-06-26 15:54:59.090] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u817e\u8baf\u63a7\u80a1",
+		"security" : 
+		{
+			"code" : "00700",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 381.39999999999998,
+				"pushDataType" : 1,
+				"recvTime" : 1719388499.0880871,
+				"sequence" : "7384717372323538078",
+				"time" : "2024-06-26 15:54:59.010",
+				"timestamp" : 1719388499.01,
+				"turnover" : 38140,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "100"
+			}
+		]
+	}
+}
+[2024-06-26 15:54:59.493] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u7f51\u6613-S",
+		"security" : 
+		{
+			"code" : "09999",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 150.40000000000001,
+				"pushDataType" : 1,
+				"recvTime" : 1719388499.4875121,
+				"sequence" : "7384717372323536217",
+				"time" : "2024-06-26 15:54:59.443",
+				"timestamp" : 1719388499.4430001,
+				"turnover" : 75200,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "500"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:00.000] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u817e\u8baf\u63a7\u80a1",
+		"security" : 
+		{
+			"code" : "00700",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 381.39999999999998,
+				"pushDataType" : 1,
+				"recvTime" : 1719388499.9989729,
+				"sequence" : "7384717372323538079",
+				"time" : "2024-06-26 15:54:59.963",
+				"timestamp" : 1719388499.9630001,
+				"turnover" : 38140,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "100"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:00.229] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u817e\u8baf\u63a7\u80a1",
+		"security" : 
+		{
+			"code" : "00700",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 1,
+				"price" : 381.60000000000002,
+				"pushDataType" : 1,
+				"recvTime" : 1719388500.2265661,
+				"sequence" : "7384717376618505376",
+				"time" : "2024-06-26 15:55:00.173",
+				"timestamp" : 1719388500.1730001,
+				"turnover" : 38160,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "100"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:01.255] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u817e\u8baf\u63a7\u80a1",
+		"security" : 
+		{
+			"code" : "00700",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 381.39999999999998,
+				"pushDataType" : 1,
+				"recvTime" : 1719388501.2538331,
+				"sequence" : "7384717380913472673",
+				"time" : "2024-06-26 15:55:01.189",
+				"timestamp" : 1719388501.1889999,
+				"turnover" : 38140,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "100"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:01.633] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u817e\u8baf\u63a7\u80a1",
+		"security" : 
+		{
+			"code" : "00700",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 381.39999999999998,
+				"pushDataType" : 1,
+				"recvTime" : 1719388501.629281,
+				"sequence" : "7384717380913472674",
+				"time" : "2024-06-26 15:55:01.540",
+				"timestamp" : 1719388501.54,
+				"turnover" : 38140,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "100"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:02.054] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u7f51\u6613-S",
+		"security" : 
+		{
+			"code" : "09999",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 150.40000000000001,
+				"pushDataType" : 1,
+				"recvTime" : 1719388502.0526071,
+				"sequence" : "7384717380913470810",
+				"time" : "2024-06-26 15:55:01.990",
+				"timestamp" : 1719388501.99,
+				"turnover" : 60160,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "400"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:02.206] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u7f51\u6613-S",
+		"security" : 
+		{
+			"code" : "09999",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 150.40000000000001,
+				"pushDataType" : 1,
+				"recvTime" : 1719388502.2042439,
+				"sequence" : "7384717385208438107",
+				"time" : "2024-06-26 15:55:02.146",
+				"timestamp" : 1719388502.1459999,
+				"turnover" : 75200,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "500"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:03.224] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u7f51\u6613-S",
+		"security" : 
+		{
+			"code" : "09999",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 150.40000000000001,
+				"pushDataType" : 1,
+				"recvTime" : 1719388503.221442,
+				"sequence" : "7384717389503405404",
+				"time" : "2024-06-26 15:55:03.131",
+				"timestamp" : 1719388503.131,
+				"turnover" : 90240,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "600"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:04.128] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u817e\u8baf\u63a7\u80a1",
+		"security" : 
+		{
+			"code" : "00700",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 1,
+				"price" : 381.60000000000002,
+				"pushDataType" : 1,
+				"recvTime" : 1719388504.1225531,
+				"sequence" : "7384717393798374563",
+				"time" : "2024-06-26 15:55:04.058",
+				"timestamp" : 1719388504.0580001,
+				"turnover" : 76320,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "200"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:04.169] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u817e\u8baf\u63a7\u80a1",
+		"security" : 
+		{
+			"code" : "00700",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 1,
+				"price" : 381.60000000000002,
+				"pushDataType" : 1,
+				"recvTime" : 1719388504.164129,
+				"sequence" : "7384717393798374564",
+				"time" : "2024-06-26 15:55:04.092",
+				"timestamp" : 1719388504.092,
+				"turnover" : 5762160,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "15100"
+			},
+			{
+				"dir" : 2,
+				"price" : 381.39999999999998,
+				"pushDataType" : 1,
+				"recvTime" : 1719388504.164129,
+				"sequence" : "7384717393798374565",
+				"time" : "2024-06-26 15:55:04.092",
+				"timestamp" : 1719388504.092,
+				"turnover" : 190700,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "500"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:04.454] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u8499\u725b\u4e73\u4e1a",
+		"security" : 
+		{
+			"code" : "02319",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 1,
+				"price" : 14.66,
+				"pushDataType" : 1,
+				"recvTime" : 1719388504.45292,
+				"sequence" : "7384717393798369254",
+				"time" : "2024-06-26 15:55:04.360",
+				"timestamp" : 1719388504.3599999,
+				"turnover" : 14660,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "1000"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:05.206] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u7f51\u6613-S",
+		"security" : 
+		{
+			"code" : "09999",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 1,
+				"price" : 150.5,
+				"pushDataType" : 1,
+				"recvTime" : 1719388505.2043309,
+				"sequence" : "7384717398093339997",
+				"time" : "2024-06-26 15:55:05.168",
+				"timestamp" : 1719388505.168,
+				"turnover" : 30100,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "200"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:05.254] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u7f51\u6613-S",
+		"security" : 
+		{
+			"code" : "09999",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 150.40000000000001,
+				"pushDataType" : 1,
+				"recvTime" : 1719388505.2503481,
+				"sequence" : "7384717398093339998",
+				"time" : "2024-06-26 15:55:05.180",
+				"timestamp" : 1719388505.1800001,
+				"turnover" : 15040,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "100"
+			},
+			{
+				"dir" : 3,
+				"price" : 150.44999999999999,
+				"pushDataType" : 1,
+				"recvTime" : 1719388505.2503481,
+				"sequence" : "7384717398093339999",
+				"time" : "2024-06-26 15:55:05.184",
+				"timestamp" : 1719388505.184,
+				"turnover" : 30089.999999999996,
+				"type" : 5,
+				"typeSign" : 88,
+				"volume" : "200"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:05.380] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u7f51\u6613-S",
+		"security" : 
+		{
+			"code" : "09999",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 150.40000000000001,
+				"pushDataType" : 1,
+				"recvTime" : 1719388505.3750861,
+				"sequence" : "7384717398093340000",
+				"time" : "2024-06-26 15:55:05.324",
+				"timestamp" : 1719388505.3239999,
+				"turnover" : 30080,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "200"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:05.767] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u7f51\u6613-S",
+		"security" : 
+		{
+			"code" : "09999",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 3,
+				"price" : 150.476,
+				"pushDataType" : 1,
+				"recvTime" : 1719388505.7649119,
+				"sequence" : "7384717398093340001",
+				"time" : "2024-06-26 15:55:05.722",
+				"timestamp" : 1719388505.7219999,
+				"turnover" : 30095.200000000001,
+				"type" : 5,
+				"typeSign" : 88,
+				"volume" : "200"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:05.851] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u817e\u8baf\u63a7\u80a1",
+		"security" : 
+		{
+			"code" : "00700",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 381.39999999999998,
+				"pushDataType" : 1,
+				"recvTime" : 1719388505.843317,
+				"sequence" : "7384717398093341862",
+				"time" : "2024-06-26 15:55:05.782",
+				"timestamp" : 1719388505.7820001,
+				"turnover" : 610240,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "1600"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:06.248] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u8499\u725b\u4e73\u4e1a",
+		"security" : 
+		{
+			"code" : "02319",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 1,
+				"price" : 14.66,
+				"pushDataType" : 1,
+				"recvTime" : 1719388506.247005,
+				"sequence" : "7384717402388303847",
+				"time" : "2024-06-26 15:55:06.195",
+				"timestamp" : 1719388506.1949999,
+				"turnover" : 14660,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "1000"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:06.401] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u7f51\u6613-S",
+		"security" : 
+		{
+			"code" : "09999",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 150.40000000000001,
+				"pushDataType" : 1,
+				"recvTime" : 1719388506.3982921,
+				"sequence" : "7384717402388307298",
+				"time" : "2024-06-26 15:55:06.325",
+				"timestamp" : 1719388506.325,
+				"turnover" : 45120,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "300"
+			},
+			{
+				"dir" : 2,
+				"price" : 150.40000000000001,
+				"pushDataType" : 1,
+				"recvTime" : 1719388506.3982921,
+				"sequence" : "7384717402388307299",
+				"time" : "2024-06-26 15:55:06.339",
+				"timestamp" : 1719388506.339,
+				"turnover" : 15040,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "100"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:06.557] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u7f51\u6613-S",
+		"security" : 
+		{
+			"code" : "09999",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 3,
+				"price" : 150.44999999999999,
+				"pushDataType" : 1,
+				"recvTime" : 1719388506.554882,
+				"sequence" : "7384717402388307300",
+				"time" : "2024-06-26 15:55:06.524",
+				"timestamp" : 1719388506.5239999,
+				"turnover" : 120359.99999999999,
+				"type" : 5,
+				"typeSign" : 88,
+				"volume" : "800"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:07.648] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u7f51\u6613-S",
+		"security" : 
+		{
+			"code" : "09999",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 150.40000000000001,
+				"pushDataType" : 1,
+				"recvTime" : 1719388507.6468019,
+				"sequence" : "7384717406683274597",
+				"time" : "2024-06-26 15:55:07.580",
+				"timestamp" : 1719388507.5799999,
+				"turnover" : 75200,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "500"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:07.752] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u817e\u8baf\u63a7\u80a1",
+		"security" : 
+		{
+			"code" : "00700",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 381.39999999999998,
+				"pushDataType" : 1,
+				"recvTime" : 1719388507.7490871,
+				"sequence" : "7384717406683276455",
+				"time" : "2024-06-26 15:55:07.676",
+				"timestamp" : 1719388507.6760001,
+				"turnover" : 38140,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "100"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:07.881] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u817e\u8baf\u63a7\u80a1",
+		"security" : 
+		{
+			"code" : "00700",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 381.39999999999998,
+				"pushDataType" : 1,
+				"recvTime" : 1719388507.879117,
+				"sequence" : "7384717406683276456",
+				"time" : "2024-06-26 15:55:07.820",
+				"timestamp" : 1719388507.8199999,
+				"turnover" : 38140,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "100"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:09.500] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u817e\u8baf\u63a7\u80a1",
+		"security" : 
+		{
+			"code" : "00700",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 381.39999999999998,
+				"pushDataType" : 1,
+				"recvTime" : 1719388509.4984519,
+				"sequence" : "7384717415273211049",
+				"time" : "2024-06-26 15:55:09.459",
+				"timestamp" : 1719388509.4590001,
+				"turnover" : 38140,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "100"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:09.807] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u817e\u8baf\u63a7\u80a1",
+		"security" : 
+		{
+			"code" : "00700",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 381.39999999999998,
+				"pushDataType" : 1,
+				"recvTime" : 1719388509.805723,
+				"sequence" : "7384717415273211050",
+				"time" : "2024-06-26 15:55:09.774",
+				"timestamp" : 1719388509.7739999,
+				"turnover" : 38140,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "100"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:09.988] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u817e\u8baf\u63a7\u80a1",
+		"security" : 
+		{
+			"code" : "00700",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 1,
+				"price" : 381.60000000000002,
+				"pushDataType" : 1,
+				"recvTime" : 1719388509.9861381,
+				"sequence" : "7384717415273211051",
+				"time" : "2024-06-26 15:55:09.945",
+				"timestamp" : 1719388509.9449999,
+				"turnover" : 114480,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "300"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:10.042] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u7f51\u6613-S",
+		"security" : 
+		{
+			"code" : "09999",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 3,
+				"price" : 150.40000000000001,
+				"pushDataType" : 1,
+				"recvTime" : 1719388510.0400431,
+				"sequence" : "7384717415273209190",
+				"time" : "2024-06-26 15:55:09.992",
+				"timestamp" : 1719388509.9920001,
+				"turnover" : 45120,
+				"type" : 4,
+				"typeSign" : 89,
+				"volume" : "300"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:10.288] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u7f51\u6613-S",
+		"security" : 
+		{
+			"code" : "09999",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 150.40000000000001,
+				"pushDataType" : 1,
+				"recvTime" : 1719388510.2866361,
+				"sequence" : "7384717419568176487",
+				"time" : "2024-06-26 15:55:10.250",
+				"timestamp" : 1719388510.25,
+				"turnover" : 60160,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "400"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:11.026] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u7f51\u6613-S",
+		"security" : 
+		{
+			"code" : "09999",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 3,
+				"price" : 150.40000000000001,
+				"pushDataType" : 1,
+				"recvTime" : 1719388511.0245161,
+				"sequence" : "7384717419568176488",
+				"time" : "2024-06-26 15:55:10.993",
+				"timestamp" : 1719388510.993,
+				"turnover" : 90240,
+				"type" : 4,
+				"typeSign" : 89,
+				"volume" : "600"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:11.637] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u8499\u725b\u4e73\u4e1a",
+		"security" : 
+		{
+			"code" : "02319",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 1,
+				"price" : 14.66,
+				"pushDataType" : 1,
+				"recvTime" : 1719388511.6343689,
+				"sequence" : "7384717423863140328",
+				"time" : "2024-06-26 15:55:11.567",
+				"timestamp" : 1719388511.5669999,
+				"turnover" : 175920,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "12000"
+			},
+			{
+				"dir" : 1,
+				"price" : 14.66,
+				"pushDataType" : 1,
+				"recvTime" : 1719388511.6343689,
+				"sequence" : "7384717423863140329",
+				"time" : "2024-06-26 15:55:11.567",
+				"timestamp" : 1719388511.5669999,
+				"turnover" : 117280,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "8000"
+			},
+			{
+				"dir" : 1,
+				"price" : 14.66,
+				"pushDataType" : 1,
+				"recvTime" : 1719388511.6343689,
+				"sequence" : "7384717423863140330",
+				"time" : "2024-06-26 15:55:11.567",
+				"timestamp" : 1719388511.5669999,
+				"turnover" : 249220,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "17000"
+			},
+			{
+				"dir" : 1,
+				"price" : 14.66,
+				"pushDataType" : 1,
+				"recvTime" : 1719388511.6343689,
+				"sequence" : "7384717423863140331",
+				"time" : "2024-06-26 15:55:11.590",
+				"timestamp" : 1719388511.5899999,
+				"turnover" : 234560,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "16000"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:11.798] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u817e\u8baf\u63a7\u80a1",
+		"security" : 
+		{
+			"code" : "00700",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 381.39999999999998,
+				"pushDataType" : 1,
+				"recvTime" : 1719388511.7955301,
+				"sequence" : "7384717423863145644",
+				"time" : "2024-06-26 15:55:11.753",
+				"timestamp" : 1719388511.753,
+				"turnover" : 38140,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "100"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:12.924] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u817e\u8baf\u63a7\u80a1",
+		"security" : 
+		{
+			"code" : "00700",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 381.39999999999998,
+				"pushDataType" : 1,
+				"recvTime" : 1719388512.9219971,
+				"sequence" : "7384717428158112941",
+				"time" : "2024-06-26 15:55:12.868",
+				"timestamp" : 1719388512.868,
+				"turnover" : 76280,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "200"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:13.396] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u8499\u725b\u4e73\u4e1a",
+		"security" : 
+		{
+			"code" : "02319",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 1,
+				"price" : 14.66,
+				"pushDataType" : 1,
+				"recvTime" : 1719388513.394757,
+				"sequence" : "7384717432453074924",
+				"time" : "2024-06-26 15:55:13.360",
+				"timestamp" : 1719388513.3599999,
+				"turnover" : 14660,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "1000"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:13.446] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u7f51\u6613-S",
+		"security" : 
+		{
+			"code" : "09999",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 3,
+				"price" : 150.40000000000001,
+				"pushDataType" : 1,
+				"recvTime" : 1719388513.444479,
+				"sequence" : "7384717432453078377",
+				"time" : "2024-06-26 15:55:13.319",
+				"timestamp" : 1719388513.319,
+				"turnover" : 75200,
+				"type" : 4,
+				"typeSign" : 89,
+				"volume" : "500"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:14.598] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u817e\u8baf\u63a7\u80a1",
+		"security" : 
+		{
+			"code" : "00700",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 381.39999999999998,
+				"pushDataType" : 1,
+				"recvTime" : 1719388514.5960109,
+				"sequence" : "7384717436748047534",
+				"time" : "2024-06-26 15:55:14.542",
+				"timestamp" : 1719388514.5420001,
+				"turnover" : 38140,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "100"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:15.206] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u7f51\u6613-S",
+		"security" : 
+		{
+			"code" : "09999",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 150.40000000000001,
+				"pushDataType" : 1,
+				"recvTime" : 1719388515.2045901,
+				"sequence" : "7384717441043012970",
+				"time" : "2024-06-26 15:55:15.162",
+				"timestamp" : 1719388515.1619999,
+				"turnover" : 30080,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "200"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:15.701] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u7f51\u6613-S",
+		"security" : 
+		{
+			"code" : "09999",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 3,
+				"price" : 150.40000000000001,
+				"pushDataType" : 1,
+				"recvTime" : 1719388515.6968989,
+				"sequence" : "7384717441043012971",
+				"time" : "2024-06-26 15:55:15.620",
+				"timestamp" : 1719388515.6199999,
+				"turnover" : 60160,
+				"type" : 4,
+				"typeSign" : 89,
+				"volume" : "400"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:16.257] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u8499\u725b\u4e73\u4e1a",
+		"security" : 
+		{
+			"code" : "02319",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 1,
+				"price" : 14.66,
+				"pushDataType" : 1,
+				"recvTime" : 1719388516.25583,
+				"sequence" : "7384717445337976813",
+				"time" : "2024-06-26 15:55:16.206",
+				"timestamp" : 1719388516.2060001,
+				"turnover" : 14660,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "1000"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:16.554] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u8499\u725b\u4e73\u4e1a",
+		"security" : 
+		{
+			"code" : "02319",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 1,
+				"price" : 14.66,
+				"pushDataType" : 1,
+				"recvTime" : 1719388516.5529931,
+				"sequence" : "7384717445337976814",
+				"time" : "2024-06-26 15:55:16.520",
+				"timestamp" : 1719388516.52,
+				"turnover" : 29320,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "2000"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:16.928] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u7f51\u6613-S",
+		"security" : 
+		{
+			"code" : "09999",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 150.40000000000001,
+				"pushDataType" : 1,
+				"recvTime" : 1719388516.926518,
+				"sequence" : "7384717445337980268",
+				"time" : "2024-06-26 15:55:16.885",
+				"timestamp" : 1719388516.885,
+				"turnover" : 752000,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "5000"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:17.200] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u7f51\u6613-S",
+		"security" : 
+		{
+			"code" : "09999",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 3,
+				"price" : 150.40000000000001,
+				"pushDataType" : 1,
+				"recvTime" : 1719388517.1977789,
+				"sequence" : "7384717449632947565",
+				"time" : "2024-06-26 15:55:17.126",
+				"timestamp" : 1719388517.1259999,
+				"turnover" : 60160,
+				"type" : 4,
+				"typeSign" : 89,
+				"volume" : "400"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:17.621] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u8499\u725b\u4e73\u4e1a",
+		"security" : 
+		{
+			"code" : "02319",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 1,
+				"price" : 14.66,
+				"pushDataType" : 1,
+				"recvTime" : 1719388517.6188509,
+				"sequence" : "7384717449632944111",
+				"time" : "2024-06-26 15:55:17.568",
+				"timestamp" : 1719388517.5680001,
+				"turnover" : 14660,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "1000"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:17.836] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u7f51\u6613-S",
+		"security" : 
+		{
+			"code" : "09999",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 150.40000000000001,
+				"pushDataType" : 1,
+				"recvTime" : 1719388517.8347969,
+				"sequence" : "7384717449632947566",
+				"time" : "2024-06-26 15:55:17.798",
+				"timestamp" : 1719388517.7980001,
+				"turnover" : 90240,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "600"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:18.278] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u817e\u8baf\u63a7\u80a1",
+		"security" : 
+		{
+			"code" : "00700",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 1,
+				"price" : 381.60000000000002,
+				"pushDataType" : 1,
+				"recvTime" : 1719388518.27654,
+				"sequence" : "7384717453927916719",
+				"time" : "2024-06-26 15:55:18.182",
+				"timestamp" : 1719388518.1819999,
+				"turnover" : 38160,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "100"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:18.512] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u817e\u8baf\u63a7\u80a1",
+		"security" : 
+		{
+			"code" : "00700",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 1,
+				"price" : 381.60000000000002,
+				"pushDataType" : 1,
+				"recvTime" : 1719388518.5093229,
+				"sequence" : "7384717453927916720",
+				"time" : "2024-06-26 15:55:18.411",
+				"timestamp" : 1719388518.411,
+				"turnover" : 1144800,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "3000"
+			},
+			{
+				"dir" : 1,
+				"price" : 381.60000000000002,
+				"pushDataType" : 1,
+				"recvTime" : 1719388518.5093229,
+				"sequence" : "7384717453927916721",
+				"time" : "2024-06-26 15:55:18.429",
+				"timestamp" : 1719388518.4289999,
+				"turnover" : 38160,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "100"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:18.648] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u7f51\u6613-S",
+		"security" : 
+		{
+			"code" : "09999",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 3,
+				"price" : 150.44999999999999,
+				"pushDataType" : 1,
+				"recvTime" : 1719388518.63623,
+				"sequence" : "7384717453927914863",
+				"time" : "2024-06-26 15:55:18.592",
+				"timestamp" : 1719388518.592,
+				"turnover" : 15044.999999999998,
+				"type" : 5,
+				"typeSign" : 88,
+				"volume" : "100"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:19.496] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u7f51\u6613-S",
+		"security" : 
+		{
+			"code" : "09999",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 3,
+				"price" : 150.44999999999999,
+				"pushDataType" : 1,
+				"recvTime" : 1719388519.4937479,
+				"sequence" : "7384717458222882160",
+				"time" : "2024-06-26 15:55:19.453",
+				"timestamp" : 1719388519.4530001,
+				"turnover" : 15044.999999999998,
+				"type" : 5,
+				"typeSign" : 88,
+				"volume" : "100"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:19.835] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u7f51\u6613-S",
+		"security" : 
+		{
+			"code" : "09999",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 150.40000000000001,
+				"pushDataType" : 1,
+				"recvTime" : 1719388519.833987,
+				"sequence" : "7384717458222882161",
+				"time" : "2024-06-26 15:55:19.799",
+				"timestamp" : 1719388519.799,
+				"turnover" : 60160,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "400"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:22.047] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u817e\u8baf\u63a7\u80a1",
+		"security" : 
+		{
+			"code" : "00700",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 3,
+				"price" : 381.5,
+				"pushDataType" : 1,
+				"recvTime" : 1719388522.0458281,
+				"sequence" : "7384717466812818610",
+				"time" : "2024-06-26 15:55:21.968",
+				"timestamp" : 1719388521.9679999,
+				"turnover" : 38150,
+				"type" : 5,
+				"typeSign" : 88,
+				"volume" : "100"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:22.158] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u7f51\u6613-S",
+		"security" : 
+		{
+			"code" : "09999",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 150.40000000000001,
+				"pushDataType" : 1,
+				"recvTime" : 1719388522.147059,
+				"sequence" : "7384717471107784050",
+				"time" : "2024-06-26 15:55:22.084",
+				"timestamp" : 1719388522.0840001,
+				"turnover" : 75200,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "500"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:22.539] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u8499\u725b\u4e73\u4e1a",
+		"security" : 
+		{
+			"code" : "02319",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 1,
+				"price" : 14.66,
+				"pushDataType" : 1,
+				"recvTime" : 1719388522.5368409,
+				"sequence" : "7384717471107780592",
+				"time" : "2024-06-26 15:55:22.496",
+				"timestamp" : 1719388522.4960001,
+				"turnover" : 14660,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "1000"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:22.597] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u8499\u725b\u4e73\u4e1a",
+		"security" : 
+		{
+			"code" : "02319",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 14.640000000000001,
+				"pushDataType" : 1,
+				"recvTime" : 1719388522.5950971,
+				"sequence" : "7384717471107780593",
+				"time" : "2024-06-26 15:55:22.561",
+				"timestamp" : 1719388522.5610001,
+				"turnover" : 29280,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "2000"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:22.875] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u7f51\u6613-S",
+		"security" : 
+		{
+			"code" : "09999",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 150.40000000000001,
+				"pushDataType" : 1,
+				"recvTime" : 1719388522.873378,
+				"sequence" : "7384717471107784051",
+				"time" : "2024-06-26 15:55:22.827",
+				"timestamp" : 1719388522.8269999,
+				"turnover" : 15040,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "100"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:23.139] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u7f51\u6613-S",
+		"security" : 
+		{
+			"code" : "09999",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 150.40000000000001,
+				"pushDataType" : 1,
+				"recvTime" : 1719388523.1370659,
+				"sequence" : "7384717475402751348",
+				"time" : "2024-06-26 15:55:23.098",
+				"timestamp" : 1719388523.098,
+				"turnover" : 30080,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "200"
+			},
+			{
+				"dir" : 1,
+				"price" : 150.5,
+				"pushDataType" : 1,
+				"recvTime" : 1719388523.1370659,
+				"sequence" : "7384717475402751349",
+				"time" : "2024-06-26 15:55:23.101",
+				"timestamp" : 1719388523.1010001,
+				"turnover" : 15050,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "100"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:23.498] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u7f51\u6613-S",
+		"security" : 
+		{
+			"code" : "09999",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 150.40000000000001,
+				"pushDataType" : 1,
+				"recvTime" : 1719388523.4958701,
+				"sequence" : "7384717475402751350",
+				"time" : "2024-06-26 15:55:23.445",
+				"timestamp" : 1719388523.4449999,
+				"turnover" : 90240,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "600"
+			},
+			{
+				"dir" : 2,
+				"price" : 150.40000000000001,
+				"pushDataType" : 1,
+				"recvTime" : 1719388523.4958701,
+				"sequence" : "7384717475402751351",
+				"time" : "2024-06-26 15:55:23.451",
+				"timestamp" : 1719388523.451,
+				"turnover" : 210560,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "1400"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:23.923] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u817e\u8baf\u63a7\u80a1",
+		"security" : 
+		{
+			"code" : "00700",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 3,
+				"price" : 381.39999999999998,
+				"pushDataType" : 1,
+				"recvTime" : 1719388523.9212971,
+				"sequence" : "7384717475402753203",
+				"time" : "2024-06-26 15:55:23.862",
+				"timestamp" : 1719388523.862,
+				"turnover" : 190700,
+				"type" : 4,
+				"typeSign" : 89,
+				"volume" : "500"
+			},
+			{
+				"dir" : 3,
+				"price" : 381.39999999999998,
+				"pushDataType" : 1,
+				"recvTime" : 1719388523.9212971,
+				"sequence" : "7384717475402753204",
+				"time" : "2024-06-26 15:55:23.864",
+				"timestamp" : 1719388523.8640001,
+				"turnover" : 38140,
+				"type" : 4,
+				"typeSign" : 89,
+				"volume" : "100"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:24.848] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u817e\u8baf\u63a7\u80a1",
+		"security" : 
+		{
+			"code" : "00700",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 1,
+				"price" : 381.60000000000002,
+				"pushDataType" : 1,
+				"recvTime" : 1719388524.846801,
+				"sequence" : "7384717479697720501",
+				"time" : "2024-06-26 15:55:24.803",
+				"timestamp" : 1719388524.803,
+				"turnover" : 1488240,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "3900"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:25.654] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u8499\u725b\u4e73\u4e1a",
+		"security" : 
+		{
+			"code" : "02319",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 1,
+				"price" : 14.66,
+				"pushDataType" : 1,
+				"recvTime" : 1719388525.6526411,
+				"sequence" : "7384717483992682482",
+				"time" : "2024-06-26 15:55:25.595",
+				"timestamp" : 1719388525.595,
+				"turnover" : 73300,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "5000"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:26.601] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u7f51\u6613-S",
+		"security" : 
+		{
+			"code" : "09999",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 150.40000000000001,
+				"pushDataType" : 1,
+				"recvTime" : 1719388526.5995941,
+				"sequence" : "7384717488287653240",
+				"time" : "2024-06-26 15:55:26.526",
+				"timestamp" : 1719388526.526,
+				"turnover" : 90240,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "600"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:26.867] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u7f51\u6613-S",
+		"security" : 
+		{
+			"code" : "09999",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 150.40000000000001,
+				"pushDataType" : 1,
+				"recvTime" : 1719388526.865149,
+				"sequence" : "7384717488287653241",
+				"time" : "2024-06-26 15:55:26.766",
+				"timestamp" : 1719388526.766,
+				"turnover" : 105280,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "700"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:27.441] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u817e\u8baf\u63a7\u80a1",
+		"security" : 
+		{
+			"code" : "00700",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 1,
+				"price" : 381.60000000000002,
+				"pushDataType" : 1,
+				"recvTime" : 1719388527.4395909,
+				"sequence" : "7384717492582622390",
+				"time" : "2024-06-26 15:55:27.391",
+				"timestamp" : 1719388527.391,
+				"turnover" : 38160,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "100"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:27.804] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u8499\u725b\u4e73\u4e1a",
+		"security" : 
+		{
+			"code" : "02319",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 1,
+				"price" : 14.66,
+				"pushDataType" : 1,
+				"recvTime" : 1719388527.8020589,
+				"sequence" : "7384717492582617075",
+				"time" : "2024-06-26 15:55:27.741",
+				"timestamp" : 1719388527.7409999,
+				"turnover" : 58640,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "4000"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:28.027] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u8499\u725b\u4e73\u4e1a",
+		"security" : 
+		{
+			"code" : "02319",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 14.640000000000001,
+				"pushDataType" : 1,
+				"recvTime" : 1719388528.025425,
+				"sequence" : "7384717492582617076",
+				"time" : "2024-06-26 15:55:27.982",
+				"timestamp" : 1719388527.9820001,
+				"turnover" : 29280,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "2000"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:28.782] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u8499\u725b\u4e73\u4e1a",
+		"security" : 
+		{
+			"code" : "02319",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 1,
+				"price" : 14.66,
+				"pushDataType" : 1,
+				"recvTime" : 1719388528.7763319,
+				"sequence" : "7384717496877584373",
+				"time" : "2024-06-26 15:55:28.742",
+				"timestamp" : 1719388528.7420001,
+				"turnover" : 102620,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "7000"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:28.829] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u8499\u725b\u4e73\u4e1a",
+		"security" : 
+		{
+			"code" : "02319",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 3,
+				"price" : 14.66,
+				"pushDataType" : 1,
+				"recvTime" : 1719388528.826699,
+				"sequence" : "7384717496877584374",
+				"time" : "2024-06-26 15:55:28.764",
+				"timestamp" : 1719388528.7639999,
+				"turnover" : 14660,
+				"type" : 4,
+				"typeSign" : 89,
+				"volume" : "1000"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:28.881] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u817e\u8baf\u63a7\u80a1",
+		"security" : 
+		{
+			"code" : "00700",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 381.39999999999998,
+				"pushDataType" : 1,
+				"recvTime" : 1719388528.8785789,
+				"sequence" : "7384717496877589687",
+				"time" : "2024-06-26 15:55:28.834",
+				"timestamp" : 1719388528.8340001,
+				"turnover" : 38140,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "100"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:29.001] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u7f51\u6613-S",
+		"security" : 
+		{
+			"code" : "09999",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 150.40000000000001,
+				"pushDataType" : 1,
+				"recvTime" : 1719388528.998497,
+				"sequence" : "7384717496877587834",
+				"time" : "2024-06-26 15:55:28.925",
+				"timestamp" : 1719388528.925,
+				"turnover" : 90240,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "600"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:29.805] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u7f51\u6613-S",
+		"security" : 
+		{
+			"code" : "09999",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 3,
+				"price" : 150.44999999999999,
+				"pushDataType" : 1,
+				"recvTime" : 1719388529.802736,
+				"sequence" : "7384717501172555131",
+				"time" : "2024-06-26 15:55:29.747",
+				"timestamp" : 1719388529.747,
+				"turnover" : 15044.999999999998,
+				"type" : 5,
+				"typeSign" : 88,
+				"volume" : "100"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:29.901] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u817e\u8baf\u63a7\u80a1",
+		"security" : 
+		{
+			"code" : "00700",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 1,
+				"price" : 381.60000000000002,
+				"pushDataType" : 1,
+				"recvTime" : 1719388529.8997951,
+				"sequence" : "7384717501172556984",
+				"time" : "2024-06-26 15:55:29.854",
+				"timestamp" : 1719388529.8540001,
+				"turnover" : 114480,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "300"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:30.177] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u7f51\u6613-S",
+		"security" : 
+		{
+			"code" : "09999",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 1,
+				"price" : 150.5,
+				"pushDataType" : 1,
+				"recvTime" : 1719388530.174253,
+				"sequence" : "7384717505467522428",
+				"time" : "2024-06-26 15:55:30.060",
+				"timestamp" : 1719388530.0599999,
+				"turnover" : 120400,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "800"
+			},
+			{
+				"dir" : 1,
+				"price" : 150.5,
+				"pushDataType" : 1,
+				"recvTime" : 1719388530.174253,
+				"sequence" : "7384717505467522429",
+				"time" : "2024-06-26 15:55:30.061",
+				"timestamp" : 1719388530.0610001,
+				"turnover" : 105350,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "700"
+			},
+			{
+				"dir" : 1,
+				"price" : 150.5,
+				"pushDataType" : 1,
+				"recvTime" : 1719388530.174253,
+				"sequence" : "7384717505467522430",
+				"time" : "2024-06-26 15:55:30.061",
+				"timestamp" : 1719388530.0610001,
+				"turnover" : 60200,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "400"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:30.179] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u817e\u8baf\u63a7\u80a1",
+		"security" : 
+		{
+			"code" : "00700",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 1,
+				"price" : 381.60000000000002,
+				"pushDataType" : 1,
+				"recvTime" : 1719388530.17433,
+				"sequence" : "7384717505467524281",
+				"time" : "2024-06-26 15:55:30.096",
+				"timestamp" : 1719388530.096,
+				"turnover" : 114480,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "300"
+			},
+			{
+				"dir" : 1,
+				"price" : 381.60000000000002,
+				"pushDataType" : 1,
+				"recvTime" : 1719388530.17433,
+				"sequence" : "7384717505467524282",
+				"time" : "2024-06-26 15:55:30.100",
+				"timestamp" : 1719388530.0999999,
+				"turnover" : 114480,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "300"
+			},
+			{
+				"dir" : 1,
+				"price" : 381.60000000000002,
+				"pushDataType" : 1,
+				"recvTime" : 1719388530.17433,
+				"sequence" : "7384717505467524283",
+				"time" : "2024-06-26 15:55:30.104",
+				"timestamp" : 1719388530.1040001,
+				"turnover" : 114480,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "300"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:30.795] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u817e\u8baf\u63a7\u80a1",
+		"security" : 
+		{
+			"code" : "00700",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 1,
+				"price" : 381.60000000000002,
+				"pushDataType" : 1,
+				"recvTime" : 1719388530.793016,
+				"sequence" : "7384717505467524284",
+				"time" : "2024-06-26 15:55:30.749",
+				"timestamp" : 1719388530.7490001,
+				"turnover" : 228960,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "600"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:32.370] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u817e\u8baf\u63a7\u80a1",
+		"security" : 
+		{
+			"code" : "00700",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 1,
+				"price" : 381.60000000000002,
+				"pushDataType" : 1,
+				"recvTime" : 1719388532.368263,
+				"sequence" : "7384717514057458877",
+				"time" : "2024-06-26 15:55:32.304",
+				"timestamp" : 1719388532.3039999,
+				"turnover" : 152640,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "400"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:32.526] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u817e\u8baf\u63a7\u80a1",
+		"security" : 
+		{
+			"code" : "00700",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 381.39999999999998,
+				"pushDataType" : 1,
+				"recvTime" : 1719388532.5245359,
+				"sequence" : "7384717514057458878",
+				"time" : "2024-06-26 15:55:32.466",
+				"timestamp" : 1719388532.4660001,
+				"turnover" : 76280,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "200"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:32.587] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u7f51\u6613-S",
+		"security" : 
+		{
+			"code" : "09999",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 150.40000000000001,
+				"pushDataType" : 1,
+				"recvTime" : 1719388532.585201,
+				"sequence" : "7384717514057457023",
+				"time" : "2024-06-26 15:55:32.543",
+				"timestamp" : 1719388532.543,
+				"turnover" : 75200,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "500"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:33.589] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u7f51\u6613-S",
+		"security" : 
+		{
+			"code" : "09999",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 150.40000000000001,
+				"pushDataType" : 1,
+				"recvTime" : 1719388533.587961,
+				"sequence" : "7384717518352424320",
+				"time" : "2024-06-26 15:55:33.543",
+				"timestamp" : 1719388533.543,
+				"turnover" : 45120,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "300"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:33.639] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u7f51\u6613-S",
+		"security" : 
+		{
+			"code" : "09999",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 150.40000000000001,
+				"pushDataType" : 1,
+				"recvTime" : 1719388533.6367409,
+				"sequence" : "7384717518352424321",
+				"time" : "2024-06-26 15:55:33.553",
+				"timestamp" : 1719388533.553,
+				"turnover" : 30080,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "200"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:34.594] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u7f51\u6613-S",
+		"security" : 
+		{
+			"code" : "09999",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 150.40000000000001,
+				"pushDataType" : 1,
+				"recvTime" : 1719388534.591888,
+				"sequence" : "7384717522647391618",
+				"time" : "2024-06-26 15:55:34.545",
+				"timestamp" : 1719388534.5450001,
+				"turnover" : 90240,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "600"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:34.642] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u8499\u725b\u4e73\u4e1a",
+		"security" : 
+		{
+			"code" : "02319",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 14.640000000000001,
+				"pushDataType" : 1,
+				"recvTime" : 1719388534.6402559,
+				"sequence" : "7384717522647388151",
+				"time" : "2024-06-26 15:55:34.565",
+				"timestamp" : 1719388534.5650001,
+				"turnover" : 29280,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "2000"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:34.694] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u8499\u725b\u4e73\u4e1a",
+		"security" : 
+		{
+			"code" : "02319",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 1,
+				"price" : 14.66,
+				"pushDataType" : 1,
+				"recvTime" : 1719388534.6917739,
+				"sequence" : "7384717522647388152",
+				"time" : "2024-06-26 15:55:34.579",
+				"timestamp" : 1719388534.579,
+				"turnover" : 14660,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "1000"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:35.005] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u7f51\u6613-S",
+		"security" : 
+		{
+			"code" : "09999",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 1,
+				"price" : 150.5,
+				"pushDataType" : 1,
+				"recvTime" : 1719388535.0030251,
+				"sequence" : "7384717522647391619",
+				"time" : "2024-06-26 15:55:34.939",
+				"timestamp" : 1719388534.9389999,
+				"turnover" : 15050,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "100"
+			},
+			{
+				"dir" : 1,
+				"price" : 150.5,
+				"pushDataType" : 1,
+				"recvTime" : 1719388535.0030251,
+				"sequence" : "7384717522647391620",
+				"time" : "2024-06-26 15:55:34.945",
+				"timestamp" : 1719388534.9449999,
+				"turnover" : 15050,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "100"
+			},
+			{
+				"dir" : 1,
+				"price" : 150.5,
+				"pushDataType" : 1,
+				"recvTime" : 1719388535.0030251,
+				"sequence" : "7384717522647391621",
+				"time" : "2024-06-26 15:55:34.945",
+				"timestamp" : 1719388534.9449999,
+				"turnover" : 15050,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "100"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:35.187] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u7f51\u6613-S",
+		"security" : 
+		{
+			"code" : "09999",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 1,
+				"price" : 150.5,
+				"pushDataType" : 1,
+				"recvTime" : 1719388535.185925,
+				"sequence" : "7384717526942358918",
+				"time" : "2024-06-26 15:55:35.139",
+				"timestamp" : 1719388535.1389999,
+				"turnover" : 15050,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "100"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:36.617] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u8499\u725b\u4e73\u4e1a",
+		"security" : 
+		{
+			"code" : "02319",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 14.640000000000001,
+				"pushDataType" : 1,
+				"recvTime" : 1719388536.615644,
+				"sequence" : "7384717531237322745",
+				"time" : "2024-06-26 15:55:36.566",
+				"timestamp" : 1719388536.566,
+				"turnover" : 29280,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "2000"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:37.717] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u7f51\u6613-S",
+		"security" : 
+		{
+			"code" : "09999",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 150.40000000000001,
+				"pushDataType" : 1,
+				"recvTime" : 1719388537.715982,
+				"sequence" : "7384717535532293511",
+				"time" : "2024-06-26 15:55:37.672",
+				"timestamp" : 1719388537.6719999,
+				"turnover" : 60160,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "400"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:37.997] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u7f51\u6613-S",
+		"security" : 
+		{
+			"code" : "09999",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 150.40000000000001,
+				"pushDataType" : 1,
+				"recvTime" : 1719388537.995857,
+				"sequence" : "7384717535532293512",
+				"time" : "2024-06-26 15:55:37.907",
+				"timestamp" : 1719388537.9070001,
+				"turnover" : 75200,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "500"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:39.145] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u8499\u725b\u4e73\u4e1a",
+		"security" : 
+		{
+			"code" : "02319",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 1,
+				"price" : 14.66,
+				"pushDataType" : 1,
+				"recvTime" : 1719388539.1433179,
+				"sequence" : "7384717544122224634",
+				"time" : "2024-06-26 15:55:39.099",
+				"timestamp" : 1719388539.099,
+				"turnover" : 58640,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "4000"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:39.201] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u817e\u8baf\u63a7\u80a1",
+		"security" : 
+		{
+			"code" : "00700",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 1,
+				"price" : 381.60000000000002,
+				"pushDataType" : 1,
+				"recvTime" : 1719388539.194412,
+				"sequence" : "7384717544122229951",
+				"time" : "2024-06-26 15:55:39.142",
+				"timestamp" : 1719388539.142,
+				"turnover" : 38160,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "100"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:39.244] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u8499\u725b\u4e73\u4e1a",
+		"security" : 
+		{
+			"code" : "02319",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 1,
+				"price" : 14.66,
+				"pushDataType" : 1,
+				"recvTime" : 1719388539.241375,
+				"sequence" : "7384717544122224635",
+				"time" : "2024-06-26 15:55:39.118",
+				"timestamp" : 1719388539.118,
+				"turnover" : 14660,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "1000"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:39.290] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u817e\u8baf\u63a7\u80a1",
+		"security" : 
+		{
+			"code" : "00700",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 1,
+				"price" : 381.60000000000002,
+				"pushDataType" : 1,
+				"recvTime" : 1719388539.2887521,
+				"sequence" : "7384717544122229952",
+				"time" : "2024-06-26 15:55:39.215",
+				"timestamp" : 1719388539.2149999,
+				"turnover" : 38160,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "100"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:39.356] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u7f51\u6613-S",
+		"security" : 
+		{
+			"code" : "09999",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 150.40000000000001,
+				"pushDataType" : 1,
+				"recvTime" : 1719388539.3538899,
+				"sequence" : "7384717544122228105",
+				"time" : "2024-06-26 15:55:39.310",
+				"timestamp" : 1719388539.3099999,
+				"turnover" : 30080,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "200"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:39.406] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u8499\u725b\u4e73\u4e1a",
+		"security" : 
+		{
+			"code" : "02319",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 14.640000000000001,
+				"pushDataType" : 1,
+				"recvTime" : 1719388539.398104,
+				"sequence" : "7384717544122224636",
+				"time" : "2024-06-26 15:55:39.327",
+				"timestamp" : 1719388539.3269999,
+				"turnover" : 43920,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "3000"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:39.488] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u817e\u8baf\u63a7\u80a1",
+		"security" : 
+		{
+			"code" : "00700",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 381.39999999999998,
+				"pushDataType" : 1,
+				"recvTime" : 1719388539.4850719,
+				"sequence" : "7384717544122229953",
+				"time" : "2024-06-26 15:55:39.455",
+				"timestamp" : 1719388539.4549999,
+				"turnover" : 1029779.9999999999,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "2700"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:39.717] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u7f51\u6613-S",
+		"security" : 
+		{
+			"code" : "09999",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 150.40000000000001,
+				"pushDataType" : 1,
+				"recvTime" : 1719388539.715524,
+				"sequence" : "7384717544122228106",
+				"time" : "2024-06-26 15:55:39.674",
+				"timestamp" : 1719388539.674,
+				"turnover" : 90240,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "600"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:39.773] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u7f51\u6613-S",
+		"security" : 
+		{
+			"code" : "09999",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 3,
+				"price" : 150.44999999999999,
+				"pushDataType" : 1,
+				"recvTime" : 1719388539.7700729,
+				"sequence" : "7384717544122228107",
+				"time" : "2024-06-26 15:55:39.681",
+				"timestamp" : 1719388539.681,
+				"turnover" : 30089.999999999996,
+				"type" : 5,
+				"typeSign" : 88,
+				"volume" : "200"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:40.467] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u817e\u8baf\u63a7\u80a1",
+		"security" : 
+		{
+			"code" : "00700",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 381.39999999999998,
+				"pushDataType" : 1,
+				"recvTime" : 1719388540.464977,
+				"sequence" : "7384717548417197250",
+				"time" : "2024-06-26 15:55:40.425",
+				"timestamp" : 1719388540.425,
+				"turnover" : 38140,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "100"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:40.516] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u7f51\u6613-S",
+		"security" : 
+		{
+			"code" : "09999",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 3,
+				"price" : 150.44999999999999,
+				"pushDataType" : 1,
+				"recvTime" : 1719388540.5137539,
+				"sequence" : "7384717548417195404",
+				"time" : "2024-06-26 15:55:40.461",
+				"timestamp" : 1719388540.461,
+				"turnover" : 15044.999999999998,
+				"type" : 5,
+				"typeSign" : 88,
+				"volume" : "100"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:40.949] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u7f51\u6613-S",
+		"security" : 
+		{
+			"code" : "09999",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 3,
+				"price" : 150.44999999999999,
+				"pushDataType" : 1,
+				"recvTime" : 1719388540.9480419,
+				"sequence" : "7384717548417195405",
+				"time" : "2024-06-26 15:55:40.856",
+				"timestamp" : 1719388540.8559999,
+				"turnover" : 45135,
+				"type" : 5,
+				"typeSign" : 88,
+				"volume" : "300"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:41.024] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u7f51\u6613-S",
+		"security" : 
+		{
+			"code" : "09999",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 3,
+				"price" : 150.44999999999999,
+				"pushDataType" : 1,
+				"recvTime" : 1719388541.0222349,
+				"sequence" : "7384717548417195406",
+				"time" : "2024-06-26 15:55:40.983",
+				"timestamp" : 1719388540.983,
+				"turnover" : 15044.999999999998,
+				"type" : 5,
+				"typeSign" : 88,
+				"volume" : "100"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:41.771] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u817e\u8baf\u63a7\u80a1",
+		"security" : 
+		{
+			"code" : "00700",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 381.39999999999998,
+				"pushDataType" : 1,
+				"recvTime" : 1719388541.7687359,
+				"sequence" : "7384717552712164547",
+				"time" : "2024-06-26 15:55:41.725",
+				"timestamp" : 1719388541.7249999,
+				"turnover" : 38140,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "100"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:41.827] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u7f51\u6613-S",
+		"security" : 
+		{
+			"code" : "09999",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 150.40000000000001,
+				"pushDataType" : 1,
+				"recvTime" : 1719388541.8257141,
+				"sequence" : "7384717552712162703",
+				"time" : "2024-06-26 15:55:41.783",
+				"timestamp" : 1719388541.783,
+				"turnover" : 105280,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "700"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:42.115] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u8499\u725b\u4e73\u4e1a",
+		"security" : 
+		{
+			"code" : "02319",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 14.640000000000001,
+				"pushDataType" : 1,
+				"recvTime" : 1719388542.1135011,
+				"sequence" : "7384717557007126525",
+				"time" : "2024-06-26 15:55:42.038",
+				"timestamp" : 1719388542.0380001,
+				"turnover" : 14640,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "1000"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:42.524] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u817e\u8baf\u63a7\u80a1",
+		"security" : 
+		{
+			"code" : "00700",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 381.39999999999998,
+				"pushDataType" : 1,
+				"recvTime" : 1719388542.5225949,
+				"sequence" : "7384717557007131844",
+				"time" : "2024-06-26 15:55:42.481",
+				"timestamp" : 1719388542.4809999,
+				"turnover" : 3814000,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "10000"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:43.039] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u817e\u8baf\u63a7\u80a1",
+		"security" : 
+		{
+			"code" : "00700",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 381.39999999999998,
+				"pushDataType" : 1,
+				"recvTime" : 1719388543.035423,
+				"sequence" : "7384717557007131845",
+				"time" : "2024-06-26 15:55:42.988",
+				"timestamp" : 1719388542.9879999,
+				"turnover" : 38140,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "100"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:43.829] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u8499\u725b\u4e73\u4e1a",
+		"security" : 
+		{
+			"code" : "02319",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 14.640000000000001,
+				"pushDataType" : 1,
+				"recvTime" : 1719388543.825753,
+				"sequence" : "7384717561302093822",
+				"time" : "2024-06-26 15:55:43.688",
+				"timestamp" : 1719388543.688,
+				"turnover" : 29280,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "2000"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:43.875] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u817e\u8baf\u63a7\u80a1",
+		"security" : 
+		{
+			"code" : "00700",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 381.39999999999998,
+				"pushDataType" : 1,
+				"recvTime" : 1719388543.873559,
+				"sequence" : "7384717561302099142",
+				"time" : "2024-06-26 15:55:43.734",
+				"timestamp" : 1719388543.734,
+				"turnover" : 266980,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "700"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:44.716] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u7f51\u6613-S",
+		"security" : 
+		{
+			"code" : "09999",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 150.40000000000001,
+				"pushDataType" : 1,
+				"recvTime" : 1719388544.7149119,
+				"sequence" : "7384717565597064592",
+				"time" : "2024-06-26 15:55:44.674",
+				"timestamp" : 1719388544.674,
+				"turnover" : 15040,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "100"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:44.815] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u7f51\u6613-S",
+		"security" : 
+		{
+			"code" : "09999",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 150.40000000000001,
+				"pushDataType" : 1,
+				"recvTime" : 1719388544.813031,
+				"sequence" : "7384717565597064593",
+				"time" : "2024-06-26 15:55:44.715",
+				"timestamp" : 1719388544.7149999,
+				"turnover" : 1504000,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "10000"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:44.865] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u8499\u725b\u4e73\u4e1a",
+		"security" : 
+		{
+			"code" : "02319",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 1,
+				"price" : 14.66,
+				"pushDataType" : 1,
+				"recvTime" : 1719388544.86237,
+				"sequence" : "7384717565597061119",
+				"time" : "2024-06-26 15:55:44.766",
+				"timestamp" : 1719388544.766,
+				"turnover" : 58640,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "4000"
+			},
+			{
+				"dir" : 1,
+				"price" : 14.66,
+				"pushDataType" : 1,
+				"recvTime" : 1719388544.8624179,
+				"sequence" : "7384717565597061120",
+				"time" : "2024-06-26 15:55:44.778",
+				"timestamp" : 1719388544.7780001,
+				"turnover" : 43980,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "3000"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:44.916] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u7f51\u6613-S",
+		"security" : 
+		{
+			"code" : "09999",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 150.40000000000001,
+				"pushDataType" : 1,
+				"recvTime" : 1719388544.9148979,
+				"sequence" : "7384717565597064594",
+				"time" : "2024-06-26 15:55:44.850",
+				"timestamp" : 1719388544.8499999,
+				"turnover" : 30080,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "200"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:45.007] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u7f51\u6613-S",
+		"security" : 
+		{
+			"code" : "09999",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 150.40000000000001,
+				"pushDataType" : 1,
+				"recvTime" : 1719388545.0058539,
+				"sequence" : "7384717565597064595",
+				"time" : "2024-06-26 15:55:44.955",
+				"timestamp" : 1719388544.9549999,
+				"turnover" : 105280,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "700"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:46.160] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u7f51\u6613-S",
+		"security" : 
+		{
+			"code" : "09999",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 3,
+				"price" : 150.44999999999999,
+				"pushDataType" : 1,
+				"recvTime" : 1719388546.1585879,
+				"sequence" : "7384717574186999188",
+				"time" : "2024-06-26 15:55:46.077",
+				"timestamp" : 1719388546.0769999,
+				"turnover" : 15044.999999999998,
+				"type" : 5,
+				"typeSign" : 88,
+				"volume" : "100"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:47.578] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u817e\u8baf\u63a7\u80a1",
+		"security" : 
+		{
+			"code" : "00700",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 381.39999999999998,
+				"pushDataType" : 1,
+				"recvTime" : 1719388547.5765619,
+				"sequence" : "7384717578481968327",
+				"time" : "2024-06-26 15:55:47.527",
+				"timestamp" : 1719388547.527,
+				"turnover" : 38140,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "100"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:48.049] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u7f51\u6613-S",
+		"security" : 
+		{
+			"code" : "09999",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 3,
+				"price" : 150.40000000000001,
+				"pushDataType" : 1,
+				"recvTime" : 1719388548.046694,
+				"sequence" : "7384717578481966485",
+				"time" : "2024-06-26 15:55:47.956",
+				"timestamp" : 1719388547.9560001,
+				"turnover" : 45120,
+				"type" : 4,
+				"typeSign" : 89,
+				"volume" : "300"
+			},
+			{
+				"dir" : 2,
+				"price" : 150.40000000000001,
+				"pushDataType" : 1,
+				"recvTime" : 1719388548.046694,
+				"sequence" : "7384717578481966486",
+				"time" : "2024-06-26 15:55:47.956",
+				"timestamp" : 1719388547.9560001,
+				"turnover" : 45120,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "300"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:48.248] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u7f51\u6613-S",
+		"security" : 
+		{
+			"code" : "09999",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 150.40000000000001,
+				"pushDataType" : 1,
+				"recvTime" : 1719388548.2461331,
+				"sequence" : "7384717582776933783",
+				"time" : "2024-06-26 15:55:48.186",
+				"timestamp" : 1719388548.1860001,
+				"turnover" : 120320,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "800"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:48.953] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u817e\u8baf\u63a7\u80a1",
+		"security" : 
+		{
+			"code" : "00700",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 381.39999999999998,
+				"pushDataType" : 1,
+				"recvTime" : 1719388548.951164,
+				"sequence" : "7384717582776935624",
+				"time" : "2024-06-26 15:55:48.881",
+				"timestamp" : 1719388548.881,
+				"turnover" : 38140,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "100"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:49.540] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u7f51\u6613-S",
+		"security" : 
+		{
+			"code" : "09999",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 150.40000000000001,
+				"pushDataType" : 1,
+				"recvTime" : 1719388549.538389,
+				"sequence" : "7384717587071901080",
+				"time" : "2024-06-26 15:55:49.447",
+				"timestamp" : 1719388549.447,
+				"turnover" : 75200,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "500"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:50.153] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u7f51\u6613-S",
+		"security" : 
+		{
+			"code" : "09999",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 150.40000000000001,
+				"pushDataType" : 1,
+				"recvTime" : 1719388550.1506131,
+				"sequence" : "7384717591366868377",
+				"time" : "2024-06-26 15:55:50.086",
+				"timestamp" : 1719388550.086,
+				"turnover" : 75200,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "500"
+			},
+			{
+				"dir" : 2,
+				"price" : 150.40000000000001,
+				"pushDataType" : 1,
+				"recvTime" : 1719388550.1506131,
+				"sequence" : "7384717591366868378",
+				"time" : "2024-06-26 15:55:50.086",
+				"timestamp" : 1719388550.086,
+				"turnover" : 481280,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "3200"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:50.357] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u817e\u8baf\u63a7\u80a1",
+		"security" : 
+		{
+			"code" : "00700",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 3,
+				"price" : 380.80000000000001,
+				"pushDataType" : 1,
+				"recvTime" : 1719388550.355391,
+				"sequence" : "7384717591366870217",
+				"time" : "2024-06-26 15:55:50.309",
+				"timestamp" : 1719388550.309,
+				"turnover" : 761.60000000000002,
+				"type" : 6,
+				"typeSign" : 68,
+				"volume" : "2"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:50.855] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u817e\u8baf\u63a7\u80a1",
+		"security" : 
+		{
+			"code" : "00700",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 381.39999999999998,
+				"pushDataType" : 1,
+				"recvTime" : 1719388550.852272,
+				"sequence" : "7384717591366870218",
+				"time" : "2024-06-26 15:55:50.805",
+				"timestamp" : 1719388550.8050001,
+				"turnover" : 38140,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "100"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:51.286] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u817e\u8baf\u63a7\u80a1",
+		"security" : 
+		{
+			"code" : "00700",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 381.39999999999998,
+				"pushDataType" : 1,
+				"recvTime" : 1719388551.2842109,
+				"sequence" : "7384717595661837515",
+				"time" : "2024-06-26 15:55:51.238",
+				"timestamp" : 1719388551.2379999,
+				"turnover" : 38140,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "100"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:52.200] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u7f51\u6613-S",
+		"security" : 
+		{
+			"code" : "09999",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 150.40000000000001,
+				"pushDataType" : 1,
+				"recvTime" : 1719388552.198607,
+				"sequence" : "7384717599956802971",
+				"time" : "2024-06-26 15:55:52.137",
+				"timestamp" : 1719388552.1370001,
+				"turnover" : 90240,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "600"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:53.418] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u817e\u8baf\u63a7\u80a1",
+		"security" : 
+		{
+			"code" : "00700",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 3,
+				"price" : 381.5,
+				"pushDataType" : 1,
+				"recvTime" : 1719388553.4163871,
+				"sequence" : "7384717604251772108",
+				"time" : "2024-06-26 15:55:53.376",
+				"timestamp" : 1719388553.3759999,
+				"turnover" : 38150,
+				"type" : 5,
+				"typeSign" : 88,
+				"volume" : "100"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:53.677] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u817e\u8baf\u63a7\u80a1",
+		"security" : 
+		{
+			"code" : "00700",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 1,
+				"price" : 381.60000000000002,
+				"pushDataType" : 1,
+				"recvTime" : 1719388553.6755481,
+				"sequence" : "7384717604251772109",
+				"time" : "2024-06-26 15:55:53.607",
+				"timestamp" : 1719388553.6070001,
+				"turnover" : 76320,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "200"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:54.464] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u817e\u8baf\u63a7\u80a1",
+		"security" : 
+		{
+			"code" : "00700",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 1,
+				"price" : 381.60000000000002,
+				"pushDataType" : 1,
+				"recvTime" : 1719388554.462909,
+				"sequence" : "7384717608546739406",
+				"time" : "2024-06-26 15:55:54.423",
+				"timestamp" : 1719388554.4230001,
+				"turnover" : 38160,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "100"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:54.752] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u7f51\u6613-S",
+		"security" : 
+		{
+			"code" : "09999",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 150.40000000000001,
+				"pushDataType" : 1,
+				"recvTime" : 1719388554.749814,
+				"sequence" : "7384717608546737564",
+				"time" : "2024-06-26 15:55:54.697",
+				"timestamp" : 1719388554.697,
+				"turnover" : 105280,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "700"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:55.172] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u7f51\u6613-S",
+		"security" : 
+		{
+			"code" : "09999",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 150.40000000000001,
+				"pushDataType" : 1,
+				"recvTime" : 1719388555.1702831,
+				"sequence" : "7384717612841704861",
+				"time" : "2024-06-26 15:55:55.123",
+				"timestamp" : 1719388555.1229999,
+				"turnover" : 15040,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "100"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:55.565] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u8499\u725b\u4e73\u4e1a",
+		"security" : 
+		{
+			"code" : "02319",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 14.640000000000001,
+				"pushDataType" : 1,
+				"recvTime" : 1719388555.5631039,
+				"sequence" : "7384717612841701377",
+				"time" : "2024-06-26 15:55:55.519",
+				"timestamp" : 1719388555.5190001,
+				"turnover" : 29280,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "2000"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:55.688] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u817e\u8baf\u63a7\u80a1",
+		"security" : 
+		{
+			"code" : "00700",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 381.39999999999998,
+				"pushDataType" : 1,
+				"recvTime" : 1719388555.68591,
+				"sequence" : "7384717612841706703",
+				"time" : "2024-06-26 15:55:55.640",
+				"timestamp" : 1719388555.6400001,
+				"turnover" : 38140,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "100"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:55.797] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u8499\u725b\u4e73\u4e1a",
+		"security" : 
+		{
+			"code" : "02319",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 14.640000000000001,
+				"pushDataType" : 1,
+				"recvTime" : 1719388555.7960811,
+				"sequence" : "7384717612841701378",
+				"time" : "2024-06-26 15:55:55.755",
+				"timestamp" : 1719388555.7550001,
+				"turnover" : 58560,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "4000"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:56.182] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u7f51\u6613-S",
+		"security" : 
+		{
+			"code" : "09999",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 3,
+				"price" : 150.40000000000001,
+				"pushDataType" : 1,
+				"recvTime" : 1719388556.1803279,
+				"sequence" : "7384717617136672158",
+				"time" : "2024-06-26 15:55:56.132",
+				"timestamp" : 1719388556.132,
+				"turnover" : 15040,
+				"type" : 4,
+				"typeSign" : 89,
+				"volume" : "100"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:57.525] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u817e\u8baf\u63a7\u80a1",
+		"security" : 
+		{
+			"code" : "00700",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 381.39999999999998,
+				"pushDataType" : 1,
+				"recvTime" : 1719388557.5237279,
+				"sequence" : "7384717621431641296",
+				"time" : "2024-06-26 15:55:57.482",
+				"timestamp" : 1719388557.4820001,
+				"turnover" : 38140,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "100"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:57.958] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u7f51\u6613-S",
+		"security" : 
+		{
+			"code" : "09999",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 150.40000000000001,
+				"pushDataType" : 1,
+				"recvTime" : 1719388557.9567831,
+				"sequence" : "7384717621431639455",
+				"time" : "2024-06-26 15:55:57.914",
+				"timestamp" : 1719388557.914,
+				"turnover" : 105280,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "700"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:58.012] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u8499\u725b\u4e73\u4e1a",
+		"security" : 
+		{
+			"code" : "02319",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 14.640000000000001,
+				"pushDataType" : 1,
+				"recvTime" : 1719388558.010474,
+				"sequence" : "7384717621431635971",
+				"time" : "2024-06-26 15:55:57.940",
+				"timestamp" : 1719388557.9400001,
+				"turnover" : 29280,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "2000"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:59.344] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u7f51\u6613-S",
+		"security" : 
+		{
+			"code" : "09999",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 150.40000000000001,
+				"pushDataType" : 1,
+				"recvTime" : 1719388559.3424201,
+				"sequence" : "7384717630021574048",
+				"time" : "2024-06-26 15:55:59.297",
+				"timestamp" : 1719388559.2969999,
+				"turnover" : 30080,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "200"
+			}
+		]
+	}
+}
+[2024-06-26 15:55:59.599] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u7f51\u6613-S",
+		"security" : 
+		{
+			"code" : "09999",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 150.40000000000001,
+				"pushDataType" : 1,
+				"recvTime" : 1719388559.5969951,
+				"sequence" : "7384717630021574049",
+				"time" : "2024-06-26 15:55:59.535",
+				"timestamp" : 1719388559.5350001,
+				"turnover" : 75200,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "500"
+			}
+		]
+	}
+}
+[2024-06-26 15:56:00.188] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u817e\u8baf\u63a7\u80a1",
+		"security" : 
+		{
+			"code" : "00700",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 1,
+				"price" : 381.60000000000002,
+				"pushDataType" : 1,
+				"recvTime" : 1719388560.1861961,
+				"sequence" : "7384717634316543185",
+				"time" : "2024-06-26 15:56:00.102",
+				"timestamp" : 1719388560.102,
+				"turnover" : 38160,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "100"
+			}
+		]
+	}
+}
+[2024-06-26 15:56:00.566] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u7f51\u6613-S",
+		"security" : 
+		{
+			"code" : "09999",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 150.40000000000001,
+				"pushDataType" : 1,
+				"recvTime" : 1719388560.564508,
+				"sequence" : "7384717634316541346",
+				"time" : "2024-06-26 15:56:00.508",
+				"timestamp" : 1719388560.5079999,
+				"turnover" : 30080,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "200"
+			}
+		]
+	}
+}
+[2024-06-26 15:56:00.887] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u817e\u8baf\u63a7\u80a1",
+		"security" : 
+		{
+			"code" : "00700",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 3,
+				"price" : 381,
+				"pushDataType" : 1,
+				"recvTime" : 1719388560.8853359,
+				"sequence" : "7384717634316543186",
+				"time" : "2024-06-26 15:56:00.837",
+				"timestamp" : 1719388560.8369999,
+				"turnover" : 22860,
+				"type" : 6,
+				"typeSign" : 68,
+				"volume" : "60"
+			}
+		]
+	}
+}
+[2024-06-26 15:56:01.260] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u7f51\u6613-S",
+		"security" : 
+		{
+			"code" : "09999",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 150.40000000000001,
+				"pushDataType" : 1,
+				"recvTime" : 1719388561.2581019,
+				"sequence" : "7384717638611508643",
+				"time" : "2024-06-26 15:56:01.078",
+				"timestamp" : 1719388561.0780001,
+				"turnover" : 60160,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "400"
+			}
+		]
+	}
+}
+[2024-06-26 15:56:01.310] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u817e\u8baf\u63a7\u80a1",
+		"security" : 
+		{
+			"code" : "00700",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 381.39999999999998,
+				"pushDataType" : 1,
+				"recvTime" : 1719388561.307554,
+				"sequence" : "7384717638611510483",
+				"time" : "2024-06-26 15:56:01.138",
+				"timestamp" : 1719388561.138,
+				"turnover" : 38140,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "100"
+			}
+		]
+	}
+}
+[2024-06-26 15:56:03.331] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u7f51\u6613-S",
+		"security" : 
+		{
+			"code" : "09999",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 150.40000000000001,
+				"pushDataType" : 1,
+				"recvTime" : 1719388563.329844,
+				"sequence" : "7384717647201443236",
+				"time" : "2024-06-26 15:56:03.259",
+				"timestamp" : 1719388563.2590001,
+				"turnover" : 45120,
+				"type" : 1,
+				"typeSign" : 32,
+				"volume" : "300"
+			}
+		]
+	}
+}
+[2024-06-26 15:56:03.562] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u817e\u8baf\u63a7\u80a1",
+		"security" : 
+		{
+			"code" : "00700",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 3,
+				"price" : 381.5,
+				"pushDataType" : 1,
+				"recvTime" : 1719388563.560329,
+				"sequence" : "7384717647201445076",
+				"time" : "2024-06-26 15:56:03.503",
+				"timestamp" : 1719388563.503,
+				"turnover" : 38150,
+				"type" : 5,
+				"typeSign" : 88,
+				"volume" : "100"
+			}
+		]
+	}
+}
+[2024-06-26 15:56:03.605] [tslogger] [info] function2 received DataManager|FutuEngine|1500|{
+	"retType" : 0,
+	"s2c" : 
+	{
+		"name" : "\u7f51\u6613-S",
+		"security" : 
+		{
+			"code" : "09999",
+			"market" : 1
+		},
+		"tickerList" : 
+		[
+			{
+				"dir" : 2,
+				"price" : 150.40000000000001,
+				"pushDataType" : 1,
+				"recvTime" : 1719388563.6026249,
+				"sequence" : "7384717647201443237",
+				"time" : "2024-06-26 15:56:03.545",
+				"timestamp"

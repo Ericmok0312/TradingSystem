@@ -164,7 +164,7 @@ namespace ts{
     void FutuEngine::OnReply_GetFunds(Futu::u32_t nSerialNo, const Trd_GetFunds::Response &stRs){
 
         logger_->info(fmt::format("OnReply_GetFunds, serial: {}", nSerialNo).c_str());
-        std::shared_ptr<Msg> msg = std::make_shared<Msg>("Main", "FutuEngine", MSG_TYPE_ACCOUNTINFO, Json::nullValue);
+        std::shared_ptr<Msg> msg = std::make_shared<Msg>("DataManager", "FutuEngine", MSG_TYPE_ACCOUNTINFO, Json::nullValue);
         ProtoBufToJson(stRs, msg->data_);
         messenger_->send(msg, 0);
 
@@ -184,7 +184,7 @@ namespace ts{
     void FutuEngine::OnReply_GetAccList(Futu::u32_t nSerialNo, const Trd_GetAccList::Response &stRsp){
 
         logger_->info(fmt::format("Get access serial: {}  returned", nSerialNo).c_str());
-        std::shared_ptr<Msg> msg  = std::make_shared<Msg>("Main", "FutuEngine",  MSG_TYPE_ACCESSLIST, Json::nullValue);
+        std::shared_ptr<Msg> msg  = std::make_shared<Msg>("DataManager", "FutuEngine",  MSG_TYPE_ACCESSLIST, Json::nullValue);
         ProtoBufToJson(stRsp, msg->data_);
         messenger_->send(msg);
     }

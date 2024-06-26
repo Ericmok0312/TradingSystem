@@ -35,7 +35,7 @@ namespace ts{
     */
 
     string Msg::serialize(){
-            return destination_ + SERIALIZATION_SEP + source_ + SERIALIZATION_SEP + std::to_string(msgtype_) + SERIALIZATION_SEP + Json2String(data_);
+        return destination_ + SERIALIZATION_SEP + source_ + SERIALIZATION_SEP + std::to_string(msgtype_) + SERIALIZATION_SEP + Json2String(data_);
     }
 
     /*
