@@ -22,11 +22,11 @@ void func_1(){
     msg->destination_ = "FutuEngine";
     msg->source_ = "Main";
     msg->msgtype_ = MSG_TYPE_REGCALLBACK;
-    MsgqTSMessenger::msgq_server_->sendmsg(msg->serialize().c_str(), 0);
+    MsgqTSMessenger::msgq_server_->sendmsg(msg->serialize(), 0);
     msg->data_["code"] = "09999";
-    MsgqTSMessenger::msgq_server_->sendmsg(msg->serialize().c_str(), 0);
+    MsgqTSMessenger::msgq_server_->sendmsg(msg->serialize(), 0);
     msg->data_["code"] = "02319";
-    MsgqTSMessenger::msgq_server_->sendmsg(msg->serialize().c_str(), 0);    
+    MsgqTSMessenger::msgq_server_->sendmsg(msg->serialize(), 0);    
     while(true){
     }
 }
@@ -53,16 +53,16 @@ void func_11(){
 }
 
 void func_2(){
-    // std::shared_ptr<Logger> LOG = Logger::getInstance();
-    // ts::MsgqTSMessenger rec2 (PROXY_SERVER_URL);
-    // LOG->info("dialer2 created");
+    std::shared_ptr<Logger> LOG = Logger::getInstance();
+    ts::MsgqTSMessenger rec2 (PROXY_SERVER_URL);
+    LOG->info("dialer2 created");
  
-    // while(true){ 
-    //     std::shared_ptr<Msg> msg2 = rec2.recv(NNG_FLAG_NONBLOCK+NNG_FLAG_ALLOC); // nonblock + ALLOC
-    //     if(msg2 && msg2->destination_=="Main"){
-    //         LOG->info(fmt::format("function2 received {}",msg2->serialize()).c_str());
-    //     }
-    // }
+    while(true){ 
+        std::shared_ptr<Msg> msg2 = rec2.recv(NNG_FLAG_NONBLOCK+NNG_FLAG_ALLOC); // nonblock + ALLOC
+        if(msg2 && msg2->destination_=="Main"){
+            LOG->info(fmt::format("function2 received {}",msg2->serialize()).c_str());
+        }
+    }
 }
 
 
@@ -106,7 +106,7 @@ int main(){
     sleep(2);
 
   
-    //std::thread t1(func_11);
+    std::thread t1(func_11);
     std::thread t2(func_2);
     std::thread t3(func_3);
     std::thread t4(func_4);
@@ -114,7 +114,7 @@ int main(){
 
     std::thread sb(func_1);
     
-   // t1.join();
+    t1.join();
     t2.join();
     t3.join();
     t4.join();

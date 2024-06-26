@@ -162,9 +162,10 @@ namespace ts{
 
         virtual ~Msg(){};
 
-        virtual string serialize();
+        virtual char* serialize();
 
         virtual void deserialize(const string& msgin);
+        virtual void deserialize(const char* msgin);
     };
 
 

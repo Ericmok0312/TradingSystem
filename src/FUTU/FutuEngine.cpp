@@ -74,7 +74,7 @@ namespace ts{
                         break;
                     case MSG_TYPE_DEBUG:
                     default:
-                        logger_->info(msg->serialize().c_str());
+                        logger_->info(msg->serialize());
                 }
             }
         }

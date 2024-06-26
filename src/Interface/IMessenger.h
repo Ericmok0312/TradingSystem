@@ -67,7 +67,7 @@ IMsgq
         virtual void sendmsg(const string& str, int32_t immediate = 1) : pure virtual function for sending message (receiving string as input)
         virtual void sendmsg(const char* str, int32_t immediate = 1) : pure virtual function overloading for const char* input
 
-        virtual string recmsg(int32_t blockingflags = 1) : pure virtual function used when message is received
+        virtual char* recmsg(int32_t blockingflags = 1) : pure virtual function used when message is received
 
 */
 
@@ -83,9 +83,9 @@ class IMsgq{
         virtual ~IMsgq();
 
         virtual void sendmsg(const string& str, int32_t immediate = 1) = 0;
-        virtual void sendmsg(const char* str, int32_t immediate = 1) = 0;
+        virtual void sendmsg(char* str, int32_t immediate = 1) = 0;
 
-        virtual string recmsg(int32_t blockingflags = 1) = 0;
+        virtual char* recmsg(int32_t blockingflags = 1) = 0;
 };
 
 
@@ -109,7 +109,7 @@ MsgqNNG
 
         virtual void sendmsg(const string& str, int32_t immediate = 1) override: function overriding pure virtual function
         virtual void sendmsg(const char* str, int32_t immediate = 1) override: : function overriding pure virtual function
-        virtual string recmsg(int32_t blockingflags = 1) override: : function overriding pure virtual function
+        virtual char recmsg(int32_t blockingflags = 1) override: : function overriding pure virtual function
 
 */
 
@@ -129,8 +129,8 @@ class MsgqNNG : public IMsgq {
 
         
         virtual void sendmsg(const string& str, int32_t flag) override;
-        virtual void sendmsg(const char* str, int32_t flag) override;
-        virtual string recmsg(int32_t flag) override;
+        virtual void sendmsg(char* str, int32_t flag) override;
+        virtual char* recmsg(int32_t flag) override;
 };
 
 

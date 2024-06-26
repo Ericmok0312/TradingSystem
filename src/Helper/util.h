@@ -21,10 +21,10 @@ using namespace google;
 namespace ts{
 
 
-    inline vector<string> split(const string& src, char sep){
-        vector<string> result;
+    inline void split(const char* src, char sep, vector<string>& result){
 
-        stringstream ss (src);
+
+        stringstream ss (string{src});
         string temp;
 
         while(getline(ss, temp, sep)){
@@ -38,8 +38,9 @@ namespace ts{
             result.pop_back();
         }
 
-        return result;
+        return;
     }
+
 
     inline void ProtoBufToString(const protobuf::Message& pbObj, string& strBody)
         {
@@ -67,18 +68,26 @@ namespace ts{
     }
 
 
-    inline string Json2String(const Json::Value& json){
+    inline void Json2String(const Json::Value& json, string& s_param){
         Json::StreamWriterBuilder writer;
-        std::string s_param = Json::writeString(writer, json);
-        return s_param;
+        s_param = Json::writeString(writer, json);
+        return;
     }
 
-    inline Json::Value String2Json(const string& res){
+
+    inline char* Json2Char(const Json::Value& json, char* temp){
+        Json::StreamWriterBuilder writer;
+        std::string s_param = Json::writeString(writer, json);
+        temp = new char[s_param.size()+1];
+        strcpy(temp, s_param.c_str());
+        return temp;
+    }
+
+    inline void String2Json(const string& res, Json::Value& root){
         Json::CharReaderBuilder reader;
         std::istringstream jsonStream(res);
-        Json::Value root;
         Json::parseFromStream(reader, jsonStream, &root, nullptr);
-        return root;
+        return;
     }
 
 }

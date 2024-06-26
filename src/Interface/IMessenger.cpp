@@ -143,9 +143,10 @@ namespace ts{
         }
     }
 
-    void MsgqNNG::sendmsg(const char* str, int32_t immediate){
-        int success = nng_send(sock_, const_cast<char*>(str), strlen(str)+1, immediate);
-        if (success){
+    void MsgqNNG::sendmsg(char* str, int32_t immediate){ // as is char*, temp string as input will not call this
+        int success = nng_send(sock_, str, strlen(str)+1, immediate);
+        delete[] str; //avoid memory leak;
+        if (success){ 
             logger_ ->error(fmt::format("NNG {} send msg error, return: {}", sock_.id, success).c_str());
         }
     }   
@@ -164,18 +165,20 @@ namespace ts{
 
     */
 
-    string MsgqNNG::recmsg(int32_t blockingflags){
+    char* MsgqNNG::recmsg(int32_t blockingflags){
         void* buf = nullptr;
         size_t len;
         int success = nng_recv(sock_, &buf, &len, blockingflags);
 
         if (success==0 && buf){
-            string msg(static_cast<char*>(buf));
+            char *nbuf = static_cast<char*>(buf);
+            char* msg = new char[strlen(nbuf)+1];
+            strcpy(msg, nbuf);
             nng_free(buf, len);
             return msg;
         }
         else{
-            return string{};
+            return nullptr;
         }
     }
 
@@ -275,13 +278,13 @@ namespace ts{
 
     //Send function similar to MsgqRMessenger
     void MsgqTSMessenger::Send(std::shared_ptr<Msg> pmsg, int flag){
-        string msg = pmsg->serialize();
+        char* msg = pmsg->serialize();
         lock_guard<std::mutex> lock(MsgqTSMessenger::sendlock_);
         MsgqTSMessenger::msgq_server_->sendmsg(msg, flag);
     }
     //send function similar to MsgqRMessenger
     void MsgqTSMessenger::send(std::shared_ptr<Msg> pmsg, int flag){
-        string msg = pmsg->serialize();
+        char* msg = pmsg->serialize();
         lock_guard<std::mutex> lock(MsgqTSMessenger::sendlock_);
         MsgqTSMessenger::msgq_server_->sendmsg(msg, flag);
     }
@@ -295,11 +298,12 @@ namespace ts{
     */
 
     std::shared_ptr<Msg> MsgqTSMessenger::recv(int flag){
-        string msgin = msgq_receiver_->recmsg(flag);
-        if (msgin.empty()) return nullptr;
+        char* msgin = msgq_receiver_->recmsg(flag);
+        if (!msgin) return nullptr;
         try{
             std::shared_ptr<Msg> msgheader = std::make_shared<Msg>();
             msgheader->deserialize(msgin);
+            delete[] msgin;
             return msgheader;
         }
         catch(std::exception& e){

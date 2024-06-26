@@ -75,7 +75,7 @@ namespace ts
         std::vector<spdlog::sink_ptr> sinks;
         auto file_sink = std::make_shared<spdlog::sinks::basic_file_sink_mt>(fpath.str(), false);
         
-        file_sink->set_pattern("[%Y-%m-%d %H:%M:%S.%e] [%n] [%l] %v");
+        file_sink->set_pattern("[%Y-%m-%d %H:%M:%S.%e] [] [%n] [%l] %v");
         
         auto console_sink = std::make_shared<spdlog::sinks::ansicolor_stdout_sink_mt>();
         //console_sink->set_level(spdlog::level::trace);

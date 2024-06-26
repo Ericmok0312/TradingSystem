@@ -34,8 +34,13 @@ namespace ts{
     - SERIALIZAITON_SEP is used to separate each field
     */
 
-    string Msg::serialize(){
-        return destination_ + SERIALIZATION_SEP + source_ + SERIALIZATION_SEP + std::to_string(msgtype_) + SERIALIZATION_SEP + Json2String(data_);
+    char* Msg::serialize(){
+        string temp;
+        Json2String(data_,temp);
+        temp = (destination_ + SERIALIZATION_SEP + source_ + SERIALIZATION_SEP + std::to_string(msgtype_) + SERIALIZATION_SEP + temp);
+        char* res = new char[temp.size()+1];
+        strcpy(res, temp.c_str()); 
+        return res;
     }
 
     /*
@@ -45,7 +50,8 @@ namespace ts{
     
 
     void Msg::deserialize(const string& msgin){
-        vector<string> info = split(msgin, SERIALIZATION_SEP);
+        vector<string> info;
+        split(msgin.c_str(), SERIALIZATION_SEP, info);
 
         if(info.size()<4){
             throw std::out_of_range("OutofRange in message deserialize.");
@@ -54,9 +60,22 @@ namespace ts{
         destination_ = info[0];
         source_ = info[1];
         msgtype_ = static_cast<MSG_TYPE>(stoi(info[2]));
-        data_ = String2Json(info[3]);
+        String2Json(info[3], data_);
     }
 
+    void Msg::deserialize(const char* msgin){
+        vector<string> info;
+        split(msgin, SERIALIZATION_SEP, info);
+
+        if(info.size()<4){
+            throw std::out_of_range("OutofRange in message deserialize.");
+        }
+
+        destination_ = info[0];
+        source_ = info[1];
+        msgtype_ = static_cast<MSG_TYPE>(stoi(info[2]));
+        String2Json(info[3], data_);
+    }
 
    
 
