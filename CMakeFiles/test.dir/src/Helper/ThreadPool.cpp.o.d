@@ -176,4 +176,35 @@ CMakeFiles/test.dir/src/Helper/ThreadPool.cpp.o: \
  /home/emk/vcpkg/installed/x64-linux/include/json/writer.h \
  /usr/include/c++/8/condition_variable \
  /data/home/emk/Coding/Trading_system/TradingSystem/src/Interface/datastructure.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/document.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/reader.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/allocators.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/rapidjson.h \
+ /usr/include/inttypes.h /usr/include/c++/8/cassert /usr/include/assert.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/stream.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/encodings.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/encodedstream.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/memorystream.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/internal/meta.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/internal/../rapidjson.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/internal/stack.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/internal/../allocators.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/internal/swap.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/internal/strtod.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/internal/ieee754.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/internal/biginteger.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/internal/diyfp.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/internal/pow10.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/error/error.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/error/../rapidjson.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/internal/strfunc.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/internal/../stream.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/internal/../rapidjson.h \
+ /usr/include/c++/8/iterator /usr/include/c++/8/bits/stream_iterator.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/writer.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/internal/dtoa.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/internal/itoa.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/internal/itoa.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/stringbuffer.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/stringbuffer.h \
  /usr/include/c++/8/iostream

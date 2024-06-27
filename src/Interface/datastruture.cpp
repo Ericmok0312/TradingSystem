@@ -21,7 +21,7 @@ namespace ts{
     constructor for Msg object, used when all 4 parameters are known
     
     */
-    Msg::Msg(const string& des, const string& src, MSG_TYPE type, Json::Value data){
+    Msg::Msg(const string& des, const string& src, MSG_TYPE type,const string& data){
         destination_ = des;
         source_ = src;
         msgtype_ = type;
@@ -35,12 +35,11 @@ namespace ts{
     */
 
     char* Msg::serialize(){
-        string temp;
-        Json2String(data_,temp);
-        temp = (destination_ + SERIALIZATION_SEP + source_ + SERIALIZATION_SEP + std::to_string(msgtype_) + SERIALIZATION_SEP + temp);
-        char* res = new char[temp.size()+1];
-        strcpy(res, temp.c_str()); 
-        return res;
+        stringstream ss;
+        ss<<destination_<<SERIALIZATION_SEP<<source_<<SERIALIZATION_SEP<<msgtype_<<SERIALIZATION_SEP<<(data_);
+        char* temp = new char [ss.str().size()+1];
+        strcpy(temp, ss.str().c_str());
+        return temp;
     }
 
     /*
@@ -60,7 +59,7 @@ namespace ts{
         destination_ = info[0];
         source_ = info[1];
         msgtype_ = static_cast<MSG_TYPE>(stoi(info[2]));
-        String2Json(info[3], data_);
+        data_ = info[3];
     }
 
     void Msg::deserialize(const char* msgin){
@@ -74,7 +73,7 @@ namespace ts{
         destination_ = info[0];
         source_ = info[1];
         msgtype_ = static_cast<MSG_TYPE>(stoi(info[2]));
-        String2Json(info[3], data_);
+        data_ = info[3];
     }
 
    

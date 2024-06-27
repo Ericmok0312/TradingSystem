@@ -177,6 +177,37 @@ CMakeFiles/test.dir/src/DataManager/DataManager.cpp.o: \
  /home/emk/vcpkg/installed/x64-linux/include/json/writer.h \
  /usr/include/c++/8/condition_variable \
  /data/home/emk/Coding/Trading_system/TradingSystem/src/Interface/datastructure.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/document.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/reader.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/allocators.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/rapidjson.h \
+ /usr/include/inttypes.h /usr/include/c++/8/cassert /usr/include/assert.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/stream.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/encodings.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/encodedstream.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/memorystream.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/internal/meta.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/internal/../rapidjson.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/internal/stack.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/internal/../allocators.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/internal/swap.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/internal/strtod.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/internal/ieee754.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/internal/biginteger.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/internal/diyfp.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/internal/pow10.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/error/error.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/error/../rapidjson.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/internal/strfunc.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/internal/../stream.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/internal/../rapidjson.h \
+ /usr/include/c++/8/iterator /usr/include/c++/8/bits/stream_iterator.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/writer.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/internal/dtoa.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/internal/itoa.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/internal/itoa.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/stringbuffer.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/stringbuffer.h \
  /usr/include/c++/8/iostream \
  /data/home/emk/Coding/Trading_system/TradingSystem/src/Helper/logger.h \
  /usr/include/c++/8/fstream /usr/include/c++/8/bits/codecvt.h \
@@ -189,7 +220,6 @@ CMakeFiles/test.dir/src/DataManager/DataManager.cpp.o: \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/tweakme.h \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/fmt/fmt.h \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/fmt/bundled/core.h \
- /usr/include/c++/8/iterator /usr/include/c++/8/bits/stream_iterator.h \
  /usr/include/c++/8/experimental/string_view \
  /usr/include/c++/8/experimental/bits/lfts_config.h \
  /usr/include/c++/8/experimental/bits/string_view.tcc \
@@ -234,7 +264,6 @@ CMakeFiles/test.dir/src/DataManager/DataManager.cpp.o: \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/logger.h \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/details/backtracer.h \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/details/circular_q.h \
- /usr/include/c++/8/cassert /usr/include/assert.h \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/details/log_msg_buffer.h \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/details/log_msg.h \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/details/log_msg-inl.h \
@@ -333,6 +362,7 @@ CMakeFiles/test.dir/src/DataManager/DataManager.cpp.o: \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/stubs/hash.h \
  /usr/include/c++/8/unordered_set /usr/include/c++/8/bits/unordered_set.h \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/stubs/bytestream.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/rapidjson.h \
  /data/home/emk/Coding/Trading_system/TradingSystem/src/Interface/IMessenger.h \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/nng-1.8.0/include/nng/nng.h \
  /usr/lib/gcc/x86_64-linux-gnu/8/include/stdbool.h \

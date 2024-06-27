@@ -234,6 +234,40 @@ CMakeFiles/test.dir/src/DataManager/DataManager.cpp.o: src/DataManager/DataManag
   /home/emk/vcpkg/installed/x64-linux/include/json/writer.h \
   /usr/include/c++/8/condition_variable \
   src/Interface/datastructure.h \
+  libs/rapidjson/include/rapidjson/document.h \
+  libs/rapidjson/include/rapidjson/reader.h \
+  libs/rapidjson/include/rapidjson/allocators.h \
+  libs/rapidjson/include/rapidjson/rapidjson.h \
+  /usr/include/inttypes.h \
+  /usr/include/c++/8/cassert \
+  /usr/include/assert.h \
+  libs/rapidjson/include/rapidjson/stream.h \
+  libs/rapidjson/include/rapidjson/encodings.h \
+  libs/rapidjson/include/rapidjson/encodedstream.h \
+  libs/rapidjson/include/rapidjson/memorystream.h \
+  libs/rapidjson/include/rapidjson/internal/meta.h \
+  libs/rapidjson/include/rapidjson/rapidjson.h \
+  libs/rapidjson/include/rapidjson/internal/stack.h \
+  libs/rapidjson/include/rapidjson/allocators.h \
+  libs/rapidjson/include/rapidjson/internal/swap.h \
+  libs/rapidjson/include/rapidjson/internal/strtod.h \
+  libs/rapidjson/include/rapidjson/internal/ieee754.h \
+  libs/rapidjson/include/rapidjson/internal/biginteger.h \
+  libs/rapidjson/include/rapidjson/internal/diyfp.h \
+  libs/rapidjson/include/rapidjson/internal/pow10.h \
+  libs/rapidjson/include/rapidjson/error/error.h \
+  libs/rapidjson/include/rapidjson/rapidjson.h \
+  libs/rapidjson/include/rapidjson/internal/strfunc.h \
+  libs/rapidjson/include/rapidjson/stream.h \
+  libs/rapidjson/include/rapidjson/rapidjson.h \
+  /usr/include/c++/8/iterator \
+  /usr/include/c++/8/bits/stream_iterator.h \
+  libs/rapidjson/include/rapidjson/writer.h \
+  libs/rapidjson/include/rapidjson/internal/dtoa.h \
+  libs/rapidjson/include/rapidjson/internal/itoa.h \
+  libs/rapidjson/include/rapidjson/internal/itoa.h \
+  libs/rapidjson/include/rapidjson/stringbuffer.h \
+  libs/rapidjson/include/rapidjson/stringbuffer.h \
   /usr/include/c++/8/iostream \
   src/Helper/logger.h \
   /usr/include/c++/8/fstream \
@@ -247,8 +281,6 @@ CMakeFiles/test.dir/src/DataManager/DataManager.cpp.o: src/DataManager/DataManag
   libs/spdlog-1.14.1/include/spdlog/tweakme.h \
   libs/spdlog-1.14.1/include/spdlog/fmt/fmt.h \
   libs/spdlog-1.14.1/include/spdlog/fmt/bundled/core.h \
-  /usr/include/c++/8/iterator \
-  /usr/include/c++/8/bits/stream_iterator.h \
   /usr/include/c++/8/experimental/string_view \
   /usr/include/c++/8/experimental/bits/lfts_config.h \
   /usr/include/c++/8/experimental/bits/string_view.tcc \
@@ -300,8 +332,6 @@ CMakeFiles/test.dir/src/DataManager/DataManager.cpp.o: src/DataManager/DataManag
   libs/spdlog-1.14.1/include/spdlog/logger.h \
   libs/spdlog-1.14.1/include/spdlog/details/backtracer.h \
   libs/spdlog-1.14.1/include/spdlog/details/circular_q.h \
-  /usr/include/c++/8/cassert \
-  /usr/include/assert.h \
   libs/spdlog-1.14.1/include/spdlog/details/log_msg_buffer.h \
   libs/spdlog-1.14.1/include/spdlog/details/log_msg.h \
   libs/spdlog-1.14.1/include/spdlog/details/log_msg-inl.h \
@@ -407,6 +437,7 @@ CMakeFiles/test.dir/src/DataManager/DataManager.cpp.o: src/DataManager/DataManag
   /usr/include/c++/8/unordered_set \
   /usr/include/c++/8/bits/unordered_set.h \
   libs/futu/include/google/protobuf/stubs/bytestream.h \
+  libs/rapidjson/include/rapidjson/rapidjson.h \
   src/Interface/IMessenger.h \
   libs/nng-1.8.0/include/nng/nng.h \
   /usr/lib/gcc/x86_64-linux-gnu/8/include/stdbool.h \
@@ -416,9 +447,11 @@ CMakeFiles/test.dir/src/FUTU/FutuEngine.cpp.o: src/FUTU/FutuEngine.cpp \
   /usr/include/stdc-predef.h \
   src/FUTU/FutuEngine.h \
   src/Interface/datastructure.h \
-  /home/emk/vcpkg/installed/x64-linux/include/json/json.h \
-  /home/emk/vcpkg/installed/x64-linux/include/json/config.h \
-  /usr/include/c++/8/cstddef \
+  libs/rapidjson/include/rapidjson/document.h \
+  libs/rapidjson/include/rapidjson/reader.h \
+  libs/rapidjson/include/rapidjson/allocators.h \
+  libs/rapidjson/include/rapidjson/rapidjson.h \
+  /usr/include/c++/8/cstdlib \
   /usr/include/x86_64-linux-gnu/c++/8/bits/c++config.h \
   /usr/include/x86_64-linux-gnu/c++/8/bits/os_defines.h \
   /usr/include/features.h \
@@ -428,34 +461,70 @@ CMakeFiles/test.dir/src/FUTU/FutuEngine.cpp.o: src/FUTU/FutuEngine.cpp \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/c++/8/bits/cpu_defines.h \
-  /usr/lib/gcc/x86_64-linux-gnu/8/include/stddef.h \
-  /usr/include/c++/8/cstdint \
-  /usr/lib/gcc/x86_64-linux-gnu/8/include/stdint.h \
-  /usr/include/stdint.h \
+  /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
-  /usr/include/x86_64-linux-gnu/bits/types.h \
-  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
-  /usr/include/x86_64-linux-gnu/bits/wchar.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
-  /usr/include/c++/8/istream \
-  /usr/include/c++/8/ios \
-  /usr/include/c++/8/iosfwd \
-  /usr/include/c++/8/bits/stringfwd.h \
-  /usr/include/c++/8/bits/memoryfwd.h \
-  /usr/include/c++/8/bits/postypes.h \
-  /usr/include/c++/8/cwchar \
-  /usr/include/wchar.h \
+  /usr/lib/gcc/x86_64-linux-gnu/8/include/stddef.h \
+  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/lib/gcc/x86_64-linux-gnu/8/include/stdarg.h \
-  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
+  /usr/include/x86_64-linux-gnu/sys/types.h \
+  /usr/include/x86_64-linux-gnu/bits/types.h \
+  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
+  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
+  /usr/include/endian.h \
+  /usr/include/x86_64-linux-gnu/bits/endian.h \
+  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
+  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
+  /usr/include/x86_64-linux-gnu/sys/select.h \
+  /usr/include/x86_64-linux-gnu/bits/select.h \
+  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
+  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
+  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
+  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
+  /usr/include/alloca.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+  /usr/include/c++/8/bits/std_abs.h \
+  /usr/include/c++/8/cstring \
+  /usr/include/string.h \
+  /usr/include/strings.h \
+  /usr/lib/gcc/x86_64-linux-gnu/8/include/stdint.h \
+  /usr/include/stdint.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
+  /usr/include/inttypes.h \
+  /usr/include/c++/8/cassert \
+  /usr/include/assert.h \
+  libs/rapidjson/include/rapidjson/stream.h \
+  libs/rapidjson/include/rapidjson/encodings.h \
+  libs/rapidjson/include/rapidjson/encodedstream.h \
+  libs/rapidjson/include/rapidjson/memorystream.h \
+  libs/rapidjson/include/rapidjson/internal/meta.h \
+  libs/rapidjson/include/rapidjson/rapidjson.h \
+  libs/rapidjson/include/rapidjson/internal/stack.h \
+  libs/rapidjson/include/rapidjson/allocators.h \
+  libs/rapidjson/include/rapidjson/internal/swap.h \
+  libs/rapidjson/include/rapidjson/internal/strtod.h \
+  libs/rapidjson/include/rapidjson/internal/ieee754.h \
+  libs/rapidjson/include/rapidjson/internal/biginteger.h \
+  libs/rapidjson/include/rapidjson/internal/diyfp.h \
+  libs/rapidjson/include/rapidjson/internal/pow10.h \
+  /usr/include/c++/8/limits \
+  libs/rapidjson/include/rapidjson/error/error.h \
+  libs/rapidjson/include/rapidjson/rapidjson.h \
+  libs/rapidjson/include/rapidjson/internal/strfunc.h \
+  libs/rapidjson/include/rapidjson/stream.h \
+  libs/rapidjson/include/rapidjson/rapidjson.h \
+  /usr/include/c++/8/new \
   /usr/include/c++/8/exception \
   /usr/include/c++/8/bits/exception.h \
   /usr/include/c++/8/bits/exception_ptr.h \
@@ -463,25 +532,40 @@ CMakeFiles/test.dir/src/FUTU/FutuEngine.cpp.o: src/FUTU/FutuEngine.cpp \
   /usr/include/c++/8/bits/cxxabi_init_exception.h \
   /usr/include/c++/8/typeinfo \
   /usr/include/c++/8/bits/hash_bytes.h \
-  /usr/include/c++/8/new \
   /usr/include/c++/8/bits/nested_exception.h \
   /usr/include/c++/8/bits/move.h \
   /usr/include/c++/8/bits/concept_check.h \
   /usr/include/c++/8/type_traits \
-  /usr/include/c++/8/bits/char_traits.h \
-  /usr/include/c++/8/bits/stl_algobase.h \
-  /usr/include/c++/8/bits/functexcept.h \
-  /usr/include/c++/8/bits/cpp_type_traits.h \
-  /usr/include/c++/8/ext/type_traits.h \
-  /usr/include/c++/8/ext/numeric_traits.h \
-  /usr/include/c++/8/bits/stl_pair.h \
+  /usr/include/c++/8/iterator \
   /usr/include/c++/8/bits/stl_iterator_base_types.h \
   /usr/include/c++/8/bits/stl_iterator_base_funcs.h \
   /usr/include/c++/8/debug/assertions.h \
   /usr/include/c++/8/bits/stl_iterator.h \
+  /usr/include/c++/8/bits/cpp_type_traits.h \
+  /usr/include/c++/8/ext/type_traits.h \
   /usr/include/c++/8/bits/ptr_traits.h \
+  /usr/include/c++/8/ostream \
+  /usr/include/c++/8/ios \
+  /usr/include/c++/8/iosfwd \
+  /usr/include/c++/8/bits/stringfwd.h \
+  /usr/include/c++/8/bits/memoryfwd.h \
+  /usr/include/c++/8/bits/postypes.h \
+  /usr/include/c++/8/cwchar \
+  /usr/include/wchar.h \
+  /usr/lib/gcc/x86_64-linux-gnu/8/include/stdarg.h \
+  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
+  /usr/include/c++/8/bits/char_traits.h \
+  /usr/include/c++/8/bits/stl_algobase.h \
+  /usr/include/c++/8/bits/functexcept.h \
+  /usr/include/c++/8/ext/numeric_traits.h \
+  /usr/include/c++/8/bits/stl_pair.h \
   /usr/include/c++/8/debug/debug.h \
   /usr/include/c++/8/bits/predefined_ops.h \
+  /usr/include/c++/8/cstdint \
   /usr/include/c++/8/bits/localefwd.h \
   /usr/include/x86_64-linux-gnu/c++/8/bits/c++locale.h \
   /usr/include/c++/8/clocale \
@@ -489,33 +573,20 @@ CMakeFiles/test.dir/src/FUTU/FutuEngine.cpp.o: src/FUTU/FutuEngine.cpp \
   /usr/include/x86_64-linux-gnu/bits/locale.h \
   /usr/include/c++/8/cctype \
   /usr/include/ctype.h \
-  /usr/include/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
-  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
   /usr/include/c++/8/bits/ios_base.h \
   /usr/include/c++/8/ext/atomicity.h \
   /usr/include/x86_64-linux-gnu/c++/8/bits/gthr.h \
   /usr/include/x86_64-linux-gnu/c++/8/bits/gthr-default.h \
   /usr/include/pthread.h \
   /usr/include/sched.h \
-  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
   /usr/include/x86_64-linux-gnu/bits/sched.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h \
   /usr/include/x86_64-linux-gnu/bits/cpu-set.h \
   /usr/include/time.h \
   /usr/include/x86_64-linux-gnu/bits/time.h \
   /usr/include/x86_64-linux-gnu/bits/timex.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
-  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
   /usr/include/x86_64-linux-gnu/bits/setjmp.h \
   /usr/include/x86_64-linux-gnu/c++/8/bits/atomic_word.h \
   /usr/include/c++/8/bits/locale_classes.h \
@@ -533,18 +604,6 @@ CMakeFiles/test.dir/src/FUTU/FutuEngine.cpp.o: src/FUTU/FutuEngine.cpp \
   /usr/include/c++/8/ext/alloc_traits.h \
   /usr/include/c++/8/bits/alloc_traits.h \
   /usr/include/c++/8/ext/string_conversions.h \
-  /usr/include/c++/8/cstdlib \
-  /usr/include/stdlib.h \
-  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
-  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
-  /usr/include/x86_64-linux-gnu/sys/types.h \
-  /usr/include/x86_64-linux-gnu/sys/select.h \
-  /usr/include/x86_64-linux-gnu/bits/select.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
-  /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-  /usr/include/c++/8/bits/std_abs.h \
   /usr/include/c++/8/cstdio \
   /usr/include/stdio.h \
   /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
@@ -579,56 +638,18 @@ CMakeFiles/test.dir/src/FUTU/FutuEngine.cpp.o: src/FUTU/FutuEngine.cpp \
   /usr/include/x86_64-linux-gnu/c++/8/bits/ctype_inline.h \
   /usr/include/c++/8/bits/locale_facets.tcc \
   /usr/include/c++/8/bits/basic_ios.tcc \
-  /usr/include/c++/8/ostream \
   /usr/include/c++/8/bits/ostream.tcc \
+  /usr/include/c++/8/istream \
   /usr/include/c++/8/bits/istream.tcc \
-  /usr/include/c++/8/memory \
-  /usr/include/c++/8/bits/stl_construct.h \
-  /usr/include/c++/8/bits/stl_uninitialized.h \
-  /usr/include/c++/8/bits/stl_tempbuf.h \
-  /usr/include/c++/8/bits/stl_raw_storage_iter.h \
-  /usr/include/c++/8/ext/concurrence.h \
-  /usr/include/c++/8/bits/uses_allocator.h \
-  /usr/include/c++/8/bits/unique_ptr.h \
+  /usr/include/c++/8/bits/stream_iterator.h \
   /usr/include/c++/8/utility \
   /usr/include/c++/8/bits/stl_relops.h \
-  /usr/include/c++/8/tuple \
-  /usr/include/c++/8/array \
-  /usr/include/c++/8/bits/invoke.h \
-  /usr/include/c++/8/bits/shared_ptr.h \
-  /usr/include/c++/8/bits/shared_ptr_base.h \
-  /usr/include/c++/8/bits/allocated_ptr.h \
-  /usr/include/c++/8/bits/refwrap.h \
-  /usr/include/c++/8/ext/aligned_buffer.h \
-  /usr/include/c++/8/bits/shared_ptr_atomic.h \
-  /usr/include/c++/8/bits/atomic_base.h \
-  /usr/include/c++/8/bits/atomic_lockfree_defines.h \
-  /usr/include/c++/8/backward/auto_ptr.h \
-  /usr/include/c++/8/sstream \
-  /usr/include/c++/8/bits/sstream.tcc \
-  /home/emk/vcpkg/installed/x64-linux/include/json/allocator.h \
-  /usr/include/c++/8/cstring \
-  /usr/include/string.h \
-  /usr/include/strings.h \
-  /home/emk/vcpkg/installed/x64-linux/include/json/version.h \
-  /home/emk/vcpkg/installed/x64-linux/include/json/json_features.h \
-  /home/emk/vcpkg/installed/x64-linux/include/json/forwards.h \
-  /home/emk/vcpkg/installed/x64-linux/include/json/reader.h \
-  /home/emk/vcpkg/installed/x64-linux/include/json/value.h \
-  /usr/include/c++/8/map \
-  /usr/include/c++/8/bits/stl_tree.h \
-  /usr/include/c++/8/bits/stl_map.h \
-  /usr/include/c++/8/bits/stl_multimap.h \
-  /usr/include/c++/8/vector \
-  /usr/include/c++/8/bits/stl_vector.h \
-  /usr/include/c++/8/bits/stl_bvector.h \
-  /usr/include/c++/8/bits/vector.tcc \
-  /usr/include/c++/8/deque \
-  /usr/include/c++/8/bits/stl_deque.h \
-  /usr/include/c++/8/bits/deque.tcc \
-  /usr/include/c++/8/stack \
-  /usr/include/c++/8/bits/stl_stack.h \
-  /home/emk/vcpkg/installed/x64-linux/include/json/writer.h \
+  libs/rapidjson/include/rapidjson/writer.h \
+  libs/rapidjson/include/rapidjson/internal/dtoa.h \
+  libs/rapidjson/include/rapidjson/internal/itoa.h \
+  libs/rapidjson/include/rapidjson/internal/itoa.h \
+  libs/rapidjson/include/rapidjson/stringbuffer.h \
+  libs/rapidjson/include/rapidjson/stringbuffer.h \
   /usr/include/c++/8/iostream \
   src/Interface/IMessenger.h \
   src/Helper/logger.h \
@@ -638,12 +659,31 @@ CMakeFiles/test.dir/src/FUTU/FutuEngine.cpp.o: src/FUTU/FutuEngine.cpp \
   /usr/include/x86_64-linux-gnu/c++/8/bits/c++io.h \
   /usr/include/c++/8/bits/fstream.tcc \
   /usr/include/c++/8/mutex \
+  /usr/include/c++/8/tuple \
+  /usr/include/c++/8/array \
+  /usr/include/c++/8/bits/uses_allocator.h \
+  /usr/include/c++/8/bits/invoke.h \
   /usr/include/c++/8/chrono \
   /usr/include/c++/8/ratio \
-  /usr/include/c++/8/limits \
   /usr/include/c++/8/ctime \
   /usr/include/c++/8/bits/parse_numbers.h \
   /usr/include/c++/8/bits/std_mutex.h \
+  /usr/include/c++/8/memory \
+  /usr/include/c++/8/bits/stl_construct.h \
+  /usr/include/c++/8/bits/stl_uninitialized.h \
+  /usr/include/c++/8/bits/stl_tempbuf.h \
+  /usr/include/c++/8/bits/stl_raw_storage_iter.h \
+  /usr/include/c++/8/ext/concurrence.h \
+  /usr/include/c++/8/bits/unique_ptr.h \
+  /usr/include/c++/8/bits/shared_ptr.h \
+  /usr/include/c++/8/bits/shared_ptr_base.h \
+  /usr/include/c++/8/bits/allocated_ptr.h \
+  /usr/include/c++/8/bits/refwrap.h \
+  /usr/include/c++/8/ext/aligned_buffer.h \
+  /usr/include/c++/8/bits/shared_ptr_atomic.h \
+  /usr/include/c++/8/bits/atomic_base.h \
+  /usr/include/c++/8/bits/atomic_lockfree_defines.h \
+  /usr/include/c++/8/backward/auto_ptr.h \
   libs/spdlog-1.14.1/include/spdlog/spdlog.h \
   libs/spdlog-1.14.1/include/spdlog/common.h \
   libs/spdlog-1.14.1/include/spdlog/details/null_mutex.h \
@@ -653,8 +693,7 @@ CMakeFiles/test.dir/src/FUTU/FutuEngine.cpp.o: src/FUTU/FutuEngine.cpp \
   /usr/include/c++/8/bits/std_function.h \
   libs/spdlog-1.14.1/include/spdlog/fmt/fmt.h \
   libs/spdlog-1.14.1/include/spdlog/fmt/bundled/core.h \
-  /usr/include/c++/8/iterator \
-  /usr/include/c++/8/bits/stream_iterator.h \
+  /usr/include/c++/8/cstddef \
   /usr/include/c++/8/experimental/string_view \
   /usr/include/c++/8/experimental/bits/lfts_config.h \
   /usr/include/c++/8/experimental/bits/string_view.tcc \
@@ -709,8 +748,10 @@ CMakeFiles/test.dir/src/FUTU/FutuEngine.cpp.o: src/FUTU/FutuEngine.cpp \
   libs/spdlog-1.14.1/include/spdlog/logger.h \
   libs/spdlog-1.14.1/include/spdlog/details/backtracer.h \
   libs/spdlog-1.14.1/include/spdlog/details/circular_q.h \
-  /usr/include/c++/8/cassert \
-  /usr/include/assert.h \
+  /usr/include/c++/8/vector \
+  /usr/include/c++/8/bits/stl_vector.h \
+  /usr/include/c++/8/bits/stl_bvector.h \
+  /usr/include/c++/8/bits/vector.tcc \
   libs/spdlog-1.14.1/include/spdlog/details/log_msg_buffer.h \
   libs/spdlog-1.14.1/include/spdlog/details/log_msg.h \
   libs/spdlog-1.14.1/include/spdlog/details/log_msg-inl.h \
@@ -744,6 +785,10 @@ CMakeFiles/test.dir/src/FUTU/FutuEngine.cpp.o: src/FUTU/FutuEngine.cpp \
   libs/spdlog-1.14.1/include/spdlog/pattern_formatter-inl.h \
   libs/spdlog-1.14.1/include/spdlog/details/fmt_helper.h \
   libs/spdlog-1.14.1/include/spdlog/mdc.h \
+  /usr/include/c++/8/map \
+  /usr/include/c++/8/bits/stl_tree.h \
+  /usr/include/c++/8/bits/stl_map.h \
+  /usr/include/c++/8/bits/stl_multimap.h \
   libs/spdlog-1.14.1/include/spdlog/sinks/sink.h \
   libs/spdlog-1.14.1/include/spdlog/sinks/sink-inl.h \
   libs/spdlog-1.14.1/include/spdlog/sinks/ansicolor_sink.h \
@@ -921,7 +966,24 @@ CMakeFiles/test.dir/src/FUTU/FutuEngine.cpp.o: src/FUTU/FutuEngine.cpp \
   libs/futu/include/google/protobuf/util/type_resolver.h \
   libs/futu/include/google/protobuf/stubs/status.h \
   libs/futu/include/google/protobuf/stubs/stringpiece.h \
-  libs/futu/include/google/protobuf/stubs/bytestream.h
+  libs/futu/include/google/protobuf/stubs/bytestream.h \
+  libs/rapidjson/include/rapidjson/rapidjson.h \
+  /usr/include/c++/8/sstream \
+  /usr/include/c++/8/bits/sstream.tcc \
+  /home/emk/vcpkg/installed/x64-linux/include/json/json.h \
+  /home/emk/vcpkg/installed/x64-linux/include/json/config.h \
+  /home/emk/vcpkg/installed/x64-linux/include/json/allocator.h \
+  /home/emk/vcpkg/installed/x64-linux/include/json/version.h \
+  /home/emk/vcpkg/installed/x64-linux/include/json/json_features.h \
+  /home/emk/vcpkg/installed/x64-linux/include/json/forwards.h \
+  /home/emk/vcpkg/installed/x64-linux/include/json/reader.h \
+  /home/emk/vcpkg/installed/x64-linux/include/json/value.h \
+  /usr/include/c++/8/deque \
+  /usr/include/c++/8/bits/stl_deque.h \
+  /usr/include/c++/8/bits/deque.tcc \
+  /usr/include/c++/8/stack \
+  /usr/include/c++/8/bits/stl_stack.h \
+  /home/emk/vcpkg/installed/x64-linux/include/json/writer.h
 
 CMakeFiles/test.dir/src/Helper/ThreadPool.cpp.o: src/Helper/ThreadPool.cpp \
   /usr/include/stdc-predef.h \
@@ -1155,6 +1217,40 @@ CMakeFiles/test.dir/src/Helper/ThreadPool.cpp.o: src/Helper/ThreadPool.cpp \
   /home/emk/vcpkg/installed/x64-linux/include/json/writer.h \
   /usr/include/c++/8/condition_variable \
   src/Interface/datastructure.h \
+  libs/rapidjson/include/rapidjson/document.h \
+  libs/rapidjson/include/rapidjson/reader.h \
+  libs/rapidjson/include/rapidjson/allocators.h \
+  libs/rapidjson/include/rapidjson/rapidjson.h \
+  /usr/include/inttypes.h \
+  /usr/include/c++/8/cassert \
+  /usr/include/assert.h \
+  libs/rapidjson/include/rapidjson/stream.h \
+  libs/rapidjson/include/rapidjson/encodings.h \
+  libs/rapidjson/include/rapidjson/encodedstream.h \
+  libs/rapidjson/include/rapidjson/memorystream.h \
+  libs/rapidjson/include/rapidjson/internal/meta.h \
+  libs/rapidjson/include/rapidjson/rapidjson.h \
+  libs/rapidjson/include/rapidjson/internal/stack.h \
+  libs/rapidjson/include/rapidjson/allocators.h \
+  libs/rapidjson/include/rapidjson/internal/swap.h \
+  libs/rapidjson/include/rapidjson/internal/strtod.h \
+  libs/rapidjson/include/rapidjson/internal/ieee754.h \
+  libs/rapidjson/include/rapidjson/internal/biginteger.h \
+  libs/rapidjson/include/rapidjson/internal/diyfp.h \
+  libs/rapidjson/include/rapidjson/internal/pow10.h \
+  libs/rapidjson/include/rapidjson/error/error.h \
+  libs/rapidjson/include/rapidjson/rapidjson.h \
+  libs/rapidjson/include/rapidjson/internal/strfunc.h \
+  libs/rapidjson/include/rapidjson/stream.h \
+  libs/rapidjson/include/rapidjson/rapidjson.h \
+  /usr/include/c++/8/iterator \
+  /usr/include/c++/8/bits/stream_iterator.h \
+  libs/rapidjson/include/rapidjson/writer.h \
+  libs/rapidjson/include/rapidjson/internal/dtoa.h \
+  libs/rapidjson/include/rapidjson/internal/itoa.h \
+  libs/rapidjson/include/rapidjson/internal/itoa.h \
+  libs/rapidjson/include/rapidjson/stringbuffer.h \
+  libs/rapidjson/include/rapidjson/stringbuffer.h \
   /usr/include/c++/8/iostream
 
 CMakeFiles/test.dir/src/Helper/logger.cpp.o: src/Helper/logger.cpp \
@@ -1516,28 +1612,67 @@ CMakeFiles/test.dir/src/Interface/IEngine.cpp.o: src/Interface/IEngine.cpp \
   /usr/include/c++/8/bits/concept_check.h \
   /usr/include/c++/8/type_traits \
   src/Interface/datastructure.h \
-  /home/emk/vcpkg/installed/x64-linux/include/json/json.h \
-  /home/emk/vcpkg/installed/x64-linux/include/json/config.h \
-  /usr/include/c++/8/cstddef \
+  libs/rapidjson/include/rapidjson/document.h \
+  libs/rapidjson/include/rapidjson/reader.h \
+  libs/rapidjson/include/rapidjson/allocators.h \
+  libs/rapidjson/include/rapidjson/rapidjson.h \
+  /usr/include/c++/8/cstdlib \
+  /usr/include/stdlib.h \
   /usr/lib/gcc/x86_64-linux-gnu/8/include/stddef.h \
-  /usr/include/c++/8/istream \
-  /usr/include/c++/8/ios \
-  /usr/include/c++/8/iosfwd \
-  /usr/include/c++/8/bits/stringfwd.h \
-  /usr/include/c++/8/bits/memoryfwd.h \
-  /usr/include/c++/8/bits/postypes.h \
-  /usr/include/c++/8/cwchar \
-  /usr/include/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/lib/gcc/x86_64-linux-gnu/8/include/stdarg.h \
-  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
+  /usr/include/x86_64-linux-gnu/sys/types.h \
+  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
+  /usr/include/endian.h \
+  /usr/include/x86_64-linux-gnu/bits/endian.h \
+  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
+  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
+  /usr/include/x86_64-linux-gnu/sys/select.h \
+  /usr/include/x86_64-linux-gnu/bits/select.h \
+  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
+  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
+  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
+  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
+  /usr/include/alloca.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+  /usr/include/c++/8/bits/std_abs.h \
+  /usr/include/c++/8/cstring \
+  /usr/include/string.h \
+  /usr/include/strings.h \
+  /usr/include/inttypes.h \
+  /usr/include/c++/8/cassert \
+  /usr/include/assert.h \
+  libs/rapidjson/include/rapidjson/stream.h \
+  libs/rapidjson/include/rapidjson/encodings.h \
+  libs/rapidjson/include/rapidjson/encodedstream.h \
+  libs/rapidjson/include/rapidjson/memorystream.h \
+  libs/rapidjson/include/rapidjson/internal/meta.h \
+  libs/rapidjson/include/rapidjson/rapidjson.h \
+  libs/rapidjson/include/rapidjson/internal/stack.h \
+  libs/rapidjson/include/rapidjson/allocators.h \
+  libs/rapidjson/include/rapidjson/internal/swap.h \
+  libs/rapidjson/include/rapidjson/internal/strtod.h \
+  libs/rapidjson/include/rapidjson/internal/ieee754.h \
+  libs/rapidjson/include/rapidjson/internal/biginteger.h \
+  libs/rapidjson/include/rapidjson/internal/diyfp.h \
+  libs/rapidjson/include/rapidjson/internal/pow10.h \
+  /usr/include/c++/8/limits \
+  libs/rapidjson/include/rapidjson/error/error.h \
+  libs/rapidjson/include/rapidjson/rapidjson.h \
+  libs/rapidjson/include/rapidjson/internal/strfunc.h \
+  libs/rapidjson/include/rapidjson/stream.h \
+  libs/rapidjson/include/rapidjson/rapidjson.h \
+  /usr/include/c++/8/new \
   /usr/include/c++/8/exception \
   /usr/include/c++/8/bits/exception.h \
   /usr/include/c++/8/bits/exception_ptr.h \
@@ -1545,20 +1680,34 @@ CMakeFiles/test.dir/src/Interface/IEngine.cpp.o: src/Interface/IEngine.cpp \
   /usr/include/c++/8/bits/cxxabi_init_exception.h \
   /usr/include/c++/8/typeinfo \
   /usr/include/c++/8/bits/hash_bytes.h \
-  /usr/include/c++/8/new \
   /usr/include/c++/8/bits/nested_exception.h \
-  /usr/include/c++/8/bits/char_traits.h \
-  /usr/include/c++/8/bits/stl_algobase.h \
-  /usr/include/c++/8/bits/functexcept.h \
-  /usr/include/c++/8/bits/cpp_type_traits.h \
-  /usr/include/c++/8/ext/type_traits.h \
-  /usr/include/c++/8/ext/numeric_traits.h \
-  /usr/include/c++/8/bits/stl_pair.h \
+  /usr/include/c++/8/iterator \
   /usr/include/c++/8/bits/stl_iterator_base_types.h \
   /usr/include/c++/8/bits/stl_iterator_base_funcs.h \
   /usr/include/c++/8/debug/assertions.h \
   /usr/include/c++/8/bits/stl_iterator.h \
+  /usr/include/c++/8/bits/cpp_type_traits.h \
+  /usr/include/c++/8/ext/type_traits.h \
   /usr/include/c++/8/bits/ptr_traits.h \
+  /usr/include/c++/8/ostream \
+  /usr/include/c++/8/ios \
+  /usr/include/c++/8/iosfwd \
+  /usr/include/c++/8/bits/stringfwd.h \
+  /usr/include/c++/8/bits/memoryfwd.h \
+  /usr/include/c++/8/bits/postypes.h \
+  /usr/include/c++/8/cwchar \
+  /usr/include/wchar.h \
+  /usr/lib/gcc/x86_64-linux-gnu/8/include/stdarg.h \
+  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
+  /usr/include/c++/8/bits/char_traits.h \
+  /usr/include/c++/8/bits/stl_algobase.h \
+  /usr/include/c++/8/bits/functexcept.h \
+  /usr/include/c++/8/ext/numeric_traits.h \
+  /usr/include/c++/8/bits/stl_pair.h \
   /usr/include/c++/8/debug/debug.h \
   /usr/include/c++/8/bits/predefined_ops.h \
   /usr/include/c++/8/bits/localefwd.h \
@@ -1568,33 +1717,20 @@ CMakeFiles/test.dir/src/Interface/IEngine.cpp.o: src/Interface/IEngine.cpp \
   /usr/include/x86_64-linux-gnu/bits/locale.h \
   /usr/include/c++/8/cctype \
   /usr/include/ctype.h \
-  /usr/include/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
-  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
   /usr/include/c++/8/bits/ios_base.h \
   /usr/include/c++/8/ext/atomicity.h \
   /usr/include/x86_64-linux-gnu/c++/8/bits/gthr.h \
   /usr/include/x86_64-linux-gnu/c++/8/bits/gthr-default.h \
   /usr/include/pthread.h \
   /usr/include/sched.h \
-  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
   /usr/include/x86_64-linux-gnu/bits/sched.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h \
   /usr/include/x86_64-linux-gnu/bits/cpu-set.h \
   /usr/include/time.h \
   /usr/include/x86_64-linux-gnu/bits/time.h \
   /usr/include/x86_64-linux-gnu/bits/timex.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
-  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
   /usr/include/x86_64-linux-gnu/bits/setjmp.h \
   /usr/include/x86_64-linux-gnu/c++/8/bits/atomic_word.h \
   /usr/include/c++/8/bits/locale_classes.h \
@@ -1612,18 +1748,6 @@ CMakeFiles/test.dir/src/Interface/IEngine.cpp.o: src/Interface/IEngine.cpp \
   /usr/include/c++/8/ext/alloc_traits.h \
   /usr/include/c++/8/bits/alloc_traits.h \
   /usr/include/c++/8/ext/string_conversions.h \
-  /usr/include/c++/8/cstdlib \
-  /usr/include/stdlib.h \
-  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
-  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
-  /usr/include/x86_64-linux-gnu/sys/types.h \
-  /usr/include/x86_64-linux-gnu/sys/select.h \
-  /usr/include/x86_64-linux-gnu/bits/select.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
-  /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-  /usr/include/c++/8/bits/std_abs.h \
   /usr/include/c++/8/cstdio \
   /usr/include/stdio.h \
   /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
@@ -1658,54 +1782,18 @@ CMakeFiles/test.dir/src/Interface/IEngine.cpp.o: src/Interface/IEngine.cpp \
   /usr/include/x86_64-linux-gnu/c++/8/bits/ctype_inline.h \
   /usr/include/c++/8/bits/locale_facets.tcc \
   /usr/include/c++/8/bits/basic_ios.tcc \
-  /usr/include/c++/8/ostream \
   /usr/include/c++/8/bits/ostream.tcc \
+  /usr/include/c++/8/istream \
   /usr/include/c++/8/bits/istream.tcc \
-  /usr/include/c++/8/memory \
-  /usr/include/c++/8/bits/stl_construct.h \
-  /usr/include/c++/8/bits/stl_uninitialized.h \
-  /usr/include/c++/8/bits/stl_tempbuf.h \
-  /usr/include/c++/8/bits/stl_raw_storage_iter.h \
-  /usr/include/c++/8/ext/concurrence.h \
-  /usr/include/c++/8/bits/uses_allocator.h \
-  /usr/include/c++/8/bits/unique_ptr.h \
+  /usr/include/c++/8/bits/stream_iterator.h \
   /usr/include/c++/8/utility \
   /usr/include/c++/8/bits/stl_relops.h \
-  /usr/include/c++/8/tuple \
-  /usr/include/c++/8/array \
-  /usr/include/c++/8/bits/invoke.h \
-  /usr/include/c++/8/bits/shared_ptr.h \
-  /usr/include/c++/8/bits/shared_ptr_base.h \
-  /usr/include/c++/8/bits/allocated_ptr.h \
-  /usr/include/c++/8/bits/refwrap.h \
-  /usr/include/c++/8/ext/aligned_buffer.h \
-  /usr/include/c++/8/bits/shared_ptr_atomic.h \
-  /usr/include/c++/8/backward/auto_ptr.h \
-  /usr/include/c++/8/sstream \
-  /usr/include/c++/8/bits/sstream.tcc \
-  /home/emk/vcpkg/installed/x64-linux/include/json/allocator.h \
-  /usr/include/c++/8/cstring \
-  /usr/include/string.h \
-  /usr/include/strings.h \
-  /home/emk/vcpkg/installed/x64-linux/include/json/version.h \
-  /home/emk/vcpkg/installed/x64-linux/include/json/json_features.h \
-  /home/emk/vcpkg/installed/x64-linux/include/json/forwards.h \
-  /home/emk/vcpkg/installed/x64-linux/include/json/reader.h \
-  /home/emk/vcpkg/installed/x64-linux/include/json/value.h \
-  /usr/include/c++/8/map \
-  /usr/include/c++/8/bits/stl_tree.h \
-  /usr/include/c++/8/bits/stl_map.h \
-  /usr/include/c++/8/bits/stl_multimap.h \
-  /usr/include/c++/8/vector \
-  /usr/include/c++/8/bits/stl_vector.h \
-  /usr/include/c++/8/bits/stl_bvector.h \
-  /usr/include/c++/8/bits/vector.tcc \
-  /usr/include/c++/8/deque \
-  /usr/include/c++/8/bits/stl_deque.h \
-  /usr/include/c++/8/bits/deque.tcc \
-  /usr/include/c++/8/stack \
-  /usr/include/c++/8/bits/stl_stack.h \
-  /home/emk/vcpkg/installed/x64-linux/include/json/writer.h \
+  libs/rapidjson/include/rapidjson/writer.h \
+  libs/rapidjson/include/rapidjson/internal/dtoa.h \
+  libs/rapidjson/include/rapidjson/internal/itoa.h \
+  libs/rapidjson/include/rapidjson/internal/itoa.h \
+  libs/rapidjson/include/rapidjson/stringbuffer.h \
+  libs/rapidjson/include/rapidjson/stringbuffer.h \
   /usr/include/c++/8/iostream \
   src/Helper/logger.h \
   /usr/include/c++/8/fstream \
@@ -1714,12 +1802,29 @@ CMakeFiles/test.dir/src/Interface/IEngine.cpp.o: src/Interface/IEngine.cpp \
   /usr/include/x86_64-linux-gnu/c++/8/bits/c++io.h \
   /usr/include/c++/8/bits/fstream.tcc \
   /usr/include/c++/8/mutex \
+  /usr/include/c++/8/tuple \
+  /usr/include/c++/8/array \
+  /usr/include/c++/8/bits/uses_allocator.h \
+  /usr/include/c++/8/bits/invoke.h \
   /usr/include/c++/8/chrono \
   /usr/include/c++/8/ratio \
-  /usr/include/c++/8/limits \
   /usr/include/c++/8/ctime \
   /usr/include/c++/8/bits/parse_numbers.h \
   /usr/include/c++/8/bits/std_mutex.h \
+  /usr/include/c++/8/memory \
+  /usr/include/c++/8/bits/stl_construct.h \
+  /usr/include/c++/8/bits/stl_uninitialized.h \
+  /usr/include/c++/8/bits/stl_tempbuf.h \
+  /usr/include/c++/8/bits/stl_raw_storage_iter.h \
+  /usr/include/c++/8/ext/concurrence.h \
+  /usr/include/c++/8/bits/unique_ptr.h \
+  /usr/include/c++/8/bits/shared_ptr.h \
+  /usr/include/c++/8/bits/shared_ptr_base.h \
+  /usr/include/c++/8/bits/allocated_ptr.h \
+  /usr/include/c++/8/bits/refwrap.h \
+  /usr/include/c++/8/ext/aligned_buffer.h \
+  /usr/include/c++/8/bits/shared_ptr_atomic.h \
+  /usr/include/c++/8/backward/auto_ptr.h \
   libs/spdlog-1.14.1/include/spdlog/spdlog.h \
   libs/spdlog-1.14.1/include/spdlog/common.h \
   libs/spdlog-1.14.1/include/spdlog/details/null_mutex.h \
@@ -1728,8 +1833,7 @@ CMakeFiles/test.dir/src/Interface/IEngine.cpp.o: src/Interface/IEngine.cpp \
   /usr/include/c++/8/bits/std_function.h \
   libs/spdlog-1.14.1/include/spdlog/fmt/fmt.h \
   libs/spdlog-1.14.1/include/spdlog/fmt/bundled/core.h \
-  /usr/include/c++/8/iterator \
-  /usr/include/c++/8/bits/stream_iterator.h \
+  /usr/include/c++/8/cstddef \
   /usr/include/c++/8/experimental/string_view \
   /usr/include/c++/8/experimental/bits/lfts_config.h \
   /usr/include/c++/8/experimental/bits/string_view.tcc \
@@ -1784,8 +1888,10 @@ CMakeFiles/test.dir/src/Interface/IEngine.cpp.o: src/Interface/IEngine.cpp \
   libs/spdlog-1.14.1/include/spdlog/logger.h \
   libs/spdlog-1.14.1/include/spdlog/details/backtracer.h \
   libs/spdlog-1.14.1/include/spdlog/details/circular_q.h \
-  /usr/include/c++/8/cassert \
-  /usr/include/assert.h \
+  /usr/include/c++/8/vector \
+  /usr/include/c++/8/bits/stl_vector.h \
+  /usr/include/c++/8/bits/stl_bvector.h \
+  /usr/include/c++/8/bits/vector.tcc \
   libs/spdlog-1.14.1/include/spdlog/details/log_msg_buffer.h \
   libs/spdlog-1.14.1/include/spdlog/details/log_msg.h \
   libs/spdlog-1.14.1/include/spdlog/details/log_msg-inl.h \
@@ -1819,6 +1925,10 @@ CMakeFiles/test.dir/src/Interface/IEngine.cpp.o: src/Interface/IEngine.cpp \
   libs/spdlog-1.14.1/include/spdlog/pattern_formatter-inl.h \
   libs/spdlog-1.14.1/include/spdlog/details/fmt_helper.h \
   libs/spdlog-1.14.1/include/spdlog/mdc.h \
+  /usr/include/c++/8/map \
+  /usr/include/c++/8/bits/stl_tree.h \
+  /usr/include/c++/8/bits/stl_map.h \
+  /usr/include/c++/8/bits/stl_multimap.h \
   libs/spdlog-1.14.1/include/spdlog/sinks/sink.h \
   libs/spdlog-1.14.1/include/spdlog/sinks/sink-inl.h \
   libs/spdlog-1.14.1/include/spdlog/sinks/ansicolor_sink.h \
@@ -2165,26 +2275,42 @@ CMakeFiles/test.dir/src/Interface/IMessenger.cpp.o: src/Interface/IMessenger.cpp
   libs/spdlog-1.14.1/include/spdlog/sinks/base_sink-inl.h \
   libs/spdlog-1.14.1/include/spdlog/sinks/basic_file_sink-inl.h \
   src/Interface/datastructure.h \
-  /home/emk/vcpkg/installed/x64-linux/include/json/json.h \
-  /home/emk/vcpkg/installed/x64-linux/include/json/config.h \
-  /usr/include/c++/8/sstream \
-  /usr/include/c++/8/bits/sstream.tcc \
-  /home/emk/vcpkg/installed/x64-linux/include/json/allocator.h \
-  /home/emk/vcpkg/installed/x64-linux/include/json/version.h \
-  /home/emk/vcpkg/installed/x64-linux/include/json/json_features.h \
-  /home/emk/vcpkg/installed/x64-linux/include/json/forwards.h \
-  /home/emk/vcpkg/installed/x64-linux/include/json/reader.h \
-  /home/emk/vcpkg/installed/x64-linux/include/json/value.h \
-  /usr/include/c++/8/deque \
-  /usr/include/c++/8/bits/stl_deque.h \
-  /usr/include/c++/8/bits/deque.tcc \
-  /usr/include/c++/8/stack \
-  /usr/include/c++/8/bits/stl_stack.h \
-  /home/emk/vcpkg/installed/x64-linux/include/json/writer.h \
+  libs/rapidjson/include/rapidjson/document.h \
+  libs/rapidjson/include/rapidjson/reader.h \
+  libs/rapidjson/include/rapidjson/allocators.h \
+  libs/rapidjson/include/rapidjson/rapidjson.h \
+  /usr/include/inttypes.h \
+  libs/rapidjson/include/rapidjson/stream.h \
+  libs/rapidjson/include/rapidjson/encodings.h \
+  libs/rapidjson/include/rapidjson/encodedstream.h \
+  libs/rapidjson/include/rapidjson/memorystream.h \
+  libs/rapidjson/include/rapidjson/internal/meta.h \
+  libs/rapidjson/include/rapidjson/rapidjson.h \
+  libs/rapidjson/include/rapidjson/internal/stack.h \
+  libs/rapidjson/include/rapidjson/allocators.h \
+  libs/rapidjson/include/rapidjson/internal/swap.h \
+  libs/rapidjson/include/rapidjson/internal/strtod.h \
+  libs/rapidjson/include/rapidjson/internal/ieee754.h \
+  libs/rapidjson/include/rapidjson/internal/biginteger.h \
+  libs/rapidjson/include/rapidjson/internal/diyfp.h \
+  libs/rapidjson/include/rapidjson/internal/pow10.h \
+  libs/rapidjson/include/rapidjson/error/error.h \
+  libs/rapidjson/include/rapidjson/rapidjson.h \
+  libs/rapidjson/include/rapidjson/internal/strfunc.h \
+  libs/rapidjson/include/rapidjson/stream.h \
+  libs/rapidjson/include/rapidjson/rapidjson.h \
+  libs/rapidjson/include/rapidjson/writer.h \
+  libs/rapidjson/include/rapidjson/internal/dtoa.h \
+  libs/rapidjson/include/rapidjson/internal/itoa.h \
+  libs/rapidjson/include/rapidjson/internal/itoa.h \
+  libs/rapidjson/include/rapidjson/stringbuffer.h \
+  libs/rapidjson/include/rapidjson/stringbuffer.h \
   /usr/include/c++/8/iostream \
   libs/nng-1.8.0/include/nng/nng.h \
   /usr/lib/gcc/x86_64-linux-gnu/8/include/stdbool.h \
   src/Interface/datastructure.h \
+  /usr/include/c++/8/sstream \
+  /usr/include/c++/8/bits/sstream.tcc \
   src/Helper/util.h \
   libs/futu/include/google/protobuf/stubs/common.h \
   /usr/include/c++/8/set \
@@ -2243,6 +2369,7 @@ CMakeFiles/test.dir/src/Interface/IMessenger.cpp.o: src/Interface/IMessenger.cpp
   /usr/include/c++/8/unordered_set \
   /usr/include/c++/8/bits/unordered_set.h \
   libs/futu/include/google/protobuf/stubs/bytestream.h \
+  libs/rapidjson/include/rapidjson/rapidjson.h \
   libs/nng-1.8.0/include/nng/protocol/pubsub0/pub.h \
   libs/nng-1.8.0/include/nng/protocol/pubsub0/sub.h \
   libs/nng-1.8.0/include/nng/protocol/pipeline0/pull.h \
@@ -2251,9 +2378,11 @@ CMakeFiles/test.dir/src/Interface/IMessenger.cpp.o: src/Interface/IMessenger.cpp
 CMakeFiles/test.dir/src/Interface/datastruture.cpp.o: src/Interface/datastruture.cpp \
   /usr/include/stdc-predef.h \
   src/Interface/datastructure.h \
-  /home/emk/vcpkg/installed/x64-linux/include/json/json.h \
-  /home/emk/vcpkg/installed/x64-linux/include/json/config.h \
-  /usr/include/c++/8/cstddef \
+  libs/rapidjson/include/rapidjson/document.h \
+  libs/rapidjson/include/rapidjson/reader.h \
+  libs/rapidjson/include/rapidjson/allocators.h \
+  libs/rapidjson/include/rapidjson/rapidjson.h \
+  /usr/include/c++/8/cstdlib \
   /usr/include/x86_64-linux-gnu/c++/8/bits/c++config.h \
   /usr/include/x86_64-linux-gnu/c++/8/bits/os_defines.h \
   /usr/include/features.h \
@@ -2263,34 +2392,70 @@ CMakeFiles/test.dir/src/Interface/datastruture.cpp.o: src/Interface/datastruture
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/c++/8/bits/cpu_defines.h \
-  /usr/lib/gcc/x86_64-linux-gnu/8/include/stddef.h \
-  /usr/include/c++/8/cstdint \
-  /usr/lib/gcc/x86_64-linux-gnu/8/include/stdint.h \
-  /usr/include/stdint.h \
+  /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
-  /usr/include/x86_64-linux-gnu/bits/types.h \
-  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
-  /usr/include/x86_64-linux-gnu/bits/wchar.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
-  /usr/include/c++/8/istream \
-  /usr/include/c++/8/ios \
-  /usr/include/c++/8/iosfwd \
-  /usr/include/c++/8/bits/stringfwd.h \
-  /usr/include/c++/8/bits/memoryfwd.h \
-  /usr/include/c++/8/bits/postypes.h \
-  /usr/include/c++/8/cwchar \
-  /usr/include/wchar.h \
+  /usr/lib/gcc/x86_64-linux-gnu/8/include/stddef.h \
+  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/lib/gcc/x86_64-linux-gnu/8/include/stdarg.h \
-  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
+  /usr/include/x86_64-linux-gnu/sys/types.h \
+  /usr/include/x86_64-linux-gnu/bits/types.h \
+  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
+  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
+  /usr/include/endian.h \
+  /usr/include/x86_64-linux-gnu/bits/endian.h \
+  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
+  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
+  /usr/include/x86_64-linux-gnu/sys/select.h \
+  /usr/include/x86_64-linux-gnu/bits/select.h \
+  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
+  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
+  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
+  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
+  /usr/include/alloca.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+  /usr/include/c++/8/bits/std_abs.h \
+  /usr/include/c++/8/cstring \
+  /usr/include/string.h \
+  /usr/include/strings.h \
+  /usr/lib/gcc/x86_64-linux-gnu/8/include/stdint.h \
+  /usr/include/stdint.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
+  /usr/include/inttypes.h \
+  /usr/include/c++/8/cassert \
+  /usr/include/assert.h \
+  libs/rapidjson/include/rapidjson/stream.h \
+  libs/rapidjson/include/rapidjson/encodings.h \
+  libs/rapidjson/include/rapidjson/encodedstream.h \
+  libs/rapidjson/include/rapidjson/memorystream.h \
+  libs/rapidjson/include/rapidjson/internal/meta.h \
+  libs/rapidjson/include/rapidjson/rapidjson.h \
+  libs/rapidjson/include/rapidjson/internal/stack.h \
+  libs/rapidjson/include/rapidjson/allocators.h \
+  libs/rapidjson/include/rapidjson/internal/swap.h \
+  libs/rapidjson/include/rapidjson/internal/strtod.h \
+  libs/rapidjson/include/rapidjson/internal/ieee754.h \
+  libs/rapidjson/include/rapidjson/internal/biginteger.h \
+  libs/rapidjson/include/rapidjson/internal/diyfp.h \
+  libs/rapidjson/include/rapidjson/internal/pow10.h \
+  /usr/include/c++/8/limits \
+  libs/rapidjson/include/rapidjson/error/error.h \
+  libs/rapidjson/include/rapidjson/rapidjson.h \
+  libs/rapidjson/include/rapidjson/internal/strfunc.h \
+  libs/rapidjson/include/rapidjson/stream.h \
+  libs/rapidjson/include/rapidjson/rapidjson.h \
+  /usr/include/c++/8/new \
   /usr/include/c++/8/exception \
   /usr/include/c++/8/bits/exception.h \
   /usr/include/c++/8/bits/exception_ptr.h \
@@ -2298,25 +2463,40 @@ CMakeFiles/test.dir/src/Interface/datastruture.cpp.o: src/Interface/datastruture
   /usr/include/c++/8/bits/cxxabi_init_exception.h \
   /usr/include/c++/8/typeinfo \
   /usr/include/c++/8/bits/hash_bytes.h \
-  /usr/include/c++/8/new \
   /usr/include/c++/8/bits/nested_exception.h \
   /usr/include/c++/8/bits/move.h \
   /usr/include/c++/8/bits/concept_check.h \
   /usr/include/c++/8/type_traits \
-  /usr/include/c++/8/bits/char_traits.h \
-  /usr/include/c++/8/bits/stl_algobase.h \
-  /usr/include/c++/8/bits/functexcept.h \
-  /usr/include/c++/8/bits/cpp_type_traits.h \
-  /usr/include/c++/8/ext/type_traits.h \
-  /usr/include/c++/8/ext/numeric_traits.h \
-  /usr/include/c++/8/bits/stl_pair.h \
+  /usr/include/c++/8/iterator \
   /usr/include/c++/8/bits/stl_iterator_base_types.h \
   /usr/include/c++/8/bits/stl_iterator_base_funcs.h \
   /usr/include/c++/8/debug/assertions.h \
   /usr/include/c++/8/bits/stl_iterator.h \
+  /usr/include/c++/8/bits/cpp_type_traits.h \
+  /usr/include/c++/8/ext/type_traits.h \
   /usr/include/c++/8/bits/ptr_traits.h \
+  /usr/include/c++/8/ostream \
+  /usr/include/c++/8/ios \
+  /usr/include/c++/8/iosfwd \
+  /usr/include/c++/8/bits/stringfwd.h \
+  /usr/include/c++/8/bits/memoryfwd.h \
+  /usr/include/c++/8/bits/postypes.h \
+  /usr/include/c++/8/cwchar \
+  /usr/include/wchar.h \
+  /usr/lib/gcc/x86_64-linux-gnu/8/include/stdarg.h \
+  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
+  /usr/include/c++/8/bits/char_traits.h \
+  /usr/include/c++/8/bits/stl_algobase.h \
+  /usr/include/c++/8/bits/functexcept.h \
+  /usr/include/c++/8/ext/numeric_traits.h \
+  /usr/include/c++/8/bits/stl_pair.h \
   /usr/include/c++/8/debug/debug.h \
   /usr/include/c++/8/bits/predefined_ops.h \
+  /usr/include/c++/8/cstdint \
   /usr/include/c++/8/bits/localefwd.h \
   /usr/include/x86_64-linux-gnu/c++/8/bits/c++locale.h \
   /usr/include/c++/8/clocale \
@@ -2324,33 +2504,20 @@ CMakeFiles/test.dir/src/Interface/datastruture.cpp.o: src/Interface/datastruture
   /usr/include/x86_64-linux-gnu/bits/locale.h \
   /usr/include/c++/8/cctype \
   /usr/include/ctype.h \
-  /usr/include/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
-  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
   /usr/include/c++/8/bits/ios_base.h \
   /usr/include/c++/8/ext/atomicity.h \
   /usr/include/x86_64-linux-gnu/c++/8/bits/gthr.h \
   /usr/include/x86_64-linux-gnu/c++/8/bits/gthr-default.h \
   /usr/include/pthread.h \
   /usr/include/sched.h \
-  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
   /usr/include/x86_64-linux-gnu/bits/sched.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h \
   /usr/include/x86_64-linux-gnu/bits/cpu-set.h \
   /usr/include/time.h \
   /usr/include/x86_64-linux-gnu/bits/time.h \
   /usr/include/x86_64-linux-gnu/bits/timex.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
-  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
   /usr/include/x86_64-linux-gnu/bits/setjmp.h \
   /usr/include/x86_64-linux-gnu/c++/8/bits/atomic_word.h \
   /usr/include/c++/8/bits/locale_classes.h \
@@ -2368,18 +2535,6 @@ CMakeFiles/test.dir/src/Interface/datastruture.cpp.o: src/Interface/datastruture
   /usr/include/c++/8/ext/alloc_traits.h \
   /usr/include/c++/8/bits/alloc_traits.h \
   /usr/include/c++/8/ext/string_conversions.h \
-  /usr/include/c++/8/cstdlib \
-  /usr/include/stdlib.h \
-  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
-  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
-  /usr/include/x86_64-linux-gnu/sys/types.h \
-  /usr/include/x86_64-linux-gnu/sys/select.h \
-  /usr/include/x86_64-linux-gnu/bits/select.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
-  /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-  /usr/include/c++/8/bits/std_abs.h \
   /usr/include/c++/8/cstdio \
   /usr/include/stdio.h \
   /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
@@ -2414,71 +2569,48 @@ CMakeFiles/test.dir/src/Interface/datastruture.cpp.o: src/Interface/datastruture
   /usr/include/x86_64-linux-gnu/c++/8/bits/ctype_inline.h \
   /usr/include/c++/8/bits/locale_facets.tcc \
   /usr/include/c++/8/bits/basic_ios.tcc \
-  /usr/include/c++/8/ostream \
   /usr/include/c++/8/bits/ostream.tcc \
+  /usr/include/c++/8/istream \
   /usr/include/c++/8/bits/istream.tcc \
-  /usr/include/c++/8/memory \
-  /usr/include/c++/8/bits/stl_construct.h \
-  /usr/include/c++/8/bits/stl_uninitialized.h \
-  /usr/include/c++/8/bits/stl_tempbuf.h \
-  /usr/include/c++/8/bits/stl_raw_storage_iter.h \
-  /usr/include/c++/8/ext/concurrence.h \
-  /usr/include/c++/8/bits/uses_allocator.h \
-  /usr/include/c++/8/bits/unique_ptr.h \
+  /usr/include/c++/8/bits/stream_iterator.h \
   /usr/include/c++/8/utility \
   /usr/include/c++/8/bits/stl_relops.h \
-  /usr/include/c++/8/tuple \
-  /usr/include/c++/8/array \
-  /usr/include/c++/8/bits/invoke.h \
-  /usr/include/c++/8/bits/shared_ptr.h \
-  /usr/include/c++/8/bits/shared_ptr_base.h \
-  /usr/include/c++/8/bits/allocated_ptr.h \
-  /usr/include/c++/8/bits/refwrap.h \
-  /usr/include/c++/8/ext/aligned_buffer.h \
-  /usr/include/c++/8/bits/shared_ptr_atomic.h \
-  /usr/include/c++/8/bits/atomic_base.h \
-  /usr/include/c++/8/bits/atomic_lockfree_defines.h \
-  /usr/include/c++/8/backward/auto_ptr.h \
-  /usr/include/c++/8/sstream \
-  /usr/include/c++/8/bits/sstream.tcc \
-  /home/emk/vcpkg/installed/x64-linux/include/json/allocator.h \
-  /usr/include/c++/8/cstring \
-  /usr/include/string.h \
-  /usr/include/strings.h \
-  /home/emk/vcpkg/installed/x64-linux/include/json/version.h \
-  /home/emk/vcpkg/installed/x64-linux/include/json/json_features.h \
-  /home/emk/vcpkg/installed/x64-linux/include/json/forwards.h \
-  /home/emk/vcpkg/installed/x64-linux/include/json/reader.h \
-  /home/emk/vcpkg/installed/x64-linux/include/json/value.h \
-  /usr/include/c++/8/map \
-  /usr/include/c++/8/bits/stl_tree.h \
-  /usr/include/c++/8/bits/stl_map.h \
-  /usr/include/c++/8/bits/stl_multimap.h \
+  libs/rapidjson/include/rapidjson/writer.h \
+  libs/rapidjson/include/rapidjson/internal/dtoa.h \
+  libs/rapidjson/include/rapidjson/internal/itoa.h \
+  libs/rapidjson/include/rapidjson/internal/itoa.h \
+  libs/rapidjson/include/rapidjson/stringbuffer.h \
+  libs/rapidjson/include/rapidjson/stringbuffer.h \
+  /usr/include/c++/8/iostream \
   /usr/include/c++/8/vector \
+  /usr/include/c++/8/bits/stl_construct.h \
+  /usr/include/c++/8/bits/stl_uninitialized.h \
   /usr/include/c++/8/bits/stl_vector.h \
   /usr/include/c++/8/bits/stl_bvector.h \
   /usr/include/c++/8/bits/vector.tcc \
-  /usr/include/c++/8/deque \
-  /usr/include/c++/8/bits/stl_deque.h \
-  /usr/include/c++/8/bits/deque.tcc \
-  /usr/include/c++/8/stack \
-  /usr/include/c++/8/bits/stl_stack.h \
-  /home/emk/vcpkg/installed/x64-linux/include/json/writer.h \
-  /usr/include/c++/8/iostream \
   src/Helper/util.h \
   libs/futu/include/google/protobuf/stubs/common.h \
   /usr/include/c++/8/algorithm \
   /usr/include/c++/8/bits/stl_algo.h \
   /usr/include/c++/8/bits/algorithmfwd.h \
   /usr/include/c++/8/bits/stl_heap.h \
+  /usr/include/c++/8/bits/stl_tempbuf.h \
   /usr/include/c++/8/bits/uniform_int_dist.h \
-  /usr/include/c++/8/limits \
+  /usr/include/c++/8/map \
+  /usr/include/c++/8/bits/stl_tree.h \
+  /usr/include/c++/8/ext/aligned_buffer.h \
+  /usr/include/c++/8/bits/stl_map.h \
+  /usr/include/c++/8/tuple \
+  /usr/include/c++/8/array \
+  /usr/include/c++/8/bits/uses_allocator.h \
+  /usr/include/c++/8/bits/invoke.h \
+  /usr/include/c++/8/bits/stl_multimap.h \
   /usr/include/c++/8/set \
   /usr/include/c++/8/bits/stl_set.h \
   /usr/include/c++/8/bits/stl_multiset.h \
   libs/futu/include/google/protobuf/stubs/port.h \
-  /usr/include/assert.h \
   /usr/include/c++/8/stdlib.h \
+  /usr/include/c++/8/cstddef \
   libs/futu/include/google/protobuf/stubs/platform_macros.h \
   /usr/include/x86_64-linux-gnu/sys/param.h \
   /usr/lib/gcc/x86_64-linux-gnu/8/include-fixed/limits.h \
@@ -2532,6 +2664,18 @@ CMakeFiles/test.dir/src/Interface/datastruture.cpp.o: src/Interface/datastruture
   libs/futu/include/google/protobuf/arena_impl.h \
   libs/futu/include/google/protobuf/stubs/atomic_sequence_num.h \
   libs/futu/include/google/protobuf/descriptor.h \
+  /usr/include/c++/8/memory \
+  /usr/include/c++/8/bits/stl_raw_storage_iter.h \
+  /usr/include/c++/8/ext/concurrence.h \
+  /usr/include/c++/8/bits/unique_ptr.h \
+  /usr/include/c++/8/bits/shared_ptr.h \
+  /usr/include/c++/8/bits/shared_ptr_base.h \
+  /usr/include/c++/8/bits/allocated_ptr.h \
+  /usr/include/c++/8/bits/refwrap.h \
+  /usr/include/c++/8/bits/shared_ptr_atomic.h \
+  /usr/include/c++/8/bits/atomic_base.h \
+  /usr/include/c++/8/bits/atomic_lockfree_defines.h \
+  /usr/include/c++/8/backward/auto_ptr.h \
   libs/futu/include/google/protobuf/util/json_util.h \
   libs/futu/include/google/protobuf/util/type_resolver.h \
   libs/futu/include/google/protobuf/stubs/status.h \
@@ -2543,7 +2687,10 @@ CMakeFiles/test.dir/src/Interface/datastruture.cpp.o: src/Interface/datastruture
   /usr/include/c++/8/bits/unordered_map.h \
   /usr/include/c++/8/unordered_set \
   /usr/include/c++/8/bits/unordered_set.h \
-  libs/futu/include/google/protobuf/stubs/bytestream.h
+  libs/futu/include/google/protobuf/stubs/bytestream.h \
+  libs/rapidjson/include/rapidjson/rapidjson.h \
+  /usr/include/c++/8/sstream \
+  /usr/include/c++/8/bits/sstream.tcc
 
 CMakeFiles/test.dir/test.cpp.o: test.cpp \
   /usr/include/stdc-predef.h \
@@ -2873,22 +3020,36 @@ CMakeFiles/test.dir/test.cpp.o: test.cpp \
   libs/spdlog-1.14.1/include/spdlog/sinks/basic_file_sink-inl.h \
   src/Interface/IMessenger.h \
   src/Interface/datastructure.h \
-  /home/emk/vcpkg/installed/x64-linux/include/json/json.h \
-  /home/emk/vcpkg/installed/x64-linux/include/json/config.h \
-  /usr/include/c++/8/sstream \
-  /usr/include/c++/8/bits/sstream.tcc \
-  /home/emk/vcpkg/installed/x64-linux/include/json/allocator.h \
-  /home/emk/vcpkg/installed/x64-linux/include/json/version.h \
-  /home/emk/vcpkg/installed/x64-linux/include/json/json_features.h \
-  /home/emk/vcpkg/installed/x64-linux/include/json/forwards.h \
-  /home/emk/vcpkg/installed/x64-linux/include/json/reader.h \
-  /home/emk/vcpkg/installed/x64-linux/include/json/value.h \
-  /usr/include/c++/8/deque \
-  /usr/include/c++/8/bits/stl_deque.h \
-  /usr/include/c++/8/bits/deque.tcc \
-  /usr/include/c++/8/stack \
-  /usr/include/c++/8/bits/stl_stack.h \
-  /home/emk/vcpkg/installed/x64-linux/include/json/writer.h \
+  libs/rapidjson/include/rapidjson/document.h \
+  libs/rapidjson/include/rapidjson/reader.h \
+  libs/rapidjson/include/rapidjson/allocators.h \
+  libs/rapidjson/include/rapidjson/rapidjson.h \
+  /usr/include/inttypes.h \
+  libs/rapidjson/include/rapidjson/stream.h \
+  libs/rapidjson/include/rapidjson/encodings.h \
+  libs/rapidjson/include/rapidjson/encodedstream.h \
+  libs/rapidjson/include/rapidjson/memorystream.h \
+  libs/rapidjson/include/rapidjson/internal/meta.h \
+  libs/rapidjson/include/rapidjson/rapidjson.h \
+  libs/rapidjson/include/rapidjson/internal/stack.h \
+  libs/rapidjson/include/rapidjson/allocators.h \
+  libs/rapidjson/include/rapidjson/internal/swap.h \
+  libs/rapidjson/include/rapidjson/internal/strtod.h \
+  libs/rapidjson/include/rapidjson/internal/ieee754.h \
+  libs/rapidjson/include/rapidjson/internal/biginteger.h \
+  libs/rapidjson/include/rapidjson/internal/diyfp.h \
+  libs/rapidjson/include/rapidjson/internal/pow10.h \
+  libs/rapidjson/include/rapidjson/error/error.h \
+  libs/rapidjson/include/rapidjson/rapidjson.h \
+  libs/rapidjson/include/rapidjson/internal/strfunc.h \
+  libs/rapidjson/include/rapidjson/stream.h \
+  libs/rapidjson/include/rapidjson/rapidjson.h \
+  libs/rapidjson/include/rapidjson/writer.h \
+  libs/rapidjson/include/rapidjson/internal/dtoa.h \
+  libs/rapidjson/include/rapidjson/internal/itoa.h \
+  libs/rapidjson/include/rapidjson/internal/itoa.h \
+  libs/rapidjson/include/rapidjson/stringbuffer.h \
+  libs/rapidjson/include/rapidjson/stringbuffer.h \
   /usr/include/c++/8/iostream \
   libs/nng-1.8.0/include/nng/nng.h \
   /usr/lib/gcc/x86_64-linux-gnu/8/include/stdbool.h \
@@ -3049,6 +3210,22 @@ CMakeFiles/test.dir/test.cpp.o: test.cpp \
   libs/futu/include/futu/FTAPIChannel.h \
   libs/futu/include/futu/FTAPIChannel_Define.h \
   libs/futu/include/futu/FTSPI.h \
+  /home/emk/vcpkg/installed/x64-linux/include/json/json.h \
+  /home/emk/vcpkg/installed/x64-linux/include/json/config.h \
+  /usr/include/c++/8/sstream \
+  /usr/include/c++/8/bits/sstream.tcc \
+  /home/emk/vcpkg/installed/x64-linux/include/json/allocator.h \
+  /home/emk/vcpkg/installed/x64-linux/include/json/version.h \
+  /home/emk/vcpkg/installed/x64-linux/include/json/json_features.h \
+  /home/emk/vcpkg/installed/x64-linux/include/json/forwards.h \
+  /home/emk/vcpkg/installed/x64-linux/include/json/reader.h \
+  /home/emk/vcpkg/installed/x64-linux/include/json/value.h \
+  /usr/include/c++/8/deque \
+  /usr/include/c++/8/bits/stl_deque.h \
+  /usr/include/c++/8/bits/deque.tcc \
+  /usr/include/c++/8/stack \
+  /usr/include/c++/8/bits/stl_stack.h \
+  /home/emk/vcpkg/installed/x64-linux/include/json/writer.h \
   src/DataManager/DataManager.h \
   src/Helper/ThreadPool.h \
   /usr/include/c++/8/queue \
@@ -3058,7 +3235,8 @@ CMakeFiles/test.dir/test.cpp.o: test.cpp \
   libs/futu/include/google/protobuf/util/type_resolver.h \
   libs/futu/include/google/protobuf/stubs/status.h \
   libs/futu/include/google/protobuf/stubs/stringpiece.h \
-  libs/futu/include/google/protobuf/stubs/bytestream.h
+  libs/futu/include/google/protobuf/stubs/bytestream.h \
+  libs/rapidjson/include/rapidjson/rapidjson.h
 
 
 test.cpp:
@@ -3066,8 +3244,6 @@ test.cpp:
 src/Interface/datastruture.cpp:
 
 libs/nng-1.8.0/include/nng/protocol/pipeline0/push.h:
-
-libs/nng-1.8.0/include/nng/protocol/pubsub0/sub.h:
 
 libs/nng-1.8.0/include/nng/protocol/pubsub0/pub.h:
 
@@ -3269,8 +3445,6 @@ libs/futu/include/Proto/Qot_RequestTradeDate.pb.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/stack_t.h:
 
-/usr/include/x86_64-linux-gnu/bits/sigcontext.h:
-
 /usr/include/x86_64-linux-gnu/bits/sigaction.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/sigval_t.h:
@@ -3321,9 +3495,41 @@ src/Helper/logger.cpp:
 
 libs/spdlog-1.14.1/include/spdlog/details/file_helper.h:
 
-libs/spdlog-1.14.1/include/spdlog/sinks/basic_file_sink.h:
-
 libs/spdlog-1.14.1/include/spdlog/details/synchronous_factory.h:
+
+libs/futu/include/Proto/Qot_GetPlateSet.pb.h:
+
+libs/spdlog-1.14.1/include/spdlog/sinks/ansicolor_sink.h:
+
+libs/spdlog-1.14.1/include/spdlog/sinks/sink-inl.h:
+
+libs/spdlog-1.14.1/include/spdlog/mdc.h:
+
+libs/spdlog-1.14.1/include/spdlog/details/fmt_helper.h:
+
+libs/futu/include/google/protobuf/arena.h:
+
+libs/spdlog-1.14.1/include/spdlog/formatter.h:
+
+libs/spdlog-1.14.1/include/spdlog/pattern_formatter.h:
+
+/usr/include/x86_64-linux-gnu/bits/syscall.h:
+
+/usr/include/x86_64-linux-gnu/asm/unistd_64.h:
+
+libs/futu/include/Proto/Qot_RegQotPush.pb.h:
+
+/usr/include/x86_64-linux-gnu/sys/syscall.h:
+
+/usr/include/x86_64-linux-gnu/bits/getopt_posix.h:
+
+libs/futu/include/google/protobuf/metadata_lite.h:
+
+/usr/include/x86_64-linux-gnu/bits/confname.h:
+
+/usr/include/x86_64-linux-gnu/bits/environments.h:
+
+/usr/include/x86_64-linux-gnu/bits/sysmacros.h:
 
 /usr/include/asm-generic/errno.h:
 
@@ -3339,13 +3545,7 @@ libs/spdlog-1.14.1/include/spdlog/details/synchronous_factory.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h:
 
-libs/futu/include/google/protobuf/metadata_lite.h:
-
-/usr/include/x86_64-linux-gnu/bits/confname.h:
-
 /usr/include/c++/8/cstdio:
-
-/usr/include/c++/8/bits/stl_vector.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
 
@@ -3353,11 +3553,17 @@ libs/futu/include/google/protobuf/metadata_lite.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h:
 
+libs/rapidjson/include/rapidjson/internal/diyfp.h:
+
 libs/futu/include/Proto/Trd_GetHistoryOrderFillList.pb.h:
 
 /usr/include/x86_64-linux-gnu/sys/select.h:
 
 /usr/include/x86_64-linux-gnu/sys/types.h:
+
+libs/spdlog-1.14.1/include/spdlog/pattern_formatter-inl.h:
+
+/usr/include/c++/8/bits/std_abs.h:
 
 /usr/include/c++/8/ext/numeric_traits.h:
 
@@ -3366,8 +3572,6 @@ libs/futu/include/Proto/Trd_GetHistoryOrderFillList.pb.h:
 /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
 
 /usr/include/c++/8/cstdlib:
-
-/usr/include/c++/8/fstream:
 
 /usr/include/c++/8/bits/stl_multiset.h:
 
@@ -3409,6 +3613,10 @@ libs/futu/include/Proto/Qot_GetWarrant.pb.h:
 
 /home/emk/vcpkg/installed/x64-linux/include/json/forwards.h:
 
+/usr/include/c++/8/bits/stl_vector.h:
+
+libs/rapidjson/include/rapidjson/internal/pow10.h:
+
 libs/futu/include/Proto/Trd_GetHistoryOrderList.pb.h:
 
 /usr/include/x86_64-linux-gnu/bits/locale.h:
@@ -3446,6 +3654,10 @@ libs/spdlog-1.14.1/include/spdlog/common-inl.h:
 /usr/include/c++/8/bits/fstream.tcc:
 
 /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h:
+
+/usr/include/c++/8/fstream:
+
+libs/rapidjson/include/rapidjson/internal/strtod.h:
 
 /usr/include/time.h:
 
@@ -3495,21 +3707,29 @@ libs/futu/include/Proto/GetGlobalState.pb.h:
 
 /usr/include/x86_64-linux-gnu/c++/8/bits/gthr-default.h:
 
-libs/spdlog-1.14.1/include/spdlog/details/fmt_helper.h:
-
 /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
 
 /usr/include/x86_64-linux-gnu/c++/8/bits/gthr.h:
+
+libs/spdlog-1.14.1/include/spdlog/version.h:
+
+/usr/include/x86_64-linux-gnu/asm/unistd.h:
+
+/usr/include/c++/8/bits/move.h:
 
 /usr/include/linux/errno.h:
 
 /usr/include/c++/8/array:
 
-/usr/include/x86_64-linux-gnu/bits/types/__locale_t.h:
-
 /usr/include/c++/8/bits/stl_iterator_base_funcs.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
+
+libs/rapidjson/include/rapidjson/reader.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/__locale_t.h:
+
+libs/rapidjson/include/rapidjson/memorystream.h:
 
 /usr/include/asm-generic/errno-base.h:
 
@@ -3537,12 +3757,6 @@ libs/spdlog-1.14.1/include/spdlog/details/fmt_helper.h:
 
 /usr/include/c++/8/bits/stl_pair.h:
 
-libs/spdlog-1.14.1/include/spdlog/version.h:
-
-/usr/include/c++/8/bits/move.h:
-
-/usr/include/x86_64-linux-gnu/asm/unistd.h:
-
 libs/spdlog-1.14.1/include/spdlog/spdlog-inl.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h:
@@ -3550,6 +3764,8 @@ libs/spdlog-1.14.1/include/spdlog/spdlog-inl.h:
 /usr/include/x86_64-linux-gnu/bits/byteswap.h:
 
 /usr/include/c++/8/bits/ptr_traits.h:
+
+libs/rapidjson/include/rapidjson/encodedstream.h:
 
 /usr/include/features.h:
 
@@ -3588,10 +3804,6 @@ libs/futu/include/futu/FTAPIChannel_Define.h:
 /usr/include/c++/8/cerrno:
 
 src/Helper/ThreadPool.h:
-
-/usr/include/x86_64-linux-gnu/bits/environments.h:
-
-libs/spdlog-1.14.1/include/spdlog/sinks/sink-inl.h:
 
 /usr/include/c++/8/debug/assertions.h:
 
@@ -3633,13 +3845,15 @@ libs/spdlog-1.14.1/include/spdlog/details/os-inl.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/FILE.h:
-
 libs/futu/include/Proto/Qot_GetSecuritySnapshot.pb.h:
 
 /usr/include/c++/8/type_traits:
 
 /usr/include/c++/8/bits/locale_classes.h:
+
+libs/nng-1.8.0/include/nng/protocol/pubsub0/sub.h:
+
+libs/rapidjson/include/rapidjson/internal/strfunc.h:
 
 libs/futu/include/Proto/Trd_GetMarginRatio.pb.h:
 
@@ -3651,15 +3865,15 @@ src/DataManager/DataManager.cpp:
 
 /usr/include/x86_64-linux-gnu/bits/wchar.h:
 
-/usr/include/c++/8/bits/std_abs.h:
-
-libs/spdlog-1.14.1/include/spdlog/pattern_formatter-inl.h:
+libs/rapidjson/include/rapidjson/internal/itoa.h:
 
 /usr/include/c++/8/vector:
 
 /usr/include/x86_64-linux-gnu/bits/long-double.h:
 
 /home/emk/vcpkg/installed/x64-linux/include/json/allocator.h:
+
+libs/rapidjson/include/rapidjson/internal/biginteger.h:
 
 /usr/include/errno.h:
 
@@ -3672,10 +3886,6 @@ libs/spdlog-1.14.1/include/spdlog/pattern_formatter-inl.h:
 /usr/include/c++/8/exception:
 
 /usr/include/c++/8/backward/binders.h:
-
-libs/futu/include/google/protobuf/arena.h:
-
-libs/spdlog-1.14.1/include/spdlog/formatter.h:
 
 /usr/include/c++/8/bits/stl_heap.h:
 
@@ -3695,6 +3905,10 @@ libs/spdlog-1.14.1/include/spdlog/details/null_mutex.h:
 
 /usr/include/x86_64-linux-gnu/bits/waitflags.h:
 
+libs/rapidjson/include/rapidjson/rapidjson.h:
+
+libs/rapidjson/include/rapidjson/stream.h:
+
 /usr/include/x86_64-linux-gnu/bits/types/clock_t.h:
 
 /usr/include/c++/8/bits/stl_queue.h:
@@ -3703,11 +3917,19 @@ libs/spdlog-1.14.1/include/spdlog/details/null_mutex.h:
 
 /usr/include/c++/8/bits/vector.tcc:
 
+libs/spdlog-1.14.1/include/spdlog/details/log_msg_buffer-inl.h:
+
+/usr/include/unistd.h:
+
 /usr/include/c++/8/new:
 
 /usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
 
 /usr/include/x86_64-linux-gnu/bits/statx.h:
+
+libs/spdlog-1.14.1/include/spdlog/details/backtracer-inl.h:
+
+/usr/include/c++/8/utility:
 
 /usr/include/c++/8/bits/exception_defines.h:
 
@@ -3718,6 +3940,10 @@ libs/spdlog-1.14.1/include/spdlog/details/null_mutex.h:
 /usr/include/c++/8/bits/stl_raw_storage_iter.h:
 
 /usr/include/c++/8/bits/alloc_traits.h:
+
+libs/spdlog-1.14.1/include/spdlog/details/console_globals.h:
+
+/usr/include/c++/8/bits/range_access.h:
 
 /usr/include/c++/8/ext/new_allocator.h:
 
@@ -3747,13 +3973,15 @@ libs/spdlog-1.14.1/include/spdlog/fmt/fmt.h:
 
 /usr/include/wchar.h:
 
-/usr/include/c++/8/bits/shared_ptr_atomic.h:
-
-/usr/include/c++/8/bits/stl_function.h:
-
 /home/emk/vcpkg/installed/x64-linux/include/json/version.h:
 
 /usr/include/c++/8/bits/stl_map.h:
+
+libs/futu/include/Proto/Trd_GetPositionList.pb.h:
+
+/usr/include/x86_64-linux-gnu/bits/getopt_core.h:
+
+/usr/include/x86_64-linux-gnu/bits/xopen_lim.h:
 
 /usr/include/c++/8/bits/nested_exception.h:
 
@@ -3769,10 +3997,6 @@ libs/spdlog-1.14.1/include/spdlog/fmt/fmt.h:
 
 /usr/include/x86_64-linux-gnu/c++/8/bits/messages_members.h:
 
-/usr/include/unistd.h:
-
-libs/spdlog-1.14.1/include/spdlog/details/log_msg_buffer-inl.h:
-
 libs/futu/include/Proto/Qot_GetTicker.pb.h:
 
 src/Interface/IEngine.h:
@@ -3780,6 +4004,8 @@ src/Interface/IEngine.h:
 /usr/include/c++/8/iosfwd:
 
 /usr/include/c++/8/sstream:
+
+libs/rapidjson/include/rapidjson/internal/swap.h:
 
 /usr/include/x86_64-linux-gnu/bits/waitstatus.h:
 
@@ -3823,10 +4049,6 @@ libs/futu/include/google/protobuf/stubs/fastmem.h:
 
 /usr/include/c++/8/bits/basic_string.tcc:
 
-/usr/include/c++/8/bits/range_access.h:
-
-libs/spdlog-1.14.1/include/spdlog/details/console_globals.h:
-
 /usr/include/x86_64-linux-gnu/bits/types/wint_t.h:
 
 /usr/include/c++/8/bits/invoke.h:
@@ -3845,11 +4067,19 @@ libs/futu/include/google/protobuf/map_type_handler.h:
 
 libs/spdlog-1.14.1/include/spdlog/details/registry-inl.h:
 
+libs/rapidjson/include/rapidjson/allocators.h:
+
 /usr/include/c++/8/thread:
 
 /usr/include/c++/8/bits/functexcept.h:
 
 /usr/include/c++/8/limits:
+
+/usr/include/c++/8/bits/shared_ptr_atomic.h:
+
+/usr/include/c++/8/bits/stl_function.h:
+
+libs/rapidjson/include/rapidjson/internal/ieee754.h:
 
 /usr/include/x86_64-linux-gnu/bits/siginfo-arch.h:
 
@@ -3863,11 +4093,11 @@ libs/futu/include/Proto/Qot_GetUserSecurityGroup.pb.h:
 
 /usr/include/c++/8/system_error:
 
-libs/spdlog-1.14.1/include/spdlog/mdc.h:
-
 /usr/include/c++/8/atomic:
 
 /home/emk/vcpkg/installed/x64-linux/include/json/json.h:
+
+libs/rapidjson/include/rapidjson/writer.h:
 
 /usr/include/c++/8/bits/stream_iterator.h:
 
@@ -3897,8 +4127,6 @@ libs/futu/include/Proto/Qot_GetFutureInfo.pb.h:
 
 /usr/include/c++/8/bits/locale_facets.h:
 
-/usr/include/x86_64-linux-gnu/asm/unistd_64.h:
-
 /usr/include/c++/8/cwctype:
 
 /usr/include/wctype.h:
@@ -3920,6 +4148,8 @@ libs/futu/include/google/protobuf/descriptor.h:
 /usr/include/c++/8/bits/allocator.h:
 
 /usr/include/c++/8/ostream:
+
+libs/rapidjson/include/rapidjson/stringbuffer.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/timer_t.h:
 
@@ -3945,17 +4175,45 @@ libs/futu/include/google/protobuf/descriptor.h:
 
 /usr/include/c++/8/condition_variable:
 
+/usr/include/x86_64-linux-gnu/sys/sysmacros.h:
+
+/usr/include/x86_64-linux-gnu/c++/8/bits/ctype_inline.h:
+
+/usr/include/x86_64-linux-gnu/bits/mathcalls.h:
+
+/usr/include/x86_64-linux-gnu/bits/math-vector.h:
+
 /home/emk/vcpkg/installed/x64-linux/include/json/writer.h:
 
 src/Interface/datastructure.h:
 
+/usr/include/x86_64-linux-gnu/bits/types/FILE.h:
+
+libs/rapidjson/include/rapidjson/document.h:
+
+/usr/include/x86_64-linux-gnu/bits/sigcontext.h:
+
+/usr/include/inttypes.h:
+
+libs/spdlog-1.14.1/include/spdlog/fmt/bundled/format.h:
+
+libs/spdlog-1.14.1/include/spdlog/sinks/sink.h:
+
+libs/rapidjson/include/rapidjson/encodings.h:
+
+libs/rapidjson/include/rapidjson/internal/meta.h:
+
+libs/rapidjson/include/rapidjson/internal/stack.h:
+
+libs/rapidjson/include/rapidjson/error/error.h:
+
+libs/spdlog-1.14.1/include/spdlog/sinks/basic_file_sink.h:
+
+libs/rapidjson/include/rapidjson/internal/dtoa.h:
+
 /usr/include/c++/8/bits/quoted_string.h:
 
 /usr/include/c++/8/iostream:
-
-libs/futu/include/Proto/Qot_RegQotPush.pb.h:
-
-/usr/include/x86_64-linux-gnu/sys/syscall.h:
 
 src/Helper/logger.h:
 
@@ -3991,15 +4249,17 @@ libs/spdlog-1.14.1/include/spdlog/fmt/bundled/core.h:
 
 /usr/include/c++/8/experimental/bits/lfts_config.h:
 
-libs/spdlog-1.14.1/include/spdlog/fmt/bundled/format.h:
+libs/spdlog-1.14.1/include/spdlog/logger-inl.h:
+
+/usr/include/x86_64-linux-gnu/bits/wctype-wchar.h:
+
+libs/spdlog-1.14.1/include/spdlog/logger.h:
 
 /usr/include/math.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/8/include-fixed/syslimits.h:
 
 /usr/include/x86_64-linux-gnu/bits/fp-logb.h:
-
-/usr/include/x86_64-linux-gnu/bits/sysmacros.h:
 
 libs/futu/include/futu/Include_Proto.h:
 
@@ -4021,12 +4281,6 @@ libs/futu/include/Proto/Qot_GetHoldingChangeList.pb.h:
 
 /usr/include/x86_64-linux-gnu/bits/posix1_lim.h:
 
-/usr/include/x86_64-linux-gnu/bits/wctype-wchar.h:
-
-libs/spdlog-1.14.1/include/spdlog/logger.h:
-
-libs/spdlog-1.14.1/include/spdlog/logger-inl.h:
-
 /usr/include/linux/limits.h:
 
 /usr/include/c++/8/bits/locale_facets_nonio.h:
@@ -4036,8 +4290,6 @@ libs/spdlog-1.14.1/include/spdlog/logger-inl.h:
 /usr/include/c++/8/bits/locale_facets_nonio.tcc:
 
 libs/spdlog-1.14.1/include/spdlog/details/periodic_worker.h:
-
-libs/spdlog-1.14.1/include/spdlog/sinks/sink.h:
 
 /usr/include/c++/8/bits/memoryfwd.h:
 
@@ -4063,14 +4315,6 @@ libs/futu/include/google/protobuf/message_lite.h:
 
 libs/spdlog-1.14.1/include/spdlog/details/circular_q.h:
 
-/usr/include/x86_64-linux-gnu/c++/8/bits/ctype_inline.h:
-
-/usr/include/x86_64-linux-gnu/bits/mathcalls.h:
-
-/usr/include/x86_64-linux-gnu/bits/math-vector.h:
-
-/usr/include/x86_64-linux-gnu/sys/sysmacros.h:
-
 libs/spdlog-1.14.1/include/spdlog/details/log_msg_buffer.h:
 
 libs/spdlog-1.14.1/include/spdlog/details/log_msg.h:
@@ -4079,28 +4323,8 @@ libs/futu/include/Proto/Qot_GetOwnerPlate.pb.h:
 
 libs/spdlog-1.14.1/include/spdlog/details/log_msg-inl.h:
 
-libs/spdlog-1.14.1/include/spdlog/pattern_formatter.h:
-
 /usr/include/x86_64-linux-gnu/sys/stat.h:
 
 /usr/include/fcntl.h:
 
 /usr/include/x86_64-linux-gnu/bits/fcntl-linux.h:
-
-/usr/include/x86_64-linux-gnu/bits/getopt_posix.h:
-
-libs/futu/include/Proto/Trd_GetPositionList.pb.h:
-
-/usr/include/x86_64-linux-gnu/bits/xopen_lim.h:
-
-/usr/include/x86_64-linux-gnu/bits/getopt_core.h:
-
-/usr/include/x86_64-linux-gnu/bits/syscall.h:
-
-/usr/include/c++/8/utility:
-
-libs/spdlog-1.14.1/include/spdlog/details/backtracer-inl.h:
-
-libs/futu/include/Proto/Qot_GetPlateSet.pb.h:
-
-libs/spdlog-1.14.1/include/spdlog/sinks/ansicolor_sink.h:

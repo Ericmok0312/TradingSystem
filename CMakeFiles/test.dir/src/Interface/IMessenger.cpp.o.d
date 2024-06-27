@@ -268,23 +268,41 @@ CMakeFiles/test.dir/src/Interface/IMessenger.cpp.o: \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/sinks/base_sink-inl.h \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/sinks/basic_file_sink-inl.h \
  /data/home/emk/Coding/Trading_system/TradingSystem/src/Interface/datastructure.h \
- /home/emk/vcpkg/installed/x64-linux/include/json/json.h \
- /home/emk/vcpkg/installed/x64-linux/include/json/config.h \
- /usr/include/c++/8/sstream /usr/include/c++/8/bits/sstream.tcc \
- /home/emk/vcpkg/installed/x64-linux/include/json/allocator.h \
- /home/emk/vcpkg/installed/x64-linux/include/json/version.h \
- /home/emk/vcpkg/installed/x64-linux/include/json/json_features.h \
- /home/emk/vcpkg/installed/x64-linux/include/json/forwards.h \
- /home/emk/vcpkg/installed/x64-linux/include/json/reader.h \
- /home/emk/vcpkg/installed/x64-linux/include/json/value.h \
- /usr/include/c++/8/deque /usr/include/c++/8/bits/stl_deque.h \
- /usr/include/c++/8/bits/deque.tcc /usr/include/c++/8/stack \
- /usr/include/c++/8/bits/stl_stack.h \
- /home/emk/vcpkg/installed/x64-linux/include/json/writer.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/document.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/reader.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/allocators.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/rapidjson.h \
+ /usr/include/inttypes.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/stream.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/encodings.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/encodedstream.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/memorystream.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/internal/meta.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/internal/../rapidjson.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/internal/stack.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/internal/../allocators.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/internal/swap.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/internal/strtod.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/internal/ieee754.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/internal/biginteger.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/internal/diyfp.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/internal/pow10.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/error/error.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/error/../rapidjson.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/internal/strfunc.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/internal/../stream.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/internal/../rapidjson.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/writer.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/internal/dtoa.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/internal/itoa.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/internal/itoa.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/stringbuffer.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/stringbuffer.h \
  /usr/include/c++/8/iostream \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/nng-1.8.0/include/nng/nng.h \
  /usr/lib/gcc/x86_64-linux-gnu/8/include/stdbool.h \
  /data/home/emk/Coding/Trading_system/TradingSystem/src/Interface/datastructure.h \
+ /usr/include/c++/8/sstream /usr/include/c++/8/bits/sstream.tcc \
  /data/home/emk/Coding/Trading_system/TradingSystem/src/Helper/util.h \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/stubs/common.h \
  /usr/include/c++/8/set /usr/include/c++/8/bits/stl_set.h \
@@ -338,6 +356,7 @@ CMakeFiles/test.dir/src/Interface/IMessenger.cpp.o: \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/stubs/hash.h \
  /usr/include/c++/8/unordered_set /usr/include/c++/8/bits/unordered_set.h \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/stubs/bytestream.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/rapidjson.h \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/nng-1.8.0/include/nng/protocol/pubsub0/pub.h \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/nng-1.8.0/include/nng/protocol/pubsub0/sub.h \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/nng-1.8.0/include/nng/protocol/pipeline0/pull.h \

@@ -1,0 +1,405 @@
+[2024-06-27 17:11:33.934] [] [tslogger] [info] dialer2 created
+[2024-06-27 17:11:33.935] [] [tslogger] [info] dm created
+[2024-06-27 17:11:33.936] [] [tslogger] [info] futu created, current timestamp:1719479493936419
+[2024-06-27 17:11:36.937] [] [tslogger] [info] getFund called, with id: 8865506, market: 1, mode: 0. Return serial: 3
+[2024-06-27 17:11:36.939] [] [tslogger] [info] OnReply_GetFunds, serial: 3
+[2024-06-27 17:11:36.948] [] [tslogger] [info] function2 received DataManager|FutuEngine|1999|{
+ "retType": 0,
+ "retMsg": "",
+ "errCode": 0,
+ "s2c": {
+  "header": {
+   "trdEnv": 0,
+   "accID": "8865506",
+   "trdMarket": 1
+  },
+  "funds": {
+   "power": 0,
+   "totalAssets": 1000000,
+   "cash": 1000000,
+   "marketVal": 0,
+   "frozenCash": 0,
+   "debtCash": 0,
+   "avlWithdrawalCash": 0,
+   "securitiesAssets": 1000000
+  }
+ }
+}
+, current UNIX timestamp: 1719479496948659
+[2024-06-27 17:11:39.939] [] [tslogger] [info] getFund called, with id: 8865506, market: 1, mode: 0. Return serial: 4
+[2024-06-27 17:11:39.940] [] [tslogger] [info] OnReply_GetFunds, serial: 4
+[2024-06-27 17:11:39.941] [] [tslogger] [info] function2 received DataManager|FutuEngine|1999|{
+ "retType": 0,
+ "retMsg": "",
+ "errCode": 0,
+ "s2c": {
+  "header": {
+   "trdEnv": 0,
+   "accID": "8865506",
+   "trdMarket": 1
+  },
+  "funds": {
+   "power": 0,
+   "totalAssets": 1000000,
+   "cash": 1000000,
+   "marketVal": 0,
+   "frozenCash": 0,
+   "debtCash": 0,
+   "avlWithdrawalCash": 0,
+   "securitiesAssets": 1000000
+  }
+ }
+}
+, current UNIX timestamp: 1719479499941034
+[2024-06-27 17:11:42.940] [] [tslogger] [info] getFund called, with id: 8865506, market: 1, mode: 0. Return serial: 6
+[2024-06-27 17:11:42.940] [] [tslogger] [info] OnReply_GetFunds, serial: 6
+[2024-06-27 17:11:42.941] [] [tslogger] [info] function2 received DataManager|FutuEngine|1999|{
+ "retType": 0,
+ "retMsg": "",
+ "errCode": 0,
+ "s2c": {
+  "header": {
+   "trdEnv": 0,
+   "accID": "8865506",
+   "trdMarket": 1
+  },
+  "funds": {
+   "power": 0,
+   "totalAssets": 1000000,
+   "cash": 1000000,
+   "marketVal": 0,
+   "frozenCash": 0,
+   "debtCash": 0,
+   "avlWithdrawalCash": 0,
+   "securitiesAssets": 1000000
+  }
+ }
+}
+, current UNIX timestamp: 1719479502941441
+[2024-06-27 17:11:43.953] [] [tslogger] [info] regCallBack called with code: 00700, subtype: 0
+[2024-06-27 17:11:43.953] [] [tslogger] [info] Subscribing: 00700 for SubType: 0 Serial No. 4
+[2024-06-27 17:11:43.953] [] [tslogger] [info] regCallBack called with code: 09999, subtype: 0
+[2024-06-27 17:11:43.953] [] [tslogger] [info] Subscribing: 09999 for SubType: 0 Serial No. 5
+[2024-06-27 17:11:43.954] [] [tslogger] [info] regCallBack called with code: 02319, subtype: 0
+[2024-06-27 17:11:43.954] [] [tslogger] [info] Subscribing: 02319 for SubType: 0 Serial No. 6
+[2024-06-27 17:11:43.956] [] [tslogger] [warning] Subscribe Failed. Serial: 4
+[2024-06-27 17:11:43.957] [] [tslogger] [warning] Subscribe Failed. Serial: 5
+[2024-06-27 17:11:43.957] [] [tslogger] [warning] Subscribe Failed. Serial: 6
+[2024-06-27 17:11:45.943] [] [tslogger] [info] getFund called, with id: 8865506, market: 1, mode: 0. Return serial: 7
+[2024-06-27 17:11:45.947] [] [tslogger] [info] OnReply_GetFunds, serial: 7
+[2024-06-27 17:11:45.949] [] [tslogger] [info] function2 received DataManager|FutuEngine|1999|{
+ "retType": 0,
+ "retMsg": "",
+ "errCode": 0,
+ "s2c": {
+  "header": {
+   "trdEnv": 0,
+   "accID": "8865506",
+   "trdMarket": 1
+  },
+  "funds": {
+   "power": 0,
+   "totalAssets": 1000000,
+   "cash": 1000000,
+   "marketVal": 0,
+   "frozenCash": 0,
+   "debtCash": 0,
+   "avlWithdrawalCash": 0,
+   "securitiesAssets": 1000000
+  }
+ }
+}
+, current UNIX timestamp: 1719479505949562
+[2024-06-27 17:11:48.944] [] [tslogger] [info] getFund called, with id: 8865506, market: 1, mode: 0. Return serial: 9
+[2024-06-27 17:11:48.945] [] [tslogger] [info] OnReply_GetFunds, serial: 9
+[2024-06-27 17:11:48.946] [] [tslogger] [info] function2 received DataManager|FutuEngine|1999|{
+ "retType": 0,
+ "retMsg": "",
+ "errCode": 0,
+ "s2c": {
+  "header": {
+   "trdEnv": 0,
+   "accID": "8865506",
+   "trdMarket": 1
+  },
+  "funds":[2024-06-27 17:36:11.524] [] [tslogger] [info] dialer2 created
+[2024-06-27 17:36:11.527] [] [tslogger] [info] dm created
+[2024-06-27 17:36:11.528] [] [tslogger] [info] futu created, current timestamp:1719480971528468
+[2024-06-27 17:36:14.525] [] [tslogger] [info] getFund called, with id: 8865506, market: 1, mode: 0. Return serial: 3
+[2024-06-27 17:36:14.526] [] [tslogger] [info] OnReply_GetFunds, serial: 3
+[2024-06-27 17:36:14.538] [] [tslogger] [info] function2 received DataManager|FutuEngine|1999|{
+ "retType": 0,
+ "retMsg": "",
+ "errCode": 0,
+ "s2c": {
+  "header": {
+   "trdEnv": 0,
+   "accID": "8865506",
+   "trdMarket": 1
+  },
+  "funds": {
+   "power": 0,
+   "totalAssets": 1000000,
+   "cash": 1000000,
+   "marketVal": 0,
+   "frozenCash": 0,
+   "debtCash": 0,
+   "avlWithdrawalCash": 0,
+   "securitiesAssets": 1000000
+  }
+ }
+}
+, current UNIX timestamp: 1719480974538541
+[2024-06-27 17:36:17.527] [] [tslogger] [info] getFund called, with id: 8865506, market: 1, mode: 0. Return serial: 4
+[2024-06-27 17:36:17.528] [] [tslogger] [info] OnReply_GetFunds, serial: 4
+[2024-06-27 17:36:17.529] [] [tslogger] [info] function2 received DataManager|FutuEngine|1999|{
+ "retType": 0,
+ "retMsg": "",
+ "errCode": 0,
+ "s2c": {
+  "header": {
+   "trdEnv": 0,
+   "accID": "8865506",
+   "trdMarket": 1
+  },
+  "funds": {
+   "power": 0,
+   "totalAssets": 1000000,
+   "cash": 1000000,
+   "marketVal": 0,
+   "frozenCash": 0,
+   "debtCash": 0,
+   "avlWithdrawalCash": 0,
+   "securitiesAssets": 1000000
+  }
+ }
+}
+, current UNIX timestamp: 1719480977529300
+[2024-06-27 17:36:20.532] [] [tslogger] [info] getFund called, with id: 8865506, market: 1, mode: 0. Return serial: 6
+[2024-06-27 17:36:20.532] [] [tslogger] [info] OnReply_GetFunds, serial: 6
+[2024-06-27 17:36:20.533] [] [tslogger] [info] function2 received DataManager|FutuEngine|1999|{
+ "retType": 0,
+ "retMsg": "",
+ "errCode": 0,
+ "s2c": {
+  "header": {
+   "trdEnv": 0,
+   "accID": "8865506",
+   "trdMarket": 1
+  },
+  "funds": {
+   "power": 0,
+   "totalAssets": 1000000,
+   "cash": 1000000,
+   "marketVal": 0,
+   "frozenCash": 0,
+   "debtCash": 0,
+   "avlWithdrawalCash": 0,
+   "securitiesAssets": 1000000
+  }
+ }
+}
+, current UNIX timestamp: 1719480980533510
+[2024-06-27 17:36:21.532] [] [tslogger] [info] regCallBack called with code: 00700, subtype: 0
+[2024-06-27 17:36:21.532] [] [tslogger] [info] Subscribing: 00700 for SubType: 0 Serial No. 4
+[2024-06-27 17:36:21.533] [] [tslogger] [info] regCallBack called with code: 09999, subtype: 0
+[2024-06-27 17:36:21.533] [] [tslogger] [info] Subscribing: 09999 for SubType: 0 Serial No. 5
+[2024-06-27 17:36:21.533] [] [tslogger] [info] regCallBack called with code: 02319, subtype: 0
+[2024-06-27 17:36:21.533] [] [tslogger] [info] Subscribing: 02319 for SubType: 0 Serial No. 6
+[2024-06-27 17:36:21.534] [] [tslogger] [warning] Subscribe Failed. Serial: 4
+[2024-06-27 17:36:21.543] [] [tslogger] [warning] Subscribe Failed. Serial: 5
+[2024-06-27 17:36:21.543] [] [tslogger] [warning] Subscribe Failed. Serial: 6
+[2024-06-27 17:36:23.533] [] [tslogger] [info] getFund called, with id: 8865506, market: 1, mode: 0. Return serial: 7
+[2024-06-27 17:36:23.534] [] [tslogger] [info] OnReply_GetFunds, serial: 7
+[2024-06-27 17:36:23.535] [] [tslogger] [info] function2 received DataManager|FutuEngine|1999|{
+ "retType": 0,
+ "retMsg": "",
+ "errCode": 0,
+ "s2c": {
+  "header": {
+   "trdEnv": 0,
+   "accID": "8865506",
+   "trdMarket": 1
+  },
+  "funds": {
+   "power": 0,
+   "totalAssets": 1000000,
+   "cash": 1000000,
+   "marketVal": 0,
+   "frozenCash": 0,
+   "debtCash": 0,
+   "avlWithdrawalCash": 0,
+   "securitiesAssets": 1000000
+  }
+ }
+}
+, current UNIX timestamp: 1719480983534995
+[2024-06-27 17:36:26.537] [] [tslogger] [info] getFund called, with id: 8865506, market: 1, mode: 0. Return serial: 9
+[2024-06-27 17:36:26.538] [] [tslogger] [info] OnReply_GetFunds, serial: 9
+[2024-06-27 17:36:26.539] [] [tslogger] [info] function2 received DataManager|FutuEngine|1999|{
+ "retType": 0,
+ "retMsg": "",
+ "errCode": 0,
+ "s2c": {
+  "header": {
+   "trdEnv": 0,
+   "accID": "8865506",
+   "trdMarket": 1
+  },
+  "funds": {
+   "power": 0,
+   "totalAssets": 1000000,
+   "cash": 1000000,
+   "marketVal": 0,
+   "frozenCash": 0,
+   "debtCash": 0,
+   "avlWithdrawalCash": 0,
+   "securitiesAssets": 1000000
+  }
+ }
+}
+, current UNIX timestamp: 1719480986539147
+[2024-06-27 17:36:29.552] [] [tslogger] [info] getFund called, with id: 8865506, market: 1, mode: 0. Return serial: 10
+[2024-06-27 17:36:29.553] [] [tslogger] [info] OnReply_GetFunds, serial: 10
+[2024-06-27 17:36:29.554] [] [tslogger] [info] function2 received DataManager|FutuEngine|1999|{
+ "retType": 0,
+ "retMsg": "",
+ "errCode": 0,
+ "s2c": {
+  "header": {
+   "trdEnv": 0,
+   "accID": "8865506",
+   "trdMarket": 1
+  },
+  "funds": {
+   "power": 0,
+   "totalAssets": 1000000,
+   "cash": 1000000,
+   "marketVal": 0,
+   "frozenCash": 0,
+   "debtCash": 0,
+   "avlWithdrawalCash": 0,
+   "securitiesAssets": 1000000
+  }
+ }
+}
+, current UNIX timestamp: 1719480989554680
+[2024-06-27 17:36:32.563] [] [tslogger] [info] getFund called, with id: 8865506, market: 1, mode: 0. Return serial: 11
+[2024-06-27 17:36:32.564] [] [tslogger] [info] OnReply_GetFunds, serial: 11
+[2024-06-27 17:36:32.565] [] [tslogger] [info] function2 received DataManager|FutuEngine|1999|{
+ "retType": 0,
+ "retMsg": "",
+ "errCode": 0,
+ "s2c": {
+  "header": {
+   "trdEnv": 0,
+   "accID": "8865506",
+   "trdMarket": 1
+  },
+  "funds": {
+   "power": 0,
+   "totalAssets": 1000000,
+   "cash": 1000000,
+   "marketVal": 0,
+   "frozenCash": 0,
+   "debtCash": 0,
+   "avlWithdrawalCash": 0,
+   "securitiesAssets": 1000000
+  }
+ }
+}
+, current UNIX timestamp: 1719480992565344
+[2024-06-27 17:36:35.572] [] [tslogger] [info] getFund called, with id: 8865506, market: 1, mode: 0. Return serial: 13
+[2024-06-27 17:36:35.573] [] [tslogger] [info] OnReply_GetFunds, serial: 13
+[2024-06-27 17:36:35.573] [] [tslogger] [info] function2 received DataManager|FutuEngine|1999|{
+ "retType": 0,
+ "retMsg": "",
+ "errCode": 0,
+ "s2c": {
+  "header": {
+   "trdEnv": 0,
+   "accID": "8865506",
+   "trdMarket": 1
+  },
+  "funds": {
+   "power": 0,
+   "totalAssets": 1000000,
+   "cash": 1000000,
+   "marketVal": 0,
+   "frozenCash": 0,
+   "debtCash": 0,
+   "avlWithdrawalCash": 0,
+   "securitiesAssets": 1000000
+  }
+ }
+}
+, current UNIX timestamp: 1719480995573873
+[2024-06-27 17:36:38.573] [] [tslogger] [info] getFund called, with id: 8865506, market: 1, mode: 0. Return serial: 14
+[2024-06-27 17:36:38.573] [] [tslogger] [info] OnReply_GetFunds, serial: 14
+[2024-06-27 17:36:38.574] [] [tslogger] [info] function2 received DataManager|FutuEngine|1999|{
+ "retType": 0,
+ "retMsg": "",
+ "errCode": 0,
+ "s2c": {
+  "header": {
+   "trdEnv": 0,
+   "accID": "8865506",
+   "trdMarket": 1
+  },
+  "funds": {
+   "power": 0,
+   "totalAssets": 1000000,
+   "cash": 1000000,
+   "marketVal": 0,
+   "frozenCash": 0,
+   "debtCash": 0,
+   "avlWithdrawalCash": 0,
+   "securitiesAssets": 1000000
+  }
+ }
+}
+, current UNIX timestamp: 1719480998574851
+[2024-06-27 17:36:41.577] [] [tslogger] [info] getFund called, with id: 8865506, market: 1, mode: 0. Return serial: 16
+[2024-06-27 17:36:41.578] [] [tslogger] [info] OnReply_GetFunds, serial: 16
+[2024-06-27 17:36:41.579] [] [tslogger] [info] function2 received DataManager|FutuEngine|1999|{
+ "retType": 0,
+ "retMsg": "",
+ "errCode": 0,
+ "s2c": {
+  "header": {
+   "trdEnv": 0,
+   "accID": "8865506",
+   "trdMarket": 1
+  },
+  "funds": {
+   "power": 0,
+   "totalAssets": 1000000,
+   "cash": 1000000,
+   "marketVal": 0,
+   "frozenCash": 0,
+   "debtCash": 0,
+   "avlWithdrawalCash": 0,
+   "securitiesAssets": 1000000
+  }
+ }
+}
+, current UNIX timestamp: 1719481001579451
+[2024-06-27 17:36:44.577] [] [tslogger] [info] getFund called, with id: 8865506, market: 1, mode: 0. Return serial: 17
+[2024-06-27 17:36:44.578] [] [tslogger] [info] OnReply_GetFunds, serial: 17
+[2024-06-27 17:36:44.579] [] [tslogger] [info] function2 received DataManager|FutuEngine|1999|{
+ "retType": 0,
+ "retMsg": "",
+ "errCode": 0,
+ "s2c": {
+  "header": {
+   "trdEnv": 0,
+   "accID": "8865506",
+   "trdMarket": 1
+  },
+  "funds": {
+   "power": 0,
+   "totalAssets": 1000000,
+   "cash": 1000000,
+   "marketVal": 0,
+   "frozenCash": 0,
+   "debt

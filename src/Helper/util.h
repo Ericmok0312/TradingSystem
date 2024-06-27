@@ -7,7 +7,11 @@
 #include "google/protobuf/message.h"
 #include "google/protobuf/util/json_util.h"
 
-#include <json/json.h>
+
+#include <rapidjson/rapidjson.h>
+#include <rapidjson/document.h>
+#include <rapidjson/stringbuffer.h>
+#include <rapidjson/writer.h>
 
 #include <string>
 #include <vector>
@@ -56,43 +60,44 @@ namespace ts{
     }
 
 
-    inline void ProtoBufToJson(const protobuf::Message& pbObj, Json::Value& root){
+    inline void ProtoBufToChar(const protobuf::Message& pbObj, char* res)
+        {
+        string strBody;
+        protobuf::util::JsonPrintOptions ops;
+        ops.add_whitespace = true;
+        ops.always_print_enums_as_ints = true;
+
+        protobuf::util::Status status = MessageToJsonString(pbObj, &strBody, ops);
+        if (status.error_code() != protobuf::util::error::OK)
+        {
+            strBody.clear();
+        }
+        strcpy(res, strBody.data());
+    }
+
+
+
+    inline void Json2String(const rapidjson::Document& json, string& string){
+        rapidjson::StringBuffer buff;
+        rapidjson::Writer<rapidjson::StringBuffer> writer(buff);
+        json.Accept(writer);
+        string = buff.GetString();
+        return;
+    }
+
+
+    inline void String2Json(const string& res, rapidjson::Document& root){
+        root.Parse(res.c_str());
+        return;
+    }
+
+    inline void ProtoBufToJson(const protobuf::Message& pbObj, rapidjson::Document& root){
         string res;
-        Json::String err;
         ProtoBufToString(pbObj, res);
-
-        Json::CharReaderBuilder reader;
-        std::istringstream jsonStream(res);
-        Json::parseFromStream(reader, jsonStream, &root, &err);
-        
-    }
-
-
-    inline void Json2String(const Json::Value& json, string& s_param){
-        Json::StreamWriterBuilder writer;
-        s_param = Json::writeString(writer, json);
-        return;
-    }
-
-
-    inline char* Json2Char(const Json::Value& json, char* temp){
-        Json::StreamWriterBuilder writer;
-        std::string s_param = Json::writeString(writer, json);
-        temp = new char[s_param.size()+1];
-        strcpy(temp, s_param.c_str());
-        return temp;
-    }
-
-    inline void String2Json(const string& res, Json::Value& root){
-        Json::CharReaderBuilder reader;
-        std::istringstream jsonStream(res);
-        Json::parseFromStream(reader, jsonStream, &root, nullptr);
-        return;
+        root.Parse(res.c_str());
     }
 
 }
-
-
 
 
 #endif

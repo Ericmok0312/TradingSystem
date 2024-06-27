@@ -14,6 +14,7 @@ find_package(jsoncpp REQUIRED)
 include_directories(${PROJECT_SOURCE_DIR}/libs/spdlog-1.14.1/include)
 include_directories(${PROJECT_SOURCE_DIR}/libs/nng-1.8.0/include)
 include_directories(${PROJECT_SOURCE_DIR}/libs/futu/include)
+include_directories(${PROJECT_SOURCE_DIR}/libs/rapidjson/include)
 include_directories(${PROJECT_SOURCE_DIR}/src)
 
 link_directories(${PROJECT_SOURCE_DIR}/src/lib/)

@@ -15,17 +15,27 @@ void func_1(){
     sleep(10);
     std::shared_ptr<Logger> LOG = Logger::getInstance();
     std::shared_ptr<Msg> msg = std::make_shared<Msg>();
-    Json::Value param;
-    param["code"] = "00700";
-    param["subtype"] = 0;
-    msg->data_ = param;
+
+    string code = "00700";
+    int sub = 0;
+
     msg->destination_ = "FutuEngine";
     msg->source_ = "Main";
     msg->msgtype_ = MSG_TYPE_REGCALLBACK;
+    rapidjson::Document d;
+    d.SetObject();
+    d.AddMember("code", rapidjson::Value(code.data(), code.size(), d.GetAllocator()), d.GetAllocator());
+    d.AddMember("subtype", rapidjson::Value(sub), d.GetAllocator());
+
+    Json2String(d, msg->data_);
     MsgqTSMessenger::msgq_server_->sendmsg(msg->serialize(), 0);
-    msg->data_["code"] = "09999";
+    code = "09999";
+    d["code"].SetString(code.data(), code.size(), d.GetAllocator());
+    Json2String(d, msg->data_);
     MsgqTSMessenger::msgq_server_->sendmsg(msg->serialize(), 0);
-    msg->data_["code"] = "02319";
+    code = "02319";
+    d["code"].SetString(code.data(), code.size(), d.GetAllocator());
+    Json2String(d, msg->data_);
     MsgqTSMessenger::msgq_server_->sendmsg(msg->serialize(), 0);    
     while(true){
     }
@@ -39,12 +49,19 @@ void func_11(){
     std::shared_ptr<Logger> LOG = Logger::getInstance();
     std::shared_ptr<Msg> msg = std::make_shared<Msg>();
     Json::Value param;
-    param["id"] = "8865506";
-    param["market"] = "1";
-    param["mode"] = "0";
-    msg->data_ = param;
+    int id = 8865506;
+    int market = 1;
+    int mode = 0;
+
+    rapidjson::Document d;
+    d.SetObject();
+    d.AddMember("id", rapidjson::Value(id), d.GetAllocator());
+    d.AddMember("market", rapidjson::Value(market), d.GetAllocator());
+    d.AddMember("mode", rapidjson::Value(mode), d.GetAllocator());
+
     msg->destination_ = "FutuEngine";
     msg->source_ = "Main";
+    Json2String(d, msg->data_);
     msg->msgtype_ = MSG_TYPE_GET_ACCOUNTINFO;
     while(true){
     MsgqTSMessenger::msgq_server_->sendmsg(msg->serialize(), 0);

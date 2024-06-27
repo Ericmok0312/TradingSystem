@@ -217,7 +217,7 @@ namespace ts{
     */
 
     void MsgqRMessenger::Send(std::shared_ptr<Msg> pmsg, int flag){
-        string msg = pmsg->serialize();
+        char* msg = pmsg->serialize();
         lock_guard<std::mutex> lock(MsgqRMessenger::sendlock_);
         MsgqRMessenger::msgq_server_->sendmsg(msg, flag);
     }
@@ -230,7 +230,7 @@ namespace ts{
         - msgq_server->sendmsg is calledd
     */
     void MsgqRMessenger::send(std::shared_ptr<Msg> pmsg, int flag){
-        string msg = pmsg->serialize();
+        char* msg = pmsg->serialize();
         lock_guard<std::mutex> lock(MsgqRMessenger::sendlock_);
         MsgqRMessenger::msgq_server_->sendmsg(msg, flag);
     }

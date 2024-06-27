@@ -59,18 +59,20 @@ namespace ts{
                 continue;
             }
             else{
+                rapidjson::Document root;
+                String2Json(msg->data_, root);
                 switch(msg->msgtype_){
                     case MSG_TYPE_GET_ACCOUNTINFO:
-                        this->getFund(stoi(msg->data_["id"].asString()), stoi(msg->data_["market"].asString()), stoi(msg->data_["mode"].asString()));
+                        this->getFund(root["id"].GetInt(),root["market"].GetInt(), root["mode"].GetInt());
                         break;
                     case MSG_TYPE_SUBSCRIBE_MARKET_DATA:
-                        this->subscribe(msg->data_["code"].asCString(), msg->data_["subtype"].asInt());
+                        this->subscribe(root["code"].GetString(), root["subtype"].GetInt());
                         break;
                     case MSG_TYPE_GET_ACCESSLIST:
                         this->getAccessList();
                         break;
                     case MSG_TYPE_REGCALLBACK:
-                        this->regCallBack(msg->data_["code"].asCString(), msg->data_["subtype"].asInt());
+                        this->regCallBack(root["code"].GetString(),  root["subtype"].GetInt());
                         break;
                     case MSG_TYPE_DEBUG:
                     default:
@@ -137,8 +139,8 @@ namespace ts{
 
     void FutuEngine::OnPush_UpdateTicker(const Qot_UpdateTicker::Response &stRsp){
         Json::Value res;
-        std::shared_ptr<Msg> msg = make_shared<Msg>("DataManager", "FutuEngine", MSG_TYPE_TICKER, Json::nullValue);
-        ProtoBufToJson(stRsp, msg->data_);
+        std::shared_ptr<Msg> msg = make_shared<Msg>("DataManager", "FutuEngine", MSG_TYPE_TICKER, "");
+        ProtoBufToString(stRsp, msg->data_);
         messenger_->send(msg, 0);
     }
 
@@ -164,8 +166,8 @@ namespace ts{
     void FutuEngine::OnReply_GetFunds(Futu::u32_t nSerialNo, const Trd_GetFunds::Response &stRs){
 
         logger_->info(fmt::format("OnReply_GetFunds, serial: {}", nSerialNo).c_str());
-        std::shared_ptr<Msg> msg = std::make_shared<Msg>("DataManager", "FutuEngine", MSG_TYPE_ACCOUNTINFO, Json::nullValue);
-        ProtoBufToJson(stRs, msg->data_);
+        std::shared_ptr<Msg> msg = std::make_shared<Msg>("DataManager", "FutuEngine", MSG_TYPE_ACCOUNTINFO, "");
+        ProtoBufToString(stRs, msg->data_);
         messenger_->send(msg, 0);
 
     }
@@ -184,8 +186,8 @@ namespace ts{
     void FutuEngine::OnReply_GetAccList(Futu::u32_t nSerialNo, const Trd_GetAccList::Response &stRsp){
 
         logger_->info(fmt::format("Get access serial: {}  returned", nSerialNo).c_str());
-        std::shared_ptr<Msg> msg  = std::make_shared<Msg>("DataManager", "FutuEngine",  MSG_TYPE_ACCESSLIST, Json::nullValue);
-        ProtoBufToJson(stRsp, msg->data_);
+        std::shared_ptr<Msg> msg  = std::make_shared<Msg>("DataManager", "FutuEngine",  MSG_TYPE_ACCESSLIST,"");
+        ProtoBufToString(stRsp, msg->data_);
         messenger_->send(msg);
     }
 

@@ -23,71 +23,104 @@ CMakeFiles/test.dir/src/Interface/IEngine.cpp.o: \
  /usr/include/c++/8/bits/move.h /usr/include/c++/8/bits/concept_check.h \
  /usr/include/c++/8/type_traits \
  /data/home/emk/Coding/Trading_system/TradingSystem/src/Interface/datastructure.h \
- /home/emk/vcpkg/installed/x64-linux/include/json/json.h \
- /home/emk/vcpkg/installed/x64-linux/include/json/config.h \
- /usr/include/c++/8/cstddef \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/document.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/reader.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/allocators.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/rapidjson.h \
+ /usr/include/c++/8/cstdlib /usr/include/stdlib.h \
  /usr/lib/gcc/x86_64-linux-gnu/8/include/stddef.h \
- /usr/include/c++/8/istream /usr/include/c++/8/ios \
- /usr/include/c++/8/iosfwd /usr/include/c++/8/bits/stringfwd.h \
- /usr/include/c++/8/bits/memoryfwd.h /usr/include/c++/8/bits/postypes.h \
- /usr/include/c++/8/cwchar /usr/include/wchar.h \
+ /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+ /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
  /usr/include/x86_64-linux-gnu/bits/floatn.h \
  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
- /usr/lib/gcc/x86_64-linux-gnu/8/include/stdarg.h \
+ /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
+ /usr/include/x86_64-linux-gnu/sys/types.h \
+ /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/timer_t.h /usr/include/endian.h \
+ /usr/include/x86_64-linux-gnu/bits/endian.h \
+ /usr/include/x86_64-linux-gnu/bits/byteswap.h \
+ /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
+ /usr/include/x86_64-linux-gnu/sys/select.h \
+ /usr/include/x86_64-linux-gnu/bits/select.h \
+ /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
+ /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
+ /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
+ /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
+ /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
+ /usr/include/alloca.h /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+ /usr/include/c++/8/bits/std_abs.h /usr/include/c++/8/cstring \
+ /usr/include/string.h /usr/include/strings.h /usr/include/inttypes.h \
+ /usr/include/c++/8/cassert /usr/include/assert.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/stream.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/encodings.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/encodedstream.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/memorystream.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/internal/meta.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/internal/../rapidjson.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/internal/stack.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/internal/../allocators.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/internal/swap.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/internal/strtod.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/internal/ieee754.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/internal/biginteger.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/internal/diyfp.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/internal/pow10.h \
+ /usr/include/c++/8/limits \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/error/error.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/error/../rapidjson.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/internal/strfunc.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/internal/../stream.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/internal/../rapidjson.h \
+ /usr/include/c++/8/new /usr/include/c++/8/exception \
+ /usr/include/c++/8/bits/exception.h \
+ /usr/include/c++/8/bits/exception_ptr.h \
+ /usr/include/c++/8/bits/exception_defines.h \
+ /usr/include/c++/8/bits/cxxabi_init_exception.h \
+ /usr/include/c++/8/typeinfo /usr/include/c++/8/bits/hash_bytes.h \
+ /usr/include/c++/8/bits/nested_exception.h /usr/include/c++/8/iterator \
+ /usr/include/c++/8/bits/stl_iterator_base_types.h \
+ /usr/include/c++/8/bits/stl_iterator_base_funcs.h \
+ /usr/include/c++/8/debug/assertions.h \
+ /usr/include/c++/8/bits/stl_iterator.h \
+ /usr/include/c++/8/bits/cpp_type_traits.h \
+ /usr/include/c++/8/ext/type_traits.h \
+ /usr/include/c++/8/bits/ptr_traits.h /usr/include/c++/8/ostream \
+ /usr/include/c++/8/ios /usr/include/c++/8/iosfwd \
+ /usr/include/c++/8/bits/stringfwd.h /usr/include/c++/8/bits/memoryfwd.h \
+ /usr/include/c++/8/bits/postypes.h /usr/include/c++/8/cwchar \
+ /usr/include/wchar.h /usr/lib/gcc/x86_64-linux-gnu/8/include/stdarg.h \
  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
- /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
- /usr/include/c++/8/exception /usr/include/c++/8/bits/exception.h \
- /usr/include/c++/8/bits/exception_ptr.h \
- /usr/include/c++/8/bits/exception_defines.h \
- /usr/include/c++/8/bits/cxxabi_init_exception.h \
- /usr/include/c++/8/typeinfo /usr/include/c++/8/bits/hash_bytes.h \
- /usr/include/c++/8/new /usr/include/c++/8/bits/nested_exception.h \
  /usr/include/c++/8/bits/char_traits.h \
  /usr/include/c++/8/bits/stl_algobase.h \
  /usr/include/c++/8/bits/functexcept.h \
- /usr/include/c++/8/bits/cpp_type_traits.h \
- /usr/include/c++/8/ext/type_traits.h \
  /usr/include/c++/8/ext/numeric_traits.h \
- /usr/include/c++/8/bits/stl_pair.h \
- /usr/include/c++/8/bits/stl_iterator_base_types.h \
- /usr/include/c++/8/bits/stl_iterator_base_funcs.h \
- /usr/include/c++/8/debug/assertions.h \
- /usr/include/c++/8/bits/stl_iterator.h \
- /usr/include/c++/8/bits/ptr_traits.h /usr/include/c++/8/debug/debug.h \
+ /usr/include/c++/8/bits/stl_pair.h /usr/include/c++/8/debug/debug.h \
  /usr/include/c++/8/bits/predefined_ops.h \
  /usr/include/c++/8/bits/localefwd.h \
  /usr/include/x86_64-linux-gnu/c++/8/bits/c++locale.h \
  /usr/include/c++/8/clocale /usr/include/locale.h \
  /usr/include/x86_64-linux-gnu/bits/locale.h /usr/include/c++/8/cctype \
- /usr/include/ctype.h /usr/include/endian.h \
- /usr/include/x86_64-linux-gnu/bits/endian.h \
- /usr/include/x86_64-linux-gnu/bits/byteswap.h \
- /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
- /usr/include/c++/8/bits/ios_base.h /usr/include/c++/8/ext/atomicity.h \
+ /usr/include/ctype.h /usr/include/c++/8/bits/ios_base.h \
+ /usr/include/c++/8/ext/atomicity.h \
  /usr/include/x86_64-linux-gnu/c++/8/bits/gthr.h \
  /usr/include/x86_64-linux-gnu/c++/8/bits/gthr-default.h \
  /usr/include/pthread.h /usr/include/sched.h \
- /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
  /usr/include/x86_64-linux-gnu/bits/sched.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h \
  /usr/include/x86_64-linux-gnu/bits/cpu-set.h /usr/include/time.h \
  /usr/include/x86_64-linux-gnu/bits/time.h \
  /usr/include/x86_64-linux-gnu/bits/timex.h \
- /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
- /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
- /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
- /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
- /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
- /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
  /usr/include/x86_64-linux-gnu/bits/setjmp.h \
  /usr/include/x86_64-linux-gnu/c++/8/bits/atomic_word.h \
  /usr/include/c++/8/bits/locale_classes.h /usr/include/c++/8/string \
@@ -103,16 +136,7 @@ CMakeFiles/test.dir/src/Interface/IEngine.cpp.o: \
  /usr/include/c++/8/bits/basic_string.h \
  /usr/include/c++/8/ext/alloc_traits.h \
  /usr/include/c++/8/bits/alloc_traits.h \
- /usr/include/c++/8/ext/string_conversions.h /usr/include/c++/8/cstdlib \
- /usr/include/stdlib.h /usr/include/x86_64-linux-gnu/bits/waitflags.h \
- /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
- /usr/include/x86_64-linux-gnu/sys/types.h \
- /usr/include/x86_64-linux-gnu/sys/select.h \
- /usr/include/x86_64-linux-gnu/bits/select.h \
- /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
- /usr/include/alloca.h /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
- /usr/include/c++/8/bits/std_abs.h /usr/include/c++/8/cstdio \
+ /usr/include/c++/8/ext/string_conversions.h /usr/include/c++/8/cstdio \
  /usr/include/stdio.h /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
@@ -138,50 +162,42 @@ CMakeFiles/test.dir/src/Interface/IEngine.cpp.o: \
  /usr/include/c++/8/bits/streambuf_iterator.h \
  /usr/include/x86_64-linux-gnu/c++/8/bits/ctype_inline.h \
  /usr/include/c++/8/bits/locale_facets.tcc \
- /usr/include/c++/8/bits/basic_ios.tcc /usr/include/c++/8/ostream \
- /usr/include/c++/8/bits/ostream.tcc /usr/include/c++/8/bits/istream.tcc \
- /usr/include/c++/8/memory /usr/include/c++/8/bits/stl_construct.h \
- /usr/include/c++/8/bits/stl_uninitialized.h \
- /usr/include/c++/8/bits/stl_tempbuf.h \
- /usr/include/c++/8/bits/stl_raw_storage_iter.h \
- /usr/include/c++/8/ext/concurrence.h \
- /usr/include/c++/8/bits/uses_allocator.h \
- /usr/include/c++/8/bits/unique_ptr.h /usr/include/c++/8/utility \
- /usr/include/c++/8/bits/stl_relops.h /usr/include/c++/8/tuple \
- /usr/include/c++/8/array /usr/include/c++/8/bits/invoke.h \
- /usr/include/c++/8/bits/shared_ptr.h \
- /usr/include/c++/8/bits/shared_ptr_base.h \
- /usr/include/c++/8/bits/allocated_ptr.h \
- /usr/include/c++/8/bits/refwrap.h \
- /usr/include/c++/8/ext/aligned_buffer.h \
- /usr/include/c++/8/bits/shared_ptr_atomic.h \
- /usr/include/c++/8/backward/auto_ptr.h /usr/include/c++/8/sstream \
- /usr/include/c++/8/bits/sstream.tcc \
- /home/emk/vcpkg/installed/x64-linux/include/json/allocator.h \
- /usr/include/c++/8/cstring /usr/include/string.h /usr/include/strings.h \
- /home/emk/vcpkg/installed/x64-linux/include/json/version.h \
- /home/emk/vcpkg/installed/x64-linux/include/json/json_features.h \
- /home/emk/vcpkg/installed/x64-linux/include/json/forwards.h \
- /home/emk/vcpkg/installed/x64-linux/include/json/reader.h \
- /home/emk/vcpkg/installed/x64-linux/include/json/value.h \
- /usr/include/c++/8/map /usr/include/c++/8/bits/stl_tree.h \
- /usr/include/c++/8/bits/stl_map.h /usr/include/c++/8/bits/stl_multimap.h \
- /usr/include/c++/8/vector /usr/include/c++/8/bits/stl_vector.h \
- /usr/include/c++/8/bits/stl_bvector.h /usr/include/c++/8/bits/vector.tcc \
- /usr/include/c++/8/deque /usr/include/c++/8/bits/stl_deque.h \
- /usr/include/c++/8/bits/deque.tcc /usr/include/c++/8/stack \
- /usr/include/c++/8/bits/stl_stack.h \
- /home/emk/vcpkg/installed/x64-linux/include/json/writer.h \
+ /usr/include/c++/8/bits/basic_ios.tcc \
+ /usr/include/c++/8/bits/ostream.tcc /usr/include/c++/8/istream \
+ /usr/include/c++/8/bits/istream.tcc \
+ /usr/include/c++/8/bits/stream_iterator.h /usr/include/c++/8/utility \
+ /usr/include/c++/8/bits/stl_relops.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/writer.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/internal/dtoa.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/internal/itoa.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/internal/itoa.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/stringbuffer.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/stringbuffer.h \
  /usr/include/c++/8/iostream \
  /data/home/emk/Coding/Trading_system/TradingSystem/src/Helper/logger.h \
  /usr/include/c++/8/fstream /usr/include/c++/8/bits/codecvt.h \
  /usr/include/x86_64-linux-gnu/c++/8/bits/basic_file.h \
  /usr/include/x86_64-linux-gnu/c++/8/bits/c++io.h \
  /usr/include/c++/8/bits/fstream.tcc /usr/include/c++/8/mutex \
- /usr/include/c++/8/chrono /usr/include/c++/8/ratio \
- /usr/include/c++/8/limits /usr/include/c++/8/ctime \
+ /usr/include/c++/8/tuple /usr/include/c++/8/array \
+ /usr/include/c++/8/bits/uses_allocator.h \
+ /usr/include/c++/8/bits/invoke.h /usr/include/c++/8/chrono \
+ /usr/include/c++/8/ratio /usr/include/c++/8/ctime \
  /usr/include/c++/8/bits/parse_numbers.h \
- /usr/include/c++/8/bits/std_mutex.h \
+ /usr/include/c++/8/bits/std_mutex.h /usr/include/c++/8/memory \
+ /usr/include/c++/8/bits/stl_construct.h \
+ /usr/include/c++/8/bits/stl_uninitialized.h \
+ /usr/include/c++/8/bits/stl_tempbuf.h \
+ /usr/include/c++/8/bits/stl_raw_storage_iter.h \
+ /usr/include/c++/8/ext/concurrence.h \
+ /usr/include/c++/8/bits/unique_ptr.h \
+ /usr/include/c++/8/bits/shared_ptr.h \
+ /usr/include/c++/8/bits/shared_ptr_base.h \
+ /usr/include/c++/8/bits/allocated_ptr.h \
+ /usr/include/c++/8/bits/refwrap.h \
+ /usr/include/c++/8/ext/aligned_buffer.h \
+ /usr/include/c++/8/bits/shared_ptr_atomic.h \
+ /usr/include/c++/8/backward/auto_ptr.h \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/spdlog.h \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/common.h \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/details/null_mutex.h \
@@ -189,8 +205,7 @@ CMakeFiles/test.dir/src/Interface/IEngine.cpp.o: \
  /usr/include/c++/8/functional /usr/include/c++/8/bits/std_function.h \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/fmt/fmt.h \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/fmt/bundled/core.h \
- /usr/include/c++/8/iterator /usr/include/c++/8/bits/stream_iterator.h \
- /usr/include/c++/8/experimental/string_view \
+ /usr/include/c++/8/cstddef /usr/include/c++/8/experimental/string_view \
  /usr/include/c++/8/experimental/bits/lfts_config.h \
  /usr/include/c++/8/experimental/bits/string_view.tcc \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/fmt/bundled/format.h \
@@ -236,7 +251,8 @@ CMakeFiles/test.dir/src/Interface/IEngine.cpp.o: \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/logger.h \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/details/backtracer.h \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/details/circular_q.h \
- /usr/include/c++/8/cassert /usr/include/assert.h \
+ /usr/include/c++/8/vector /usr/include/c++/8/bits/stl_vector.h \
+ /usr/include/c++/8/bits/stl_bvector.h /usr/include/c++/8/bits/vector.tcc \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/details/log_msg_buffer.h \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/details/log_msg.h \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/details/log_msg-inl.h \
@@ -268,6 +284,8 @@ CMakeFiles/test.dir/src/Interface/IEngine.cpp.o: \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/pattern_formatter-inl.h \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/details/fmt_helper.h \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/mdc.h \
+ /usr/include/c++/8/map /usr/include/c++/8/bits/stl_tree.h \
+ /usr/include/c++/8/bits/stl_map.h /usr/include/c++/8/bits/stl_multimap.h \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/sinks/sink.h \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/sinks/sink-inl.h \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/sinks/ansicolor_sink.h \

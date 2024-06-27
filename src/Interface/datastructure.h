@@ -1,7 +1,9 @@
 #ifndef SRC_INTERFACE_DATASTRUCTURE_H
 #define SRC_INTERFACE_DATASTRUCTURE_H
 
-#include <json/json.h>
+#include "rapidjson/document.h"
+#include "rapidjson/writer.h"
+#include "rapidjson/stringbuffer.h"
 #include <string>
 #include <iostream>
 #if defined(_WIN32) || defined(_WIN64)
@@ -137,7 +139,7 @@ namespace ts{
         - destination_ : string indicating where the message goes to
         - source_ : string indicating where the message comes from
         - msgtype_ : MSG_TYPE (int32_t) inidcating which type of message it is.
-        - data_ : Json::Value type variable, containing data to be transmitted
+        - data_ : rapidjson::Document type variable, containing data to be transmitted
 
         Msg() : default constructor
 
@@ -154,11 +156,11 @@ namespace ts{
             string destination_;
             string source_;
             MSG_TYPE msgtype_;
-            Json::Value data_;
+            string data_;
         
         Msg();
 
-        Msg(const string& des, const string& src, MSG_TYPE type, Json::Value data);
+        Msg(const string& des, const string& src, MSG_TYPE type, const string& data);
 
         virtual ~Msg(){};
 
