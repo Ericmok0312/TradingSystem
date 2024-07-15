@@ -3,23 +3,16 @@ This is a self-project aiming to build a quantitative trading system by taking o
 
 The aim of the project is to learn the basic structure of a quantitative trading system and get hands-on experience on building the system.
 
-Also, in terms of Computer Science, the project aims to serve as learning material for memory sharing (kungfuyijinjing) and message queue (nanomsg)
+Also, in terms of Computer Science, the project aims to serve as learning material such as threading, memory sharing and message queue.
 
 **The project is initiated by:**
 
 **Mok Ka Chun, Eric** from HKUST Technology and Management Dual Degree Program- Beng COMP BBA Finance
 
 ## Trading systems references:
-Starquant (structure)
+Starquant
 
 WonderTrader
-
-Vnpy
-
-PandoraTrader
-
-hikyuu
-
 
 ## Descriptions
 
