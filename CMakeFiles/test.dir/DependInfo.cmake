@@ -9,8 +9,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/data/home/emk/Coding/Trading_system/TradingSystem/src/DataManager/DataManager.cpp" "CMakeFiles/test.dir/src/DataManager/DataManager.cpp.o" "gcc" "CMakeFiles/test.dir/src/DataManager/DataManager.cpp.o.d"
+  "/data/home/emk/Coding/Trading_system/TradingSystem/src/DataManager/DataWriter.cpp" "CMakeFiles/test.dir/src/DataManager/DataWriter.cpp.o" "gcc" "CMakeFiles/test.dir/src/DataManager/DataWriter.cpp.o.d"
   "/data/home/emk/Coding/Trading_system/TradingSystem/src/FUTU/FutuEngine.cpp" "CMakeFiles/test.dir/src/FUTU/FutuEngine.cpp.o" "gcc" "CMakeFiles/test.dir/src/FUTU/FutuEngine.cpp.o.d"
-  "/data/home/emk/Coding/Trading_system/TradingSystem/src/Helper/ThreadPool.cpp" "CMakeFiles/test.dir/src/Helper/ThreadPool.cpp.o" "gcc" "CMakeFiles/test.dir/src/Helper/ThreadPool.cpp.o.d"
   "/data/home/emk/Coding/Trading_system/TradingSystem/src/Helper/logger.cpp" "CMakeFiles/test.dir/src/Helper/logger.cpp.o" "gcc" "CMakeFiles/test.dir/src/Helper/logger.cpp.o.d"
   "/data/home/emk/Coding/Trading_system/TradingSystem/src/Interface/IEngine.cpp" "CMakeFiles/test.dir/src/Interface/IEngine.cpp.o" "gcc" "CMakeFiles/test.dir/src/Interface/IEngine.cpp.o.d"
   "/data/home/emk/Coding/Trading_system/TradingSystem/src/Interface/IMessenger.cpp" "CMakeFiles/test.dir/src/Interface/IMessenger.cpp.o" "gcc" "CMakeFiles/test.dir/src/Interface/IMessenger.cpp.o.d"

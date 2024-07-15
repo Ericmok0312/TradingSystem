@@ -366,4 +366,9 @@ CMakeFiles/test.dir/src/DataManager/DataManager.cpp.o: \
  /data/home/emk/Coding/Trading_system/TradingSystem/src/Interface/IMessenger.h \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/nng-1.8.0/include/nng/nng.h \
  /usr/lib/gcc/x86_64-linux-gnu/8/include/stdbool.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/src/Interface/IEngine.h
+ /data/home/emk/Coding/Trading_system/TradingSystem/src/Interface/IEngine.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/src/DataManager/DataWriter.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/src/DataManager/tslmdb.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/lmdb/liblmdb/lmdb.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/src/Helper/ThreadPool.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/src/DataManager/FutuParser.h

@@ -1,10 +1,10 @@
 file(REMOVE_RECURSE
   "CMakeFiles/test.dir/src/DataManager/DataManager.cpp.o"
   "CMakeFiles/test.dir/src/DataManager/DataManager.cpp.o.d"
+  "CMakeFiles/test.dir/src/DataManager/DataWriter.cpp.o"
+  "CMakeFiles/test.dir/src/DataManager/DataWriter.cpp.o.d"
   "CMakeFiles/test.dir/src/FUTU/FutuEngine.cpp.o"
   "CMakeFiles/test.dir/src/FUTU/FutuEngine.cpp.o.d"
-  "CMakeFiles/test.dir/src/Helper/ThreadPool.cpp.o"
-  "CMakeFiles/test.dir/src/Helper/ThreadPool.cpp.o.d"
   "CMakeFiles/test.dir/src/Helper/logger.cpp.o"
   "CMakeFiles/test.dir/src/Helper/logger.cpp.o.d"
   "CMakeFiles/test.dir/src/Interface/IEngine.cpp.o"

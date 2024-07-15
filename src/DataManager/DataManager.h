@@ -8,13 +8,13 @@
 #include <Interface/IMessenger.h>
 #include <Interface/IEngine.h>
 #include <Interface/datastructure.h>
-
+#include <DataManager/DataWriter.h>
 
 namespace ts{
 
+    //Need to implement caches for reading data
 
-
-    class DataManager: public ThreadPool{
+    class DataManager: public ThreadPool<void(*)(std::shared_ptr<Msg>), std::shared_ptr<Msg> >{
         public:
             DataManager();
             ~DataManager();
@@ -23,12 +23,17 @@ namespace ts{
             void start();
             static void processMsg(std::shared_ptr<Msg>);
 
+
+
         protected:
             static std::shared_ptr<ts::Logger> logger_;
             static std::unique_ptr<ts::IMessenger> messenger_;
             std::atomic<Estate> estate_; 
+            static ts::DataWriter dw;
 
     };
+
+
 
 }
 

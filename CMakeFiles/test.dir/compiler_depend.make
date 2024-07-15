@@ -441,7 +441,765 @@ CMakeFiles/test.dir/src/DataManager/DataManager.cpp.o: src/DataManager/DataManag
   src/Interface/IMessenger.h \
   libs/nng-1.8.0/include/nng/nng.h \
   /usr/lib/gcc/x86_64-linux-gnu/8/include/stdbool.h \
-  src/Interface/IEngine.h
+  src/Interface/IEngine.h \
+  src/DataManager/DataWriter.h \
+  src/DataManager/tslmdb.hpp \
+  libs/lmdb/liblmdb/lmdb.h \
+  src/Helper/ThreadPool.hpp \
+  src/DataManager/FutuParser.h
+
+CMakeFiles/test.dir/src/DataManager/DataWriter.cpp.o: src/DataManager/DataWriter.cpp \
+  /usr/include/stdc-predef.h \
+  src/DataManager/DataWriter.h \
+  src/Helper/ThreadPool.h \
+  /usr/include/c++/8/queue \
+  /usr/include/c++/8/deque \
+  /usr/include/c++/8/bits/stl_algobase.h \
+  /usr/include/x86_64-linux-gnu/c++/8/bits/c++config.h \
+  /usr/include/x86_64-linux-gnu/c++/8/bits/os_defines.h \
+  /usr/include/features.h \
+  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
+  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
+  /usr/include/x86_64-linux-gnu/bits/long-double.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
+  /usr/include/x86_64-linux-gnu/c++/8/bits/cpu_defines.h \
+  /usr/include/c++/8/bits/functexcept.h \
+  /usr/include/c++/8/bits/exception_defines.h \
+  /usr/include/c++/8/bits/cpp_type_traits.h \
+  /usr/include/c++/8/ext/type_traits.h \
+  /usr/include/c++/8/ext/numeric_traits.h \
+  /usr/include/c++/8/bits/stl_pair.h \
+  /usr/include/c++/8/bits/move.h \
+  /usr/include/c++/8/bits/concept_check.h \
+  /usr/include/c++/8/type_traits \
+  /usr/include/c++/8/bits/stl_iterator_base_types.h \
+  /usr/include/c++/8/bits/stl_iterator_base_funcs.h \
+  /usr/include/c++/8/debug/assertions.h \
+  /usr/include/c++/8/bits/stl_iterator.h \
+  /usr/include/c++/8/bits/ptr_traits.h \
+  /usr/include/c++/8/debug/debug.h \
+  /usr/include/c++/8/bits/predefined_ops.h \
+  /usr/include/c++/8/bits/allocator.h \
+  /usr/include/x86_64-linux-gnu/c++/8/bits/c++allocator.h \
+  /usr/include/c++/8/ext/new_allocator.h \
+  /usr/include/c++/8/new \
+  /usr/include/c++/8/exception \
+  /usr/include/c++/8/bits/exception.h \
+  /usr/include/c++/8/bits/exception_ptr.h \
+  /usr/include/c++/8/bits/cxxabi_init_exception.h \
+  /usr/lib/gcc/x86_64-linux-gnu/8/include/stddef.h \
+  /usr/include/c++/8/typeinfo \
+  /usr/include/c++/8/bits/hash_bytes.h \
+  /usr/include/c++/8/bits/nested_exception.h \
+  /usr/include/c++/8/bits/memoryfwd.h \
+  /usr/include/c++/8/bits/stl_construct.h \
+  /usr/include/c++/8/ext/alloc_traits.h \
+  /usr/include/c++/8/bits/alloc_traits.h \
+  /usr/include/c++/8/bits/stl_uninitialized.h \
+  /usr/include/c++/8/bits/stl_deque.h \
+  /usr/include/c++/8/initializer_list \
+  /usr/include/c++/8/bits/range_access.h \
+  /usr/include/c++/8/bits/deque.tcc \
+  /usr/include/c++/8/vector \
+  /usr/include/c++/8/bits/stl_vector.h \
+  /usr/include/c++/8/bits/stl_bvector.h \
+  /usr/include/c++/8/bits/functional_hash.h \
+  /usr/include/c++/8/bits/vector.tcc \
+  /usr/include/c++/8/bits/stl_heap.h \
+  /usr/include/c++/8/bits/stl_function.h \
+  /usr/include/c++/8/backward/binders.h \
+  /usr/include/c++/8/bits/stl_queue.h \
+  /usr/include/c++/8/bits/uses_allocator.h \
+  /usr/include/c++/8/memory \
+  /usr/include/c++/8/bits/stl_tempbuf.h \
+  /usr/include/c++/8/bits/stl_raw_storage_iter.h \
+  /usr/include/c++/8/iosfwd \
+  /usr/include/c++/8/bits/stringfwd.h \
+  /usr/include/c++/8/bits/postypes.h \
+  /usr/include/c++/8/cwchar \
+  /usr/include/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/floatn.h \
+  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
+  /usr/lib/gcc/x86_64-linux-gnu/8/include/stdarg.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
+  /usr/include/c++/8/ext/atomicity.h \
+  /usr/include/x86_64-linux-gnu/c++/8/bits/gthr.h \
+  /usr/include/x86_64-linux-gnu/c++/8/bits/gthr-default.h \
+  /usr/include/pthread.h \
+  /usr/include/endian.h \
+  /usr/include/x86_64-linux-gnu/bits/endian.h \
+  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
+  /usr/include/x86_64-linux-gnu/bits/types.h \
+  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
+  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
+  /usr/include/sched.h \
+  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
+  /usr/include/x86_64-linux-gnu/bits/sched.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h \
+  /usr/include/x86_64-linux-gnu/bits/cpu-set.h \
+  /usr/include/time.h \
+  /usr/include/x86_64-linux-gnu/bits/time.h \
+  /usr/include/x86_64-linux-gnu/bits/timex.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
+  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
+  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
+  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
+  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
+  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
+  /usr/include/x86_64-linux-gnu/bits/setjmp.h \
+  /usr/include/x86_64-linux-gnu/c++/8/bits/atomic_word.h \
+  /usr/include/c++/8/ext/concurrence.h \
+  /usr/include/c++/8/bits/unique_ptr.h \
+  /usr/include/c++/8/utility \
+  /usr/include/c++/8/bits/stl_relops.h \
+  /usr/include/c++/8/tuple \
+  /usr/include/c++/8/array \
+  /usr/include/c++/8/stdexcept \
+  /usr/include/c++/8/string \
+  /usr/include/c++/8/bits/char_traits.h \
+  /usr/include/c++/8/cstdint \
+  /usr/lib/gcc/x86_64-linux-gnu/8/include/stdint.h \
+  /usr/include/stdint.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
+  /usr/include/c++/8/bits/localefwd.h \
+  /usr/include/x86_64-linux-gnu/c++/8/bits/c++locale.h \
+  /usr/include/c++/8/clocale \
+  /usr/include/locale.h \
+  /usr/include/x86_64-linux-gnu/bits/locale.h \
+  /usr/include/c++/8/cctype \
+  /usr/include/ctype.h \
+  /usr/include/c++/8/bits/ostream_insert.h \
+  /usr/include/c++/8/bits/cxxabi_forced.h \
+  /usr/include/c++/8/bits/basic_string.h \
+  /usr/include/c++/8/ext/string_conversions.h \
+  /usr/include/c++/8/cstdlib \
+  /usr/include/stdlib.h \
+  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+  /usr/include/x86_64-linux-gnu/sys/types.h \
+  /usr/include/x86_64-linux-gnu/sys/select.h \
+  /usr/include/x86_64-linux-gnu/bits/select.h \
+  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
+  /usr/include/alloca.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+  /usr/include/c++/8/bits/std_abs.h \
+  /usr/include/c++/8/cstdio \
+  /usr/include/stdio.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
+  /usr/include/c++/8/cerrno \
+  /usr/include/errno.h \
+  /usr/include/x86_64-linux-gnu/bits/errno.h \
+  /usr/include/linux/errno.h \
+  /usr/include/x86_64-linux-gnu/asm/errno.h \
+  /usr/include/asm-generic/errno.h \
+  /usr/include/asm-generic/errno-base.h \
+  /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
+  /usr/include/c++/8/bits/basic_string.tcc \
+  /usr/include/c++/8/bits/invoke.h \
+  /usr/include/c++/8/bits/shared_ptr.h \
+  /usr/include/c++/8/bits/shared_ptr_base.h \
+  /usr/include/c++/8/bits/allocated_ptr.h \
+  /usr/include/c++/8/bits/refwrap.h \
+  /usr/include/c++/8/ext/aligned_buffer.h \
+  /usr/include/c++/8/bits/shared_ptr_atomic.h \
+  /usr/include/c++/8/bits/atomic_base.h \
+  /usr/include/c++/8/bits/atomic_lockfree_defines.h \
+  /usr/include/c++/8/backward/auto_ptr.h \
+  /usr/include/c++/8/thread \
+  /usr/include/c++/8/chrono \
+  /usr/include/c++/8/ratio \
+  /usr/include/c++/8/limits \
+  /usr/include/c++/8/ctime \
+  /usr/include/c++/8/bits/parse_numbers.h \
+  /usr/include/c++/8/functional \
+  /usr/include/c++/8/bits/std_function.h \
+  /usr/include/c++/8/mutex \
+  /usr/include/c++/8/system_error \
+  /usr/include/x86_64-linux-gnu/c++/8/bits/error_constants.h \
+  /usr/include/c++/8/bits/std_mutex.h \
+  /usr/include/c++/8/atomic \
+  /home/emk/vcpkg/installed/x64-linux/include/json/json.h \
+  /home/emk/vcpkg/installed/x64-linux/include/json/config.h \
+  /usr/include/c++/8/cstddef \
+  /usr/include/c++/8/istream \
+  /usr/include/c++/8/ios \
+  /usr/include/c++/8/bits/ios_base.h \
+  /usr/include/c++/8/bits/locale_classes.h \
+  /usr/include/c++/8/bits/locale_classes.tcc \
+  /usr/include/c++/8/streambuf \
+  /usr/include/c++/8/bits/streambuf.tcc \
+  /usr/include/c++/8/bits/basic_ios.h \
+  /usr/include/c++/8/bits/locale_facets.h \
+  /usr/include/c++/8/cwctype \
+  /usr/include/wctype.h \
+  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
+  /usr/include/x86_64-linux-gnu/c++/8/bits/ctype_base.h \
+  /usr/include/c++/8/bits/streambuf_iterator.h \
+  /usr/include/x86_64-linux-gnu/c++/8/bits/ctype_inline.h \
+  /usr/include/c++/8/bits/locale_facets.tcc \
+  /usr/include/c++/8/bits/basic_ios.tcc \
+  /usr/include/c++/8/ostream \
+  /usr/include/c++/8/bits/ostream.tcc \
+  /usr/include/c++/8/bits/istream.tcc \
+  /usr/include/c++/8/sstream \
+  /usr/include/c++/8/bits/sstream.tcc \
+  /home/emk/vcpkg/installed/x64-linux/include/json/allocator.h \
+  /usr/include/c++/8/cstring \
+  /usr/include/string.h \
+  /usr/include/strings.h \
+  /home/emk/vcpkg/installed/x64-linux/include/json/version.h \
+  /home/emk/vcpkg/installed/x64-linux/include/json/json_features.h \
+  /home/emk/vcpkg/installed/x64-linux/include/json/forwards.h \
+  /home/emk/vcpkg/installed/x64-linux/include/json/reader.h \
+  /home/emk/vcpkg/installed/x64-linux/include/json/value.h \
+  /usr/include/c++/8/map \
+  /usr/include/c++/8/bits/stl_tree.h \
+  /usr/include/c++/8/bits/stl_map.h \
+  /usr/include/c++/8/bits/stl_multimap.h \
+  /usr/include/c++/8/stack \
+  /usr/include/c++/8/bits/stl_stack.h \
+  /home/emk/vcpkg/installed/x64-linux/include/json/writer.h \
+  /usr/include/c++/8/condition_variable \
+  src/Interface/datastructure.h \
+  libs/rapidjson/include/rapidjson/document.h \
+  libs/rapidjson/include/rapidjson/reader.h \
+  libs/rapidjson/include/rapidjson/allocators.h \
+  libs/rapidjson/include/rapidjson/rapidjson.h \
+  /usr/include/inttypes.h \
+  /usr/include/c++/8/cassert \
+  /usr/include/assert.h \
+  libs/rapidjson/include/rapidjson/stream.h \
+  libs/rapidjson/include/rapidjson/encodings.h \
+  libs/rapidjson/include/rapidjson/encodedstream.h \
+  libs/rapidjson/include/rapidjson/memorystream.h \
+  libs/rapidjson/include/rapidjson/internal/meta.h \
+  libs/rapidjson/include/rapidjson/rapidjson.h \
+  libs/rapidjson/include/rapidjson/internal/stack.h \
+  libs/rapidjson/include/rapidjson/allocators.h \
+  libs/rapidjson/include/rapidjson/internal/swap.h \
+  libs/rapidjson/include/rapidjson/internal/strtod.h \
+  libs/rapidjson/include/rapidjson/internal/ieee754.h \
+  libs/rapidjson/include/rapidjson/internal/biginteger.h \
+  libs/rapidjson/include/rapidjson/internal/diyfp.h \
+  libs/rapidjson/include/rapidjson/internal/pow10.h \
+  libs/rapidjson/include/rapidjson/error/error.h \
+  libs/rapidjson/include/rapidjson/rapidjson.h \
+  libs/rapidjson/include/rapidjson/internal/strfunc.h \
+  libs/rapidjson/include/rapidjson/stream.h \
+  libs/rapidjson/include/rapidjson/rapidjson.h \
+  /usr/include/c++/8/iterator \
+  /usr/include/c++/8/bits/stream_iterator.h \
+  libs/rapidjson/include/rapidjson/writer.h \
+  libs/rapidjson/include/rapidjson/internal/dtoa.h \
+  libs/rapidjson/include/rapidjson/internal/itoa.h \
+  libs/rapidjson/include/rapidjson/internal/itoa.h \
+  libs/rapidjson/include/rapidjson/stringbuffer.h \
+  libs/rapidjson/include/rapidjson/stringbuffer.h \
+  /usr/include/c++/8/iostream \
+  src/DataManager/tslmdb.hpp \
+  libs/lmdb/liblmdb/lmdb.h \
+  /usr/lib/gcc/x86_64-linux-gnu/8/include-fixed/limits.h \
+  /usr/lib/gcc/x86_64-linux-gnu/8/include-fixed/syslimits.h \
+  /usr/include/limits.h \
+  /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/local_lim.h \
+  /usr/include/linux/limits.h \
+  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
+  /usr/include/unistd.h \
+  /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
+  /usr/include/x86_64-linux-gnu/bits/sysmacros.h \
+  /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
+  /usr/include/x86_64-linux-gnu/bits/environments.h \
+  /usr/include/x86_64-linux-gnu/bits/confname.h \
+  /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
+  /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
+  /usr/include/x86_64-linux-gnu/sys/stat.h \
+  /usr/include/x86_64-linux-gnu/bits/stat.h \
+  /usr/include/x86_64-linux-gnu/bits/statx.h \
+  src/Helper/logger.h \
+  /usr/include/c++/8/fstream \
+  /usr/include/c++/8/bits/codecvt.h \
+  /usr/include/x86_64-linux-gnu/c++/8/bits/basic_file.h \
+  /usr/include/x86_64-linux-gnu/c++/8/bits/c++io.h \
+  /usr/include/c++/8/bits/fstream.tcc \
+  libs/spdlog-1.14.1/include/spdlog/spdlog.h \
+  libs/spdlog-1.14.1/include/spdlog/common.h \
+  libs/spdlog-1.14.1/include/spdlog/details/null_mutex.h \
+  libs/spdlog-1.14.1/include/spdlog/tweakme.h \
+  libs/spdlog-1.14.1/include/spdlog/fmt/fmt.h \
+  libs/spdlog-1.14.1/include/spdlog/fmt/bundled/core.h \
+  /usr/include/c++/8/experimental/string_view \
+  /usr/include/c++/8/experimental/bits/lfts_config.h \
+  /usr/include/c++/8/experimental/bits/string_view.tcc \
+  libs/spdlog-1.14.1/include/spdlog/fmt/bundled/format.h \
+  /usr/include/c++/8/cmath \
+  /usr/include/math.h \
+  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
+  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
+  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
+  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
+  /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
+  /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
+  libs/spdlog-1.14.1/include/spdlog/fmt/bundled/core.h \
+  libs/spdlog-1.14.1/include/spdlog/fmt/bundled/format-inl.h \
+  /usr/include/c++/8/algorithm \
+  /usr/include/c++/8/bits/stl_algo.h \
+  /usr/include/c++/8/bits/algorithmfwd.h \
+  /usr/include/c++/8/bits/uniform_int_dist.h \
+  /usr/include/c++/8/climits \
+  /usr/include/c++/8/locale \
+  /usr/include/c++/8/bits/locale_facets_nonio.h \
+  /usr/include/x86_64-linux-gnu/c++/8/bits/time_members.h \
+  /usr/include/x86_64-linux-gnu/c++/8/bits/messages_members.h \
+  /usr/include/libintl.h \
+  /usr/include/c++/8/bits/locale_facets_nonio.tcc \
+  /usr/include/c++/8/bits/locale_conv.h \
+  libs/spdlog-1.14.1/include/spdlog/fmt/bundled/format.h \
+  libs/spdlog-1.14.1/include/spdlog/common-inl.h \
+  libs/spdlog-1.14.1/include/spdlog/details/registry.h \
+  libs/spdlog-1.14.1/include/spdlog/details/periodic_worker.h \
+  libs/spdlog-1.14.1/include/spdlog/details/periodic_worker-inl.h \
+  /usr/include/c++/8/unordered_map \
+  /usr/include/c++/8/bits/hashtable.h \
+  /usr/include/c++/8/bits/hashtable_policy.h \
+  /usr/include/c++/8/bits/unordered_map.h \
+  libs/spdlog-1.14.1/include/spdlog/details/registry-inl.h \
+  libs/spdlog-1.14.1/include/spdlog/logger.h \
+  libs/spdlog-1.14.1/include/spdlog/details/backtracer.h \
+  libs/spdlog-1.14.1/include/spdlog/details/circular_q.h \
+  libs/spdlog-1.14.1/include/spdlog/details/log_msg_buffer.h \
+  libs/spdlog-1.14.1/include/spdlog/details/log_msg.h \
+  libs/spdlog-1.14.1/include/spdlog/details/log_msg-inl.h \
+  libs/spdlog-1.14.1/include/spdlog/details/os.h \
+  libs/spdlog-1.14.1/include/spdlog/details/os-inl.h \
+  /usr/include/fcntl.h \
+  /usr/include/x86_64-linux-gnu/bits/fcntl.h \
+  /usr/include/x86_64-linux-gnu/bits/fcntl-linux.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
+  /usr/include/linux/falloc.h \
+  /usr/include/x86_64-linux-gnu/sys/syscall.h \
+  /usr/include/x86_64-linux-gnu/asm/unistd.h \
+  /usr/include/x86_64-linux-gnu/asm/unistd_64.h \
+  /usr/include/x86_64-linux-gnu/bits/syscall.h \
+  libs/spdlog-1.14.1/include/spdlog/details/log_msg_buffer-inl.h \
+  libs/spdlog-1.14.1/include/spdlog/details/backtracer-inl.h \
+  libs/spdlog-1.14.1/include/spdlog/logger-inl.h \
+  libs/spdlog-1.14.1/include/spdlog/pattern_formatter.h \
+  libs/spdlog-1.14.1/include/spdlog/formatter.h \
+  libs/spdlog-1.14.1/include/spdlog/pattern_formatter-inl.h \
+  libs/spdlog-1.14.1/include/spdlog/details/fmt_helper.h \
+  libs/spdlog-1.14.1/include/spdlog/mdc.h \
+  libs/spdlog-1.14.1/include/spdlog/sinks/sink.h \
+  libs/spdlog-1.14.1/include/spdlog/sinks/sink-inl.h \
+  libs/spdlog-1.14.1/include/spdlog/sinks/ansicolor_sink.h \
+  libs/spdlog-1.14.1/include/spdlog/details/console_globals.h \
+  libs/spdlog-1.14.1/include/spdlog/sinks/ansicolor_sink-inl.h \
+  libs/spdlog-1.14.1/include/spdlog/details/synchronous_factory.h \
+  libs/spdlog-1.14.1/include/spdlog/version.h \
+  libs/spdlog-1.14.1/include/spdlog/spdlog-inl.h \
+  libs/spdlog-1.14.1/include/spdlog/sinks/basic_file_sink.h \
+  libs/spdlog-1.14.1/include/spdlog/details/file_helper.h \
+  libs/spdlog-1.14.1/include/spdlog/details/file_helper-inl.h \
+  libs/spdlog-1.14.1/include/spdlog/sinks/base_sink.h \
+  libs/spdlog-1.14.1/include/spdlog/sinks/base_sink-inl.h \
+  libs/spdlog-1.14.1/include/spdlog/sinks/basic_file_sink-inl.h \
+  src/Helper/ThreadPool.hpp \
+  libs/boost/filesystem.hpp \
+  libs/boost/filesystem/config.hpp \
+  libs/boost/config.hpp \
+  libs/boost/config/user.hpp \
+  libs/boost/config/detail/select_compiler_config.hpp \
+  libs/boost/config/compiler/gcc.hpp \
+  libs/boost/config/detail/select_stdlib_config.hpp \
+  libs/boost/config/stdlib/libstdcpp3.hpp \
+  libs/boost/config/detail/select_platform_config.hpp \
+  libs/boost/config/platform/linux.hpp \
+  libs/boost/config/detail/posix_features.hpp \
+  libs/boost/config/detail/suffix.hpp \
+  libs/boost/config/helper_macros.hpp \
+  libs/boost/config/detail/cxx_composite.hpp \
+  libs/boost/system/api_config.hpp \
+  libs/boost/detail/workaround.hpp \
+  libs/boost/config/workaround.hpp \
+  libs/boost/config/auto_link.hpp \
+  libs/boost/filesystem/path.hpp \
+  libs/boost/assert.hpp \
+  libs/boost/iterator/iterator_facade.hpp \
+  libs/boost/iterator/interoperable.hpp \
+  libs/boost/mpl/bool.hpp \
+  libs/boost/mpl/bool_fwd.hpp \
+  libs/boost/mpl/aux_/adl_barrier.hpp \
+  libs/boost/mpl/aux_/config/adl.hpp \
+  libs/boost/mpl/aux_/config/msvc.hpp \
+  libs/boost/mpl/aux_/config/intel.hpp \
+  libs/boost/mpl/aux_/config/gcc.hpp \
+  libs/boost/mpl/aux_/config/workaround.hpp \
+  libs/boost/mpl/integral_c_tag.hpp \
+  libs/boost/mpl/aux_/config/static_constant.hpp \
+  libs/boost/mpl/or.hpp \
+  libs/boost/mpl/aux_/config/use_preprocessed.hpp \
+  libs/boost/mpl/aux_/nested_type_wknd.hpp \
+  libs/boost/mpl/aux_/na_spec.hpp \
+  libs/boost/mpl/lambda_fwd.hpp \
+  libs/boost/mpl/void_fwd.hpp \
+  libs/boost/mpl/aux_/na.hpp \
+  libs/boost/mpl/aux_/na_fwd.hpp \
+  libs/boost/mpl/aux_/config/ctps.hpp \
+  libs/boost/mpl/aux_/config/lambda.hpp \
+  libs/boost/mpl/aux_/config/ttp.hpp \
+  libs/boost/mpl/int.hpp \
+  libs/boost/mpl/int_fwd.hpp \
+  libs/boost/mpl/aux_/nttp_decl.hpp \
+  libs/boost/mpl/aux_/config/nttp.hpp \
+  libs/boost/mpl/aux_/integral_wrapper.hpp \
+  libs/boost/mpl/aux_/static_cast.hpp \
+  libs/boost/preprocessor/cat.hpp \
+  libs/boost/preprocessor/config/config.hpp \
+  libs/boost/mpl/aux_/lambda_arity_param.hpp \
+  libs/boost/mpl/aux_/template_arity_fwd.hpp \
+  libs/boost/mpl/aux_/arity.hpp \
+  libs/boost/mpl/aux_/config/dtp.hpp \
+  libs/boost/mpl/aux_/preprocessor/params.hpp \
+  libs/boost/mpl/aux_/config/preprocessor.hpp \
+  libs/boost/preprocessor/comma_if.hpp \
+  libs/boost/preprocessor/punctuation/comma_if.hpp \
+  libs/boost/preprocessor/control/if.hpp \
+  libs/boost/preprocessor/control/iif.hpp \
+  libs/boost/preprocessor/logical/bool.hpp \
+  libs/boost/preprocessor/config/limits.hpp \
+  libs/boost/preprocessor/logical/limits/bool_256.hpp \
+  libs/boost/preprocessor/facilities/empty.hpp \
+  libs/boost/preprocessor/punctuation/comma.hpp \
+  libs/boost/preprocessor/repeat.hpp \
+  libs/boost/preprocessor/repetition/repeat.hpp \
+  libs/boost/preprocessor/debug/error.hpp \
+  libs/boost/preprocessor/detail/auto_rec.hpp \
+  libs/boost/preprocessor/detail/limits/auto_rec_256.hpp \
+  libs/boost/preprocessor/tuple/eat.hpp \
+  libs/boost/preprocessor/repetition/limits/repeat_256.hpp \
+  libs/boost/preprocessor/inc.hpp \
+  libs/boost/preprocessor/arithmetic/inc.hpp \
+  libs/boost/preprocessor/arithmetic/limits/inc_256.hpp \
+  libs/boost/mpl/aux_/preprocessor/enum.hpp \
+  libs/boost/mpl/aux_/preprocessor/def_params_tail.hpp \
+  libs/boost/mpl/limits/arity.hpp \
+  libs/boost/preprocessor/logical/and.hpp \
+  libs/boost/preprocessor/logical/bitand.hpp \
+  libs/boost/preprocessor/identity.hpp \
+  libs/boost/preprocessor/facilities/identity.hpp \
+  libs/boost/preprocessor/empty.hpp \
+  libs/boost/preprocessor/arithmetic/add.hpp \
+  libs/boost/preprocessor/arithmetic/dec.hpp \
+  libs/boost/preprocessor/arithmetic/limits/dec_256.hpp \
+  libs/boost/preprocessor/control/while.hpp \
+  libs/boost/preprocessor/list/fold_left.hpp \
+  libs/boost/preprocessor/list/detail/fold_left.hpp \
+  libs/boost/preprocessor/control/expr_iif.hpp \
+  libs/boost/preprocessor/list/adt.hpp \
+  libs/boost/preprocessor/detail/is_binary.hpp \
+  libs/boost/preprocessor/detail/check.hpp \
+  libs/boost/preprocessor/logical/compl.hpp \
+  libs/boost/preprocessor/list/detail/limits/fold_left_256.hpp \
+  libs/boost/preprocessor/list/limits/fold_left_256.hpp \
+  libs/boost/preprocessor/list/fold_right.hpp \
+  libs/boost/preprocessor/list/detail/fold_right.hpp \
+  libs/boost/preprocessor/list/reverse.hpp \
+  libs/boost/preprocessor/list/detail/limits/fold_right_256.hpp \
+  libs/boost/preprocessor/control/detail/while.hpp \
+  libs/boost/preprocessor/control/detail/limits/while_256.hpp \
+  libs/boost/preprocessor/control/limits/while_256.hpp \
+  libs/boost/preprocessor/logical/bitor.hpp \
+  libs/boost/preprocessor/tuple/elem.hpp \
+  libs/boost/preprocessor/facilities/expand.hpp \
+  libs/boost/preprocessor/facilities/overload.hpp \
+  libs/boost/preprocessor/variadic/size.hpp \
+  libs/boost/preprocessor/facilities/check_empty.hpp \
+  libs/boost/preprocessor/variadic/has_opt.hpp \
+  libs/boost/preprocessor/variadic/limits/size_64.hpp \
+  libs/boost/preprocessor/tuple/rem.hpp \
+  libs/boost/preprocessor/tuple/detail/is_single_return.hpp \
+  libs/boost/preprocessor/variadic/elem.hpp \
+  libs/boost/preprocessor/variadic/limits/elem_64.hpp \
+  libs/boost/preprocessor/arithmetic/detail/is_maximum_number.hpp \
+  libs/boost/preprocessor/comparison/equal.hpp \
+  libs/boost/preprocessor/comparison/not_equal.hpp \
+  libs/boost/preprocessor/comparison/limits/not_equal_256.hpp \
+  libs/boost/preprocessor/arithmetic/detail/maximum_number.hpp \
+  libs/boost/preprocessor/arithmetic/detail/is_minimum_number.hpp \
+  libs/boost/preprocessor/logical/not.hpp \
+  libs/boost/preprocessor/arithmetic/sub.hpp \
+  libs/boost/mpl/aux_/config/eti.hpp \
+  libs/boost/mpl/aux_/config/overload_resolution.hpp \
+  libs/boost/mpl/aux_/lambda_support.hpp \
+  libs/boost/mpl/aux_/include_preprocessed.hpp \
+  libs/boost/mpl/aux_/config/compiler.hpp \
+  libs/boost/preprocessor/stringize.hpp \
+  libs/boost/mpl/aux_/preprocessed/gcc/or.hpp \
+  libs/boost/type_traits/is_convertible.hpp \
+  libs/boost/type_traits/intrinsics.hpp \
+  libs/boost/type_traits/detail/config.hpp \
+  libs/boost/version.hpp \
+  libs/boost/type_traits/integral_constant.hpp \
+  libs/boost/type_traits/is_complete.hpp \
+  libs/boost/type_traits/declval.hpp \
+  libs/boost/type_traits/add_rvalue_reference.hpp \
+  libs/boost/type_traits/is_void.hpp \
+  libs/boost/type_traits/is_reference.hpp \
+  libs/boost/type_traits/is_lvalue_reference.hpp \
+  libs/boost/type_traits/is_rvalue_reference.hpp \
+  libs/boost/type_traits/remove_reference.hpp \
+  libs/boost/type_traits/is_function.hpp \
+  libs/boost/type_traits/detail/is_function_cxx_11.hpp \
+  libs/boost/type_traits/detail/yes_no_type.hpp \
+  libs/boost/type_traits/is_array.hpp \
+  libs/boost/static_assert.hpp \
+  libs/boost/type_traits/is_arithmetic.hpp \
+  libs/boost/type_traits/is_integral.hpp \
+  libs/boost/type_traits/is_floating_point.hpp \
+  libs/boost/type_traits/is_abstract.hpp \
+  libs/boost/type_traits/add_lvalue_reference.hpp \
+  libs/boost/type_traits/add_reference.hpp \
+  libs/boost/iterator/detail/config_def.hpp \
+  libs/boost/iterator/detail/config_undef.hpp \
+  libs/boost/iterator/iterator_traits.hpp \
+  libs/boost/iterator/iterator_categories.hpp \
+  libs/boost/mpl/eval_if.hpp \
+  libs/boost/mpl/if.hpp \
+  libs/boost/mpl/aux_/value_wknd.hpp \
+  libs/boost/mpl/aux_/config/integral.hpp \
+  libs/boost/mpl/identity.hpp \
+  libs/boost/mpl/placeholders.hpp \
+  libs/boost/mpl/arg.hpp \
+  libs/boost/mpl/arg_fwd.hpp \
+  libs/boost/mpl/aux_/na_assert.hpp \
+  libs/boost/mpl/assert.hpp \
+  libs/boost/mpl/not.hpp \
+  libs/boost/mpl/aux_/yes_no.hpp \
+  libs/boost/mpl/aux_/config/arrays.hpp \
+  libs/boost/mpl/aux_/config/gpu.hpp \
+  libs/boost/mpl/aux_/config/pp_counter.hpp \
+  libs/boost/mpl/aux_/arity_spec.hpp \
+  libs/boost/mpl/aux_/arg_typedef.hpp \
+  libs/boost/mpl/aux_/preprocessed/gcc/arg.hpp \
+  libs/boost/mpl/aux_/preprocessed/gcc/placeholders.hpp \
+  libs/boost/iterator/detail/facade_iterator_category.hpp \
+  libs/boost/core/use_default.hpp \
+  libs/boost/mpl/and.hpp \
+  libs/boost/mpl/aux_/preprocessed/gcc/and.hpp \
+  libs/boost/type_traits/is_same.hpp \
+  libs/boost/type_traits/is_const.hpp \
+  libs/boost/detail/indirect_traits.hpp \
+  libs/boost/type_traits/is_pointer.hpp \
+  libs/boost/type_traits/is_class.hpp \
+  libs/boost/type_traits/is_volatile.hpp \
+  libs/boost/type_traits/is_member_function_pointer.hpp \
+  libs/boost/type_traits/detail/is_member_function_pointer_cxx_11.hpp \
+  libs/boost/type_traits/is_member_pointer.hpp \
+  libs/boost/type_traits/remove_cv.hpp \
+  libs/boost/type_traits/remove_pointer.hpp \
+  libs/boost/detail/select_type.hpp \
+  libs/boost/iterator/detail/enable_if.hpp \
+  libs/boost/core/addressof.hpp \
+  libs/boost/type_traits/add_const.hpp \
+  libs/boost/type_traits/add_pointer.hpp \
+  libs/boost/type_traits/remove_const.hpp \
+  libs/boost/type_traits/is_pod.hpp \
+  libs/boost/type_traits/is_scalar.hpp \
+  libs/boost/type_traits/is_enum.hpp \
+  libs/boost/mpl/always.hpp \
+  libs/boost/mpl/aux_/preprocessor/default_params.hpp \
+  libs/boost/mpl/apply.hpp \
+  libs/boost/mpl/apply_fwd.hpp \
+  libs/boost/mpl/aux_/preprocessed/gcc/apply_fwd.hpp \
+  libs/boost/mpl/apply_wrap.hpp \
+  libs/boost/mpl/aux_/has_apply.hpp \
+  libs/boost/mpl/has_xxx.hpp \
+  libs/boost/mpl/aux_/type_wrapper.hpp \
+  libs/boost/mpl/aux_/config/has_xxx.hpp \
+  libs/boost/mpl/aux_/config/msvc_typename.hpp \
+  libs/boost/preprocessor/array/elem.hpp \
+  libs/boost/preprocessor/array/data.hpp \
+  libs/boost/preprocessor/array/size.hpp \
+  libs/boost/preprocessor/repetition/enum_params.hpp \
+  libs/boost/preprocessor/repetition/enum_trailing_params.hpp \
+  libs/boost/mpl/aux_/config/has_apply.hpp \
+  libs/boost/mpl/aux_/msvc_never_true.hpp \
+  libs/boost/mpl/aux_/preprocessed/gcc/apply_wrap.hpp \
+  libs/boost/mpl/lambda.hpp \
+  libs/boost/mpl/bind.hpp \
+  libs/boost/mpl/bind_fwd.hpp \
+  libs/boost/mpl/aux_/config/bind.hpp \
+  libs/boost/mpl/aux_/preprocessed/gcc/bind_fwd.hpp \
+  libs/boost/mpl/next.hpp \
+  libs/boost/mpl/next_prior.hpp \
+  libs/boost/mpl/aux_/common_name_wknd.hpp \
+  libs/boost/mpl/protect.hpp \
+  libs/boost/mpl/aux_/preprocessed/gcc/bind.hpp \
+  libs/boost/mpl/aux_/full_lambda.hpp \
+  libs/boost/mpl/quote.hpp \
+  libs/boost/mpl/void.hpp \
+  libs/boost/mpl/aux_/has_type.hpp \
+  libs/boost/mpl/aux_/config/bcc.hpp \
+  libs/boost/mpl/aux_/preprocessed/gcc/quote.hpp \
+  libs/boost/mpl/aux_/template_arity.hpp \
+  libs/boost/mpl/aux_/preprocessed/gcc/template_arity.hpp \
+  libs/boost/mpl/aux_/preprocessed/gcc/full_lambda.hpp \
+  libs/boost/mpl/aux_/preprocessed/gcc/apply.hpp \
+  libs/boost/io/quoted.hpp \
+  libs/boost/io/detail/buffer_fill.hpp \
+  libs/boost/io/detail/ostream_guard.hpp \
+  libs/boost/io/ios_state.hpp \
+  libs/boost/io_fwd.hpp \
+  libs/boost/functional/hash_fwd.hpp \
+  libs/boost/container_hash/hash_fwd.hpp \
+  libs/boost/filesystem/detail/path_traits.hpp \
+  libs/boost/system/error_category.hpp \
+  libs/boost/system/detail/error_category.hpp \
+  libs/boost/system/detail/config.hpp \
+  libs/boost/cstdint.hpp \
+  libs/boost/system/detail/error_category_impl.hpp \
+  libs/boost/system/detail/error_condition.hpp \
+  libs/boost/system/detail/generic_category.hpp \
+  libs/boost/system/detail/generic_category_message.hpp \
+  libs/boost/system/detail/enable_if.hpp \
+  libs/boost/system/detail/is_same.hpp \
+  libs/boost/system/detail/errc.hpp \
+  libs/boost/system/is_error_condition_enum.hpp \
+  libs/boost/system/detail/cerrno.hpp \
+  libs/boost/system/detail/append_int.hpp \
+  libs/boost/system/detail/snprintf.hpp \
+  libs/boost/system/detail/error_code.hpp \
+  libs/boost/system/is_error_code_enum.hpp \
+  libs/boost/system/detail/system_category.hpp \
+  libs/boost/system/detail/system_category_impl.hpp \
+  libs/boost/system/detail/system_category_message.hpp \
+  libs/boost/system/detail/interop_category.hpp \
+  libs/boost/system/detail/std_category.hpp \
+  libs/boost/assert/source_location.hpp \
+  libs/boost/system/detail/std_category_impl.hpp \
+  libs/boost/system/detail/mutex.hpp \
+  libs/boost/iterator/is_iterator.hpp \
+  libs/boost/type_traits/negation.hpp \
+  libs/boost/type_traits/conjunction.hpp \
+  libs/boost/type_traits/conditional.hpp \
+  libs/boost/filesystem/detail/type_traits/conjunction.hpp \
+  libs/boost/filesystem/detail/header.hpp \
+  libs/boost/config/abi_prefix.hpp \
+  libs/boost/filesystem/detail/footer.hpp \
+  libs/boost/config/abi_suffix.hpp \
+  libs/boost/filesystem/detail/type_traits/negation.hpp \
+  libs/boost/filesystem/detail/type_traits/disjunction.hpp \
+  libs/boost/type_traits/disjunction.hpp \
+  libs/boost/filesystem/exception.hpp \
+  libs/boost/system/error_code.hpp \
+  libs/boost/system/error_condition.hpp \
+  libs/boost/system/errc.hpp \
+  libs/boost/system/generic_category.hpp \
+  libs/boost/system/system_category.hpp \
+  libs/boost/system/detail/throws.hpp \
+  libs/boost/system/system_error.hpp \
+  libs/boost/smart_ptr/intrusive_ptr.hpp \
+  libs/boost/smart_ptr/detail/requires_cxx11.hpp \
+  libs/boost/config/pragma_message.hpp \
+  libs/boost/smart_ptr/detail/sp_convertible.hpp \
+  libs/boost/smart_ptr/detail/sp_nullptr_t.hpp \
+  libs/boost/smart_ptr/detail/sp_noexcept.hpp \
+  libs/boost/config/no_tr1/functional.hpp \
+  libs/boost/smart_ptr/detail/operator_bool.hpp \
+  libs/boost/smart_ptr/intrusive_ref_counter.hpp \
+  libs/boost/smart_ptr/detail/atomic_count.hpp \
+  libs/boost/smart_ptr/detail/sp_has_gcc_intrinsics.hpp \
+  libs/boost/smart_ptr/detail/sp_has_sync_intrinsics.hpp \
+  libs/boost/smart_ptr/detail/atomic_count_gcc_atomic.hpp \
+  libs/boost/filesystem/directory.hpp \
+  libs/boost/filesystem/file_status.hpp \
+  libs/boost/detail/bitmask.hpp \
+  libs/boost/filesystem/operations.hpp \
+  src/DataManager/LMDBKeys.h \
+  src/Helper/util.h \
+  libs/futu/include/google/protobuf/stubs/common.h \
+  /usr/include/c++/8/set \
+  /usr/include/c++/8/bits/stl_set.h \
+  /usr/include/c++/8/bits/stl_multiset.h \
+  libs/futu/include/google/protobuf/stubs/port.h \
+  /usr/include/c++/8/stdlib.h \
+  libs/futu/include/google/protobuf/stubs/platform_macros.h \
+  /usr/include/x86_64-linux-gnu/sys/param.h \
+  /usr/include/signal.h \
+  /usr/include/x86_64-linux-gnu/bits/signum.h \
+  /usr/include/x86_64-linux-gnu/bits/signum-generic.h \
+  /usr/include/x86_64-linux-gnu/bits/types/sig_atomic_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__sigval_t.h \
+  /usr/include/x86_64-linux-gnu/bits/siginfo-arch.h \
+  /usr/include/x86_64-linux-gnu/bits/siginfo-consts.h \
+  /usr/include/x86_64-linux-gnu/bits/siginfo-consts-arch.h \
+  /usr/include/x86_64-linux-gnu/bits/types/sigval_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/sigevent_t.h \
+  /usr/include/x86_64-linux-gnu/bits/sigevent-consts.h \
+  /usr/include/x86_64-linux-gnu/bits/sigaction.h \
+  /usr/include/x86_64-linux-gnu/bits/sigcontext.h \
+  /usr/include/x86_64-linux-gnu/bits/types/stack_t.h \
+  /usr/include/x86_64-linux-gnu/sys/ucontext.h \
+  /usr/include/x86_64-linux-gnu/bits/sigstack.h \
+  /usr/include/x86_64-linux-gnu/bits/ss_flags.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_sigstack.h \
+  /usr/include/x86_64-linux-gnu/bits/sigthread.h \
+  /usr/include/x86_64-linux-gnu/bits/param.h \
+  /usr/include/linux/param.h \
+  /usr/include/x86_64-linux-gnu/asm/param.h \
+  /usr/include/asm-generic/param.h \
+  /usr/include/byteswap.h \
+  libs/futu/include/google/protobuf/stubs/macros.h \
+  libs/futu/include/google/protobuf/stubs/logging.h \
+  libs/futu/include/google/protobuf/stubs/scoped_ptr.h \
+  libs/futu/include/google/protobuf/stubs/mutex.h \
+  libs/futu/include/google/protobuf/stubs/callback.h \
+  libs/futu/include/google/protobuf/stubs/type_traits.h \
+  libs/futu/include/google/protobuf/stubs/template_util.h \
+  libs/futu/include/google/protobuf/message_lite.h \
+  libs/futu/include/google/protobuf/stubs/once.h \
+  libs/futu/include/google/protobuf/stubs/atomicops.h \
+  libs/futu/include/google/protobuf/stubs/atomicops_internals_x86_gcc.h \
+  libs/futu/include/google/protobuf/message.h \
+  libs/futu/include/google/protobuf/arena.h \
+  libs/futu/include/google/protobuf/arena_impl.h \
+  libs/futu/include/google/protobuf/stubs/atomic_sequence_num.h \
+  libs/futu/include/google/protobuf/descriptor.h \
+  libs/futu/include/google/protobuf/util/json_util.h \
+  libs/futu/include/google/protobuf/util/type_resolver.h \
+  libs/futu/include/google/protobuf/stubs/status.h \
+  libs/futu/include/google/protobuf/stubs/stringpiece.h \
+  libs/futu/include/google/protobuf/stubs/hash.h \
+  /usr/include/c++/8/unordered_set \
+  /usr/include/c++/8/bits/unordered_set.h \
+  libs/futu/include/google/protobuf/stubs/bytestream.h \
+  libs/rapidjson/include/rapidjson/rapidjson.h
 
 CMakeFiles/test.dir/src/FUTU/FutuEngine.cpp.o: src/FUTU/FutuEngine.cpp \
   /usr/include/stdc-predef.h \
@@ -650,6 +1408,8 @@ CMakeFiles/test.dir/src/FUTU/FutuEngine.cpp.o: src/FUTU/FutuEngine.cpp \
   libs/rapidjson/include/rapidjson/internal/itoa.h \
   libs/rapidjson/include/rapidjson/stringbuffer.h \
   libs/rapidjson/include/rapidjson/stringbuffer.h \
+  /usr/include/c++/8/sstream \
+  /usr/include/c++/8/bits/sstream.tcc \
   /usr/include/c++/8/iostream \
   src/Interface/IMessenger.h \
   src/Helper/logger.h \
@@ -968,8 +1728,6 @@ CMakeFiles/test.dir/src/FUTU/FutuEngine.cpp.o: src/FUTU/FutuEngine.cpp \
   libs/futu/include/google/protobuf/stubs/stringpiece.h \
   libs/futu/include/google/protobuf/stubs/bytestream.h \
   libs/rapidjson/include/rapidjson/rapidjson.h \
-  /usr/include/c++/8/sstream \
-  /usr/include/c++/8/bits/sstream.tcc \
   /home/emk/vcpkg/installed/x64-linux/include/json/json.h \
   /home/emk/vcpkg/installed/x64-linux/include/json/config.h \
   /home/emk/vcpkg/installed/x64-linux/include/json/allocator.h \
@@ -984,274 +1742,6 @@ CMakeFiles/test.dir/src/FUTU/FutuEngine.cpp.o: src/FUTU/FutuEngine.cpp \
   /usr/include/c++/8/stack \
   /usr/include/c++/8/bits/stl_stack.h \
   /home/emk/vcpkg/installed/x64-linux/include/json/writer.h
-
-CMakeFiles/test.dir/src/Helper/ThreadPool.cpp.o: src/Helper/ThreadPool.cpp \
-  /usr/include/stdc-predef.h \
-  src/Helper/ThreadPool.h \
-  /usr/include/c++/8/queue \
-  /usr/include/c++/8/deque \
-  /usr/include/c++/8/bits/stl_algobase.h \
-  /usr/include/x86_64-linux-gnu/c++/8/bits/c++config.h \
-  /usr/include/x86_64-linux-gnu/c++/8/bits/os_defines.h \
-  /usr/include/features.h \
-  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
-  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
-  /usr/include/x86_64-linux-gnu/bits/long-double.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
-  /usr/include/x86_64-linux-gnu/c++/8/bits/cpu_defines.h \
-  /usr/include/c++/8/bits/functexcept.h \
-  /usr/include/c++/8/bits/exception_defines.h \
-  /usr/include/c++/8/bits/cpp_type_traits.h \
-  /usr/include/c++/8/ext/type_traits.h \
-  /usr/include/c++/8/ext/numeric_traits.h \
-  /usr/include/c++/8/bits/stl_pair.h \
-  /usr/include/c++/8/bits/move.h \
-  /usr/include/c++/8/bits/concept_check.h \
-  /usr/include/c++/8/type_traits \
-  /usr/include/c++/8/bits/stl_iterator_base_types.h \
-  /usr/include/c++/8/bits/stl_iterator_base_funcs.h \
-  /usr/include/c++/8/debug/assertions.h \
-  /usr/include/c++/8/bits/stl_iterator.h \
-  /usr/include/c++/8/bits/ptr_traits.h \
-  /usr/include/c++/8/debug/debug.h \
-  /usr/include/c++/8/bits/predefined_ops.h \
-  /usr/include/c++/8/bits/allocator.h \
-  /usr/include/x86_64-linux-gnu/c++/8/bits/c++allocator.h \
-  /usr/include/c++/8/ext/new_allocator.h \
-  /usr/include/c++/8/new \
-  /usr/include/c++/8/exception \
-  /usr/include/c++/8/bits/exception.h \
-  /usr/include/c++/8/bits/exception_ptr.h \
-  /usr/include/c++/8/bits/cxxabi_init_exception.h \
-  /usr/lib/gcc/x86_64-linux-gnu/8/include/stddef.h \
-  /usr/include/c++/8/typeinfo \
-  /usr/include/c++/8/bits/hash_bytes.h \
-  /usr/include/c++/8/bits/nested_exception.h \
-  /usr/include/c++/8/bits/memoryfwd.h \
-  /usr/include/c++/8/bits/stl_construct.h \
-  /usr/include/c++/8/ext/alloc_traits.h \
-  /usr/include/c++/8/bits/alloc_traits.h \
-  /usr/include/c++/8/bits/stl_uninitialized.h \
-  /usr/include/c++/8/bits/stl_deque.h \
-  /usr/include/c++/8/initializer_list \
-  /usr/include/c++/8/bits/range_access.h \
-  /usr/include/c++/8/bits/deque.tcc \
-  /usr/include/c++/8/vector \
-  /usr/include/c++/8/bits/stl_vector.h \
-  /usr/include/c++/8/bits/stl_bvector.h \
-  /usr/include/c++/8/bits/functional_hash.h \
-  /usr/include/c++/8/bits/vector.tcc \
-  /usr/include/c++/8/bits/stl_heap.h \
-  /usr/include/c++/8/bits/stl_function.h \
-  /usr/include/c++/8/backward/binders.h \
-  /usr/include/c++/8/bits/stl_queue.h \
-  /usr/include/c++/8/bits/uses_allocator.h \
-  /usr/include/c++/8/memory \
-  /usr/include/c++/8/bits/stl_tempbuf.h \
-  /usr/include/c++/8/bits/stl_raw_storage_iter.h \
-  /usr/include/c++/8/iosfwd \
-  /usr/include/c++/8/bits/stringfwd.h \
-  /usr/include/c++/8/bits/postypes.h \
-  /usr/include/c++/8/cwchar \
-  /usr/include/wchar.h \
-  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/lib/gcc/x86_64-linux-gnu/8/include/stdarg.h \
-  /usr/include/x86_64-linux-gnu/bits/wchar.h \
-  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
-  /usr/include/c++/8/ext/atomicity.h \
-  /usr/include/x86_64-linux-gnu/c++/8/bits/gthr.h \
-  /usr/include/x86_64-linux-gnu/c++/8/bits/gthr-default.h \
-  /usr/include/pthread.h \
-  /usr/include/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
-  /usr/include/x86_64-linux-gnu/bits/types.h \
-  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
-  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
-  /usr/include/sched.h \
-  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
-  /usr/include/x86_64-linux-gnu/bits/sched.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h \
-  /usr/include/x86_64-linux-gnu/bits/cpu-set.h \
-  /usr/include/time.h \
-  /usr/include/x86_64-linux-gnu/bits/time.h \
-  /usr/include/x86_64-linux-gnu/bits/timex.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
-  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
-  /usr/include/x86_64-linux-gnu/bits/setjmp.h \
-  /usr/include/x86_64-linux-gnu/c++/8/bits/atomic_word.h \
-  /usr/include/c++/8/ext/concurrence.h \
-  /usr/include/c++/8/bits/unique_ptr.h \
-  /usr/include/c++/8/utility \
-  /usr/include/c++/8/bits/stl_relops.h \
-  /usr/include/c++/8/tuple \
-  /usr/include/c++/8/array \
-  /usr/include/c++/8/stdexcept \
-  /usr/include/c++/8/string \
-  /usr/include/c++/8/bits/char_traits.h \
-  /usr/include/c++/8/cstdint \
-  /usr/lib/gcc/x86_64-linux-gnu/8/include/stdint.h \
-  /usr/include/stdint.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
-  /usr/include/c++/8/bits/localefwd.h \
-  /usr/include/x86_64-linux-gnu/c++/8/bits/c++locale.h \
-  /usr/include/c++/8/clocale \
-  /usr/include/locale.h \
-  /usr/include/x86_64-linux-gnu/bits/locale.h \
-  /usr/include/c++/8/cctype \
-  /usr/include/ctype.h \
-  /usr/include/c++/8/bits/ostream_insert.h \
-  /usr/include/c++/8/bits/cxxabi_forced.h \
-  /usr/include/c++/8/bits/basic_string.h \
-  /usr/include/c++/8/ext/string_conversions.h \
-  /usr/include/c++/8/cstdlib \
-  /usr/include/stdlib.h \
-  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
-  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
-  /usr/include/x86_64-linux-gnu/sys/types.h \
-  /usr/include/x86_64-linux-gnu/sys/select.h \
-  /usr/include/x86_64-linux-gnu/bits/select.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
-  /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-  /usr/include/c++/8/bits/std_abs.h \
-  /usr/include/c++/8/cstdio \
-  /usr/include/stdio.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
-  /usr/include/c++/8/cerrno \
-  /usr/include/errno.h \
-  /usr/include/x86_64-linux-gnu/bits/errno.h \
-  /usr/include/linux/errno.h \
-  /usr/include/x86_64-linux-gnu/asm/errno.h \
-  /usr/include/asm-generic/errno.h \
-  /usr/include/asm-generic/errno-base.h \
-  /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
-  /usr/include/c++/8/bits/basic_string.tcc \
-  /usr/include/c++/8/bits/invoke.h \
-  /usr/include/c++/8/bits/shared_ptr.h \
-  /usr/include/c++/8/bits/shared_ptr_base.h \
-  /usr/include/c++/8/bits/allocated_ptr.h \
-  /usr/include/c++/8/bits/refwrap.h \
-  /usr/include/c++/8/ext/aligned_buffer.h \
-  /usr/include/c++/8/bits/shared_ptr_atomic.h \
-  /usr/include/c++/8/bits/atomic_base.h \
-  /usr/include/c++/8/bits/atomic_lockfree_defines.h \
-  /usr/include/c++/8/backward/auto_ptr.h \
-  /usr/include/c++/8/thread \
-  /usr/include/c++/8/chrono \
-  /usr/include/c++/8/ratio \
-  /usr/include/c++/8/limits \
-  /usr/include/c++/8/ctime \
-  /usr/include/c++/8/bits/parse_numbers.h \
-  /usr/include/c++/8/functional \
-  /usr/include/c++/8/bits/std_function.h \
-  /usr/include/c++/8/mutex \
-  /usr/include/c++/8/system_error \
-  /usr/include/x86_64-linux-gnu/c++/8/bits/error_constants.h \
-  /usr/include/c++/8/bits/std_mutex.h \
-  /usr/include/c++/8/atomic \
-  /home/emk/vcpkg/installed/x64-linux/include/json/json.h \
-  /home/emk/vcpkg/installed/x64-linux/include/json/config.h \
-  /usr/include/c++/8/cstddef \
-  /usr/include/c++/8/istream \
-  /usr/include/c++/8/ios \
-  /usr/include/c++/8/bits/ios_base.h \
-  /usr/include/c++/8/bits/locale_classes.h \
-  /usr/include/c++/8/bits/locale_classes.tcc \
-  /usr/include/c++/8/streambuf \
-  /usr/include/c++/8/bits/streambuf.tcc \
-  /usr/include/c++/8/bits/basic_ios.h \
-  /usr/include/c++/8/bits/locale_facets.h \
-  /usr/include/c++/8/cwctype \
-  /usr/include/wctype.h \
-  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
-  /usr/include/x86_64-linux-gnu/c++/8/bits/ctype_base.h \
-  /usr/include/c++/8/bits/streambuf_iterator.h \
-  /usr/include/x86_64-linux-gnu/c++/8/bits/ctype_inline.h \
-  /usr/include/c++/8/bits/locale_facets.tcc \
-  /usr/include/c++/8/bits/basic_ios.tcc \
-  /usr/include/c++/8/ostream \
-  /usr/include/c++/8/bits/ostream.tcc \
-  /usr/include/c++/8/bits/istream.tcc \
-  /usr/include/c++/8/sstream \
-  /usr/include/c++/8/bits/sstream.tcc \
-  /home/emk/vcpkg/installed/x64-linux/include/json/allocator.h \
-  /usr/include/c++/8/cstring \
-  /usr/include/string.h \
-  /usr/include/strings.h \
-  /home/emk/vcpkg/installed/x64-linux/include/json/version.h \
-  /home/emk/vcpkg/installed/x64-linux/include/json/json_features.h \
-  /home/emk/vcpkg/installed/x64-linux/include/json/forwards.h \
-  /home/emk/vcpkg/installed/x64-linux/include/json/reader.h \
-  /home/emk/vcpkg/installed/x64-linux/include/json/value.h \
-  /usr/include/c++/8/map \
-  /usr/include/c++/8/bits/stl_tree.h \
-  /usr/include/c++/8/bits/stl_map.h \
-  /usr/include/c++/8/bits/stl_multimap.h \
-  /usr/include/c++/8/stack \
-  /usr/include/c++/8/bits/stl_stack.h \
-  /home/emk/vcpkg/installed/x64-linux/include/json/writer.h \
-  /usr/include/c++/8/condition_variable \
-  src/Interface/datastructure.h \
-  libs/rapidjson/include/rapidjson/document.h \
-  libs/rapidjson/include/rapidjson/reader.h \
-  libs/rapidjson/include/rapidjson/allocators.h \
-  libs/rapidjson/include/rapidjson/rapidjson.h \
-  /usr/include/inttypes.h \
-  /usr/include/c++/8/cassert \
-  /usr/include/assert.h \
-  libs/rapidjson/include/rapidjson/stream.h \
-  libs/rapidjson/include/rapidjson/encodings.h \
-  libs/rapidjson/include/rapidjson/encodedstream.h \
-  libs/rapidjson/include/rapidjson/memorystream.h \
-  libs/rapidjson/include/rapidjson/internal/meta.h \
-  libs/rapidjson/include/rapidjson/rapidjson.h \
-  libs/rapidjson/include/rapidjson/internal/stack.h \
-  libs/rapidjson/include/rapidjson/allocators.h \
-  libs/rapidjson/include/rapidjson/internal/swap.h \
-  libs/rapidjson/include/rapidjson/internal/strtod.h \
-  libs/rapidjson/include/rapidjson/internal/ieee754.h \
-  libs/rapidjson/include/rapidjson/internal/biginteger.h \
-  libs/rapidjson/include/rapidjson/internal/diyfp.h \
-  libs/rapidjson/include/rapidjson/internal/pow10.h \
-  libs/rapidjson/include/rapidjson/error/error.h \
-  libs/rapidjson/include/rapidjson/rapidjson.h \
-  libs/rapidjson/include/rapidjson/internal/strfunc.h \
-  libs/rapidjson/include/rapidjson/stream.h \
-  libs/rapidjson/include/rapidjson/rapidjson.h \
-  /usr/include/c++/8/iterator \
-  /usr/include/c++/8/bits/stream_iterator.h \
-  libs/rapidjson/include/rapidjson/writer.h \
-  libs/rapidjson/include/rapidjson/internal/dtoa.h \
-  libs/rapidjson/include/rapidjson/internal/itoa.h \
-  libs/rapidjson/include/rapidjson/internal/itoa.h \
-  libs/rapidjson/include/rapidjson/stringbuffer.h \
-  libs/rapidjson/include/rapidjson/stringbuffer.h \
-  /usr/include/c++/8/iostream
 
 CMakeFiles/test.dir/src/Helper/logger.cpp.o: src/Helper/logger.cpp \
   /usr/include/stdc-predef.h \
@@ -1794,6 +2284,8 @@ CMakeFiles/test.dir/src/Interface/IEngine.cpp.o: src/Interface/IEngine.cpp \
   libs/rapidjson/include/rapidjson/internal/itoa.h \
   libs/rapidjson/include/rapidjson/stringbuffer.h \
   libs/rapidjson/include/rapidjson/stringbuffer.h \
+  /usr/include/c++/8/sstream \
+  /usr/include/c++/8/bits/sstream.tcc \
   /usr/include/c++/8/iostream \
   src/Helper/logger.h \
   /usr/include/c++/8/fstream \
@@ -2305,12 +2797,12 @@ CMakeFiles/test.dir/src/Interface/IMessenger.cpp.o: src/Interface/IMessenger.cpp
   libs/rapidjson/include/rapidjson/internal/itoa.h \
   libs/rapidjson/include/rapidjson/stringbuffer.h \
   libs/rapidjson/include/rapidjson/stringbuffer.h \
+  /usr/include/c++/8/sstream \
+  /usr/include/c++/8/bits/sstream.tcc \
   /usr/include/c++/8/iostream \
   libs/nng-1.8.0/include/nng/nng.h \
   /usr/lib/gcc/x86_64-linux-gnu/8/include/stdbool.h \
   src/Interface/datastructure.h \
-  /usr/include/c++/8/sstream \
-  /usr/include/c++/8/bits/sstream.tcc \
   src/Helper/util.h \
   libs/futu/include/google/protobuf/stubs/common.h \
   /usr/include/c++/8/set \
@@ -2581,6 +3073,8 @@ CMakeFiles/test.dir/src/Interface/datastruture.cpp.o: src/Interface/datastruture
   libs/rapidjson/include/rapidjson/internal/itoa.h \
   libs/rapidjson/include/rapidjson/stringbuffer.h \
   libs/rapidjson/include/rapidjson/stringbuffer.h \
+  /usr/include/c++/8/sstream \
+  /usr/include/c++/8/bits/sstream.tcc \
   /usr/include/c++/8/iostream \
   /usr/include/c++/8/vector \
   /usr/include/c++/8/bits/stl_construct.h \
@@ -2688,9 +3182,7 @@ CMakeFiles/test.dir/src/Interface/datastruture.cpp.o: src/Interface/datastruture
   /usr/include/c++/8/unordered_set \
   /usr/include/c++/8/bits/unordered_set.h \
   libs/futu/include/google/protobuf/stubs/bytestream.h \
-  libs/rapidjson/include/rapidjson/rapidjson.h \
-  /usr/include/c++/8/sstream \
-  /usr/include/c++/8/bits/sstream.tcc
+  libs/rapidjson/include/rapidjson/rapidjson.h
 
 CMakeFiles/test.dir/test.cpp.o: test.cpp \
   /usr/include/stdc-predef.h \
@@ -3050,6 +3542,8 @@ CMakeFiles/test.dir/test.cpp.o: test.cpp \
   libs/rapidjson/include/rapidjson/internal/itoa.h \
   libs/rapidjson/include/rapidjson/stringbuffer.h \
   libs/rapidjson/include/rapidjson/stringbuffer.h \
+  /usr/include/c++/8/sstream \
+  /usr/include/c++/8/bits/sstream.tcc \
   /usr/include/c++/8/iostream \
   libs/nng-1.8.0/include/nng/nng.h \
   /usr/lib/gcc/x86_64-linux-gnu/8/include/stdbool.h \
@@ -3212,8 +3706,6 @@ CMakeFiles/test.dir/test.cpp.o: test.cpp \
   libs/futu/include/futu/FTSPI.h \
   /home/emk/vcpkg/installed/x64-linux/include/json/json.h \
   /home/emk/vcpkg/installed/x64-linux/include/json/config.h \
-  /usr/include/c++/8/sstream \
-  /usr/include/c++/8/bits/sstream.tcc \
   /home/emk/vcpkg/installed/x64-linux/include/json/allocator.h \
   /home/emk/vcpkg/installed/x64-linux/include/json/version.h \
   /home/emk/vcpkg/installed/x64-linux/include/json/json_features.h \
@@ -3236,46 +3728,62 @@ CMakeFiles/test.dir/test.cpp.o: test.cpp \
   libs/futu/include/google/protobuf/stubs/status.h \
   libs/futu/include/google/protobuf/stubs/stringpiece.h \
   libs/futu/include/google/protobuf/stubs/bytestream.h \
-  libs/rapidjson/include/rapidjson/rapidjson.h
+  libs/rapidjson/include/rapidjson/rapidjson.h \
+  src/DataManager/DataWriter.h \
+  src/DataManager/tslmdb.hpp \
+  libs/lmdb/liblmdb/lmdb.h \
+  src/Helper/ThreadPool.hpp
 
 
 test.cpp:
 
-src/Interface/datastruture.cpp:
-
 libs/nng-1.8.0/include/nng/protocol/pipeline0/push.h:
 
-libs/nng-1.8.0/include/nng/protocol/pubsub0/pub.h:
+libs/nng-1.8.0/include/nng/protocol/pipeline0/pull.h:
 
-/usr/include/c++/8/iomanip:
+libs/nng-1.8.0/include/nng/protocol/pubsub0/sub.h:
 
-src/Helper/ThreadPool.cpp:
+src/Interface/IMessenger.cpp:
+
+src/Helper/logger.cpp:
 
 libs/futu/include/futu/FTSPI.h:
 
+libs/futu/include/futu/FTAPIChannel_Define.h:
+
 libs/futu/include/futu/FTAPIChannel.h:
 
-libs/futu/include/Proto/Trd_UpdateOrder.pb.h:
+libs/futu/include/futu/Include_FTAPIChannel.h:
 
-libs/futu/include/Proto/Trd_UnlockTrade.pb.h:
+libs/futu/include/futu/FTAPI_Define_ProtoID.h:
 
-libs/futu/include/Proto/Trd_SubAccPush.pb.h:
+libs/futu/include/Proto/Trd_GetOrderFee.pb.h:
+
+libs/futu/include/Proto/Trd_UpdateOrderFill.pb.h:
 
 libs/futu/include/Proto/Trd_ReconfirmOrder.pb.h:
 
 libs/futu/include/Proto/Trd_PlaceOrder.pb.h:
 
+libs/futu/include/Proto/Trd_Notify.pb.h:
+
 libs/futu/include/Proto/Trd_ModifyOrder.pb.h:
+
+libs/futu/include/Proto/Trd_GetPositionList.pb.h:
 
 libs/futu/include/Proto/Trd_GetOrderFillList.pb.h:
 
-libs/futu/include/Proto/Trd_GetFunds.pb.h:
+libs/futu/include/Proto/Trd_GetHistoryOrderList.pb.h:
 
-libs/futu/include/Proto/Trd_Common.pb.h:
+libs/futu/include/Proto/Trd_GetAccList.pb.h:
 
 libs/futu/include/Proto/Qot_GetOptionExpirationDate.pb.h:
 
+libs/futu/include/Proto/Trd_SubAccPush.pb.h:
+
 libs/futu/include/Proto/Qot_GetMarketState.pb.h:
+
+libs/futu/include/Proto/Qot_GetUserSecurityGroup.pb.h:
 
 libs/futu/include/Proto/Qot_UpdatePriceReminder.pb.h:
 
@@ -3283,43 +3791,39 @@ libs/futu/include/Proto/Qot_GetPriceReminder.pb.h:
 
 libs/futu/include/Proto/Qot_SetPriceReminder.pb.h:
 
+libs/futu/include/Proto/Qot_GetFutureInfo.pb.h:
+
 libs/futu/include/Proto/Qot_GetIpoList.pb.h:
 
 libs/futu/include/Proto/Qot_GetCodeChange.pb.h:
 
+libs/futu/include/Proto/Qot_StockFilter.pb.h:
+
 libs/futu/include/Proto/Qot_UpdateTicker.pb.h:
 
-libs/futu/include/Proto/Qot_UpdateKL.pb.h:
+libs/futu/include/Proto/Qot_UpdateRT.pb.h:
 
-libs/futu/include/Proto/Qot_UpdateBroker.pb.h:
-
-libs/futu/include/Proto/Qot_Sub.pb.h:
-
-libs/futu/include/Proto/Qot_RequestHistoryKLQuota.pb.h:
-
-libs/futu/include/Proto/Qot_RequestHistoryKL.pb.h:
+libs/futu/include/Proto/Qot_RequestRehab.pb.h:
 
 libs/futu/include/Proto/Qot_ModifyUserSecurity.pb.h:
 
-libs/futu/include/Proto/Qot_GetTradeDate.pb.h:
+libs/futu/include/Proto/Qot_GetWarrant.pb.h:
+
+libs/futu/include/Proto/Qot_GetTicker.pb.h:
 
 libs/futu/include/Proto/Qot_GetSuspend.pb.h:
 
-libs/futu/include/Proto/Qot_GetSubInfo.pb.h:
+libs/futu/include/Proto/Trd_GetFunds.pb.h:
 
-libs/futu/include/Proto/Qot_GetStaticInfo.pb.h:
+libs/futu/include/Proto/Qot_GetSubInfo.pb.h:
 
 libs/futu/include/Proto/Qot_GetRT.pb.h:
 
-libs/futu/include/Proto/Qot_GetReference.pb.h:
-
 libs/futu/include/Proto/Qot_GetPlateSecurity.pb.h:
 
-libs/futu/include/Proto/Qot_GetOrderBook.pb.h:
+libs/futu/include/Proto/Qot_GetOwnerPlate.pb.h:
 
-libs/futu/include/Proto/Qot_GetOptionChain.pb.h:
-
-libs/futu/include/Proto/Qot_GetKL.pb.h:
+libs/futu/include/Proto/Qot_GetHoldingChangeList.pb.h:
 
 libs/futu/include/Proto/Qot_GetCapitalFlow.pb.h:
 
@@ -3327,55 +3831,35 @@ libs/futu/include/Proto/Qot_GetCapitalDistribution.pb.h:
 
 libs/futu/include/Proto/Qot_GetBasicQot.pb.h:
 
-libs/futu/include/Proto/GetUserInfo.pb.h:
-
-libs/futu/include/Proto/Trd_Notify.pb.h:
-
-libs/futu/include/Proto/Qot_Common.pb.h:
+libs/futu/include/Proto/GetGlobalState.pb.h:
 
 libs/futu/include/Proto/GetDelayStatistics.pb.h:
 
 libs/futu/include/Proto/Notify.pb.h:
 
-libs/futu/include/Proto/KeepAlive.pb.h:
-
-libs/futu/include/Proto/Qot_GetBroker.pb.h:
-
 libs/futu/include/Proto/InitConnect.pb.h:
 
-libs/futu/include/google/protobuf/generated_enum_reflection.h:
-
-libs/futu/include/google/protobuf/extension_set.h:
-
-libs/futu/include/google/protobuf/unknown_field_set.h:
-
-libs/futu/include/Proto/Qot_UpdateBasicQot.pb.h:
+libs/futu/include/google/protobuf/metadata_lite.h:
 
 libs/futu/include/google/protobuf/metadata.h:
 
 libs/futu/include/google/protobuf/has_bits.h:
 
-src/Interface/IMessenger.cpp:
+libs/futu/include/google/protobuf/generated_message_util.h:
+
+libs/futu/include/google/protobuf/map_field_lite.h:
 
 libs/futu/include/google/protobuf/map_entry_lite.h:
 
-libs/nng-1.8.0/include/nng/protocol/pipeline0/pull.h:
-
-libs/futu/include/google/protobuf/stubs/casts.h:
-
-libs/futu/include/google/protobuf/generated_message_util.h:
+libs/futu/include/google/protobuf/wire_format_lite.h:
 
 libs/futu/include/google/protobuf/repeated_field.h:
 
 libs/futu/include/google/protobuf/wire_format_lite_inl.h:
 
-libs/futu/include/Proto/Qot_UpdateRT.pb.h:
+libs/futu/include/google/protobuf/map_type_handler.h:
 
 libs/futu/include/google/protobuf/generated_enum_util.h:
-
-libs/futu/include/google/protobuf/map.h:
-
-libs/futu/include/google/protobuf/arenastring.h:
 
 libs/futu/include/google/protobuf/io/coded_stream.h:
 
@@ -3383,948 +3867,1594 @@ libs/futu/include/Proto/Common.pb.h:
 
 libs/futu/include/futu/FTAPI_Define.h:
 
-libs/futu/include/futu/FTAPI.h:
-
 src/FUTU/FutuEngine.h:
 
-src/FUTU/FutuEngine.cpp:
+src/DataManager/LMDBKeys.h:
 
-libs/nng-1.8.0/include/nng/nng.h:
+libs/boost/filesystem/operations.hpp:
 
-src/Interface/IMessenger.h:
+libs/futu/include/google/protobuf/extension_set.h:
 
-libs/futu/include/google/protobuf/stubs/bytestream.h:
+libs/boost/filesystem/directory.hpp:
 
-/usr/include/c++/8/unordered_set:
+libs/boost/smart_ptr/detail/atomic_count_gcc_atomic.hpp:
 
-libs/futu/include/Proto/Verification.pb.h:
+libs/boost/smart_ptr/detail/sp_has_gcc_intrinsics.hpp:
 
-libs/futu/include/google/protobuf/stubs/hash.h:
+libs/boost/smart_ptr/detail/atomic_count.hpp:
 
-libs/futu/include/google/protobuf/stubs/stringpiece.h:
+libs/boost/smart_ptr/intrusive_ref_counter.hpp:
 
-libs/futu/include/google/protobuf/stubs/status.h:
+libs/boost/smart_ptr/detail/operator_bool.hpp:
 
-libs/futu/include/google/protobuf/arena_impl.h:
+libs/boost/smart_ptr/detail/sp_convertible.hpp:
 
-libs/futu/include/Proto/Qot_GetUserSecurity.pb.h:
+libs/boost/config/pragma_message.hpp:
 
-libs/futu/include/google/protobuf/stubs/atomicops_internals_x86_gcc.h:
+libs/boost/smart_ptr/detail/requires_cxx11.hpp:
 
-libs/futu/include/google/protobuf/generated_message_table_driven.h:
+libs/boost/smart_ptr/intrusive_ptr.hpp:
 
-libs/futu/include/google/protobuf/stubs/atomicops.h:
+libs/boost/system/system_error.hpp:
 
-libs/futu/include/google/protobuf/stubs/once.h:
+libs/boost/system/system_category.hpp:
 
-libs/futu/include/google/protobuf/stubs/template_util.h:
+libs/boost/system/generic_category.hpp:
 
-libs/futu/include/google/protobuf/stubs/callback.h:
+libs/boost/system/errc.hpp:
 
-libs/futu/include/google/protobuf/stubs/mutex.h:
+libs/boost/system/error_code.hpp:
 
-libs/futu/include/google/protobuf/wire_format_lite.h:
+libs/boost/filesystem/exception.hpp:
 
-libs/futu/include/google/protobuf/stubs/scoped_ptr.h:
+libs/boost/config/abi_suffix.hpp:
 
-libs/futu/include/google/protobuf/stubs/logging.h:
+libs/boost/filesystem/detail/footer.hpp:
 
-libs/futu/include/google/protobuf/stubs/macros.h:
+libs/boost/config/abi_prefix.hpp:
 
-/usr/include/byteswap.h:
+libs/boost/filesystem/detail/header.hpp:
 
-libs/futu/include/Proto/Qot_RequestTradeDate.pb.h:
+libs/boost/filesystem/detail/type_traits/conjunction.hpp:
 
-/usr/include/x86_64-linux-gnu/asm/param.h:
+libs/futu/include/Proto/Qot_GetTradeDate.pb.h:
 
-/usr/include/linux/param.h:
+libs/boost/type_traits/conditional.hpp:
 
-/usr/include/x86_64-linux-gnu/bits/sigthread.h:
+libs/boost/type_traits/conjunction.hpp:
 
-/usr/include/x86_64-linux-gnu/sys/ucontext.h:
+libs/boost/type_traits/negation.hpp:
 
-/usr/include/x86_64-linux-gnu/bits/types/stack_t.h:
+libs/boost/system/detail/mutex.hpp:
 
-/usr/include/x86_64-linux-gnu/bits/sigaction.h:
+libs/boost/system/detail/std_category_impl.hpp:
 
-/usr/include/x86_64-linux-gnu/bits/types/sigval_t.h:
+libs/boost/assert/source_location.hpp:
 
-/usr/include/x86_64-linux-gnu/bits/siginfo-consts-arch.h:
+/usr/include/x86_64-linux-gnu/bits/fcntl-linux.h:
 
-/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/__sigval_t.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h:
-
-/usr/include/c++/8/bits/unordered_set.h:
-
-libs/futu/include/google/protobuf/stubs/type_traits.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/sig_atomic_t.h:
-
-/usr/include/x86_64-linux-gnu/bits/signum.h:
-
-/usr/include/signal.h:
-
-/usr/include/x86_64-linux-gnu/sys/param.h:
-
-libs/futu/include/google/protobuf/stubs/platform_macros.h:
-
-/usr/include/c++/8/stdlib.h:
-
-/usr/include/c++/8/bits/stl_set.h:
-
-/usr/include/c++/8/set:
-
-libs/futu/include/google/protobuf/stubs/common.h:
-
-src/Helper/util.h:
-
-libs/spdlog-1.14.1/include/spdlog/sinks/basic_file_sink-inl.h:
-
-/usr/include/x86_64-linux-gnu/bits/sigevent-consts.h:
-
-libs/spdlog-1.14.1/include/spdlog/sinks/base_sink-inl.h:
-
-libs/spdlog-1.14.1/include/spdlog/sinks/base_sink.h:
-
-libs/spdlog-1.14.1/include/spdlog/details/file_helper-inl.h:
-
-src/Helper/logger.cpp:
-
-libs/spdlog-1.14.1/include/spdlog/details/file_helper.h:
-
-libs/spdlog-1.14.1/include/spdlog/details/synchronous_factory.h:
-
-libs/futu/include/Proto/Qot_GetPlateSet.pb.h:
-
-libs/spdlog-1.14.1/include/spdlog/sinks/ansicolor_sink.h:
-
-libs/spdlog-1.14.1/include/spdlog/sinks/sink-inl.h:
-
-libs/spdlog-1.14.1/include/spdlog/mdc.h:
-
-libs/spdlog-1.14.1/include/spdlog/details/fmt_helper.h:
-
-libs/futu/include/google/protobuf/arena.h:
-
-libs/spdlog-1.14.1/include/spdlog/formatter.h:
-
-libs/spdlog-1.14.1/include/spdlog/pattern_formatter.h:
-
-/usr/include/x86_64-linux-gnu/bits/syscall.h:
-
-/usr/include/x86_64-linux-gnu/asm/unistd_64.h:
-
-libs/futu/include/Proto/Qot_RegQotPush.pb.h:
-
-/usr/include/x86_64-linux-gnu/sys/syscall.h:
-
-/usr/include/x86_64-linux-gnu/bits/getopt_posix.h:
-
-libs/futu/include/google/protobuf/metadata_lite.h:
-
-/usr/include/x86_64-linux-gnu/bits/confname.h:
-
-/usr/include/x86_64-linux-gnu/bits/environments.h:
-
-/usr/include/x86_64-linux-gnu/bits/sysmacros.h:
-
-/usr/include/asm-generic/errno.h:
-
-/usr/include/x86_64-linux-gnu/bits/sys_errlist.h:
-
-/usr/include/x86_64-linux-gnu/bits/sched.h:
-
-/usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h:
-
-/usr/include/x86_64-linux-gnu/bits/ss_flags.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h:
-
-/usr/include/c++/8/cstdio:
-
-/usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/sigset_t.h:
-
-libs/rapidjson/include/rapidjson/internal/diyfp.h:
-
-libs/futu/include/Proto/Trd_GetHistoryOrderFillList.pb.h:
-
-/usr/include/x86_64-linux-gnu/sys/select.h:
-
-/usr/include/x86_64-linux-gnu/sys/types.h:
-
-libs/spdlog-1.14.1/include/spdlog/pattern_formatter-inl.h:
-
-/usr/include/c++/8/bits/std_abs.h:
-
-/usr/include/c++/8/ext/numeric_traits.h:
-
-/usr/include/c++/8/cassert:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
-
-/usr/include/c++/8/cstdlib:
-
-/usr/include/c++/8/bits/stl_multiset.h:
-
-/usr/include/c++/8/bits/locale_facets.tcc:
-
-/usr/include/x86_64-linux-gnu/c++/8/bits/c++io.h:
-
-/usr/include/locale.h:
-
-/usr/include/c++/8/cctype:
-
-libs/futu/include/google/protobuf/stubs/port.h:
-
-/usr/include/c++/8/bits/refwrap.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdint-uintn.h:
-
-libs/futu/include/Proto/Qot_GetWarrant.pb.h:
-
-/usr/include/c++/8/bits/std_function.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
-
-/usr/include/c++/8/bits/uniform_int_dist.h:
-
-/usr/include/c++/8/cstdint:
-
-/usr/include/x86_64-linux-gnu/bits/sigstack.h:
-
-/usr/include/c++/8/string:
-
-/usr/include/stdio.h:
-
-/usr/include/c++/8/bits/std_mutex.h:
-
-/usr/include/c++/8/bits/basic_string.h:
-
-/usr/include/c++/8/bits/ostream_insert.h:
-
-/home/emk/vcpkg/installed/x64-linux/include/json/forwards.h:
-
-/usr/include/c++/8/bits/stl_vector.h:
-
-libs/rapidjson/include/rapidjson/internal/pow10.h:
-
-libs/futu/include/Proto/Trd_GetHistoryOrderList.pb.h:
-
-/usr/include/x86_64-linux-gnu/bits/locale.h:
-
-/usr/include/x86_64-linux-gnu/bits/floatn-common.h:
-
-/usr/include/c++/8/stdexcept:
-
-/usr/include/c++/8/tuple:
-
-/usr/include/x86_64-linux-gnu/c++/8/bits/atomic_word.h:
-
-libs/futu/include/google/protobuf/message.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/8/include/stdint.h:
-
-libs/spdlog-1.14.1/include/spdlog/details/registry.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_sigstack.h:
-
-/usr/include/c++/8/bits/unique_ptr.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h:
-
-/usr/include/c++/8/ext/concurrence.h:
-
-/usr/include/x86_64-linux-gnu/bits/thread-shared-types.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/clockid_t.h:
-
-libs/spdlog-1.14.1/include/spdlog/common-inl.h:
-
-/usr/include/x86_64-linux-gnu/bits/timex.h:
-
-/usr/include/c++/8/bits/fstream.tcc:
-
-/usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h:
-
-/usr/include/c++/8/fstream:
-
-libs/rapidjson/include/rapidjson/internal/strtod.h:
-
-/usr/include/time.h:
-
-/usr/include/c++/8/experimental/bits/string_view.tcc:
-
-/usr/include/stdlib.h:
-
-/usr/include/x86_64-linux-gnu/bits/fp-fast.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/time_t.h:
-
-/usr/include/c++/8/bits/atomic_base.h:
-
-libs/futu/include/Proto/Qot_UpdateOrderBook.pb.h:
-
-/usr/include/sched.h:
-
-src/Interface/IEngine.cpp:
-
-libs/futu/include/futu/FTAPI_Define_ProtoID.h:
-
-libs/futu/include/Proto/Trd_GetOrderFee.pb.h:
-
-/usr/include/x86_64-linux-gnu/c++/8/bits/c++locale.h:
-
-libs/spdlog-1.14.1/include/spdlog/details/os.h:
-
-/usr/include/c++/8/bits/hash_bytes.h:
-
-/usr/include/x86_64-linux-gnu/bits/cpu-set.h:
-
-libs/futu/include/Proto/GetGlobalState.pb.h:
-
-/usr/include/strings.h:
-
-/usr/include/x86_64-linux-gnu/bits/typesizes.h:
-
-/usr/include/c++/8/bits/localefwd.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h:
-
-/usr/include/c++/8/bits/ios_base.h:
-
-/usr/include/endian.h:
-
-/usr/include/pthread.h:
-
-/usr/include/x86_64-linux-gnu/c++/8/bits/gthr-default.h:
-
-/usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
-
-/usr/include/x86_64-linux-gnu/c++/8/bits/gthr.h:
-
-libs/spdlog-1.14.1/include/spdlog/version.h:
-
-/usr/include/x86_64-linux-gnu/asm/unistd.h:
-
-/usr/include/c++/8/bits/move.h:
-
-/usr/include/linux/errno.h:
-
-/usr/include/c++/8/array:
-
-/usr/include/c++/8/bits/stl_iterator_base_funcs.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
-
-libs/rapidjson/include/rapidjson/reader.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/__locale_t.h:
-
-libs/rapidjson/include/rapidjson/memorystream.h:
-
-/usr/include/asm-generic/errno-base.h:
-
-/usr/include/x86_64-linux-gnu/bits/flt-eval-method.h:
-
-/usr/include/c++/8/deque:
-
-/usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h:
-
-/usr/include/alloca.h:
-
-/usr/include/x86_64-linux-gnu/c++/8/bits/ctype_base.h:
-
-/usr/include/x86_64-linux-gnu/c++/8/bits/c++allocator.h:
-
-/usr/include/x86_64-linux-gnu/c++/8/bits/cpu_defines.h:
-
-/usr/include/x86_64-linux-gnu/bits/endian.h:
-
-/usr/include/c++/8/memory:
-
-/usr/include/c++/8/bits/stl_iterator.h:
-
-/usr/include/c++/8/bits/concept_check.h:
-
-/usr/include/c++/8/bits/stl_pair.h:
-
-libs/spdlog-1.14.1/include/spdlog/spdlog-inl.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h:
-
-/usr/include/x86_64-linux-gnu/bits/byteswap.h:
-
-/usr/include/c++/8/bits/ptr_traits.h:
-
-libs/rapidjson/include/rapidjson/encodedstream.h:
-
-/usr/include/features.h:
-
-/home/emk/vcpkg/installed/x64-linux/include/json/reader.h:
-
-/usr/include/c++/8/bits/char_traits.h:
-
-/usr/include/c++/8/bits/stringfwd.h:
-
-/usr/include/c++/8/backward/auto_ptr.h:
-
-/usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
-
-/usr/include/x86_64-linux-gnu/bits/iscanonical.h:
-
-/usr/include/c++/8/locale:
-
-/usr/include/c++/8/bits/functional_hash.h:
-
-libs/futu/include/futu/FTAPIChannel_Define.h:
-
-/usr/include/c++/8/queue:
-
-/usr/include/linux/falloc.h:
-
-/usr/include/x86_64-linux-gnu/bits/param.h:
-
-/usr/include/c++/8/bits/cpp_type_traits.h:
-
-/usr/include/c++/8/typeinfo:
-
-/usr/include/x86_64-linux-gnu/bits/errno.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h:
-
-/usr/include/c++/8/cerrno:
-
-src/Helper/ThreadPool.h:
-
-/usr/include/c++/8/debug/assertions.h:
-
-/usr/include/c++/8/bits/istream.tcc:
-
-/usr/include/c++/8/bits/stl_bvector.h:
-
-/usr/include/c++/8/bits/locale_conv.h:
-
-libs/futu/include/futu/Include_FTAPIChannel.h:
-
-/usr/include/c++/8/bits/stl_algobase.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/sigevent_t.h:
-
-/usr/include/c++/8/chrono:
-
-src/DataManager/DataManager.h:
-
-libs/futu/include/Proto/Qot_StockFilter.pb.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/8/include/stddef.h:
-
-libs/spdlog-1.14.1/include/spdlog/sinks/ansicolor_sink-inl.h:
-
-/usr/include/c++/8/bits/exception.h:
-
-/usr/include/x86_64-linux-gnu/bits/uio_lim.h:
-
-/usr/include/c++/8/bits/stl_iterator_base_types.h:
-
-/usr/include/x86_64-linux-gnu/bits/signum-generic.h:
-
-/usr/include/x86_64-linux-gnu/bits/select.h:
-
-/usr/include/c++/8/bits/postypes.h:
-
-libs/spdlog-1.14.1/include/spdlog/details/os-inl.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h:
-
-libs/futu/include/Proto/Qot_GetSecuritySnapshot.pb.h:
-
-/usr/include/c++/8/type_traits:
-
-/usr/include/c++/8/bits/locale_classes.h:
-
-libs/nng-1.8.0/include/nng/protocol/pubsub0/sub.h:
-
-libs/rapidjson/include/rapidjson/internal/strfunc.h:
-
-libs/futu/include/Proto/Trd_GetMarginRatio.pb.h:
-
-libs/futu/include/google/protobuf/map_field_lite.h:
-
-/usr/include/c++/8/cwchar:
-
-src/DataManager/DataManager.cpp:
-
-/usr/include/x86_64-linux-gnu/bits/wchar.h:
-
-libs/rapidjson/include/rapidjson/internal/itoa.h:
-
-/usr/include/c++/8/vector:
-
-/usr/include/x86_64-linux-gnu/bits/long-double.h:
-
-/home/emk/vcpkg/installed/x64-linux/include/json/allocator.h:
-
-libs/rapidjson/include/rapidjson/internal/biginteger.h:
-
-/usr/include/errno.h:
-
-/usr/include/stdint.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdio_lim.h:
-
-/usr/include/limits.h:
-
-/usr/include/c++/8/exception:
-
-/usr/include/c++/8/backward/binders.h:
-
-/usr/include/c++/8/bits/stl_heap.h:
-
-/usr/include/c++/8/bits/sstream.tcc:
-
-libs/spdlog-1.14.1/include/spdlog/spdlog.h:
-
-libs/spdlog-1.14.1/include/spdlog/details/null_mutex.h:
-
-/usr/include/c++/8/bits/stl_algo.h:
-
-/usr/include/c++/8/clocale:
-
-/usr/include/c++/8/ext/string_conversions.h:
-
-/usr/include/c++/8/bits/cxxabi_init_exception.h:
-
-/usr/include/x86_64-linux-gnu/bits/waitflags.h:
-
-libs/rapidjson/include/rapidjson/rapidjson.h:
-
-libs/rapidjson/include/rapidjson/stream.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/clock_t.h:
-
-/usr/include/c++/8/bits/stl_queue.h:
-
-/usr/include/c++/8/bits/deque.tcc:
-
-/usr/include/c++/8/bits/vector.tcc:
-
-libs/spdlog-1.14.1/include/spdlog/details/log_msg_buffer-inl.h:
-
-/usr/include/unistd.h:
-
-/usr/include/c++/8/new:
-
-/usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
-
-/usr/include/x86_64-linux-gnu/bits/statx.h:
-
-libs/spdlog-1.14.1/include/spdlog/details/backtracer-inl.h:
-
-/usr/include/c++/8/utility:
-
-/usr/include/c++/8/bits/exception_defines.h:
-
-/usr/include/c++/8/bits/shared_ptr.h:
-
-/usr/include/c++/8/bits/codecvt.h:
-
-/usr/include/c++/8/bits/stl_raw_storage_iter.h:
-
-/usr/include/c++/8/bits/alloc_traits.h:
-
-libs/spdlog-1.14.1/include/spdlog/details/console_globals.h:
-
-/usr/include/c++/8/bits/range_access.h:
-
-/usr/include/c++/8/ext/new_allocator.h:
-
-/usr/include/c++/8/bits/stl_uninitialized.h:
-
-libs/futu/include/google/protobuf/util/type_resolver.h:
-
-/usr/include/x86_64-linux-gnu/bits/floatn.h:
-
-/usr/include/x86_64-linux-gnu/c++/8/bits/os_defines.h:
-
-libs/futu/include/google/protobuf/stubs/atomic_sequence_num.h:
-
-/usr/include/c++/8/bits/stl_relops.h:
-
-/usr/include/c++/8/debug/debug.h:
-
-libs/spdlog-1.14.1/include/spdlog/fmt/fmt.h:
-
-/usr/include/x86_64-linux-gnu/bits/posix_opt.h:
-
-/usr/include/x86_64-linux-gnu/bits/types.h:
-
-/usr/include/x86_64-linux-gnu/bits/stat.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/8/include/stdbool.h:
-
-/usr/include/wchar.h:
-
-/home/emk/vcpkg/installed/x64-linux/include/json/version.h:
-
-/usr/include/c++/8/bits/stl_map.h:
-
-libs/futu/include/Proto/Trd_GetPositionList.pb.h:
-
-/usr/include/x86_64-linux-gnu/bits/getopt_core.h:
-
-/usr/include/x86_64-linux-gnu/bits/xopen_lim.h:
-
-/usr/include/c++/8/bits/nested_exception.h:
-
-/usr/include/c++/8/bits/stl_tempbuf.h:
-
-/usr/include/assert.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
-
-/usr/include/x86_64-linux-gnu/bits/wordsize.h:
-
-/usr/include/c++/8/bits/uses_allocator.h:
-
-/usr/include/x86_64-linux-gnu/c++/8/bits/messages_members.h:
-
-libs/futu/include/Proto/Qot_GetTicker.pb.h:
-
-src/Interface/IEngine.h:
-
-/usr/include/c++/8/iosfwd:
-
-/usr/include/c++/8/sstream:
-
-libs/rapidjson/include/rapidjson/internal/swap.h:
-
-/usr/include/x86_64-linux-gnu/bits/waitstatus.h:
-
-/usr/include/x86_64-linux-gnu/bits/local_lim.h:
-
-libs/futu/include/google/protobuf/stubs/fastmem.h:
-
-/usr/include/c++/8/bits/stl_deque.h:
-
-/usr/include/c++/8/bits/cxxabi_forced.h:
-
-/usr/include/x86_64-linux-gnu/bits/time.h:
-
-/usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
-
-/usr/include/c++/8/bits/predefined_ops.h:
-
-/usr/include/x86_64-linux-gnu/c++/8/bits/error_constants.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/8/include/stdarg.h:
-
-/usr/include/asm-generic/param.h:
-
-/usr/include/c++/8/bits/exception_ptr.h:
-
-/usr/include/x86_64-linux-gnu/bits/setjmp.h:
-
-/usr/include/c++/8/ratio:
-
-/usr/include/c++/8/ctime:
-
-/usr/include/c++/8/cstring:
-
-/usr/include/c++/8/algorithm:
-
-/usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h:
-
-/usr/include/c++/8/initializer_list:
-
-/usr/include/c++/8/streambuf:
-
-/usr/include/c++/8/bits/basic_string.tcc:
-
-/usr/include/x86_64-linux-gnu/bits/types/wint_t.h:
-
-/usr/include/c++/8/bits/invoke.h:
-
-/usr/include/c++/8/ext/alloc_traits.h:
-
-/usr/include/c++/8/bits/shared_ptr_base.h:
-
-/usr/include/c++/8/bits/allocated_ptr.h:
-
-/usr/include/c++/8/ext/aligned_buffer.h:
-
-libs/futu/include/google/protobuf/map_type_handler.h:
-
-/usr/include/c++/8/bits/atomic_lockfree_defines.h:
-
-libs/spdlog-1.14.1/include/spdlog/details/registry-inl.h:
-
-libs/rapidjson/include/rapidjson/allocators.h:
-
-/usr/include/c++/8/thread:
-
-/usr/include/c++/8/bits/functexcept.h:
-
-/usr/include/c++/8/limits:
-
-/usr/include/c++/8/bits/shared_ptr_atomic.h:
-
-/usr/include/c++/8/bits/stl_function.h:
-
-libs/rapidjson/include/rapidjson/internal/ieee754.h:
-
-/usr/include/x86_64-linux-gnu/bits/siginfo-arch.h:
-
-/usr/include/c++/8/bits/parse_numbers.h:
-
-/usr/include/c++/8/functional:
-
-libs/futu/include/Proto/Qot_GetUserSecurityGroup.pb.h:
-
-/usr/include/c++/8/mutex:
-
-/usr/include/c++/8/system_error:
-
-/usr/include/c++/8/atomic:
-
-/home/emk/vcpkg/installed/x64-linux/include/json/json.h:
-
-libs/rapidjson/include/rapidjson/writer.h:
-
-/usr/include/c++/8/bits/stream_iterator.h:
-
-/home/emk/vcpkg/installed/x64-linux/include/json/config.h:
-
-libs/futu/include/Proto/Trd_GetMaxTrdQtys.pb.h:
-
-/usr/include/c++/8/cstddef:
-
-/usr/include/c++/8/ios:
-
-/usr/include/c++/8/iterator:
-
-/usr/include/x86_64-linux-gnu/gnu/stubs.h:
-
-/usr/include/c++/8/bits/locale_classes.tcc:
-
-libs/futu/include/Proto/Qot_RequestRehab.pb.h:
-
-/usr/include/c++/8/bits/basic_ios.h:
-
-libs/futu/include/Proto/Qot_GetFutureInfo.pb.h:
-
-/usr/include/c++/8/cmath:
-
-/usr/include/stdc-predef.h:
-
-/usr/include/c++/8/bits/locale_facets.h:
-
-/usr/include/c++/8/cwctype:
-
-/usr/include/wctype.h:
-
-/usr/include/x86_64-linux-gnu/bits/posix2_lim.h:
-
-libs/futu/include/google/protobuf/descriptor.h:
-
-/usr/include/ctype.h:
-
-/usr/include/c++/8/stack:
-
-/usr/include/x86_64-linux-gnu/asm/errno.h:
-
-/usr/include/c++/8/bits/streambuf_iterator.h:
-
-/usr/include/c++/8/bits/basic_ios.tcc:
-
-/usr/include/c++/8/bits/allocator.h:
-
-/usr/include/c++/8/ostream:
-
-libs/rapidjson/include/rapidjson/stringbuffer.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/timer_t.h:
-
-/usr/include/c++/8/bits/ostream.tcc:
-
-/usr/include/string.h:
-
-/home/emk/vcpkg/installed/x64-linux/include/json/json_features.h:
-
-/home/emk/vcpkg/installed/x64-linux/include/json/value.h:
-
-/usr/include/c++/8/map:
-
-/usr/include/c++/8/bits/stl_tree.h:
-
-/usr/include/c++/8/bits/stl_multimap.h:
-
-/usr/include/c++/8/bits/stl_stack.h:
-
-/usr/include/c++/8/ext/type_traits.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_tm.h:
-
-/usr/include/c++/8/condition_variable:
-
-/usr/include/x86_64-linux-gnu/sys/sysmacros.h:
-
-/usr/include/x86_64-linux-gnu/c++/8/bits/ctype_inline.h:
-
-/usr/include/x86_64-linux-gnu/bits/mathcalls.h:
-
-/usr/include/x86_64-linux-gnu/bits/math-vector.h:
-
-/home/emk/vcpkg/installed/x64-linux/include/json/writer.h:
-
-src/Interface/datastructure.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/FILE.h:
-
-libs/rapidjson/include/rapidjson/document.h:
-
-/usr/include/x86_64-linux-gnu/bits/sigcontext.h:
-
-/usr/include/inttypes.h:
-
-libs/spdlog-1.14.1/include/spdlog/fmt/bundled/format.h:
-
-libs/spdlog-1.14.1/include/spdlog/sinks/sink.h:
-
-libs/rapidjson/include/rapidjson/encodings.h:
-
-libs/rapidjson/include/rapidjson/internal/meta.h:
-
-libs/rapidjson/include/rapidjson/internal/stack.h:
-
-libs/rapidjson/include/rapidjson/error/error.h:
-
-libs/spdlog-1.14.1/include/spdlog/sinks/basic_file_sink.h:
-
-libs/rapidjson/include/rapidjson/internal/dtoa.h:
+libs/boost/preprocessor/arithmetic/inc.hpp:
 
 /usr/include/c++/8/bits/quoted_string.h:
 
-/usr/include/c++/8/iostream:
-
-src/Helper/logger.h:
-
-libs/futu/include/Proto/Trd_GetAccList.pb.h:
-
-/usr/include/c++/8/bits/algorithmfwd.h:
-
-/usr/include/c++/8/bits/stl_construct.h:
-
-/usr/include/x86_64-linux-gnu/c++/8/bits/basic_file.h:
-
-libs/spdlog-1.14.1/include/spdlog/common.h:
-
-libs/futu/include/Proto/Trd_UpdateOrderFill.pb.h:
-
-libs/futu/include/Proto/Trd_GetOrderList.pb.h:
-
-/usr/include/x86_64-linux-gnu/c++/8/bits/c++config.h:
-
-libs/spdlog-1.14.1/include/spdlog/tweakme.h:
-
-/usr/include/x86_64-linux-gnu/sys/cdefs.h:
-
-libs/spdlog-1.14.1/include/spdlog/fmt/bundled/core.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/error_t.h:
-
-/usr/include/x86_64-linux-gnu/bits/fcntl.h:
-
-/usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h:
-
-/usr/include/c++/8/experimental/string_view:
-
-/usr/include/c++/8/experimental/bits/lfts_config.h:
-
-libs/spdlog-1.14.1/include/spdlog/logger-inl.h:
-
-/usr/include/x86_64-linux-gnu/bits/wctype-wchar.h:
-
-libs/spdlog-1.14.1/include/spdlog/logger.h:
-
-/usr/include/math.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/8/include-fixed/syslimits.h:
-
-/usr/include/x86_64-linux-gnu/bits/fp-logb.h:
-
-libs/futu/include/futu/Include_Proto.h:
-
-/usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h:
-
-libs/spdlog-1.14.1/include/spdlog/fmt/bundled/format-inl.h:
-
-/usr/include/c++/8/climits:
-
-/usr/include/c++/8/bits/hashtable_policy.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/8/include-fixed/limits.h:
-
-libs/futu/include/google/protobuf/util/json_util.h:
-
-/usr/include/x86_64-linux-gnu/c++/8/bits/time_members.h:
-
-libs/futu/include/Proto/Qot_GetHoldingChangeList.pb.h:
-
-/usr/include/x86_64-linux-gnu/bits/posix1_lim.h:
-
-/usr/include/linux/limits.h:
-
-/usr/include/c++/8/bits/locale_facets_nonio.h:
-
-/usr/include/libintl.h:
-
-/usr/include/c++/8/bits/locale_facets_nonio.tcc:
-
-libs/spdlog-1.14.1/include/spdlog/details/periodic_worker.h:
-
-/usr/include/c++/8/bits/memoryfwd.h:
-
-libs/spdlog-1.14.1/include/spdlog/details/periodic_worker-inl.h:
-
-/usr/include/c++/8/unordered_map:
-
-/usr/include/c++/8/ext/atomicity.h:
-
-/usr/include/c++/8/bits/hashtable.h:
-
-/usr/include/c++/8/bits/streambuf.tcc:
-
-/usr/include/c++/8/bits/unordered_map.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h:
-
-libs/spdlog-1.14.1/include/spdlog/details/backtracer.h:
-
-libs/futu/include/google/protobuf/message_lite.h:
-
-/usr/include/c++/8/istream:
-
-libs/spdlog-1.14.1/include/spdlog/details/circular_q.h:
-
-libs/spdlog-1.14.1/include/spdlog/details/log_msg_buffer.h:
-
-libs/spdlog-1.14.1/include/spdlog/details/log_msg.h:
-
-libs/futu/include/Proto/Qot_GetOwnerPlate.pb.h:
-
-libs/spdlog-1.14.1/include/spdlog/details/log_msg-inl.h:
+/usr/include/fcntl.h:
 
 /usr/include/x86_64-linux-gnu/sys/stat.h:
 
-/usr/include/fcntl.h:
+libs/spdlog-1.14.1/include/spdlog/details/log_msg.h:
 
-/usr/include/x86_64-linux-gnu/bits/fcntl-linux.h:
+libs/boost/type_traits/is_void.hpp:
+
+libs/boost/type_traits/add_const.hpp:
+
+libs/spdlog-1.14.1/include/spdlog/details/log_msg_buffer.h:
+
+libs/futu/include/google/protobuf/message_lite.h:
+
+libs/boost/type_traits/disjunction.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h:
+
+/usr/include/c++/8/bits/unordered_map.h:
+
+/usr/include/c++/8/bits/streambuf.tcc:
+
+libs/boost/core/use_default.hpp:
+
+libs/boost/mpl/aux_/type_wrapper.hpp:
+
+/usr/include/c++/8/bits/memoryfwd.h:
+
+/usr/include/c++/8/bits/locale_facets_nonio.tcc:
+
+libs/boost/preprocessor/logical/not.hpp:
+
+/usr/include/c++/8/bits/locale_facets_nonio.h:
+
+/usr/include/linux/limits.h:
+
+/usr/include/x86_64-linux-gnu/bits/posix1_lim.h:
+
+/usr/include/x86_64-linux-gnu/c++/8/bits/time_members.h:
+
+libs/futu/include/google/protobuf/util/json_util.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/8/include-fixed/limits.h:
+
+/usr/include/c++/8/bits/hashtable_policy.h:
+
+libs/spdlog-1.14.1/include/spdlog/fmt/bundled/format-inl.h:
+
+/usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/8/include-fixed/syslimits.h:
+
+libs/boost/preprocessor/array/data.hpp:
+
+/usr/include/math.h:
+
+libs/boost/mpl/aux_/arg_typedef.hpp:
+
+libs/spdlog-1.14.1/include/spdlog/logger-inl.h:
+
+/usr/include/c++/8/experimental/bits/lfts_config.h:
+
+/usr/include/c++/8/experimental/string_view:
+
+/usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/error_t.h:
+
+/usr/include/x86_64-linux-gnu/sys/cdefs.h:
+
+/usr/include/x86_64-linux-gnu/c++/8/bits/c++config.h:
+
+libs/futu/include/Proto/Qot_GetReference.pb.h:
+
+libs/spdlog-1.14.1/include/spdlog/common.h:
+
+libs/boost/detail/select_type.hpp:
+
+libs/boost/mpl/eval_if.hpp:
+
+/usr/include/c++/8/bits/stl_construct.h:
+
+/usr/include/c++/8/bits/algorithmfwd.h:
+
+src/Helper/logger.h:
+
+/usr/include/c++/8/iostream:
+
+libs/boost/preprocessor/logical/limits/bool_256.hpp:
+
+libs/rapidjson/include/rapidjson/internal/dtoa.h:
+
+libs/spdlog-1.14.1/include/spdlog/sinks/basic_file_sink.h:
+
+libs/boost/type_traits/declval.hpp:
+
+libs/rapidjson/include/rapidjson/internal/meta.h:
+
+libs/rapidjson/include/rapidjson/encodings.h:
+
+/usr/include/c++/8/iomanip:
+
+libs/spdlog-1.14.1/include/spdlog/sinks/sink.h:
+
+libs/spdlog-1.14.1/include/spdlog/fmt/bundled/format.h:
+
+/usr/include/inttypes.h:
+
+/usr/include/x86_64-linux-gnu/bits/sigcontext.h:
+
+libs/rapidjson/include/rapidjson/document.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/FILE.h:
+
+src/Interface/datastructure.h:
+
+/home/emk/vcpkg/installed/x64-linux/include/json/writer.h:
+
+/usr/include/x86_64-linux-gnu/bits/math-vector.h:
+
+/usr/include/x86_64-linux-gnu/bits/mathcalls.h:
+
+/usr/include/x86_64-linux-gnu/c++/8/bits/ctype_inline.h:
+
+/usr/include/x86_64-linux-gnu/sys/sysmacros.h:
+
+libs/futu/include/Proto/Qot_GetKL.pb.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_tm.h:
+
+/usr/include/c++/8/ext/type_traits.h:
+
+libs/boost/filesystem/path.hpp:
+
+libs/boost/system/detail/append_int.hpp:
+
+/usr/include/c++/8/bits/stl_stack.h:
+
+libs/boost/iterator/detail/enable_if.hpp:
+
+/usr/include/c++/8/bits/stl_multimap.h:
+
+/usr/include/c++/8/bits/stl_tree.h:
+
+libs/boost/mpl/aux_/preprocessed/gcc/apply_fwd.hpp:
+
+libs/rapidjson/include/rapidjson/stringbuffer.h:
+
+libs/futu/include/Proto/Qot_GetStaticInfo.pb.h:
+
+/usr/include/c++/8/ostream:
+
+/usr/include/c++/8/bits/allocator.h:
+
+libs/boost/type_traits/is_rvalue_reference.hpp:
+
+/usr/include/x86_64-linux-gnu/asm/errno.h:
+
+/usr/include/c++/8/stack:
+
+/usr/include/ctype.h:
+
+/usr/include/x86_64-linux-gnu/bits/posix2_lim.h:
+
+/usr/include/c++/8/cwctype:
+
+/usr/include/c++/8/bits/locale_facets.h:
+
+libs/futu/include/Proto/Qot_RequestTradeDate.pb.h:
+
+/usr/include/stdc-predef.h:
+
+libs/boost/type_traits/add_pointer.hpp:
+
+/usr/include/c++/8/cmath:
+
+/usr/include/x86_64-linux-gnu/bits/types/timer_t.h:
+
+libs/boost/system/error_category.hpp:
+
+/usr/include/c++/8/bits/basic_ios.h:
+
+libs/futu/include/Proto/Qot_GetPlateSet.pb.h:
+
+/usr/include/c++/8/bits/locale_classes.tcc:
+
+libs/boost/system/detail/generic_category.hpp:
+
+/usr/include/c++/8/iterator:
+
+libs/boost/config/detail/select_stdlib_config.hpp:
+
+/usr/include/c++/8/ios:
+
+/usr/include/c++/8/cstddef:
+
+libs/boost/preprocessor/detail/auto_rec.hpp:
+
+libs/boost/type_traits/is_member_function_pointer.hpp:
+
+/home/emk/vcpkg/installed/x64-linux/include/json/config.h:
+
+/usr/include/c++/8/bits/stream_iterator.h:
+
+libs/rapidjson/include/rapidjson/writer.h:
+
+libs/boost/type_traits/detail/is_function_cxx_11.hpp:
+
+libs/futu/include/Proto/Qot_Common.pb.h:
+
+/home/emk/vcpkg/installed/x64-linux/include/json/json.h:
+
+/usr/include/c++/8/atomic:
+
+/usr/include/c++/8/mutex:
+
+/usr/include/c++/8/bits/parse_numbers.h:
+
+/usr/include/x86_64-linux-gnu/bits/siginfo-arch.h:
+
+libs/futu/include/Proto/Trd_UpdateOrder.pb.h:
+
+/usr/include/c++/8/bits/stl_function.h:
+
+/usr/include/c++/8/limits:
+
+/usr/include/c++/8/bits/functexcept.h:
+
+/usr/include/c++/8/thread:
+
+libs/boost/config/helper_macros.hpp:
+
+libs/rapidjson/include/rapidjson/allocators.h:
+
+/usr/include/c++/8/bits/atomic_lockfree_defines.h:
+
+/usr/include/c++/8/ext/aligned_buffer.h:
+
+libs/boost/preprocessor/facilities/empty.hpp:
+
+/usr/include/c++/8/bits/allocated_ptr.h:
+
+/usr/include/c++/8/bits/shared_ptr_base.h:
+
+/usr/include/c++/8/ext/alloc_traits.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/wint_t.h:
+
+/usr/include/c++/8/bits/basic_string.tcc:
+
+libs/boost/mpl/aux_/config/static_constant.hpp:
+
+/usr/include/c++/8/streambuf:
+
+libs/futu/include/Proto/KeepAlive.pb.h:
+
+libs/boost/preprocessor/variadic/size.hpp:
+
+libs/futu/include/Proto/Qot_GetSecuritySnapshot.pb.h:
+
+/usr/include/c++/8/algorithm:
+
+/usr/include/c++/8/cstring:
+
+/usr/include/x86_64-linux-gnu/bits/setjmp.h:
+
+/usr/include/c++/8/bits/exception_ptr.h:
+
+/usr/include/asm-generic/param.h:
+
+/usr/include/c++/8/bits/predefined_ops.h:
+
+/usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
+
+/usr/include/x86_64-linux-gnu/bits/time.h:
+
+/usr/include/c++/8/bits/cxxabi_forced.h:
+
+/usr/include/x86_64-linux-gnu/bits/local_lim.h:
+
+/usr/include/x86_64-linux-gnu/bits/waitstatus.h:
+
+libs/boost/mpl/protect.hpp:
+
+libs/futu/include/Proto/Qot_GetOptionChain.pb.h:
+
+/usr/include/c++/8/sstream:
+
+/usr/include/wctype.h:
+
+/usr/include/c++/8/iosfwd:
+
+src/Interface/IEngine.h:
+
+libs/boost/config/user.hpp:
+
+/usr/include/x86_64-linux-gnu/c++/8/bits/messages_members.h:
+
+/usr/include/x86_64-linux-gnu/bits/wordsize.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
+
+/usr/include/assert.h:
+
+/usr/include/c++/8/bits/stl_tempbuf.h:
+
+/usr/include/c++/8/bits/nested_exception.h:
+
+/usr/include/x86_64-linux-gnu/bits/xopen_lim.h:
+
+libs/rapidjson/include/rapidjson/internal/swap.h:
+
+/usr/include/x86_64-linux-gnu/bits/getopt_core.h:
+
+libs/boost/mpl/aux_/lambda_arity_param.hpp:
+
+libs/futu/include/Proto/Verification.pb.h:
+
+/usr/include/wchar.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/8/include/stdbool.h:
+
+/usr/include/c++/8/climits:
+
+libs/boost/iterator/detail/config_def.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/stat.h:
+
+libs/futu/include/Proto/Qot_GetOrderBook.pb.h:
+
+libs/futu/include/google/protobuf/generated_enum_reflection.h:
+
+/usr/include/x86_64-linux-gnu/bits/types.h:
+
+libs/futu/include/google/protobuf/generated_message_table_driven.h:
+
+libs/spdlog-1.14.1/include/spdlog/fmt/fmt.h:
+
+libs/boost/mpl/bind_fwd.hpp:
+
+libs/boost/config/compiler/gcc.hpp:
+
+/usr/include/c++/8/bits/stl_relops.h:
+
+libs/rapidjson/include/rapidjson/internal/stack.h:
+
+libs/futu/include/google/protobuf/stubs/atomic_sequence_num.h:
+
+/usr/include/x86_64-linux-gnu/bits/floatn.h:
+
+libs/futu/include/google/protobuf/util/type_resolver.h:
+
+libs/rapidjson/include/rapidjson/internal/ieee754.h:
+
+/usr/include/c++/8/bits/stl_uninitialized.h:
+
+libs/boost/io_fwd.hpp:
+
+/usr/include/c++/8/ext/new_allocator.h:
+
+/usr/include/c++/8/bits/range_access.h:
+
+libs/spdlog-1.14.1/include/spdlog/details/console_globals.h:
+
+/usr/include/c++/8/bits/alloc_traits.h:
+
+libs/boost/preprocessor/arithmetic/detail/is_maximum_number.hpp:
+
+/usr/include/c++/8/bits/stl_raw_storage_iter.h:
+
+/usr/include/c++/8/bits/codecvt.h:
+
+/usr/include/c++/8/bits/shared_ptr.h:
+
+/usr/include/c++/8/bits/exception_defines.h:
+
+libs/boost/filesystem/detail/type_traits/disjunction.hpp:
+
+libs/spdlog-1.14.1/include/spdlog/details/backtracer-inl.h:
+
+/usr/include/x86_64-linux-gnu/bits/statx.h:
+
+/usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
+
+/usr/include/unistd.h:
+
+libs/spdlog-1.14.1/include/spdlog/details/log_msg_buffer-inl.h:
+
+libs/boost/mpl/aux_/config/bind.hpp:
+
+/usr/include/c++/8/bits/vector.tcc:
+
+/usr/include/c++/8/bits/invoke.h:
+
+/usr/include/c++/8/bits/deque.tcc:
+
+libs/boost/smart_ptr/detail/sp_nullptr_t.hpp:
+
+/usr/include/c++/8/bits/stl_queue.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/clock_t.h:
+
+libs/rapidjson/include/rapidjson/stream.h:
+
+libs/spdlog-1.14.1/include/spdlog/details/periodic_worker.h:
+
+libs/rapidjson/include/rapidjson/rapidjson.h:
+
+libs/boost/type_traits/is_abstract.hpp:
+
+libs/boost/mpl/aux_/config/eti.hpp:
+
+/usr/include/c++/8/initializer_list:
+
+/usr/include/c++/8/bits/cxxabi_init_exception.h:
+
+libs/boost/mpl/lambda.hpp:
+
+libs/boost/mpl/aux_/config/has_apply.hpp:
+
+libs/boost/mpl/next.hpp:
+
+libs/spdlog-1.14.1/include/spdlog/details/null_mutex.h:
+
+libs/spdlog-1.14.1/include/spdlog/spdlog.h:
+
+/usr/include/c++/8/bits/sstream.tcc:
+
+libs/boost/io/quoted.hpp:
+
+libs/boost/mpl/aux_/value_wknd.hpp:
+
+libs/boost/type_traits/is_lvalue_reference.hpp:
+
+/usr/include/c++/8/utility:
+
+/usr/include/c++/8/backward/binders.h:
+
+libs/boost/preprocessor/comma_if.hpp:
+
+/usr/include/c++/8/exception:
+
+/usr/include/c++/8/ratio:
+
+libs/boost/preprocessor/logical/compl.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/stdio_lim.h:
+
+/usr/include/stdint.h:
+
+/usr/include/errno.h:
+
+libs/rapidjson/include/rapidjson/internal/biginteger.h:
+
+/usr/include/x86_64-linux-gnu/bits/long-double.h:
+
+libs/boost/mpl/aux_/preprocessed/gcc/or.hpp:
+
+/usr/include/c++/8/vector:
+
+libs/rapidjson/include/rapidjson/internal/itoa.h:
+
+libs/futu/include/Proto/Trd_UnlockTrade.pb.h:
+
+/usr/include/c++/8/ctime:
+
+/usr/include/x86_64-linux-gnu/bits/wchar.h:
+
+libs/boost/mpl/apply_fwd.hpp:
+
+libs/futu/include/Proto/Trd_Common.pb.h:
+
+/usr/include/c++/8/cwchar:
+
+libs/boost/type_traits/is_volatile.hpp:
+
+libs/rapidjson/include/rapidjson/internal/strfunc.h:
+
+/usr/include/c++/8/bits/locale_classes.h:
+
+libs/futu/include/Proto/Qot_RegQotPush.pb.h:
+
+/usr/include/c++/8/type_traits:
+
+libs/spdlog-1.14.1/include/spdlog/details/os-inl.h:
+
+libs/futu/include/google/protobuf/unknown_field_set.h:
+
+/usr/include/c++/8/bits/postypes.h:
+
+/usr/include/x86_64-linux-gnu/bits/select.h:
+
+/usr/include/c++/8/bits/stl_iterator_base_types.h:
+
+libs/boost/mpl/aux_/template_arity_fwd.hpp:
+
+/usr/include/c++/8/istream:
+
+src/DataManager/DataManager.cpp:
+
+/usr/include/x86_64-linux-gnu/bits/uio_lim.h:
+
+/usr/include/c++/8/bits/exception.h:
+
+libs/spdlog-1.14.1/include/spdlog/sinks/ansicolor_sink-inl.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/8/include/stddef.h:
+
+libs/boost/preprocessor/variadic/limits/elem_64.hpp:
+
+libs/boost/mpl/aux_/preprocessor/enum.hpp:
+
+libs/boost/smart_ptr/detail/sp_noexcept.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/fp-logb.h:
+
+src/DataManager/DataManager.h:
+
+libs/boost/mpl/aux_/include_preprocessed.hpp:
+
+/usr/include/c++/8/chrono:
+
+/usr/include/c++/8/unordered_map:
+
+/usr/include/libintl.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/sigevent_t.h:
+
+/usr/include/c++/8/bits/stl_algobase.h:
+
+libs/boost/mpl/aux_/has_type.hpp:
+
+/usr/include/c++/8/bits/locale_conv.h:
+
+libs/boost/mpl/int.hpp:
+
+/usr/include/c++/8/bits/stl_bvector.h:
+
+/usr/include/c++/8/bits/istream.tcc:
+
+/usr/include/c++/8/debug/assertions.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h:
+
+src/Helper/ThreadPool.h:
+
+/usr/include/c++/8/cerrno:
+
+/usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h:
+
+libs/boost/system/detail/error_category.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/errno.h:
+
+libs/boost/preprocessor/logical/bitor.hpp:
+
+/usr/include/c++/8/bits/cpp_type_traits.h:
+
+/usr/include/c++/8/queue:
+
+/usr/include/c++/8/locale:
+
+/usr/include/c++/8/bits/ostream.tcc:
+
+/usr/include/x86_64-linux-gnu/bits/iscanonical.h:
+
+/usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
+
+/usr/include/c++/8/backward/auto_ptr.h:
+
+/usr/include/c++/8/bits/stringfwd.h:
+
+libs/boost/iterator/detail/config_undef.hpp:
+
+/usr/include/c++/8/bits/char_traits.h:
+
+libs/rapidjson/include/rapidjson/encodedstream.h:
+
+/usr/include/c++/8/bits/ptr_traits.h:
+
+libs/boost/smart_ptr/detail/sp_has_sync_intrinsics.hpp:
+
+libs/boost/type_traits/is_pod.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/byteswap.h:
+
+/usr/include/c++/8/bits/concept_check.h:
+
+/usr/include/c++/8/bits/stl_iterator.h:
+
+/usr/include/c++/8/bits/hashtable.h:
+
+libs/boost/mpl/aux_/config/pp_counter.hpp:
+
+libs/boost/preprocessor/repetition/enum_params.hpp:
+
+/usr/include/c++/8/memory:
+
+libs/futu/include/Proto/Trd_GetMarginRatio.pb.h:
+
+/usr/include/x86_64-linux-gnu/bits/endian.h:
+
+libs/boost/config/stdlib/libstdcpp3.hpp:
+
+/usr/include/x86_64-linux-gnu/c++/8/bits/c++allocator.h:
+
+/usr/include/c++/8/bits/stl_pair.h:
+
+/usr/include/x86_64-linux-gnu/c++/8/bits/ctype_base.h:
+
+/usr/include/c++/8/clocale:
+
+/usr/include/alloca.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h:
+
+src/DataManager/DataWriter.h:
+
+/usr/include/x86_64-linux-gnu/bits/flt-eval-method.h:
+
+/usr/include/asm-generic/errno-base.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/__locale_t.h:
+
+libs/rapidjson/include/rapidjson/reader.h:
+
+libs/boost/detail/bitmask.hpp:
+
+libs/boost/preprocessor/cat.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
+
+/usr/include/c++/8/bits/stl_heap.h:
+
+libs/boost/preprocessor/repeat.hpp:
+
+libs/boost/type_traits/integral_constant.hpp:
+
+/usr/include/c++/8/bits/stl_iterator_base_funcs.h:
+
+/usr/include/c++/8/bits/uses_allocator.h:
+
+/usr/include/c++/8/typeinfo:
+
+/usr/include/c++/8/array:
+
+/usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h:
+
+/usr/include/linux/errno.h:
+
+/usr/include/c++/8/bits/move.h:
+
+libs/spdlog-1.14.1/include/spdlog/version.h:
+
+/usr/include/x86_64-linux-gnu/c++/8/bits/gthr.h:
+
+/usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
+
+/usr/include/x86_64-linux-gnu/c++/8/bits/gthr-default.h:
+
+/usr/include/c++/8/bits/basic_ios.tcc:
+
+/usr/include/pthread.h:
+
+libs/boost/preprocessor/repetition/enum_trailing_params.hpp:
+
+/usr/include/endian.h:
+
+/usr/include/c++/8/bits/ios_base.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h:
+
+/usr/include/c++/8/bits/localefwd.h:
+
+/usr/include/strings.h:
+
+/usr/include/x86_64-linux-gnu/bits/cpu-set.h:
+
+/usr/include/c++/8/ext/atomicity.h:
+
+/home/emk/vcpkg/installed/x64-linux/include/json/version.h:
+
+/usr/include/c++/8/bits/hash_bytes.h:
+
+libs/boost/mpl/bind.hpp:
+
+libs/futu/include/google/protobuf/stubs/fastmem.h:
+
+/usr/include/x86_64-linux-gnu/c++/8/bits/c++locale.h:
+
+libs/boost/static_assert.hpp:
+
+/usr/include/sched.h:
+
+libs/boost/iterator/iterator_traits.hpp:
+
+libs/boost/preprocessor/list/fold_right.hpp:
+
+/usr/include/c++/8/bits/atomic_base.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/time_t.h:
+
+/usr/include/x86_64-linux-gnu/bits/fp-fast.h:
+
+/usr/include/stdlib.h:
+
+/usr/include/c++/8/experimental/bits/string_view.tcc:
+
+/usr/include/time.h:
+
+libs/rapidjson/include/rapidjson/internal/strtod.h:
+
+/usr/include/c++/8/fstream:
+
+libs/futu/include/Proto/Qot_UpdateKL.pb.h:
+
+libs/boost/type_traits/detail/yes_no_type.hpp:
+
+/usr/include/c++/8/bits/functional_hash.h:
+
+/usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h:
+
+libs/boost/preprocessor/variadic/has_opt.hpp:
+
+libs/boost/filesystem/detail/type_traits/negation.hpp:
+
+libs/boost/system/detail/error_category_impl.hpp:
+
+/usr/include/c++/8/bits/fstream.tcc:
+
+/home/emk/vcpkg/installed/x64-linux/include/json/json_features.h:
+
+libs/boost/preprocessor/logical/bool.hpp:
+
+libs/boost/preprocessor/arithmetic/limits/dec_256.hpp:
+
+/usr/include/x86_64-linux-gnu/asm/unistd.h:
+
+/usr/include/x86_64-linux-gnu/bits/timex.h:
+
+libs/spdlog-1.14.1/include/spdlog/details/backtracer.h:
+
+libs/boost/config.hpp:
+
+libs/boost/type_traits/add_rvalue_reference.hpp:
+
+libs/spdlog-1.14.1/include/spdlog/common-inl.h:
+
+libs/boost/mpl/lambda_fwd.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/waitflags.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/clockid_t.h:
+
+/usr/include/x86_64-linux-gnu/bits/thread-shared-types.h:
+
+/usr/include/c++/8/ext/concurrence.h:
+
+/usr/include/c++/8/bits/unique_ptr.h:
+
+libs/spdlog-1.14.1/include/spdlog/details/registry.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/8/include/stdint.h:
+
+libs/spdlog-1.14.1/include/spdlog/fmt/bundled/core.h:
+
+libs/futu/include/google/protobuf/message.h:
+
+/usr/include/x86_64-linux-gnu/c++/8/bits/atomic_word.h:
+
+/usr/include/c++/8/tuple:
+
+/usr/include/x86_64-linux-gnu/bits/floatn-common.h:
+
+/usr/include/x86_64-linux-gnu/bits/locale.h:
+
+libs/rapidjson/include/rapidjson/internal/pow10.h:
+
+/usr/include/c++/8/bits/stl_vector.h:
+
+/home/emk/vcpkg/installed/x64-linux/include/json/forwards.h:
+
+libs/boost/preprocessor/variadic/elem.hpp:
+
+libs/spdlog-1.14.1/include/spdlog/details/periodic_worker-inl.h:
+
+/usr/include/c++/8/bits/ostream_insert.h:
+
+/usr/include/c++/8/bits/basic_string.h:
+
+/usr/include/c++/8/functional:
+
+libs/boost/preprocessor/arithmetic/dec.hpp:
+
+/usr/include/x86_64-linux-gnu/c++/8/bits/basic_file.h:
+
+/usr/include/c++/8/bits/std_mutex.h:
+
+libs/boost/system/detail/system_category_impl.hpp:
+
+/usr/include/stdio.h:
+
+libs/spdlog-1.14.1/include/spdlog/details/registry-inl.h:
+
+libs/boost/mpl/aux_/config/overload_resolution.hpp:
+
+/usr/include/c++/8/string:
+
+/usr/include/x86_64-linux-gnu/bits/sigstack.h:
+
+/usr/include/c++/8/cstdint:
+
+libs/spdlog-1.14.1/include/spdlog/spdlog-inl.h:
+
+/usr/include/c++/8/stdexcept:
+
+/usr/include/c++/8/bits/uniform_int_dist.h:
+
+/usr/include/c++/8/condition_variable:
+
+libs/boost/preprocessor/punctuation/comma_if.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
+
+/usr/include/c++/8/bits/std_function.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdint-uintn.h:
+
+libs/boost/mpl/aux_/yes_no.hpp:
+
+/usr/include/c++/8/bits/refwrap.h:
+
+libs/futu/include/google/protobuf/stubs/port.h:
+
+libs/futu/include/Proto/Qot_UpdateBasicQot.pb.h:
+
+libs/boost/mpl/integral_c_tag.hpp:
+
+/usr/include/c++/8/cctype:
+
+libs/boost/preprocessor/detail/limits/auto_rec_256.hpp:
+
+/usr/include/locale.h:
+
+libs/futu/include/Proto/Qot_RequestHistoryKLQuota.pb.h:
+
+/usr/include/x86_64-linux-gnu/c++/8/bits/c++io.h:
+
+/usr/include/c++/8/bits/locale_facets.tcc:
+
+/usr/include/c++/8/bits/stl_multiset.h:
+
+libs/boost/mpl/aux_/config/msvc.hpp:
+
+/usr/include/c++/8/cstdlib:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_sigstack.h:
+
+/usr/include/c++/8/cassert:
+
+/usr/include/c++/8/ext/numeric_traits.h:
+
+/usr/include/c++/8/bits/std_abs.h:
+
+libs/spdlog-1.14.1/include/spdlog/pattern_formatter-inl.h:
+
+libs/futu/include/google/protobuf/descriptor.h:
+
+libs/boost/mpl/aux_/full_lambda.hpp:
+
+/usr/include/x86_64-linux-gnu/sys/select.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/sigset_t.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
+
+/usr/include/c++/8/cstdio:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h:
+
+libs/boost/preprocessor/facilities/identity.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h:
+
+libs/boost/type_traits/remove_cv.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/8/include/stdarg.h:
+
+/usr/include/x86_64-linux-gnu/bits/sched.h:
+
+libs/boost/mpl/quote.hpp:
+
+/usr/include/x86_64-linux-gnu/c++/8/bits/cpu_defines.h:
+
+/usr/include/x86_64-linux-gnu/bits/sys_errlist.h:
+
+libs/boost/system/detail/config.hpp:
+
+libs/boost/mpl/void.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/sysmacros.h:
+
+/usr/include/x86_64-linux-gnu/bits/environments.h:
+
+libs/boost/mpl/bool_fwd.hpp:
+
+libs/boost/system/detail/error_condition.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/syscall.h:
+
+libs/spdlog-1.14.1/include/spdlog/pattern_formatter.h:
+
+libs/futu/include/Proto/Qot_UpdateBroker.pb.h:
+
+libs/spdlog-1.14.1/include/spdlog/formatter.h:
+
+libs/futu/include/google/protobuf/arena.h:
+
+libs/boost/type_traits/is_complete.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/param.h:
+
+libs/spdlog-1.14.1/include/spdlog/details/fmt_helper.h:
+
+libs/boost/mpl/aux_/config/ttp.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/signum-generic.h:
+
+libs/boost/mpl/aux_/preprocessed/gcc/bind_fwd.hpp:
+
+libs/spdlog-1.14.1/include/spdlog/mdc.h:
+
+libs/rapidjson/include/rapidjson/internal/diyfp.h:
+
+libs/spdlog-1.14.1/include/spdlog/sinks/sink-inl.h:
+
+/usr/include/x86_64-linux-gnu/gnu/stubs.h:
+
+libs/boost/type_traits/remove_reference.hpp:
+
+libs/boost/mpl/aux_/common_name_wknd.hpp:
+
+libs/spdlog-1.14.1/include/spdlog/sinks/ansicolor_sink.h:
+
+libs/boost/mpl/not.hpp:
+
+libs/spdlog-1.14.1/include/spdlog/details/synchronous_factory.h:
+
+libs/spdlog-1.14.1/include/spdlog/details/file_helper.h:
+
+libs/futu/include/Proto/Qot_RequestHistoryKL.pb.h:
+
+libs/spdlog-1.14.1/include/spdlog/details/file_helper-inl.h:
+
+/usr/include/c++/8/system_error:
+
+libs/spdlog-1.14.1/include/spdlog/sinks/base_sink.h:
+
+libs/spdlog-1.14.1/include/spdlog/sinks/base_sink-inl.h:
+
+/usr/include/x86_64-linux-gnu/bits/sigevent-consts.h:
+
+src/Helper/util.h:
+
+libs/futu/include/google/protobuf/stubs/common.h:
+
+/usr/include/c++/8/set:
+
+/usr/include/c++/8/bits/stl_set.h:
+
+/usr/include/c++/8/stdlib.h:
+
+libs/spdlog-1.14.1/include/spdlog/logger.h:
+
+libs/futu/include/google/protobuf/stubs/platform_macros.h:
+
+libs/futu/include/Proto/Qot_UpdateOrderBook.pb.h:
+
+/usr/include/signal.h:
+
+/usr/include/x86_64-linux-gnu/c++/8/bits/os_defines.h:
+
+/usr/include/x86_64-linux-gnu/bits/signum.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/sig_atomic_t.h:
+
+libs/futu/include/google/protobuf/stubs/type_traits.h:
+
+/usr/include/c++/8/bits/unordered_set.h:
+
+libs/boost/preprocessor/arithmetic/add.hpp:
+
+/usr/include/asm-generic/errno.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/__sigval_t.h:
+
+/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h:
+
+/usr/include/x86_64-linux-gnu/bits/siginfo-consts-arch.h:
+
+libs/boost/preprocessor/list/detail/fold_left.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/types/sigval_t.h:
+
+/usr/include/x86_64-linux-gnu/bits/wctype-wchar.h:
+
+/usr/include/x86_64-linux-gnu/bits/sigaction.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/stack_t.h:
+
+src/Helper/ThreadPool.hpp:
+
+libs/boost/config/workaround.hpp:
+
+libs/boost/system/detail/throws.hpp:
+
+libs/boost/mpl/void_fwd.hpp:
+
+libs/futu/include/google/protobuf/stubs/casts.h:
+
+/usr/include/x86_64-linux-gnu/sys/ucontext.h:
+
+/usr/include/linux/param.h:
+
+libs/futu/include/Proto/Qot_Sub.pb.h:
+
+/usr/include/x86_64-linux-gnu/asm/param.h:
+
+libs/rapidjson/include/rapidjson/memorystream.h:
+
+/usr/include/byteswap.h:
+
+libs/futu/include/google/protobuf/stubs/macros.h:
+
+libs/boost/mpl/apply_wrap.hpp:
+
+libs/futu/include/google/protobuf/stubs/logging.h:
+
+libs/futu/include/google/protobuf/stubs/scoped_ptr.h:
+
+libs/futu/include/google/protobuf/stubs/mutex.h:
+
+libs/boost/mpl/aux_/nested_type_wknd.hpp:
+
+libs/futu/include/google/protobuf/stubs/callback.h:
+
+libs/spdlog-1.14.1/include/spdlog/tweakme.h:
+
+libs/futu/include/google/protobuf/stubs/template_util.h:
+
+libs/futu/include/google/protobuf/stubs/once.h:
+
+libs/futu/include/google/protobuf/stubs/atomicops.h:
+
+libs/boost/config/no_tr1/functional.hpp:
+
+libs/boost/mpl/aux_/preprocessed/gcc/arg.hpp:
+
+/usr/include/c++/8/map:
+
+libs/futu/include/google/protobuf/stubs/atomicops_internals_x86_gcc.h:
+
+libs/futu/include/google/protobuf/arena_impl.h:
+
+libs/boost/filesystem/detail/path_traits.hpp:
+
+libs/boost/iterator/detail/facade_iterator_category.hpp:
+
+libs/futu/include/google/protobuf/stubs/status.h:
+
+libs/futu/include/google/protobuf/stubs/stringpiece.h:
+
+/usr/include/c++/8/new:
+
+libs/futu/include/google/protobuf/stubs/hash.h:
+
+/usr/include/c++/8/unordered_set:
+
+/usr/include/x86_64-linux-gnu/sys/param.h:
+
+libs/futu/include/google/protobuf/stubs/bytestream.h:
+
+libs/boost/mpl/assert.hpp:
+
+src/Interface/IMessenger.h:
+
+libs/nng-1.8.0/include/nng/nng.h:
+
+/usr/include/c++/8/bits/streambuf_iterator.h:
+
+libs/boost/iterator/iterator_categories.hpp:
+
+src/DataManager/tslmdb.hpp:
+
+/usr/include/c++/8/bits/stl_map.h:
+
+/home/emk/vcpkg/installed/x64-linux/include/json/allocator.h:
+
+libs/lmdb/liblmdb/lmdb.h:
+
+libs/boost/preprocessor/control/detail/limits/while_256.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h:
+
+libs/boost/preprocessor/list/detail/fold_right.hpp:
+
+src/DataManager/FutuParser.h:
+
+libs/boost/config/detail/suffix.hpp:
+
+src/DataManager/DataWriter.cpp:
+
+/usr/include/x86_64-linux-gnu/bits/ss_flags.h:
+
+/usr/include/x86_64-linux-gnu/asm/unistd_64.h:
+
+libs/boost/filesystem.hpp:
+
+libs/boost/filesystem/config.hpp:
+
+libs/boost/config/detail/select_compiler_config.hpp:
+
+libs/boost/config/detail/select_platform_config.hpp:
+
+libs/boost/config/platform/linux.hpp:
+
+libs/futu/include/google/protobuf/map.h:
+
+/usr/include/x86_64-linux-gnu/bits/getopt_posix.h:
+
+libs/boost/config/detail/posix_features.hpp:
+
+libs/boost/mpl/aux_/config/workaround.hpp:
+
+libs/boost/config/detail/cxx_composite.hpp:
+
+libs/boost/system/api_config.hpp:
+
+libs/boost/preprocessor/arithmetic/limits/inc_256.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/sigthread.h:
+
+libs/boost/detail/workaround.hpp:
+
+libs/boost/preprocessor/arithmetic/detail/is_minimum_number.hpp:
+
+libs/boost/assert.hpp:
+
+libs/boost/preprocessor/tuple/detail/is_single_return.hpp:
+
+/usr/include/linux/falloc.h:
+
+libs/boost/mpl/aux_/config/has_xxx.hpp:
+
+libs/futu/include/Proto/Qot_GetBroker.pb.h:
+
+libs/boost/iterator/iterator_facade.hpp:
+
+/usr/include/c++/8/deque:
+
+libs/boost/iterator/interoperable.hpp:
+
+libs/boost/type_traits/is_convertible.hpp:
+
+libs/boost/system/error_condition.hpp:
+
+libs/boost/type_traits/is_same.hpp:
+
+src/FUTU/FutuEngine.cpp:
+
+libs/boost/mpl/bool.hpp:
+
+libs/boost/mpl/aux_/adl_barrier.hpp:
+
+libs/boost/preprocessor/facilities/overload.hpp:
+
+libs/boost/mpl/aux_/config/adl.hpp:
+
+libs/boost/mpl/limits/arity.hpp:
+
+libs/boost/mpl/aux_/config/intel.hpp:
+
+libs/boost/mpl/aux_/config/gcc.hpp:
+
+libs/boost/preprocessor/tuple/rem.hpp:
+
+src/Interface/IEngine.cpp:
+
+libs/boost/system/detail/snprintf.hpp:
+
+/usr/include/limits.h:
+
+libs/boost/mpl/or.hpp:
+
+libs/boost/mpl/aux_/config/use_preprocessed.hpp:
+
+libs/spdlog-1.14.1/include/spdlog/details/circular_q.h:
+
+libs/boost/mpl/aux_/na_spec.hpp:
+
+libs/boost/mpl/aux_/na.hpp:
+
+libs/boost/mpl/aux_/na_fwd.hpp:
+
+libs/boost/mpl/aux_/config/ctps.hpp:
+
+libs/boost/mpl/aux_/config/lambda.hpp:
+
+libs/boost/mpl/int_fwd.hpp:
+
+libs/boost/mpl/aux_/nttp_decl.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/fcntl.h:
+
+libs/boost/mpl/aux_/integral_wrapper.hpp:
+
+libs/boost/mpl/aux_/static_cast.hpp:
+
+/usr/include/c++/8/bits/stl_algo.h:
+
+libs/boost/mpl/aux_/template_arity.hpp:
+
+libs/boost/mpl/aux_/arity.hpp:
+
+libs/boost/mpl/aux_/config/dtp.hpp:
+
+libs/boost/mpl/aux_/preprocessor/params.hpp:
+
+libs/futu/include/google/protobuf/arenastring.h:
+
+libs/boost/mpl/aux_/config/preprocessor.hpp:
+
+/usr/include/c++/8/ext/string_conversions.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h:
+
+libs/boost/preprocessor/control/if.hpp:
+
+libs/boost/preprocessor/control/iif.hpp:
+
+/usr/include/features.h:
+
+libs/boost/preprocessor/config/limits.hpp:
+
+libs/boost/preprocessor/punctuation/comma.hpp:
+
+libs/futu/include/Proto/Trd_GetHistoryOrderFillList.pb.h:
+
+libs/futu/include/Proto/Qot_GetUserSecurity.pb.h:
+
+libs/boost/preprocessor/facilities/check_empty.hpp:
+
+libs/boost/preprocessor/repetition/repeat.hpp:
+
+/usr/include/c++/8/bits/stl_deque.h:
+
+/usr/include/x86_64-linux-gnu/bits/posix_opt.h:
+
+libs/boost/preprocessor/control/limits/while_256.hpp:
+
+libs/boost/preprocessor/debug/error.hpp:
+
+libs/boost/preprocessor/tuple/eat.hpp:
+
+libs/boost/preprocessor/repetition/limits/repeat_256.hpp:
+
+libs/boost/preprocessor/inc.hpp:
+
+/usr/include/x86_64-linux-gnu/sys/types.h:
+
+libs/boost/mpl/aux_/preprocessor/def_params_tail.hpp:
+
+libs/boost/preprocessor/logical/and.hpp:
+
+libs/boost/preprocessor/logical/bitand.hpp:
+
+libs/boost/preprocessor/identity.hpp:
+
+libs/futu/include/Proto/Trd_GetOrderList.pb.h:
+
+libs/futu/include/futu/Include_Proto.h:
+
+/usr/include/x86_64-linux-gnu/c++/8/bits/error_constants.h:
+
+libs/boost/preprocessor/empty.hpp:
+
+libs/boost/preprocessor/list/fold_left.hpp:
+
+libs/futu/include/Proto/GetUserInfo.pb.h:
+
+/usr/include/string.h:
+
+libs/boost/preprocessor/control/expr_iif.hpp:
+
+libs/boost/preprocessor/list/adt.hpp:
+
+libs/boost/type_traits/is_class.hpp:
+
+libs/boost/mpl/always.hpp:
+
+libs/boost/preprocessor/detail/is_binary.hpp:
+
+libs/futu/include/futu/FTAPI.h:
+
+libs/boost/preprocessor/list/detail/limits/fold_left_256.hpp:
+
+libs/boost/preprocessor/list/limits/fold_left_256.hpp:
+
+libs/boost/system/detail/system_category_message.hpp:
+
+libs/boost/preprocessor/list/reverse.hpp:
+
+libs/boost/preprocessor/list/detail/limits/fold_right_256.hpp:
+
+libs/rapidjson/include/rapidjson/error/error.h:
+
+libs/boost/preprocessor/control/detail/while.hpp:
+
+libs/boost/preprocessor/tuple/elem.hpp:
+
+libs/boost/mpl/aux_/config/arrays.hpp:
+
+libs/boost/preprocessor/facilities/expand.hpp:
+
+/usr/include/c++/8/bits/shared_ptr_atomic.h:
+
+libs/boost/preprocessor/variadic/limits/size_64.hpp:
+
+libs/boost/system/detail/enable_if.hpp:
+
+libs/spdlog-1.14.1/include/spdlog/details/log_msg-inl.h:
+
+libs/boost/preprocessor/comparison/equal.hpp:
+
+libs/boost/preprocessor/comparison/not_equal.hpp:
+
+libs/boost/preprocessor/comparison/limits/not_equal_256.hpp:
+
+libs/boost/preprocessor/arithmetic/detail/maximum_number.hpp:
+
+libs/boost/preprocessor/control/while.hpp:
+
+libs/boost/preprocessor/arithmetic/sub.hpp:
+
+/home/emk/vcpkg/installed/x64-linux/include/json/value.h:
+
+libs/boost/mpl/aux_/lambda_support.hpp:
+
+/usr/include/c++/8/debug/debug.h:
+
+libs/boost/mpl/aux_/config/compiler.hpp:
+
+libs/boost/preprocessor/stringize.hpp:
+
+libs/boost/type_traits/intrinsics.hpp:
+
+libs/boost/preprocessor/detail/check.hpp:
+
+libs/spdlog-1.14.1/include/spdlog/details/os.h:
+
+libs/boost/type_traits/detail/config.hpp:
+
+libs/boost/type_traits/is_reference.hpp:
+
+libs/boost/type_traits/is_function.hpp:
+
+libs/boost/preprocessor/array/elem.hpp:
+
+libs/boost/type_traits/is_array.hpp:
+
+libs/boost/type_traits/is_arithmetic.hpp:
+
+libs/boost/type_traits/is_floating_point.hpp:
+
+src/Interface/datastruture.cpp:
+
+libs/boost/type_traits/add_lvalue_reference.hpp:
+
+libs/boost/mpl/aux_/na_assert.hpp:
+
+libs/boost/type_traits/add_reference.hpp:
+
+libs/boost/mpl/arg_fwd.hpp:
+
+libs/boost/iterator/is_iterator.hpp:
+
+libs/boost/mpl/if.hpp:
+
+libs/boost/mpl/identity.hpp:
+
+libs/boost/mpl/aux_/preprocessed/gcc/apply.hpp:
+
+libs/boost/mpl/arg.hpp:
+
+libs/boost/mpl/aux_/config/gpu.hpp:
+
+libs/boost/mpl/aux_/arity_spec.hpp:
+
+libs/boost/filesystem/file_status.hpp:
+
+/home/emk/vcpkg/installed/x64-linux/include/json/reader.h:
+
+libs/boost/mpl/aux_/preprocessed/gcc/placeholders.hpp:
+
+libs/boost/mpl/and.hpp:
+
+/usr/include/x86_64-linux-gnu/sys/syscall.h:
+
+libs/boost/mpl/aux_/preprocessed/gcc/and.hpp:
+
+libs/boost/type_traits/is_const.hpp:
+
+libs/boost/type_traits/is_integral.hpp:
+
+libs/boost/detail/indirect_traits.hpp:
+
+libs/boost/type_traits/is_pointer.hpp:
+
+libs/boost/mpl/aux_/config/nttp.hpp:
+
+libs/boost/type_traits/detail/is_member_function_pointer_cxx_11.hpp:
+
+libs/boost/mpl/aux_/preprocessed/gcc/full_lambda.hpp:
+
+libs/boost/type_traits/is_member_pointer.hpp:
+
+libs/boost/type_traits/remove_pointer.hpp:
+
+libs/boost/core/addressof.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/typesizes.h:
+
+libs/boost/type_traits/remove_const.hpp:
+
+libs/boost/type_traits/is_scalar.hpp:
+
+libs/boost/type_traits/is_enum.hpp:
+
+libs/boost/mpl/aux_/preprocessor/default_params.hpp:
+
+libs/boost/mpl/aux_/preprocessed/gcc/quote.hpp:
+
+libs/boost/preprocessor/config/config.hpp:
+
+libs/boost/mpl/apply.hpp:
+
+libs/boost/mpl/aux_/has_apply.hpp:
+
+libs/boost/mpl/has_xxx.hpp:
+
+libs/spdlog-1.14.1/include/spdlog/sinks/basic_file_sink-inl.h:
+
+libs/boost/mpl/aux_/config/msvc_typename.hpp:
+
+libs/boost/preprocessor/array/size.hpp:
+
+libs/boost/mpl/aux_/msvc_never_true.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/confname.h:
+
+libs/boost/mpl/aux_/preprocessed/gcc/apply_wrap.hpp:
+
+libs/futu/include/Proto/Trd_GetMaxTrdQtys.pb.h:
+
+libs/boost/mpl/next_prior.hpp:
+
+libs/boost/io/detail/buffer_fill.hpp:
+
+libs/boost/mpl/aux_/preprocessed/gcc/bind.hpp:
+
+libs/boost/mpl/aux_/config/bcc.hpp:
+
+libs/boost/mpl/aux_/config/integral.hpp:
+
+libs/boost/version.hpp:
+
+libs/boost/mpl/aux_/preprocessed/gcc/template_arity.hpp:
+
+libs/boost/io/ios_state.hpp:
+
+libs/boost/functional/hash_fwd.hpp:
+
+libs/boost/config/auto_link.hpp:
+
+libs/boost/container_hash/hash_fwd.hpp:
+
+libs/boost/cstdint.hpp:
+
+libs/boost/system/detail/generic_category_message.hpp:
+
+libs/nng-1.8.0/include/nng/protocol/pubsub0/pub.h:
+
+libs/boost/mpl/placeholders.hpp:
+
+libs/boost/system/detail/is_same.hpp:
+
+libs/boost/system/is_error_condition_enum.hpp:
+
+libs/boost/system/detail/cerrno.hpp:
+
+libs/boost/system/detail/errc.hpp:
+
+libs/boost/system/detail/error_code.hpp:
+
+libs/boost/io/detail/ostream_guard.hpp:
+
+libs/boost/system/is_error_code_enum.hpp:
+
+libs/boost/system/detail/system_category.hpp:
+
+libs/boost/system/detail/interop_category.hpp:
+
+libs/boost/system/detail/std_category.hpp:

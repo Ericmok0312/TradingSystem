@@ -7,6 +7,7 @@ using namespace ts;
 #include <FUTU/FutuEngine.h>
 #include <json/json.h>
 #include <DataManager/DataManager.h>
+#include <DataManager/DataWriter.h>
 
 void func_1(){
     if(!MsgqTSMessenger::msgq_server_){
@@ -108,35 +109,49 @@ void func_4(){
     //     }
     // }
 
-    DataManager dm;
-    LOG->info("dm created");
-    dm.start();
+    // DataManager dm;
+    // LOG->info("dm created");
+    // dm.start();
 
+
+    
+    return;
 }
 
 
 int main(){
-    std::shared_ptr<Logger> LOG = Logger::getInstance();
-    if(!MsgqTSMessenger::msgq_server_){
-        MsgqTSMessenger::msgq_server_  = std::make_unique<MsgqNNG>(MSGQ_PROTOCOL::PUB, PROXY_SERVER_URL);
-    }
-    sleep(2);
+    //std::shared_ptr<Logger> LOG = Logger::getInstance();
+    // if(!MsgqTSMessenger::msgq_server_){
+    //     MsgqTSMessenger::msgq_server_  = std::make_unique<MsgqNNG>(MSGQ_PROTOCOL::PUB, PROXY_SERVER_URL);
+    // }
+    // sleep(2);
 
   
-    std::thread t1(func_11);
-    std::thread t2(func_2);
-    std::thread t3(func_3);
-    std::thread t4(func_4);
+    // std::thread t1(func_11);
+    // std::thread t2(func_2);
+    // std::thread t3(func_3);
+    //std::thread t4(func_4);
 
 
-    std::thread sb(func_1);
+    // std::thread sb(func_1);
     
-    t1.join();
-    t2.join();
-    t3.join();
-    t4.join();
-    sb.join();
+    // t1.join();
+    // t2.join();
+    // t3.join();
+    //t4.join();
+    // sb.join();
 
+    //ts::DataWriter dw;
+    auto q = make_shared<Quote>();
+    
+    strcpy(q->code_, "02222");
+    strcpy(q->exg_ ,"Futu");
+    strcpy(q->time_, "2021-06-09 11:05:41");
+    
+    shared_ptr<BaseData> nq = dynamic_pointer_cast<BaseData>(q);
+    q.reset();
+    ts::DataWriter::WriteQuote(nq);
 
+    cout<<"end"<<endl;
     return 0;
 }

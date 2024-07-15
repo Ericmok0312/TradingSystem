@@ -103,7 +103,9 @@ namespace ts{
                 break;
             case KLINE_1D:
                 c2s->add_subtypelist(Qot_Common::SubType::SubType_KL_Day);
-                break;                
+                break;
+            case QUOTE:
+                c2s->add_subtypelist(Qot_Common::SubType::SubType_Basic);         
             case ALL:
                 for(int i=0; i<enSubTypes.size(); i++)
                 c2s->add_subtypelist(enSubTypes[i]);
@@ -138,8 +140,14 @@ namespace ts{
 
 
     void FutuEngine::OnPush_UpdateTicker(const Qot_UpdateTicker::Response &stRsp){
-        Json::Value res;
-        std::shared_ptr<Msg> msg = make_shared<Msg>("DataManager", "FutuEngine", MSG_TYPE_TICKER, "");
+        std::shared_ptr<Msg> msg = std::make_shared<Msg>("DataManager", "FutuEngine", MSG_TYPE_TICKER, "");
+        ProtoBufToString(stRsp, msg->data_);
+        messenger_->send(msg, 0);
+    }
+
+
+    void FutuEngine::OnPush_UpdateBasicQot(const Qot_UpdateBasicQot::Response &stRsp){
+        std::shared_ptr<Msg> msg = std::make_shared<Msg>("DataManager", "FutuEngine", MSG_TYPE_QUOTE, "");
         ProtoBufToString(stRsp, msg->data_);
         messenger_->send(msg, 0);
     }

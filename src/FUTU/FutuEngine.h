@@ -78,7 +78,7 @@ namespace ts
             virtual void OnReply_GetOptionExpirationDate(Futu::u32_t nSerialNo, const Qot_GetOptionExpirationDate::Response &stRsp){}
 
             virtual void OnPush_Notify(const Notify::Response &stRsp){}
-            virtual void OnPush_UpdateBasicQot(const Qot_UpdateBasicQot::Response &stRsp){}
+            virtual void OnPush_UpdateBasicQot(const Qot_UpdateBasicQot::Response &stRsp);
             virtual void OnPush_UpdateOrderBook(const Qot_UpdateOrderBook::Response &stRsp){}
             virtual void OnPush_UpdateTicker(const Qot_UpdateTicker::Response &stRsp);
             virtual void OnPush_UpdateKL(const Qot_UpdateKL::Response &stRsp){}
