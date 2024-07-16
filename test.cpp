@@ -14,7 +14,7 @@ void func_1(){
         MsgqTSMessenger::msgq_server_  = std::make_unique<MsgqNNG>(MSGQ_PROTOCOL::PUB, PROXY_SERVER_URL);
     }
     sleep(10);
-    std::shared_ptr<Logger> LOG = Logger::getInstance();
+    std::shared_ptr<Logger> LOG = make_shared<Logger>("fun1");
     std::shared_ptr<Msg> msg = std::make_shared<Msg>();
 
     string code = "00700";
@@ -47,7 +47,7 @@ void func_11(){
     if(!MsgqTSMessenger::msgq_server_){
         MsgqTSMessenger::msgq_server_  = std::make_unique<MsgqNNG>(MSGQ_PROTOCOL::PUB, PROXY_SERVER_URL);
     }
-    std::shared_ptr<Logger> LOG = Logger::getInstance();
+    std::shared_ptr<Logger> LOG = make_shared<Logger>("fun11");
     std::shared_ptr<Msg> msg = std::make_shared<Msg>();
     Json::Value param;
     int id = 8865506;
@@ -71,7 +71,7 @@ void func_11(){
 }
 
 void func_2(){
-    std::shared_ptr<Logger> LOG = Logger::getInstance();
+    std::shared_ptr<Logger> LOG = make_shared<Logger>("fun2");
     ts::MsgqTSMessenger rec2 (PROXY_SERVER_URL);
     LOG->info("dialer2 created");
  
@@ -87,7 +87,7 @@ void func_2(){
 
 
 void func_3(){
-    std::shared_ptr<Logger> LOG = Logger::getInstance();
+    std::shared_ptr<Logger> LOG = make_shared<Logger>("fun3");
     FutuEngine eng;
     std::chrono::microseconds ms = std::chrono::duration_cast< std::chrono::microseconds >(std::chrono::system_clock::now().time_since_epoch());
     LOG->info(fmt::format("futu created, current timestamp:{}", to_string(ms.count())).c_str());
@@ -98,7 +98,7 @@ void func_3(){
 
 void func_4(){
 
-    std::shared_ptr<Logger> LOG = Logger::getInstance();
+    std::shared_ptr<Logger> LOG = make_shared<Logger>("fun4");
     // ts::MsgqTSMessenger rec (PROXY_SERVER_URL);
     // LOG->info("dialer3 created");
  
@@ -142,6 +142,8 @@ int main(){
     // sb.join();
 
     //ts::DataWriter dw;
+    unique_ptr<FutuEngine> fe= FutuEngine::getInstance();
+    shared_ptr<DataManager> de= DataManager::getInstance();
     auto q = make_shared<Quote>();
     
     strcpy(q->code_, "02222");
@@ -150,8 +152,10 @@ int main(){
     
     shared_ptr<BaseData> nq = dynamic_pointer_cast<BaseData>(q);
     q.reset();
-    ts::DataWriter::WriteQuote(nq);
 
-    cout<<"end"<<endl;
+    shared_ptr<DataWriter> temp = ts::DataWriter::getInstance();
+    temp->WriteQuote(nq);
+    auto logger = make_shared<Logger>("main");
+
     return 0;
 }

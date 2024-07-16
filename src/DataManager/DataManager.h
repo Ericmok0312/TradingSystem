@@ -14,22 +14,25 @@ namespace ts{
 
     //Need to implement caches for reading data
 
-    class DataManager: public ThreadPool<void(*)(std::shared_ptr<Msg>), std::shared_ptr<Msg> >{
+    class DataManager: public ThreadPool<std::function<void(shared_ptr<Msg>)>, std::shared_ptr<Msg> >{
         public:
             DataManager();
             ~DataManager();
 
             void init();
             void start();
-            static void processMsg(std::shared_ptr<Msg>);
-
+            void processMsg(std::shared_ptr<Msg>);
+            static std::shared_ptr<DataManager> getInstance();
+            void storeDataCSV();
 
 
         protected:
             static std::shared_ptr<ts::Logger> logger_;
             static std::unique_ptr<ts::IMessenger> messenger_;
             std::atomic<Estate> estate_; 
-            static ts::DataWriter dw;
+            static std::mutex getIns_mutex;
+            std::shared_ptr<DataWriter> datawritter_;
+            static std::shared_ptr<DataManager> instance_;
 
     };
 

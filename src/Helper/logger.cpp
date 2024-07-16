@@ -2,32 +2,13 @@
 #include <sstream>
 #include <chrono>
 #include <iomanip>
-
+#include <iostream>
 
 namespace ts
 {
-    /*
-    
-    Logger::logger_ : initialized into  nullptr, for checking whether the spdlogger is created in getInstance.
-    
-    */
 
-    std::shared_ptr<Logger> Logger::logger_ = nullptr;
-
-    /*
     
-    Logger::spdlogger_ : initialized into  nullptr
     
-    */
-
-    std::shared_ptr<spdlog::logger> Logger::spdlogger_ = nullptr;
-
-
-    /*
-    
-    mutex_ : a mutex for getInstance(), avoiding any threading problem
-    
-    */
 
     std::mutex Logger::mutex_;
     /*
@@ -39,15 +20,6 @@ namespace ts
         mutex_ is used to avoid threading problem
     */
    
-
-    std::shared_ptr<Logger> Logger::getInstance(){
-        std::lock_guard<std::mutex> lock(mutex_);
-        if(logger_==nullptr){
-            logger_ = std::make_shared<Logger>(Logger());
-        }
-        return logger_;
-    }
-
 
     /*
     
@@ -62,7 +34,12 @@ namespace ts
     
     */
 
-    Logger::Logger(){
+    Logger::Logger(const char* name){
+        name_ = name;
+        spdlogger_ = spdlog::get(name); 
+        if (spdlogger_){
+            return;
+        }
 
         std::time_t temp = std::chrono::system_clock::to_time_t(std::chrono::system_clock::now());
         std::ostringstream fpath;
@@ -83,7 +60,7 @@ namespace ts
 
         sinks.push_back(console_sink);
         sinks.push_back(file_sink);
-        spdlogger_ = std::make_shared<spdlog::logger>("tslogger", begin(sinks), end(sinks));
+        spdlogger_ = std::make_shared<spdlog::logger>(name, begin(sinks), end(sinks));
         spdlogger_->set_level(spdlog::level::trace);
     }
 
@@ -95,7 +72,8 @@ namespace ts
     */
 
     Logger::~Logger(){
-        spdlog::drop("tslogger");
+        spdlog::drop(name_);
+        std::cout<<fmt::format("logger {} destructed", name_)<<endl;
     }
 
  

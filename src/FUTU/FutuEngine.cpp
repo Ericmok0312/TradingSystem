@@ -5,23 +5,43 @@ using namespace std;
 
 namespace ts{
 
+
+
+    std::mutex FutuEngine::getIns_mutex;
+    std::unique_ptr<FutuEngine> FutuEngine::instance_ = nullptr;
+
     /// @brief Default Constructor, calling init()
     FutuEngine::FutuEngine(){
+
         init();
     }
 
-    /// @brief Destructor, unregister and release futuQotApi_ and futuTrdApi_ as requried
+    /// @brief Destructor, e ster  and release futuQotApi_ and futuTrdApi_ as requried
     FutuEngine::~FutuEngine(){
-        if(futuQotApi_){
+        if(futuQotApi_ != nullptr){
             futuQotApi_->UnregisterQotSpi();
             futuQotApi_->UnregisterConnSpi();
             FTAPI::ReleaseQotApi(futuQotApi_);
+            futuQotApi_ = nullptr; // prevent double deletion
         }
-        if(futuTrdApi_){
+        if(futuTrdApi_ != nullptr){
             futuTrdApi_->UnregisterTrdSpi();
             futuTrdApi_->UnregisterConnSpi();
-            FTAPI::ReleaseQotApi(futuQotApi_);
+            FTAPI::ReleaseTrdApi(futuTrdApi_);
+            futuTrdApi_ = nullptr;
         }
+        FTAPI::UnInit();
+    }
+
+
+
+
+    std::unique_ptr<FutuEngine> FutuEngine::getInstance(){
+        std::lock_guard<std::mutex> lock(getIns_mutex); 
+        if(!instance_){
+            instance_ = make_unique<FutuEngine>();
+        }
+        return move(instance_);
     }
 
 
@@ -35,8 +55,9 @@ namespace ts{
         futuTrdApi_->RegisterConnSpi(this);
         futuTrdApi_->RegisterTrdSpi(this);
 
-        logger_ = Logger::getInstance();
+        logger_ = make_shared<Logger>("FutuEngine");
         messenger_ = std::make_unique<MsgqTSMessenger>(PROXY_SERVER_URL);
+        FTAPI::Init();
     }
 
     /*

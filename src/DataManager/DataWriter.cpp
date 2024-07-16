@@ -6,13 +6,14 @@ namespace ts{
 
 
 
-    std::shared_ptr<ts::Logger> DataWriter::logger_;
-    DataWriter::TSLMDBMap DataWriter::quote_dbs_; 
-    DataWriter::TSLMDBMap DataWriter::excahnge_m1_dbs;
-    DataWriter::TSLMDBMap DataWriter::exchange_m5_dbs;
-    DataWriter::TSLMDBMap DataWriter::excange_d1_dbs;
+    std::shared_ptr<ts::Logger> DataWriter::logger_ = nullptr;
+
 
     std::mutex DataWriter::q_db_mutex;
+    std::mutex DataWriter::getIns_mutex;
+    shared_ptr<DataWriter> DataWriter::instance_ = nullptr;
+
+    
 
     DataWriter::DataWriter():ThreadPool(1,4,6){
         init();
@@ -23,7 +24,16 @@ namespace ts{
     }
 
     void DataWriter::init(){
-        logger_ = Logger::getInstance();
+        logger_ = make_shared<Logger>("DataWriter");
+    }
+
+
+    shared_ptr<DataWriter> DataWriter::getInstance(){
+        std::lock_guard<mutex> lock(getIns_mutex);
+        if(!instance_){
+            instance_ = make_shared<DataWriter>();
+        }
+        return instance_;
     }
 
 
@@ -35,17 +45,14 @@ namespace ts{
             return;
         }
         TSLMDBPtr db = get_q_db(nquote->exg_, nquote->code_);
-        logger_->info("called2");
         TSQryLMDB query(*db); // create a query object
         logger_->info(nquote->exg_);
         vector<string> temp;
         split(nquote->time_,' ',temp);
         LMDBKey key (nquote->exg_, nquote->code_, temp[0].data(), temp[1].data());
-        logger_->info("called3");
-        if(!query.put_and_commit(key.getString(), quote->getString())){
+        if(!query.put_and_commit(key.getString(), nquote->getString())){
             logger_->error(fmt::format("wrtie tick of {} error {}", nquote->code_, db->errmsg()).c_str());
         }
-        logger_->info("called4");
     }
 
     DataWriter::TSLMDBPtr DataWriter::get_q_db(const char* exg, const char* code){

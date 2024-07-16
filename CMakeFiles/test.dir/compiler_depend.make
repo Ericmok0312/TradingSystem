@@ -2072,7 +2072,8 @@ CMakeFiles/test.dir/src/Helper/logger.cpp.o: src/Helper/logger.cpp \
   /usr/include/c++/8/sstream \
   /usr/include/c++/8/bits/sstream.tcc \
   /usr/include/c++/8/iomanip \
-  /usr/include/c++/8/bits/quoted_string.h
+  /usr/include/c++/8/bits/quoted_string.h \
+  /usr/include/c++/8/iostream
 
 CMakeFiles/test.dir/src/Interface/IEngine.cpp.o: src/Interface/IEngine.cpp \
   /usr/include/stdc-predef.h \

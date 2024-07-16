@@ -382,6 +382,46 @@ namespace ts{
             int64_t position_ ;
             int64_t pChange_ ;
    };
+
+
+    class QuoteSlice : public BaseData{
+        private:
+            char code_[MAX_SYMBOL_SIZE];
+            typedef std::pair<Quote*, uint32_t> QuoteBlock;
+            std::vector<QuoteBlock> block_;
+            uint32_t count_;
+
+        protected:
+            QuoteSlice(){block_.clear();}
+
+            inline int32_t translateIdx(int32_t idx) const{
+                if (idx<0){
+                    return max(0, (int32_t)count_+idx);
+                }
+                return idx;
+            }
+
+        public:
+            static inline QuoteSlice* create (const char* code, Quote* quote = nullptr, uint32_t count = 0){
+                QuoteSlice* slice = new QuoteSlice();
+                strcpy(slice->code_, code);
+                if(quote != nullptr){
+                    slice->block_.emplace_back(QuoteBlock(quote, count));
+                    slice->count_ = count;
+                }
+                return slice;
+            }
+            inline bool appendBlock(Quote* quote, uint32_t count)
+            {
+                if (quote == NULL || count == 0)
+                    return false;
+
+                count_ += count;
+                block_.emplace_back(QuoteBlock(quote, count));
+                return true;
+            }
+    };
+
 }
 
 #endif

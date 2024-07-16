@@ -233,28 +233,56 @@ namespace ts{
             }
 
 
-            // int get_lowers(const std::string& lower_key, const std::string& upper_key, int count, LMDBCB callback){
-            //     MDB_cursor* cursor;
-            //     int error = mdb_cursor_open(txn_, dbi_, &cursor);
-            //     db_.update_errorno(error);
-            //     if(error!=MDB_SUCCESS) return 0;
+            int get_lowers(const std::string& lower_key, const std::string& upper_key, int count, LMDBCB callback){
+                MDB_cursor* cursor;
+                int error = mdb_cursor_open(txn_, dbi_, &cursor);
+                db_.update_errorno(error);
+                if(error!=MDB_SUCCESS) return 0;
 
 
-            //     MDB_val rKey, mData;
-            //     rKey.mv_data = (void*) upper_key.data();
-            //     rKey.mv_size = upper_key.size();
+                MDB_val rKey, mData;
+                rKey.mv_data = (void*) upper_key.data();
+                rKey.mv_size = upper_key.size();
 
 
-            //     int count = 0;
-            //     ValueArray Keys, Vals;
-            //     error = mdb_cursor_get(cursor, &rKey, &mData, MDB_SET_RANGE);
-            //     db_.update_errorno(error);
+                int count = 0;
+                ValueArray Keys, Vals;
+                error = mdb_cursor_get(cursor, &rKey, &mData, MDB_SET_RANGE);
+                db_.update_errorno(error);
 
 
-            //     if(error == MDB_NOTFOUND){
-            //         error = mdb_
-            //     }
-            // }
+                if(error == MDB_NOTFOUND){
+                    error = mdb_cursor_get(cursor, &rKey, &mData, MDB_LAST);
+                    db_.update_errorno(error);
+                }
+
+                for(; error != MDB_NOTFOUND;){
+                    if(memcmp(rKey.mv_data, upper_key.data(), upper_key.size())>0){ // not reaching the upperbound, continue to shift
+                        error = mdb_cursor_get(cursor, &rKey, &mData, MDB_PREV);
+                        db_.update_errorno(error);
+                        continue;
+                    }
+
+                    if(memcmp(rKey.mv_data, lower_key.data(), lower_key.size())<0){
+                        break;
+                    }
+
+                    Keys.emplace_back(std::string((char*)rKey.mv_data, rKey.mv_size));
+                    Vals.emplace_back(std::string((char*)mData.mv_data, mData.mv_size));
+                    count++;
+
+                    if (count==count) break;
+
+                    error = mdb_cursor_get(cursor, &rKey, &mData, MDB_PREV);
+                    db_.update_errorno(error);
+      
+		            std::reverse(Keys.begin(), Keys.end());
+		            std::reverse(Vals.begin(), Vals.end());
+		            callback(Keys, Vals);
+		            mdb_cursor_close(cursor);
+                    return count;
+                }
+            }
 
 
         private:

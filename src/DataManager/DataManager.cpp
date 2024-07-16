@@ -11,9 +11,12 @@ using namespace std;
 
 namespace ts{
     
-    std::shared_ptr<ts::Logger> DataManager::logger_ = Logger::getInstance();
+    std::shared_ptr<ts::Logger> DataManager::logger_ = nullptr;
     std::unique_ptr<ts::IMessenger> DataManager::messenger_ = make_unique<MsgqTSMessenger>(PROXY_SERVER_URL);
-    ts::DataWriter DataManager::dw;
+    std::mutex DataManager::getIns_mutex;
+    std::shared_ptr<DataManager> DataManager::instance_ = nullptr;
+
+
     /// @brief Constructor, calling ThreadPool constructor
     DataManager::DataManager():ThreadPool(1, 4, 6){
         init();
@@ -25,8 +28,18 @@ namespace ts{
     }
     
     void DataManager::init(){
-        
+        datawritter_ = DataWriter::getInstance();
+        logger_ = make_shared<Logger>("DataManager");
         estate_.store(STOP);
+    }
+
+
+    std::shared_ptr<DataManager> DataManager::getInstance(){
+        std::lock_guard<std::mutex> lock(getIns_mutex); 
+        if(!instance_){
+            instance_ = make_shared<DataManager>();
+        }
+        return instance_;
     }
 
     void DataManager::start(){
@@ -37,7 +50,7 @@ namespace ts{
             msg = messenger_->recv(NNG_FLAG_ALLOC+NNG_FLAG_NONBLOCK);
 
             if(msg && msg->destination_=="DataManager"){
-                ThreadPool::AddTask(&processMsg, msg);
+                this->AddTask(std::bind(&DataManager::processMsg, this, placeholders::_1), msg);
             }
         }
     }
@@ -50,7 +63,7 @@ namespace ts{
                 if(msg->source_ == "FutuEngine"){
                     FutuQot2TsQot(msg->data_,list);
                     for (int i=0; i<list.size();++i){
-                        dw.AddTask(DataWriter::WriteQuote, list[i]); // add task to DataWriter ThreadPool
+                        datawritter_->AddTask(bind(&DataWriter::WriteQuote, datawritter_, placeholders::_1), list[i]); // add task to DataWriter ThreadPool
                     }
                 }
                 break;
@@ -69,6 +82,10 @@ namespace ts{
         logger_->info(fmt::format("function2 received {}, current UNIX timestamp: {}", msg->serialize(), to_string(ms.count())).c_str());
     }
 
+
+    void DataManager::storeDataCSV(){
+        
+    }
 
 
 }

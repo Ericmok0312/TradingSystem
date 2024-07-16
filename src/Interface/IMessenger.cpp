@@ -21,7 +21,7 @@ namespace ts{
     - getting logger_ using Logger::getInstance();
     */
     IMessenger::IMessenger(){
-        logger_ = Logger::getInstance();
+        logger_ = make_shared<Logger>("Messenger");
     }
 
     IMessenger::~IMessenger(){}; // default destructor
@@ -41,7 +41,7 @@ namespace ts{
 
         protocol_ = protocol;
         url_ = url;
-        logger_ = Logger::getInstance();
+        logger_ = make_shared<Logger>("IMsgq");
 
     }
 

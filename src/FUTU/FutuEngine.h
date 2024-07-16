@@ -15,9 +15,15 @@ namespace ts
         protected:
             Futu::FTAPI_Qot* futuQotApi_;
             Futu::FTAPI_Trd* futuTrdApi_;
+            static std::mutex getIns_mutex;
+            static unique_ptr<FutuEngine> instance_;
         public:
             FutuEngine();
             virtual ~FutuEngine();
+
+
+            static std::unique_ptr<FutuEngine> getInstance();
+
 
             virtual void init();
             virtual void start();
