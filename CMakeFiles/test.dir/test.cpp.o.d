@@ -478,5 +478,4 @@ CMakeFiles/test.dir/test.cpp.o: \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/rapidjson.h \
  /data/home/emk/Coding/Trading_system/TradingSystem/src/DataManager/DataWriter.h \
  /data/home/emk/Coding/Trading_system/TradingSystem/src/DataManager/tslmdb.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/lmdb/liblmdb/lmdb.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/src/Helper/ThreadPool.hpp
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/lmdb/liblmdb/lmdb.h

@@ -1,6 +1,10 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/test.dir/main.cpp.o"
+  "CMakeFiles/test.dir/main.cpp.o.d"
   "CMakeFiles/test.dir/src/DataManager/DataManager.cpp.o"
   "CMakeFiles/test.dir/src/DataManager/DataManager.cpp.o.d"
+  "CMakeFiles/test.dir/src/DataManager/DataReader.cpp.o"
+  "CMakeFiles/test.dir/src/DataManager/DataReader.cpp.o.d"
   "CMakeFiles/test.dir/src/DataManager/DataWriter.cpp.o"
   "CMakeFiles/test.dir/src/DataManager/DataWriter.cpp.o.d"
   "CMakeFiles/test.dir/src/FUTU/FutuEngine.cpp.o"
@@ -13,8 +17,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/test.dir/src/Interface/IMessenger.cpp.o.d"
   "CMakeFiles/test.dir/src/Interface/datastruture.cpp.o"
   "CMakeFiles/test.dir/src/Interface/datastruture.cpp.o.d"
-  "CMakeFiles/test.dir/test.cpp.o"
-  "CMakeFiles/test.dir/test.cpp.o.d"
   "test"
   "test.pdb"
 )

@@ -1,0 +1,570 @@
+[2024-07-24 14:22:19.159] [] [DataWriter] [info] Futu
+[2024-07-24 14:58:58.372] [] [DataWriter] [info] Futu
+[2024-07-24 14:58:58.374] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 14:58:58.374] [] [DataWriter] [info] Writting 2 of data from Futu/02222 into csv
+[2024-07-24 14:58:58.374] [] [DataWriter] [info] Finish writting all data into csv
+[2024-07-24 14:58:58.374] [] [DataWriter] [info] Stored to csv
+[2024-07-24 15:04:21.237] [] [DataWriter] [info] Futu
+[2024-07-24 15:04:21.238] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 15:04:21.238] [] [DataWriter] [info] Writting 2 of data from Futu/02222 into csv
+[2024-07-24 15:04:21.238] [] [DataWriter] [info] Finish writting all data into csv
+[2024-07-24 15:04:21.238] [] [DataWriter] [info] Stored to csv
+[2024-07-24 15:05:49.645] [] [DataWriter] [info] Futu
+[2024-07-24 15:05:49.646] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 15:05:49.646] [] [DataWriter] [info] Writting 2 of data from Futu/02222 into csv
+[2024-07-24 15:05:49.646] [] [DataWriter] [info] Finish writting all data into csv
+[2024-07-24 15:05:49.646] [] [DataWriter] [info] Stored to csv
+[2024-07-24 15:11:44.344] [] [DataWriter] [info] Futu
+[2024-07-24 15:11:44.345] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 15:11:44.345] [] [DataWriter] [info] Futu
+[2024-07-24 15:11:44.346] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 15:11:44.346] [] [DataWriter] [info] Writting 3 of data from Futu/02222 into csv
+[2024-07-24 15:11:44.346] [] [DataWriter] [info] Finish writting all data into csv
+[2024-07-24 15:11:44.346] [] [DataWriter] [info] Stored to csv
+[2024-07-24 15:13:59.777] [] [DataWriter] [info] Futu
+[2024-07-24 15:13:59.779] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 15:13:59.779] [] [DataWriter] [info] Futu
+[2024-07-24 15:13:59.780] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 15:13:59.780] [] [DataWriter] [info] Futu
+[2024-07-24 15:13:59.781] [] [DataWriter] [info] Writting 4 of data from Futu/02222 into csv
+[2024-07-24 15:13:59.781] [] [DataWriter] [info] Finish writting all data into csv
+[2024-07-24 15:13:59.781] [] [DataWriter] [info] Stored to csv
+[2024-07-24 15:15:37.889] [] [DataWriter] [info] Futu
+[2024-07-24 15:15:37.889] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 15:15:37.889] [] [DataWriter] [info] Futu
+[2024-07-24 15:15:37.890] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 15:15:37.890] [] [DataWriter] [info] Futu
+[2024-07-24 15:15:37.890] [] [DataWriter] [info] Writting 4 of data from Futu/02222 into csv
+[2024-07-24 15:15:37.891] [] [DataWriter] [info] Finish writting all data into csv
+[2024-07-24 15:15:37.891] [] [DataWriter] [info] Stored to csv
+[2024-07-24 15:22:27.592] [] [DataWriter] [info] Futu
+[2024-07-24 15:22:27.596] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 15:22:27.596] [] [DataWriter] [info] Futu
+[2024-07-24 15:22:27.598] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 15:22:27.598] [] [DataWriter] [info] Futu
+[2024-07-24 15:22:27.599] [] [DataWriter] [info] Writting 4 of data from Futu/02222 into csv
+[2024-07-24 15:22:27.599] [] [DataWriter] [info] Finish writting all data into csv
+[2024-07-24 15:22:27.600] [] [DataWriter] [info] Stored to csv
+[2024-07-24 15:24:19.241] [] [DataWriter] [info] Futu
+[2024-07-24 15:24:19.242] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 15:24:19.242] [] [DataWriter] [info] Futu
+[2024-07-24 15:24:19.243] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 15:24:19.243] [] [DataWriter] [info] Futu
+[2024-07-24 15:24:19.244] [] [DataWriter] [info] Writting 4 of data from Futu/02222 into csv
+[2024-07-24 15:24:19.244] [] [DataWriter] [info] Finish writting all data into csv
+[2024-07-24 15:24:19.244] [] [DataWriter] [info] Stored to csv
+[2024-07-24 15:25:33.938] [] [DataWriter] [info] Futu
+[2024-07-24 15:25:33.940] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 15:25:33.940] [] [DataWriter] [info] Futu
+[2024-07-24 15:25:33.941] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 15:25:33.942] [] [DataWriter] [info] Futu
+[2024-07-24 15:25:33.943] [] [DataWriter] [info] Writting 4 of data from Futu/02222 into csv
+[2024-07-24 15:25:33.944] [] [DataWriter] [info] Finish writting all data into csv
+[2024-07-24 15:25:33.944] [] [DataWriter] [info] Stored to csv
+[2024-07-24 15:30:50.726] [] [DataWriter] [info] Futu
+[2024-07-24 15:30:50.730] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 15:30:50.730] [] [DataWriter] [info] Futu
+[2024-07-24 15:30:50.731] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 15:30:50.731] [] [DataWriter] [info] Futu
+[2024-07-24 15:30:50.733] [] [DataWriter] [info] Writting 3 of data from Futu/02222 into csv
+[2024-07-24 15:30:50.734] [] [DataWriter] [info] Finish writting all data into csv
+[2024-07-24 15:30:50.734] [] [DataWriter] [info] Stored to csv
+[2024-07-24 15:33:39.177] [] [DataWriter] [info] Futu
+[2024-07-24 15:33:39.178] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 15:33:39.178] [] [DataWriter] [info] Futu
+[2024-07-24 15:33:39.178] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 15:33:39.178] [] [DataWriter] [info] Futu
+[2024-07-24 15:33:39.180] [] [DataWriter] [info] Futu
+[2024-07-24 15:33:39.181] [] [DataWriter] [info] Writting 1 of data from Futu/1222 into csv
+[2024-07-24 15:33:39.182] [] [DataWriter] [info] Writting 3 of data from Futu/02222 into csv
+[2024-07-24 15:33:39.182] [] [DataWriter] [info] Finish writting all data into csv
+[2024-07-24 15:33:39.182] [] [DataWriter] [info] Stored to csv
+[2024-07-24 16:42:10.396] [] [DataWriter] [info] Futu
+[2024-07-24 16:42:10.397] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 16:42:10.398] [] [DataWriter] [info] Futu
+[2024-07-24 16:42:10.398] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 16:42:10.398] [] [DataWriter] [info] Futu
+[2024-07-24 16:42:10.399] [] [DataWriter] [info] Futu
+[2024-07-24 16:42:10.400] [] [DataWriter] [info] Writting -1 of data from Futu/1222 into csv
+[2024-07-24 16:42:10.400] [] [DataWriter] [info] Writting -1 of data from Futu/02222 into csv
+[2024-07-24 16:42:10.400] [] [DataWriter] [info] Finish writting all data into csv
+[2024-07-24 16:42:10.400] [] [DataWriter] [info] Stored to csv
+[2024-07-24 16:50:12.674] [] [DataWriter] [info] Futu
+[2024-07-24 16:50:12.675] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 16:50:12.675] [] [DataWriter] [info] Futu
+[2024-07-24 16:50:12.676] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 16:50:12.676] [] [DataWriter] [info] Futu
+[2024-07-24 16:50:12.677] [] [DataWriter] [info] Futu
+[2024-07-24 16:50:12.678] [] [DataWriter] [info] Writting 1 of data from Futu/1222 into csv
+[2024-07-24 16:50:12.678] [] [DataWriter] [info] Writting 3 of data from Futu/02222 into csv
+[2024-07-24 16:50:12.678] [] [DataWriter] [info] Finish writting all data into csv
+[2024-07-24 16:50:12.678] [] [DataWriter] [info] Stored to csv
+[2024-07-24 16:52:46.010] [] [DataWriter] [info] Futu
+[2024-07-24 16:52:46.011] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 16:52:46.011] [] [DataWriter] [info] Futu
+[2024-07-24 16:52:46.011] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 16:52:46.011] [] [DataWriter] [info] Futu
+[2024-07-24 16:52:46.012] [] [DataWriter] [info] Futu
+[2024-07-24 16:52:46.013] [] [DataWriter] [info] Writting 1 of data from Futu/1222 into csv
+[2024-07-24 16:52:46.013] [] [DataWriter] [info] Writting 3 of data from Futu/02222 into csv
+[2024-07-24 16:52:46.013] [] [DataWriter] [info] Finish writting all data into csv
+[2024-07-24 16:52:46.013] [] [DataWriter] [info] Stored to csv
+[2024-07-24 16:52:58.007] [] [DataWriter] [info] Futu
+[2024-07-24 16:52:58.009] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 16:52:58.009] [] [DataWriter] [info] Futu
+[2024-07-24 16:52:58.010] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 16:52:58.010] [] [DataWriter] [info] Futu
+[2024-07-24 16:52:58.011] [] [DataWriter] [info] Futu
+[2024-07-24 16:52:58.013] [] [DataWriter] [info] Writting 1 of data from Futu/1222 into csv
+[2024-07-24 16:52:58.013] [] [DataWriter] [info] Writting 3 of data from Futu/02222 into csv
+[2024-07-24 16:52:58.013] [] [DataWriter] [info] Finish writting all data into csv
+[2024-07-24 16:52:58.013] [] [DataWriter] [info] Stored to csv
+[2024-07-24 16:55:25.566] [] [DataWriter] [info] Futu
+[2024-07-24 16:55:25.567] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 16:55:25.567] [] [DataWriter] [info] Futu
+[2024-07-24 16:55:25.568] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 16:55:25.568] [] [DataWriter] [info] Futu
+[2024-07-24 16:55:25.569] [] [DataWriter] [info] Futu
+[2024-07-24 16:55:25.571] [] [DataWriter] [info] Writting 1 of data from Futu/1222 into csv
+[2024-07-24 16:55:25.571] [] [DataWriter] [info] Writting 3 of data from Futu/02222 into csv
+[2024-07-24 16:55:25.571] [] [DataWriter] [info] Finish writting all data into csv
+[2024-07-24 16:55:25.571] [] [DataWriter] [info] Stored to csv
+[2024-07-24 16:56:16.831] [] [DataWriter] [info] Futu
+[2024-07-24 16:56:16.832] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 16:56:16.832] [] [DataWriter] [info] Futu
+[2024-07-24 16:56:16.832] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 16:56:16.832] [] [DataWriter] [info] Futu
+[2024-07-24 16:56:16.833] [] [DataWriter] [info] Futu
+[2024-07-24 16:56:16.834] [] [DataWriter] [info] Stored to csv
+[2024-07-24 16:57:27.405] [] [DataWriter] [info] Futu
+[2024-07-24 16:57:27.406] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 16:57:27.406] [] [DataWriter] [info] Futu
+[2024-07-24 16:57:27.407] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 16:57:27.407] [] [DataWriter] [info] Futu
+[2024-07-24 16:57:27.407] [] [DataWriter] [info] Futu
+[2024-07-24 16:57:27.409] [] [DataWriter] [info] Stored to csv
+[2024-07-24 16:58:57.575] [] [DataWriter] [info] Futu
+[2024-07-24 16:58:57.576] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 16:58:57.576] [] [DataWriter] [info] Futu
+[2024-07-24 16:58:57.576] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 16:58:57.576] [] [DataWriter] [info] Futu
+[2024-07-24 16:58:57.577] [] [DataWriter] [info] Futu
+[2024-07-24 16:58:57.577] [] [DataWriter] [info] Stored to csv
+[2024-07-24 17:05:44.684] [] [DataWriter] [info] Futu
+[2024-07-24 17:05:44.685] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 17:05:44.685] [] [DataWriter] [info] Futu
+[2024-07-24 17:05:44.686] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 17:05:44.686] [] [DataWriter] [info] Futu
+[2024-07-24 17:05:44.686] [] [DataWriter] [info] Futu
+[2024-07-24 17:05:44.687] [] [DataWriter] [info] Stored to csv
+[2024-07-24 17:31:10.209] [] [DataWriter] [info] Futu
+[2024-07-24 17:31:10.210] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 17:31:10.210] [] [DataWriter] [info] Futu
+[2024-07-24 17:31:10.211] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 17:31:10.211] [] [DataWriter] [info] Futu
+[2024-07-24 17:31:10.212] [] [DataWriter] [info] Futu
+[2024-07-24 17:31:10.212] [] [DataWriter] [info] Stored to csv
+[2024-07-24 17:59:32.757] [] [DataWriter] [info] Futu
+[2024-07-24 17:59:32.758] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 17:59:32.758] [] [DataWriter] [info] Futu
+[2024-07-24 17:59:32.758] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 17:59:32.758] [] [DataWriter] [info] Futu
+[2024-07-24 17:59:32.759] [] [DataWriter] [info] Futu
+[2024-07-24 17:59:32.760] [] [DataWriter] [info] Stored to csv
+[2024-07-24 18:02:27.587] [] [DataWriter] [info] Futu
+[2024-07-24 18:02:27.588] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 18:02:27.588] [] [DataWriter] [info] Futu
+[2024-07-24 18:02:27.589] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 18:02:27.589] [] [DataWriter] [info] Futu
+[2024-07-24 18:02:27.590] [] [DataWriter] [info] Futu
+[2024-07-24 18:02:27.590] [] [DataWriter] [info] Stored to csv
+[2024-07-24 18:03:27.873] [] [DataWriter] [info] Futu
+[2024-07-24 18:03:27.874] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 18:03:27.874] [] [DataWriter] [info] Futu
+[2024-07-24 18:03:27.874] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 18:03:27.874] [] [DataWriter] [info] Futu
+[2024-07-24 18:03:27.874] [] [DataWriter] [info] Futu
+[2024-07-24 18:03:27.875] [] [DataWriter] [info] Stored to csv
+[2024-07-24 18:13:41.526] [] [DataWriter] [info] Futu
+[2024-07-24 18:13:41.527] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 18:13:41.527] [] [DataWriter] [info] Futu
+[2024-07-24 18:13:41.527] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 18:13:41.527] [] [DataWriter] [info] Futu
+[2024-07-24 18:13:41.528] [] [DataWriter] [info] Futu
+[2024-07-24 18:13:41.528] [] [DataWriter] [info] Stored to csv
+[2024-07-24 18:17:17.956] [] [DataWriter] [info] Futu
+[2024-07-24 18:17:17.957] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 18:17:17.957] [] [DataWriter] [info] Futu
+[2024-07-24 18:17:17.957] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 18:17:17.957] [] [DataWriter] [info] Futu
+[2024-07-24 18:17:17.958] [] [DataWriter] [info] Futu
+[2024-07-24 18:17:17.958] [] [DataWriter] [info] Stored to csv
+[2024-07-24 18:20:02.175] [] [DataWriter] [info] Futu
+[2024-07-24 18:20:02.176] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 18:20:02.176] [] [DataWriter] [info] Futu
+[2024-07-24 18:20:02.177] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 18:20:02.177] [] [DataWriter] [info] Futu
+[2024-07-24 18:20:02.177] [] [DataWriter] [info] Futu
+[2024-07-24 18:20:02.178] [] [DataWriter] [info] Stored to csv
+[2024-07-24 18:21:14.108] [] [DataWriter] [info] Futu
+[2024-07-24 18:21:14.109] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 18:21:14.109] [] [DataWriter] [info] Futu
+[2024-07-24 18:21:14.109] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 18:21:14.109] [] [DataWriter] [info] Futu
+[2024-07-24 18:21:14.110] [] [DataWriter] [info] Futu
+[2024-07-24 18:21:14.111] [] [DataWriter] [info] Stored to csv
+[2024-07-24 18:21:49.814] [] [DataWriter] [info] Futu
+[2024-07-24 18:21:49.816] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 18:21:49.816] [] [DataWriter] [info] Futu
+[2024-07-24 18:21:49.817] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 18:21:49.817] [] [DataWriter] [info] Futu
+[2024-07-24 18:21:49.821] [] [DataWriter] [info] Futu
+[2024-07-24 18:21:49.821] [] [DataWriter] [info] Stored to csv
+[2024-07-24 18:22:52.775] [] [DataWriter] [info] Futu
+[2024-07-24 18:22:52.777] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 18:22:52.777] [] [DataWriter] [info] Futu
+[2024-07-24 18:22:52.778] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 18:22:52.778] [] [DataWriter] [info] Futu
+[2024-07-24 18:22:52.781] [] [DataWriter] [info] Futu
+[2024-07-24 18:22:52.783] [] [DataWriter] [info] Stored to csv
+[2024-07-24 18:25:47.703] [] [DataWriter] [info] Futu
+[2024-07-24 18:25:47.704] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 18:25:47.704] [] [DataWriter] [info] Futu
+[2024-07-24 18:25:47.704] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 18:25:47.704] [] [DataWriter] [info] Futu
+[2024-07-24 18:25:47.706] [] [DataWriter] [info] Futu
+[2024-07-24 18:25:47.706] [] [DataWriter] [info] Stored to csv
+[2024-07-24 18:27:14.993] [] [DataWriter] [info] Futu
+[2024-07-24 18:27:14.994] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 18:27:14.994] [] [DataWriter] [info] Futu
+[2024-07-24 18:27:14.994] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 18:27:14.994] [] [DataWriter] [info] Futu
+[2024-07-24 18:27:14.995] [] [DataWriter] [info] Futu
+[2024-07-24 18:27:14.995] [] [DataWriter] [info] Stored to csv
+[2024-07-24 18:43:52.497] [] [DataWriter] [info] Futu
+[2024-07-24 18:43:52.497] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 18:43:52.497] [] [DataWriter] [info] Futu
+[2024-07-24 18:43:52.498] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 18:43:52.498] [] [DataWriter] [info] Futu
+[2024-07-24 18:43:52.498] [] [DataWriter] [info] Futu
+[2024-07-24 18:43:52.499] [] [DataWriter] [info] Stored to csv
+[2024-07-24 18:45:33.390] [] [DataWriter] [info] Futu
+[2024-07-24 18:45:33.391] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 18:45:33.391] [] [DataWriter] [info] Futu
+[2024-07-24 18:45:33.391] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 18:45:33.391] [] [DataWriter] [info] Futu
+[2024-07-24 18:45:33.392] [] [DataWriter] [info] Futu
+[2024-07-24 18:45:33.392] [] [DataWriter] [info] Stored to csv
+[2024-07-24 18:46:41.688] [] [DataWriter] [info] Futu
+[2024-07-24 18:46:41.689] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 18:46:41.689] [] [DataWriter] [info] Futu
+[2024-07-24 18:46:41.690] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 18:46:41.690] [] [DataWriter] [info] Futu
+[2024-07-24 18:46:41.690] [] [DataWriter] [info] Futu
+[2024-07-24 18:46:41.691] [] [DataWriter] [info] Stored to csv
+[2024-07-24 18:47:21.709] [] [DataWriter] [info] Futu
+[2024-07-24 18:47:21.710] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 18:47:21.710] [] [DataWriter] [info] Futu
+[2024-07-24 18:47:21.711] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 18:47:21.711] [] [DataWriter] [info] Futu
+[2024-07-24 18:47:21.712] [] [DataWriter] [info] Futu
+[2024-07-24 18:47:21.712] [] [DataWriter] [info] Stored to csv
+[2024-07-24 18:49:50.097] [] [DataWriter] [info] Futu
+[2024-07-24 18:49:50.098] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 18:49:50.098] [] [DataWriter] [info] Futu
+[2024-07-24 18:49:50.099] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 18:49:50.099] [] [DataWriter] [info] Futu
+[2024-07-24 18:49:50.100] [] [DataWriter] [info] Futu
+[2024-07-24 18:49:50.100] [] [DataWriter] [info] Stored to csv
+[2024-07-24 18:51:08.956] [] [DataWriter] [info] Futu
+[2024-07-24 18:51:08.959] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 18:51:08.959] [] [DataWriter] [info] Futu
+[2024-07-24 18:51:08.960] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 18:51:08.960] [] [DataWriter] [info] Futu
+[2024-07-24 18:51:08.961] [] [DataWriter] [info] Futu
+[2024-07-24 18:51:08.961] [] [DataWriter] [info] Stored to csv
+[2024-07-24 18:52:14.041] [] [DataWriter] [info] Futu
+[2024-07-24 18:52:14.042] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 18:52:14.042] [] [DataWriter] [info] Futu
+[2024-07-24 18:52:14.043] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 18:52:14.043] [] [DataWriter] [info] Futu
+[2024-07-24 18:52:14.044] [] [DataWriter] [info] Futu
+[2024-07-24 18:52:14.044] [] [DataWriter] [info] Stored to csv
+[2024-07-24 18:54:20.713] [] [DataWriter] [info] Futu
+[2024-07-24 18:54:20.716] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 18:54:20.717] [] [DataWriter] [info] Futu
+[2024-07-24 18:54:20.718] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 18:54:20.718] [] [DataWriter] [info] Futu
+[2024-07-24 18:54:20.721] [] [DataWriter] [info] Futu
+[2024-07-24 18:54:20.722] [] [DataWriter] [info] Stored to csv
+[2024-07-24 18:55:44.070] [] [DataWriter] [info] Futu
+[2024-07-24 18:55:44.072] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 18:55:44.072] [] [DataWriter] [info] Futu
+[2024-07-24 18:55:44.072] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 18:55:44.072] [] [DataWriter] [info] Futu
+[2024-07-24 18:55:44.074] [] [DataWriter] [info] Futu
+[2024-07-24 18:55:44.074] [] [DataWriter] [info] Stored to csv
+[2024-07-24 18:56:34.775] [] [DataWriter] [info] Futu
+[2024-07-24 18:56:34.776] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 18:56:34.776] [] [DataWriter] [info] Futu
+[2024-07-24 18:56:34.776] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 18:56:34.776] [] [DataWriter] [info] Futu
+[2024-07-24 18:56:34.777] [] [DataWriter] [info] Futu
+[2024-07-24 18:56:34.777] [] [DataWriter] [info] Stored to csv
+[2024-07-24 18:59:00.263] [] [DataWriter] [info] Futu
+[2024-07-24 18:59:00.264] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 18:59:00.264] [] [DataWriter] [info] Futu
+[2024-07-24 18:59:00.264] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 18:59:00.264] [] [DataWriter] [info] Futu
+[2024-07-24 18:59:00.265] [] [DataWriter] [info] Futu
+[2024-07-24 18:59:00.266] [] [DataWriter] [info] Stored to csv
+[2024-07-24 19:00:05.731] [] [DataWriter] [info] Futu
+[2024-07-24 19:00:05.733] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 19:00:05.733] [] [DataWriter] [info] Futu
+[2024-07-24 19:00:05.734] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 19:00:05.734] [] [DataWriter] [info] Futu
+[2024-07-24 19:00:05.734] [] [DataWriter] [info] Stored to csv
+[2024-07-24 19:00:41.203] [] [DataWriter] [info] Futu
+[2024-07-24 19:00:41.204] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 19:00:41.204] [] [DataWriter] [info] Futu
+[2024-07-24 19:00:41.204] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 19:00:41.204] [] [DataWriter] [info] Futu
+[2024-07-24 19:00:41.204] [] [DataWriter] [info] Stored to csv
+[2024-07-24 19:02:56.744] [] [DataWriter] [info] Futu
+[2024-07-24 19:02:56.745] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 19:02:56.745] [] [DataWriter] [info] Futu
+[2024-07-24 19:02:56.746] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 19:02:56.746] [] [DataWriter] [info] Futu
+[2024-07-24 19:02:56.746] [] [DataWriter] [info] Stored to csv
+[2024-07-24 19:05:34.607] [] [DataWriter] [info] Futu
+[2024-07-24 19:05:34.608] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 19:05:34.608] [] [DataWriter] [info] Futu
+[2024-07-24 19:05:34.609] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 19:05:34.609] [] [DataWriter] [info] Futu
+[2024-07-24 19:05:34.609] [] [DataWriter] [info] Stored to csv
+[2024-07-24 19:07:06.656] [] [DataWriter] [info] Futu
+[2024-07-24 19:07:06.657] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 19:07:06.657] [] [DataWriter] [info] Futu
+[2024-07-24 19:07:06.658] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 19:07:06.658] [] [DataWriter] [info] Futu
+[2024-07-24 19:07:06.659] [] [DataWriter] [info] Stored to csv
+[2024-07-24 19:07:06.660] [] [DataWriter] [info] Writting 3 of data from Futu/02222 into csv
+[2024-07-24 19:07:06.660] [] [DataWriter] [info] Finish writting all data into csv
+[2024-07-24 19:08:14.439] [] [DataWriter] [info] Futu
+[2024-07-24 19:08:14.444] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 19:08:14.444] [] [DataWriter] [info] Futu
+[2024-07-24 19:08:14.444] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 19:08:14.444] [] [DataWriter] [info] Futu
+[2024-07-24 19:08:14.445] [] [DataWriter] [info] Stored to csv
+[2024-07-24 19:08:14.445] [] [DataWriter] [info] Writting 3 of data from Futu/02222 into csv
+[2024-07-24 19:08:14.446] [] [DataWriter] [info] Finish writting all data into csv
+[2024-07-24 19:09:11.907] [] [DataWriter] [info] Futu
+[2024-07-24 19:09:11.908] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 19:09:11.909] [] [DataWriter] [info] Futu
+[2024-07-24 19:09:11.910] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 19:09:11.910] [] [DataWriter] [info] Futu
+[2024-07-24 19:09:11.910] [] [DataWriter] [info] Stored to csv
+[2024-07-24 19:09:11.912] [] [DataWriter] [info] Writting 3 of data from Futu/02222 into csv
+[2024-07-24 19:09:11.912] [] [DataWriter] [info] Finish writting all data into csv
+[2024-07-24 19:11:04.924] [] [DataWriter] [info] Futu
+[2024-07-24 19:11:04.925] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 19:11:04.925] [] [DataWriter] [info] Futu
+[2024-07-24 19:11:04.925] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 19:11:04.925] [] [DataWriter] [info] Futu
+[2024-07-24 19:11:04.926] [] [DataWriter] [info] Stored to csv
+[2024-07-24 19:11:04.926] [] [DataWriter] [info] Writting 3 of data from Futu/02222 into csv
+[2024-07-24 19:11:04.927] [] [DataWriter] [info] Finish writting all data into csv
+[2024-07-24 19:12:50.157] [] [DataWriter] [info] Futu
+[2024-07-24 19:12:50.158] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 19:12:50.158] [] [DataWriter] [info] Futu
+[2024-07-24 19:12:50.159] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 19:12:50.159] [] [DataWriter] [info] Futu
+[2024-07-24 19:12:50.159] [] [DataWriter] [info] Stored to csv
+[2024-07-24 19:12:50.160] [] [DataWriter] [info] Writting 3 of data from Futu/02222 into csv
+[2024-07-24 19:12:50.161] [] [DataWriter] [info] Finish writting all data into csv
+[2024-07-24 19:13:38.830] [] [DataWriter] [info] Futu
+[2024-07-24 19:13:38.831] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 19:13:38.831] [] [DataWriter] [info] Futu
+[2024-07-24 19:13:38.833] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 19:13:38.833] [] [DataWriter] [info] Futu
+[2024-07-24 19:13:38.833] [] [DataWriter] [info] Stored to csv
+[2024-07-24 19:13:38.835] [] [DataWriter] [info] Writting 3 of data from Futu/02222 into csv
+[2024-07-24 19:13:38.835] [] [DataWriter] [info] Finish writting all data into csv
+[2024-07-24 19:14:35.435] [] [DataWriter] [info] Futu
+[2024-07-24 19:14:35.436] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 19:14:35.436] [] [DataWriter] [info] Futu
+[2024-07-24 19:14:35.437] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 19:14:35.437] [] [DataWriter] [info] Futu
+[2024-07-24 19:14:35.437] [] [DataWriter] [info] Stored to csv
+[2024-07-24 19:14:35.438] [] [DataWriter] [info] Writting 3 of data from Futu/02222 into csv
+[2024-07-24 19:14:35.438] [] [DataWriter] [info] Finish writting all data into csv
+[2024-07-24 20:29:41.890] [] [DataWriter] [info] Futu
+[2024-07-24 20:29:41.891] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 20:29:41.891] [] [DataWriter] [info] Futu
+[2024-07-24 20:29:41.892] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 20:29:41.892] [] [DataWriter] [info] Futu
+[2024-07-24 20:29:41.892] [] [DataWriter] [info] Stored to csv
+[2024-07-24 20:29:41.893] [] [DataWriter] [info] Writting 3 of data from Futu/02222 into csv
+[2024-07-24 20:29:41.893] [] [DataWriter] [info] Finish writting all data into csv
+[2024-07-24 20:31:40.625] [] [DataWriter] [info] Futu
+[2024-07-24 20:31:40.627] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 20:31:40.627] [] [DataWriter] [info] Futu
+[2024-07-24 20:31:40.627] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 20:31:40.627] [] [DataWriter] [info] Futu
+[2024-07-24 20:31:40.628] [] [DataWriter] [info] Stored to csv
+[2024-07-24 20:31:40.629] [] [DataWriter] [info] Writting 3 of data from Futu/02222 into csv
+[2024-07-24 20:31:40.629] [] [DataWriter] [info] Finish writting all data into csv
+[2024-07-24 20:31:40.629] [] [DataWriter] [info] logger DataWriter destructed
+[2024-07-24 20:34:12.166] [] [DataWriter] [info] Futu
+[2024-07-24 20:34:12.167] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 20:34:12.167] [] [DataWriter] [info] Futu
+[2024-07-24 20:34:12.167] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 20:34:12.167] [] [DataWriter] [info] Futu
+[2024-07-24 20:34:12.167] [] [DataWriter] [info] Stored to csv
+[2024-07-24 20:34:12.169] [] [DataWriter] [info] Writting 3 of data from Futu/02222 into csv
+[2024-07-24 20:34:12.169] [] [DataWriter] [info] Finish writting all data into csv
+[2024-07-24 20:34:12.170] [] [DataWriter] [info] logger DataWriter destructed
+[2024-07-24 20:39:48.690] [] [DataWriter] [info] Futu
+[2024-07-24 20:39:48.692] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 20:39:48.692] [] [DataWriter] [info] Futu
+[2024-07-24 20:39:48.692] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 20:39:48.693] [] [DataWriter] [info] Futu
+[2024-07-24 20:39:48.693] [] [DataWriter] [info] Stored to csv
+[2024-07-24 20:39:48.693] [] [DataWriter] [info] Destructing DataWriter
+[2024-07-24 20:39:48.694] [] [DataWriter] [info] Writting 3 of data from Futu/02222 into csv
+[2024-07-24 20:39:48.694] [] [DataWriter] [info] Finish writting all data into csv
+[2024-07-24 20:39:48.694] [] [DataWriter] [info] logger DataWriter destructed
+[2024-07-24 20:42:50.368] [] [DataWriter] [info] Futu
+[2024-07-24 20:42:50.370] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 20:42:50.370] [] [DataWriter] [info] Futu
+[2024-07-24 20:42:50.373] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 20:42:50.373] [] [DataWriter] [info] Futu
+[2024-07-24 20:42:50.375] [] [DataWriter] [info] Stored to csv
+[2024-07-24 20:42:50.376] [] [DataWriter] [info] Destructing DataWriter
+[2024-07-24 20:42:50.378] [] [DataWriter] [info] Writting 3 of data from Futu/02222 into csv
+[2024-07-24 20:42:50.378] [] [DataWriter] [info] Finish writting all data into csv
+[2024-07-24 20:42:50.379] [] [DataWriter] [info] logger DataWriter destructed
+[2024-07-24 20:43:41.809] [] [DataWriter] [info] Futu
+[2024-07-24 20:43:41.810] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 20:43:41.810] [] [DataWriter] [info] Futu
+[2024-07-24 20:43:41.811] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 20:43:41.811] [] [DataWriter] [info] Futu
+[2024-07-24 20:43:41.811] [] [DataWriter] [info] Stored to csv
+[2024-07-24 20:43:41.812] [] [DataWriter] [info] Destructing DataWriter
+[2024-07-24 20:43:41.812] [] [DataWriter] [info] Writting 3 of data from Futu/02222 into csv
+[2024-07-24 20:43:41.813] [] [DataWriter] [info] Finish writting all data into csv
+[2024-07-24 20:43:41.813] [] [DataWriter] [info] logger DataWriter destructed
+[2024-07-24 20:44:32.664] [] [DataWriter] [info] Futu
+[2024-07-24 20:44:32.665] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 20:44:32.665] [] [DataWriter] [info] Futu
+[2024-07-24 20:44:32.666] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 20:44:32.666] [] [DataWriter] [info] Futu
+[2024-07-24 20:44:32.666] [] [DataWriter] [info] Stored to csv
+[2024-07-24 20:44:32.667] [] [DataWriter] [info] Destructing DataWriter
+[2024-07-24 20:44:32.667] [] [DataWriter] [info] Writting 3 of data from Futu/02222 into csv
+[2024-07-24 20:44:32.667] [] [DataWriter] [info] Finish writting all data into csv
+[2024-07-24 20:44:32.668] [] [DataWriter] [info] logger DataWriter destructed
+[2024-07-24 20:45:38.218] [] [DataWriter] [info] Futu
+[2024-07-24 20:45:38.220] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 20:45:38.221] [] [DataWriter] [info] Futu
+[2024-07-24 20:45:38.221] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 20:45:38.221] [] [DataWriter] [info] Futu
+[2024-07-24 20:45:38.223] [] [DataWriter] [info] Stored to csv
+[2024-07-24 20:45:38.224] [] [DataWriter] [info] Destructing DataWriter
+[2024-07-24 20:45:38.225] [] [DataWriter] [info] Writting 3 of data from Futu/02222 into csv
+[2024-07-24 20:45:38.225] [] [DataWriter] [info] Finish writting all data into csv
+[2024-07-24 20:45:38.226] [] [DataWriter] [info] logger DataWriter destructed
+[2024-07-24 20:47:03.723] [] [DataWriter] [info] Futu
+[2024-07-24 20:47:03.724] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 20:47:03.724] [] [DataWriter] [info] Futu
+[2024-07-24 20:47:03.725] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 20:47:03.725] [] [DataWriter] [info] Futu
+[2024-07-24 20:47:03.725] [] [DataWriter] [info] Stored to csv
+[2024-07-24 20:47:03.726] [] [DataWriter] [info] Destructing DataWriter
+[2024-07-24 20:47:03.726] [] [DataWriter] [info] Writting 3 of data from Futu/02222 into csv
+[2024-07-24 20:47:03.726] [] [DataWriter] [info] Finish writting all data into csv
+[2024-07-24 20:47:03.726] [] [DataWriter] [info] logger DataWriter destructed
+[2024-07-24 20:48:33.279] [] [DataWriter] [info] Futu
+[2024-07-24 20:48:33.280] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 20:48:33.280] [] [DataWriter] [info] Futu
+[2024-07-24 20:48:33.280] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 20:48:33.280] [] [DataWriter] [info] Futu
+[2024-07-24 20:48:33.281] [] [DataWriter] [info] Stored to csv
+[2024-07-24 20:48:33.281] [] [DataWriter] [info] Destructing DataWriter
+[2024-07-24 20:48:33.282] [] [DataWriter] [info] Writting 3 of data from Futu/02222 into csv
+[2024-07-24 20:48:33.282] [] [DataWriter] [info] Finish writting all data into csv
+[2024-07-24 20:48:33.283] [] [DataWriter] [info] logger DataWriter destructed
+[2024-07-24 20:53:08.360] [] [DataWriter] [info] Futu
+[2024-07-24 20:53:08.361] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 20:53:08.361] [] [DataWriter] [info] Futu
+[2024-07-24 20:53:08.361] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 20:53:08.361] [] [DataWriter] [info] Futu
+[2024-07-24 20:53:08.362] [] [DataWriter] [info] Stored to csv
+[2024-07-24 20:53:08.362] [] [DataWriter] [info] Destructing DataWriter
+[2024-07-24 20:53:08.362] [] [DataWriter] [info] Writting 3 of data from Futu/02222 into csv
+[2024-07-24 20:53:08.362] [] [DataWriter] [info] Finish writting all data into csv
+[2024-07-24 20:53:08.363] [] [DataWriter] [info] logger DataWriter destructed
+[2024-07-24 20:53:08.363] [] [IMsgq] [info] logger IMsgq destructed
+[2024-07-24 20:53:08.363] [] [Messenger] [info] logger Messenger destructed
+[2024-07-24 20:53:08.362] [] [DataManager] [info] called datamanager destructor
+[2024-07-24 20:53:08.363] [] [DataManager] [info] logger DataManager destructed
+[2024-07-24 20:57:01.996] [] [DataWriter] [info] Futu
+[2024-07-24 20:57:01.997] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 20:57:01.997] [] [DataWriter] [info] Futu
+[2024-07-24 20:57:01.997] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 20:57:01.997] [] [DataWriter] [info] Futu
+[2024-07-24 20:57:01.998] [] [DataWriter] [info] Stored to csv
+[2024-07-24 20:57:01.998] [] [DataWriter] [info] Destructing DataWriter
+[2024-07-24 20:57:01.999] [] [DataWriter] [info] Writting 3 of data from Futu/02222 into csv
+[2024-07-24 20:57:01.999] [] [DataWriter] [info] Finish writting all data into csv
+[2024-07-24 20:57:01.999] [] [DataWriter] [info] logger DataWriter destructed
+[2024-07-24 20:57:01.999] [] [IMsgq] [info] logger IMsgq destructed
+[2024-07-24 20:57:01.999] [] [Messenger] [info] logger Messenger destructed
+[2024-07-24 20:57:01.998] [] [DataManager] [info] called datamanager destructor
+[2024-07-24 20:57:02.000] [] [DataManager] [info] logger DataManager destructed
+[2024-07-24 20:58:32.017] [] [DataWriter] [info] Futu
+[2024-07-24 20:58:32.018] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 20:58:32.018] [] [DataWriter] [info] Futu
+[2024-07-24 20:58:32.018] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 20:58:32.018] [] [DataWriter] [info] Futu
+[2024-07-24 20:58:32.019] [] [DataWriter] [info] Stored to csv
+[2024-07-24 20:58:32.020] [] [DataWriter] [info] Destructing DataWriter
+[2024-07-24 20:58:32.020] [] [DataWriter] [info] Writting 3 of data from Futu/02222 into csv
+[2024-07-24 20:58:32.021] [] [DataWriter] [info] Finish writting all data into csv
+[2024-07-24 20:58:32.021] [] [DataWriter] [info] logger DataWriter destructed
+[2024-07-24 20:58:32.021] [] [IMsgq] [info] logger IMsgq destructed
+[2024-07-24 20:58:32.021] [] [Messenger] [info] logger Messenger destructed
+[2024-07-24 20:58:32.020] [] [DataManager] [info] called datamanager destructor
+[2024-07-24 20:58:32.022] [] [DataManager] [info] logger DataManager destructed
+[2024-07-24 22:07:44.524] [] [DataWriter] [info] Futu
+[2024-07-24 22:07:44.525] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 22:07:44.525] [] [DataWriter] [info] Futu
+[2024-07-24 22:07:44.525] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 22:07:44.525] [] [DataWriter] [info] Futu
+[2024-07-24 22:07:44.526] [] [DataWriter] [info] Stored to csv
+[2024-07-24 22:07:44.526] [] [DataWriter] [info] Destructing DataWriter
+[2024-07-24 22:07:44.526] [] [DataWriter] [info] Writting 3 of data from Futu/02222 into csv
+[2024-07-24 22:07:44.527] [] [DataWriter] [info] Finish writting all data into csv
+[2024-07-24 22:07:44.527] [] [DataWriter] [info] logger DataWriter destructed
+[2024-07-24 22:07:44.528] [] [IMsgq] [info] logger IMsgq destructed
+[2024-07-24 22:07:44.528] [] [Messenger] [info] logger Messenger destructed
+[2024-07-24 22:07:44.526] [] [DataManager] [info] called datamanager destructor
+[2024-07-24 22:07:44.528] [] [DataManager] [info] logger DataManager destructed
+[2024-07-24 22:10:58.782] [] [DataReader] [info] logger DataReader destructed
+[2024-07-24 22:12:18.886] [] [DataReader] [info] logger DataReader destructed
+[2024-07-24 22:13:02.299] [] [DataReader] [info] Destructing DataReader
+[2024-07-24 22:13:02.299] [] [DataReader] [info] logger DataReader destructed
+[2024-07-24 22:13:02.296] [] [DataWriter] [info] Futu
+[2024-07-24 22:13:02.297] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 22:13:02.297] [] [DataWriter] [info] Futu
+[2024-07-24 22:13:02.298] [] [DataWriter] [info] Wrote data into lmdb
+[2024-07-24 22:13:02.298] [] [DataWriter] [info] Futu
+[2024-07-24 22:13:02.298] [] [DataWriter] [info] Stored to csv
+[2024-07-24 22:13:02.299] [] [DataWriter] [info] Destructing DataWriter
+[2024-07-24 22:13:02.299] [] [DataWriter] [info] Writting 3 of data from Futu/02222 into csv
+[2024-07-24 22:13:02.300] [] [DataWriter] [info] Finish writting all data into csv
+[2024-07-24 22:13:02.300] [] [DataWriter] [info] logger DataWriter destructed
+[2024-07-24 22:13:02.305] [] [IMsgq] [info] logger IMsgq destructed
+[2024-07-24 22:13:02.305] [] [Messenger] [info] logger Messenger destructed
+[2024-07-24 22:13:02.299] [] [DataManager] [info] called datamanager destructor
+[2024-07-24 22:13:02.305] [] [DataManager] [info] logger DataManager destructed

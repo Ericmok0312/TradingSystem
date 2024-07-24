@@ -7,10 +7,20 @@
 #include <boost/circular_buffer.hpp>
 
 namespace ts{
-    class DataReader: public ThreadPool<std::function<unique_ptr<BaseData>(const string&)>, const string&>{
-        public:
 
-            static std::shared_ptr<Logger> logger_;
+    typedef struct{
+        const char* exg;
+        const char* code;
+        uint32_t  count;
+        uint64_t  etime;
+    }ARG;
+
+
+    class DataReader: public ThreadPool<std::function<BaseData*(shared_ptr<ARG>)>, shared_ptr<ARG>>{
+        //exg, code, count, etime
+        public:
+            #define BASE_FILE_LOC "./src/DataBase"
+            std::unique_ptr<Logger> logger_;
 
             DataReader();
             ~DataReader();
@@ -19,8 +29,8 @@ namespace ts{
 
             static shared_ptr<DataReader> getInstance();
 
-            QuoteSlice* readQuoteSlicefromCSV(const char* exg, const char* code, uint32_t count, uint64_t etime);
-            QuoteSlice* readQuoteSlicefromLMDB(const char* exg, const char* code, uint32_t count, uint64_t etime);
+            BaseData* readQuoteSlicefromCSV(shared_ptr<ARG>);
+            BaseData* readQuoteSlicefromLMDB(shared_ptr<ARG>);
             
             typedef std::shared_ptr<TsLMDB> TSLMDBPtr;
             typedef std::unordered_map<std::string, TSLMDBPtr> TSLMDBMap;

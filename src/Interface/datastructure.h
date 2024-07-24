@@ -7,6 +7,7 @@
 #include <string>
 #include <sstream>
 #include <iostream>
+#include <vector>
 #if defined(_WIN32) || defined(_WIN64)
 #ifdef DLL_EXPORT
 #define DLL_EXPORT_IMPORT  __declspec(dllexport)   // export DLL information
@@ -148,7 +149,7 @@ namespace ts{
         public:
             BaseData(){};
             virtual ~BaseData(){};
-            virtual string getString(){};
+            virtual string getString(){return NULL;}
     };
 
 
@@ -392,7 +393,7 @@ namespace ts{
             uint32_t count_;
 
         protected:
-            QuoteSlice(){block_.clear();}
+           
 
             inline int32_t translateIdx(int32_t idx) const{
                 if (idx<0){
@@ -402,6 +403,7 @@ namespace ts{
             }
 
         public:
+            QuoteSlice(){this->block_.clear();}
             static inline QuoteSlice* create (const char* code, Quote* quote = nullptr, uint32_t count = 0){
                 QuoteSlice* slice = new QuoteSlice();
                 strcpy(slice->code_, code);

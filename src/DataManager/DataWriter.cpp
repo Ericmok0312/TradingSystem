@@ -2,11 +2,13 @@
 #include <boost/filesystem.hpp>
 #include <DataManager/LMDBKeys.h>
 #include <Helper/util.h>
+#include <Helper/ThreadPool.hpp>
+#include <chrono>
+#include <iomanip>
+
 namespace ts{
 
 
-
-    std::shared_ptr<ts::Logger> DataWriter::logger_ = nullptr;
 
 
     std::mutex DataWriter::q_db_mutex;
@@ -15,16 +17,20 @@ namespace ts{
 
     
 
-    DataWriter::DataWriter():ThreadPool(1,4,6){
+    DataWriter::DataWriter():ThreadPool(0,4,6){
         init();
     }
 
 
     DataWriter::~DataWriter(){
+        logger_->info("Destructing DataWriter");
+        WriteDataBase();
+        instance_.reset();
+        //sleep(4);
     }
 
     void DataWriter::init(){
-        logger_ = make_shared<Logger>("DataWriter");
+        logger_ = make_unique<Logger>("DataWriter");;
     }
 
 
@@ -55,9 +61,35 @@ namespace ts{
         }
     }
 
+    void DataWriter::WriteDataBase(){
+        string path;
+        int count = 0;
+        std::time_t temp = std::chrono::system_clock::to_time_t(std::chrono::system_clock::now());
+        stringstream ss;
+        ss << std::put_time(std::localtime(&temp), "%Y_%m_%d");
+        string time = ss.str();
+        for(auto i = quote_dbs_.begin(); i!=quote_dbs_.end(); i++){
+            path = fmt::format("{}/{}/{}", BASE_FILE_LOC, i->first, time);
+            boost::filesystem::create_directories(path);
+            std::ofstream file(path+".csv");
+            file<<"key,data\n";
+            TSQryLMDB query(*i->second);
+            count  = query.get_all([&file](const ValueArray& key, const ValueArray& val){
+                for(int i = 0; i<key.size()-1; i++){
+                    file<<key[i]<<','<<val[i]<<'\n';
+                }
+            });
+            logger_->info(fmt::format("Writting {} of data from {} into csv", count-1, i->first).c_str());
+        }
+        logger_->info("Finish writting all data into csv");   
+    }
+
+
+
+
     DataWriter::TSLMDBPtr DataWriter::get_q_db(const char* exg, const char* code){
         
-        string key = fmt::format("{}.{}", exg, code);
+        string key = fmt::format("{}/{}", exg, code);
 
         auto it = quote_dbs_.find(key);
         if(it != quote_dbs_.end()){

@@ -47,15 +47,15 @@ namespace ts
 
             inline void info(const char* context){
                 std::lock_guard<std::mutex> lock(mutex_);
-                spdlogger_->info(context);
+                if(this->spdlogger_) this->spdlogger_->info(context);
             }
             inline void warn(const char* context){
                 std::lock_guard<std::mutex> lock(mutex_);
-                spdlogger_->warn(context);
+                this->spdlogger_->warn(context);
             }
             inline void error(const char* context){
                 std::lock_guard<std::mutex> lock(mutex_);
-                spdlogger_->error(context);
+                this->spdlogger_->error(context);
             }
             inline void debug(const char* context){
                 std::lock_guard<std::mutex> lock(mutex_);

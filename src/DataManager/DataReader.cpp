@@ -8,18 +8,20 @@ namespace ts{
 
 
     shared_ptr<DataReader> DataReader::instance_ = nullptr;
-    std::shared_ptr<ts::Logger> DataReader::logger_ = nullptr;
     std::mutex DataReader::q_db_mutex;
     std::mutex DataReader::getIns_mutex;
 
-    DataReader::DataReader():ThreadPool(1,4,6){
+    DataReader::DataReader():ThreadPool(0,4,6){//
         init();
     }
 
-    DataReader::~DataReader(){}
+    DataReader::~DataReader(){
+        logger_->info("Destructing DataReader");
+        instance_.reset();
+    }
 
     void DataReader::init(){
-        logger_ = make_shared<Logger>("DataReader");
+        logger_ = make_unique<Logger>("DataReader");
     }
 
 
@@ -32,12 +34,12 @@ namespace ts{
     }
 
 
-    QuoteSlice* DataReader::readQuoteSlicefromLMDB(const char* exg, const char* code, uint32_t count, uint64_t etime){
-        char* temp = new char[strlen(exg)+strlen(code)+2];
-        strcpy(temp, exg);
+    BaseData* DataReader::readQuoteSlicefromLMDB(shared_ptr<ARG> arg){
+        char* temp = new char[strlen(arg->exg)+strlen(arg->code)+2];
+        strcpy(temp, arg->exg);
         strcat(temp, "/");
-        strcat(temp, code);
-        
+        strcat(temp, arg->code);
+        uint32_t count = arg->count;
         QuoteList& quotelist = quote_cache_[temp];
 
         uint64_t last_access_time = 0;
@@ -50,32 +52,32 @@ namespace ts{
                 quotelist.quotes_.clear();
             }
 
-            if (quotelist.last_req_time_ < etime){ // data stored is earlier than etime
+            if (quotelist.last_req_time_ < arg->etime){ // data stored is earlier than arg->etime
                 reload_flag = 1;
                 last_access_time = quotelist.last_req_time_;
                 break;
             }
         } while (false);
         
-        TSLMDBPtr db = get_q_db(exg, code);
+        TSLMDBPtr db = get_q_db(arg->exg, arg->code);
         if(db == nullptr) return NULL;
         if (reload_flag == 1){
             TSQryLMDB query(*db);
             last_access_time += 1;
-            LMDBKey lkey(exg, code, to_string(last_access_time/1000000000).data(), to_string(last_access_time%1000000000).data());
-            LMDBKey rkey(exg, code, to_string(etime/1000000000).data(), to_string(etime%1000000000).data());
+            LMDBKey lkey(arg->exg, arg->code, to_string(last_access_time/1000000000).data(), to_string(last_access_time%1000000000).data());
+            LMDBKey rkey(arg->exg, arg->code, to_string(arg->etime/1000000000).data(), to_string(arg->etime%1000000000).data());
             int count = query.get_range(lkey.getString(), rkey.getString(), [this, &quotelist](const ValueArray& ayKeys, const ValueArray& ayVals){
                 for(const std::string& item: ayVals){
                     Quote* curtick = (Quote*)item.data();
                     quotelist.quotes_.push_back(*curtick);
                 }
             });
-            if(count > 0) logger_->info(fmt::format("{} ticks after {} of stock {} append to cache", count, last_access_time, code).c_str());
+            if(count > 0) logger_->info(fmt::format("{} ticks after {} of stock {} append to cache", count, last_access_time, arg->code).c_str());
         }
         else if(reload_flag == 2){
             TSQryLMDB query(*db);
-            LMDBKey lkey(exg, code, 0, 0);
-            LMDBKey rkey(exg, code, to_string(etime/1000000000).data(), to_string(etime%1000000000).data());
+            LMDBKey lkey(arg->exg, arg->code, 0, 0);
+            LMDBKey rkey(arg->exg, arg->code, to_string(arg->etime/1000000000).data(), to_string(arg->etime%1000000000).data());
             int count = query.get_lowers(lkey.getString(), rkey.getString(), count, [this, &quotelist](const ValueArray& ayKeys, const ValueArray& ayVals){
                 quotelist.quotes_.resize(ayVals.size());
                 for(std::size_t i=0; i<ayVals.size(); i++){
@@ -84,25 +86,49 @@ namespace ts{
                 }
             });
 
-            logger_->info(fmt::format("{} ticks after {} of stock {} loaded to cache for the first time", count, last_access_time, code).c_str());
+            logger_->info(fmt::format("{} ticks after {} of stock {} loaded to cache for the first time", count, last_access_time, arg->code).c_str());
         }
 
-        quotelist.last_req_time_ = etime;
+        quotelist.last_req_time_ = arg->etime;
 
         count = min((uint32_t)quotelist.quotes_.size(), count);
         auto ayTwo = quotelist.quotes_.array_two(); // getting array of quotes
         auto count_2 = ayTwo.second;
         if(count_2 >=count){
-            return QuoteSlice::create(code, &quotelist.quotes_[count_2 - count], count);
+            return QuoteSlice::create(arg->code, &quotelist.quotes_[count_2 - count], count);
         }
         else{
             auto ayOne = quotelist.quotes_.array_one();
             auto diff = count - count_2;
-            auto ret = QuoteSlice::create(code, &quotelist.quotes_[ayOne.second - diff], diff);
+            auto ret = QuoteSlice::create(arg->code, &quotelist.quotes_[ayOne.second - diff], diff);
             if(count_2 > 0) ret->appendBlock(ayTwo.first, count_2);
             return ret;
         }
 
+    }
+
+    DataReader::TSLMDBPtr DataReader::get_q_db(const char* exg, const char* code){
+        
+        string key = fmt::format("{}/{}", exg, code);
+
+        auto it = quote_dbs_.find(key);
+        if(it != quote_dbs_.end()){
+            return it->second; 
+        }
+
+        TSLMDBPtr dbPtr(new TsLMDB(false)); // not found
+
+        std::string path = fmt::format("{}/{}/{}", BASE_FILE_LOC, exg, code); //create the dir
+
+        boost::filesystem::create_directories(path);
+
+        if(!dbPtr->open(path.c_str())){
+            logger_->error(fmt::format("Opening quote db at {} failed: {}", path, dbPtr->errmsg()).c_str());
+            return std::move(TSLMDBPtr()); // return an empty one;
+        }
+        std::lock_guard<mutex> lock (q_db_mutex); // modifying unordered map
+        quote_dbs_[key] = dbPtr;
+        return dbPtr;
     }   
 
 

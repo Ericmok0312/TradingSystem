@@ -1,4 +1,4 @@
- #include <DataManager/DataManager.h>
+#include <DataManager/DataManager.h>
 #include <Helper/ThreadPool.hpp>
 #include <Helper/logger.h>
 #include <Helper/util.h>
@@ -6,30 +6,35 @@
 #include <Interface/datastructure.h>
 #include <chrono>
 #include <DataManager/FutuParser.h>
-
+#include <DataManager/DataReader.h>
+#include <DataManager/DataWriter.h>
 using namespace std;
 
 namespace ts{
     
-    std::shared_ptr<ts::Logger> DataManager::logger_ = nullptr;
-    std::unique_ptr<ts::IMessenger> DataManager::messenger_ = make_unique<MsgqTSMessenger>(PROXY_SERVER_URL);
+    std::unique_ptr<ts::Logger> DataManager::logger_ = nullptr;
+    std::unique_ptr<ts::IMessenger> DataManager::messenger_ = nullptr;
     std::mutex DataManager::getIns_mutex;
     std::shared_ptr<DataManager> DataManager::instance_ = nullptr;
 
 
     /// @brief Constructor, calling ThreadPool constructor
-    DataManager::DataManager():ThreadPool(1, 4, 6){
+    DataManager::DataManager():ThreadPool(0, 4, 6){
         init();
     }
 
 
     /// @brief Default destructor, calling ThreadPool destructor automatically
     DataManager::~DataManager(){
+        logger_->info("called datamanager destructor");
+        instance_.reset();
     }
     
     void DataManager::init(){
         datawritter_ = DataWriter::getInstance();
-        logger_ = make_shared<Logger>("DataManager");
+        messenger_ = make_unique<MsgqTSMessenger>(PROXY_SERVER_URL);
+        logger_ = make_unique<Logger>("DataManager");
+        datareader_ = DataReader::getInstance();
         estate_.store(STOP);
     }
 

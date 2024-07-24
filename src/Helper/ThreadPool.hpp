@@ -10,7 +10,7 @@ namespace ts
 
 
     /// @brief Constructor of ThreadPool, initialize variables and call ThreadPool_Init
-    /// @param initNum 
+    /// @param initNum, better set to be 0, otherwise will lead to problem in destruction 
     /// @param maxNum 
     /// @param idleSec 
     template<typename TaskType, typename InputType>
@@ -48,10 +48,7 @@ namespace ts
     ThreadPool<TaskType,InputType>::~ThreadPool(){
         std::lock_guard<std::mutex> lock(mutex_);
         stop_ = true;
-
-
         cond_.notify_all(); // all waiting thread are unblocked
-
         for(int i=0; i<maxNum_; i++){
             thread* thread = threadpool_[i];
             if (thread && thread->joinable()){ //check if thread is valid
@@ -59,6 +56,7 @@ namespace ts
                 delete thread;
             }
         }
+
 
     }
     

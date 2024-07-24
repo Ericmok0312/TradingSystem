@@ -4,6 +4,7 @@
 #include <DataManager/tslmdb.hpp>
 #include <Helper/logger.h>
 #include <rapidjson/document.h>
+#include <functional>
 
 namespace ts{
 
@@ -11,8 +12,9 @@ namespace ts{
 
     class DataWriter: public ThreadPool<std::function<void(shared_ptr<BaseData>)>, std::shared_ptr<BaseData>>{
         public:
-      
-            static std::shared_ptr<Logger> logger_;
+            friend class DataManager;
+
+            std::unique_ptr<Logger> logger_;
 
 
             DataWriter();
@@ -33,6 +35,9 @@ namespace ts{
 
             void WriteQuote(std::shared_ptr<BaseData> quote);
     
+            void WriteDataBase();
+
+
             typedef std::shared_ptr<TsLMDB> TSLMDBPtr;
             typedef std::unordered_map<std::string, TSLMDBPtr> TSLMDBMap;
         
@@ -44,6 +49,7 @@ namespace ts{
             TSLMDBMap excange_d1_dbs;
 
             static shared_ptr<DataWriter> instance_;
+            
             static std::mutex q_db_mutex;
             static std::mutex getIns_mutex;
 

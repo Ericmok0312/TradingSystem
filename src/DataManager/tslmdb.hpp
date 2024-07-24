@@ -4,6 +4,11 @@
 #include <liblmdb/lmdb.h>
 #include <unistd.h>
 #include <sys/stat.h>
+#include <algorithm>
+#include <vector>
+#include <string>
+#include <functional>
+
 namespace ts{
 
     typedef std::vector<std::string> ValueArray;
@@ -188,7 +193,7 @@ namespace ts{
                     return std::move(std::string());
                 }
 
-                string ret = std::string((char*)mData.mv_data, mData.mv_size);
+                std::string ret = std::string((char*)mData.mv_data, mData.mv_size);
                 mdb_cursor_close(cursor);
                 return std::move(ret);
 
@@ -208,7 +213,7 @@ namespace ts{
                 rKey.mv_data = (void*)upper_key.data();
                 rKey.mv_size = upper_key.size();
 
-                int count = 0;
+                int cnt = 0;
 
                 MDB_cursor_op op = MDB_SET_RANGE; // define cursor operations to be set range
                 ValueArray Keys, Vals;
@@ -224,12 +229,12 @@ namespace ts{
                     }
                     Keys.emplace_back(std::string((char*)lKey.mv_data, lKey.mv_size));
                     Vals.emplace_back(std::string((char*)mData.mv_data, mData.mv_size));
-                    count++;
+                    cnt++;
                     op = MDB_NEXT; //lKey move to next element
                 }
                 callback(Keys, Vals); //calling callback to handle retrieved data;
                 mdb_cursor_close(cursor);
-                return count;
+                return cnt;
             }
 
 
@@ -245,7 +250,7 @@ namespace ts{
                 rKey.mv_size = upper_key.size();
 
 
-                int count = 0;
+                int cnt = 0;
                 ValueArray Keys, Vals;
                 error = mdb_cursor_get(cursor, &rKey, &mData, MDB_SET_RANGE);
                 db_.update_errorno(error);
@@ -269,19 +274,37 @@ namespace ts{
 
                     Keys.emplace_back(std::string((char*)rKey.mv_data, rKey.mv_size));
                     Vals.emplace_back(std::string((char*)mData.mv_data, mData.mv_size));
-                    count++;
+                    cnt++;
 
-                    if (count==count) break;
+                    if (cnt==count) break;
 
                     error = mdb_cursor_get(cursor, &rKey, &mData, MDB_PREV);
                     db_.update_errorno(error);
       
-		            std::reverse(Keys.begin(), Keys.end());
-		            std::reverse(Vals.begin(), Vals.end());
+		            reverse(Keys.begin(), Keys.end());
+		            reverse(Vals.begin(), Vals.end());
 		            callback(Keys, Vals);
 		            mdb_cursor_close(cursor);
-                    return count;
+                    return cnt;
                 }
+            }
+
+            int get_all(LMDBCB callback){
+                MDB_cursor* cursor;
+                int errorno_ = mdb_cursor_open(txn_, dbi_, &cursor);
+                if (errorno_ != MDB_SUCCESS) return 0;
+                MDB_val rKey, mData;
+                std::vector<std::string> Keys, Vals;
+
+                for (; errorno_ != MDB_NOTFOUND;){
+                    errorno_ = mdb_cursor_get(cursor, &rKey, &mData, MDB_NEXT);
+                    db_.update_errorno(errorno_);
+
+                    Keys.emplace_back(std::string((char*)rKey.mv_data, rKey.mv_size));
+                    Vals.emplace_back(std::string((char*)mData.mv_data, mData.mv_size));
+                }
+                callback(Keys, Vals);
+                return (int)Vals.size();
             }
 
 

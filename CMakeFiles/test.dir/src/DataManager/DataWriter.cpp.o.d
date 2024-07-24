@@ -228,7 +228,10 @@ CMakeFiles/test.dir/src/DataManager/DataWriter.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
  /usr/include/x86_64-linux-gnu/sys/stat.h \
  /usr/include/x86_64-linux-gnu/bits/stat.h \
- /usr/include/x86_64-linux-gnu/bits/statx.h \
+ /usr/include/x86_64-linux-gnu/bits/statx.h /usr/include/c++/8/algorithm \
+ /usr/include/c++/8/bits/stl_algo.h \
+ /usr/include/c++/8/bits/algorithmfwd.h \
+ /usr/include/c++/8/bits/uniform_int_dist.h \
  /data/home/emk/Coding/Trading_system/TradingSystem/src/Helper/logger.h \
  /usr/include/c++/8/fstream /usr/include/c++/8/bits/codecvt.h \
  /usr/include/x86_64-linux-gnu/c++/8/bits/basic_file.h \
@@ -256,10 +259,8 @@ CMakeFiles/test.dir/src/DataManager/DataWriter.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/fmt/bundled/core.h \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/fmt/bundled/format-inl.h \
- /usr/include/c++/8/algorithm /usr/include/c++/8/bits/stl_algo.h \
- /usr/include/c++/8/bits/algorithmfwd.h \
- /usr/include/c++/8/bits/uniform_int_dist.h /usr/include/c++/8/climits \
- /usr/include/c++/8/locale /usr/include/c++/8/bits/locale_facets_nonio.h \
+ /usr/include/c++/8/climits /usr/include/c++/8/locale \
+ /usr/include/c++/8/bits/locale_facets_nonio.h \
  /usr/include/x86_64-linux-gnu/c++/8/bits/time_members.h \
  /usr/include/x86_64-linux-gnu/c++/8/bits/messages_members.h \
  /usr/include/libintl.h /usr/include/c++/8/bits/locale_facets_nonio.tcc \
@@ -310,7 +311,6 @@ CMakeFiles/test.dir/src/DataManager/DataWriter.cpp.o: \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/sinks/base_sink.h \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/sinks/base_sink-inl.h \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/sinks/basic_file_sink-inl.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/src/Helper/ThreadPool.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/filesystem.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/filesystem/config.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/config.hpp \
@@ -676,4 +676,6 @@ CMakeFiles/test.dir/src/DataManager/DataWriter.cpp.o: \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/stubs/hash.h \
  /usr/include/c++/8/unordered_set /usr/include/c++/8/bits/unordered_set.h \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/stubs/bytestream.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/rapidjson.h
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/rapidjson.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/src/Helper/ThreadPool.hpp \
+ /usr/include/c++/8/iomanip /usr/include/c++/8/bits/quoted_string.h

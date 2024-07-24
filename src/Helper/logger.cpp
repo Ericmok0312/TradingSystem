@@ -37,7 +37,7 @@ namespace ts
     Logger::Logger(const char* name){
         name_ = name;
         spdlogger_ = spdlog::get(name); 
-        if (spdlogger_){
+        if (spdlogger_ != nullptr){
             return;
         }
 
@@ -60,7 +60,7 @@ namespace ts
 
         sinks.push_back(console_sink);
         sinks.push_back(file_sink);
-        spdlogger_ = std::make_shared<spdlog::logger>(name, begin(sinks), end(sinks));
+        spdlogger_ = std::make_shared<spdlog::logger>(name_, begin(sinks), end(sinks));
         spdlogger_->set_level(spdlog::level::trace);
     }
 
@@ -72,8 +72,9 @@ namespace ts
     */
 
     Logger::~Logger(){
-        spdlog::drop(name_);
-        std::cout<<fmt::format("logger {} destructed", name_)<<endl;
+        //spdlog::drop(this->name_);
+        spdlogger_->info(fmt::format("logger {} destructed", name_).c_str());
+        spdlogger_.reset();
     }
 
  
