@@ -17,7 +17,7 @@ namespace ts{
     Msg::Msg(){}; 
     /*
     
-    Msg(const string& des, const string& src, MSG_TYPE type, Json::Value data)
+    Msg(const string& des, const string& src, MSG_TYPE type, const string& data)
     constructor for Msg object, used when all 4 parameters are known
     
     */
@@ -26,6 +26,15 @@ namespace ts{
         source_ = src;
         msgtype_ = type;
         data_ = data;
+    }
+
+    /*
+    Msg(const string&& des, const string&& src, MSG_TYPE type,const string&& data)
+    - faster way to construct Msg, but the variable passed in cannot be used again
+    
+    */
+    Msg::Msg(const string&& des, const string&& src, MSG_TYPE type,const string&& data):destination_(move(des)), source_(move(src))
+    , msgtype_(type), data_(move(data)){
     }
 
     /*

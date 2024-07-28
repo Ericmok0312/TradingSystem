@@ -92,10 +92,12 @@ namespace ts{
         MSG_TYPE_OPTIONS_KLINE = 1004,
         MSG_TYPE_OPTIONS_QUOTE = 1005,
 
-        MSG_TYPE_TICKER = 1500,
-        MSG_TYPE_KLINE_1M = 1501,
-        MSG_TYPE_QUOTE = 1502,
+        MSG_TYPE_STORE_TICKER = 1500,
+        MSG_TYPE_STORE_KLINE_1M = 1501,
+        MSG_TYPE_STORE_QUOTE = 1502,
 
+
+        
         MSG_TYPE_HIST_KLINE_DAY = 1700,
         
 
@@ -108,6 +110,11 @@ namespace ts{
         MSG_TYPE_GET_ACCOUNTINFO = 2001,
         MSG_TYPE_GET_ACCESSLIST = 2002,
         MSG_TYPE_REGCALLBACK = 2003,
+
+
+        MSG_TYPE_GET_QUOTE = 2500,
+
+        MSG_TYPE_GET_QUOTE_RESPONSE = 3000,
 
         //debug
         MSG_TYPE_DEBUG = 4000
@@ -149,7 +156,7 @@ namespace ts{
         public:
             BaseData(){};
             virtual ~BaseData(){};
-            virtual string getString(){return NULL;}
+            virtual string getString() const {return NULL;}
     };
 
 
@@ -185,6 +192,7 @@ namespace ts{
         Msg();
 
         Msg(const string& des, const string& src, MSG_TYPE type, const string& data);
+        Msg(const string&& des, const string&& src, MSG_TYPE type, const string&& data);
 
         virtual ~Msg(){};
 
@@ -331,8 +339,43 @@ namespace ts{
                 pChange_ = 0;
             };
             ~Quote(){};
+            Quote(const string& input){
+                    vector<string> values;
+                    stringstream ss(input);
+                    string token;
+                    while (getline(ss, token, ',')) {
+                        values.push_back(token);
+                    }
 
-            string getString(){
+                    // Assign the parsed values to the respective variables
+                    strcpy(code_,values[0].c_str());
+                    strcpy(time_,values[1].c_str());
+                    strcpy(exg_,values[2].c_str());
+                    hPrice_ = stod(values[3]);
+                    oPrice_ = stod(values[4]);
+                    lPrice_ = stod(values[5]);
+                    cPrice_ = stod(values[6]);
+                    lcPrice_ = stod(values[7]);
+                    pSpread_ = stod(values[8]);
+                    volume_ = stod(values[9]);
+                    turnover_ = stod(values[10]);
+                    turnoverRate_ = stod(values[11]);
+                    amplitude_ = stod(values[12]);
+                    timestamp_ = stod(values[13]);
+                    sPrice_ = stod(values[14]);
+                    conSize_ = stod(values[15]);
+                    opInterest_ = stod(values[16]);
+                    impVolatility_ = stod(values[17]);
+                    premium_ = stod(values[18]);
+                    delta_ = stod(values[19]);
+                    gamma_ = stod(values[20]);
+                    vega_ = stod(values[21]);
+                    rho_ = stod(values[22]);
+                    lsprice_ = stod(values[23]);
+                    position_ = stod(values[24]);
+                    pChange_ = stod(values[25]);
+                }
+            string getString() const{
                 stringstream ss;
                 ss<<code_<<','<<time_<<','<<exg_<<','<<hPrice_<<','<<oPrice_<<','
                 <<lPrice_<<','<<cPrice_<<','<<lcPrice_<<','<<pSpread_<<','
@@ -362,7 +405,7 @@ namespace ts{
             double turnoverRate_;
             double amplitude_;
             
-            double timestamp_;
+            uint64_t timestamp_;
 
             //special indicators for options
 
@@ -404,6 +447,7 @@ namespace ts{
 
         public:
             QuoteSlice(){this->block_.clear();}
+
             static inline QuoteSlice* create (const char* code, Quote* quote = nullptr, uint32_t count = 0){
                 QuoteSlice* slice = new QuoteSlice();
                 strcpy(slice->code_, code);
@@ -413,14 +457,40 @@ namespace ts{
                 }
                 return slice;
             }
+
+
             inline bool appendBlock(Quote* quote, uint32_t count)
             {
-                if (quote == NULL || count == 0)
+                if (quote == nullptr || count == 0)
                     return false;
 
-                count_ += count;
-                block_.emplace_back(QuoteBlock(quote, count));
+                this->count_ += count;
+                this->block_.emplace_back(QuoteBlock(quote, count));
                 return true;
+            }
+
+            inline vector<QuoteBlock>* getBlock(){
+                return &this->block_;
+            }
+            inline uint32_t getCount(){
+                return this->count_;
+            }
+
+            inline const Quote* at(int32_t idx){
+                if(count_==0){
+                    return nullptr;
+                }
+
+                idx = translateIdx(idx);
+                do{
+                    for(auto& item: block_){
+                        if ((uint32_t)idx >= item.second)
+                            idx -= item.second;
+                        else
+                            return item.first+idx; 
+                    }
+                }while (false);
+                return nullptr;
             }
     };
 

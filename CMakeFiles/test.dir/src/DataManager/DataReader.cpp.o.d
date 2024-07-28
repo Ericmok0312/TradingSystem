@@ -210,8 +210,542 @@ CMakeFiles/test.dir/src/DataManager/DataReader.cpp.o: \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/stringbuffer.h \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/stringbuffer.h \
  /usr/include/c++/8/iostream \
- /data/home/emk/Coding/Trading_system/TradingSystem/src/DataManager/tslmdb.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/lmdb/liblmdb/lmdb.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/thread/thread.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/thread/thread_only.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/thread/detail/platform.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/config.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/config/user.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/config/detail/select_compiler_config.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/config/compiler/gcc.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/config/detail/select_stdlib_config.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/config/stdlib/libstdcpp3.hpp \
+ /usr/include/unistd.h /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
+ /usr/include/x86_64-linux-gnu/bits/sysmacros.h \
+ /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
+ /usr/include/x86_64-linux-gnu/bits/environments.h \
+ /usr/include/x86_64-linux-gnu/bits/confname.h \
+ /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
+ /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/config/detail/select_platform_config.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/config/platform/linux.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/config/detail/posix_features.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/config/detail/suffix.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/config/helper_macros.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/config/detail/cxx_composite.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/config/requires_threads.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/thread/pthread/thread_data.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/thread/detail/config.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/detail/workaround.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/config/workaround.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/thread/detail/thread_safety.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/config/auto_link.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/thread/exceptions.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/system/system_error.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/system/errc.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/system/detail/errc.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/system/is_error_condition_enum.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/system/detail/cerrno.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/system/detail/error_code.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/system/is_error_code_enum.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/system/detail/error_category.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/system/detail/config.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/cstdint.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/system/detail/error_condition.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/system/detail/generic_category.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/system/detail/generic_category_message.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/system/detail/enable_if.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/system/detail/is_same.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/system/detail/append_int.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/system/detail/snprintf.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/system/detail/system_category.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/system/detail/system_category_impl.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/system/detail/system_category_message.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/system/api_config.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/system/detail/interop_category.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/system/detail/std_category.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/assert/source_location.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/system/detail/error_category_impl.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/system/detail/std_category_impl.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/system/detail/mutex.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/system/error_code.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/system/error_category.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/system/error_condition.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/system/generic_category.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/system/system_category.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/system/detail/throws.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/config/abi_prefix.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/config/abi_suffix.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/thread/lock_guard.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/thread/detail/delete.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/thread/detail/move.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/core/enable_if.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/is_convertible.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/intrinsics.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/detail/config.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/version.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/integral_constant.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/is_complete.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/declval.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/add_rvalue_reference.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/is_void.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/is_reference.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/is_lvalue_reference.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/is_rvalue_reference.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/remove_reference.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/is_function.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/detail/is_function_cxx_11.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/detail/yes_no_type.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/is_array.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/static_assert.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/is_arithmetic.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/is_integral.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/is_floating_point.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/is_abstract.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/add_lvalue_reference.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/add_reference.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/remove_cv.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/decay.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/remove_bounds.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/remove_extent.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/add_pointer.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/conditional.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/move/utility.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/move/detail/config_begin.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/move/detail/workaround.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/move/utility_core.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/move/core.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/move/detail/config_end.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/move/detail/meta_utils.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/move/detail/meta_utils_core.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/move/detail/addressof.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/move/traits.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/move/detail/type_traits.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/thread/detail/lockable_wrapper.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/thread/lock_options.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/thread/lock_types.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/thread/lockable_traits.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/assert.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/thread/thread_time.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/date_time/time_clock.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/date_time/c_time.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/throw_exception.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/exception/exception.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/date_time/compiler_config.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/date_time/locale_config.hpp \
+ /usr/include/x86_64-linux-gnu/sys/time.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/shared_ptr.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/smart_ptr/shared_ptr.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/smart_ptr/detail/requires_cxx11.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/config/pragma_message.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/smart_ptr/detail/shared_count.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/smart_ptr/bad_weak_ptr.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/smart_ptr/detail/sp_counted_base.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/smart_ptr/detail/sp_has_gcc_intrinsics.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/smart_ptr/detail/sp_has_sync_intrinsics.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/smart_ptr/detail/sp_counted_base_gcc_atomic.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/smart_ptr/detail/sp_typeinfo_.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/smart_ptr/detail/sp_counted_impl.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/smart_ptr/detail/sp_noexcept.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/core/checked_delete.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/core/addressof.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/smart_ptr/detail/sp_disable_deprecated.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/smart_ptr/detail/sp_convertible.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/smart_ptr/detail/sp_nullptr_t.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/smart_ptr/detail/spinlock_pool.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/smart_ptr/detail/spinlock.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/smart_ptr/detail/spinlock_gcc_atomic.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/smart_ptr/detail/yield_k.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/core/yield_primitives.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/core/detail/sp_thread_pause.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/core/detail/sp_thread_yield.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/core/detail/sp_thread_sleep.hpp \
+ /usr/include/c++/8/algorithm /usr/include/c++/8/bits/stl_algo.h \
+ /usr/include/c++/8/bits/algorithmfwd.h \
+ /usr/include/c++/8/bits/uniform_int_dist.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/smart_ptr/detail/operator_bool.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/smart_ptr/detail/local_sp_deleter.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/smart_ptr/detail/local_counted_base.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/date_time/microsec_time_clock.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/date_time/posix_time/posix_time_types.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/date_time/posix_time/ptime.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/date_time/posix_time/posix_time_system.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/date_time/posix_time/posix_time_config.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/limits.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/config/no_tr1/cmath.hpp \
+ /usr/include/c++/8/cmath /usr/include/math.h \
+ /usr/include/x86_64-linux-gnu/bits/math-vector.h \
+ /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
+ /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
+ /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
+ /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
+ /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
+ /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
+ /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
+ /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/date_time/time_duration.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/date_time/special_defs.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/date_time/time_defs.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/operators.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/date_time/time_resolution_traits.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/date_time/int_adapter.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/date_time/gregorian/gregorian_types.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/date_time/date.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/date_time/year_month_day.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/date_time/period.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/date_time/gregorian/greg_calendar.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/date_time/gregorian/greg_weekday.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/date_time/constrained_value.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/is_base_of.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/is_base_and_derived.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/is_same.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/is_class.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/date_time/date_defs.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/date_time/gregorian/greg_day_of_year.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/date_time/gregorian_calendar.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/date_time/gregorian_calendar.ipp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/date_time/gregorian/greg_ymd.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/date_time/gregorian/greg_day.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/date_time/gregorian/greg_year.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/date_time/gregorian/greg_month.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/date_time/gregorian/greg_duration.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/date_time/date_duration.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/date_time/date_duration_types.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/date_time/gregorian/greg_duration_types.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/date_time/gregorian/greg_date.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/date_time/adjust_functors.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/date_time/wrapping_int.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/date_time/date_generators.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/date_time/date_clock_device.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/date_time/date_iterator.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/date_time/time_system_split.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/date_time/time_system_counted.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/date_time/time.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/date_time/posix_time/date_duration_operators.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/date_time/posix_time/posix_time_duration.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/numeric/conversion/cast.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/numeric/conversion/converter.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/numeric/conversion/conversion_traits.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/numeric/conversion/detail/conversion_traits.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/numeric/conversion/detail/meta.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/if.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/value_wknd.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/static_cast.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/config/workaround.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/config/integral.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/config/msvc.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/config/eti.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/na_spec.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/lambda_fwd.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/void_fwd.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/adl_barrier.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/config/adl.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/config/intel.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/config/gcc.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/na.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/bool.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/bool_fwd.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/integral_c_tag.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/config/static_constant.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/na_fwd.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/config/ctps.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/config/lambda.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/config/ttp.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/int.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/int_fwd.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/nttp_decl.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/config/nttp.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/integral_wrapper.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/cat.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/config/config.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/lambda_arity_param.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/template_arity_fwd.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/arity.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/config/dtp.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/preprocessor/params.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/config/preprocessor.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/comma_if.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/punctuation/comma_if.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/control/if.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/control/iif.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/logical/bool.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/config/limits.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/logical/limits/bool_256.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/facilities/empty.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/punctuation/comma.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/repeat.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/repetition/repeat.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/debug/error.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/detail/auto_rec.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/detail/limits/auto_rec_256.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/tuple/eat.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/repetition/limits/repeat_256.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/inc.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/arithmetic/inc.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/arithmetic/limits/inc_256.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/preprocessor/enum.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/preprocessor/def_params_tail.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/limits/arity.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/logical/and.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/logical/bitand.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/identity.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/facilities/identity.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/empty.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/arithmetic/add.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/arithmetic/dec.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/arithmetic/limits/dec_256.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/control/while.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/list/fold_left.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/list/detail/fold_left.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/control/expr_iif.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/list/adt.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/detail/is_binary.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/detail/check.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/logical/compl.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/list/detail/limits/fold_left_256.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/list/limits/fold_left_256.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/list/fold_right.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/list/detail/fold_right.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/list/reverse.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/list/detail/limits/fold_right_256.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/control/detail/while.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/control/detail/limits/while_256.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/control/limits/while_256.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/logical/bitor.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/tuple/elem.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/facilities/expand.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/facilities/overload.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/variadic/size.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/facilities/check_empty.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/variadic/has_opt.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/variadic/limits/size_64.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/tuple/rem.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/tuple/detail/is_single_return.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/variadic/elem.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/variadic/limits/elem_64.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/arithmetic/detail/is_maximum_number.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/comparison/equal.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/comparison/not_equal.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/comparison/limits/not_equal_256.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/arithmetic/detail/maximum_number.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/arithmetic/detail/is_minimum_number.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/logical/not.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/arithmetic/sub.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/config/overload_resolution.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/lambda_support.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/eval_if.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/equal_to.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/comparison_op.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/numeric_op.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/numeric_cast.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/apply_wrap.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/has_apply.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/has_xxx.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/type_wrapper.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/yes_no.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/config/arrays.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/config/has_xxx.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/config/msvc_typename.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/array/elem.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/array/data.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/array/size.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/repetition/enum_params.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/repetition/enum_trailing_params.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/config/has_apply.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/msvc_never_true.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/config/use_preprocessed.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/include_preprocessed.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/config/compiler.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/stringize.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/preprocessed/gcc/apply_wrap.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/tag.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/void.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/has_tag.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/numeric_cast_utils.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/config/forwarding.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/msvc_eti_base.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/is_msvc_eti_arg.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/preprocessed/gcc/equal_to.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/not.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/nested_type_wknd.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/and.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/preprocessed/gcc/and.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/identity.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/numeric/conversion/detail/int_float_mixture.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/numeric/conversion/int_float_mixture_enum.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/numeric/conversion/detail/sign_mixture.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/numeric/conversion/sign_mixture_enum.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/numeric/conversion/detail/udt_builtin_mixture.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/numeric/conversion/udt_builtin_mixture_enum.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/numeric/conversion/detail/is_subranged.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/multiplies.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/times.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/arithmetic_op.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/integral_c.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/integral_c_fwd.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/largest_int.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/preprocessed/gcc/times.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/preprocessor/default_params.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/less.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/preprocessed/gcc/less.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/numeric/conversion/converter_policies.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/numeric/conversion/detail/converter.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/numeric/conversion/bounds.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/numeric/conversion/detail/bounds.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/numeric/conversion/numeric_cast_traits.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/numeric/conversion/detail/numeric_cast_traits.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/numeric/conversion/detail/preprocessed/numeric_cast_traits_common.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/numeric/conversion/detail/preprocessed/numeric_cast_traits_long_long.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/date_time/posix_time/time_period.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/date_time/time_iterator.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/date_time/dst_rules.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/chrono/time_point.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/chrono/duration.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/chrono/config.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/chrono/detail/requires_cxx11.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/language.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/language/stdc.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/version_number.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/make.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/detail/test.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/language/stdcpp.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/language/objc.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/language/cuda.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/architecture.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/architecture/alpha.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/architecture/arm.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/architecture/blackfin.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/architecture/convex.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/architecture/e2k.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/architecture/ia64.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/architecture/loongarch.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/architecture/m68k.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/architecture/mips.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/architecture/parisc.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/architecture/ppc.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/architecture/ptx.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/architecture/pyramid.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/architecture/riscv.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/architecture/rs6k.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/architecture/sparc.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/architecture/superh.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/architecture/sys370.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/architecture/sys390.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/architecture/x86.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/architecture/x86/32.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/architecture/x86/64.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/architecture/z.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/compiler.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/compiler/borland.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/compiler/clang.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/compiler/comeau.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/compiler/compaq.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/compiler/diab.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/compiler/digitalmars.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/compiler/dignus.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/compiler/edg.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/compiler/ekopath.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/compiler/gcc_xml.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/compiler/gcc.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/detail/comp_detected.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/compiler/greenhills.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/compiler/hp_acc.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/compiler/iar.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/compiler/ibm.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/compiler/intel.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/compiler/kai.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/compiler/llvm.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/compiler/metaware.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/compiler/metrowerks.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/compiler/microtec.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/compiler/mpw.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/compiler/nvcc.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/compiler/palm.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/compiler/pgi.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/compiler/sgi_mipspro.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/compiler/sunpro.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/compiler/tendra.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/compiler/visualc.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/compiler/watcom.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/library.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/library/c.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/library/c/_prefix.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/detail/_cassert.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/library/c/cloudabi.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/library/c/gnu.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/library/c/uc.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/library/c/vms.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/library/c/zos.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/library/std.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/library/std/_prefix.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/detail/_exception.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/library/std/cxx.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/library/std/dinkumware.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/library/std/libcomo.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/library/std/modena.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/library/std/msl.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/library/std/msvc.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/library/std/roguewave.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/library/std/sgi.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/library/std/stdcpp3.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/library/std/stlport.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/library/std/vacpp.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/os.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/os/aix.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/os/amigaos.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/os/beos.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/os/bsd.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/os/macos.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/os/ios.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/os/bsd/bsdi.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/os/bsd/dragonfly.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/os/bsd/free.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/os/bsd/open.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/os/bsd/net.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/os/cygwin.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/os/haiku.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/os/hpux.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/os/irix.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/os/linux.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/detail/os_detected.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/os/os400.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/os/qnxnto.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/os/solaris.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/os/unix.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/os/vms.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/os/windows.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/other.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/other/endian.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/platform/android.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/other/wordsize.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/other/workaround.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/platform.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/platform/cloudabi.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/platform/mingw.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/platform/mingw32.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/platform/mingw64.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/platform/windows_uwp.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/platform/windows_desktop.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/platform/windows_phone.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/platform/windows_server.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/platform/windows_store.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/platform/windows_system.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/platform/windows_runtime.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/platform/ios.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/hardware.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/hardware/simd.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/hardware/simd/x86.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/hardware/simd/x86/versions.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/hardware/simd/x86_amd.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/hardware/simd/x86_amd/versions.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/hardware/simd/arm.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/hardware/simd/arm/versions.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/hardware/simd/ppc.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/hardware/simd/ppc/versions.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/predef/version.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/chrono/detail/static_assert.hpp \
+ /usr/include/c++/8/climits \
  /usr/lib/gcc/x86_64-linux-gnu/8/include-fixed/limits.h \
  /usr/lib/gcc/x86_64-linux-gnu/8/include-fixed/syslimits.h \
  /usr/include/limits.h /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
@@ -219,22 +753,147 @@ CMakeFiles/test.dir/src/DataManager/DataReader.cpp.o: \
  /usr/include/linux/limits.h \
  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
- /usr/include/x86_64-linux-gnu/bits/uio_lim.h /usr/include/unistd.h \
- /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
- /usr/include/x86_64-linux-gnu/bits/sysmacros.h \
- /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
- /usr/include/x86_64-linux-gnu/bits/environments.h \
- /usr/include/x86_64-linux-gnu/bits/confname.h \
- /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
- /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
+ /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/logical.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/or.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/preprocessed/gcc/or.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/ratio/ratio.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/ratio/ratio_fwd.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/ratio/detail/gcd_lcm.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/ratio/detail/is_ratio.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/common_type.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/detail/mp_defer.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/is_unsigned.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/is_enum.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/chrono/detail/is_evenly_divisible_by.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/ratio/detail/is_evenly_divisible_by.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/integer_traits.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/thread/mutex.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/thread/pthread/mutex.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/core/ignore_unused.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/thread/xtime.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/date_time/posix_time/conversion.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/date_time/filetime_functions.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/date_time/gregorian/conversion.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/thread/detail/platform_time.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/chrono/system_clocks.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/chrono/detail/system.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/chrono/clock_string.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/ratio/config.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/chrono/ceil.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/thread/pthread/pthread_mutex_scoped_lock.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/thread/pthread/pthread_helpers.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/thread/pthread/condition_variable_fwd.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/thread/cv_status.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/core/scoped_enum.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/enable_shared_from_this.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/smart_ptr/enable_shared_from_this.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/smart_ptr/weak_ptr.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/thread/detail/thread.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/thread/interruption.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/thread/detail/thread_heap_alloc.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/thread/pthread/thread_heap_alloc.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/thread/detail/make_tuple_indices.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/thread/detail/invoke.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/is_pointer.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/is_member_function_pointer.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/detail/is_member_function_pointer_cxx_11.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/is_member_object_pointer.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/is_member_pointer.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/thread/detail/is_convertible.hpp \
+ /usr/include/c++/8/list /usr/include/c++/8/bits/stl_list.h \
+ /usr/include/c++/8/bits/list.tcc \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/core/ref.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/bind/bind.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/bind/mem_fn.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/get_pointer.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/config/no_tr1/memory.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/bind/arg.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/is_placeholder.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/bind/std_placeholders.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/bind/detail/result_traits.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/bind/detail/tuple_for_each.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/bind/detail/integer_sequence.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/visit_each.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/bind/detail/bind_cc.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/bind/detail/bind_mf_cc.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/bind/detail/bind_mf2_cc.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/bind/placeholders.hpp \
+ /usr/include/c++/8/stdlib.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/io/ios_state.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/io_fwd.hpp \
+ /usr/include/c++/8/locale /usr/include/c++/8/bits/locale_facets_nonio.h \
+ /usr/include/x86_64-linux-gnu/c++/8/bits/time_members.h \
+ /usr/include/x86_64-linux-gnu/c++/8/bits/messages_members.h \
+ /usr/include/libintl.h /usr/include/c++/8/bits/codecvt.h \
+ /usr/include/c++/8/bits/locale_facets_nonio.tcc \
+ /usr/include/c++/8/bits/locale_conv.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/functional/hash.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/container_hash/hash.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/container_hash/hash_fwd.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/container_hash/is_range.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/container_hash/is_contiguous_range.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/container_hash/is_unordered_range.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/container_hash/is_described_class.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/describe/bases.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/describe/modifiers.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/describe/detail/config.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/describe/detail/void_t.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mp11/algorithm.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mp11/list.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mp11/integral.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mp11/version.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mp11/detail/mp_value.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mp11/detail/config.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mp11/detail/mp_list.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mp11/detail/mp_list_v.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mp11/detail/mp_is_list.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mp11/detail/mp_is_value_list.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mp11/detail/mp_front.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mp11/detail/mp_rename.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mp11/detail/mp_defer.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mp11/detail/mp_append.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mp11/detail/mp_count.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mp11/detail/mp_plus.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mp11/utility.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mp11/detail/mp_fold.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mp11/set.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mp11/function.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mp11/detail/mp_min_element.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mp11/detail/mp_void.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mp11/detail/mp_copy_if.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mp11/detail/mp_remove_if.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mp11/detail/mp_map_find.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mp11/detail/mp_with_index.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mp11/integer_sequence.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/describe/members.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/describe/detail/cx_streq.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mp11/bind.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/container_hash/detail/hash_integral.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/container_hash/detail/hash_mix.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/container_hash/detail/hash_tuple_like.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/container_hash/is_tuple_like.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/container_hash/detail/hash_range.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/container_hash/detail/mulx.hpp \
+ /usr/include/c++/8/complex /usr/include/c++/8/typeindex \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/thread/detail/thread_interruption.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/thread/condition_variable.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/thread/pthread/condition_variable.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/thread/detail/thread_group.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/thread/csbl/memory/unique_ptr.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/thread/csbl/memory/config.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/smart_ptr/make_unique.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/enable_if.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/is_unbounded_array.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/thread/shared_mutex.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/thread/pthread/shared_mutex.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/src/DataManager/tslmdb.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/lmdb/liblmdb/lmdb.h \
  /usr/include/x86_64-linux-gnu/sys/stat.h \
  /usr/include/x86_64-linux-gnu/bits/stat.h \
- /usr/include/x86_64-linux-gnu/bits/statx.h /usr/include/c++/8/algorithm \
- /usr/include/c++/8/bits/stl_algo.h \
- /usr/include/c++/8/bits/algorithmfwd.h \
- /usr/include/c++/8/bits/uniform_int_dist.h \
+ /usr/include/x86_64-linux-gnu/bits/statx.h \
  /data/home/emk/Coding/Trading_system/TradingSystem/src/Helper/logger.h \
- /usr/include/c++/8/fstream /usr/include/c++/8/bits/codecvt.h \
+ /usr/include/c++/8/fstream \
  /usr/include/x86_64-linux-gnu/c++/8/bits/basic_file.h \
  /usr/include/x86_64-linux-gnu/c++/8/bits/c++io.h \
  /usr/include/c++/8/bits/fstream.tcc \
@@ -248,24 +907,8 @@ CMakeFiles/test.dir/src/DataManager/DataReader.cpp.o: \
  /usr/include/c++/8/experimental/bits/lfts_config.h \
  /usr/include/c++/8/experimental/bits/string_view.tcc \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/fmt/bundled/format.h \
- /usr/include/c++/8/cmath /usr/include/math.h \
- /usr/include/x86_64-linux-gnu/bits/math-vector.h \
- /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
- /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
- /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
- /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
- /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
- /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
- /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
- /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/fmt/bundled/core.h \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/fmt/bundled/format-inl.h \
- /usr/include/c++/8/climits /usr/include/c++/8/locale \
- /usr/include/c++/8/bits/locale_facets_nonio.h \
- /usr/include/x86_64-linux-gnu/c++/8/bits/time_members.h \
- /usr/include/x86_64-linux-gnu/c++/8/bits/messages_members.h \
- /usr/include/libintl.h /usr/include/c++/8/bits/locale_facets_nonio.tcc \
- /usr/include/c++/8/bits/locale_conv.h \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/fmt/bundled/format.h \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/common-inl.h \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/details/registry.h \
@@ -314,65 +957,11 @@ CMakeFiles/test.dir/src/DataManager/DataReader.cpp.o: \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/sinks/basic_file_sink-inl.h \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/circular_buffer.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/circular_buffer_fwd.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/config.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/config/user.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/config/detail/select_compiler_config.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/config/compiler/gcc.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/config/detail/select_stdlib_config.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/config/stdlib/libstdcpp3.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/config/detail/select_platform_config.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/config/platform/linux.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/config/detail/posix_features.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/config/detail/suffix.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/config/helper_macros.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/config/detail/cxx_composite.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/config/workaround.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/static_assert.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/detail/workaround.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/is_convertible.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/intrinsics.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/detail/config.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/version.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/integral_constant.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/is_complete.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/declval.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/add_rvalue_reference.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/is_void.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/is_reference.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/is_lvalue_reference.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/is_rvalue_reference.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/remove_reference.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/is_function.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/detail/is_function_cxx_11.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/detail/yes_no_type.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/is_array.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/is_arithmetic.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/is_integral.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/is_floating_point.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/is_abstract.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/add_lvalue_reference.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/add_reference.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/circular_buffer/debug.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/circular_buffer/details.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/throw_exception.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/exception/exception.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/assert/source_location.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/cstdint.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/core/allocator_access.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/core/pointer_traits.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/core/addressof.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/move/move.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/move/detail/config_begin.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/move/utility.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/move/detail/workaround.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/move/utility_core.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/move/core.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/move/detail/config_end.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/move/detail/meta_utils.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/move/detail/meta_utils_core.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/move/detail/addressof.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/move/traits.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/move/detail/type_traits.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/move/iterator.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/move/detail/iterator_traits.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/move/detail/std_ns_begin.hpp \
@@ -383,39 +972,19 @@ CMakeFiles/test.dir/src/DataManager/DataReader.cpp.o: \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/move/detail/to_raw_pointer.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/move/detail/pointer_element.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/is_nothrow_move_constructible.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/enable_if.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/core/no_exceptions_support.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/circular_buffer/base.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/concept_check.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/concept/assert.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/concept/detail/general.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/cat.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/config/config.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/concept/detail/backward_compatibility.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/concept/detail/has_constraints.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/conditional.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/conversion_traits.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/is_same.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/concept/usage.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/concept/detail/concept_def.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/seq/for_each_i.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/arithmetic/dec.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/config/limits.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/arithmetic/limits/dec_256.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/arithmetic/inc.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/arithmetic/limits/inc_256.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/control/if.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/control/iif.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/logical/bool.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/logical/limits/bool_256.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/repetition/for.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/debug/error.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/facilities/empty.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/detail/auto_rec.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/detail/limits/auto_rec_256.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/repetition/detail/for.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/control/expr_iif.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/tuple/eat.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/repetition/detail/limits/for_256.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/repetition/limits/for_256.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/seq/seq.hpp \
@@ -424,35 +993,14 @@ CMakeFiles/test.dir/src/DataManager/DataReader.cpp.o: \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/seq/size.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/seq/limits/size_256.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/seq/detail/is_empty.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/logical/compl.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/tuple/elem.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/facilities/expand.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/facilities/overload.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/variadic/size.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/facilities/check_empty.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/variadic/has_opt.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/variadic/limits/size_64.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/tuple/rem.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/tuple/detail/is_single_return.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/variadic/elem.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/variadic/limits/elem_64.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/seq/enum.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/seq/limits/enum_256.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/comma_if.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/punctuation/comma_if.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/punctuation/comma.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/concept/detail/concept_undef.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/limits.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/core/empty_value.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/is_stateless.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/has_trivial_constructor.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/is_pod.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/is_scalar.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/is_enum.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/is_pointer.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/is_member_pointer.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/is_member_function_pointer.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/detail/is_member_function_pointer_cxx_11.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/is_default_constructible.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/is_volatile.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/has_trivial_copy.hpp \
@@ -460,9 +1008,7 @@ CMakeFiles/test.dir/src/DataManager/DataReader.cpp.o: \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/is_constructible.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/is_destructible.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/has_trivial_destructor.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/is_class.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/is_empty.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/remove_cv.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/is_nothrow_move_assignable.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/has_trivial_move_assign.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/is_assignable.hpp \
@@ -472,106 +1018,18 @@ CMakeFiles/test.dir/src/DataManager/DataReader.cpp.o: \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/circular_buffer/space_optimized.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/filesystem.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/filesystem/config.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/system/api_config.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/config/auto_link.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/filesystem/path.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/assert.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/iterator/iterator_facade.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/iterator/interoperable.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/bool.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/bool_fwd.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/adl_barrier.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/config/adl.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/config/msvc.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/config/intel.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/config/gcc.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/config/workaround.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/integral_c_tag.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/config/static_constant.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/or.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/config/use_preprocessed.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/nested_type_wknd.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/na_spec.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/lambda_fwd.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/void_fwd.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/na.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/na_fwd.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/config/ctps.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/config/lambda.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/config/ttp.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/int.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/int_fwd.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/nttp_decl.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/config/nttp.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/integral_wrapper.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/static_cast.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/lambda_arity_param.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/template_arity_fwd.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/arity.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/config/dtp.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/preprocessor/params.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/config/preprocessor.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/repeat.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/repetition/repeat.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/repetition/limits/repeat_256.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/inc.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/preprocessor/enum.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/preprocessor/def_params_tail.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/limits/arity.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/logical/and.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/logical/bitand.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/identity.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/facilities/identity.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/empty.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/arithmetic/add.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/control/while.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/list/fold_left.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/list/detail/fold_left.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/list/adt.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/detail/is_binary.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/detail/check.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/list/detail/limits/fold_left_256.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/list/limits/fold_left_256.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/list/fold_right.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/list/detail/fold_right.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/list/reverse.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/list/detail/limits/fold_right_256.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/control/detail/while.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/control/detail/limits/while_256.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/control/limits/while_256.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/logical/bitor.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/arithmetic/detail/is_maximum_number.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/comparison/equal.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/comparison/not_equal.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/comparison/limits/not_equal_256.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/arithmetic/detail/maximum_number.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/arithmetic/detail/is_minimum_number.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/logical/not.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/arithmetic/sub.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/config/eti.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/config/overload_resolution.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/lambda_support.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/include_preprocessed.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/config/compiler.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/stringize.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/preprocessed/gcc/or.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/iterator/detail/config_def.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/iterator/detail/config_undef.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/iterator/iterator_traits.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/iterator/iterator_categories.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/eval_if.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/if.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/value_wknd.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/config/integral.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/identity.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/placeholders.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/arg.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/arg_fwd.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/na_assert.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/assert.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/not.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/yes_no.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/config/arrays.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/config/gpu.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/config/pp_counter.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/arity_spec.hpp \
@@ -580,34 +1038,16 @@ CMakeFiles/test.dir/src/DataManager/DataReader.cpp.o: \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/preprocessed/gcc/placeholders.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/iterator/detail/facade_iterator_category.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/core/use_default.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/and.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/preprocessed/gcc/and.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/detail/indirect_traits.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/remove_pointer.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/detail/select_type.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/iterator/detail/enable_if.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/add_const.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/add_pointer.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/remove_const.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/always.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/preprocessor/default_params.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/apply.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/apply_fwd.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/preprocessed/gcc/apply_fwd.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/apply_wrap.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/has_apply.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/has_xxx.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/type_wrapper.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/config/has_xxx.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/config/msvc_typename.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/array/elem.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/array/data.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/array/size.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/repetition/enum_params.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/preprocessor/repetition/enum_trailing_params.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/config/has_apply.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/msvc_never_true.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/preprocessed/gcc/apply_wrap.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/lambda.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/bind.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/bind_fwd.hpp \
@@ -620,7 +1060,6 @@ CMakeFiles/test.dir/src/DataManager/DataReader.cpp.o: \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/preprocessed/gcc/bind.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/full_lambda.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/quote.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/void.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/has_type.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/config/bcc.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/mpl/aux_/preprocessed/gcc/quote.hpp \
@@ -631,65 +1070,22 @@ CMakeFiles/test.dir/src/DataManager/DataReader.cpp.o: \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/io/quoted.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/io/detail/buffer_fill.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/io/detail/ostream_guard.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/io/ios_state.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/io_fwd.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/functional/hash_fwd.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/container_hash/hash_fwd.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/filesystem/detail/path_traits.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/system/error_category.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/system/detail/error_category.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/system/detail/config.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/system/detail/error_category_impl.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/system/detail/error_condition.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/system/detail/generic_category.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/system/detail/generic_category_message.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/system/detail/enable_if.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/system/detail/is_same.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/system/detail/errc.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/system/is_error_condition_enum.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/system/detail/cerrno.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/system/detail/append_int.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/system/detail/snprintf.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/system/detail/error_code.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/system/is_error_code_enum.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/system/detail/system_category.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/system/detail/system_category_impl.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/system/detail/system_category_message.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/system/detail/interop_category.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/system/detail/std_category.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/system/detail/std_category_impl.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/system/detail/mutex.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/iterator/is_iterator.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/negation.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/conjunction.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/filesystem/detail/type_traits/conjunction.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/filesystem/detail/header.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/config/abi_prefix.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/filesystem/detail/footer.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/config/abi_suffix.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/filesystem/detail/type_traits/negation.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/filesystem/detail/type_traits/disjunction.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/disjunction.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/filesystem/exception.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/system/error_code.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/system/error_condition.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/system/errc.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/system/generic_category.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/system/system_category.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/system/detail/throws.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/system/system_error.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/smart_ptr/intrusive_ptr.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/smart_ptr/detail/requires_cxx11.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/config/pragma_message.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/smart_ptr/detail/sp_convertible.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/smart_ptr/detail/sp_nullptr_t.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/smart_ptr/detail/sp_noexcept.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/config/no_tr1/functional.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/smart_ptr/detail/operator_bool.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/smart_ptr/intrusive_ref_counter.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/smart_ptr/detail/atomic_count.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/smart_ptr/detail/sp_has_gcc_intrinsics.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/smart_ptr/detail/sp_has_sync_intrinsics.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/smart_ptr/detail/atomic_count_gcc_atomic.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/filesystem/directory.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/filesystem/file_status.hpp \
@@ -701,7 +1097,6 @@ CMakeFiles/test.dir/src/DataManager/DataReader.cpp.o: \
  /usr/include/c++/8/set /usr/include/c++/8/bits/stl_set.h \
  /usr/include/c++/8/bits/stl_multiset.h \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/stubs/port.h \
- /usr/include/c++/8/stdlib.h \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/stubs/platform_macros.h \
  /usr/include/x86_64-linux-gnu/sys/param.h /usr/include/signal.h \
  /usr/include/x86_64-linux-gnu/bits/signum.h \
@@ -749,4 +1144,21 @@ CMakeFiles/test.dir/src/DataManager/DataReader.cpp.o: \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/stubs/hash.h \
  /usr/include/c++/8/unordered_set /usr/include/c++/8/bits/unordered_set.h \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/stubs/bytestream.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/rapidjson.h
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/chrono.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/chrono/include.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/chrono/chrono.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/chrono/chrono_io.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/chrono/io_v1/chrono_io.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/chrono/process_cpu_clocks.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/chrono/thread_clock.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/ratio/ratio_io.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/is_signed.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/integer/common_factor_rt.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/chrono/detail/scan_keyword.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/move/unique_ptr.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/move/detail/unique_ptr_meta_utils.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/move/default_delete.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/chrono/detail/no_warning/signed_unsigned_cmp.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/chrono/io/utility/to_string.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/chrono/floor.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/chrono/round.hpp

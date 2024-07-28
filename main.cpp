@@ -3,12 +3,15 @@
 #include <Interface/IMessenger.h>
 using namespace std;
 using namespace ts;
-#include <thread>
+#include "boost/thread/thread.hpp"
+#include <boost/chrono.hpp>
 #include <memory>
 #include <FUTU/FutuEngine.h>
 #include <json/json.h>
 #include <DataManager/DataManager.h>
 #include <DataManager/DataWriter.h>
+#include <DataManager/DataReader.h>
+#include <functional>
     class Tester{
     public:
         void func_1(){
@@ -120,38 +123,104 @@ using namespace ts;
             return;
         }
 
-        static void test_dataWriter(){
-            shared_ptr<DataManager> de = DataManager::getInstance();
-            auto q = make_shared<Quote>();
-            
-            strcpy(q->code_, "02222");
-            strcpy(q->exg_ ,"Futu");
-            strcpy(q->time_, "2021-06-09 11:05:41");
-            
-            shared_ptr<BaseData> nq = dynamic_pointer_cast<BaseData>(q);
-            //q.reset();
 
-            de->datawritter_->WriteQuote(nq);
-            de->datawritter_->logger_->info("Wrote data into lmdb");
-            strcpy(q->time_, "2021-06-09 11:05:42");
-            nq = dynamic_pointer_cast<BaseData>(q);
-            de->datawritter_->WriteQuote(nq);
-            de->datawritter_->logger_->info("Wrote data into lmdb");
-            strcpy(q->time_, "2021-06-09 11:05:43");
-            nq = dynamic_pointer_cast<BaseData>(q);
-            de->datawritter_->WriteQuote(nq);
-            strcpy(q->code_, "1222");
-            strcpy(q->time_, "2021-06-09 11:05:43");
-            nq = dynamic_pointer_cast<BaseData>(q);
-            //de->datawritter_->WriteQuote(nq);
-            de->datawritter_->logger_->info("Stored to csv");
+        
+        void test_dataWriter(){
+
+            shared_ptr<MsgqTSMessenger> ms = MsgqTSMessenger::getInstance();
+
+
+            //q.reset();
+            int i = 0;
+            while(i<100){
+                auto q = make_shared<Quote>();
+                strcpy(q->code_, "02222");
+                strcpy(q->exg_ ,"Futu");
+                strcpy(q->time_, "test");     
+                q->timestamp_ = GetTimeStamp();
+                q->cPrice_ = i;
+                shared_ptr<Msg> msg = make_shared<Msg>("DataManager", "Tester", MSG_TYPE_STORE_QUOTE, q->getString());
+                ms->send(msg, 0);
+                //msg.reset();
+                boost::this_thread::sleep_for(boost::chrono::milliseconds(10));
+                i++;
+            }
+            shared_ptr<DataManager> de = DataManager::getInstance();
+            de->stop();
+            de.reset();
             return;
         }
 
+        void test_dataWriter1(){
 
-        static void run(){
-            thread nthread(test_dataWriter);
-            nthread.join();
+            shared_ptr<MsgqTSMessenger> ms = MsgqTSMessenger::getInstance();
+
+
+            //q.reset();
+            int i = 0;
+            while(i<100){
+                auto q = make_shared<Quote>();
+                strcpy(q->code_, "00507");
+                strcpy(q->exg_ ,"Futu");
+                strcpy(q->time_, "test");     
+                q->timestamp_ = GetTimeStamp();
+                q->cPrice_ = i;
+                shared_ptr<Msg> msg = make_shared<Msg>("DataManager", "Tester", MSG_TYPE_STORE_QUOTE, q->getString());
+                ms->send(msg, 0);
+                //msg.reset();
+                boost::this_thread::sleep_for(boost::chrono::milliseconds(10));
+                i++;
+            }
+            shared_ptr<DataManager> de = DataManager::getInstance();
+            de->stop();
+            de.reset();
+            return;
+        }
+
+        void test_dataWriter2(){
+
+            shared_ptr<MsgqTSMessenger> ms = MsgqTSMessenger::getInstance();
+
+
+            //q.reset();
+            int i = 0;
+            while(i<100){
+                auto q = make_shared<Quote>();
+                strcpy(q->code_, "12333");
+                strcpy(q->exg_ ,"Futu");
+                strcpy(q->time_, "test");     
+                q->timestamp_ = GetTimeStamp();
+                q->cPrice_ = i;
+                shared_ptr<Msg> msg = make_shared<Msg>("DataManager", "Tester", MSG_TYPE_STORE_QUOTE, q->getString());
+                ms->send(msg, 0);
+                //msg.reset();
+                boost::this_thread::sleep_for(boost::chrono::milliseconds(10));
+                i++;
+            }
+            shared_ptr<DataManager> de = DataManager::getInstance();
+            de->stop();
+            de.reset();
+            return;
+        }
+
+        void test_DataReader(){
+            shared_ptr<DataManager> de = DataManager::getInstance();
+            de->start();
+            de.reset();
+        }
+
+        
+
+        void run(){
+            boost::thread thread1(bind(&Tester::test_dataWriter,this));
+            boost::thread thread2(bind(&Tester::test_dataWriter1,this));
+            boost::thread thread3(bind(&Tester::test_dataWriter2,this));
+            boost::thread thread4(bind(&Tester::test_DataReader, this)); 
+            thread1.join();
+            thread2.join();
+            thread3.join();
+            thread4.join();
+            
         }
     };
 
@@ -159,8 +228,10 @@ using namespace ts;
 
 int main(){
     Tester test;
-    thread testthread(test.run);
+    boost::thread testthread(bind(&Tester::run,&test));
     testthread.join();
+    sleep(1);    // MUST for proper destruction of boost::threadpool 
     spdlog::shutdown();
     return 0;
 }
+

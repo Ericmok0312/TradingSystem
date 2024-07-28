@@ -18,21 +18,19 @@ static uint32_t reverseEndian(uint32_t src)
 typedef struct _LMDBKey{
     char    exg_[MAX_EXG_SIZE];
     char    code_[MAX_SYMBOL_SIZE];
-    char    date_[MAX_TIME_SIZE];
-    char    time_[MAX_TIME_SIZE];
+    uint64_t timestamp_{0};
 
-    _LMDBKey(const char* exg, const char* code, const char* date, const char* time){
+    _LMDBKey(const char* exg, const char* code, uint64_t timestamp){
         memset(this, 0, sizeof(_LMDBKey));
         strcpy(exg_, exg);
         strcpy(code_, code);
-        strcpy(date_, date);
-        strcpy(time_, time);
-
+        this->timestamp_ = timestamp;
     }
+    
 
     inline string getString(){
         stringstream ss;
-        ss<<exg_<<"/"<<code_<<"/"<<date_<<"/"<<time_;
+        ss<<exg_<<"/"<<code_<<"/"<<timestamp_;
         return move(ss.str());
     }
 }LMDBKey;

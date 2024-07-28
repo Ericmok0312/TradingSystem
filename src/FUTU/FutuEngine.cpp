@@ -161,14 +161,14 @@ namespace ts{
 
 
     void FutuEngine::OnPush_UpdateTicker(const Qot_UpdateTicker::Response &stRsp){
-        std::shared_ptr<Msg> msg = std::make_shared<Msg>("DataManager", "FutuEngine", MSG_TYPE_TICKER, "");
+        std::shared_ptr<Msg> msg = std::make_shared<Msg>("DataManager", "FutuEngine", MSG_TYPE_STORE_TICKER, "");
         ProtoBufToString(stRsp, msg->data_);
         messenger_->send(msg, 0);
     }
 
 
     void FutuEngine::OnPush_UpdateBasicQot(const Qot_UpdateBasicQot::Response &stRsp){
-        std::shared_ptr<Msg> msg = std::make_shared<Msg>("DataManager", "FutuEngine", MSG_TYPE_QUOTE, "");
+        std::shared_ptr<Msg> msg = std::make_shared<Msg>("DataManager", "FutuEngine", MSG_TYPE_STORE_QUOTE, "");
         ProtoBufToString(stRsp, msg->data_);
         messenger_->send(msg, 0);
     }

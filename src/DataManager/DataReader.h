@@ -8,20 +8,27 @@
 
 namespace ts{
 
-    typedef struct{
-        const char* exg;
-        const char* code;
+
+    struct ARG{
+        char exg[MAX_EXG_SIZE];
+        char code[MAX_SYMBOL_SIZE];
         uint32_t  count;
         uint64_t  etime;
-    }ARG;
+        string des; 
+        std::function<void(string&&, string&& des)> callback {};
+        ARG(){};
+    };
 
-
-    class DataReader: public ThreadPool<std::function<BaseData*(shared_ptr<ARG>)>, shared_ptr<ARG>>{
+    class DataReader: public ThreadPool<std::function<void(shared_ptr<ARG>)>, shared_ptr<ARG>>{
         //exg, code, count, etime
         public:
+        
+
+
             #define BASE_FILE_LOC "./src/DataBase"
             std::unique_ptr<Logger> logger_;
 
+            
             DataReader();
             ~DataReader();
 
@@ -29,8 +36,8 @@ namespace ts{
 
             static shared_ptr<DataReader> getInstance();
 
-            BaseData* readQuoteSlicefromCSV(shared_ptr<ARG>);
-            BaseData* readQuoteSlicefromLMDB(shared_ptr<ARG>);
+            void readQuoteSlicefromCSV(shared_ptr<ARG>);
+            void readQuoteSlicefromLMDB(shared_ptr<ARG>);
             
             typedef std::shared_ptr<TsLMDB> TSLMDBPtr;
             typedef std::unordered_map<std::string, TSLMDBPtr> TSLMDBMap;
@@ -64,15 +71,8 @@ namespace ts{
 
             TSLMDBPtr get_q_db(const char* exg, const char* code);
 
-
-
-
-
-
-
-
     };
-}
+}             
 
 
 

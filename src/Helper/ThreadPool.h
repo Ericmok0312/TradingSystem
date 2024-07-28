@@ -10,6 +10,7 @@
 #include <json/json.h>
 #include <condition_variable>
 #include <Interface/datastructure.h>
+#include "boost/thread/thread.hpp"
 
 using namespace std;
 
@@ -28,7 +29,7 @@ namespace ts{
             ~ThreadPool();
 
             queue<std::pair<TaskType, InputType>> taskqueue_;
-            vector<thread*> threadpool_;
+            vector<boost::thread*> threadpool_;
 
             std::mutex mutex_;
             std::atomic<int> busycount_;

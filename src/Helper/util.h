@@ -8,15 +8,11 @@
 #include "google/protobuf/util/json_util.h"
 
 
-#include <rapidjson/rapidjson.h>
-#include <rapidjson/document.h>
-#include <rapidjson/stringbuffer.h>
-#include <rapidjson/writer.h>
-
 #include <string>
 #include <vector>
 #include <iostream>
 #include <sstream>
+#include <boost/chrono.hpp>
 
 
 using namespace std;
@@ -32,7 +28,7 @@ namespace ts{
         string temp;
 
         while(getline(ss, temp, sep)){
-            result.push_back(temp);
+            result.emplace_back(move(temp));
         }
 
         string& last = result.back();
@@ -97,7 +93,11 @@ namespace ts{
         root.Parse(res.c_str());
     }
 
-
+    inline uint64_t GetTimeStamp(){
+        const auto now = boost::chrono::system_clock::now();
+        const auto milliseconds_since_epoch = boost::chrono::duration_cast<boost::chrono::milliseconds>(now.time_since_epoch()).count();
+        return static_cast<uint64_t>(milliseconds_since_epoch);
+    }
 }
 
 

@@ -20,8 +20,8 @@ namespace ts{
     /*
     - getting logger_ using Logger::getInstance();
     */
-    IMessenger::IMessenger(){
-        logger_ = make_shared<Logger>("Messenger");
+    IMessenger::IMessenger(const char* name){
+        logger_ = make_shared<Logger>(name);
     }
 
     IMessenger::~IMessenger(){}; // default destructor
@@ -38,15 +38,15 @@ namespace ts{
     -set up logger using getInstance();
     */
     IMsgq::IMsgq(MSGQ_PROTOCOL protocol, const string& url){
-
+        logger_ = make_shared<Logger>("IMsgq");
         protocol_ = protocol;
         url_ = url;
-        logger_ = make_shared<Logger>("IMsgq");
-
     }
 
 
-    IMsgq::~IMsgq(){};    //default destructor
+    IMsgq::~IMsgq(){
+        logger_->info("Destructing IMsgq");
+    };    //default destructor
 
 
     // End of IMsgq
@@ -125,6 +125,7 @@ namespace ts{
 
     MsgqNNG::~MsgqNNG(){
         nng_close(sock_);
+        logger_->info("Destructing MsgqNNG");
     }
 
 
@@ -197,7 +198,7 @@ namespace ts{
         - initialize msgq_receiver
         - msgq_sender are intialized by core engine later
     */
-    MsgqRMessenger::MsgqRMessenger(const string& url_recv){
+    MsgqRMessenger::MsgqRMessenger(const string& url_recv):IMessenger("MsgqTSMessenger"){
         msgq_receiver_ = std::make_unique<MsgqNNG>(MSGQ_PROTOCOL::PULL, url_recv);
     }
 
@@ -205,7 +206,9 @@ namespace ts{
     /*
     Default destructor
     */
-    MsgqRMessenger::~MsgqRMessenger(){}
+    MsgqRMessenger::~MsgqRMessenger(){
+        logger_->info("Destructing MsgqRMessenger");
+    }
 
 
     /*
@@ -265,15 +268,26 @@ namespace ts{
     //Start of MsgqTSMessenger
     std::mutex MsgqTSMessenger::sendlock_; //initialize sendlock_
 
-    std::unique_ptr<IMsgq> MsgqTSMessenger::msgq_server_; //initialize msgq_server_
+    std::unique_ptr<IMsgq> MsgqTSMessenger::msgq_server_ = nullptr; //initialize msgq_server_
+
+    shared_ptr<MsgqTSMessenger> MsgqTSMessenger::instance_ = nullptr;
+
+    std::mutex MsgqTSMessenger::instancelock_;
 
     //Construcotor of MsgqTSMessenger
-    MsgqTSMessenger::MsgqTSMessenger(const string& url_recv){
+    MsgqTSMessenger::MsgqTSMessenger(const string& url_recv):IMessenger("MsgqTSMessenger"){
+        std::lock_guard<mutex> lg(instancelock_);
+        if(!msgq_server_){
+                msgq_server_  = std::make_unique<MsgqNNG>(MSGQ_PROTOCOL::PUB, PROXY_SERVER_URL);
+        }
         msgq_receiver_ = std::make_unique<MsgqNNG>(MSGQ_PROTOCOL::SUB, url_recv);
     }
 
     //Default destructor
-    MsgqTSMessenger::~MsgqTSMessenger(){}
+    MsgqTSMessenger::~MsgqTSMessenger(){
+        logger_->info("Destructing MsgqTSessenger");
+        instance_.reset();
+    }
 
 
     //Send function similar to MsgqRMessenger
@@ -312,7 +326,12 @@ namespace ts{
     }
 
 
-
+    shared_ptr<MsgqTSMessenger> MsgqTSMessenger::getInstance(){
+        if(!instance_){
+            instance_ = make_shared<MsgqTSMessenger>(PROXY_SERVER_URL);
+        }
+        return instance_;
+    }
     void MsgqTSMessenger::relay(){}; // relay function will not be called in MsgqTSMessenger
     //End of MsgqTSMessenger
 

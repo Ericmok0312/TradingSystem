@@ -2,10 +2,29 @@
 #ifndef SRC_HELPER_THREADPOOL_HPP
 #define SRC_HELPER_THREADPOOL_HPP
 #include <Helper/ThreadPool.h>
+#include <functional>
+#include "boost/thread/thread.hpp"
 
 namespace ts
 {
     
+
+    /*
+    
+    NOTE: for this implementation, some objects inheriting the threadpool / processing the threadpool
+          are declared as static, and therefore are destructed after main() has destructed
+          which lead to deadlock
+
+    Solution:
+    
+
+        Reference:
+          www.stackoverflow/questions/10915233
+    
+    
+    */
+
+
 
 
 
@@ -15,9 +34,9 @@ namespace ts
     /// @param idleSec 
     template<typename TaskType, typename InputType>
     ThreadPool<TaskType, InputType>::ThreadPool(int initNum, int maxNum, int idleSec):
-    initNum_(initNum),
+    initNum_(0),
     maxNum_(maxNum),
-    idleSec_(idleSec),
+    idleSec_(1),
     stop_(false),
     busycount_(0),
     threadcount_(0)
@@ -36,7 +55,7 @@ namespace ts
 
         for(int i = 0; i < maxNum_; ++i){
             if(i< initNum_)
-                threadpool_.push_back(new std::thread(&ThreadPool::ThreadRoutine, this, i)); //Creating threads
+                threadpool_.push_back(new boost::thread(&ThreadPool::ThreadRoutine, this, i)); //Creating threads
             else
                 threadpool_.push_back(nullptr);
         }
@@ -49,24 +68,24 @@ namespace ts
         std::lock_guard<std::mutex> lock(mutex_);
         stop_ = true;
         cond_.notify_all(); // all waiting thread are unblocked
-        for(int i=0; i<maxNum_; i++){
-            thread* thread = threadpool_[i];
-            if (thread && thread->joinable()){ //check if thread is valid
-                thread->join(); // make sure the thread is finished
+        for(int i=0; i<busycount_; i++){
+            boost::thread* thread = threadpool_[i];
+            if (thread != nullptr && thread->joinable()){ //check if thread is valid
+                (*thread).join(); // make sure the thread is finished
                 delete thread;
             }
         }
-
-
     }
     
     template<typename TaskType, typename InputType>
     void ThreadPool<TaskType,InputType>::AddTask(TaskType task, InputType data){
         std::lock_guard<std::mutex> lock(mutex_);
-        taskqueue_.emplace(task, data);
+        if(task){
+            taskqueue_.emplace(task, data);
+            cond_.notify_all();
+            PoolGrow();
+        }
 
-        cond_.notify_all();
-        PoolGrow();
     }
 
     template<typename TaskType, typename InputType>
@@ -75,7 +94,7 @@ namespace ts
         if(tc == busycount_.load() && tc< maxNum_){ // all threads are occupied
             for(int i=0; i<maxNum_; i++){
                 if(threadpool_[i] == nullptr){ // find a slot with nullptr
-                    threadpool_[i] = new std::thread(&ThreadPool::ThreadRoutine, this, i);
+                    threadpool_[i] = new boost::thread(&ThreadPool::ThreadRoutine, this, i);
                     threadcount_++;
                     break;
                 }

@@ -11,7 +11,7 @@ namespace ts{
     std::mutex DataReader::q_db_mutex;
     std::mutex DataReader::getIns_mutex;
 
-    DataReader::DataReader():ThreadPool(0,4,6){//
+    DataReader::DataReader():ThreadPool(1, 8, 6){//
         init();
     }
 
@@ -34,7 +34,7 @@ namespace ts{
     }
 
 
-    BaseData* DataReader::readQuoteSlicefromLMDB(shared_ptr<ARG> arg){
+    void DataReader::readQuoteSlicefromLMDB(shared_ptr<ARG> arg){
         char* temp = new char[strlen(arg->exg)+strlen(arg->code)+2];
         strcpy(temp, arg->exg);
         strcat(temp, "/");
@@ -60,25 +60,25 @@ namespace ts{
         } while (false);
         
         TSLMDBPtr db = get_q_db(arg->exg, arg->code);
-        if(db == nullptr) return NULL;
+        if(db == nullptr) return;
         if (reload_flag == 1){
             TSQryLMDB query(*db);
             last_access_time += 1;
-            LMDBKey lkey(arg->exg, arg->code, to_string(last_access_time/1000000000).data(), to_string(last_access_time%1000000000).data());
-            LMDBKey rkey(arg->exg, arg->code, to_string(arg->etime/1000000000).data(), to_string(arg->etime%1000000000).data());
-            int count = query.get_range(lkey.getString(), rkey.getString(), [this, &quotelist](const ValueArray& ayKeys, const ValueArray& ayVals){
+            LMDBKey lkey(arg->exg, arg->code, last_access_time);
+            LMDBKey rkey(arg->exg, arg->code, arg->etime);
+            int cnt = query.get_range(lkey.getString(), rkey.getString(), [this, &quotelist](const ValueArray& ayKeys, const ValueArray& ayVals){
                 for(const std::string& item: ayVals){
-                    Quote* curtick = (Quote*)item.data();
-                    quotelist.quotes_.push_back(*curtick);
+                    Quote q(item);
+                    quotelist.quotes_.push_back(q);
                 }
             });
-            if(count > 0) logger_->info(fmt::format("{} ticks after {} of stock {} append to cache", count, last_access_time, arg->code).c_str());
+            if(cnt > 0) logger_->info(fmt::format("{} ticks after {} of stock {} append to cache", cnt, last_access_time, arg->code).c_str());
         }
         else if(reload_flag == 2){
             TSQryLMDB query(*db);
-            LMDBKey lkey(arg->exg, arg->code, 0, 0);
-            LMDBKey rkey(arg->exg, arg->code, to_string(arg->etime/1000000000).data(), to_string(arg->etime%1000000000).data());
-            int count = query.get_lowers(lkey.getString(), rkey.getString(), count, [this, &quotelist](const ValueArray& ayKeys, const ValueArray& ayVals){
+            LMDBKey lkey(arg->exg, arg->code, 0);
+            LMDBKey rkey(arg->exg, arg->code, arg->etime);
+            int cnt = query.get_lowers(lkey.getString(), rkey.getString(), count, [this, &quotelist](const ValueArray& ayKeys, const ValueArray& ayVals){
                 quotelist.quotes_.resize(ayVals.size());
                 for(std::size_t i=0; i<ayVals.size(); i++){
                     const string& item = ayKeys[i];
@@ -86,25 +86,26 @@ namespace ts{
                 }
             });
 
-            logger_->info(fmt::format("{} ticks after {} of stock {} loaded to cache for the first time", count, last_access_time, arg->code).c_str());
+            logger_->info(fmt::format("{} ticks after {} of stock {} loaded to cache for the first time", cnt, last_access_time, arg->code).c_str());
         }
-
         quotelist.last_req_time_ = arg->etime;
-
+        delete[] temp;
         count = min((uint32_t)quotelist.quotes_.size(), count);
         auto ayTwo = quotelist.quotes_.array_two(); // getting array of quotes
         auto count_2 = ayTwo.second;
-        if(count_2 >=count){
-            return QuoteSlice::create(arg->code, &quotelist.quotes_[count_2 - count], count);
+        QuoteSlice* ret;
+        if(count_2 >= count){
+            ret = QuoteSlice::create(arg->code, &quotelist.quotes_[count_2 - count], count);
         }
         else{
             auto ayOne = quotelist.quotes_.array_one();
             auto diff = count - count_2;
-            auto ret = QuoteSlice::create(arg->code, &quotelist.quotes_[ayOne.second - diff], diff);
+            ret = QuoteSlice::create(arg->code, &quotelist.quotes_[ayOne.second - diff], diff);
             if(count_2 > 0) ret->appendBlock(ayTwo.first, count_2);
-            return ret;
         }
-
+        stringstream ss;
+        ss<<ret;
+        arg->callback(move(ss.str()), move(arg->des));
     }
 
     DataReader::TSLMDBPtr DataReader::get_q_db(const char* exg, const char* code){
