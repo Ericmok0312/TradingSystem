@@ -1,9 +1,30 @@
 set(CMAKE_TOOLCHAIN_FILE "./home/emk/vcpkg/scripts/buildsystems/vcpkg.cmake"
   CACHE STRING "Vcpkg toolchain file")
 
+
+if(${CMAKE_SYSTEM_NAME} MATCHES "Windows")
+  set(BUILD_FOR_WIN TRUE)
+endif()
+
+option(STATIC_BUILD "Build a static binary." ${BUILD_FOR_WIN})
+
+if(STATIC_BUILD)
+  set(CMAKE_EXE_LINKER_FLAGS "-static")
+  set(CMAKE_FIND_LIBRARY_SUFFIXES ".a" CONFIG)
+  set(BUILD_SHARED_LIBS OFF)
+endif()
+
+
+
 project(ts)
 cmake_minimum_required(VERSION 3.22)
-set(CMAKE_GENERATOR_PLATFORM "x64-linux")
+if(${CMAKE_SYSTEM_NAME} MATCHES "Windows")
+  set(CMAKE_GENERATOR_PLATFORM "windows")
+else()
+  set(CMAKE_GENERATOR_PLATFORM "x64-linux")
+endif()
+
+
 add_definitions(-pthread)
 include(/home/emk/vcpkg/scripts/buildsystems/vcpkg.cmake)
 

@@ -208,7 +208,7 @@ CMAKE_STATIC_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 CMAKE_STRIP:FILEPATH=/usr/bin/strip
 
 //Vcpkg toolchain file
-CMAKE_TOOLCHAIN_FILE:STRING=/home/emk/vcpkg/scripts/buildsystems/vcpkg.cmake
+CMAKE_TOOLCHAIN_FILE:STRING=TradingSystem/build-mingw/Toolchain-mingw.cmake..
 
 //If this value is on, makefiles will be generated without the
 // .SILENT directive, and all commands will be echoed to the console
@@ -221,6 +221,9 @@ EXECUTABLE_OUTPUT_PATH:PATH=
 
 //Single output directory for building all libraries.
 LIBRARY_OUTPUT_PATH:PATH=
+
+//Build a static binary.
+STATIC_BUILD:BOOL=OFF
 
 //Automatically copy dependencies into the output directory for
 // executables.
