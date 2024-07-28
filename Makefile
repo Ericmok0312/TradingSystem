@@ -117,24 +117,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named test
+# Target rules for targets named test.exe
 
 # Build rule for target.
-test: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test
-.PHONY : test
+test.exe: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test.exe
+.PHONY : test.exe
 
 # fast build rule for target.
-test/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/build
-.PHONY : test/fast
+test.exe/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.exe.dir/build.make CMakeFiles/test.exe.dir/build
+.PHONY : test.exe/fast
 
 main.o: main.cpp.o
 .PHONY : main.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.exe.dir/build.make CMakeFiles/test.exe.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -142,7 +142,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.exe.dir/build.make CMakeFiles/test.exe.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -150,7 +150,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.exe.dir/build.make CMakeFiles/test.exe.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 src/DataManager/DataManager.o: src/DataManager/DataManager.cpp.o
@@ -158,7 +158,7 @@ src/DataManager/DataManager.o: src/DataManager/DataManager.cpp.o
 
 # target to build an object file
 src/DataManager/DataManager.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/DataManager/DataManager.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.exe.dir/build.make CMakeFiles/test.exe.dir/src/DataManager/DataManager.cpp.o
 .PHONY : src/DataManager/DataManager.cpp.o
 
 src/DataManager/DataManager.i: src/DataManager/DataManager.cpp.i
@@ -166,7 +166,7 @@ src/DataManager/DataManager.i: src/DataManager/DataManager.cpp.i
 
 # target to preprocess a source file
 src/DataManager/DataManager.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/DataManager/DataManager.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.exe.dir/build.make CMakeFiles/test.exe.dir/src/DataManager/DataManager.cpp.i
 .PHONY : src/DataManager/DataManager.cpp.i
 
 src/DataManager/DataManager.s: src/DataManager/DataManager.cpp.s
@@ -174,7 +174,7 @@ src/DataManager/DataManager.s: src/DataManager/DataManager.cpp.s
 
 # target to generate assembly for a file
 src/DataManager/DataManager.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/DataManager/DataManager.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.exe.dir/build.make CMakeFiles/test.exe.dir/src/DataManager/DataManager.cpp.s
 .PHONY : src/DataManager/DataManager.cpp.s
 
 src/DataManager/DataReader.o: src/DataManager/DataReader.cpp.o
@@ -182,7 +182,7 @@ src/DataManager/DataReader.o: src/DataManager/DataReader.cpp.o
 
 # target to build an object file
 src/DataManager/DataReader.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/DataManager/DataReader.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.exe.dir/build.make CMakeFiles/test.exe.dir/src/DataManager/DataReader.cpp.o
 .PHONY : src/DataManager/DataReader.cpp.o
 
 src/DataManager/DataReader.i: src/DataManager/DataReader.cpp.i
@@ -190,7 +190,7 @@ src/DataManager/DataReader.i: src/DataManager/DataReader.cpp.i
 
 # target to preprocess a source file
 src/DataManager/DataReader.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/DataManager/DataReader.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.exe.dir/build.make CMakeFiles/test.exe.dir/src/DataManager/DataReader.cpp.i
 .PHONY : src/DataManager/DataReader.cpp.i
 
 src/DataManager/DataReader.s: src/DataManager/DataReader.cpp.s
@@ -198,7 +198,7 @@ src/DataManager/DataReader.s: src/DataManager/DataReader.cpp.s
 
 # target to generate assembly for a file
 src/DataManager/DataReader.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/DataManager/DataReader.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.exe.dir/build.make CMakeFiles/test.exe.dir/src/DataManager/DataReader.cpp.s
 .PHONY : src/DataManager/DataReader.cpp.s
 
 src/DataManager/DataWriter.o: src/DataManager/DataWriter.cpp.o
@@ -206,7 +206,7 @@ src/DataManager/DataWriter.o: src/DataManager/DataWriter.cpp.o
 
 # target to build an object file
 src/DataManager/DataWriter.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/DataManager/DataWriter.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.exe.dir/build.make CMakeFiles/test.exe.dir/src/DataManager/DataWriter.cpp.o
 .PHONY : src/DataManager/DataWriter.cpp.o
 
 src/DataManager/DataWriter.i: src/DataManager/DataWriter.cpp.i
@@ -214,7 +214,7 @@ src/DataManager/DataWriter.i: src/DataManager/DataWriter.cpp.i
 
 # target to preprocess a source file
 src/DataManager/DataWriter.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/DataManager/DataWriter.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.exe.dir/build.make CMakeFiles/test.exe.dir/src/DataManager/DataWriter.cpp.i
 .PHONY : src/DataManager/DataWriter.cpp.i
 
 src/DataManager/DataWriter.s: src/DataManager/DataWriter.cpp.s
@@ -222,7 +222,7 @@ src/DataManager/DataWriter.s: src/DataManager/DataWriter.cpp.s
 
 # target to generate assembly for a file
 src/DataManager/DataWriter.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/DataManager/DataWriter.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.exe.dir/build.make CMakeFiles/test.exe.dir/src/DataManager/DataWriter.cpp.s
 .PHONY : src/DataManager/DataWriter.cpp.s
 
 src/FUTU/FutuEngine.o: src/FUTU/FutuEngine.cpp.o
@@ -230,7 +230,7 @@ src/FUTU/FutuEngine.o: src/FUTU/FutuEngine.cpp.o
 
 # target to build an object file
 src/FUTU/FutuEngine.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/FUTU/FutuEngine.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.exe.dir/build.make CMakeFiles/test.exe.dir/src/FUTU/FutuEngine.cpp.o
 .PHONY : src/FUTU/FutuEngine.cpp.o
 
 src/FUTU/FutuEngine.i: src/FUTU/FutuEngine.cpp.i
@@ -238,7 +238,7 @@ src/FUTU/FutuEngine.i: src/FUTU/FutuEngine.cpp.i
 
 # target to preprocess a source file
 src/FUTU/FutuEngine.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/FUTU/FutuEngine.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.exe.dir/build.make CMakeFiles/test.exe.dir/src/FUTU/FutuEngine.cpp.i
 .PHONY : src/FUTU/FutuEngine.cpp.i
 
 src/FUTU/FutuEngine.s: src/FUTU/FutuEngine.cpp.s
@@ -246,7 +246,7 @@ src/FUTU/FutuEngine.s: src/FUTU/FutuEngine.cpp.s
 
 # target to generate assembly for a file
 src/FUTU/FutuEngine.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/FUTU/FutuEngine.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.exe.dir/build.make CMakeFiles/test.exe.dir/src/FUTU/FutuEngine.cpp.s
 .PHONY : src/FUTU/FutuEngine.cpp.s
 
 src/Helper/logger.o: src/Helper/logger.cpp.o
@@ -254,7 +254,7 @@ src/Helper/logger.o: src/Helper/logger.cpp.o
 
 # target to build an object file
 src/Helper/logger.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Helper/logger.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.exe.dir/build.make CMakeFiles/test.exe.dir/src/Helper/logger.cpp.o
 .PHONY : src/Helper/logger.cpp.o
 
 src/Helper/logger.i: src/Helper/logger.cpp.i
@@ -262,7 +262,7 @@ src/Helper/logger.i: src/Helper/logger.cpp.i
 
 # target to preprocess a source file
 src/Helper/logger.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Helper/logger.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.exe.dir/build.make CMakeFiles/test.exe.dir/src/Helper/logger.cpp.i
 .PHONY : src/Helper/logger.cpp.i
 
 src/Helper/logger.s: src/Helper/logger.cpp.s
@@ -270,7 +270,7 @@ src/Helper/logger.s: src/Helper/logger.cpp.s
 
 # target to generate assembly for a file
 src/Helper/logger.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Helper/logger.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.exe.dir/build.make CMakeFiles/test.exe.dir/src/Helper/logger.cpp.s
 .PHONY : src/Helper/logger.cpp.s
 
 src/Interface/IEngine.o: src/Interface/IEngine.cpp.o
@@ -278,7 +278,7 @@ src/Interface/IEngine.o: src/Interface/IEngine.cpp.o
 
 # target to build an object file
 src/Interface/IEngine.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Interface/IEngine.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.exe.dir/build.make CMakeFiles/test.exe.dir/src/Interface/IEngine.cpp.o
 .PHONY : src/Interface/IEngine.cpp.o
 
 src/Interface/IEngine.i: src/Interface/IEngine.cpp.i
@@ -286,7 +286,7 @@ src/Interface/IEngine.i: src/Interface/IEngine.cpp.i
 
 # target to preprocess a source file
 src/Interface/IEngine.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Interface/IEngine.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.exe.dir/build.make CMakeFiles/test.exe.dir/src/Interface/IEngine.cpp.i
 .PHONY : src/Interface/IEngine.cpp.i
 
 src/Interface/IEngine.s: src/Interface/IEngine.cpp.s
@@ -294,7 +294,7 @@ src/Interface/IEngine.s: src/Interface/IEngine.cpp.s
 
 # target to generate assembly for a file
 src/Interface/IEngine.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Interface/IEngine.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.exe.dir/build.make CMakeFiles/test.exe.dir/src/Interface/IEngine.cpp.s
 .PHONY : src/Interface/IEngine.cpp.s
 
 src/Interface/IMessenger.o: src/Interface/IMessenger.cpp.o
@@ -302,7 +302,7 @@ src/Interface/IMessenger.o: src/Interface/IMessenger.cpp.o
 
 # target to build an object file
 src/Interface/IMessenger.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Interface/IMessenger.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.exe.dir/build.make CMakeFiles/test.exe.dir/src/Interface/IMessenger.cpp.o
 .PHONY : src/Interface/IMessenger.cpp.o
 
 src/Interface/IMessenger.i: src/Interface/IMessenger.cpp.i
@@ -310,7 +310,7 @@ src/Interface/IMessenger.i: src/Interface/IMessenger.cpp.i
 
 # target to preprocess a source file
 src/Interface/IMessenger.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Interface/IMessenger.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.exe.dir/build.make CMakeFiles/test.exe.dir/src/Interface/IMessenger.cpp.i
 .PHONY : src/Interface/IMessenger.cpp.i
 
 src/Interface/IMessenger.s: src/Interface/IMessenger.cpp.s
@@ -318,7 +318,7 @@ src/Interface/IMessenger.s: src/Interface/IMessenger.cpp.s
 
 # target to generate assembly for a file
 src/Interface/IMessenger.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Interface/IMessenger.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.exe.dir/build.make CMakeFiles/test.exe.dir/src/Interface/IMessenger.cpp.s
 .PHONY : src/Interface/IMessenger.cpp.s
 
 src/Interface/datastruture.o: src/Interface/datastruture.cpp.o
@@ -326,7 +326,7 @@ src/Interface/datastruture.o: src/Interface/datastruture.cpp.o
 
 # target to build an object file
 src/Interface/datastruture.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Interface/datastruture.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.exe.dir/build.make CMakeFiles/test.exe.dir/src/Interface/datastruture.cpp.o
 .PHONY : src/Interface/datastruture.cpp.o
 
 src/Interface/datastruture.i: src/Interface/datastruture.cpp.i
@@ -334,7 +334,7 @@ src/Interface/datastruture.i: src/Interface/datastruture.cpp.i
 
 # target to preprocess a source file
 src/Interface/datastruture.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Interface/datastruture.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.exe.dir/build.make CMakeFiles/test.exe.dir/src/Interface/datastruture.cpp.i
 .PHONY : src/Interface/datastruture.cpp.i
 
 src/Interface/datastruture.s: src/Interface/datastruture.cpp.s
@@ -342,7 +342,7 @@ src/Interface/datastruture.s: src/Interface/datastruture.cpp.s
 
 # target to generate assembly for a file
 src/Interface/datastruture.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Interface/datastruture.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.exe.dir/build.make CMakeFiles/test.exe.dir/src/Interface/datastruture.cpp.s
 .PHONY : src/Interface/datastruture.cpp.s
 
 # Help Target
@@ -353,7 +353,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... test"
+	@echo "... test.exe"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

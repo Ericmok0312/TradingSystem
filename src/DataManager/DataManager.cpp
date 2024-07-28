@@ -19,7 +19,7 @@ namespace ts{
 
 
     /// @brief Constructor, calling ThreadPool constructor
-    DataManager::DataManager():ThreadPool(0, 4, 6){
+    DataManager::DataManager():ThreadPool(0, 12, 1){
         init();
     }
 
@@ -65,6 +65,7 @@ namespace ts{
 
 
     void DataManager::processMsg(std::shared_ptr<Msg> msg){
+        uint64_t init_t = GetTimeStamp();
         vector<shared_ptr<BaseData>> list;
         switch(msg->msgtype_){
             case MSG_TYPE_STORE_QUOTE:{
@@ -98,13 +99,11 @@ namespace ts{
                 arguments->des = move(param[4]);
                 datareader_->AddTask(bind(&DataReader::readQuoteSlicefromLMDB, datareader_, placeholders::_1), arguments);
             }
-
             break;
         }
-        char* stmsg = msg->serialize();
-        boost::chrono::milliseconds ms = boost::chrono::duration_cast< boost::chrono::milliseconds >(boost::chrono::system_clock::now().time_since_epoch());
-        logger_->info(fmt::format("processMsg received {}, current UNIX timestamp: {}", stmsg, to_string(ms.count())).c_str());
-        delete[] stmsg;
+        
+        if (IS_BENCHMARK)
+            logger_->info(fmt::format("DataManager latency final: {}", to_string(GetTimeStamp()-init_t)).c_str());
     }
 
     void DataManager::sendData(string&& address, string&& des){

@@ -8,6 +8,7 @@
 #include <vector>
 #include <string>
 #include <functional>
+#include <Helper/util.h>
 
 namespace ts{
 
@@ -140,12 +141,13 @@ namespace ts{
             }
 
 
-            inline bool put_and_commit(const std::string& key, const std::string& val){
+            inline bool put_and_commit(const std::string key, const std::string val){
                 return Put_And_Commit((void*)key.data(), key.size(), (void*)val.data(), val.size());
             }
 
             inline bool Put_And_Commit(void* key, std::size_t klen, void* val, std::size_t vlen){
-               MDB_val mKey, mData;
+                uint64_t init = GetTimeStamp();
+                MDB_val mKey, mData;
                 //setting key
                 mKey.mv_data = key;
                 mKey.mv_size = klen;

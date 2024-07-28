@@ -12,6 +12,9 @@ using namespace ts;
 #include <DataManager/DataWriter.h>
 #include <DataManager/DataReader.h>
 #include <functional>
+#include <random>
+
+
     class Tester{
     public:
         void func_1(){
@@ -127,6 +130,8 @@ using namespace ts;
         
         void test_dataWriter(){
 
+            std::mt19937 rng(std::random_device{}()); // Mersenne Twister engine
+            std::uniform_int_distribution<int> dist(0, 10); // [0, 10) range
             shared_ptr<MsgqTSMessenger> ms = MsgqTSMessenger::getInstance();
 
 
@@ -142,7 +147,7 @@ using namespace ts;
                 shared_ptr<Msg> msg = make_shared<Msg>("DataManager", "Tester", MSG_TYPE_STORE_QUOTE, q->getString());
                 ms->send(msg, 0);
                 //msg.reset();
-                boost::this_thread::sleep_for(boost::chrono::milliseconds(10));
+                boost::this_thread::sleep_for(boost::chrono::milliseconds(dist(rng)));
                 i++;
             }
             shared_ptr<DataManager> de = DataManager::getInstance();
@@ -152,7 +157,8 @@ using namespace ts;
         }
 
         void test_dataWriter1(){
-
+            std::mt19937 rng(std::random_device{}()); // Mersenne Twister engine
+            std::uniform_int_distribution<int> dist(0, 10); // [0, 10) range
             shared_ptr<MsgqTSMessenger> ms = MsgqTSMessenger::getInstance();
 
 
@@ -168,7 +174,7 @@ using namespace ts;
                 shared_ptr<Msg> msg = make_shared<Msg>("DataManager", "Tester", MSG_TYPE_STORE_QUOTE, q->getString());
                 ms->send(msg, 0);
                 //msg.reset();
-                boost::this_thread::sleep_for(boost::chrono::milliseconds(10));
+                boost::this_thread::sleep_for(boost::chrono::milliseconds(dist(rng)));
                 i++;
             }
             shared_ptr<DataManager> de = DataManager::getInstance();
@@ -178,7 +184,8 @@ using namespace ts;
         }
 
         void test_dataWriter2(){
-
+            std::mt19937 rng(std::random_device{}()); // Mersenne Twister engine
+            std::uniform_int_distribution<int> dist(0, 10); // [0, 10) range
             shared_ptr<MsgqTSMessenger> ms = MsgqTSMessenger::getInstance();
 
 
@@ -194,7 +201,7 @@ using namespace ts;
                 shared_ptr<Msg> msg = make_shared<Msg>("DataManager", "Tester", MSG_TYPE_STORE_QUOTE, q->getString());
                 ms->send(msg, 0);
                 //msg.reset();
-                boost::this_thread::sleep_for(boost::chrono::milliseconds(10));
+                boost::this_thread::sleep_for(boost::chrono::milliseconds(dist(rng)));
                 i++;
             }
             shared_ptr<DataManager> de = DataManager::getInstance();
@@ -230,7 +237,7 @@ int main(){
     Tester test;
     boost::thread testthread(bind(&Tester::run,&test));
     testthread.join();
-    sleep(1);    // MUST for proper destruction of boost::threadpool 
+    sleep(6);    // MUST for proper destruction of boost::threadpool 
     spdlog::shutdown();
     return 0;
 }

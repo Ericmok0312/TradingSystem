@@ -34,9 +34,9 @@ namespace ts
     /// @param idleSec 
     template<typename TaskType, typename InputType>
     ThreadPool<TaskType, InputType>::ThreadPool(int initNum, int maxNum, int idleSec):
-    initNum_(0),
-    maxNum_(maxNum),
-    idleSec_(1),
+    initNum_(initNum),
+    maxNum_(6),
+    idleSec_(2),
     stop_(false),
     busycount_(0),
     threadcount_(0)
@@ -68,10 +68,10 @@ namespace ts
         std::lock_guard<std::mutex> lock(mutex_);
         stop_ = true;
         cond_.notify_all(); // all waiting thread are unblocked
-        for(int i=0; i<busycount_; i++){
+        for(int i=0; i<maxNum_; i++){
             boost::thread* thread = threadpool_[i];
             if (thread != nullptr && thread->joinable()){ //check if thread is valid
-                (*thread).join(); // make sure the thread is finished
+                (*thread).timed_join(boost::chrono::milliseconds(1)); // make sure the thread is finished
                 delete thread;
             }
         }

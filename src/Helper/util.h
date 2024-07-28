@@ -19,7 +19,8 @@ using namespace std;
 using namespace google;
 
 namespace ts{
-
+    
+    #define IS_BENCHMARK 1
 
     inline void split(const char* src, char sep, vector<string>& result){
 
@@ -95,8 +96,8 @@ namespace ts{
 
     inline uint64_t GetTimeStamp(){
         const auto now = boost::chrono::system_clock::now();
-        const auto milliseconds_since_epoch = boost::chrono::duration_cast<boost::chrono::milliseconds>(now.time_since_epoch()).count();
-        return static_cast<uint64_t>(milliseconds_since_epoch);
+        const auto since_epoch = boost::chrono::duration_cast<boost::chrono::microseconds>(now.time_since_epoch()).count();
+        return static_cast<uint64_t>(since_epoch);
     }
 }
 

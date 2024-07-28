@@ -17,7 +17,7 @@ namespace ts{
 
     
 
-    DataWriter::DataWriter():ThreadPool(0,4,6){
+    DataWriter::DataWriter():ThreadPool(0,12,1){
         init();
     }
 
@@ -44,6 +44,7 @@ namespace ts{
 
 
     void DataWriter::WriteQuote(std::shared_ptr<BaseData> quote){
+        uint64_t init = GetTimeStamp();
         stringstream ss;
         shared_ptr<Quote> nquote = static_pointer_cast<Quote>(quote);
         if(!nquote){
@@ -51,11 +52,17 @@ namespace ts{
             return;
         }
         TSLMDBPtr db = get_q_db(nquote->exg_, nquote->code_);
+        
         TSQryLMDB query(*db); // create a query object
+        
         LMDBKey key (nquote->exg_, nquote->code_, nquote->timestamp_);
-        if(!query.put_and_commit(key.getString(), nquote->getString())){
+        
+        if(!query.put_and_commit(move(key.getString()), move(nquote->getString()))){
             logger_->error(fmt::format("wrtie tick of {} error {}", nquote->code_, db->errmsg()).c_str());
         }
+        if (IS_BENCHMARK) {
+            logger_->info(fmt::format("WriteQuote latency final: {}", to_string(GetTimeStamp()-init)).c_str());
+            logger_->info(fmt::format("Total latency final: {}", to_string(GetTimeStamp()-nquote->timestamp_)).c_str());}
     }
 
     void DataWriter::WriteDataBase(){
@@ -103,11 +110,13 @@ namespace ts{
 
 
     DataWriter::TSLMDBPtr DataWriter::get_q_db(const char* exg, const char* code){
-        
+        uint64_t init = GetTimeStamp();
         string key = fmt::format("{}/{}", exg, code);
 
         auto it = quote_dbs_.find(key);
         if(it != quote_dbs_.end()){
+            if(IS_BENCHMARK)
+                logger_->info(fmt::format("Get_q_db latency: {}", to_string(GetTimeStamp()-init)).c_str());
             return it->second; 
         }
 
@@ -123,6 +132,8 @@ namespace ts{
         }
         std::lock_guard<mutex> lock (q_db_mutex); // modifying unordered map
         quote_dbs_[key] = dbPtr;
+        if(IS_BENCHMARK)
+        logger_->info(fmt::format("Get_q_db latency: {}", to_string(GetTimeStamp()-init)).c_str());
         return dbPtr;
     }
 

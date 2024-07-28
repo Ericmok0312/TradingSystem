@@ -63,7 +63,7 @@ CMAKE_BINARY_DIR = /data/home/emk/Coding/Trading_system/TradingSystem
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/test.dir/all
+all: CMakeFiles/test.exe.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -71,34 +71,34 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/test.dir/clean
+clean: CMakeFiles/test.exe.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/test.dir
+# Target rules for target CMakeFiles/test.exe.dir
 
 # All Build rule for target.
-CMakeFiles/test.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/data/home/emk/Coding/Trading_system/TradingSystem/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10 "Built target test"
-.PHONY : CMakeFiles/test.dir/all
+CMakeFiles/test.exe.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.exe.dir/build.make CMakeFiles/test.exe.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.exe.dir/build.make CMakeFiles/test.exe.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/data/home/emk/Coding/Trading_system/TradingSystem/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10 "Built target test.exe"
+.PHONY : CMakeFiles/test.exe.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/test.dir/rule: cmake_check_build_system
+CMakeFiles/test.exe.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /data/home/emk/Coding/Trading_system/TradingSystem/CMakeFiles 10
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/test.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/test.exe.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /data/home/emk/Coding/Trading_system/TradingSystem/CMakeFiles 0
-.PHONY : CMakeFiles/test.dir/rule
+.PHONY : CMakeFiles/test.exe.dir/rule
 
 # Convenience name for target.
-test: CMakeFiles/test.dir/rule
-.PHONY : test
+test.exe: CMakeFiles/test.exe.dir/rule
+.PHONY : test.exe
 
 # clean rule for target.
-CMakeFiles/test.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/clean
-.PHONY : CMakeFiles/test.dir/clean
+CMakeFiles/test.exe.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.exe.dir/build.make CMakeFiles/test.exe.dir/clean
+.PHONY : CMakeFiles/test.exe.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

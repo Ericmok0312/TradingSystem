@@ -892,6 +892,81 @@ CMakeFiles/test.dir/src/DataManager/DataReader.cpp.o: \
  /usr/include/x86_64-linux-gnu/sys/stat.h \
  /usr/include/x86_64-linux-gnu/bits/stat.h \
  /usr/include/x86_64-linux-gnu/bits/statx.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/src/Helper/util.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/stubs/common.h \
+ /usr/include/c++/8/set /usr/include/c++/8/bits/stl_set.h \
+ /usr/include/c++/8/bits/stl_multiset.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/stubs/port.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/stubs/platform_macros.h \
+ /usr/include/x86_64-linux-gnu/sys/param.h /usr/include/signal.h \
+ /usr/include/x86_64-linux-gnu/bits/signum.h \
+ /usr/include/x86_64-linux-gnu/bits/signum-generic.h \
+ /usr/include/x86_64-linux-gnu/bits/types/sig_atomic_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/__sigval_t.h \
+ /usr/include/x86_64-linux-gnu/bits/siginfo-arch.h \
+ /usr/include/x86_64-linux-gnu/bits/siginfo-consts.h \
+ /usr/include/x86_64-linux-gnu/bits/siginfo-consts-arch.h \
+ /usr/include/x86_64-linux-gnu/bits/types/sigval_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/sigevent_t.h \
+ /usr/include/x86_64-linux-gnu/bits/sigevent-consts.h \
+ /usr/include/x86_64-linux-gnu/bits/sigaction.h \
+ /usr/include/x86_64-linux-gnu/bits/sigcontext.h \
+ /usr/include/x86_64-linux-gnu/bits/types/stack_t.h \
+ /usr/include/x86_64-linux-gnu/sys/ucontext.h \
+ /usr/include/x86_64-linux-gnu/bits/sigstack.h \
+ /usr/include/x86_64-linux-gnu/bits/ss_flags.h \
+ /usr/include/x86_64-linux-gnu/bits/types/struct_sigstack.h \
+ /usr/include/x86_64-linux-gnu/bits/sigthread.h \
+ /usr/include/x86_64-linux-gnu/bits/param.h /usr/include/linux/param.h \
+ /usr/include/x86_64-linux-gnu/asm/param.h \
+ /usr/include/asm-generic/param.h /usr/include/byteswap.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/stubs/macros.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/stubs/logging.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/stubs/scoped_ptr.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/stubs/mutex.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/stubs/callback.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/stubs/type_traits.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/stubs/template_util.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/message_lite.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/stubs/once.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/stubs/atomicops.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/stubs/atomicops_internals_x86_gcc.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/message.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/arena.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/arena_impl.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/stubs/atomic_sequence_num.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/descriptor.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/util/json_util.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/util/type_resolver.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/stubs/status.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/stubs/stringpiece.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/stubs/hash.h \
+ /usr/include/c++/8/unordered_map /usr/include/c++/8/bits/hashtable.h \
+ /usr/include/c++/8/bits/hashtable_policy.h \
+ /usr/include/c++/8/bits/unordered_map.h /usr/include/c++/8/unordered_set \
+ /usr/include/c++/8/bits/unordered_set.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/stubs/bytestream.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/chrono.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/chrono/include.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/chrono/chrono.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/chrono/chrono_io.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/chrono/io_v1/chrono_io.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/chrono/process_cpu_clocks.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/chrono/thread_clock.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/ratio/ratio_io.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/is_scalar.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/is_signed.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/integer/common_factor_rt.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/chrono/detail/scan_keyword.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/move/unique_ptr.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/move/detail/unique_ptr_meta_utils.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/move/default_delete.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/move/adl_move_swap.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/chrono/detail/no_warning/signed_unsigned_cmp.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/chrono/io/utility/to_string.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/chrono/floor.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/chrono/round.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/src/Helper/logger.h \
  /usr/include/c++/8/fstream \
  /usr/include/x86_64-linux-gnu/c++/8/bits/basic_file.h \
@@ -914,9 +989,6 @@ CMakeFiles/test.dir/src/DataManager/DataReader.cpp.o: \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/details/registry.h \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/details/periodic_worker.h \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/details/periodic_worker-inl.h \
- /usr/include/c++/8/unordered_map /usr/include/c++/8/bits/hashtable.h \
- /usr/include/c++/8/bits/hashtable_policy.h \
- /usr/include/c++/8/bits/unordered_map.h \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/details/registry-inl.h \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/logger.h \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/details/backtracer.h \
@@ -1000,7 +1072,6 @@ CMakeFiles/test.dir/src/DataManager/DataReader.cpp.o: \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/is_stateless.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/has_trivial_constructor.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/is_pod.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/is_scalar.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/is_default_constructible.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/is_volatile.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/has_trivial_copy.hpp \
@@ -1014,7 +1085,6 @@ CMakeFiles/test.dir/src/DataManager/DataReader.cpp.o: \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/is_assignable.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/has_nothrow_assign.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/is_const.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/move/adl_move_swap.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/circular_buffer/space_optimized.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/filesystem.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/filesystem/config.hpp \
@@ -1091,74 +1161,4 @@ CMakeFiles/test.dir/src/DataManager/DataReader.cpp.o: \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/filesystem/file_status.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/detail/bitmask.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/filesystem/operations.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/src/DataManager/LMDBKeys.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/src/Helper/util.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/stubs/common.h \
- /usr/include/c++/8/set /usr/include/c++/8/bits/stl_set.h \
- /usr/include/c++/8/bits/stl_multiset.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/stubs/port.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/stubs/platform_macros.h \
- /usr/include/x86_64-linux-gnu/sys/param.h /usr/include/signal.h \
- /usr/include/x86_64-linux-gnu/bits/signum.h \
- /usr/include/x86_64-linux-gnu/bits/signum-generic.h \
- /usr/include/x86_64-linux-gnu/bits/types/sig_atomic_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__sigval_t.h \
- /usr/include/x86_64-linux-gnu/bits/siginfo-arch.h \
- /usr/include/x86_64-linux-gnu/bits/siginfo-consts.h \
- /usr/include/x86_64-linux-gnu/bits/siginfo-consts-arch.h \
- /usr/include/x86_64-linux-gnu/bits/types/sigval_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/sigevent_t.h \
- /usr/include/x86_64-linux-gnu/bits/sigevent-consts.h \
- /usr/include/x86_64-linux-gnu/bits/sigaction.h \
- /usr/include/x86_64-linux-gnu/bits/sigcontext.h \
- /usr/include/x86_64-linux-gnu/bits/types/stack_t.h \
- /usr/include/x86_64-linux-gnu/sys/ucontext.h \
- /usr/include/x86_64-linux-gnu/bits/sigstack.h \
- /usr/include/x86_64-linux-gnu/bits/ss_flags.h \
- /usr/include/x86_64-linux-gnu/bits/types/struct_sigstack.h \
- /usr/include/x86_64-linux-gnu/bits/sigthread.h \
- /usr/include/x86_64-linux-gnu/bits/param.h /usr/include/linux/param.h \
- /usr/include/x86_64-linux-gnu/asm/param.h \
- /usr/include/asm-generic/param.h /usr/include/byteswap.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/stubs/macros.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/stubs/logging.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/stubs/scoped_ptr.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/stubs/mutex.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/stubs/callback.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/stubs/type_traits.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/stubs/template_util.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/message_lite.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/stubs/once.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/stubs/atomicops.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/stubs/atomicops_internals_x86_gcc.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/message.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/arena.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/arena_impl.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/stubs/atomic_sequence_num.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/descriptor.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/util/json_util.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/util/type_resolver.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/stubs/status.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/stubs/stringpiece.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/stubs/hash.h \
- /usr/include/c++/8/unordered_set /usr/include/c++/8/bits/unordered_set.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/stubs/bytestream.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/chrono.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/chrono/include.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/chrono/chrono.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/chrono/chrono_io.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/chrono/io_v1/chrono_io.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/chrono/process_cpu_clocks.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/chrono/thread_clock.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/ratio/ratio_io.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/is_signed.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/integer/common_factor_rt.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/chrono/detail/scan_keyword.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/move/unique_ptr.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/move/detail/unique_ptr_meta_utils.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/move/default_delete.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/chrono/detail/no_warning/signed_unsigned_cmp.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/chrono/io/utility/to_string.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/chrono/floor.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/chrono/round.hpp
+ /data/home/emk/Coding/Trading_system/TradingSystem/src/DataManager/LMDBKeys.h

@@ -1271,7 +1271,13 @@ CMakeFiles/test.dir/main.cpp.o: main.cpp \
   libs/boost/type_traits/is_assignable.hpp \
   libs/boost/type_traits/has_nothrow_assign.hpp \
   libs/boost/type_traits/is_const.hpp \
-  libs/boost/circular_buffer/space_optimized.hpp
+  libs/boost/circular_buffer/space_optimized.hpp \
+  /usr/include/c++/8/random \
+  /usr/include/c++/8/bits/random.h \
+  /usr/include/x86_64-linux-gnu/c++/8/bits/opt_random.h \
+  /usr/include/c++/8/bits/random.tcc \
+  /usr/include/c++/8/numeric \
+  /usr/include/c++/8/bits/stl_numeric.h
 
 CMakeFiles/test.dir/src/DataManager/DataManager.cpp.o: src/DataManager/DataManager.cpp \
   /usr/include/stdc-predef.h \
@@ -3402,6 +3408,87 @@ CMakeFiles/test.dir/src/DataManager/DataReader.cpp.o: src/DataManager/DataReader
   /usr/include/x86_64-linux-gnu/sys/stat.h \
   /usr/include/x86_64-linux-gnu/bits/stat.h \
   /usr/include/x86_64-linux-gnu/bits/statx.h \
+  src/Helper/util.h \
+  libs/futu/include/google/protobuf/stubs/common.h \
+  /usr/include/c++/8/set \
+  /usr/include/c++/8/bits/stl_set.h \
+  /usr/include/c++/8/bits/stl_multiset.h \
+  libs/futu/include/google/protobuf/stubs/port.h \
+  libs/futu/include/google/protobuf/stubs/platform_macros.h \
+  /usr/include/x86_64-linux-gnu/sys/param.h \
+  /usr/include/signal.h \
+  /usr/include/x86_64-linux-gnu/bits/signum.h \
+  /usr/include/x86_64-linux-gnu/bits/signum-generic.h \
+  /usr/include/x86_64-linux-gnu/bits/types/sig_atomic_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__sigval_t.h \
+  /usr/include/x86_64-linux-gnu/bits/siginfo-arch.h \
+  /usr/include/x86_64-linux-gnu/bits/siginfo-consts.h \
+  /usr/include/x86_64-linux-gnu/bits/siginfo-consts-arch.h \
+  /usr/include/x86_64-linux-gnu/bits/types/sigval_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/sigevent_t.h \
+  /usr/include/x86_64-linux-gnu/bits/sigevent-consts.h \
+  /usr/include/x86_64-linux-gnu/bits/sigaction.h \
+  /usr/include/x86_64-linux-gnu/bits/sigcontext.h \
+  /usr/include/x86_64-linux-gnu/bits/types/stack_t.h \
+  /usr/include/x86_64-linux-gnu/sys/ucontext.h \
+  /usr/include/x86_64-linux-gnu/bits/sigstack.h \
+  /usr/include/x86_64-linux-gnu/bits/ss_flags.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_sigstack.h \
+  /usr/include/x86_64-linux-gnu/bits/sigthread.h \
+  /usr/include/x86_64-linux-gnu/bits/param.h \
+  /usr/include/linux/param.h \
+  /usr/include/x86_64-linux-gnu/asm/param.h \
+  /usr/include/asm-generic/param.h \
+  /usr/include/byteswap.h \
+  libs/futu/include/google/protobuf/stubs/macros.h \
+  libs/futu/include/google/protobuf/stubs/logging.h \
+  libs/futu/include/google/protobuf/stubs/scoped_ptr.h \
+  libs/futu/include/google/protobuf/stubs/mutex.h \
+  libs/futu/include/google/protobuf/stubs/callback.h \
+  libs/futu/include/google/protobuf/stubs/type_traits.h \
+  libs/futu/include/google/protobuf/stubs/template_util.h \
+  libs/futu/include/google/protobuf/message_lite.h \
+  libs/futu/include/google/protobuf/stubs/once.h \
+  libs/futu/include/google/protobuf/stubs/atomicops.h \
+  libs/futu/include/google/protobuf/stubs/atomicops_internals_x86_gcc.h \
+  libs/futu/include/google/protobuf/message.h \
+  libs/futu/include/google/protobuf/arena.h \
+  libs/futu/include/google/protobuf/arena_impl.h \
+  libs/futu/include/google/protobuf/stubs/atomic_sequence_num.h \
+  libs/futu/include/google/protobuf/descriptor.h \
+  libs/futu/include/google/protobuf/util/json_util.h \
+  libs/futu/include/google/protobuf/util/type_resolver.h \
+  libs/futu/include/google/protobuf/stubs/status.h \
+  libs/futu/include/google/protobuf/stubs/stringpiece.h \
+  libs/futu/include/google/protobuf/stubs/hash.h \
+  /usr/include/c++/8/unordered_map \
+  /usr/include/c++/8/bits/hashtable.h \
+  /usr/include/c++/8/bits/hashtable_policy.h \
+  /usr/include/c++/8/bits/unordered_map.h \
+  /usr/include/c++/8/unordered_set \
+  /usr/include/c++/8/bits/unordered_set.h \
+  libs/futu/include/google/protobuf/stubs/bytestream.h \
+  libs/boost/chrono.hpp \
+  libs/boost/chrono/include.hpp \
+  libs/boost/chrono/chrono.hpp \
+  libs/boost/chrono/chrono_io.hpp \
+  libs/boost/chrono/io_v1/chrono_io.hpp \
+  libs/boost/chrono/process_cpu_clocks.hpp \
+  libs/boost/chrono/thread_clock.hpp \
+  libs/boost/ratio/ratio_io.hpp \
+  libs/boost/type_traits/is_scalar.hpp \
+  libs/boost/type_traits/is_signed.hpp \
+  libs/boost/integer/common_factor_rt.hpp \
+  libs/boost/chrono/detail/scan_keyword.hpp \
+  libs/boost/move/unique_ptr.hpp \
+  libs/boost/move/detail/unique_ptr_meta_utils.hpp \
+  libs/boost/move/default_delete.hpp \
+  libs/boost/move/adl_move_swap.hpp \
+  libs/boost/chrono/detail/no_warning/signed_unsigned_cmp.hpp \
+  libs/boost/chrono/io/utility/to_string.hpp \
+  libs/boost/chrono/floor.hpp \
+  libs/boost/chrono/round.hpp \
   src/Helper/logger.h \
   /usr/include/c++/8/fstream \
   /usr/include/x86_64-linux-gnu/c++/8/bits/basic_file.h \
@@ -3424,10 +3511,6 @@ CMakeFiles/test.dir/src/DataManager/DataReader.cpp.o: src/DataManager/DataReader
   libs/spdlog-1.14.1/include/spdlog/details/registry.h \
   libs/spdlog-1.14.1/include/spdlog/details/periodic_worker.h \
   libs/spdlog-1.14.1/include/spdlog/details/periodic_worker-inl.h \
-  /usr/include/c++/8/unordered_map \
-  /usr/include/c++/8/bits/hashtable.h \
-  /usr/include/c++/8/bits/hashtable_policy.h \
-  /usr/include/c++/8/bits/unordered_map.h \
   libs/spdlog-1.14.1/include/spdlog/details/registry-inl.h \
   libs/spdlog-1.14.1/include/spdlog/logger.h \
   libs/spdlog-1.14.1/include/spdlog/details/backtracer.h \
@@ -3513,7 +3596,6 @@ CMakeFiles/test.dir/src/DataManager/DataReader.cpp.o: src/DataManager/DataReader
   libs/boost/type_traits/is_stateless.hpp \
   libs/boost/type_traits/has_trivial_constructor.hpp \
   libs/boost/type_traits/is_pod.hpp \
-  libs/boost/type_traits/is_scalar.hpp \
   libs/boost/type_traits/is_default_constructible.hpp \
   libs/boost/type_traits/is_volatile.hpp \
   libs/boost/type_traits/has_trivial_copy.hpp \
@@ -3527,7 +3609,6 @@ CMakeFiles/test.dir/src/DataManager/DataReader.cpp.o: src/DataManager/DataReader
   libs/boost/type_traits/is_assignable.hpp \
   libs/boost/type_traits/has_nothrow_assign.hpp \
   libs/boost/type_traits/is_const.hpp \
-  libs/boost/move/adl_move_swap.hpp \
   libs/boost/circular_buffer/space_optimized.hpp \
   libs/boost/filesystem.hpp \
   libs/boost/filesystem/config.hpp \
@@ -3604,82 +3685,7 @@ CMakeFiles/test.dir/src/DataManager/DataReader.cpp.o: src/DataManager/DataReader
   libs/boost/filesystem/file_status.hpp \
   libs/boost/detail/bitmask.hpp \
   libs/boost/filesystem/operations.hpp \
-  src/DataManager/LMDBKeys.h \
-  src/Helper/util.h \
-  libs/futu/include/google/protobuf/stubs/common.h \
-  /usr/include/c++/8/set \
-  /usr/include/c++/8/bits/stl_set.h \
-  /usr/include/c++/8/bits/stl_multiset.h \
-  libs/futu/include/google/protobuf/stubs/port.h \
-  libs/futu/include/google/protobuf/stubs/platform_macros.h \
-  /usr/include/x86_64-linux-gnu/sys/param.h \
-  /usr/include/signal.h \
-  /usr/include/x86_64-linux-gnu/bits/signum.h \
-  /usr/include/x86_64-linux-gnu/bits/signum-generic.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sig_atomic_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__sigval_t.h \
-  /usr/include/x86_64-linux-gnu/bits/siginfo-arch.h \
-  /usr/include/x86_64-linux-gnu/bits/siginfo-consts.h \
-  /usr/include/x86_64-linux-gnu/bits/siginfo-consts-arch.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sigval_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sigevent_t.h \
-  /usr/include/x86_64-linux-gnu/bits/sigevent-consts.h \
-  /usr/include/x86_64-linux-gnu/bits/sigaction.h \
-  /usr/include/x86_64-linux-gnu/bits/sigcontext.h \
-  /usr/include/x86_64-linux-gnu/bits/types/stack_t.h \
-  /usr/include/x86_64-linux-gnu/sys/ucontext.h \
-  /usr/include/x86_64-linux-gnu/bits/sigstack.h \
-  /usr/include/x86_64-linux-gnu/bits/ss_flags.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_sigstack.h \
-  /usr/include/x86_64-linux-gnu/bits/sigthread.h \
-  /usr/include/x86_64-linux-gnu/bits/param.h \
-  /usr/include/linux/param.h \
-  /usr/include/x86_64-linux-gnu/asm/param.h \
-  /usr/include/asm-generic/param.h \
-  /usr/include/byteswap.h \
-  libs/futu/include/google/protobuf/stubs/macros.h \
-  libs/futu/include/google/protobuf/stubs/logging.h \
-  libs/futu/include/google/protobuf/stubs/scoped_ptr.h \
-  libs/futu/include/google/protobuf/stubs/mutex.h \
-  libs/futu/include/google/protobuf/stubs/callback.h \
-  libs/futu/include/google/protobuf/stubs/type_traits.h \
-  libs/futu/include/google/protobuf/stubs/template_util.h \
-  libs/futu/include/google/protobuf/message_lite.h \
-  libs/futu/include/google/protobuf/stubs/once.h \
-  libs/futu/include/google/protobuf/stubs/atomicops.h \
-  libs/futu/include/google/protobuf/stubs/atomicops_internals_x86_gcc.h \
-  libs/futu/include/google/protobuf/message.h \
-  libs/futu/include/google/protobuf/arena.h \
-  libs/futu/include/google/protobuf/arena_impl.h \
-  libs/futu/include/google/protobuf/stubs/atomic_sequence_num.h \
-  libs/futu/include/google/protobuf/descriptor.h \
-  libs/futu/include/google/protobuf/util/json_util.h \
-  libs/futu/include/google/protobuf/util/type_resolver.h \
-  libs/futu/include/google/protobuf/stubs/status.h \
-  libs/futu/include/google/protobuf/stubs/stringpiece.h \
-  libs/futu/include/google/protobuf/stubs/hash.h \
-  /usr/include/c++/8/unordered_set \
-  /usr/include/c++/8/bits/unordered_set.h \
-  libs/futu/include/google/protobuf/stubs/bytestream.h \
-  libs/boost/chrono.hpp \
-  libs/boost/chrono/include.hpp \
-  libs/boost/chrono/chrono.hpp \
-  libs/boost/chrono/chrono_io.hpp \
-  libs/boost/chrono/io_v1/chrono_io.hpp \
-  libs/boost/chrono/process_cpu_clocks.hpp \
-  libs/boost/chrono/thread_clock.hpp \
-  libs/boost/ratio/ratio_io.hpp \
-  libs/boost/type_traits/is_signed.hpp \
-  libs/boost/integer/common_factor_rt.hpp \
-  libs/boost/chrono/detail/scan_keyword.hpp \
-  libs/boost/move/unique_ptr.hpp \
-  libs/boost/move/detail/unique_ptr_meta_utils.hpp \
-  libs/boost/move/default_delete.hpp \
-  libs/boost/chrono/detail/no_warning/signed_unsigned_cmp.hpp \
-  libs/boost/chrono/io/utility/to_string.hpp \
-  libs/boost/chrono/floor.hpp \
-  libs/boost/chrono/round.hpp
+  src/DataManager/LMDBKeys.h
 
 CMakeFiles/test.dir/src/DataManager/DataWriter.cpp.o: src/DataManager/DataWriter.cpp \
   /usr/include/stdc-predef.h \
@@ -4639,6 +4645,87 @@ CMakeFiles/test.dir/src/DataManager/DataWriter.cpp.o: src/DataManager/DataWriter
   /usr/include/x86_64-linux-gnu/sys/stat.h \
   /usr/include/x86_64-linux-gnu/bits/stat.h \
   /usr/include/x86_64-linux-gnu/bits/statx.h \
+  src/Helper/util.h \
+  libs/futu/include/google/protobuf/stubs/common.h \
+  /usr/include/c++/8/set \
+  /usr/include/c++/8/bits/stl_set.h \
+  /usr/include/c++/8/bits/stl_multiset.h \
+  libs/futu/include/google/protobuf/stubs/port.h \
+  libs/futu/include/google/protobuf/stubs/platform_macros.h \
+  /usr/include/x86_64-linux-gnu/sys/param.h \
+  /usr/include/signal.h \
+  /usr/include/x86_64-linux-gnu/bits/signum.h \
+  /usr/include/x86_64-linux-gnu/bits/signum-generic.h \
+  /usr/include/x86_64-linux-gnu/bits/types/sig_atomic_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__sigval_t.h \
+  /usr/include/x86_64-linux-gnu/bits/siginfo-arch.h \
+  /usr/include/x86_64-linux-gnu/bits/siginfo-consts.h \
+  /usr/include/x86_64-linux-gnu/bits/siginfo-consts-arch.h \
+  /usr/include/x86_64-linux-gnu/bits/types/sigval_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/sigevent_t.h \
+  /usr/include/x86_64-linux-gnu/bits/sigevent-consts.h \
+  /usr/include/x86_64-linux-gnu/bits/sigaction.h \
+  /usr/include/x86_64-linux-gnu/bits/sigcontext.h \
+  /usr/include/x86_64-linux-gnu/bits/types/stack_t.h \
+  /usr/include/x86_64-linux-gnu/sys/ucontext.h \
+  /usr/include/x86_64-linux-gnu/bits/sigstack.h \
+  /usr/include/x86_64-linux-gnu/bits/ss_flags.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_sigstack.h \
+  /usr/include/x86_64-linux-gnu/bits/sigthread.h \
+  /usr/include/x86_64-linux-gnu/bits/param.h \
+  /usr/include/linux/param.h \
+  /usr/include/x86_64-linux-gnu/asm/param.h \
+  /usr/include/asm-generic/param.h \
+  /usr/include/byteswap.h \
+  libs/futu/include/google/protobuf/stubs/macros.h \
+  libs/futu/include/google/protobuf/stubs/logging.h \
+  libs/futu/include/google/protobuf/stubs/scoped_ptr.h \
+  libs/futu/include/google/protobuf/stubs/mutex.h \
+  libs/futu/include/google/protobuf/stubs/callback.h \
+  libs/futu/include/google/protobuf/stubs/type_traits.h \
+  libs/futu/include/google/protobuf/stubs/template_util.h \
+  libs/futu/include/google/protobuf/message_lite.h \
+  libs/futu/include/google/protobuf/stubs/once.h \
+  libs/futu/include/google/protobuf/stubs/atomicops.h \
+  libs/futu/include/google/protobuf/stubs/atomicops_internals_x86_gcc.h \
+  libs/futu/include/google/protobuf/message.h \
+  libs/futu/include/google/protobuf/arena.h \
+  libs/futu/include/google/protobuf/arena_impl.h \
+  libs/futu/include/google/protobuf/stubs/atomic_sequence_num.h \
+  libs/futu/include/google/protobuf/descriptor.h \
+  libs/futu/include/google/protobuf/util/json_util.h \
+  libs/futu/include/google/protobuf/util/type_resolver.h \
+  libs/futu/include/google/protobuf/stubs/status.h \
+  libs/futu/include/google/protobuf/stubs/stringpiece.h \
+  libs/futu/include/google/protobuf/stubs/hash.h \
+  /usr/include/c++/8/unordered_map \
+  /usr/include/c++/8/bits/hashtable.h \
+  /usr/include/c++/8/bits/hashtable_policy.h \
+  /usr/include/c++/8/bits/unordered_map.h \
+  /usr/include/c++/8/unordered_set \
+  /usr/include/c++/8/bits/unordered_set.h \
+  libs/futu/include/google/protobuf/stubs/bytestream.h \
+  libs/boost/chrono.hpp \
+  libs/boost/chrono/include.hpp \
+  libs/boost/chrono/chrono.hpp \
+  libs/boost/chrono/chrono_io.hpp \
+  libs/boost/chrono/io_v1/chrono_io.hpp \
+  libs/boost/chrono/process_cpu_clocks.hpp \
+  libs/boost/chrono/thread_clock.hpp \
+  libs/boost/ratio/ratio_io.hpp \
+  libs/boost/type_traits/is_scalar.hpp \
+  libs/boost/type_traits/is_signed.hpp \
+  libs/boost/integer/common_factor_rt.hpp \
+  libs/boost/chrono/detail/scan_keyword.hpp \
+  libs/boost/move/unique_ptr.hpp \
+  libs/boost/move/detail/unique_ptr_meta_utils.hpp \
+  libs/boost/move/default_delete.hpp \
+  libs/boost/move/adl_move_swap.hpp \
+  libs/boost/chrono/detail/no_warning/signed_unsigned_cmp.hpp \
+  libs/boost/chrono/io/utility/to_string.hpp \
+  libs/boost/chrono/floor.hpp \
+  libs/boost/chrono/round.hpp \
   src/Helper/logger.h \
   /usr/include/c++/8/fstream \
   /usr/include/x86_64-linux-gnu/c++/8/bits/basic_file.h \
@@ -4661,10 +4748,6 @@ CMakeFiles/test.dir/src/DataManager/DataWriter.cpp.o: src/DataManager/DataWriter
   libs/spdlog-1.14.1/include/spdlog/details/registry.h \
   libs/spdlog-1.14.1/include/spdlog/details/periodic_worker.h \
   libs/spdlog-1.14.1/include/spdlog/details/periodic_worker-inl.h \
-  /usr/include/c++/8/unordered_map \
-  /usr/include/c++/8/bits/hashtable.h \
-  /usr/include/c++/8/bits/hashtable_policy.h \
-  /usr/include/c++/8/bits/unordered_map.h \
   libs/spdlog-1.14.1/include/spdlog/details/registry-inl.h \
   libs/spdlog-1.14.1/include/spdlog/logger.h \
   libs/spdlog-1.14.1/include/spdlog/details/backtracer.h \
@@ -4736,7 +4819,6 @@ CMakeFiles/test.dir/src/DataManager/DataWriter.cpp.o: src/DataManager/DataWriter
   libs/boost/type_traits/add_const.hpp \
   libs/boost/type_traits/remove_const.hpp \
   libs/boost/type_traits/is_pod.hpp \
-  libs/boost/type_traits/is_scalar.hpp \
   libs/boost/mpl/always.hpp \
   libs/boost/mpl/apply.hpp \
   libs/boost/mpl/apply_fwd.hpp \
@@ -4785,82 +4867,6 @@ CMakeFiles/test.dir/src/DataManager/DataWriter.cpp.o: src/DataManager/DataWriter
   libs/boost/detail/bitmask.hpp \
   libs/boost/filesystem/operations.hpp \
   src/DataManager/LMDBKeys.h \
-  src/Helper/util.h \
-  libs/futu/include/google/protobuf/stubs/common.h \
-  /usr/include/c++/8/set \
-  /usr/include/c++/8/bits/stl_set.h \
-  /usr/include/c++/8/bits/stl_multiset.h \
-  libs/futu/include/google/protobuf/stubs/port.h \
-  libs/futu/include/google/protobuf/stubs/platform_macros.h \
-  /usr/include/x86_64-linux-gnu/sys/param.h \
-  /usr/include/signal.h \
-  /usr/include/x86_64-linux-gnu/bits/signum.h \
-  /usr/include/x86_64-linux-gnu/bits/signum-generic.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sig_atomic_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__sigval_t.h \
-  /usr/include/x86_64-linux-gnu/bits/siginfo-arch.h \
-  /usr/include/x86_64-linux-gnu/bits/siginfo-consts.h \
-  /usr/include/x86_64-linux-gnu/bits/siginfo-consts-arch.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sigval_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sigevent_t.h \
-  /usr/include/x86_64-linux-gnu/bits/sigevent-consts.h \
-  /usr/include/x86_64-linux-gnu/bits/sigaction.h \
-  /usr/include/x86_64-linux-gnu/bits/sigcontext.h \
-  /usr/include/x86_64-linux-gnu/bits/types/stack_t.h \
-  /usr/include/x86_64-linux-gnu/sys/ucontext.h \
-  /usr/include/x86_64-linux-gnu/bits/sigstack.h \
-  /usr/include/x86_64-linux-gnu/bits/ss_flags.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_sigstack.h \
-  /usr/include/x86_64-linux-gnu/bits/sigthread.h \
-  /usr/include/x86_64-linux-gnu/bits/param.h \
-  /usr/include/linux/param.h \
-  /usr/include/x86_64-linux-gnu/asm/param.h \
-  /usr/include/asm-generic/param.h \
-  /usr/include/byteswap.h \
-  libs/futu/include/google/protobuf/stubs/macros.h \
-  libs/futu/include/google/protobuf/stubs/logging.h \
-  libs/futu/include/google/protobuf/stubs/scoped_ptr.h \
-  libs/futu/include/google/protobuf/stubs/mutex.h \
-  libs/futu/include/google/protobuf/stubs/callback.h \
-  libs/futu/include/google/protobuf/stubs/type_traits.h \
-  libs/futu/include/google/protobuf/stubs/template_util.h \
-  libs/futu/include/google/protobuf/message_lite.h \
-  libs/futu/include/google/protobuf/stubs/once.h \
-  libs/futu/include/google/protobuf/stubs/atomicops.h \
-  libs/futu/include/google/protobuf/stubs/atomicops_internals_x86_gcc.h \
-  libs/futu/include/google/protobuf/message.h \
-  libs/futu/include/google/protobuf/arena.h \
-  libs/futu/include/google/protobuf/arena_impl.h \
-  libs/futu/include/google/protobuf/stubs/atomic_sequence_num.h \
-  libs/futu/include/google/protobuf/descriptor.h \
-  libs/futu/include/google/protobuf/util/json_util.h \
-  libs/futu/include/google/protobuf/util/type_resolver.h \
-  libs/futu/include/google/protobuf/stubs/status.h \
-  libs/futu/include/google/protobuf/stubs/stringpiece.h \
-  libs/futu/include/google/protobuf/stubs/hash.h \
-  /usr/include/c++/8/unordered_set \
-  /usr/include/c++/8/bits/unordered_set.h \
-  libs/futu/include/google/protobuf/stubs/bytestream.h \
-  libs/boost/chrono.hpp \
-  libs/boost/chrono/include.hpp \
-  libs/boost/chrono/chrono.hpp \
-  libs/boost/chrono/chrono_io.hpp \
-  libs/boost/chrono/io_v1/chrono_io.hpp \
-  libs/boost/chrono/process_cpu_clocks.hpp \
-  libs/boost/chrono/thread_clock.hpp \
-  libs/boost/ratio/ratio_io.hpp \
-  libs/boost/type_traits/is_signed.hpp \
-  libs/boost/integer/common_factor_rt.hpp \
-  libs/boost/chrono/detail/scan_keyword.hpp \
-  libs/boost/move/unique_ptr.hpp \
-  libs/boost/move/detail/unique_ptr_meta_utils.hpp \
-  libs/boost/move/default_delete.hpp \
-  libs/boost/move/adl_move_swap.hpp \
-  libs/boost/chrono/detail/no_warning/signed_unsigned_cmp.hpp \
-  libs/boost/chrono/io/utility/to_string.hpp \
-  libs/boost/chrono/floor.hpp \
-  libs/boost/chrono/round.hpp \
   src/Helper/ThreadPool.hpp \
   /usr/include/c++/8/iomanip \
   /usr/include/c++/8/bits/quoted_string.h
@@ -8097,8 +8103,6 @@ libs/boost/io/detail/buffer_fill.hpp:
 
 libs/boost/mpl/aux_/preprocessed/gcc/bind.hpp:
 
-libs/boost/mpl/protect.hpp:
-
 libs/boost/mpl/next.hpp:
 
 libs/boost/mpl/aux_/config/bind.hpp:
@@ -8134,6 +8138,14 @@ libs/boost/filesystem/path.hpp:
 src/DataManager/DataReader.cpp:
 
 src/DataManager/FutuParser.h:
+
+/usr/include/c++/8/bits/stl_numeric.h:
+
+libs/boost/mpl/protect.hpp:
+
+/usr/include/x86_64-linux-gnu/c++/8/bits/opt_random.h:
+
+/usr/include/c++/8/bits/random.h:
 
 libs/boost/circular_buffer/space_optimized.hpp:
 
@@ -8446,6 +8458,8 @@ libs/boost/mp11/detail/mp_map_find.hpp:
 libs/boost/mp11/detail/mp_remove_if.hpp:
 
 libs/boost/mp11/detail/mp_copy_if.hpp:
+
+/usr/include/c++/8/random:
 
 libs/boost/mp11/set.hpp:
 
@@ -9597,6 +9611,8 @@ libs/boost/mpl/integral_c_tag.hpp:
 
 /usr/include/c++/8/cctype:
 
+/usr/include/c++/8/numeric:
+
 libs/boost/preprocessor/detail/limits/auto_rec_256.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
@@ -10730,6 +10746,8 @@ libs/boost/mpl/aux_/nested_type_wknd.hpp:
 libs/boost/predef/compiler/iar.h:
 
 libs/boost/mpl/and.hpp:
+
+/usr/include/c++/8/bits/random.tcc:
 
 libs/boost/smart_ptr/enable_shared_from_this.hpp:
 
