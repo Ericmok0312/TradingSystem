@@ -8066,7 +8066,9 @@ CMakeFiles/test.dir/src/Interface/datastruture.cpp.o: src/Interface/datastruture
   libs/boost/chrono/io/utility/to_string.hpp \
   libs/boost/chrono/ceil.hpp \
   libs/boost/chrono/floor.hpp \
-  libs/boost/chrono/round.hpp
+  libs/boost/chrono/round.hpp \
+  libs/nng-1.8.0/include/nng/nng.h \
+  /usr/lib/gcc/x86_64-linux-gnu/8/include/stdbool.h
 
 
 libs/nng-1.8.0/include/nng/protocol/pubsub0/sub.h:

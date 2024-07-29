@@ -19,7 +19,7 @@ namespace ts{
 
 
     /// @brief Constructor, calling ThreadPool constructor
-    DataManager::DataManager():ThreadPool(0, 12, 1){
+    DataManager::DataManager():ThreadPool(0, 10, 1){
         init();
     }
 
@@ -52,7 +52,7 @@ namespace ts{
 
         while(estate_.load() != STOP){
             std::shared_ptr<Msg> msg;
-            msg = messenger_->recv(NNG_FLAG_ALLOC+NNG_FLAG_NONBLOCK);
+            msg = messenger_->recv(NNG_FLAG_ALLOC);
             if(msg && msg->destination_=="DataManager"){
                 this->AddTask(std::bind(&DataManager::processMsg, this, placeholders::_1), msg);
             }
@@ -65,28 +65,31 @@ namespace ts{
 
 
     void DataManager::processMsg(std::shared_ptr<Msg> msg){
-        uint64_t init_t = GetTimeStamp();
+        //uint64_t init_t = GetTimeStamp();
         vector<shared_ptr<BaseData>> list;
+        logger_->info(to_string(msg->msgtype_).c_str());
         switch(msg->msgtype_){
-            case MSG_TYPE_STORE_QUOTE:{
-                if(msg->source_ == "FutuEngine"){
-                    FutuQot2TsQot(msg->data_,list);
+            case MSG_TYPE_STORE_QUOTE:
+                if(strcmp(msg->source_.c_str(), "FutuEngine")==0){
+                    logger_->info("Called processMsg");
+                    FutuQot2TsQot(msg->data_, list);
                     for (int i=0; i<list.size();++i){
                         datawritter_->AddTask(bind(&DataWriter::WriteQuote, datawritter_, placeholders::_1), list[i]); // add task to DataWriter ThreadPool
                     }
                 }
-                else if(msg->source_ == "Tester"){
+                else if(strcmp(msg->source_.c_str() , "Tester")==0){
                     shared_ptr<BaseData> temp = static_pointer_cast<BaseData>(make_shared<Quote>(msg->data_));
                     datawritter_->AddTask(bind(&DataWriter::WriteQuote, datawritter_, placeholders::_1), temp); // add task to DataWriter ThreadPool
                 }
-               
 
                 break;
-            }
+            
+            
             case MSG_TYPE_ACCESSLIST:
             case MSG_TYPE_ACCOUNTINFO:
             case MSG_TYPE_STORE_TICKER:
             case MSG_TYPE_STORE_KLINE_1M:
+            break;
             case MSG_TYPE_GET_QUOTE:{
                 vector<string> param;
                 split(msg->data_.c_str(), SERIALIZATION_SEP, param);
@@ -102,8 +105,8 @@ namespace ts{
             break;
         }
         
-        if (IS_BENCHMARK)
-            logger_->info(fmt::format("DataManager latency final: {}", to_string(GetTimeStamp()-init_t)).c_str());
+        // if (IS_BENCHMARK)
+        //     logger_->info(fmt::format("DataManager latency final: {}", to_string(GetTimeStamp()-init_t)).c_str());
     }
 
     void DataManager::sendData(string&& address, string&& des){

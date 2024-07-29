@@ -6,7 +6,7 @@
 #include <Helper/util.h>
 #include <rapidjson/document.h>
 #include <rapidjson/rapidjson.h>
-
+#include <Helper/logger.h>
 
 using namespace std;
 namespace ts{
@@ -15,6 +15,7 @@ namespace ts{
 
     inline void FutuQot2TsQot(const std::string& src, std::vector<shared_ptr<BaseData>>& des){
         rapidjson::Document doc;
+        cout<<src<<endl;
         String2Json(src, doc);
         const rapidjson::Value& list = doc["s2c"]["basicQotList"];
 
@@ -30,27 +31,34 @@ namespace ts{
             temp->cPrice_ = list[i]["curPrice"].GetDouble();
             temp->lcPrice_ = list[i]["lastClosePrice"].GetDouble();
             temp->pSpread_ = list[i]["priceSpread"].GetDouble();
-            temp->volume_ = list[i]["volume"].GetInt64();
+
+            temp->volume_ = stoll(list[i]["volume"].GetString());
             temp->turnover_ = list[i]["turnover"].GetDouble();
             temp->turnoverRate_ = list[i]["turnoverRate"].GetDouble();
             temp->amplitude_ = list[i]["amplitude"].GetDouble();
-            temp->timestamp_ = list[i]["updateTimestamp"].GetDouble();
+            temp->timestamp_ = GetTimeStamp();
+            temp->updateTimestamp_ = list[i]["updateTimestamp"].GetDouble();
 
-            temp->sPrice_ = list[i]["optionExData"]["strikePrice"].GetDouble();
-            temp->conSize_ = list[i]["optionExData"]["contractSize"].GetDouble();
-            temp->opInterest_ = list[i]["optionExData"]["openInterest"].GetInt64();
-            temp->impVolatility_ = list[i]["optionExData"]["impliedVolatility"].GetDouble();
-            temp->premium_ = list[i]["optionExData"]["premium"].GetDouble();
-            temp->delta_ = list[i]["optionExData"]["delta"].GetDouble();
-            temp->gamma_ = list[i]["optionExData"]["gamma"].GetDouble();
-            temp->vega_ = list[i]["optionExData"]["vega"].GetDouble();
-            temp->theta_ = list[i]["optionExData"]["theta"].GetDouble();
-            temp->rho_ = list[i]["optionExData"]["rho"].GetDouble();
+            if (list[i].HasMember("optionExData")){
+                temp->sPrice_ = list[i]["optionExData"]["strikePrice"].GetDouble();
+                temp->conSize_ = list[i]["optionExData"]["contractSize"].GetInt();
+                temp->opInterest_ = list[i]["optionExData"]["openInterest"].GetInt();
+                temp->impVolatility_ = list[i]["optionExData"]["impliedVolatility"].GetDouble();
+                temp->premium_ = list[i]["optionExData"]["premium"].GetDouble();
+                temp->delta_ = list[i]["optionExData"]["delta"].GetDouble();
+                temp->gamma_ = list[i]["optionExData"]["gamma"].GetDouble();
+                temp->vega_ = list[i]["optionExData"]["vega"].GetDouble();
+                temp->theta_ = list[i]["optionExData"]["theta"].GetDouble();
+                temp->rho_ = list[i]["optionExData"]["rho"].GetDouble();
+            }
+            
 
-
-            temp->lsprice_ = list[i]["futureExData"]["lastSettlePrice"].GetDouble();
-            temp->position_ = list[i]["futureExData"]["position"].GetInt64();
-            temp->pChange_ = list[i]["futureExData"]["positionChange"].GetInt64();
+            if(list[i].HasMember("futureExData")){
+                temp->lsprice_ = list[i]["futureExData"]["lastSettlePrice"].GetDouble();
+                temp->position_ = list[i]["futureExData"]["position"].GetInt();
+                temp->pChange_ = list[i]["futureExData"]["positionChange"].GetInt();
+            }
+            
 
             des.push_back(move(temp));
         }

@@ -32,7 +32,7 @@ namespace ts{
     #define DESTINATION_SEP '.'
     #define ARGV_SEP '^'
 
-    #define MAX_SYMBOL_SIZE 10
+    #define MAX_SYMBOL_SIZE 20
     #define MAX_TIME_SIZE 20
     #define MAX_EXG_SIZE 5
 
@@ -337,6 +337,7 @@ namespace ts{
                 lsprice_ = 0.0;
                 position_ = 0;
                 pChange_ = 0;
+                updateTimestamp_ = 0.0;
             };
             ~Quote(){};
             Quote(const string& input){
@@ -374,6 +375,7 @@ namespace ts{
                     lsprice_ = stod(values[23]);
                     position_ = stod(values[24]);
                     pChange_ = stod(values[25]);
+                    updateTimestamp_ = stod(values[26]);
                 }
             string getString() const{
                 stringstream ss;
@@ -382,7 +384,7 @@ namespace ts{
                 <<volume_<<','<<turnover_<<','<<turnoverRate_<<','<<amplitude_<<','
                 <<timestamp_<<','<<sPrice_<<','<<conSize_<<','<<opInterest_<<','
                 <<impVolatility_<<','<<premium_<<','<<delta_<<','<<gamma_<<','<<
-                vega_<<','<<rho_<<','<<lsprice_<<','<<position_<<','<<pChange_<<'\n';
+                vega_<<','<<rho_<<','<<lsprice_<<','<<position_<<','<<pChange_<<','<<updateTimestamp_;
                 return move(ss.str());
             }
 
@@ -397,6 +399,7 @@ namespace ts{
             double cPrice_;
             double lcPrice_;
             double pSpread_;
+
 
 
             int64_t volume_; 
@@ -425,6 +428,9 @@ namespace ts{
             double lsprice_ ;
             int64_t position_ ;
             int64_t pChange_ ;
+
+
+            double updateTimestamp_;
    };
 
 

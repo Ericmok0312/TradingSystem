@@ -2,6 +2,7 @@
 #include <string>
 #include <vector>
 #include <Helper/util.h>
+#include <nng/nng.h>
 
 
 using namespace std;
@@ -46,7 +47,7 @@ namespace ts{
     char* Msg::serialize(){
         stringstream ss;
         ss<<destination_<<SERIALIZATION_SEP<<source_<<SERIALIZATION_SEP<<msgtype_<<SERIALIZATION_SEP<<(data_);
-        char* temp = new char [ss.str().size()+1];
+        char* temp = reinterpret_cast<char*>(nng_alloc(ss.str().size()+1));
         strcpy(temp, ss.str().c_str());
         return temp;
     }

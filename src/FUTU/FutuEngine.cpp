@@ -73,6 +73,7 @@ namespace ts{
     void FutuEngine::start(){
         futuQotApi_->InitConnect("127.0.0.1", 11111, false);
         futuTrdApi_->InitConnect("127.0.0.1", 11111, false);
+        logger_->info("Futu engine start");
         std::shared_ptr<Msg> msg;
         while(true){
             msg = messenger_->recv(NNG_FLAG_NONBLOCK+NNG_FLAG_ALLOC); // nonblock + ALLOC
@@ -112,6 +113,8 @@ namespace ts{
 
         sec->set_code(code);
         sec->set_market(Qot_Common::QotMarket::QotMarket_HK_Security);
+
+    
         vector<Qot_Common::SubType> enSubTypes = { Qot_Common::SubType_Basic, Qot_Common::SubType_OrderBook,
                 Qot_Common::SubType_Broker,  Qot_Common::SubType_KL_Day, Qot_Common::SubType_RT, Qot_Common::SubType_Ticker};
 
@@ -126,7 +129,8 @@ namespace ts{
                 c2s->add_subtypelist(Qot_Common::SubType::SubType_KL_Day);
                 break;
             case QUOTE:
-                c2s->add_subtypelist(Qot_Common::SubType::SubType_Basic);         
+                c2s->add_subtypelist(Qot_Common::SubType::SubType_Basic);    
+                break;     
             case ALL:
                 for(int i=0; i<enSubTypes.size(); i++)
                 c2s->add_subtypelist(enSubTypes[i]);
@@ -168,6 +172,7 @@ namespace ts{
 
 
     void FutuEngine::OnPush_UpdateBasicQot(const Qot_UpdateBasicQot::Response &stRsp){
+        logger_->info("Sending quote to datamanager");
         std::shared_ptr<Msg> msg = std::make_shared<Msg>("DataManager", "FutuEngine", MSG_TYPE_STORE_QUOTE, "");
         ProtoBufToString(stRsp, msg->data_);
         messenger_->send(msg, 0);

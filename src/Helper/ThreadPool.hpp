@@ -35,8 +35,8 @@ namespace ts
     template<typename TaskType, typename InputType>
     ThreadPool<TaskType, InputType>::ThreadPool(int initNum, int maxNum, int idleSec):
     initNum_(initNum),
-    maxNum_(6),
-    idleSec_(2),
+    maxNum_(maxNum),
+    idleSec_(idleSec),
     stop_(false),
     busycount_(0),
     threadcount_(0)

@@ -95,9 +95,7 @@ namespace ts{
     }
 
     inline uint64_t GetTimeStamp(){
-        const auto now = boost::chrono::system_clock::now();
-        const auto since_epoch = boost::chrono::duration_cast<boost::chrono::microseconds>(now.time_since_epoch()).count();
-        return static_cast<uint64_t>(since_epoch);
+        return static_cast<uint64_t>(boost::chrono::duration_cast<boost::chrono::microseconds>(boost::chrono::system_clock::now().time_since_epoch()).count());
     }
 }
 

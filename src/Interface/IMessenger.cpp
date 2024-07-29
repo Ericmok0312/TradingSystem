@@ -146,7 +146,7 @@ namespace ts{
 
     void MsgqNNG::sendmsg(char* str, int32_t immediate){ // as is char*, temp string as input will not call this
         int success = nng_send(sock_, str, strlen(str)+1, immediate);
-        delete[] str; //avoid memory leak;
+        //delete[] str; //avoid memory leak;
         if (success){ 
             logger_ ->error(fmt::format("NNG {} send msg error, return: {}", sock_.id, success).c_str());
         }

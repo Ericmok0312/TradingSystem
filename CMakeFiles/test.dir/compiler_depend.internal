@@ -8076,4 +8076,6 @@ CMakeFiles/test.dir/src/Interface/datastruture.cpp.o
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/chrono/ceil.hpp
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/chrono/floor.hpp
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/chrono/round.hpp
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/nng-1.8.0/include/nng/nng.h
+ /usr/lib/gcc/x86_64-linux-gnu/8/include/stdbool.h
 

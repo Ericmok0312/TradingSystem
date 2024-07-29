@@ -18,15 +18,17 @@ using namespace ts;
     class Tester{
     public:
         void func_1(){
-            if(!MsgqTSMessenger::msgq_server_){
-                MsgqTSMessenger::msgq_server_  = std::make_unique<MsgqNNG>(MSGQ_PROTOCOL::PUB, PROXY_SERVER_URL);
-            }
+            // if(!MsgqTSMessenger::msgq_server_){
+            //     MsgqTSMessenger::msgq_server_  = std::make_unique<MsgqNNG>(MSGQ_PROTOCOL::PUB, PROXY_SERVER_URL);
+            // }
             sleep(10);
             std::shared_ptr<Logger> LOG = make_shared<Logger>("fun1");
             std::shared_ptr<Msg> msg = std::make_shared<Msg>();
+            shared_ptr<MsgqTSMessenger> ms = MsgqTSMessenger::getInstance();
+            LOG->info("Futu Called");
 
-            string code = "00700";
-            int sub = 0;
+            string code = "TCHmain";
+            int sub = 3;
 
             msg->destination_ = "FutuEngine";
             msg->source_ = "Main";
@@ -37,17 +39,15 @@ using namespace ts;
             d.AddMember("subtype", rapidjson::Value(sub), d.GetAllocator());
 
             Json2String(d, msg->data_);
-            MsgqTSMessenger::msgq_server_->sendmsg(msg->serialize(), 0);
-            code = "09999";
-            d["code"].SetString(code.data(), code.size(), d.GetAllocator());
-            Json2String(d, msg->data_);
-            MsgqTSMessenger::msgq_server_->sendmsg(msg->serialize(), 0);
-            code = "02319";
-            d["code"].SetString(code.data(), code.size(), d.GetAllocator());
-            Json2String(d, msg->data_);
-            MsgqTSMessenger::msgq_server_->sendmsg(msg->serialize(), 0);    
-            while(true){
-            }
+            ms->send(msg, NNG_FLAG_ALLOC);
+            // code = "09999";
+            // d["code"].SetString(code.data(), code.size(), d.GetAllocator());
+            // Json2String(d, msg->data_);
+            // ms->send(msg, NNG_FLAG_ALLOC);
+            // code = "02319";
+            // d["code"].SetString(code.data(), code.size(), d.GetAllocator());
+            // Json2String(d, msg->data_);
+            // ms->send(msg, NNG_FLAG_ALLOC);  
         }
 
 
@@ -97,10 +97,7 @@ using namespace ts;
         void func_3(){
             std::shared_ptr<Logger> LOG = make_shared<Logger>("fun3");
             ts::FutuEngine eng;
-            std::chrono::microseconds ms = std::chrono::duration_cast< std::chrono::microseconds >(std::chrono::system_clock::now().time_since_epoch());
-            LOG->info(fmt::format("futu created, current timestamp:{}", to_string(ms.count())).c_str());
             eng.start();
-            
         }
 
 
@@ -137,7 +134,7 @@ using namespace ts;
 
             //q.reset();
             int i = 0;
-            while(i<100){
+            while(i<1000){
                 auto q = make_shared<Quote>();
                 strcpy(q->code_, "02222");
                 strcpy(q->exg_ ,"Futu");
@@ -145,7 +142,7 @@ using namespace ts;
                 q->timestamp_ = GetTimeStamp();
                 q->cPrice_ = i;
                 shared_ptr<Msg> msg = make_shared<Msg>("DataManager", "Tester", MSG_TYPE_STORE_QUOTE, q->getString());
-                ms->send(msg, 0);
+                ms->send(msg, NNG_FLAG_ALLOC);
                 //msg.reset();
                 boost::this_thread::sleep_for(boost::chrono::milliseconds(dist(rng)));
                 i++;
@@ -158,13 +155,13 @@ using namespace ts;
 
         void test_dataWriter1(){
             std::mt19937 rng(std::random_device{}()); // Mersenne Twister engine
-            std::uniform_int_distribution<int> dist(0, 10); // [0, 10) range
+            std::uniform_int_distribution<int> dist(0, 20); // [0, 10) range
             shared_ptr<MsgqTSMessenger> ms = MsgqTSMessenger::getInstance();
 
 
             //q.reset();
             int i = 0;
-            while(i<100){
+            while(i<1000){
                 auto q = make_shared<Quote>();
                 strcpy(q->code_, "00507");
                 strcpy(q->exg_ ,"Futu");
@@ -172,7 +169,7 @@ using namespace ts;
                 q->timestamp_ = GetTimeStamp();
                 q->cPrice_ = i;
                 shared_ptr<Msg> msg = make_shared<Msg>("DataManager", "Tester", MSG_TYPE_STORE_QUOTE, q->getString());
-                ms->send(msg, 0);
+                ms->send(msg, NNG_FLAG_ALLOC);
                 //msg.reset();
                 boost::this_thread::sleep_for(boost::chrono::milliseconds(dist(rng)));
                 i++;
@@ -191,7 +188,7 @@ using namespace ts;
 
             //q.reset();
             int i = 0;
-            while(i<100){
+            while(i<1000){
                 auto q = make_shared<Quote>();
                 strcpy(q->code_, "12333");
                 strcpy(q->exg_ ,"Futu");
@@ -199,7 +196,7 @@ using namespace ts;
                 q->timestamp_ = GetTimeStamp();
                 q->cPrice_ = i;
                 shared_ptr<Msg> msg = make_shared<Msg>("DataManager", "Tester", MSG_TYPE_STORE_QUOTE, q->getString());
-                ms->send(msg, 0);
+                ms->send(msg, NNG_FLAG_ALLOC);
                 //msg.reset();
                 boost::this_thread::sleep_for(boost::chrono::milliseconds(dist(rng)));
                 i++;
@@ -210,24 +207,35 @@ using namespace ts;
             return;
         }
 
-        void test_DataReader(){
+        void test_DataManager(){
             shared_ptr<DataManager> de = DataManager::getInstance();
             de->start();
-            de.reset();
         }
 
+        void test_futu(){
+            //boost::this_thread::sleep_for(boost::chrono::minutes(5));
+            ts::FutuEngine eng;
+            eng.start();
+        }
         
 
         void run(){
-            boost::thread thread1(bind(&Tester::test_dataWriter,this));
-            boost::thread thread2(bind(&Tester::test_dataWriter1,this));
-            boost::thread thread3(bind(&Tester::test_dataWriter2,this));
-            boost::thread thread4(bind(&Tester::test_DataReader, this)); 
-            thread1.join();
-            thread2.join();
-            thread3.join();
-            thread4.join();
             
+            // boost::thread thread1(bind(&Tester::test_dataWriter,this));
+            // boost::thread thread2(bind(&Tester::test_dataWriter1,this));
+            // boost::thread thread3(bind(&Tester::test_dataWriter2,this));
+            // boost::thread thread4(bind(&Tester::test_DataReader, this)); 
+            // thread1.join();
+            // thread2.join();
+            // thread3.join();
+            // thread4.join();
+            boost::thread thread_run_FUTU(bind(&Tester::test_futu, this));
+            boost::thread thread_get_from_Futu(bind(&Tester::func_1, this));
+            boost::thread thread_DataManager(bind(&Tester::test_DataManager, this));
+            thread_DataManager.join();
+            thread_get_from_Futu.join();
+            thread_run_FUTU.join();
+            //boost::this_thread::sleep_for(boost::chrono::minutes(5));
         }
     };
 

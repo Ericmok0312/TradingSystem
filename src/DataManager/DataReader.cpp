@@ -11,7 +11,7 @@ namespace ts{
     std::mutex DataReader::q_db_mutex;
     std::mutex DataReader::getIns_mutex;
 
-    DataReader::DataReader():ThreadPool(0, 12, 1){//
+    DataReader::DataReader():ThreadPool(0, 4, 1){//
         init();
     }
 
