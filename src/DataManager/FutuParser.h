@@ -37,7 +37,7 @@ namespace ts{
             temp->turnoverRate_ = list[i]["turnoverRate"].GetDouble();
             temp->amplitude_ = list[i]["amplitude"].GetDouble();
             temp->timestamp_ = GetTimeStamp();
-            temp->updateTimestamp_ = list[i]["updateTimestamp"].GetDouble();
+            //temp->updateTimestamp_ = static_cast<uint64_t>(list[i]["updateTimestamp"].GetDouble()*100);
 
             if (list[i].HasMember("optionExData")){
                 temp->sPrice_ = list[i]["optionExData"]["strikePrice"].GetDouble();

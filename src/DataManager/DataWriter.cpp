@@ -55,7 +55,7 @@ namespace ts{
         
         TSQryLMDB query(*db); // create a query object
         
-        LMDBKey key (nquote->exg_, nquote->code_, nquote->timestamp_);
+        LMDBKey key (nquote->exg_, nquote->code_, nquote->updateTimestamp_);
         
         if(!query.put_and_commit(move(key.getString()), move(nquote->getString()))){
             logger_->error(fmt::format("wrtie tick of {} error {}", nquote->code_, db->errmsg()).c_str());

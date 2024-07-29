@@ -172,9 +172,10 @@ namespace ts{
 
 
     void FutuEngine::OnPush_UpdateBasicQot(const Qot_UpdateBasicQot::Response &stRsp){
-        logger_->info("Sending quote to datamanager");
+        uint64_t init = GetTimeStamp();
         std::shared_ptr<Msg> msg = std::make_shared<Msg>("DataManager", "FutuEngine", MSG_TYPE_STORE_QUOTE, "");
         ProtoBufToString(stRsp, msg->data_);
+        msg->timestamp_ = init;
         messenger_->send(msg, 0);
     }
 

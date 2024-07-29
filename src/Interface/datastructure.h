@@ -188,11 +188,12 @@ namespace ts{
             string source_;
             MSG_TYPE msgtype_;
             string data_;
+            uint64_t timestamp_{0};
         
         Msg();
 
-        Msg(const string& des, const string& src, MSG_TYPE type, const string& data);
-        Msg(const string&& des, const string&& src, MSG_TYPE type, const string&& data);
+        Msg(const string& des, const string& src, MSG_TYPE type, const string& data, uint64_t timestamp = 0);
+        Msg(const string&& des, const string&& src, MSG_TYPE type, const string&& data, uint64_t timestamp = 0);
 
         virtual ~Msg(){};
 
@@ -337,7 +338,7 @@ namespace ts{
                 lsprice_ = 0.0;
                 position_ = 0;
                 pChange_ = 0;
-                updateTimestamp_ = 0.0;
+                updateTimestamp_ = 0;
             };
             ~Quote(){};
             Quote(const string& input){
@@ -430,7 +431,7 @@ namespace ts{
             int64_t pChange_ ;
 
 
-            double updateTimestamp_;
+            uint64_t updateTimestamp_;
    };
 
 

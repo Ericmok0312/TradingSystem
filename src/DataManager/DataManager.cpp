@@ -67,7 +67,6 @@ namespace ts{
     void DataManager::processMsg(std::shared_ptr<Msg> msg){
         //uint64_t init_t = GetTimeStamp();
         vector<shared_ptr<BaseData>> list;
-        logger_->info(to_string(msg->msgtype_).c_str());
         switch(msg->msgtype_){
             case MSG_TYPE_STORE_QUOTE:
                 if(strcmp(msg->source_.c_str(), "FutuEngine")==0){
