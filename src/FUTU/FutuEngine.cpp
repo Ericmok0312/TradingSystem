@@ -177,6 +177,7 @@ namespace ts{
         ProtoBufToString(stRsp, msg->data_);
         msg->timestamp_ = init;
         messenger_->send(msg, 0);
+        
     }
 
     /// @brief  Function for getting fund in Futu account, with given id, market and mode (all need to be retrieved using getAccessList)
