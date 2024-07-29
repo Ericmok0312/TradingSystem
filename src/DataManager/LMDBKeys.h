@@ -5,14 +5,6 @@
 #include <sstream>
 
 
-static uint32_t reverseEndian(uint32_t src)
-{
-	uint32_t x = (src & 0x000000FF) << 24;
-	uint32_t y = (src & 0x0000FF00) << 8;
-	uint32_t z = (src & 0x00FF0000) >> 8;
-	uint32_t w = (src & 0xFF000000) >> 24;
-	return x + y + z + w;
-}
 
 
 typedef struct _LMDBKey{
