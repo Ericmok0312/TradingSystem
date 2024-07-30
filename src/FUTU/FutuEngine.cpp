@@ -8,16 +8,18 @@ namespace ts{
 
 
     std::mutex FutuEngine::getIns_mutex;
-    std::unique_ptr<FutuEngine> FutuEngine::instance_ = nullptr;
+    std::shared_ptr<FutuEngine> FutuEngine::instance_ = nullptr;
 
     /// @brief Default Constructor, calling init()
     FutuEngine::FutuEngine(){
-
         init();
     }
 
     /// @brief Destructor, e ster  and release futuQotApi_ and futuTrdApi_ as requried
     FutuEngine::~FutuEngine(){
+        std::lock_guard<mutex> lk(getIns_mutex);
+        logger_->info("des called");
+        //instance_.reset();
         if(futuQotApi_ != nullptr){
             futuQotApi_->UnregisterQotSpi();
             futuQotApi_->UnregisterConnSpi();
@@ -36,12 +38,12 @@ namespace ts{
 
 
 
-    std::unique_ptr<FutuEngine> FutuEngine::getInstance(){
+    std::shared_ptr<FutuEngine> FutuEngine::getInstance(){
         std::lock_guard<std::mutex> lock(getIns_mutex); 
         if(!instance_){
-            instance_ = make_unique<FutuEngine>();
+            instance_ = make_shared<FutuEngine>();
         }
-        return move(instance_);
+        return instance_;
     }
 
 
@@ -57,6 +59,8 @@ namespace ts{
 
         logger_ = make_shared<Logger>("FutuEngine");
         messenger_ = std::make_unique<MsgqTSMessenger>(PROXY_SERVER_URL);
+        estate_.store(STOP);
+
         FTAPI::Init();
     }
 
@@ -71,11 +75,12 @@ namespace ts{
    
 
     void FutuEngine::start(){
+        estate_.store(CONNECTED);
         futuQotApi_->InitConnect("127.0.0.1", 11111, false);
         futuTrdApi_->InitConnect("127.0.0.1", 11111, false);
         logger_->info("Futu engine start");
         std::shared_ptr<Msg> msg;
-        while(true){
+        while(estate_.load() != STOP){
             msg = messenger_->recv(NNG_FLAG_NONBLOCK+NNG_FLAG_ALLOC); // nonblock + ALLOC
             if(!msg || msg->destination_!="FutuEngine"){
                 continue;
@@ -97,11 +102,19 @@ namespace ts{
                         this->regCallBack(root["code"].GetString(),  root["subtype"].GetInt());
                         break;
                     case MSG_TYPE_DEBUG:
+                        break;
+                    case MSG_TYPE_STOP:
+                        this->stop();
+                        break;
                     default:
                         logger_->info(msg->serialize());
                 }
             }
         }
+    }
+
+    void FutuEngine::stop(){
+        estate_.store(STOP);
     }
 
 
@@ -167,7 +180,7 @@ namespace ts{
     void FutuEngine::OnPush_UpdateTicker(const Qot_UpdateTicker::Response &stRsp){
         std::shared_ptr<Msg> msg = std::make_shared<Msg>("DataManager", "FutuEngine", MSG_TYPE_STORE_TICKER, "");
         ProtoBufToString(stRsp, msg->data_);
-        messenger_->send(msg, 0);
+        messenger_->send(msg, NNG_FLAG_ALLOC);
     }
 
 
@@ -176,7 +189,7 @@ namespace ts{
         std::shared_ptr<Msg> msg = std::make_shared<Msg>("DataManager", "FutuEngine", MSG_TYPE_STORE_QUOTE, "");
         ProtoBufToString(stRsp, msg->data_);
         msg->timestamp_ = init;
-        messenger_->send(msg, 0);
+        messenger_->send(msg, NNG_FLAG_ALLOC);
         
     }
 

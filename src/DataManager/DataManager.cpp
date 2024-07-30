@@ -19,7 +19,7 @@ namespace ts{
 
 
     /// @brief Constructor, calling ThreadPool constructor
-    DataManager::DataManager():ThreadPool(0, 10, 1){
+    DataManager::DataManager():ThreadPool(0, 10, 6){
         init();
     }
 
@@ -70,7 +70,6 @@ namespace ts{
         switch(msg->msgtype_){
             case MSG_TYPE_STORE_QUOTE:
                 if(strcmp(msg->source_.c_str(), "FutuEngine")==0){
-                    logger_->info("Called processMsg");
                     FutuQot2TsQot(msg->data_, list);
                     for (int i=0; i<list.size();++i){
                         datawritter_->AddTask(bind(&DataWriter::WriteQuote, datawritter_, placeholders::_1), list[i]); // add task to DataWriter ThreadPool
@@ -80,7 +79,6 @@ namespace ts{
                     shared_ptr<BaseData> temp = static_pointer_cast<BaseData>(make_shared<Quote>(msg->data_));
                     datawritter_->AddTask(bind(&DataWriter::WriteQuote, datawritter_, placeholders::_1), temp); // add task to DataWriter ThreadPool
                 }
-
                 break;
             
             

@@ -16,18 +16,18 @@ namespace ts
             Futu::FTAPI_Qot* futuQotApi_;
             Futu::FTAPI_Trd* futuTrdApi_;
             static std::mutex getIns_mutex;
-            static unique_ptr<FutuEngine> instance_;
+            static shared_ptr<FutuEngine> instance_;
         public:
             FutuEngine();
             virtual ~FutuEngine();
 
 
-            static std::unique_ptr<FutuEngine> getInstance();
+            static std::shared_ptr<FutuEngine> getInstance();
 
 
             virtual void init();
             virtual void start();
-            virtual void stop() {}; 
+            virtual void stop(); 
             virtual void setTradeMode(){};
             virtual void lockTXN(){};
             virtual void unlockTXN(){};

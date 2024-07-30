@@ -40,9 +40,11 @@ namespace ts{
     }
 
     /*
-    string serialize()
+    char* serialize()
     - Function used to serialize Msg object into string for sending in NNG
     - SERIALIZAITON_SEP is used to separate each field
+    - NOTE: this function allocates a new memory space, need to use with either NNG send ALLOC mode
+            or delete the memory manually
     */
 
     char* Msg::serialize(){
@@ -51,7 +53,7 @@ namespace ts{
         char* temp = reinterpret_cast<char*>(nng_alloc(ss.str().size()+1));
         strcpy(temp, ss.str().c_str());
         return temp;
-    }
+    } 
 
     /*
     void deserialize(const string& msgin)

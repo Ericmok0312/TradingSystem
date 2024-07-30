@@ -40,14 +40,64 @@ using namespace ts;
 
             Json2String(d, msg->data_);
             ms->send(msg, NNG_FLAG_ALLOC);
-            // code = "09999";
-            // d["code"].SetString(code.data(), code.size(), d.GetAllocator());
-            // Json2String(d, msg->data_);
-            // ms->send(msg, NNG_FLAG_ALLOC);
-            // code = "02319";
-            // d["code"].SetString(code.data(), code.size(), d.GetAllocator());
-            // Json2String(d, msg->data_);
-            // ms->send(msg, NNG_FLAG_ALLOC);  
+            code = "HSImain";
+            d["code"].SetString(code.data(), code.size(), d.GetAllocator());
+            Json2String(d, msg->data_);
+            ms->send(msg, NNG_FLAG_ALLOC);
+            code = "MHImain";
+            d["code"].SetString(code.data(), code.size(), d.GetAllocator());
+            Json2String(d, msg->data_);
+            ms->send(msg, NNG_FLAG_ALLOC);  
+
+
+
+            code = "ALBmain";
+            d["code"].SetString(code.data(), code.size(), d.GetAllocator());
+            Json2String(d, msg->data_);
+            ms->send(msg, NNG_FLAG_ALLOC);  
+
+            code = "METmain";
+            d["code"].SetString(code.data(), code.size(), d.GetAllocator());
+            Json2String(d, msg->data_);
+            ms->send(msg, NNG_FLAG_ALLOC);  
+
+
+            code = "HTImain";
+            d["code"].SetString(code.data(), code.size(), d.GetAllocator());
+            Json2String(d, msg->data_);
+            ms->send(msg, NNG_FLAG_ALLOC);  
+
+            code = "HHImain";
+            d["code"].SetString(code.data(), code.size(), d.GetAllocator());
+            Json2String(d, msg->data_);
+            ms->send(msg, NNG_FLAG_ALLOC);  
+
+            code = "MCHmain";
+            d["code"].SetString(code.data(), code.size(), d.GetAllocator());
+            Json2String(d, msg->data_);
+            ms->send(msg, NNG_FLAG_ALLOC);  
+            code = "MTWmain";
+            d["code"].SetString(code.data(), code.size(), d.GetAllocator());
+            Json2String(d, msg->data_);
+            ms->send(msg, NNG_FLAG_ALLOC);  
+
+            code = "MNDmain";
+            d["code"].SetString(code.data(), code.size(), d.GetAllocator());
+            Json2String(d, msg->data_);
+            ms->send(msg, NNG_FLAG_ALLOC);  
+
+            code = "JDCmain";
+            d["code"].SetString(code.data(), code.size(), d.GetAllocator());
+            Json2String(d, msg->data_);
+            ms->send(msg, NNG_FLAG_ALLOC);  
+            
+            code = "BLImain";
+            d["code"].SetString(code.data(), code.size(), d.GetAllocator());
+            Json2String(d, msg->data_);
+            ms->send(msg, NNG_FLAG_ALLOC);  
+
+
+
         }
 
 
@@ -210,12 +260,30 @@ using namespace ts;
         void test_DataManager(){
             shared_ptr<DataManager> de = DataManager::getInstance();
             de->start();
+            de.reset();
+            de = nullptr;
         }
 
         void test_futu(){
             //boost::this_thread::sleep_for(boost::chrono::minutes(5));
-            ts::FutuEngine eng;
+            FutuEngine eng;
             eng.start();
+        }
+
+        void test_counter(){
+            boost::this_thread::sleep_for(boost::chrono::minutes(10));
+            
+            shared_ptr<DataManager> de = DataManager::getInstance();
+
+            de->stop();
+
+            std::shared_ptr<Msg> msg = std::make_shared<Msg>();
+            shared_ptr<MsgqTSMessenger> ms = MsgqTSMessenger::getInstance();
+            msg->msgtype_ = MSG_TYPE_STOP;
+            msg->destination_ = "FutuEngine";
+            msg->source_ = "Tester";
+            ms->send(msg, NNG_FLAG_ALLOC);
+            de.reset();
         }
         
 
@@ -232,10 +300,16 @@ using namespace ts;
             boost::thread thread_run_FUTU(bind(&Tester::test_futu, this));
             boost::thread thread_get_from_Futu(bind(&Tester::func_1, this));
             boost::thread thread_DataManager(bind(&Tester::test_DataManager, this));
-            thread_DataManager.join();
-            thread_get_from_Futu.join();
-            thread_run_FUTU.join();
-            //boost::this_thread::sleep_for(boost::chrono::minutes(5));
+            boost::thread thread_test_counter(bind(&Tester::test_counter, this));
+            //thread_DataManager.join();
+
+            //thread_get_from_Futu.join();
+
+            //thread_run_FUTU.join();
+   
+            thread_test_counter.join();
+ 
+            
         }
     };
 
@@ -245,7 +319,7 @@ int main(){
     Tester test;
     boost::thread testthread(bind(&Tester::run,&test));
     testthread.join();
-    sleep(6);    // MUST for proper destruction of boost::threadpool 
+    sleep(10);    // MUST for proper destruction of boost::threadpool 
     spdlog::shutdown();
     return 0;
 }

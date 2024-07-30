@@ -17,7 +17,7 @@ namespace ts{
 
     
 
-    DataWriter::DataWriter():ThreadPool(0,6,1){
+    DataWriter::DataWriter():ThreadPool(0,6,10){
         init();
     }
 
@@ -60,9 +60,13 @@ namespace ts{
         if(!query.put_and_commit(move(key.getString()), move(nquote->getString()))){
             logger_->error(fmt::format("wrtie tick of {} error {}", nquote->code_, db->errmsg()).c_str());
         }
+
+
         if (IS_BENCHMARK) {
             //logger_->info(fmt::format("WriteQuote latency final: {}", to_string(GetTimeStamp()-init)).c_str());
             logger_->info(fmt::format("Total latency final: {}", to_string(GetTimeStamp()-nquote->timestamp_)).c_str());}
+
+        logger_->info(nquote->getString().c_str());
     }
 
     void DataWriter::WriteDataBase(){

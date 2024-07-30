@@ -40,7 +40,7 @@ namespace ts{
                     return dbi_; // if dbi_ is created alr, no need to open again
                 }
                 //open dbi with txn, dbi is 0 is not created
-                errno_ = mdb_dbi_open(txn, nullptr, 0, &dbi_);
+                errno_ = mdb_dbi_open(txn, nullptr, MDB_DUPSORT, &dbi_);
                 return dbi_;
             }
 
@@ -135,7 +135,7 @@ namespace ts{
                 mData.mv_data = val;
                 mData.mv_size = vlen;
 
-                int error  = mdb_put(txn_, dbi_, &mKey, &mData, 0); // update to database
+                int error  = mdb_put(txn_, dbi_, &mKey, &mData, MDB_NODUPDATA); // update to database
                 db_.update_errorno(error); // update error in database
                 return error == MDB_SUCCESS;
             }

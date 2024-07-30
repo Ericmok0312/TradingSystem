@@ -117,8 +117,8 @@ namespace ts{
         MSG_TYPE_GET_QUOTE_RESPONSE = 3000,
 
         //debug
-        MSG_TYPE_DEBUG = 4000
-
+        MSG_TYPE_DEBUG = 4000,
+        MSG_TYPE_STOP = 4001
     };
 
 

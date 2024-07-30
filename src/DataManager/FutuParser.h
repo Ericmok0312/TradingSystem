@@ -15,7 +15,6 @@ namespace ts{
 
     inline void FutuQot2TsQot(const std::string& src, std::vector<shared_ptr<BaseData>>& des){
         rapidjson::Document doc;
-        cout<<src<<endl;
         String2Json(src, doc);
         const rapidjson::Value& list = doc["s2c"]["basicQotList"];
 
@@ -37,7 +36,7 @@ namespace ts{
             temp->turnoverRate_ = list[i]["turnoverRate"].GetDouble();
             temp->amplitude_ = list[i]["amplitude"].GetDouble();
             temp->timestamp_ = GetTimeStamp();
-            //temp->updateTimestamp_ = static_cast<uint64_t>(list[i]["updateTimestamp"].GetDouble()*100);
+            temp->updateTimestamp_ = static_cast<uint64_t>(list[i]["updateTimestamp"].GetDouble()*100);
 
             if (list[i].HasMember("optionExData")){
                 temp->sPrice_ = list[i]["optionExData"]["strikePrice"].GetDouble();
