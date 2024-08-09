@@ -38,6 +38,7 @@ namespace ts{
 
             void readQuoteSlicefromCSV(shared_ptr<ARG>);
             void readQuoteSlicefromLMDB(shared_ptr<ARG>);
+
             
             typedef std::shared_ptr<TsLMDB> TSLMDBPtr;
             typedef std::unordered_map<std::string, TSLMDBPtr> TSLMDBMap;
@@ -64,6 +65,7 @@ namespace ts{
             TSLMDBMap excahnge_m1_dbs;
             TSLMDBMap exchange_m5_dbs;
             TSLMDBMap excange_d1_dbs;
+
 
             static shared_ptr<DataReader> instance_;
             static std::mutex q_db_mutex;

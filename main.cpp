@@ -271,7 +271,7 @@ using namespace ts;
         }
 
         void test_counter(){
-            boost::this_thread::sleep_for(boost::chrono::minutes(10));
+            boost::this_thread::sleep_for(boost::chrono::minutes(1));
             
             shared_ptr<DataManager> de = DataManager::getInstance();
 
@@ -284,6 +284,38 @@ using namespace ts;
             msg->source_ = "Tester";
             ms->send(msg, NNG_FLAG_ALLOC);
             de.reset();
+        }
+
+        void test_reader(bool* indicator){
+            std::shared_ptr<Msg> msg = std::make_shared<Msg>();
+            shared_ptr<MsgqTSMessenger> ms = MsgqTSMessenger::getInstance();
+            msg->msgtype_ = MSG_TYPE_GET_QUOTE_BLOCK;
+            msg->source_ = "Tester";
+            msg->destination_ = "DataManager";
+            ARG arg;
+            msg->data_ = "FUTU^HSImain^100^"+to_string(GetTimeStamp())+"^TesterReader";
+            while(indicator){
+                msg->timestamp_ = GetTimeStamp();
+                ms->send(msg, NNG_FLAG_ALLOC);
+                boost::this_thread::sleep_for(boost::chrono::seconds(1));
+            }
+        }
+
+        void test_getData(bool* indicator){
+            std::shared_ptr<Logger> LOG = make_shared<Logger>("GetData");
+            LOG->info("Calling getData");
+            shared_ptr<MsgqTSMessenger> ms = MsgqTSMessenger::getInstance();
+            std::shared_ptr<Msg> msg;
+            while(indicator){
+                msg = ms->recv(NNG_FLAG_ALLOC);
+                if(msg && strcmp(msg->destination_.c_str(),"TesterReader")==0){
+                    QuoteSlice* ptr = reinterpret_cast<QuoteSlice*>(std::strtoull(msg->data_.c_str(), nullptr, 16));
+                    for(int i=0; i<ptr->getCount(); i++){
+                        LOG->warn(ptr->at(i)->getString().c_str());
+                    }
+                    delete ptr;
+                }
+            }
         }
         
 
@@ -301,13 +333,15 @@ using namespace ts;
             boost::thread thread_get_from_Futu(bind(&Tester::func_1, this));
             boost::thread thread_DataManager(bind(&Tester::test_DataManager, this));
             boost::thread thread_test_counter(bind(&Tester::test_counter, this));
-            //thread_DataManager.join();
-
+            bool fg = true;
+            boost::thread thread_reader(bind(&Tester::test_reader,this, placeholders::_1), &fg);
+            boost::thread thread_getdata(bind(&Tester::test_getData,this, placeholders::_1), &fg);
             //thread_get_from_Futu.join();
 
             //thread_run_FUTU.join();
    
             thread_test_counter.join();
+            fg = false;
  
             
         }

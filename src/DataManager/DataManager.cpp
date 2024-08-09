@@ -88,8 +88,12 @@ namespace ts{
             case MSG_TYPE_STORE_KLINE_1M:
             break;
             case MSG_TYPE_GET_QUOTE:{
+
+            }   
+            break;
+            case MSG_TYPE_GET_QUOTE_BLOCK:{
                 vector<string> param;
-                split(msg->data_.c_str(), SERIALIZATION_SEP, param);
+                split(msg->data_.c_str(), ARGV_SEP, param);
                 shared_ptr<ts::ARG> arguments = make_shared<ts::ARG>();
                 arguments->callback = bind(&DataManager::sendData, this, placeholders::_1, placeholders::_2);
                 strcpy(arguments->exg, param[0].c_str());
@@ -107,8 +111,9 @@ namespace ts{
     }
 
     void DataManager::sendData(string&& address, string&& des){
+        logger_->info(des.c_str());
         shared_ptr<Msg> msg = make_shared<Msg>(move(des), "DataManager", MSG_TYPE_GET_QUOTE_RESPONSE, move(address));
-        messenger_->send(msg);
+        messenger_->send(msg, NNG_FLAG_ALLOC);
     }
 
 

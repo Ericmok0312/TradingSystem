@@ -49,8 +49,8 @@ namespace ts{
             TSLMDBMap excange_d1_dbs;
 
             static shared_ptr<DataWriter> instance_;
-            
-            static std::mutex q_db_mutex;
+
+            static std::mutex q_db_mutex;   
             static std::mutex getIns_mutex;
 
             TSLMDBPtr get_q_db(const char* exg, const char* code);

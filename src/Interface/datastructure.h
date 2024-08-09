@@ -113,6 +113,7 @@ namespace ts{
 
 
         MSG_TYPE_GET_QUOTE = 2500,
+        MSG_TYPE_GET_QUOTE_BLOCK = 2501,
 
         MSG_TYPE_GET_QUOTE_RESPONSE = 3000,
 
@@ -479,6 +480,7 @@ namespace ts{
             inline vector<QuoteBlock>* getBlock(){
                 return &this->block_;
             }
+            
             inline uint32_t getCount(){
                 return this->count_;
             }

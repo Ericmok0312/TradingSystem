@@ -5,6 +5,8 @@
 #include <Helper/ThreadPool.hpp>
 #include <chrono>
 #include <iomanip>
+#include <boost/date_time/posix_time/posix_time.hpp>
+#include <boost/date_time/gregorian/gregorian.hpp>
 
 namespace ts{
 
@@ -61,9 +63,10 @@ namespace ts{
             logger_->error(fmt::format("wrtie tick of {} error {}", nquote->code_, db->errmsg()).c_str());
         }
 
+        
 
         if (IS_BENCHMARK) {
-            //logger_->info(fmt::format("WriteQuote latency final: {}", to_string(GetTimeStamp()-init)).c_str());
+            logger_->info(fmt::format("WriteQuote latency final: {}", to_string(GetTimeStamp()-init)).c_str());
             logger_->info(fmt::format("Total latency final: {}", to_string(GetTimeStamp()-nquote->timestamp_)).c_str());}
 
         logger_->info(nquote->getString().c_str());
@@ -77,30 +80,38 @@ namespace ts{
         ss << std::put_time(std::localtime(&temp), "%Y_%m_%d");
         string time = ss.str();
 
-        auto now = std::chrono::system_clock::now();
-        time_t now_c = std::chrono::system_clock::to_time_t(now);
-        tm* localTime = localtime(&now_c);
+        auto now = boost::chrono::system_clock::now();
+        time_t now_c = boost::chrono::system_clock::to_time_t(now);
+        std::tm* local_time = std::localtime(&now_c);
 
-        localTime->tm_hour = 0;
-        localTime->tm_min = 0;
-        localTime->tm_sec = 0;
-        string midtime = to_string(mktime(localTime));
+        // Get the start of the day (00:00:00)
+        local_time->tm_hour = 0;
+        local_time->tm_min = 0;
+        local_time->tm_sec = 0;
+        boost::posix_time::ptime start_of_day = boost::posix_time::ptime(boost::gregorian::date(local_time->tm_year + 1900, local_time->tm_mon+1, local_time->tm_mday));
+        std::time_t start_timestamp = (start_of_day - boost::posix_time::ptime(boost::gregorian::date(1970, 1, 1))).total_seconds();
+        std::string midtime = std::to_string(start_timestamp);
 
-        localTime->tm_hour = 23;
-        localTime->tm_min = 59;
-        localTime->tm_sec = 59;
+        // Get the end of the day (23:59:59)
+        local_time->tm_hour = 23;
+        local_time->tm_min = 59;
+        local_time->tm_sec = 59;
+        boost::posix_time::ptime end_of_day = boost::posix_time::ptime(boost::gregorian::date(local_time->tm_year + 1900, local_time->tm_mon + 1, local_time->tm_mday)) + boost::posix_time::seconds(86400);
+        std::time_t end_timestamp = (end_of_day - boost::posix_time::ptime(boost::gregorian::date(1970, 1, 1))).total_seconds();
+        std::string endtime = std::to_string(end_timestamp);
 
-        string endtime = to_string(mktime(localTime));
+        logger_->warn(midtime.c_str());
         logger_->warn(endtime.c_str());
+
         for(auto i = quote_dbs_.begin(); i!=quote_dbs_.end(); i++){
             path = fmt::format("{}/{}/{}", BASE_FILE_LOC, i->first, time);
             boost::filesystem::create_directories(path);
             std::ofstream file(path+"/data.csv");
             file<<"key,data\n";
             TSQryLMDB query(*i->second);
-            string lkey = i->first+"/"+move(midtime);
-            string rkey = i->first+"/"+ move(endtime);
-            count  = query.get_all([&file](const ValueArray& key, const ValueArray& val){
+            string lkey = i->first+"/"+midtime;
+            string rkey = i->first+"/"+ endtime;
+            count  = query.get_range(lkey, rkey,[&file](const ValueArray& key, const ValueArray& val){
                 for(int i = 0; i<val.size(); i++){
                     file<<key[i]<<','<<val[i]<<'\n';
                 }
