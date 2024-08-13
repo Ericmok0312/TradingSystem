@@ -111,7 +111,6 @@ namespace ts{
     }
 
     void DataManager::sendData(string&& address, string&& des){
-        logger_->info(des.c_str());
         shared_ptr<Msg> msg = make_shared<Msg>(move(des), "DataManager", MSG_TYPE_GET_QUOTE_RESPONSE, move(address));
         messenger_->send(msg, NNG_FLAG_ALLOC);
     }

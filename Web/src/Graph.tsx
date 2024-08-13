@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Table, TableData } from '@finos/perspective';
 import { ServerRespond } from './DataStreamer';
-import { DataManipulator } from './DataManipulator';
+//import { DataManipulator } from './DataManipulator';
 import './Graph.css';
 
 interface IProps {
@@ -54,11 +54,11 @@ class Graph extends Component<IProps, {}> {
   }
 
   componentDidUpdate() {
-    if (this.table) {
-      this.table.update([
-        DataManipulator.generateRow(this.props.data),
-      ]as unknown as TableData);
-    }
+    // if (this.table) {
+    //   this.table.update([
+    //     DataManipulator.generateRow(this.props.data),
+    //   ]as unknown as TableData);
+    // }
   }
 }
 

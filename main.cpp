@@ -271,7 +271,7 @@ using namespace ts;
         }
 
         void test_counter(){
-            boost::this_thread::sleep_for(boost::chrono::minutes(1));
+            boost::this_thread::sleep_for(boost::chrono::minutes(10));
             
             shared_ptr<DataManager> de = DataManager::getInstance();
 
@@ -306,12 +306,18 @@ using namespace ts;
             LOG->info("Calling getData");
             shared_ptr<MsgqTSMessenger> ms = MsgqTSMessenger::getInstance();
             std::shared_ptr<Msg> msg;
+            std::shared_ptr<Msg> dataMsg = make_shared<Msg>();
+            dataMsg->destination_ = "WebApp";
+            dataMsg->source_ = "Tester";
+            dataMsg->msgtype_ = MSG_TYPE_DEBUG;
             while(indicator){
                 msg = ms->recv(NNG_FLAG_ALLOC);
                 if(msg && strcmp(msg->destination_.c_str(),"TesterReader")==0){
                     QuoteSlice* ptr = reinterpret_cast<QuoteSlice*>(std::strtoull(msg->data_.c_str(), nullptr, 16));
                     for(int i=0; i<ptr->getCount(); i++){
-                        LOG->warn(ptr->at(i)->getString().c_str());
+                        dataMsg->data_ = ptr->at(i)->getJson();
+                        LOG->info(dataMsg->data_.c_str());
+                        ms->send(dataMsg, NNG_FLAG_ALLOC);
                     }
                     delete ptr;
                 }

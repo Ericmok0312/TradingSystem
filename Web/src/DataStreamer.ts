@@ -3,33 +3,33 @@ export interface Order {
   size: number,
 }
 export interface ServerRespond {
-  stock: string,
-  top_bid: Order,
-  top_ask: Order,
-  timestamp: Date,
+  code: string;
+  time: string;
+  exg: string;
+  hPrice: number;
+  oPrice: number;
+  lPrice: number;
+  cPrice: number;
+  lcPrice: number;
+  pSpread: number;
+  volume: bigint;
+  turnover: number;
+  turnoverRate: number;
+  amplitude: number;
+  timestamp: bigint;
+  sPrice: number;
+  conSize: number;
+  opInterest: bigint;
+  impVolatility: number;
+  premium: number;
+  delta: number;
+  gamma: number;
+  vega: number;
+  theta: number;
+  rho: number;
+  lsprice: number;
+  position: bigint;
+  pChange: bigint;
+  updateTimestamp: bigint;
 }
 
-class DataStreamer {
-
-  static getData(callback: (data: ServerRespond[]) => void): void {
-    const socket = new WebSocket('ws://localhost:5000'); // Replace PORT with your actual port number
-
-    socket.onopen = () => {
-        console.log('WebSocket connection established');
-    };
-
-    socket.onmessage = (event) => {
-        callback(JSON.parse(event.data));
-        // Handle the received data as needed
-    };
-
-    socket.onclose = () => {
-        console.log('WebSocket connection closed');
-    };
-
-    socket.onerror = (error) => {
-        console.error('WebSocket error:', error);
-    };
-}}
-
-export default DataStreamer;

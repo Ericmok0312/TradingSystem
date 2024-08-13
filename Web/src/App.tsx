@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import DataStreamer, { ServerRespond } from './DataStreamer';
+import { ServerRespond } from './DataStreamer';
 import Graph from './Graph';
 import './App.css';
 
@@ -33,6 +33,7 @@ class App extends Component<{}, IState> {
 
     this.socket.onmessage = (event) => {
       const data: ServerRespond[] = JSON.parse(event.data);
+      console.log(data);
       this.setState({
         data: data,
         showGraph: true,
@@ -58,6 +59,7 @@ class App extends Component<{}, IState> {
         x++;
         if (x >= 1000) {
             clearInterval(interval);
+            console.log("clear interval");
         }
     }, 100);
 }
@@ -65,9 +67,9 @@ class App extends Component<{}, IState> {
   
 
   renderGraph() {
-    if (this.state.showGraph) {
-      return <Graph data={this.state.data} />;
-    }
+    // if (this.state.showGraph) {
+    //   return <Graph data={this.state.data} />;
+    // }
   }
 
   render() {

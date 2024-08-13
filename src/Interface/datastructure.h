@@ -390,6 +390,48 @@ namespace ts{
                 return move(ss.str());
             }
 
+            string getJson() const{
+                rapidjson::Document d;
+                d.SetObject();
+
+                rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
+                d.AddMember("code", rapidjson::StringRef(code_), allocator);
+                d.AddMember("time", rapidjson::StringRef(time_), allocator);
+                d.AddMember("exg", rapidjson::StringRef(exg_), allocator);
+                d.AddMember("hPrice", hPrice_, allocator);
+                d.AddMember("oPrice", oPrice_, allocator);
+                d.AddMember("lPrice", lPrice_, allocator);
+                d.AddMember("cPrice", cPrice_, allocator);
+                d.AddMember("lcPrice", lcPrice_, allocator);
+                d.AddMember("pSpread", pSpread_, allocator);
+                d.AddMember("volume", volume_, allocator);
+                d.AddMember("turnover", turnover_, allocator);
+                d.AddMember("turnoverRate", turnoverRate_, allocator);
+                d.AddMember("amplitude", amplitude_, allocator);
+                d.AddMember("timestamp", static_cast<uint64_t>(timestamp_), allocator);
+                d.AddMember("sPrice", sPrice_, allocator);
+                d.AddMember("conSize", conSize_, allocator);
+                d.AddMember("opInterest", opInterest_, allocator);
+                d.AddMember("impVolatility", impVolatility_, allocator);
+                d.AddMember("premium", premium_, allocator);
+                d.AddMember("delta", delta_, allocator);
+                d.AddMember("gamma", gamma_, allocator);
+                d.AddMember("vega", vega_, allocator);
+                d.AddMember("theta", theta_, allocator);
+                d.AddMember("rho", rho_, allocator);
+                d.AddMember("lsprice", lsprice_, allocator);
+                d.AddMember("position", position_, allocator);
+                d.AddMember("pChange", pChange_, allocator);
+                d.AddMember("updateTimestamp", static_cast<uint64_t>(updateTimestamp_), allocator);
+
+                rapidjson::StringBuffer buffer;
+                rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
+                d.Accept(writer);
+
+                return move(buffer.GetString());
+
+            }
+
 
 
             char code_[MAX_SYMBOL_SIZE];

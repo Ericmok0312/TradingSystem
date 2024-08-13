@@ -2,13 +2,18 @@
   "name": "webserver",
   "version": "1.0.0",
   "main": "server.js",
+  "type": "commonjs",
   "scripts": {
-    "test": "node server.js"
+    "test": "tsc && node server.js"
   },
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/nanomsg": "^4.2.3",
+    "@types/ws": "^8.5.12",
     "cors": "^2.8.5",
     "express": "^4.19.2",
     "nanomsg": "^4.2.1",
