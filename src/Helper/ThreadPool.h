@@ -10,26 +10,26 @@
 #include <json/json.h>
 #include <condition_variable>
 #include <Interface/datastructure.h>
+#include "boost/thread/thread.hpp"
 
 using namespace std;
 
 
 namespace ts{
-
+    template<class TaskType, class InputType>
     class ThreadPool{
         public:
-            using TaskType = void(*)(std::shared_ptr<Msg>);
 
-            static const int INITNUM;
-            static const int MAXNUM;
-            static const int IDLESEC;
+            static const int INITNUM {1};
+            static const int MAXNUM {6};
+            static const int IDLESEC {6};
 
 
             ThreadPool(int initNum = 1, int maxNum = 6, int idleSec = 6);
             ~ThreadPool();
 
-            queue<std::pair<TaskType, std::shared_ptr<Msg>>> taskqueue_;
-            vector<thread*> threadpool_;
+            queue<std::pair<TaskType, InputType>> taskqueue_;
+            vector<boost::thread*> threadpool_;
 
             std::mutex mutex_;
             std::atomic<int> busycount_;
@@ -41,7 +41,7 @@ namespace ts{
             bool stop_;
 
 
-            void AddTask(TaskType task, std::shared_ptr<Msg> msg);
+            void AddTask(TaskType task, InputType msg);
 
         public:
             void ThreadPool_Init();    
@@ -49,6 +49,8 @@ namespace ts{
             void PoolGrow();
             
     };
+
+
 }
 
 

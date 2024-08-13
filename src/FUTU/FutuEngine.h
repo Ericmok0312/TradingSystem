@@ -15,13 +15,19 @@ namespace ts
         protected:
             Futu::FTAPI_Qot* futuQotApi_;
             Futu::FTAPI_Trd* futuTrdApi_;
+            static std::mutex getIns_mutex;
+            static shared_ptr<FutuEngine> instance_;
         public:
             FutuEngine();
             virtual ~FutuEngine();
 
+
+            static std::shared_ptr<FutuEngine> getInstance();
+
+
             virtual void init();
             virtual void start();
-            virtual void stop() {}; 
+            virtual void stop(); 
             virtual void setTradeMode(){};
             virtual void lockTXN(){};
             virtual void unlockTXN(){};
@@ -78,7 +84,7 @@ namespace ts
             virtual void OnReply_GetOptionExpirationDate(Futu::u32_t nSerialNo, const Qot_GetOptionExpirationDate::Response &stRsp){}
 
             virtual void OnPush_Notify(const Notify::Response &stRsp){}
-            virtual void OnPush_UpdateBasicQot(const Qot_UpdateBasicQot::Response &stRsp){}
+            virtual void OnPush_UpdateBasicQot(const Qot_UpdateBasicQot::Response &stRsp);
             virtual void OnPush_UpdateOrderBook(const Qot_UpdateOrderBook::Response &stRsp){}
             virtual void OnPush_UpdateTicker(const Qot_UpdateTicker::Response &stRsp);
             virtual void OnPush_UpdateKL(const Qot_UpdateKL::Response &stRsp){}

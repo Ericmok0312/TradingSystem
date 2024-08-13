@@ -129,6 +129,30 @@ test/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/build
 .PHONY : test/fast
 
+main.o: main.cpp.o
+.PHONY : main.o
+
+# target to build an object file
+main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/main.cpp.o
+.PHONY : main.cpp.o
+
+main.i: main.cpp.i
+.PHONY : main.i
+
+# target to preprocess a source file
+main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/main.cpp.i
+.PHONY : main.cpp.i
+
+main.s: main.cpp.s
+.PHONY : main.s
+
+# target to generate assembly for a file
+main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/main.cpp.s
+.PHONY : main.cpp.s
+
 src/DataManager/DataManager.o: src/DataManager/DataManager.cpp.o
 .PHONY : src/DataManager/DataManager.o
 
@@ -153,6 +177,54 @@ src/DataManager/DataManager.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/DataManager/DataManager.cpp.s
 .PHONY : src/DataManager/DataManager.cpp.s
 
+src/DataManager/DataReader.o: src/DataManager/DataReader.cpp.o
+.PHONY : src/DataManager/DataReader.o
+
+# target to build an object file
+src/DataManager/DataReader.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/DataManager/DataReader.cpp.o
+.PHONY : src/DataManager/DataReader.cpp.o
+
+src/DataManager/DataReader.i: src/DataManager/DataReader.cpp.i
+.PHONY : src/DataManager/DataReader.i
+
+# target to preprocess a source file
+src/DataManager/DataReader.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/DataManager/DataReader.cpp.i
+.PHONY : src/DataManager/DataReader.cpp.i
+
+src/DataManager/DataReader.s: src/DataManager/DataReader.cpp.s
+.PHONY : src/DataManager/DataReader.s
+
+# target to generate assembly for a file
+src/DataManager/DataReader.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/DataManager/DataReader.cpp.s
+.PHONY : src/DataManager/DataReader.cpp.s
+
+src/DataManager/DataWriter.o: src/DataManager/DataWriter.cpp.o
+.PHONY : src/DataManager/DataWriter.o
+
+# target to build an object file
+src/DataManager/DataWriter.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/DataManager/DataWriter.cpp.o
+.PHONY : src/DataManager/DataWriter.cpp.o
+
+src/DataManager/DataWriter.i: src/DataManager/DataWriter.cpp.i
+.PHONY : src/DataManager/DataWriter.i
+
+# target to preprocess a source file
+src/DataManager/DataWriter.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/DataManager/DataWriter.cpp.i
+.PHONY : src/DataManager/DataWriter.cpp.i
+
+src/DataManager/DataWriter.s: src/DataManager/DataWriter.cpp.s
+.PHONY : src/DataManager/DataWriter.s
+
+# target to generate assembly for a file
+src/DataManager/DataWriter.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/DataManager/DataWriter.cpp.s
+.PHONY : src/DataManager/DataWriter.cpp.s
+
 src/FUTU/FutuEngine.o: src/FUTU/FutuEngine.cpp.o
 .PHONY : src/FUTU/FutuEngine.o
 
@@ -176,30 +248,6 @@ src/FUTU/FutuEngine.s: src/FUTU/FutuEngine.cpp.s
 src/FUTU/FutuEngine.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/FUTU/FutuEngine.cpp.s
 .PHONY : src/FUTU/FutuEngine.cpp.s
-
-src/Helper/ThreadPool.o: src/Helper/ThreadPool.cpp.o
-.PHONY : src/Helper/ThreadPool.o
-
-# target to build an object file
-src/Helper/ThreadPool.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Helper/ThreadPool.cpp.o
-.PHONY : src/Helper/ThreadPool.cpp.o
-
-src/Helper/ThreadPool.i: src/Helper/ThreadPool.cpp.i
-.PHONY : src/Helper/ThreadPool.i
-
-# target to preprocess a source file
-src/Helper/ThreadPool.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Helper/ThreadPool.cpp.i
-.PHONY : src/Helper/ThreadPool.cpp.i
-
-src/Helper/ThreadPool.s: src/Helper/ThreadPool.cpp.s
-.PHONY : src/Helper/ThreadPool.s
-
-# target to generate assembly for a file
-src/Helper/ThreadPool.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Helper/ThreadPool.cpp.s
-.PHONY : src/Helper/ThreadPool.cpp.s
 
 src/Helper/logger.o: src/Helper/logger.cpp.o
 .PHONY : src/Helper/logger.o
@@ -297,30 +345,6 @@ src/Interface/datastruture.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Interface/datastruture.cpp.s
 .PHONY : src/Interface/datastruture.cpp.s
 
-test.o: test.cpp.o
-.PHONY : test.o
-
-# target to build an object file
-test.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test.cpp.o
-.PHONY : test.cpp.o
-
-test.i: test.cpp.i
-.PHONY : test.i
-
-# target to preprocess a source file
-test.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test.cpp.i
-.PHONY : test.cpp.i
-
-test.s: test.cpp.s
-.PHONY : test.s
-
-# target to generate assembly for a file
-test.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test.cpp.s
-.PHONY : test.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -330,15 +354,21 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... test"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
 	@echo "... src/DataManager/DataManager.o"
 	@echo "... src/DataManager/DataManager.i"
 	@echo "... src/DataManager/DataManager.s"
+	@echo "... src/DataManager/DataReader.o"
+	@echo "... src/DataManager/DataReader.i"
+	@echo "... src/DataManager/DataReader.s"
+	@echo "... src/DataManager/DataWriter.o"
+	@echo "... src/DataManager/DataWriter.i"
+	@echo "... src/DataManager/DataWriter.s"
 	@echo "... src/FUTU/FutuEngine.o"
 	@echo "... src/FUTU/FutuEngine.i"
 	@echo "... src/FUTU/FutuEngine.s"
-	@echo "... src/Helper/ThreadPool.o"
-	@echo "... src/Helper/ThreadPool.i"
-	@echo "... src/Helper/ThreadPool.s"
 	@echo "... src/Helper/logger.o"
 	@echo "... src/Helper/logger.i"
 	@echo "... src/Helper/logger.s"
@@ -351,9 +381,6 @@ help:
 	@echo "... src/Interface/datastruture.o"
 	@echo "... src/Interface/datastruture.i"
 	@echo "... src/Interface/datastruture.s"
-	@echo "... test.o"
-	@echo "... test.i"
-	@echo "... test.s"
 .PHONY : help
 
 

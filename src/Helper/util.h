@@ -8,22 +8,19 @@
 #include "google/protobuf/util/json_util.h"
 
 
-#include <rapidjson/rapidjson.h>
-#include <rapidjson/document.h>
-#include <rapidjson/stringbuffer.h>
-#include <rapidjson/writer.h>
-
 #include <string>
 #include <vector>
 #include <iostream>
 #include <sstream>
+#include <boost/chrono.hpp>
 
 
 using namespace std;
 using namespace google;
 
 namespace ts{
-
+    
+    #define IS_BENCHMARK 1
 
     inline void split(const char* src, char sep, vector<string>& result){
 
@@ -32,7 +29,7 @@ namespace ts{
         string temp;
 
         while(getline(ss, temp, sep)){
-            result.push_back(temp);
+            result.emplace_back(move(temp));
         }
 
         string& last = result.back();
@@ -97,6 +94,9 @@ namespace ts{
         root.Parse(res.c_str());
     }
 
+    inline uint64_t GetTimeStamp(){
+        return static_cast<uint64_t>(boost::chrono::duration_cast<boost::chrono::microseconds>(boost::chrono::system_clock::now().time_since_epoch()).count());
+    }
 }
 
 

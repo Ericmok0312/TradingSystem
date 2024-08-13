@@ -14,6 +14,7 @@
 #define SPDLOG_DEBUG_ON
 
 
+using namespace std;
 
 namespace ts
 {
@@ -35,28 +36,26 @@ namespace ts
     */
     class Logger{
         public:
-            Logger();
+            Logger(const char* name);
             ~Logger();
 
-            static std::shared_ptr<spdlog::logger> spdlogger_;
+            std::shared_ptr<spdlog::logger> spdlogger_;
             
-            static std::shared_ptr<Logger> logger_;
+            string name_;
 
             static std::mutex mutex_;
 
-            static std::shared_ptr<Logger> getInstance();
-
             inline void info(const char* context){
                 std::lock_guard<std::mutex> lock(mutex_);
-                spdlogger_->info(context);
+                if(this->spdlogger_) this->spdlogger_->info(context);
             }
             inline void warn(const char* context){
                 std::lock_guard<std::mutex> lock(mutex_);
-                spdlogger_->warn(context);
+                this->spdlogger_->warn(context);
             }
             inline void error(const char* context){
                 std::lock_guard<std::mutex> lock(mutex_);
-                spdlogger_->error(context);
+                this->spdlogger_->error(context);
             }
             inline void debug(const char* context){
                 std::lock_guard<std::mutex> lock(mutex_);

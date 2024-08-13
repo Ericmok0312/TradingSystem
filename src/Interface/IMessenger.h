@@ -40,7 +40,7 @@ class IMessenger{
         std::shared_ptr<Logger> logger_;
 
     public:
-        IMessenger();
+        IMessenger(const char*);
         virtual ~IMessenger();
 
         virtual void send(std::shared_ptr<ts::Msg>, int32_t mode = 0) = 0;
@@ -191,10 +191,14 @@ class MsgqTSMessenger : public IMessenger {
 
     static mutex sendlock_;
     static std::unique_ptr<IMsgq> msgq_server_;
+    static std::mutex instancelock_;
     
     explicit MsgqTSMessenger(const string& url_recv);
     virtual ~MsgqTSMessenger();
+    
+    static shared_ptr<MsgqTSMessenger> instance_;
 
+    static shared_ptr<MsgqTSMessenger> getInstance();
     static void Send(std::shared_ptr<Msg> pmsg, int flag);
     virtual void send(std::shared_ptr<Msg> pmsg, int flag);
     virtual std::shared_ptr<Msg> recv(int flag);

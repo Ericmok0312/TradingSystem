@@ -5,7 +5,9 @@
 #include "rapidjson/writer.h"
 #include "rapidjson/stringbuffer.h"
 #include <string>
+#include <sstream>
 #include <iostream>
+#include <vector>
 #if defined(_WIN32) || defined(_WIN64)
 #ifdef DLL_EXPORT
 #define DLL_EXPORT_IMPORT  __declspec(dllexport)   // export DLL information
@@ -30,6 +32,9 @@ namespace ts{
     #define DESTINATION_SEP '.'
     #define ARGV_SEP '^'
 
+    #define MAX_SYMBOL_SIZE 20
+    #define MAX_TIME_SIZE 20
+    #define MAX_EXG_SIZE 5
 
     /*
         Engine state
@@ -87,7 +92,14 @@ namespace ts{
         MSG_TYPE_OPTIONS_KLINE = 1004,
         MSG_TYPE_OPTIONS_QUOTE = 1005,
 
-        MSG_TYPE_TICKER = 1500,
+        MSG_TYPE_STORE_TICKER = 1500,
+        MSG_TYPE_STORE_KLINE_1M = 1501,
+        MSG_TYPE_STORE_QUOTE = 1502,
+
+
+        
+        MSG_TYPE_HIST_KLINE_DAY = 1700,
+        
 
         //account information
         MSG_TYPE_ACCESSLIST = 1998,
@@ -99,9 +111,15 @@ namespace ts{
         MSG_TYPE_GET_ACCESSLIST = 2002,
         MSG_TYPE_REGCALLBACK = 2003,
 
-        //debug
-        MSG_TYPE_DEBUG = 4000
 
+        MSG_TYPE_GET_QUOTE = 2500,
+        MSG_TYPE_GET_QUOTE_BLOCK = 2501,
+
+        MSG_TYPE_GET_QUOTE_RESPONSE = 3000,
+
+        //debug
+        MSG_TYPE_DEBUG = 4000,
+        MSG_TYPE_STOP = 4001
     };
 
 
@@ -109,6 +127,7 @@ namespace ts{
         TICKER = 0,
         KLINE_1MIN = 1,
         KLINE_1D = 2,
+        QUOTE = 3,
 
 
 
@@ -130,6 +149,19 @@ namespace ts{
         TrdMarket_HK_Fund = 113, //Hong Kong fund market
         TrdMarket_US_Fund = 123, //US fund market	
     };
+
+
+
+    /// @brief abstract class for all data class
+    class BaseData{
+        public:
+            BaseData(){};
+            virtual ~BaseData(){};
+            virtual string getString() const {return NULL;}
+    };
+
+
+
 
     /*
     Msg
@@ -157,10 +189,12 @@ namespace ts{
             string source_;
             MSG_TYPE msgtype_;
             string data_;
+            uint64_t timestamp_{0};
         
         Msg();
 
-        Msg(const string& des, const string& src, MSG_TYPE type, const string& data);
+        Msg(const string& des, const string& src, MSG_TYPE type, const string& data, uint64_t timestamp = 0);
+        Msg(const string&& des, const string&& src, MSG_TYPE type, const string&& data, uint64_t timestamp = 0);
 
         virtual ~Msg(){};
 
@@ -171,7 +205,7 @@ namespace ts{
     };
 
 
-    class AccountInfo{
+    class AccountInfo:public BaseData{
         public:
             AccountInfo(){};
             ~AccountInfo(){};
@@ -214,7 +248,7 @@ namespace ts{
 
     */
 
-    class DLL_EXPORT_IMPORT Kline{
+    class DLL_EXPORT_IMPORT Kline:public BaseData{
         public:
             Kline(){};
             ~Kline(){};
@@ -244,8 +278,8 @@ namespace ts{
     Class for quote, used by stock, options and futures.
     Options and futures have special indicators, which will be set to -1 for stocks
 
-    symbol_ : String representing the stock/option/future, followed by _S , _O and _F to identify
-    time_ : when the kline occur
+    code_ : code representing the quote
+    time_ : when the quote occur
     hPrice : highest price 
     oPrice : open price
     lPrice : low price
@@ -256,8 +290,8 @@ namespace ts{
     turnover : turnover in number
     turnoverRate : turnover in rate, in decimal percentage
     amplitude: in decimal percentage
-    pe : price to earning ratio , what does it means in options and futures are not known
-    changeRate : compared with lcPrice, in decimal percentage
+   
+    
 
 
     Special indicators for options
@@ -275,51 +309,200 @@ namespace ts{
 
     
     */
-    class DLL_EXPORT_IMPORT Quote{
+    class DLL_EXPORT_IMPORT Quote:public BaseData{
         public:
-            Quote(){};
+            Quote(){
+                std::memset(code_, 0, sizeof(code_));
+                std::memset(time_, 0, sizeof(time_));
+                std::memset(exg_, 0, sizeof(exg_));
+                hPrice_ = 0.0;
+                oPrice_ = 0.0;
+                lPrice_ = 0.0;
+                cPrice_ = 0.0;
+                lcPrice_ = 0.0;
+                pSpread_ = 0.0;
+                volume_ = 0;
+                turnover_ = 0.0;
+                turnoverRate_ = 0.0;
+                amplitude_ = 0.0;
+                timestamp_ = 0.0;
+                sPrice_ = 0.0;
+                conSize_ = 0.0;
+                opInterest_ = 0;
+                impVolatility_ = 0.0;
+                premium_ = 0.0;
+                delta_ = 0.0;
+                gamma_ = 0.0;
+                vega_ = 0.0;
+                theta_ = 0.0;
+                rho_ = 0.0;
+                lsprice_ = 0.0;
+                position_ = 0;
+                pChange_ = 0;
+                updateTimestamp_ = 0;
+            };
             ~Quote(){};
+            Quote(const string& input){
+                    vector<string> values;
+                    stringstream ss(input);
+                    string token;
+                    while (getline(ss, token, ',')) {
+                        values.push_back(token);
+                    }
+
+                    // Assign the parsed values to the respective variables
+                    strcpy(code_,values[0].c_str());
+                    strcpy(time_,values[1].c_str());
+                    strcpy(exg_,values[2].c_str());
+                    hPrice_ = stod(values[3]);
+                    oPrice_ = stod(values[4]);
+                    lPrice_ = stod(values[5]);
+                    cPrice_ = stod(values[6]);
+                    lcPrice_ = stod(values[7]);
+                    pSpread_ = stod(values[8]);
+                    volume_ = stod(values[9]);
+                    turnover_ = stod(values[10]);
+                    turnoverRate_ = stod(values[11]);
+                    amplitude_ = stod(values[12]);
+                    timestamp_ = stod(values[13]);
+                    sPrice_ = stod(values[14]);
+                    conSize_ = stod(values[15]);
+                    opInterest_ = stod(values[16]);
+                    impVolatility_ = stod(values[17]);
+                    premium_ = stod(values[18]);
+                    delta_ = stod(values[19]);
+                    gamma_ = stod(values[20]);
+                    vega_ = stod(values[21]);
+                    rho_ = stod(values[22]);
+                    lsprice_ = stod(values[23]);
+                    position_ = stod(values[24]);
+                    pChange_ = stod(values[25]);
+                    updateTimestamp_ = stod(values[26]);
+                }
+            string getString() const{
+                stringstream ss;
+                ss<<code_<<','<<time_<<','<<exg_<<','<<hPrice_<<','<<oPrice_<<','
+                <<lPrice_<<','<<cPrice_<<','<<lcPrice_<<','<<pSpread_<<','
+                <<volume_<<','<<turnover_<<','<<turnoverRate_<<','<<amplitude_<<','
+                <<timestamp_<<','<<sPrice_<<','<<conSize_<<','<<opInterest_<<','
+                <<impVolatility_<<','<<premium_<<','<<delta_<<','<<gamma_<<','<<
+                vega_<<','<<rho_<<','<<lsprice_<<','<<position_<<','<<pChange_<<','<<updateTimestamp_;
+                return move(ss.str());
+            }
 
 
-            string symbol_;
-            string time_;
-            double hPrice_ {0.0}; 
-            double oPrice_ {0.0};
-            double lPrice_ {0.0};
-            double cPrice_ {0.0};
-            double lcPrice_ {0.0};
-            double pSpread_ {0.0};
+
+            char code_[MAX_SYMBOL_SIZE];
+            char time_[MAX_TIME_SIZE];
+            char exg_[MAX_EXG_SIZE];
+            double hPrice_ ; 
+            double oPrice_ ;
+            double lPrice_ ;
+            double cPrice_;
+            double lcPrice_;
+            double pSpread_;
 
 
-            int64_t volume_ {0}; 
 
-            double turnover_ {0.0};
-            double turnoverRate_ {0.0};
-            double amplitude_ {0.0};
+            int64_t volume_; 
+
+            double turnover_;
+            double turnoverRate_;
+            double amplitude_;
             
-            double pe_ {0.0};
-            double changeRate_ {0.0};
-            double timestamp_ {0.0};
+            uint64_t timestamp_;
 
             //special indicators for options
 
-            double sPrice_ {0.0};
-            double conSize_ {0.0};
-            int32_t opInterest_ {0};
-            double impVolatility_ {0.0};
-            double premium_ {0.0};
-            double delta_ {0.0};
-            double gamma_ {0.0};
-            double vega_ {0.0};
-            double theta_ {0.0};
-            double rho_ {0.0};
+            double sPrice_;
+            double conSize_;
+            int64_t opInterest_;
+            double impVolatility_;
+            double premium_;
+            double delta_;
+            double gamma_;
+            double vega_;
+            double theta_;
+            double rho_;
 
 
             //special indicators for futures
-            double lsprice_  {0.0};
-            int32_t position_ {0};
-            int32_t pChange_ {0};
+            double lsprice_ ;
+            int64_t position_ ;
+            int64_t pChange_ ;
+
+
+            uint64_t updateTimestamp_;
    };
+
+
+    class QuoteSlice : public BaseData{
+        private:
+            char code_[MAX_SYMBOL_SIZE];
+            typedef std::pair<Quote*, uint32_t> QuoteBlock;
+            std::vector<QuoteBlock> block_;
+            uint32_t count_;
+
+        protected:
+           
+
+            inline int32_t translateIdx(int32_t idx) const{
+                if (idx<0){
+                    return max(0, (int32_t)count_+idx);
+                }
+                return idx;
+            }
+
+        public:
+            QuoteSlice(){this->block_.clear();}
+
+            static inline QuoteSlice* create (const char* code, Quote* quote = nullptr, uint32_t count = 0){
+                QuoteSlice* slice = new QuoteSlice();
+                strcpy(slice->code_, code);
+                if(quote != nullptr){
+                    slice->block_.emplace_back(QuoteBlock(quote, count));
+                    slice->count_ = count;
+                }
+                return slice;
+            }
+
+
+            inline bool appendBlock(Quote* quote, uint32_t count)
+            {
+                if (quote == nullptr || count == 0)
+                    return false;
+
+                this->count_ += count;
+                this->block_.emplace_back(QuoteBlock(quote, count));
+                return true;
+            }
+
+            inline vector<QuoteBlock>* getBlock(){
+                return &this->block_;
+            }
+            
+            inline uint32_t getCount(){
+                return this->count_;
+            }
+
+            inline const Quote* at(int32_t idx){
+                if(count_==0){
+                    return nullptr;
+                }
+
+                idx = translateIdx(idx);
+                do{
+                    for(auto& item: block_){
+                        if ((uint32_t)idx >= item.second)
+                            idx -= item.second;
+                        else
+                            return item.first+idx; 
+                    }
+                }while (false);
+                return nullptr;
+            }
+    };
+
 }
 
 #endif

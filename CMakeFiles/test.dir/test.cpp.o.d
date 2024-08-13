@@ -298,6 +298,7 @@ CMakeFiles/test.dir/test.cpp.o: \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/internal/itoa.h \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/stringbuffer.h \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/stringbuffer.h \
+ /usr/include/c++/8/sstream /usr/include/c++/8/bits/sstream.tcc \
  /usr/include/c++/8/iostream \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/nng-1.8.0/include/nng/nng.h \
  /usr/lib/gcc/x86_64-linux-gnu/8/include/stdbool.h \
@@ -455,7 +456,6 @@ CMakeFiles/test.dir/test.cpp.o: \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/futu/FTSPI.h \
  /home/emk/vcpkg/installed/x64-linux/include/json/json.h \
  /home/emk/vcpkg/installed/x64-linux/include/json/config.h \
- /usr/include/c++/8/sstream /usr/include/c++/8/bits/sstream.tcc \
  /home/emk/vcpkg/installed/x64-linux/include/json/allocator.h \
  /home/emk/vcpkg/installed/x64-linux/include/json/version.h \
  /home/emk/vcpkg/installed/x64-linux/include/json/json_features.h \
@@ -475,4 +475,7 @@ CMakeFiles/test.dir/test.cpp.o: \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/stubs/status.h \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/stubs/stringpiece.h \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/stubs/bytestream.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/rapidjson.h
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/rapidjson.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/src/DataManager/DataWriter.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/src/DataManager/tslmdb.hpp \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/lmdb/liblmdb/lmdb.h

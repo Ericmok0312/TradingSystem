@@ -5,23 +5,45 @@ using namespace std;
 
 namespace ts{
 
+
+
+    std::mutex FutuEngine::getIns_mutex;
+    std::shared_ptr<FutuEngine> FutuEngine::instance_ = nullptr;
+
     /// @brief Default Constructor, calling init()
     FutuEngine::FutuEngine(){
         init();
     }
 
-    /// @brief Destructor, unregister and release futuQotApi_ and futuTrdApi_ as requried
+    /// @brief Destructor, e ster  and release futuQotApi_ and futuTrdApi_ as requried
     FutuEngine::~FutuEngine(){
-        if(futuQotApi_){
+        std::lock_guard<mutex> lk(getIns_mutex);
+        logger_->info("des called");
+        //instance_.reset();
+        if(futuQotApi_ != nullptr){
             futuQotApi_->UnregisterQotSpi();
             futuQotApi_->UnregisterConnSpi();
             FTAPI::ReleaseQotApi(futuQotApi_);
+            futuQotApi_ = nullptr; // prevent double deletion
         }
-        if(futuTrdApi_){
+        if(futuTrdApi_ != nullptr){
             futuTrdApi_->UnregisterTrdSpi();
             futuTrdApi_->UnregisterConnSpi();
-            FTAPI::ReleaseQotApi(futuQotApi_);
+            FTAPI::ReleaseTrdApi(futuTrdApi_);
+            futuTrdApi_ = nullptr;
         }
+        FTAPI::UnInit();
+    }
+
+
+
+
+    std::shared_ptr<FutuEngine> FutuEngine::getInstance(){
+        std::lock_guard<std::mutex> lock(getIns_mutex); 
+        if(!instance_){
+            instance_ = make_shared<FutuEngine>();
+        }
+        return instance_;
     }
 
 
@@ -35,8 +57,11 @@ namespace ts{
         futuTrdApi_->RegisterConnSpi(this);
         futuTrdApi_->RegisterTrdSpi(this);
 
-        logger_ = Logger::getInstance();
+        logger_ = make_shared<Logger>("FutuEngine");
         messenger_ = std::make_unique<MsgqTSMessenger>(PROXY_SERVER_URL);
+        estate_.store(STOP);
+
+        FTAPI::Init();
     }
 
     /*
@@ -50,10 +75,12 @@ namespace ts{
    
 
     void FutuEngine::start(){
+        estate_.store(CONNECTED);
         futuQotApi_->InitConnect("127.0.0.1", 11111, false);
         futuTrdApi_->InitConnect("127.0.0.1", 11111, false);
+        logger_->info("Futu engine start");
         std::shared_ptr<Msg> msg;
-        while(true){
+        while(estate_.load() != STOP){
             msg = messenger_->recv(NNG_FLAG_NONBLOCK+NNG_FLAG_ALLOC); // nonblock + ALLOC
             if(!msg || msg->destination_!="FutuEngine"){
                 continue;
@@ -75,11 +102,19 @@ namespace ts{
                         this->regCallBack(root["code"].GetString(),  root["subtype"].GetInt());
                         break;
                     case MSG_TYPE_DEBUG:
+                        break;
+                    case MSG_TYPE_STOP:
+                        this->stop();
+                        break;
                     default:
                         logger_->info(msg->serialize());
                 }
             }
         }
+    }
+
+    void FutuEngine::stop(){
+        estate_.store(STOP);
     }
 
 
@@ -91,6 +126,8 @@ namespace ts{
 
         sec->set_code(code);
         sec->set_market(Qot_Common::QotMarket::QotMarket_HK_Security);
+
+    
         vector<Qot_Common::SubType> enSubTypes = { Qot_Common::SubType_Basic, Qot_Common::SubType_OrderBook,
                 Qot_Common::SubType_Broker,  Qot_Common::SubType_KL_Day, Qot_Common::SubType_RT, Qot_Common::SubType_Ticker};
 
@@ -103,7 +140,10 @@ namespace ts{
                 break;
             case KLINE_1D:
                 c2s->add_subtypelist(Qot_Common::SubType::SubType_KL_Day);
-                break;                
+                break;
+            case QUOTE:
+                c2s->add_subtypelist(Qot_Common::SubType::SubType_Basic);    
+                break;     
             case ALL:
                 for(int i=0; i<enSubTypes.size(); i++)
                 c2s->add_subtypelist(enSubTypes[i]);
@@ -138,10 +178,18 @@ namespace ts{
 
 
     void FutuEngine::OnPush_UpdateTicker(const Qot_UpdateTicker::Response &stRsp){
-        Json::Value res;
-        std::shared_ptr<Msg> msg = make_shared<Msg>("DataManager", "FutuEngine", MSG_TYPE_TICKER, "");
+        std::shared_ptr<Msg> msg = std::make_shared<Msg>("DataManager", "FutuEngine", MSG_TYPE_STORE_TICKER, "");
         ProtoBufToString(stRsp, msg->data_);
-        messenger_->send(msg, 0);
+        messenger_->send(msg, NNG_FLAG_ALLOC);
+    }
+
+
+    void FutuEngine::OnPush_UpdateBasicQot(const Qot_UpdateBasicQot::Response &stRsp){
+        uint64_t init = GetTimeStamp();
+        std::shared_ptr<Msg> msg = std::make_shared<Msg>("DataManager", "FutuEngine", MSG_TYPE_STORE_QUOTE, "");
+        ProtoBufToString(stRsp, msg->data_);
+        msg->timestamp_ = init;
+        messenger_->send(msg, NNG_FLAG_ALLOC);
     }
 
     /// @brief  Function for getting fund in Futu account, with given id, market and mode (all need to be retrieved using getAccessList)
