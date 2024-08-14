@@ -30,6 +30,6 @@ export interface ServerRespond {
   lsprice: number;
   position: bigint;
   pChange: bigint;
-  updateTimestamp: bigint;
+  updateTimestamp: number;
 }
 

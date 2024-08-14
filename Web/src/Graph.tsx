@@ -25,9 +25,7 @@ class Graph extends Component<IProps, {}> {
 
     const schema = {
       price : "float",
-      timeStamp : "integer",
-      high_price: "float",
-      low_price: "float"
+      timestamp :"string",
     };
 
     if (window.perspective && window.perspective.worker()) {
@@ -37,14 +35,15 @@ class Graph extends Component<IProps, {}> {
       // Load the `table` in the `<perspective-viewer>` DOM reference.
       elem.load(this.table);
       elem.setAttribute('view', 'y_line');
-      //elem.setAttribute('row-pivots', '["timestamp"]');
+      //elem.setAttribute('group_by', '"timeStamp"')
+      elem.setAttribute('row-pivots', '["timestamp"]');
       elem.setAttribute('columns', '["price"]');
       elem.setAttribute('aggregates', JSON.stringify({
         price: "avg",
-        high_price: "avg",
-        low_price: "avg",
+        //ratio: "avg",
         timeStamp: "distinct count"
       }));
+      //elem.setAttribute("x_axis", "timestamp");
     }
   }
 
@@ -53,6 +52,7 @@ class Graph extends Component<IProps, {}> {
       this.table.update([
         DataManipulator.generateRow(this.props.data),
       ]as unknown as TableData);
+
     }
   }
 }

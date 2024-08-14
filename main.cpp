@@ -293,7 +293,7 @@ using namespace ts;
             msg->source_ = "Tester";
             msg->destination_ = "DataManager";
             ARG arg;
-            msg->data_ = "FUTU^HSImain^100^"+to_string(GetTimeStamp())+"^TesterReader";
+            msg->data_ = "FUTU^HSImain^100000^"+to_string(GetTimeStamp())+"^TesterReader";
             while(indicator){
                 msg->timestamp_ = GetTimeStamp();
                 ms->send(msg, 0);
