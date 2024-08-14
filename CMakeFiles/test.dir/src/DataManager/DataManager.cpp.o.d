@@ -1025,8 +1025,9 @@ CMakeFiles/test.dir/src/DataManager/DataManager.cpp.o: \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/chrono/floor.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/chrono/round.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/src/Interface/IMessenger.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/nng-1.8.0/include/nng/nng.h \
- /usr/lib/gcc/x86_64-linux-gnu/8/include/stdbool.h \
+ /home/emk/vcpkg/installed/x64-linux/include/zmq.hpp \
+ /home/emk/vcpkg/installed/x64-linux/include/zmq.h \
+ /usr/include/c++/8/iomanip /usr/include/c++/8/bits/quoted_string.h \
  /data/home/emk/Coding/Trading_system/TradingSystem/src/Interface/IEngine.h \
  /data/home/emk/Coding/Trading_system/TradingSystem/src/DataManager/DataWriter.h \
  /data/home/emk/Coding/Trading_system/TradingSystem/src/DataManager/tslmdb.hpp \

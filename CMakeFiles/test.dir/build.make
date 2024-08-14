@@ -221,6 +221,7 @@ test: CMakeFiles/test.dir/src/Interface/IMessenger.cpp.o
 test: CMakeFiles/test.dir/src/Interface/datastruture.cpp.o
 test: CMakeFiles/test.dir/build.make
 test: /home/emk/vcpkg/installed/x64-linux/debug/lib/libjsoncpp.a
+test: /home/emk/vcpkg/installed/x64-linux/debug/lib/libzmq.a
 test: CMakeFiles/test.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/data/home/emk/Coding/Trading_system/TradingSystem/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable test"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/test.dir/link.txt --verbose=$(VERBOSE)

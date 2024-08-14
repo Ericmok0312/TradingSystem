@@ -50,7 +50,7 @@ namespace ts{
     char* Msg::serialize(){
         stringstream ss;
         ss<<destination_<<SERIALIZATION_SEP<<source_<<SERIALIZATION_SEP<<msgtype_<<SERIALIZATION_SEP<<(data_)<<SERIALIZATION_SEP<<to_string(timestamp_);
-        char* temp = reinterpret_cast<char*>(nng_alloc(ss.str().size()+1));
+        char* temp = new char[ss.str().size()+1];
         strcpy(temp, ss.str().c_str());
         return temp;
     } 

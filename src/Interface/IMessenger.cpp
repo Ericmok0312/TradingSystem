@@ -6,10 +6,10 @@
 #include <iostream>
 #include <cassert>
 #include <Helper/util.h>
-#include "nng/protocol/pubsub0/pub.h"
-#include "nng/protocol/pubsub0/sub.h"
-#include "nng/protocol/pipeline0/pull.h"
-#include "nng/protocol/pipeline0/push.h"
+
+#include "zmq.hpp"
+
+using namespace zmq;
 using namespace std;
 
 namespace ts{
@@ -41,6 +41,7 @@ namespace ts{
         logger_ = make_shared<Logger>("IMsgq");
         protocol_ = protocol;
         url_ = url;
+        context_ = Context::getInstance();
     }
 
 
@@ -49,65 +50,80 @@ namespace ts{
     };    //default destructor
 
 
+    //Context
+    
+    context_t* Context::ctx_;
+    shared_ptr<Context> Context::instance_;
+    mutex Context::getInstanceLock_;
+
+    shared_ptr<Context> Context::getInstance(){
+        lock_guard<mutex> lg(getInstanceLock_);
+        if(!instance_){
+            instance_ = make_shared<Context>();
+            instance_->logger_ = make_shared<Logger>("Context");
+        }
+        return instance_;
+    }
+
+    context_t* Context::GetContext(){
+        return ctx_;
+    }
+
+    Context::Context(){
+        ctx_ = new context_t;
+    }
+
+    Context::~Context(){
+        logger_->info("Context destructed");
+        delete ctx_;
+    }
+    
+
     // End of IMsgq
 
     //Start of MsgqNNG
 
-    MsgqNNG::MsgqNNG(MSGQ_PROTOCOL protocol,const string& url, bool binding):IMsgq(protocol, url){
+    socket_type getSockType(MSGQ_PROTOCOL protocol){
+        switch (protocol) {
+            case MSGQ_PROTOCOL::PUB:
+                return zmq::socket_type::pub;
+            case MSGQ_PROTOCOL::SUB:
+                return zmq::socket_type::sub;
+            case MSGQ_PROTOCOL::PUSH:
+                return zmq::socket_type::push;
+            case MSGQ_PROTOCOL::PULL:
+                return zmq::socket_type::pull;
+        }
+        return zmq::socket_type::sub;
+    }
+
+    MsgqNNG::MsgqNNG(MSGQ_PROTOCOL protocol,const string& url, bool binding):IMsgq(protocol, url), sock_(*context_->GetContext(), getSockType(protocol)){
         int svalid = 0;
         switch(protocol_){
-            /*
-            PUB:
-                Create a pub socket with nng_pub0_open
-                Create a listener with nng_listener_create
-                Setting the buffer size for the listener, 8192 MESSAGES
-                Start the listener, -1 is dummy input
-            */  
-            case MSGQ_PROTOCOL::PUB :
-                svalid = nng_pub0_open(&sock_);
-                svalid = nng_listener_create(&Lid_, sock_, url_.c_str());   
-                svalid = nng_socket_set_size(sock_, NNG_OPT_SENDBUF, size_t(8192));
-                svalid = nng_listener_start(Lid_,0);
+
+            case MSGQ_PROTOCOL::PUB:
+                sock_.bind(url);    
                 break;
 
-            /*
-            SUB:
-                Create a sub socket with nng_pub0_open
-                Create a dialer with nng_dialer_create
-                Setting the timeout (100ms) for the socket (not dialer, will lead to error)
-                Setting receive buffer for the socket
-                NOTE: setting subscribe for the socket (This is important)
-                Start the dialer, -1 is dummy input
-            */  
-            case MSGQ_PROTOCOL::SUB :
-
-                svalid += nng_sub0_open(&sock_);
-                svalid += nng_dialer_create(&Did_, sock_, url_.c_str());
-                svalid += nng_socket_set(sock_, NNG_OPT_SUB_SUBSCRIBE, "", 0);
-                svalid += nng_socket_set_ms(sock_, NNG_OPT_RECVTIMEO, nng_duration(100));
-                svalid += nng_dialer_start(Did_,-1);
+            case MSGQ_PROTOCOL::SUB:
+                sock_.connect(url);
+                sock_.set(zmq::sockopt::subscribe, "");      
                 break;
 
             /*
             PUSH
                 Similar to SUB
             */
-            case MSGQ_PROTOCOL::PUSH :
-                svalid += nng_sub0_open(&sock_);
-                svalid += nng_dialer_create(&Did_, sock_, url_.c_str());
-                svalid += nng_socket_set_ms(sock_, NNG_OPT_RECVTIMEO, nng_duration(100));
-                svalid += nng_dialer_start(Did_,-1);
+            case MSGQ_PROTOCOL::PUSH:
+                sock_.connect(url);   
                 break;
 
             /*
             PULL
                 Similar to PUB
             */
-            case MSGQ_PROTOCOL::PULL :
-                svalid = nng_pub0_open(&sock_);
-                svalid = nng_listener_create(&Lid_, sock_, url_.c_str());   
-                svalid = nng_socket_set_size(sock_, NNG_OPT_SENDBUF, size_t(8192));
-                svalid = nng_listener_start(Lid_,0);
+            case MSGQ_PROTOCOL::PULL:
+                sock_.connect(url);   
                 break;
         }
         if (svalid){
@@ -124,7 +140,7 @@ namespace ts{
     */
 
     MsgqNNG::~MsgqNNG(){
-        nng_close(sock_);
+        sock_.close();
         logger_->info("Destructing MsgqNNG");
     }
 
@@ -138,19 +154,20 @@ namespace ts{
         NOTE: the buffer size is IMPORTANT, else will lead to error
     */
     void MsgqNNG::sendmsg(const string& str, int32_t immediate){
-        int success = nng_send(sock_, const_cast<char*>(str.data()), str.size()+1, immediate);
-        if (success){
-            logger_ ->error(fmt::format("NNG {} send msg error, return: {}", sock_.id, success).c_str());
-        }
+        sendmsg(str.c_str(), immediate);
     }
 
     void MsgqNNG::sendmsg(char* str, int32_t immediate){ // as is char*, temp string as input will not call this
-        int success = nng_send(sock_, str, strlen(str)+1, immediate);
-        //delete[] str; //avoid memory leak;
-        if (success){ 
-            logger_ ->error(fmt::format("NNG {} send msg error, return: {}", sock_.id, success).c_str());
+        try{
+            zmq::message_t msg(static_cast<void*>(str), strlen(str)+1, [](void* a, void* b){delete[] static_cast<char*>(a);}, nullptr);
+            if(!sock_.send(move(msg), zmq::send_flags::none)){
+                throw std::runtime_error("NNG send msg error");
+            }
+        }catch(const zmq::error_t& e) {
+            logger_->warn(fmt::format("NNG send msg error: {}", e.what()).c_str());
         }
-    }   
+        }
+          
 
     /*
     
@@ -167,16 +184,13 @@ namespace ts{
     */
 
     char* MsgqNNG::recmsg(int32_t blockingflags){
-        void* buf = nullptr;
-        size_t len;
-        int success = nng_recv(sock_, &buf, &len, blockingflags);
-
-        if (success==0 && buf){
-            char *nbuf = static_cast<char*>(buf);
-            char* msg = new char[strlen(nbuf)+1];
-            strcpy(msg, nbuf);
-            nng_free(buf, len);
-            return msg;
+        zmq::message_t msg;
+        auto success = sock_.recv(msg, zmq::recv_flags::none);
+        //
+        if (msg.data()!=nullptr){
+            char* nbuf = new char[strlen(static_cast<char*>(msg.data()))+1]; 
+            strcpy(nbuf, static_cast<char*>(msg.data()));
+            return nbuf;
         }
         else{
             return nullptr;
@@ -247,7 +261,7 @@ namespace ts{
 
 
     void MsgqRMessenger::relay(){
-        string msgpull = msgq_receiver_->recmsg(NNG_FLAG_ALLOC);
+        string msgpull = msgq_receiver_->recmsg(0);
         if(msgpull.empty()){
             return;
         }
@@ -317,12 +331,13 @@ namespace ts{
         try{
             std::shared_ptr<Msg> msgheader = std::make_shared<Msg>();
             msgheader->deserialize(msgin);
-            delete[] msgin;
+            delete[] msgin; // msgin is allocated in serialization and not deleted
             return msgheader;
         }
         catch(std::exception& e){
             logger_->error(fmt::format("{} [Original msg]: {}",e.what(),msgin).c_str());
         }
+        return nullptr;
     }
 
 

@@ -39,62 +39,62 @@ using namespace ts;
             d.AddMember("subtype", rapidjson::Value(sub), d.GetAllocator());
 
             Json2String(d, msg->data_);
-            ms->send(msg, NNG_FLAG_ALLOC);
+            ms->send(msg, 0);
             code = "HSImain";
             d["code"].SetString(code.data(), code.size(), d.GetAllocator());
             Json2String(d, msg->data_);
-            ms->send(msg, NNG_FLAG_ALLOC);
+            ms->send(msg, 0);
             code = "MHImain";
             d["code"].SetString(code.data(), code.size(), d.GetAllocator());
             Json2String(d, msg->data_);
-            ms->send(msg, NNG_FLAG_ALLOC);  
+            ms->send(msg, 0);  
 
 
 
             code = "ALBmain";
             d["code"].SetString(code.data(), code.size(), d.GetAllocator());
             Json2String(d, msg->data_);
-            ms->send(msg, NNG_FLAG_ALLOC);  
+            ms->send(msg, 0);  
 
             code = "METmain";
             d["code"].SetString(code.data(), code.size(), d.GetAllocator());
             Json2String(d, msg->data_);
-            ms->send(msg, NNG_FLAG_ALLOC);  
+            ms->send(msg, 0);  
 
 
             code = "HTImain";
             d["code"].SetString(code.data(), code.size(), d.GetAllocator());
             Json2String(d, msg->data_);
-            ms->send(msg, NNG_FLAG_ALLOC);  
+            ms->send(msg, 0);  
 
             code = "HHImain";
             d["code"].SetString(code.data(), code.size(), d.GetAllocator());
             Json2String(d, msg->data_);
-            ms->send(msg, NNG_FLAG_ALLOC);  
+            ms->send(msg, 0);  
 
             code = "MCHmain";
             d["code"].SetString(code.data(), code.size(), d.GetAllocator());
             Json2String(d, msg->data_);
-            ms->send(msg, NNG_FLAG_ALLOC);  
+            ms->send(msg, 0);  
             code = "MTWmain";
             d["code"].SetString(code.data(), code.size(), d.GetAllocator());
             Json2String(d, msg->data_);
-            ms->send(msg, NNG_FLAG_ALLOC);  
+            ms->send(msg, 0);  
 
             code = "MNDmain";
             d["code"].SetString(code.data(), code.size(), d.GetAllocator());
             Json2String(d, msg->data_);
-            ms->send(msg, NNG_FLAG_ALLOC);  
+            ms->send(msg, 0);  
 
             code = "JDCmain";
             d["code"].SetString(code.data(), code.size(), d.GetAllocator());
             Json2String(d, msg->data_);
-            ms->send(msg, NNG_FLAG_ALLOC);  
+            ms->send(msg, 0);  
             
             code = "BLImain";
             d["code"].SetString(code.data(), code.size(), d.GetAllocator());
             Json2String(d, msg->data_);
-            ms->send(msg, NNG_FLAG_ALLOC);  
+            ms->send(msg, 0);  
 
 
 
@@ -134,7 +134,7 @@ using namespace ts;
             LOG->info("dialer2 created");
 
             while(true){ 
-                std::shared_ptr<Msg> msg2 = rec2.recv(NNG_FLAG_NONBLOCK+NNG_FLAG_ALLOC); // nonblock + ALLOC
+                std::shared_ptr<Msg> msg2 = rec2.recv(0+0); // nonblock + ALLOC
                 if(msg2 && msg2->destination_=="Main"){
                     LOG->info(fmt::format("function2 received {}",msg2->serialize()).c_str());
                 }
@@ -158,7 +158,7 @@ using namespace ts;
             // LOG->info("dialer3 created");
 
             // while(true){ 
-            //     std::shared_ptr<Msg> msg = rec.recv(NNG_FLAG_NONBLOCK+NNG_FLAG_ALLOC); // nonblock + ALLOC
+            //     std::shared_ptr<Msg> msg = rec.recv(0+0); // nonblock + ALLOC
             //     if(msg && msg->destination_=="DataManager"){
             //         LOG->info(fmt::format("DataManager received {}",msg->serialize()).c_str());
             //     }
@@ -192,7 +192,7 @@ using namespace ts;
                 q->timestamp_ = GetTimeStamp();
                 q->cPrice_ = i;
                 shared_ptr<Msg> msg = make_shared<Msg>("DataManager", "Tester", MSG_TYPE_STORE_QUOTE, q->getString());
-                ms->send(msg, NNG_FLAG_ALLOC);
+                ms->send(msg, 0);
                 //msg.reset();
                 boost::this_thread::sleep_for(boost::chrono::milliseconds(dist(rng)));
                 i++;
@@ -219,7 +219,7 @@ using namespace ts;
                 q->timestamp_ = GetTimeStamp();
                 q->cPrice_ = i;
                 shared_ptr<Msg> msg = make_shared<Msg>("DataManager", "Tester", MSG_TYPE_STORE_QUOTE, q->getString());
-                ms->send(msg, NNG_FLAG_ALLOC);
+                ms->send(msg, 0);
                 //msg.reset();
                 boost::this_thread::sleep_for(boost::chrono::milliseconds(dist(rng)));
                 i++;
@@ -246,7 +246,7 @@ using namespace ts;
                 q->timestamp_ = GetTimeStamp();
                 q->cPrice_ = i;
                 shared_ptr<Msg> msg = make_shared<Msg>("DataManager", "Tester", MSG_TYPE_STORE_QUOTE, q->getString());
-                ms->send(msg, NNG_FLAG_ALLOC);
+                ms->send(msg, 0);
                 //msg.reset();
                 boost::this_thread::sleep_for(boost::chrono::milliseconds(dist(rng)));
                 i++;
@@ -271,7 +271,7 @@ using namespace ts;
         }
 
         void test_counter(){
-            boost::this_thread::sleep_for(boost::chrono::minutes(10));
+            boost::this_thread::sleep_for(boost::chrono::seconds(3000));
             
             shared_ptr<DataManager> de = DataManager::getInstance();
 
@@ -282,7 +282,7 @@ using namespace ts;
             msg->msgtype_ = MSG_TYPE_STOP;
             msg->destination_ = "FutuEngine";
             msg->source_ = "Tester";
-            ms->send(msg, NNG_FLAG_ALLOC);
+            ms->send(msg, 0);
             de.reset();
         }
 
@@ -296,7 +296,7 @@ using namespace ts;
             msg->data_ = "FUTU^HSImain^100^"+to_string(GetTimeStamp())+"^TesterReader";
             while(indicator){
                 msg->timestamp_ = GetTimeStamp();
-                ms->send(msg, NNG_FLAG_ALLOC);
+                ms->send(msg, 0);
                 boost::this_thread::sleep_for(boost::chrono::seconds(1));
             }
         }
@@ -311,13 +311,13 @@ using namespace ts;
             dataMsg->source_ = "Tester";
             dataMsg->msgtype_ = MSG_TYPE_DEBUG;
             while(indicator){
-                msg = ms->recv(NNG_FLAG_ALLOC);
+                msg = ms->recv(0);
                 if(msg && strcmp(msg->destination_.c_str(),"TesterReader")==0){
                     QuoteSlice* ptr = reinterpret_cast<QuoteSlice*>(std::strtoull(msg->data_.c_str(), nullptr, 16));
                     for(int i=0; i<ptr->getCount(); i++){
-                        dataMsg->data_ = ptr->at(i)->getJson();
+                        dataMsg->data_ = ptr->at(i)->getString(1);
                         LOG->info(dataMsg->data_.c_str());
-                        ms->send(dataMsg, NNG_FLAG_ALLOC);
+                        ms->send(dataMsg, 0);
                     }
                     delete ptr;
                 }
@@ -359,7 +359,7 @@ int main(){
     Tester test;
     boost::thread testthread(bind(&Tester::run,&test));
     testthread.join();
-    sleep(10);    // MUST for proper destruction of boost::threadpool 
+    sleep(20);    // MUST for proper destruction of boost::threadpool 
     spdlog::shutdown();
     return 0;
 }

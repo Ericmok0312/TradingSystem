@@ -267,12 +267,18 @@ X_VCPKG_APPLOCAL_DEPS_SERIALIZED:BOOL=OFF
 //Path to a program.
 Z_VCPKG_CL:FILEPATH=Z_VCPKG_CL-NOTFOUND
 
+//The directory containing a CMake configuration file for ZeroMQ.
+ZeroMQ_DIR:PATH=/home/emk/vcpkg/installed/x64-linux/share/zeromq
+
 //The directory which contains the installed libraries for each
 // triplet
 _VCPKG_INSTALLED_DIR:PATH=/home/emk/vcpkg/installed
 
 //The directory containing a CMake configuration file for boost.
 boost_DIR:PATH=boost_DIR-NOTFOUND
+
+//The directory containing a CMake configuration file for cppzmq.
+cppzmq_DIR:PATH=/home/emk/vcpkg/installed/x64-linux/share/cppzmq
 
 //Path to a library.
 jsoncpp:FILEPATH=jsoncpp-NOTFOUND

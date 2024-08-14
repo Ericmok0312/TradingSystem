@@ -59,7 +59,7 @@ namespace ts{
         
         LMDBKey key (nquote->exg_, nquote->code_, nquote->updateTimestamp_);
         
-        if(!query.put_and_commit(move(key.getString()), move(nquote->getString()))){
+        if(!query.put_and_commit(move(key.getString()), move(nquote->getString(1)))){
             logger_->error(fmt::format("wrtie tick of {} error {}", nquote->code_, db->errmsg()).c_str());
         }
 

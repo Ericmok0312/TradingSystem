@@ -52,7 +52,7 @@ namespace ts{
 
         while(estate_.load() != STOP){
             std::shared_ptr<Msg> msg;
-            msg = messenger_->recv(NNG_FLAG_ALLOC);
+            msg = messenger_->recv(0);
             if(msg && msg->destination_=="DataManager"){
                 this->AddTask(std::bind(&DataManager::processMsg, this, placeholders::_1), msg);
             }
@@ -112,7 +112,7 @@ namespace ts{
 
     void DataManager::sendData(string&& address, string&& des){
         shared_ptr<Msg> msg = make_shared<Msg>(move(des), "DataManager", MSG_TYPE_GET_QUOTE_RESPONSE, move(address));
-        messenger_->send(msg, NNG_FLAG_ALLOC);
+        messenger_->send(msg, 0);
     }
 
 

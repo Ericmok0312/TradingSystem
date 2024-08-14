@@ -362,8 +362,30 @@ CMakeFiles/test.dir/main.cpp.o: main.cpp \
   /usr/include/c++/8/sstream \
   /usr/include/c++/8/bits/sstream.tcc \
   /usr/include/c++/8/iostream \
-  libs/nng-1.8.0/include/nng/nng.h \
-  /usr/lib/gcc/x86_64-linux-gnu/8/include/stdbool.h \
+  /home/emk/vcpkg/installed/x64-linux/include/zmq.hpp \
+  /home/emk/vcpkg/installed/x64-linux/include/zmq.h \
+  /usr/include/signal.h \
+  /usr/include/x86_64-linux-gnu/bits/signum.h \
+  /usr/include/x86_64-linux-gnu/bits/signum-generic.h \
+  /usr/include/x86_64-linux-gnu/bits/types/sig_atomic_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__sigval_t.h \
+  /usr/include/x86_64-linux-gnu/bits/siginfo-arch.h \
+  /usr/include/x86_64-linux-gnu/bits/siginfo-consts.h \
+  /usr/include/x86_64-linux-gnu/bits/siginfo-consts-arch.h \
+  /usr/include/x86_64-linux-gnu/bits/types/sigval_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/sigevent_t.h \
+  /usr/include/x86_64-linux-gnu/bits/sigevent-consts.h \
+  /usr/include/x86_64-linux-gnu/bits/sigaction.h \
+  /usr/include/x86_64-linux-gnu/bits/sigcontext.h \
+  /usr/include/x86_64-linux-gnu/bits/types/stack_t.h \
+  /usr/include/x86_64-linux-gnu/sys/ucontext.h \
+  /usr/include/x86_64-linux-gnu/bits/sigstack.h \
+  /usr/include/x86_64-linux-gnu/bits/ss_flags.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_sigstack.h \
+  /usr/include/x86_64-linux-gnu/bits/sigthread.h \
+  /usr/include/c++/8/iomanip \
+  /usr/include/c++/8/bits/quoted_string.h \
   libs/boost/thread/thread.hpp \
   libs/boost/thread/thread_only.hpp \
   libs/boost/thread/detail/platform.hpp \
@@ -1041,26 +1063,6 @@ CMakeFiles/test.dir/main.cpp.o: main.cpp \
   libs/futu/include/google/protobuf/stubs/port.h \
   libs/futu/include/google/protobuf/stubs/platform_macros.h \
   /usr/include/x86_64-linux-gnu/sys/param.h \
-  /usr/include/signal.h \
-  /usr/include/x86_64-linux-gnu/bits/signum.h \
-  /usr/include/x86_64-linux-gnu/bits/signum-generic.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sig_atomic_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__sigval_t.h \
-  /usr/include/x86_64-linux-gnu/bits/siginfo-arch.h \
-  /usr/include/x86_64-linux-gnu/bits/siginfo-consts.h \
-  /usr/include/x86_64-linux-gnu/bits/siginfo-consts-arch.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sigval_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sigevent_t.h \
-  /usr/include/x86_64-linux-gnu/bits/sigevent-consts.h \
-  /usr/include/x86_64-linux-gnu/bits/sigaction.h \
-  /usr/include/x86_64-linux-gnu/bits/sigcontext.h \
-  /usr/include/x86_64-linux-gnu/bits/types/stack_t.h \
-  /usr/include/x86_64-linux-gnu/sys/ucontext.h \
-  /usr/include/x86_64-linux-gnu/bits/sigstack.h \
-  /usr/include/x86_64-linux-gnu/bits/ss_flags.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_sigstack.h \
-  /usr/include/x86_64-linux-gnu/bits/sigthread.h \
   /usr/include/x86_64-linux-gnu/bits/param.h \
   /usr/include/linux/param.h \
   /usr/include/x86_64-linux-gnu/asm/param.h \
@@ -2379,8 +2381,10 @@ CMakeFiles/test.dir/src/DataManager/DataManager.cpp.o: src/DataManager/DataManag
   libs/boost/chrono/floor.hpp \
   libs/boost/chrono/round.hpp \
   src/Interface/IMessenger.h \
-  libs/nng-1.8.0/include/nng/nng.h \
-  /usr/lib/gcc/x86_64-linux-gnu/8/include/stdbool.h \
+  /home/emk/vcpkg/installed/x64-linux/include/zmq.hpp \
+  /home/emk/vcpkg/installed/x64-linux/include/zmq.h \
+  /usr/include/c++/8/iomanip \
+  /usr/include/c++/8/bits/quoted_string.h \
   src/Interface/IEngine.h \
   src/DataManager/DataWriter.h \
   src/DataManager/tslmdb.hpp \
@@ -5403,21 +5407,8 @@ CMakeFiles/test.dir/src/FUTU/FutuEngine.cpp.o: src/FUTU/FutuEngine.cpp \
   libs/spdlog-1.14.1/include/spdlog/sinks/base_sink.h \
   libs/spdlog-1.14.1/include/spdlog/sinks/base_sink-inl.h \
   libs/spdlog-1.14.1/include/spdlog/sinks/basic_file_sink-inl.h \
-  libs/nng-1.8.0/include/nng/nng.h \
-  /usr/lib/gcc/x86_64-linux-gnu/8/include/stdbool.h \
-  src/Interface/IEngine.h \
-  libs/futu/include/futu/FTAPI.h \
-  libs/futu/include/futu/FTAPI_Define.h \
-  libs/futu/include/futu/Include_Proto.h \
-  libs/futu/include/Proto/Common.pb.h \
-  libs/futu/include/google/protobuf/stubs/common.h \
-  /usr/include/c++/8/set \
-  /usr/include/c++/8/bits/stl_set.h \
-  /usr/include/c++/8/bits/stl_multiset.h \
-  libs/futu/include/google/protobuf/stubs/port.h \
-  /usr/include/c++/8/stdlib.h \
-  libs/futu/include/google/protobuf/stubs/platform_macros.h \
-  /usr/include/x86_64-linux-gnu/sys/param.h \
+  /home/emk/vcpkg/installed/x64-linux/include/zmq.hpp \
+  /home/emk/vcpkg/installed/x64-linux/include/zmq.h \
   /usr/include/signal.h \
   /usr/include/x86_64-linux-gnu/bits/signum.h \
   /usr/include/x86_64-linux-gnu/bits/signum-generic.h \
@@ -5438,6 +5429,21 @@ CMakeFiles/test.dir/src/FUTU/FutuEngine.cpp.o: src/FUTU/FutuEngine.cpp \
   /usr/include/x86_64-linux-gnu/bits/ss_flags.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_sigstack.h \
   /usr/include/x86_64-linux-gnu/bits/sigthread.h \
+  /usr/include/c++/8/iomanip \
+  /usr/include/c++/8/bits/quoted_string.h \
+  src/Interface/IEngine.h \
+  libs/futu/include/futu/FTAPI.h \
+  libs/futu/include/futu/FTAPI_Define.h \
+  libs/futu/include/futu/Include_Proto.h \
+  libs/futu/include/Proto/Common.pb.h \
+  libs/futu/include/google/protobuf/stubs/common.h \
+  /usr/include/c++/8/set \
+  /usr/include/c++/8/bits/stl_set.h \
+  /usr/include/c++/8/bits/stl_multiset.h \
+  libs/futu/include/google/protobuf/stubs/port.h \
+  /usr/include/c++/8/stdlib.h \
+  libs/futu/include/google/protobuf/stubs/platform_macros.h \
+  /usr/include/x86_64-linux-gnu/sys/param.h \
   /usr/include/x86_64-linux-gnu/bits/param.h \
   /usr/include/linux/param.h \
   /usr/include/x86_64-linux-gnu/asm/param.h \
@@ -6673,8 +6679,30 @@ CMakeFiles/test.dir/src/Interface/IEngine.cpp.o: src/Interface/IEngine.cpp \
   libs/spdlog-1.14.1/include/spdlog/sinks/base_sink-inl.h \
   libs/spdlog-1.14.1/include/spdlog/sinks/basic_file_sink-inl.h \
   src/Interface/IMessenger.h \
-  libs/nng-1.8.0/include/nng/nng.h \
-  /usr/lib/gcc/x86_64-linux-gnu/8/include/stdbool.h
+  /home/emk/vcpkg/installed/x64-linux/include/zmq.hpp \
+  /home/emk/vcpkg/installed/x64-linux/include/zmq.h \
+  /usr/include/signal.h \
+  /usr/include/x86_64-linux-gnu/bits/signum.h \
+  /usr/include/x86_64-linux-gnu/bits/signum-generic.h \
+  /usr/include/x86_64-linux-gnu/bits/types/sig_atomic_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__sigval_t.h \
+  /usr/include/x86_64-linux-gnu/bits/siginfo-arch.h \
+  /usr/include/x86_64-linux-gnu/bits/siginfo-consts.h \
+  /usr/include/x86_64-linux-gnu/bits/siginfo-consts-arch.h \
+  /usr/include/x86_64-linux-gnu/bits/types/sigval_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/sigevent_t.h \
+  /usr/include/x86_64-linux-gnu/bits/sigevent-consts.h \
+  /usr/include/x86_64-linux-gnu/bits/sigaction.h \
+  /usr/include/x86_64-linux-gnu/bits/sigcontext.h \
+  /usr/include/x86_64-linux-gnu/bits/types/stack_t.h \
+  /usr/include/x86_64-linux-gnu/sys/ucontext.h \
+  /usr/include/x86_64-linux-gnu/bits/sigstack.h \
+  /usr/include/x86_64-linux-gnu/bits/ss_flags.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_sigstack.h \
+  /usr/include/x86_64-linux-gnu/bits/sigthread.h \
+  /usr/include/c++/8/iomanip \
+  /usr/include/c++/8/bits/quoted_string.h
 
 CMakeFiles/test.dir/src/Interface/IMessenger.cpp.o: src/Interface/IMessenger.cpp \
   /usr/include/stdc-predef.h \
@@ -7037,18 +7065,8 @@ CMakeFiles/test.dir/src/Interface/IMessenger.cpp.o: src/Interface/IMessenger.cpp
   /usr/include/c++/8/sstream \
   /usr/include/c++/8/bits/sstream.tcc \
   /usr/include/c++/8/iostream \
-  libs/nng-1.8.0/include/nng/nng.h \
-  /usr/lib/gcc/x86_64-linux-gnu/8/include/stdbool.h \
-  src/Interface/datastructure.h \
-  src/Helper/util.h \
-  libs/futu/include/google/protobuf/stubs/common.h \
-  /usr/include/c++/8/set \
-  /usr/include/c++/8/bits/stl_set.h \
-  /usr/include/c++/8/bits/stl_multiset.h \
-  libs/futu/include/google/protobuf/stubs/port.h \
-  /usr/include/c++/8/stdlib.h \
-  libs/futu/include/google/protobuf/stubs/platform_macros.h \
-  /usr/include/x86_64-linux-gnu/sys/param.h \
+  /home/emk/vcpkg/installed/x64-linux/include/zmq.hpp \
+  /home/emk/vcpkg/installed/x64-linux/include/zmq.h \
   /usr/include/signal.h \
   /usr/include/x86_64-linux-gnu/bits/signum.h \
   /usr/include/x86_64-linux-gnu/bits/signum-generic.h \
@@ -7069,6 +7087,18 @@ CMakeFiles/test.dir/src/Interface/IMessenger.cpp.o: src/Interface/IMessenger.cpp
   /usr/include/x86_64-linux-gnu/bits/ss_flags.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_sigstack.h \
   /usr/include/x86_64-linux-gnu/bits/sigthread.h \
+  /usr/include/c++/8/iomanip \
+  /usr/include/c++/8/bits/quoted_string.h \
+  src/Interface/datastructure.h \
+  src/Helper/util.h \
+  libs/futu/include/google/protobuf/stubs/common.h \
+  /usr/include/c++/8/set \
+  /usr/include/c++/8/bits/stl_set.h \
+  /usr/include/c++/8/bits/stl_multiset.h \
+  libs/futu/include/google/protobuf/stubs/port.h \
+  /usr/include/c++/8/stdlib.h \
+  libs/futu/include/google/protobuf/stubs/platform_macros.h \
+  /usr/include/x86_64-linux-gnu/sys/param.h \
   /usr/include/x86_64-linux-gnu/bits/param.h \
   /usr/include/linux/param.h \
   /usr/include/x86_64-linux-gnu/asm/param.h \
@@ -7494,11 +7524,7 @@ CMakeFiles/test.dir/src/Interface/IMessenger.cpp.o: src/Interface/IMessenger.cpp
   libs/boost/chrono/io/utility/to_string.hpp \
   libs/boost/chrono/ceil.hpp \
   libs/boost/chrono/floor.hpp \
-  libs/boost/chrono/round.hpp \
-  libs/nng-1.8.0/include/nng/protocol/pubsub0/pub.h \
-  libs/nng-1.8.0/include/nng/protocol/pubsub0/sub.h \
-  libs/nng-1.8.0/include/nng/protocol/pipeline0/pull.h \
-  libs/nng-1.8.0/include/nng/protocol/pipeline0/push.h
+  libs/boost/chrono/round.hpp
 
 CMakeFiles/test.dir/src/Interface/datastruture.cpp.o: src/Interface/datastruture.cpp \
   /usr/include/stdc-predef.h \
@@ -8241,53 +8267,13 @@ CMakeFiles/test.dir/src/Interface/datastruture.cpp.o: src/Interface/datastruture
   /usr/lib/gcc/x86_64-linux-gnu/8/include/stdbool.h
 
 
+libs/nng-1.8.0/include/nng/nng.h:
+
 src/Interface/datastruture.cpp:
-
-libs/nng-1.8.0/include/nng/protocol/pipeline0/push.h:
-
-libs/nng-1.8.0/include/nng/protocol/pipeline0/pull.h:
-
-libs/nng-1.8.0/include/nng/protocol/pubsub0/pub.h:
 
 src/Helper/logger.cpp:
 
 src/FUTU/FutuEngine.cpp:
-
-libs/boost/numeric/conversion/sign_mixture_enum.hpp:
-
-libs/futu/include/Proto/Qot_GetWarrant.pb.h:
-
-libs/boost/type_traits/make_unsigned.hpp:
-
-libs/boost/numeric/conversion/detail/sign_mixture.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/siginfo-consts-arch.h:
-
-libs/boost/numeric/conversion/int_float_mixture_enum.hpp:
-
-libs/boost/date_time/posix_time/time_formatters.hpp:
-
-libs/boost/mpl/identity.hpp:
-
-libs/boost/mpl/aux_/preprocessed/gcc/and.hpp:
-
-/usr/include/x86_64-linux-gnu/sys/syscall.h:
-
-libs/boost/predef/compiler/sunpro.h:
-
-libs/boost/predef/library/std/sgi.h:
-
-libs/boost/smart_ptr/enable_shared_from_this.hpp:
-
-/usr/include/c++/8/bits/random.tcc:
-
-libs/boost/predef/compiler/iar.h:
-
-libs/boost/mpl/aux_/nested_type_wknd.hpp:
-
-libs/boost/mpl/aux_/is_msvc_eti_arg.hpp:
-
-libs/boost/thread/detail/delete.hpp:
 
 libs/boost/predef/library/std/dinkumware.h:
 
@@ -8298,10 +8284,6 @@ libs/boost/preprocessor/array/size.hpp:
 libs/boost/mpl/aux_/has_apply.hpp:
 
 libs/boost/mpl/apply_wrap.hpp:
-
-src/Interface/IEngine.cpp:
-
-libs/boost/mpl/multiplies.hpp:
 
 libs/boost/mpl/aux_/numeric_op.hpp:
 
@@ -8347,8 +8329,6 @@ libs/boost/preprocessor/control/expr_iif.hpp:
 
 libs/futu/include/Proto/GetUserInfo.pb.h:
 
-libs/boost/preprocessor/list/detail/fold_left.hpp:
-
 libs/boost/preprocessor/list/fold_left.hpp:
 
 libs/boost/preprocessor/empty.hpp:
@@ -8384,10 +8364,6 @@ libs/futu/include/Proto/Qot_GetUserSecurity.pb.h:
 libs/boost/range/difference_type.hpp:
 
 libs/boost/preprocessor/punctuation/comma.hpp:
-
-libs/boost/mpl/times.hpp:
-
-libs/boost/type_traits/has_trivial_constructor.hpp:
 
 libs/boost/preprocessor/config/limits.hpp:
 
@@ -8442,10 +8418,6 @@ libs/boost/predef/os/solaris.h:
 libs/boost/mpl/aux_/preprocessed/gcc/template_arity.hpp:
 
 libs/boost/mpl/if.hpp:
-
-libs/boost/numeric/conversion/udt_builtin_mixture_enum.hpp:
-
-libs/boost/iterator/is_iterator.hpp:
 
 libs/boost/type.hpp:
 
@@ -8508,6 +8480,12 @@ libs/futu/include/google/protobuf/stubs/casts.h:
 libs/boost/date_time/time_resolution_traits.hpp:
 
 libs/boost/mp11/utility.hpp:
+
+libs/boost/preprocessor/comparison/not_equal.hpp:
+
+/usr/include/c++/8/bits/ostream_insert.h:
+
+libs/spdlog-1.14.1/include/spdlog/details/periodic_worker-inl.h:
 
 libs/boost/date_time/special_defs.hpp:
 
@@ -8701,6 +8679,10 @@ libs/boost/range/detail/has_member_size.hpp:
 
 libs/boost/thread/detail/move.hpp:
 
+libs/boost/thread/detail/delete.hpp:
+
+libs/boost/mpl/aux_/is_msvc_eti_arg.hpp:
+
 libs/boost/thread/lock_options.hpp:
 
 libs/futu/include/google/protobuf/stubs/common.h:
@@ -8708,10 +8690,6 @@ libs/futu/include/google/protobuf/stubs/common.h:
 libs/boost/system/error_code.hpp:
 
 libs/boost/system/detail/interop_category.hpp:
-
-libs/boost/mpl/aux_/preprocessed/gcc/equal_to.hpp:
-
-libs/boost/system/api_config.hpp:
 
 libs/boost/mpl/aux_/config/dtp.hpp:
 
@@ -8769,15 +8747,13 @@ libs/boost/mpl/aux_/preprocessor/def_params_tail.hpp:
 
 libs/boost/move/detail/pointer_element.hpp:
 
-libs/boost/system/detail/throws.hpp:
-
 libs/boost/preprocessor/arithmetic/detail/is_minimum_number.hpp:
 
 libs/boost/detail/workaround.hpp:
 
-libs/boost/preprocessor/arithmetic/limits/inc_256.hpp:
-
 /usr/include/x86_64-linux-gnu/bits/sigthread.h:
+
+libs/boost/preprocessor/arithmetic/limits/inc_256.hpp:
 
 libs/boost/thread/detail/config.hpp:
 
@@ -8792,10 +8768,6 @@ libs/boost/date_time/date.hpp:
 libs/boost/config/requires_threads.hpp:
 
 libs/boost/circular_buffer.hpp:
-
-libs/boost/preprocessor/arithmetic/add.hpp:
-
-libs/boost/config/detail/cxx_composite.hpp:
 
 libs/boost/mpl/aux_/config/workaround.hpp:
 
@@ -8825,17 +8797,51 @@ libs/boost/predef/library/std/msl.h:
 
 libs/boost/thread/thread.hpp:
 
-libs/boost/preprocessor/comparison/not_equal.hpp:
+libs/boost/system/detail/throws.hpp:
 
-/usr/include/c++/8/bits/ostream_insert.h:
+/usr/include/x86_64-linux-gnu/bits/types/stack_t.h:
 
-libs/spdlog-1.14.1/include/spdlog/details/periodic_worker-inl.h:
+/usr/include/x86_64-linux-gnu/bits/sigaction.h:
 
-libs/nng-1.8.0/include/nng/nng.h:
+/usr/include/x86_64-linux-gnu/bits/wctype-wchar.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/sigval_t.h:
+
+libs/boost/preprocessor/list/detail/fold_left.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/siginfo-consts-arch.h:
+
+libs/boost/numeric/conversion/detail/sign_mixture.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/__sigval_t.h:
+
+/usr/include/asm-generic/errno.h:
+
+libs/boost/config/detail/cxx_composite.hpp:
+
+libs/boost/preprocessor/arithmetic/add.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/types/sig_atomic_t.h:
+
+/usr/include/x86_64-linux-gnu/bits/signum.h:
+
+/usr/include/x86_64-linux-gnu/c++/8/bits/os_defines.h:
+
+/home/emk/vcpkg/installed/x64-linux/include/zmq.h:
+
+/usr/include/c++/8/bits/locale_facets.tcc:
 
 libs/boost/preprocessor/logical/limits/bool_256.hpp:
 
 libs/boost/predef/hardware/simd/x86_amd/versions.h:
+
+libs/boost/preprocessor/array/elem.hpp:
+
+/usr/include/c++/8/bits/quoted_string.h:
+
+/usr/include/fcntl.h:
 
 /usr/include/c++/8/iostream:
 
@@ -8885,9 +8891,15 @@ libs/boost/preprocessor/identity.hpp:
 
 libs/futu/include/google/protobuf/stubs/atomic_sequence_num.h:
 
+/usr/include/c++/8/cassert:
+
 libs/boost/date_time/time.hpp:
 
 libs/boost/type_traits/is_copy_constructible.hpp:
+
+/usr/include/c++/8/iomanip:
+
+libs/boost/smart_ptr/detail/sp_counted_impl.hpp:
 
 libs/boost/date_time/time_facet.hpp:
 
@@ -8906,10 +8918,6 @@ libs/spdlog-1.14.1/include/spdlog/sinks/basic_file_sink.h:
 /usr/include/asm-generic/errno-base.h:
 
 libs/boost/mpl/void.hpp:
-
-/usr/include/asm-generic/errno.h:
-
-libs/boost/mpl/aux_/config/forwarding.hpp:
 
 libs/boost/date_time/date_clock_device.hpp:
 
@@ -8949,10 +8957,6 @@ libs/boost/preprocessor/comparison/less_equal.hpp:
 
 libs/boost/preprocessor/facilities/identity.hpp:
 
-libs/boost/numeric/conversion/detail/int_float_mixture.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h:
-
 libs/boost/smart_ptr/detail/spinlock_gcc_atomic.hpp:
 
 libs/boost/concept/assert.hpp:
@@ -8981,8 +8985,6 @@ libs/boost/predef/architecture/parisc.h:
 
 libs/boost/type_traits/has_plus_assign.hpp:
 
-/usr/include/c++/8/cassert:
-
 /usr/include/c++/8/cstdlib:
 
 libs/boost/mpl/aux_/config/msvc.hpp:
@@ -9000,8 +9002,6 @@ libs/futu/include/Proto/Qot_UpdateKL.pb.h:
 libs/boost/preprocessor/arithmetic/detail/is_maximum_number.hpp:
 
 libs/boost/type_traits/enable_if.hpp:
-
-/usr/include/c++/8/bits/locale_facets.tcc:
 
 /usr/include/x86_64-linux-gnu/c++/8/bits/c++io.h:
 
@@ -9211,6 +9211,8 @@ libs/futu/include/Proto/Qot_UpdateBasicQot.pb.h:
 
 /usr/include/c++/8/bits/refwrap.h:
 
+/usr/include/x86_64-linux-gnu/bits/sigevent-consts.h:
+
 libs/boost/predef/library/std.h:
 
 libs/spdlog-1.14.1/include/spdlog/sinks/base_sink-inl.h:
@@ -9293,10 +9295,6 @@ libs/boost/preprocessor/logical/compl.hpp:
 
 libs/boost/lexical_cast/bad_lexical_cast.hpp:
 
-libs/boost/algorithm/string/config.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/wchar.h:
-
 libs/boost/preprocessor/variadic/size.hpp:
 
 libs/futu/include/Proto/KeepAlive.pb.h:
@@ -9306,6 +9304,8 @@ libs/futu/include/Proto/KeepAlive.pb.h:
 /usr/include/c++/8/streambuf:
 
 libs/boost/chrono/config.hpp:
+
+libs/boost/mpl/aux_/preprocessed/gcc/bind_fwd.hpp:
 
 libs/boost/algorithm/string/sequence_traits.hpp:
 
@@ -9359,10 +9359,6 @@ libs/boost/system/system_error.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/waitstatus.h:
 
-/usr/include/x86_64-linux-gnu/c++/8/bits/os_defines.h:
-
-/usr/include/x86_64-linux-gnu/bits/signum.h:
-
 /usr/include/c++/8/backward/auto_ptr.h:
 
 libs/boost/predef/architecture/m68k.h:
@@ -9382,6 +9378,14 @@ libs/boost/predef/architecture/rs6k.h:
 libs/futu/include/google/protobuf/unknown_field_set.h:
 
 /usr/include/c++/8/bits/stl_algobase.h:
+
+/usr/include/c++/8/bits/stl_iterator_base_funcs.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/sigevent_t.h:
+
+/usr/include/libintl.h:
+
+/usr/include/c++/8/unordered_map:
 
 /usr/include/c++/8/chrono:
 
@@ -9409,13 +9413,11 @@ libs/boost/bind/detail/bind_mf2_cc.hpp:
 
 libs/boost/algorithm/string/detail/find_format_store.hpp:
 
+libs/spdlog-1.14.1/include/spdlog/sinks/sink.h:
+
+libs/boost/date_time/date_duration.hpp:
+
 libs/spdlog-1.14.1/include/spdlog/sinks/ansicolor_sink-inl.h:
-
-libs/boost/mpl/integral_c.hpp:
-
-libs/boost/lexical_cast/detail/converter_lexical.hpp:
-
-libs/boost/mpl/aux_/yes_no.hpp:
 
 src/DataManager/DataWriter.cpp:
 
@@ -9436,10 +9438,6 @@ libs/boost/range/detail/misc_concept.hpp:
 libs/boost/preprocessor/arithmetic/detail/is_1_number.hpp:
 
 libs/boost/config/compiler/gcc.hpp:
-
-libs/boost/container_hash/detail/hash_tuple_like.hpp:
-
-libs/spdlog-1.14.1/include/spdlog/fmt/fmt.h:
 
 libs/boost/type_traits/conditional.hpp:
 
@@ -9503,12 +9501,6 @@ libs/boost/config/abi_suffix.hpp:
 
 /usr/include/c++/8/exception:
 
-libs/boost/mpl/and.hpp:
-
-libs/boost/date_time/date_defs.hpp:
-
-libs/boost/preprocessor/comma_if.hpp:
-
 /usr/include/c++/8/iterator:
 
 /usr/include/c++/8/backward/binders.h:
@@ -9549,11 +9541,7 @@ libs/boost/mpl/aux_/template_arity_fwd.hpp:
 
 /usr/include/c++/8/bits/stl_iterator_base_types.h:
 
-libs/boost/mpl/aux_/arithmetic_op.hpp:
-
 libs/boost/mpl/aux_/has_tag.hpp:
-
-libs/nng-1.8.0/include/nng/protocol/pubsub0/sub.h:
 
 libs/rapidjson/include/rapidjson/document.h:
 
@@ -9596,6 +9584,12 @@ libs/futu/include/google/protobuf/generated_enum_reflection.h:
 libs/futu/include/Proto/Qot_GetOrderBook.pb.h:
 
 /usr/include/x86_64-linux-gnu/bits/stat.h:
+
+libs/boost/lexical_cast/detail/converter_lexical.hpp:
+
+libs/boost/mpl/aux_/yes_no.hpp:
+
+libs/boost/mpl/integral_c.hpp:
 
 /usr/include/c++/8/bits/std_function.h:
 
@@ -9737,12 +9731,6 @@ libs/rapidjson/include/rapidjson/writer.h:
 
 /usr/include/c++/8/experimental/string_view:
 
-libs/boost/mpl/aux_/largest_int.hpp:
-
-/home/emk/vcpkg/installed/x64-linux/include/json/json_features.h:
-
-src/DataManager/DataWriter.h:
-
 libs/boost/mpl/tag.hpp:
 
 /usr/include/c++/8/experimental/bits/lfts_config.h:
@@ -9752,6 +9740,8 @@ libs/boost/thread/cv_status.hpp:
 libs/spdlog-1.14.1/include/spdlog/fmt/bundled/format.h:
 
 libs/boost/thread/pthread/thread_data.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/sigcontext.h:
 
 /usr/include/c++/8/cstdint:
 
@@ -9801,10 +9791,6 @@ libs/boost/iterator/detail/config_def.hpp:
 
 /usr/include/x86_64-linux-gnu/c++/8/bits/time_members.h:
 
-/usr/include/x86_64-linux-gnu/bits/wctype-wchar.h:
-
-/usr/include/x86_64-linux-gnu/bits/sigaction.h:
-
 libs/boost/algorithm/string/detail/finder.hpp:
 
 libs/spdlog-1.14.1/include/spdlog/logger.h:
@@ -9830,14 +9816,6 @@ libs/boost/chrono/detail/system.hpp:
 libs/boost/numeric/conversion/converter.hpp:
 
 libs/boost/date_time/dst_rules.hpp:
-
-/usr/include/libintl.h:
-
-/usr/include/c++/8/unordered_map:
-
-/usr/include/c++/8/bits/stl_iterator_base_funcs.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/sigevent_t.h:
 
 /usr/include/c++/8/bits/locale_facets_nonio.tcc:
 
@@ -9867,8 +9845,6 @@ libs/boost/date_time/time_defs.hpp:
 
 libs/boost/ratio/detail/is_evenly_divisible_by.hpp:
 
-/usr/include/x86_64-linux-gnu/bits/types/stack_t.h:
-
 libs/boost/core/enable_if.hpp:
 
 /usr/include/c++/8/bits/memoryfwd.h:
@@ -9884,6 +9860,12 @@ libs/boost/filesystem/config.hpp:
 libs/boost/mpl/aux_/type_wrapper.hpp:
 
 /usr/include/c++/8/bits/hashtable.h:
+
+libs/futu/include/Proto/Trd_UnlockTrade.pb.h:
+
+/usr/include/x86_64-linux-gnu/bits/signum-generic.h:
+
+libs/boost/mpl/aux_/config/pp_counter.hpp:
 
 /usr/include/c++/8/bits/streambuf.tcc:
 
@@ -9947,25 +9929,29 @@ libs/spdlog-1.14.1/include/spdlog/pattern_formatter.h:
 
 libs/boost/preprocessor/seq/limits/fold_left_256.hpp:
 
-/usr/include/fcntl.h:
-
-libs/boost/preprocessor/array/elem.hpp:
-
-/usr/include/c++/8/bits/quoted_string.h:
-
 libs/boost/type_traits/remove_bounds.hpp:
 
 libs/boost/predef/os/haiku.h:
 
 /usr/include/x86_64-linux-gnu/bits/fcntl-linux.h:
 
-libs/boost/mpl/integral_c_fwd.hpp:
-
 /usr/include/x86_64-linux-gnu/bits/environments.h:
 
 libs/boost/algorithm/string/detail/case_conv.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/xopen_lim.h:
+
+/usr/include/x86_64-linux-gnu/sys/syscall.h:
+
+libs/boost/mpl/aux_/preprocessed/gcc/and.hpp:
+
+libs/boost/predef/compiler/sunpro.h:
+
+libs/boost/predef/library/std/sgi.h:
+
+libs/boost/smart_ptr/enable_shared_from_this.hpp:
+
+/usr/include/c++/8/bits/random.tcc:
 
 /usr/include/x86_64-linux-gnu/bits/syscall.h:
 
@@ -9974,8 +9960,6 @@ libs/boost/algorithm/string/detail/case_conv.hpp:
 libs/futu/include/google/protobuf/stubs/atomicops_internals_x86_gcc.h:
 
 /usr/include/c++/8/bits/stl_multimap.h:
-
-libs/boost/mpl/not.hpp:
 
 libs/spdlog-1.14.1/include/spdlog/sinks/ansicolor_sink.h:
 
@@ -10001,14 +9985,6 @@ libs/boost/thread/thread_only.hpp:
 
 libs/boost/core/detail/sp_thread_sleep.hpp:
 
-libs/boost/date_time/date_duration.hpp:
-
-libs/spdlog-1.14.1/include/spdlog/sinks/sink.h:
-
-libs/boost/smart_ptr/detail/sp_counted_impl.hpp:
-
-/usr/include/c++/8/iomanip:
-
 libs/boost/preprocessor/repetition/detail/limits/for_256.hpp:
 
 libs/rapidjson/include/rapidjson/internal/meta.h:
@@ -10025,7 +10001,75 @@ libs/boost/predef/compiler/ekopath.h:
 
 libs/boost/predef/compiler/metrowerks.h:
 
+libs/boost/mpl/aux_/config/forwarding.hpp:
+
+libs/spdlog-1.14.1/include/spdlog/fmt/fmt.h:
+
+libs/boost/container_hash/detail/hash_tuple_like.hpp:
+
+libs/boost/system/api_config.hpp:
+
+libs/boost/mpl/aux_/preprocessed/gcc/equal_to.hpp:
+
+libs/boost/mpl/not.hpp:
+
+libs/boost/mpl/aux_/nested_type_wknd.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/wchar.h:
+
+libs/boost/algorithm/string/config.hpp:
+
+libs/boost/date_time/date_defs.hpp:
+
+libs/boost/preprocessor/comma_if.hpp:
+
+libs/boost/mpl/and.hpp:
+
+libs/boost/predef/compiler/iar.h:
+
+libs/boost/mpl/identity.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h:
+
+libs/boost/numeric/conversion/detail/int_float_mixture.hpp:
+
+libs/boost/numeric/conversion/int_float_mixture_enum.hpp:
+
+libs/boost/date_time/posix_time/time_formatters.hpp:
+
+libs/boost/numeric/conversion/sign_mixture_enum.hpp:
+
+libs/futu/include/Proto/Qot_GetWarrant.pb.h:
+
+libs/boost/type_traits/make_unsigned.hpp:
+
+libs/boost/iterator/is_iterator.hpp:
+
+libs/boost/numeric/conversion/udt_builtin_mixture_enum.hpp:
+
+src/Interface/IEngine.cpp:
+
+libs/boost/mpl/multiplies.hpp:
+
+libs/boost/mpl/times.hpp:
+
+libs/boost/type_traits/has_trivial_constructor.hpp:
+
+libs/boost/mpl/aux_/arithmetic_op.hpp:
+
+libs/boost/mpl/integral_c_fwd.hpp:
+
+libs/boost/mpl/aux_/largest_int.hpp:
+
+/home/emk/vcpkg/installed/x64-linux/include/json/json_features.h:
+
+src/DataManager/DataWriter.h:
+
 libs/boost/mpl/aux_/preprocessor/default_params.hpp:
+
+libs/boost/utility/base_from_member.hpp:
+
+libs/boost/mpl/less.hpp:
 
 libs/boost/mpl/aux_/preprocessed/gcc/less.hpp:
 
@@ -10293,6 +10337,8 @@ libs/futu/include/Proto/Qot_Common.pb.h:
 
 /home/emk/vcpkg/installed/x64-linux/include/json/json.h:
 
+/home/emk/vcpkg/installed/x64-linux/include/zmq.hpp:
+
 libs/boost/predef/os/aix.h:
 
 libs/boost/iterator/iterator_adaptor.hpp:
@@ -10386,6 +10432,12 @@ libs/boost/type_traits/add_lvalue_reference.hpp:
 libs/boost/predef/hardware/simd/ppc/versions.h:
 
 libs/boost/predef/version.h:
+
+libs/boost/mpl/aux_/config/msvc_typename.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/siginfo-arch.h:
+
+libs/boost/mpl/logical.hpp:
 
 libs/boost/mpl/aux_/preprocessed/gcc/or.hpp:
 
@@ -10521,6 +10573,14 @@ libs/boost/system/detail/generic_category_message.hpp:
 
 libs/boost/iterator/detail/enable_if.hpp:
 
+/home/emk/vcpkg/installed/x64-linux/include/json/allocator.h:
+
+/usr/include/x86_64-linux-gnu/bits/sigstack.h:
+
+libs/boost/date_time/date_generators.hpp:
+
+libs/boost/mp11/detail/mp_is_list.hpp:
+
 libs/boost/mp11/detail/mp_is_value_list.hpp:
 
 libs/boost/mp11/detail/mp_rename.hpp:
@@ -10640,44 +10700,6 @@ libs/boost/preprocessor/seq/limits/enum_256.hpp:
 libs/futu/include/google/protobuf/stubs/bytestream.h:
 
 libs/boost/iterator/transform_iterator.hpp:
-
-libs/futu/include/Proto/Trd_UnlockTrade.pb.h:
-
-libs/boost/mpl/aux_/config/pp_counter.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/signum-generic.h:
-
-libs/boost/mpl/aux_/preprocessed/gcc/bind_fwd.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/types/sig_atomic_t.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/__sigval_t.h:
-
-libs/boost/mpl/aux_/config/msvc_typename.hpp:
-
-libs/boost/mpl/logical.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/siginfo-arch.h:
-
-/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/sigval_t.h:
-
-libs/boost/mpl/less.hpp:
-
-libs/boost/utility/base_from_member.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/sigevent-consts.h:
-
-/usr/include/x86_64-linux-gnu/bits/sigcontext.h:
-
-/home/emk/vcpkg/installed/x64-linux/include/json/allocator.h:
-
-libs/boost/date_time/date_generators.hpp:
-
-libs/boost/mp11/detail/mp_is_list.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/sigstack.h:
 
 libs/boost/predef/make.h:
 
@@ -10941,9 +10963,9 @@ libs/boost/move/algorithm.hpp:
 
 libs/boost/move/algo/move.hpp:
 
-libs/futu/include/Proto/Qot_GetCapitalFlow.pb.h:
-
 /usr/include/x86_64-linux-gnu/bits/byteswap.h:
+
+libs/futu/include/Proto/Qot_GetCapitalFlow.pb.h:
 
 libs/boost/iterator/interoperable.hpp:
 
@@ -11075,9 +11097,9 @@ libs/futu/include/Proto/Qot_GetFutureInfo.pb.h:
 
 libs/boost/filesystem/detail/footer.hpp:
 
-libs/boost/mpl/aux_/msvc_eti_base.hpp:
-
 libs/boost/system/detail/error_category.hpp:
+
+libs/boost/mpl/aux_/msvc_eti_base.hpp:
 
 libs/boost/smart_ptr/intrusive_ref_counter.hpp:
 

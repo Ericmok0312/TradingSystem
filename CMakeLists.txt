@@ -31,6 +31,7 @@ include(/home/emk/vcpkg/scripts/buildsystems/vcpkg.cmake)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -fsanitize=address")
 
 find_package(jsoncpp REQUIRED)
+find_package(cppzmq)
 
 
 include_directories(${PROJECT_SOURCE_DIR}/libs/spdlog-1.14.1/include)
@@ -56,3 +57,4 @@ target_link_libraries(test PRIVATE lmdb.a)
 target_link_libraries(test PRIVATE boost_filesystem.a)
 target_link_libraries(test PRIVATE boost_thread.a)
 target_link_libraries(test PRIVATE boost_chrono.a)
+target_link_libraries(test PRIVATE cppzmq)

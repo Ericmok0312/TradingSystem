@@ -303,20 +303,8 @@ CMakeFiles/test.dir/src/FUTU/FutuEngine.cpp.o: \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/sinks/base_sink.h \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/sinks/base_sink-inl.h \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/sinks/basic_file_sink-inl.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/nng-1.8.0/include/nng/nng.h \
- /usr/lib/gcc/x86_64-linux-gnu/8/include/stdbool.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/src/Interface/IEngine.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/futu/FTAPI.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/futu/FTAPI_Define.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/futu/Include_Proto.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/Proto/Common.pb.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/stubs/common.h \
- /usr/include/c++/8/set /usr/include/c++/8/bits/stl_set.h \
- /usr/include/c++/8/bits/stl_multiset.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/stubs/port.h \
- /usr/include/c++/8/stdlib.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/stubs/platform_macros.h \
- /usr/include/x86_64-linux-gnu/sys/param.h /usr/include/signal.h \
+ /home/emk/vcpkg/installed/x64-linux/include/zmq.hpp \
+ /home/emk/vcpkg/installed/x64-linux/include/zmq.h /usr/include/signal.h \
  /usr/include/x86_64-linux-gnu/bits/signum.h \
  /usr/include/x86_64-linux-gnu/bits/signum-generic.h \
  /usr/include/x86_64-linux-gnu/bits/types/sig_atomic_t.h \
@@ -336,6 +324,19 @@ CMakeFiles/test.dir/src/FUTU/FutuEngine.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/ss_flags.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_sigstack.h \
  /usr/include/x86_64-linux-gnu/bits/sigthread.h \
+ /usr/include/c++/8/iomanip /usr/include/c++/8/bits/quoted_string.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/src/Interface/IEngine.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/futu/FTAPI.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/futu/FTAPI_Define.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/futu/Include_Proto.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/Proto/Common.pb.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/stubs/common.h \
+ /usr/include/c++/8/set /usr/include/c++/8/bits/stl_set.h \
+ /usr/include/c++/8/bits/stl_multiset.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/stubs/port.h \
+ /usr/include/c++/8/stdlib.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/stubs/platform_macros.h \
+ /usr/include/x86_64-linux-gnu/sys/param.h \
  /usr/include/x86_64-linux-gnu/bits/param.h /usr/include/linux/param.h \
  /usr/include/x86_64-linux-gnu/asm/param.h \
  /usr/include/asm-generic/param.h /usr/include/byteswap.h \

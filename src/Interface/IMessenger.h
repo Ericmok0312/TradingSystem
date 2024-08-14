@@ -6,13 +6,12 @@
 #include <mutex>
 #include <memory>
 #include <string>
-#include <nng/nng.h>
-
+#include <zmq.hpp>
 
 #define PROXY_SERVER_URL "tcp://localhost:8888"
 
 using namespace std;
-
+using namespace zmq;
 namespace ts{
 
 /*
@@ -36,16 +35,18 @@ IMessenger
 */
 class IMessenger{
     protected:
-
+       
         std::shared_ptr<Logger> logger_;
 
+
     public:
+        
         IMessenger(const char*);
         virtual ~IMessenger();
-
-        virtual void send(std::shared_ptr<ts::Msg>, int32_t mode = 0) = 0;
-        virtual std::shared_ptr<Msg> recv(int32_t mode = 0) = 0;
-        virtual void relay() = 0;
+        
+        virtual void send(std::shared_ptr<ts::Msg>, int32_t mode = 0){};
+        virtual std::shared_ptr<Msg> recv(int32_t mode = 0) {return make_shared<Msg>();}
+        virtual void relay() {};
 
 };
 
@@ -71,13 +72,28 @@ IMsgq
 
 */
 
+class Context{
+        static context_t* ctx_;
+        static shared_ptr<Context> instance_;
+        shared_ptr<Logger> logger_;
+        static mutex getInstanceLock_;
+    public:
+
+        context_t* GetContext();
+        
+        static shared_ptr<Context> getInstance();
+        Context();
+        ~Context();
+
+};
+
 class IMsgq{
 
     protected:
         MSGQ_PROTOCOL protocol_;
         string url_;
         std::shared_ptr<Logger> logger_;
-
+        shared_ptr<Context> context_;
     public:
         IMsgq(MSGQ_PROTOCOL protocol, const string& url);
         virtual ~IMsgq();
@@ -118,12 +134,11 @@ MsgqNNG
 
 class MsgqNNG : public IMsgq {
     private:
-        
+        socket_t sock_;
 
     public:
-        nng_socket sock_ = NNG_SOCKET_INITIALIZER;
-        nng_listener Lid_ = NNG_LISTENER_INITIALIZER;
-        nng_dialer Did_ = NNG_DIALER_INITIALIZER;
+        
+
         MsgqNNG(MSGQ_PROTOCOL protocol, const string& url, bool binding = true);
         ~MsgqNNG();
 

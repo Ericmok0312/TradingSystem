@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { ServerRespond } from './DataStreamer';
 import Graph from './Graph';
 import './App.css';
+import { ServerResponse } from 'http';
 
 interface IState {
   data: ServerRespond[],
@@ -31,15 +32,16 @@ class App extends Component<{}, IState> {
       console.log('WebSocket connection established');
     };
 
-    this.socket.onmessage = (event) => {
+    this.socket.onmessage = ( (event) => {
       const data: ServerRespond[] = JSON.parse(event.data);
+      console.log("called")
       console.log(data);
       this.setState({
         data: data,
         showGraph: true,
       });
       console.log(data);
-    };
+    });
 
     this.socket.onclose = () => {
       console.log('WebSocket connection closed');
@@ -67,9 +69,9 @@ class App extends Component<{}, IState> {
   
 
   renderGraph() {
-    // if (this.state.showGraph) {
-    //   return <Graph data={this.state.data} />;
-    // }
+    if (this.state.showGraph) {
+      return <Graph data={this.state.data} />;
+    }
   }
 
   render() {

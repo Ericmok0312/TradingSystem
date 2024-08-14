@@ -300,17 +300,8 @@ CMakeFiles/test.dir/src/Interface/IMessenger.cpp.o: \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/stringbuffer.h \
  /usr/include/c++/8/sstream /usr/include/c++/8/bits/sstream.tcc \
  /usr/include/c++/8/iostream \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/nng-1.8.0/include/nng/nng.h \
- /usr/lib/gcc/x86_64-linux-gnu/8/include/stdbool.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/src/Interface/datastructure.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/src/Helper/util.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/stubs/common.h \
- /usr/include/c++/8/set /usr/include/c++/8/bits/stl_set.h \
- /usr/include/c++/8/bits/stl_multiset.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/stubs/port.h \
- /usr/include/c++/8/stdlib.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/stubs/platform_macros.h \
- /usr/include/x86_64-linux-gnu/sys/param.h /usr/include/signal.h \
+ /home/emk/vcpkg/installed/x64-linux/include/zmq.hpp \
+ /home/emk/vcpkg/installed/x64-linux/include/zmq.h /usr/include/signal.h \
  /usr/include/x86_64-linux-gnu/bits/signum.h \
  /usr/include/x86_64-linux-gnu/bits/signum-generic.h \
  /usr/include/x86_64-linux-gnu/bits/types/sig_atomic_t.h \
@@ -330,6 +321,16 @@ CMakeFiles/test.dir/src/Interface/IMessenger.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/ss_flags.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_sigstack.h \
  /usr/include/x86_64-linux-gnu/bits/sigthread.h \
+ /usr/include/c++/8/iomanip /usr/include/c++/8/bits/quoted_string.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/src/Interface/datastructure.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/src/Helper/util.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/stubs/common.h \
+ /usr/include/c++/8/set /usr/include/c++/8/bits/stl_set.h \
+ /usr/include/c++/8/bits/stl_multiset.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/stubs/port.h \
+ /usr/include/c++/8/stdlib.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/stubs/platform_macros.h \
+ /usr/include/x86_64-linux-gnu/sys/param.h \
  /usr/include/x86_64-linux-gnu/bits/param.h /usr/include/linux/param.h \
  /usr/include/x86_64-linux-gnu/asm/param.h \
  /usr/include/asm-generic/param.h /usr/include/byteswap.h \
@@ -752,8 +753,4 @@ CMakeFiles/test.dir/src/Interface/IMessenger.cpp.o: \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/chrono/io/utility/to_string.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/chrono/ceil.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/chrono/floor.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/chrono/round.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/nng-1.8.0/include/nng/protocol/pubsub0/pub.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/nng-1.8.0/include/nng/protocol/pubsub0/sub.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/nng-1.8.0/include/nng/protocol/pipeline0/pull.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/nng-1.8.0/include/nng/protocol/pipeline0/push.h
+ /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/chrono/round.hpp
