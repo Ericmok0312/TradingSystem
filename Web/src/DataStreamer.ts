@@ -16,7 +16,7 @@ export interface ServerRespond {
   turnover: number;
   turnoverRate: number;
   amplitude: number;
-  timestamp: bigint;
+  timestamp: number;
   sPrice: number;
   conSize: number;
   opInterest: bigint;

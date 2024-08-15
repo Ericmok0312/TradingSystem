@@ -34,8 +34,6 @@ class App extends Component<{}, IState> {
 
     this.socket.onmessage = ( (event) => {
       const data: ServerRespond[] = JSON.parse(event.data);
-      console.log("called")
-      console.log(data);
       this.setState({
         data: data,
         showGraph: true,
@@ -53,17 +51,11 @@ class App extends Component<{}, IState> {
   }
 
   requestData() {
-    let x = 0;
     const interval = setInterval(() => {
         if (this.socket) {
             this.socket.send("requestData");
         }
-        x++;
-        if (x >= 1000) {
-            clearInterval(interval);
-            console.log("clear interval");
-        }
-    }, 100);
+    },10);
 }
     
   

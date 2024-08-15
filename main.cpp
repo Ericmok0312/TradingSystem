@@ -21,7 +21,7 @@ using namespace ts;
             // if(!MsgqTSMessenger::msgq_server_){
             //     MsgqTSMessenger::msgq_server_  = std::make_unique<MsgqNNG>(MSGQ_PROTOCOL::PUB, PROXY_SERVER_URL);
             // }
-            sleep(10);
+            boost::this_thread::sleep_for(boost::chrono::seconds(10));
             std::shared_ptr<Logger> LOG = make_shared<Logger>("fun1");
             std::shared_ptr<Msg> msg = std::make_shared<Msg>();
             shared_ptr<MsgqTSMessenger> ms = MsgqTSMessenger::getInstance();
@@ -96,7 +96,10 @@ using namespace ts;
             Json2String(d, msg->data_);
             ms->send(msg, 0);  
 
-
+            code = "800000";
+            d["code"].SetString(code.data(), code.size(), d.GetAllocator());
+            Json2String(d, msg->data_);
+            ms->send(msg, 0);  
 
         }
 
@@ -271,7 +274,7 @@ using namespace ts;
         }
 
         void test_counter(){
-            boost::this_thread::sleep_for(boost::chrono::seconds(3000));
+            boost::this_thread::sleep_for(boost::chrono::minutes(10));
             
             shared_ptr<DataManager> de = DataManager::getInstance();
 
@@ -287,27 +290,27 @@ using namespace ts;
         }
 
         void test_reader(bool* indicator){
+            boost::this_thread::sleep_for(boost::chrono::seconds(20));
             std::shared_ptr<Msg> msg = std::make_shared<Msg>();
             shared_ptr<MsgqTSMessenger> ms = MsgqTSMessenger::getInstance();
             msg->msgtype_ = MSG_TYPE_GET_QUOTE_BLOCK;
             msg->source_ = "Tester";
             msg->destination_ = "DataManager";
             ARG arg;
-            msg->data_ = "FUTU^HSImain^100000^"+to_string(GetTimeStamp())+"^TesterReader";
             while(indicator){
-                msg->timestamp_ = GetTimeStamp();
+                msg->data_ = "FUTU^HSImain^5^"+to_string(GetTimeStamp())+"^TesterReader";
                 ms->send(msg, 0);
-                boost::this_thread::sleep_for(boost::chrono::seconds(1));
+                boost::this_thread::sleep_for(boost::chrono::milliseconds(300));
             }
         }
 
         void test_getData(bool* indicator){
             std::shared_ptr<Logger> LOG = make_shared<Logger>("GetData");
-            LOG->info("Calling getData");
             shared_ptr<MsgqTSMessenger> ms = MsgqTSMessenger::getInstance();
             std::shared_ptr<Msg> msg;
             std::shared_ptr<Msg> dataMsg = make_shared<Msg>();
             dataMsg->destination_ = "WebApp";
+            uint64_t last = 0;
             dataMsg->source_ = "Tester";
             dataMsg->msgtype_ = MSG_TYPE_DEBUG;
             while(indicator){
@@ -315,9 +318,12 @@ using namespace ts;
                 if(msg && strcmp(msg->destination_.c_str(),"TesterReader")==0){
                     QuoteSlice* ptr = reinterpret_cast<QuoteSlice*>(std::strtoull(msg->data_.c_str(), nullptr, 16));
                     for(int i=0; i<ptr->getCount(); i++){
-                        dataMsg->data_ = ptr->at(i)->getString(1);
-                        LOG->info(dataMsg->data_.c_str());
-                        ms->send(dataMsg, 0);
+                        LOG->warn(to_string(ptr->at(i)->updateTimestamp_).c_str());
+                        if(ptr->at(i)->updateTimestamp_ >= last){
+                            last = ptr->at(i)->updateTimestamp_;
+                            dataMsg->data_ = ptr->at(i)->getJson();
+                            ms->send(dataMsg, 0);
+                        }
                     }
                     delete ptr;
                 }

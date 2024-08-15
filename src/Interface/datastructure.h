@@ -390,7 +390,7 @@ namespace ts{
                 return move(ss.str());
             }
 
-            string getString(int a) const{
+            string getJson() const{
                 rapidjson::Document d;
                 d.SetObject();
 

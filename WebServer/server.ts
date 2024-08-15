@@ -1,7 +1,7 @@
 
 import express from 'express'
 import cors from 'cors';
-import { WebSocketServer } from 'ws';
+import { EventEmitter, WebSocketServer } from 'ws';
 import zmq from 'zeromq';
 
 
@@ -42,12 +42,48 @@ interface ServerRespond {
 const app = express();
 const PORT = 5000;
 
-let lastaccess = 0;
+
 
 app.use(cors()); // Enable CORS
 app.use(express.json()); // Parse JSON bodies
 
-let database: ServerRespond[] = [];
+
+
+
+class Queue<T> {
+    private items: T[] = [];
+
+    // Enqueue: Add an item to the end of the queue
+    enqueue(item: T): void {
+        this.items.push(item);
+    }
+
+    // Dequeue: Remove and return the item from the front of the queue
+    dequeue(): T | undefined {
+        return this.items.shift();
+    }
+
+    // Peek: Get the item at the front of the queue without removing it
+    peek(): T | undefined {
+        return this.items[0];
+    }
+
+    // Check if the queue is empty
+    isEmpty(): boolean {
+        return this.items.length === 0;
+    }
+
+    // Get the size of the queue
+    size(): number {
+        return this.items.length;
+    }
+
+    // Clear the queue
+    clear(): void {
+        this.items = [];
+    }
+}
+
 
 const server = app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
@@ -55,14 +91,26 @@ const server = app.listen(PORT, () => {
 
 const wss = new WebSocketServer({ server });
 
+const emitter = new EventEmitter();
+emitter.setMaxListeners(0);
+
+let database: Queue<ServerRespond> = new Queue<ServerRespond>;
+
+
 wss.on('connection', (ws) => {
     console.log("Client connected");
 
     ws.on('message', (message: string) => {
-        ws.send('['+JSON.stringify(database[lastaccess])+']');
-        lastaccess+=1;
-    });
+            if(!database.isEmpty()){
+                ws.send("["+JSON.stringify(database.dequeue())+"]");
+            }
+            else{
+                console.log("empty");
+            }
+        }
+    )
 });
+
 
 class DataReceiver {
     static API_URL: string = "tcp://localhost:8888";
@@ -80,7 +128,8 @@ class DataReceiver {
         this.sub.on('message', (msg:Buffer) => {
             const data = msg.toString().split('|');
                 const message = JSON.parse(data[3]); // Adjusted to parse the correct part
-                database.push(message);
+                database.enqueue(message);
+                console.log(message);
             }
         );
     }

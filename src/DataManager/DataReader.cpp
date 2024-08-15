@@ -41,7 +41,6 @@ namespace ts{
         strcat(temp, arg->code);
         uint32_t count = arg->count;
         QuoteList& quotelist = quote_cache_[temp];
-
         uint64_t last_access_time = 0;
         uint32_t reload_flag = 0;
         do
