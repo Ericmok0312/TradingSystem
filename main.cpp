@@ -13,7 +13,7 @@ using namespace ts;
 #include <DataManager/DataReader.h>
 #include <functional>
 #include <random>
-
+#include <Strategy/TradeUtil.hpp>
 
     class Tester{
     public:
@@ -329,6 +329,21 @@ using namespace ts;
                 }
             }
         }
+
+
+        void test_Loader(bool* indicator){
+            std::shared_ptr<Logger> LOG = make_shared<Logger>("Loader");
+            Loader<QuoteSlice> ld("HSImain", "FUTU", 5, LoaderType::QUOTE, indicator);
+            while(indicator){
+                if(ld.getCur()){
+                    const ts::Quote* temp = static_cast<const ts::Quote*>(ld.getCur());
+                    if(temp){
+                        LOG->info(temp->getJson().c_str());   
+                    }
+                }
+
+            }
+        }
         
 
         void run(){
@@ -346,12 +361,11 @@ using namespace ts;
             boost::thread thread_DataManager(bind(&Tester::test_DataManager, this));
             boost::thread thread_test_counter(bind(&Tester::test_counter, this));
             bool fg = true;
-            boost::thread thread_reader(bind(&Tester::test_reader,this, placeholders::_1), &fg);
-            boost::thread thread_getdata(bind(&Tester::test_getData,this, placeholders::_1), &fg);
+            //boost::thread thread_reader(bind(&Tester::test_reader,this, placeholders::_1), &fg);
+            //boost::thread thread_getdata(bind(&Tester::test_getData,this, placeholders::_1), &fg);
             //thread_get_from_Futu.join();
-
+            boost::thread thread_Loader(bind(&Tester::test_Loader,this, placeholders::_1), &fg);
             //thread_run_FUTU.join();
-   
             thread_test_counter.join();
             fg = false;
  

@@ -1279,7 +1279,9 @@ CMakeFiles/test.dir/main.cpp.o: main.cpp \
   /usr/include/x86_64-linux-gnu/c++/8/bits/opt_random.h \
   /usr/include/c++/8/bits/random.tcc \
   /usr/include/c++/8/numeric \
-  /usr/include/c++/8/bits/stl_numeric.h
+  /usr/include/c++/8/bits/stl_numeric.h \
+  src/Strategy/TradeUtil.hpp \
+  src/Strategy/TradeUtil.h
 
 CMakeFiles/test.dir/src/DataManager/DataManager.cpp.o: src/DataManager/DataManager.cpp \
   /usr/include/stdc-predef.h \
@@ -8275,6 +8277,8 @@ src/Helper/logger.cpp:
 
 src/FUTU/FutuEngine.cpp:
 
+libs/boost/date_time/time_facet.hpp:
+
 libs/boost/predef/library/std/dinkumware.h:
 
 libs/boost/mpl/aux_/config/use_preprocessed.hpp:
@@ -8900,8 +8904,6 @@ libs/boost/type_traits/is_copy_constructible.hpp:
 /usr/include/c++/8/iomanip:
 
 libs/boost/smart_ptr/detail/sp_counted_impl.hpp:
-
-libs/boost/date_time/time_facet.hpp:
 
 /usr/include/c++/8/bits/functional_hash.h:
 
@@ -9774,6 +9776,10 @@ libs/boost/preprocessor/array/data.hpp:
 libs/boost/predef/library/std/cxx.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/8/include-fixed/syslimits.h:
+
+libs/boost/algorithm/string/erase.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/sysmacros.h:
 
 /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h:
 
@@ -10801,10 +10807,6 @@ libs/boost/filesystem/directory.hpp:
 
 libs/futu/include/Proto/InitConnect.pb.h:
 
-/usr/include/x86_64-linux-gnu/bits/sysmacros.h:
-
-libs/boost/algorithm/string/erase.hpp:
-
 libs/futu/include/Proto/GetDelayStatistics.pb.h:
 
 libs/futu/include/Proto/GetGlobalState.pb.h:
@@ -11016,6 +11018,14 @@ libs/boost/mpl/protect.hpp:
 /usr/include/x86_64-linux-gnu/bits/types/time_t.h:
 
 /usr/include/c++/8/bits/stl_numeric.h:
+
+src/Strategy/TradeUtil.hpp:
+
+src/Strategy/TradeUtil.h:
+
+src/DataManager/tslmdb.hpp:
+
+libs/boost/container/detail/std_fwd.hpp:
 
 src/DataManager/FutuParser.h:
 
@@ -11240,10 +11250,6 @@ libs/boost/container_hash/is_tuple_like.hpp:
 libs/boost/integer_fwd.hpp:
 
 libs/boost/lexical_cast/detail/widest_char.hpp:
-
-src/DataManager/tslmdb.hpp:
-
-libs/boost/container/detail/std_fwd.hpp:
 
 libs/boost/lexical_cast/detail/converter_lexical_streams.hpp:
 

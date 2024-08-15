@@ -123,6 +123,13 @@ namespace ts{
     };
 
 
+
+    enum class LoaderType{
+        QUOTE = 0,
+        KLINE = 1,
+        TICKER = 2
+    };
+
     enum SubType:int32_t{
         TICKER = 0,
         KLINE_1MIN = 1,

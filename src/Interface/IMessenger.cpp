@@ -97,6 +97,11 @@ namespace ts{
         return zmq::socket_type::sub;
     }
 
+
+    socket_t* MsgqNNG::getSocket(){
+        return &(this->sock_);
+    }
+
     MsgqNNG::MsgqNNG(MSGQ_PROTOCOL protocol,const string& url, bool binding):IMsgq(protocol, url), sock_(*context_->GetContext(), getSockType(protocol)){
         int svalid = 0;
         switch(protocol_){
@@ -348,6 +353,17 @@ namespace ts{
         return instance_;
     }
     void MsgqTSMessenger::relay(){}; // relay function will not be called in MsgqTSMessenger
+    
+    
+    void MsgqTSMessenger::setSubscribe(const char * topic){
+        socket_t* sk = static_cast<MsgqNNG*>(this->msgq_receiver_.get())->getSocket();
+        sk->set(zmq::sockopt::subscribe, topic);
+    }
+    
+    
+    
+    
+    
     //End of MsgqTSMessenger
 
     //

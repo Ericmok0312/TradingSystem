@@ -142,6 +142,7 @@ class MsgqNNG : public IMsgq {
         MsgqNNG(MSGQ_PROTOCOL protocol, const string& url, bool binding = true);
         ~MsgqNNG();
 
+        socket_t* getSocket();
         
         virtual void sendmsg(const string& str, int32_t flag) override;
         virtual void sendmsg(char* str, int32_t flag) override;
@@ -203,7 +204,7 @@ class MsgqTSMessenger : public IMessenger {
     std::unique_ptr<IMsgq> msgq_receiver_;
 
  public:
-
+    void setSubscribe(const char* topic);
     static mutex sendlock_;
     static std::unique_ptr<IMsgq> msgq_server_;
     static std::mutex instancelock_;

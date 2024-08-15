@@ -1,7 +1,10 @@
 #ifndef SRC_STRATEGY_TRADEUTIL_H
 #define SRC_STARTEGY_TRADEUTIL_H
 
-#include "datastructure.h"
+#include "Interface/datastructure.h"
+#include "Interface/IMessenger.h"
+#include "atomic"
+#include "mutex"
 
 namespace ts{
 
@@ -17,26 +20,36 @@ namespace ts{
     3. 
 
     */
+    template<typename T>
     class Loader{
         private:
-            BaseData* data_; 
+            T* data_; 
             int size_;
             string code_;
             string exg_;
             string name_;
-            static atomic<int> loadercount_{0};
+            static std::atomic<int> loadercount_;
+            shared_ptr<MsgqTSMessenger> messenger_;
+            const BaseData* last_data_;
+            int frequency_;
+            LoaderType type_;
+            void regRequest();
+            void recvProcess();
+            std::mutex mutexData_;
+            bool* state_;
+
+
         public:
-            Loader(const char* code, const char* exg, int size){
-                
-            }
+            Loader(const char* code, const char* exg, int size, LoaderType type, bool* state, int freq = 300);
+            void run();
+            
+            const BaseData* getCur();
 
-    }
+            T* getSlice();
+
+
+    };
 }
-
-
-
-
-
 
 
 #endif
