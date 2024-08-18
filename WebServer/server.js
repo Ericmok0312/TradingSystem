@@ -49,6 +49,7 @@ emitter.setMaxListeners(0);
 let database = new Queue;
 wss.on('connection', (ws) => {
     console.log("Client connected");
+    const dr = new DataReceiver();
     ws.on('message', (message) => {
         if (!database.isEmpty()) {
             ws.send("[" + JSON.stringify(database.dequeue()) + "]");
@@ -67,13 +68,18 @@ class DataReceiver {
     }
     getData() {
         console.log("Constructing DataReceiver");
+        let last = BigInt(0);
+        let cprice = 0;
         this.sub.on('message', (msg) => {
             const data = msg.toString().split('|');
             const message = JSON.parse(data[3]); // Adjusted to parse the correct part
-            database.enqueue(message);
-            console.log(message);
+            if (message["updateTimestamp"] > last || message["updateTimestamp"] == message["updateTimestamp"] && message["cPrice"] != cprice) {
+                last = message["updateTimestamp"];
+                cprice = message["cPrice"];
+                database.enqueue(message);
+                console.log(message);
+            }
         });
     }
 }
 DataReceiver.API_URL = "tcp://localhost:8888";
-const dr = new DataReceiver();

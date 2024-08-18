@@ -34,11 +34,12 @@ namespace ts{
 
     template<typename T>
     void Loader<T>::regRequest(){
+        shared_ptr<Msg> msg = make_shared<Msg>();
+        msg->destination_ = move("DataManager");
+        msg->source_ = this->name_;
+        msg->msgtype_ = MSG_TYPE_GET_QUOTE_BLOCK;
         while(*state_){
-            shared_ptr<Msg> msg = make_shared<Msg>();
-            msg->destination_ = move("DataManager");
-            msg->source_ = this->name_;
-            msg->msgtype_ = MSG_TYPE_GET_QUOTE_BLOCK;
+            
             stringstream ss;
             ss<<exg_<<"^"<<code_<<"^"<<size_<<"^"<<to_string(GetTimeStamp())<<"^"<<name_;
             msg->data_ = move(ss.str());
@@ -70,15 +71,20 @@ namespace ts{
     code_(code), 
     exg_(exg), 
     name_("loader_"+move(getTypeName(type))+to_string(loadercount_.load())),
-    last_data_(nullptr),
     frequency_(freq), 
     messenger_(MsgqTSMessenger::getInstance()), 
-    type_(type), 
+    type_(type),
     state_(state),
+    lprice_(0.0),
     mutexData_(){
         run();
     }
 
+    template<typename T>
+    Loader<T>::~Loader(){
+        delete data_;
+        data_ = nullptr;
+    }
 
 
     template<typename T>
@@ -94,11 +100,15 @@ namespace ts{
     const BaseData* Loader<T>::getCur(){
         std::lock_guard<std::mutex> lg(mutexData_);
         if(data_ && data_->getCount() > 0){
-        if(last_data_ != data_->at(data_->getCount()-1)){
-            last_data_ = data_->at(data_->getCount()-1);
+            if(data_->at(data_->at(data_->getCount()-1)->cPrice_ != lprice_)){
+                lprice_ = data_->at(data_->getCount()-1)->cPrice_;       
+                return data_->at(data_->getCount()-1);
+        }
+        else{
+            cout<<lprice_<<endl;
         }
         }
-        return last_data_;
+        return nullptr;
     }
 
     template<typename T>

@@ -30,18 +30,18 @@ namespace ts{
             string name_;
             static std::atomic<int> loadercount_;
             shared_ptr<MsgqTSMessenger> messenger_;
-            const BaseData* last_data_;
+            double lprice_;
             int frequency_;
             LoaderType type_;
             void regRequest();
             void recvProcess();
             std::mutex mutexData_;
             bool* state_;
-
+            void run();
 
         public:
-            Loader(const char* code, const char* exg, int size, LoaderType type, bool* state, int freq = 300);
-            void run();
+            Loader(const char* code, const char* exg, int size, LoaderType type, bool* state, int freq = 100);
+            ~Loader();
             
             const BaseData* getCur();
 

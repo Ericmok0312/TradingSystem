@@ -46,7 +46,7 @@ namespace ts{
 
 
     IMsgq::~IMsgq(){
-        logger_->info("Destructing IMsgq");
+        //logger_->info("Destructing IMsgq");
     };    //default destructor
 
 
@@ -145,8 +145,13 @@ namespace ts{
     */
 
     MsgqNNG::~MsgqNNG(){
-        sock_.close();
-        logger_->info("Destructing MsgqNNG");
+        //sock_.close();
+        if(sock_.get(zmq::sockopt::socket_type) == zmq::socket_type::pub){
+            logger_->info("Publisher destructed");
+        }
+        else{
+            logger_->info("Destructing MsgqNNG");
+        }
     }
 
 
@@ -169,7 +174,7 @@ namespace ts{
                 throw std::runtime_error("NNG send msg error");
             }
         }catch(const zmq::error_t& e) {
-            logger_->warn(fmt::format("NNG send msg error: {}", e.what()).c_str());
+            logger_->warn("NNG send msg error");
         }
         }
           
@@ -266,19 +271,19 @@ namespace ts{
 
 
     void MsgqRMessenger::relay(){
-        string msgpull = msgq_receiver_->recmsg(0);
-        if(msgpull.empty()){
-            return;
-        }
+        // string msgpull = msgq_receiver_->recmsg(0);
+        // if(msgpull.empty()){
+        //     return;
+        // }
 
-        if(msgpull[0] == RELAY_DESTINATION){
-            lock_guard<std::mutex> lock (MsgqTSMessenger::sendlock_);
-            MsgqTSMessenger::msgq_server_ -> sendmsg(msgpull);
-        }
-        else{
-            lock_guard<std::mutex> lock (MsgqRMessenger::sendlock_);
-            MsgqRMessenger::msgq_server_ -> sendmsg(msgpull);
-        }
+        // if(msgpull[0] == RELAY_DESTINATION){
+        //     lock_guard<std::mutex> lock (MsgqTSMessenger::sendlock_);
+        //     MsgqTSMessenger::msgq_server_ -> sendmsg(msgpull);
+        // }
+        // else{
+        //     lock_guard<std::mutex> lock (MsgqRMessenger::sendlock_);
+        //     MsgqRMessenger::msgq_server_ -> sendmsg(msgpull);
+        // }
 
     }
 
@@ -287,7 +292,7 @@ namespace ts{
     //Start of MsgqTSMessenger
     std::mutex MsgqTSMessenger::sendlock_; //initialize sendlock_
 
-    std::unique_ptr<IMsgq> MsgqTSMessenger::msgq_server_ = nullptr; //initialize msgq_server_
+    //std::shared_ptr<IMsgq> MsgqTSMessenger::msgq_server_;
 
     shared_ptr<MsgqTSMessenger> MsgqTSMessenger::instance_ = nullptr;
 
@@ -297,7 +302,7 @@ namespace ts{
     MsgqTSMessenger::MsgqTSMessenger(const string& url_recv):IMessenger("MsgqTSMessenger"){
         std::lock_guard<mutex> lg(instancelock_);
         if(!msgq_server_){
-                msgq_server_  = std::make_unique<MsgqNNG>(MSGQ_PROTOCOL::PUB, PROXY_SERVER_URL);
+            msgq_server_  = Sender::getInstance();
         }
         msgq_receiver_ = std::make_unique<MsgqNNG>(MSGQ_PROTOCOL::SUB, url_recv);
     }
@@ -310,16 +315,18 @@ namespace ts{
 
 
     //Send function similar to MsgqRMessenger
-    void MsgqTSMessenger::Send(std::shared_ptr<Msg> pmsg, int flag){
-        char* msg = pmsg->serialize();
-        lock_guard<std::mutex> lock(MsgqTSMessenger::sendlock_);
-        MsgqTSMessenger::msgq_server_->sendmsg(msg, flag);
-    }
+    // void MsgqTSMessenger::Send(std::shared_ptr<Msg> pmsg, int flag){
+    //     char* msg = pmsg->serialize();
+    //     lock_guard<std::mutex> lock(MsgqTSMessenger::sendlock_);
+    //     MsgqTSMessenger::msgq_server_->sendmsg(msg, flag);
+    // }
     //send function similar to MsgqRMessenger
     void MsgqTSMessenger::send(std::shared_ptr<Msg> pmsg, int flag){
         char* msg = pmsg->serialize();
         lock_guard<std::mutex> lock(MsgqTSMessenger::sendlock_);
-        MsgqTSMessenger::msgq_server_->sendmsg(msg, flag);
+        if (this->msgq_server_){
+            this->msgq_server_->sendmsg(msg, flag);
+        }
     }
 
     /*
@@ -347,11 +354,13 @@ namespace ts{
 
 
     shared_ptr<MsgqTSMessenger> MsgqTSMessenger::getInstance(){
-        if(!instance_){
-            instance_ = make_shared<MsgqTSMessenger>(PROXY_SERVER_URL);
-        }
-        return instance_;
+        // if(!instance_){
+        //     instance_ = make_shared<MsgqTSMessenger>(PROXY_SERVER_URL);
+        // }
+        // return instance_;
+        return make_shared<MsgqTSMessenger>(PROXY_SERVER_URL);
     }
+
     void MsgqTSMessenger::relay(){}; // relay function will not be called in MsgqTSMessenger
     
     
@@ -363,7 +372,22 @@ namespace ts{
     
     
     
+    shared_ptr<MsgqNNG> Sender::instance_ = nullptr;
+
+    mutex Sender::getInstanceLock_;
+
+    shared_ptr<MsgqNNG> Sender::getInstance(){
+        lock_guard<mutex> lg(getInstanceLock_);
+        if(!instance_){
+            instance_ = make_shared<MsgqNNG>(MSGQ_PROTOCOL::PUB, PROXY_SERVER_URL);
+        }
+        return instance_;
+    }
+
     
+
+
+
     //End of MsgqTSMessenger
 
     //

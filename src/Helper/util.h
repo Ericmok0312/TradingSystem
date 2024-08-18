@@ -20,7 +20,7 @@ using namespace google;
 
 namespace ts{
     
-    #define IS_BENCHMARK 1
+    #define IS_BENCHMARK 0
 
     inline void split(const char* src, char sep, vector<string>& result){
 

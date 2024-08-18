@@ -98,10 +98,10 @@ class IMsgq{
         IMsgq(MSGQ_PROTOCOL protocol, const string& url);
         virtual ~IMsgq();
 
-        virtual void sendmsg(const string& str, int32_t immediate = 1) = 0;
-        virtual void sendmsg(char* str, int32_t immediate = 1) = 0;
+        virtual void sendmsg(const string& str, int32_t immediate = 1){};
+        virtual void sendmsg(char* str, int32_t immediate = 1){};
 
-        virtual char* recmsg(int32_t blockingflags = 1) = 0;
+        virtual char* recmsg(int32_t blockingflags = 1){};
 };
 
 
@@ -137,10 +137,8 @@ class MsgqNNG : public IMsgq {
         socket_t sock_;
 
     public:
-        
-
         MsgqNNG(MSGQ_PROTOCOL protocol, const string& url, bool binding = true);
-        ~MsgqNNG();
+        ~MsgqNNG() override;
 
         socket_t* getSocket();
         
@@ -176,6 +174,21 @@ MsgqRMessenger
         virtual void relay(): used in MsgqRMessenger to call MsgqTSMessenger for certain cases, calling the send function respectively
 */
 
+class Sender{
+    private:
+        static shared_ptr<MsgqNNG> instance_;
+        static mutex getInstanceLock_;
+        
+    public:
+        Sender(){};
+        ~Sender(){
+            cout<<instance_.use_count()<<endl;
+        };
+        static shared_ptr<MsgqNNG> getInstance();
+};
+
+
+
 class MsgqRMessenger : public IMessenger {
  private:
     std::unique_ptr<IMsgq> msgq_receiver_;
@@ -206,7 +219,7 @@ class MsgqTSMessenger : public IMessenger {
  public:
     void setSubscribe(const char* topic);
     static mutex sendlock_;
-    static std::unique_ptr<IMsgq> msgq_server_;
+    std::shared_ptr<IMsgq> msgq_server_;
     static std::mutex instancelock_;
     
     explicit MsgqTSMessenger(const string& url_recv);

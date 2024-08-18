@@ -104,32 +104,7 @@ using namespace ts;
         }
 
 
-        void func_11(){
-            if(!MsgqTSMessenger::msgq_server_){
-                MsgqTSMessenger::msgq_server_  = std::make_unique<MsgqNNG>(MSGQ_PROTOCOL::PUB, PROXY_SERVER_URL);
-            }
-            std::shared_ptr<Logger> LOG = make_shared<Logger>("fun11");
-            std::shared_ptr<Msg> msg = std::make_shared<Msg>();
-            Json::Value param;
-            int id = 8865506;
-            int market = 1;
-            int mode = 0;
 
-            rapidjson::Document d;
-            d.SetObject();
-            d.AddMember("id", rapidjson::Value(id), d.GetAllocator());
-            d.AddMember("market", rapidjson::Value(market), d.GetAllocator());
-            d.AddMember("mode", rapidjson::Value(mode), d.GetAllocator());
-
-            msg->destination_ = "FutuEngine";
-            msg->source_ = "Main";
-            Json2String(d, msg->data_);
-            msg->msgtype_ = MSG_TYPE_GET_ACCOUNTINFO;
-            while(true){
-            MsgqTSMessenger::msgq_server_->sendmsg(msg->serialize(), 0);
-            sleep(3);
-            }
-        }
 
         void func_2(){
             std::shared_ptr<Logger> LOG = make_shared<Logger>("fun2");
@@ -274,7 +249,7 @@ using namespace ts;
         }
 
         void test_counter(){
-            boost::this_thread::sleep_for(boost::chrono::minutes(10));
+            boost::this_thread::sleep_for(boost::chrono::seconds(30));
             
             shared_ptr<DataManager> de = DataManager::getInstance();
 
@@ -332,17 +307,27 @@ using namespace ts;
 
 
         void test_Loader(bool* indicator){
+            sleep(10);
             std::shared_ptr<Logger> LOG = make_shared<Logger>("Loader");
-            Loader<QuoteSlice> ld("HSImain", "FUTU", 5, LoaderType::QUOTE, indicator);
-            while(indicator){
+            shared_ptr<MsgqTSMessenger> ms = MsgqTSMessenger::getInstance();
+            Loader<QuoteSlice> ld("HSImain", "FUTU", 5, LoaderType::QUOTE, indicator, 500);
+            std::shared_ptr<Msg> dataMsg = make_shared<Msg>();
+            dataMsg->destination_ = "WebApp";
+            dataMsg->source_ = "Tester";
+            dataMsg->msgtype_ = MSG_TYPE_DEBUG;
+            int count = 0;
+            while(count<10){
                 if(ld.getCur()){
                     const ts::Quote* temp = static_cast<const ts::Quote*>(ld.getCur());
                     if(temp){
+                        dataMsg->data_ = temp->getJson();
+                        ms->send(dataMsg, 0);
                         LOG->info(temp->getJson().c_str());   
+                        count++;
                     }
                 }
-
             }
+            *indicator = false;
         }
         
 
@@ -356,19 +341,22 @@ using namespace ts;
             // thread2.join();
             // thread3.join();
             // thread4.join();
+            bool fg = true;
+            
             boost::thread thread_run_FUTU(bind(&Tester::test_futu, this));
             boost::thread thread_get_from_Futu(bind(&Tester::func_1, this));
             boost::thread thread_DataManager(bind(&Tester::test_DataManager, this));
             boost::thread thread_test_counter(bind(&Tester::test_counter, this));
-            bool fg = true;
+            boost::thread thread_Loader(bind(&Tester::test_Loader,this, placeholders::_1), &fg);
             //boost::thread thread_reader(bind(&Tester::test_reader,this, placeholders::_1), &fg);
             //boost::thread thread_getdata(bind(&Tester::test_getData,this, placeholders::_1), &fg);
             //thread_get_from_Futu.join();
-            boost::thread thread_Loader(bind(&Tester::test_Loader,this, placeholders::_1), &fg);
+
             //thread_run_FUTU.join();
+            
+
             thread_test_counter.join();
-            fg = false;
- 
+            
             
         }
     };

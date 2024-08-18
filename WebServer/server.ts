@@ -99,7 +99,7 @@ let database: Queue<ServerRespond> = new Queue<ServerRespond>;
 
 wss.on('connection', (ws) => {
     console.log("Client connected");
-
+    const dr = new DataReceiver();
     ws.on('message', (message: string) => {
             if(!database.isEmpty()){
                 ws.send("["+JSON.stringify(database.dequeue())+"]");
@@ -119,20 +119,27 @@ class DataReceiver {
         this.sub = zmq.socket('sub');
         this.sub.connect("tcp://localhost:8888");
         this.sub.subscribe("WebApp");
+
+        
         this.getData();
     }
 
     getData() {
         console.log("Constructing DataReceiver");
-
+        let last:bigint = BigInt(0);
+        let cprice:number = 0;
         this.sub.on('message', (msg:Buffer) => {
             const data = msg.toString().split('|');
-                const message = JSON.parse(data[3]); // Adjusted to parse the correct part
-                database.enqueue(message);
-                console.log(message);
+                const message:ServerRespond = JSON.parse(data[3]); // Adjusted to parse the correct part
+                if(message["updateTimestamp"]> last || message["updateTimestamp"]==message["updateTimestamp"]&&message["cPrice"]!=cprice){
+                    last = message["updateTimestamp"];
+                    cprice = message["cPrice"];
+                    database.enqueue(message);
+                    console.log(message);
+                }
+
             }
         );
     }
 }
 
-const dr = new DataReceiver();

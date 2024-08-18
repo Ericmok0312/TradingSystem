@@ -67,9 +67,11 @@ namespace ts{
 
         if (IS_BENCHMARK) {
             logger_->info(fmt::format("WriteQuote latency final: {}", to_string(GetTimeStamp()-init)).c_str());
-            logger_->info(fmt::format("Total latency final: {}", to_string(GetTimeStamp()-nquote->timestamp_)).c_str());}
+            logger_->info(fmt::format("Total latency final: {}", to_string(GetTimeStamp()-nquote->timestamp_)).c_str());
+            logger_->info(nquote->getString().c_str());
+            }
 
-        logger_->info(nquote->getString().c_str());
+        
     }
 
     void DataWriter::WriteDataBase(){
