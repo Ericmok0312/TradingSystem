@@ -345,6 +345,54 @@ src/Interface/datastruture.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Interface/datastruture.cpp.s
 .PHONY : src/Interface/datastruture.cpp.s
 
+src/Strategy/StrategyEngine.o: src/Strategy/StrategyEngine.cpp.o
+.PHONY : src/Strategy/StrategyEngine.o
+
+# target to build an object file
+src/Strategy/StrategyEngine.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Strategy/StrategyEngine.cpp.o
+.PHONY : src/Strategy/StrategyEngine.cpp.o
+
+src/Strategy/StrategyEngine.i: src/Strategy/StrategyEngine.cpp.i
+.PHONY : src/Strategy/StrategyEngine.i
+
+# target to preprocess a source file
+src/Strategy/StrategyEngine.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Strategy/StrategyEngine.cpp.i
+.PHONY : src/Strategy/StrategyEngine.cpp.i
+
+src/Strategy/StrategyEngine.s: src/Strategy/StrategyEngine.cpp.s
+.PHONY : src/Strategy/StrategyEngine.s
+
+# target to generate assembly for a file
+src/Strategy/StrategyEngine.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Strategy/StrategyEngine.cpp.s
+.PHONY : src/Strategy/StrategyEngine.cpp.s
+
+src/Strategy/TradeUtil.o: src/Strategy/TradeUtil.cpp.o
+.PHONY : src/Strategy/TradeUtil.o
+
+# target to build an object file
+src/Strategy/TradeUtil.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Strategy/TradeUtil.cpp.o
+.PHONY : src/Strategy/TradeUtil.cpp.o
+
+src/Strategy/TradeUtil.i: src/Strategy/TradeUtil.cpp.i
+.PHONY : src/Strategy/TradeUtil.i
+
+# target to preprocess a source file
+src/Strategy/TradeUtil.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Strategy/TradeUtil.cpp.i
+.PHONY : src/Strategy/TradeUtil.cpp.i
+
+src/Strategy/TradeUtil.s: src/Strategy/TradeUtil.cpp.s
+.PHONY : src/Strategy/TradeUtil.s
+
+# target to generate assembly for a file
+src/Strategy/TradeUtil.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Strategy/TradeUtil.cpp.s
+.PHONY : src/Strategy/TradeUtil.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -381,6 +429,12 @@ help:
 	@echo "... src/Interface/datastruture.o"
 	@echo "... src/Interface/datastruture.i"
 	@echo "... src/Interface/datastruture.s"
+	@echo "... src/Strategy/StrategyEngine.o"
+	@echo "... src/Strategy/StrategyEngine.i"
+	@echo "... src/Strategy/StrategyEngine.s"
+	@echo "... src/Strategy/TradeUtil.o"
+	@echo "... src/Strategy/TradeUtil.i"
+	@echo "... src/Strategy/TradeUtil.s"
 .PHONY : help
 
 

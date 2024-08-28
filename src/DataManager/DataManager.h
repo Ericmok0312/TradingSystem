@@ -10,24 +10,31 @@
 #include <Interface/datastructure.h>
 #include <DataManager/DataWriter.h>
 #include <DataManager/DataReader.h>
+#include <functional>
 namespace ts{
 
     //Need to implement caches for reading data
 
-    class DataManager: public ThreadPool<std::function<void(shared_ptr<Msg>)>, std::shared_ptr<Msg>>{
+    class DataManager: public IEngine, public ThreadPool<std::function<void(shared_ptr<Msg>)>, std::shared_ptr<Msg>>{
+        private:
+            CallBackTabletype RegTable_;
+            mutex RegTableMutex_;
         public:
-
             DataManager();
             ~DataManager();
 
-            void init();
-            void start();
-            void stop();
+            void init() override;
+            void start() override;
+            void stop() override;
+            void running() override;
+
 
             void processMsg(std::shared_ptr<Msg>);
             static std::shared_ptr<DataManager> getInstance();
             void sendData(string&& address, string&& des);
 
+            void AddDataReaderTask(std::function<void(std::shared_ptr<ARG>)> callback, std::shared_ptr<ARG> arg);
+            
             std::shared_ptr<DataWriter> datawritter_;
             static std::shared_ptr<DataManager> instance_;
             std::shared_ptr<DataReader> datareader_;
@@ -35,9 +42,7 @@ namespace ts{
 
         protected:
             static std::unique_ptr<ts::IMessenger> messenger_;
-            std::atomic<Estate> estate_; 
             static std::mutex getIns_mutex;
-
 
     };
 

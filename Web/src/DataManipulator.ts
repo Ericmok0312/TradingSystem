@@ -1,28 +1,36 @@
+import { Server } from 'http';
 import { ServerRespond } from './DataStreamer';
+import { format } from 'path';
 
 export interface Row {
   price : number;
-  timestamp: bigint;
-  high_price : number;
-  low_price : number;
+  timestamp: string;
+
 };
 
+function formatTimestamp(timestamp: number | bigint): string {
+  // Convert the timestamp to a Date object
+  const date = new Date(Number(timestamp));
 
-// export class DataManipulator {
-//   static generateRow(serverResponds: ServerRespond[]):Row {
-//     const priceABC = (serverResponds[0].top_ask.price + serverResponds[0].top_bid.price)/2;
-//     const priceDEF = (serverResponds[1].top_ask.price + serverResponds[1].top_bid.price)/2
-//     const ratio = priceABC/priceDEF;
-//     const upper = 1+0.05;
-//     const lower = 1-0.05;
-//     return{
-//       price_abc: priceABC,
-//       price_def: priceDEF,
-//       ratio,
-//       timestamp: serverResponds[0].timestamp > serverResponds[1].timestamp ? serverResponds[0].timestamp : serverResponds[1].timestamp,
-//       upper_bound: upper,
-//       lower_bound: lower,
-//       trigger_alert: (ratio>upper || ratio<lower)? ratio : undefined
-//     };
-//     }
-//}
+  // Pad the month, day, hour, minute, and second with leading zeros if necessary
+  const month = String(date.getMonth() + 1).padStart(2, '0');
+  const day = String(date.getDate()).padStart(2, '0');
+  const hour = String(date.getHours()).padStart(2, '0');
+  const minute = String(date.getMinutes()).padStart(2, '0');
+  const second = String(date.getSeconds()).padStart(2, '0');
+
+  // Get the milliseconds and convert to microseconds
+  const microseconds = String(date.getMilliseconds())
+
+  // Format the date and time
+  return `${date.getFullYear()}-${month}-${day} ${hour}:${minute}:${second}.${microseconds}`;
+}
+
+export class DataManipulator {
+  static generateRow(serverResponds: ServerRespond[]):Row {
+    return{
+      price: serverResponds[0]['cPrice'],
+      timestamp: formatTimestamp(serverResponds[0]['updateTimestamp']*10),
+    };
+    }
+}

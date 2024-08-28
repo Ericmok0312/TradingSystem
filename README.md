@@ -69,7 +69,8 @@ The communication within the server is done by memory sharing(kungfu) and messag
 
 
 ## TODO
-1. Define basic data structures (done)
-2. Deinfe logger (done) and messager
-3. Define trader interfaces
-4. Encapsulate Futu api
+1. transfer Loader into StrategyCtx
+2. encapsulate rapidjson
+3. transfer initialization parameters into encapsulated rapidjson 
+4. implementing DualThrust 
+5. implementing strategyEngine

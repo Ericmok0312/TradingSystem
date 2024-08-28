@@ -3,7 +3,7 @@
 
 namespace ts
 {
-    IEngine::IEngine(): estate_(STOP), etrademode_(HISTORY), etradelock_(LOCKED)
+    IEngine::IEngine(): estate_(STOP)
     {};
 
     IEngine::~IEngine(){};

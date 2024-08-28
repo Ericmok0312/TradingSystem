@@ -32,6 +32,7 @@ namespace ts{
     
     void DataManager::init(){
         datawritter_ = DataWriter::getInstance();
+        datawritter_->addRegTable(&RegTable_, &RegTableMutex_);
         messenger_ = make_unique<MsgqTSMessenger>(PROXY_SERVER_URL);
         logger_ = make_unique<Logger>("DataManager");
         datareader_ = DataReader::getInstance();
@@ -49,10 +50,13 @@ namespace ts{
 
     void DataManager::start(){
         estate_.store(CONNECTED);
+        boost::thread temp(boost::bind(&DataManager::running, this));
+    }
 
-        while(estate_.load() != STOP){
+    void DataManager::running(){
+        while(estate_.load() == CONNECTED){
             std::shared_ptr<Msg> msg;
-            msg = messenger_->recv(NNG_FLAG_ALLOC);
+            msg = messenger_->recv(0);
             if(msg && msg->destination_=="DataManager"){
                 this->AddTask(std::bind(&DataManager::processMsg, this, placeholders::_1), msg);
             }
@@ -101,7 +105,8 @@ namespace ts{
                 arguments->count = static_cast<uint32_t>(stoul(param[2]));
                 arguments->etime = static_cast<uint64_t>(stoull(param[3]));
                 arguments->des = move(param[4]);
-                datareader_->AddTask(bind(&DataReader::readQuoteSlicefromLMDB, datareader_, placeholders::_1), arguments);
+                lock_guard<mutex> lg(RegTableMutex_);
+                RegTable_.insert(make_pair(param[0]+move("/")+param[1], make_tuple(bind(&DataManager::AddDataReaderTask, this, placeholders::_1, placeholders::_2), bind(&DataReader::readQuoteSlicefromLMDB, datareader_, placeholders::_1), arguments)));
             }
             break;
         }
@@ -110,9 +115,13 @@ namespace ts{
         //     logger_->info(fmt::format("DataManager latency final: {}", to_string(GetTimeStamp()-init_t)).c_str());
     }
 
+    void DataManager::AddDataReaderTask(std::function<void(std::shared_ptr<ARG>)> callback, std::shared_ptr<ARG> arg){
+        datareader_->AddTask(callback, arg);
+    }
+
     void DataManager::sendData(string&& address, string&& des){
         shared_ptr<Msg> msg = make_shared<Msg>(move(des), "DataManager", MSG_TYPE_GET_QUOTE_RESPONSE, move(address));
-        messenger_->send(msg, NNG_FLAG_ALLOC);
+        messenger_->send(msg, 0);
     }
 
 

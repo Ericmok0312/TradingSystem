@@ -6,13 +6,12 @@
 #include <mutex>
 #include <memory>
 #include <string>
-#include <nng/nng.h>
-
+#include <zmq.hpp>
 
 #define PROXY_SERVER_URL "tcp://localhost:8888"
 
 using namespace std;
-
+using namespace zmq;
 namespace ts{
 
 /*
@@ -36,16 +35,18 @@ IMessenger
 */
 class IMessenger{
     protected:
-
+       
         std::shared_ptr<Logger> logger_;
 
+
     public:
+        
         IMessenger(const char*);
         virtual ~IMessenger();
-
-        virtual void send(std::shared_ptr<ts::Msg>, int32_t mode = 0) = 0;
-        virtual std::shared_ptr<Msg> recv(int32_t mode = 0) = 0;
-        virtual void relay() = 0;
+        
+        virtual void send(std::shared_ptr<ts::Msg>, int32_t mode = 0){};
+        virtual std::shared_ptr<Msg> recv(int32_t mode = 0) {return make_shared<Msg>();}
+        virtual void relay() {};
 
 };
 
@@ -71,21 +72,21 @@ IMsgq
 
 */
 
+
 class IMsgq{
 
     protected:
         MSGQ_PROTOCOL protocol_;
         string url_;
         std::shared_ptr<Logger> logger_;
-
     public:
         IMsgq(MSGQ_PROTOCOL protocol, const string& url);
         virtual ~IMsgq();
 
-        virtual void sendmsg(const string& str, int32_t immediate = 1) = 0;
-        virtual void sendmsg(char* str, int32_t immediate = 1) = 0;
+        virtual void sendmsg(const string& str, int32_t immediate = 1){};
+        virtual void sendmsg(char* str, int32_t immediate = 1){};
 
-        virtual char* recmsg(int32_t blockingflags = 1) = 0;
+        virtual char* recmsg(int32_t blockingflags = 1){return nullptr;};
 };
 
 
@@ -118,15 +119,14 @@ MsgqNNG
 
 class MsgqNNG : public IMsgq {
     private:
+        context_t ctx_;
+        socket_t sock_;
         
-
     public:
-        nng_socket sock_ = NNG_SOCKET_INITIALIZER;
-        nng_listener Lid_ = NNG_LISTENER_INITIALIZER;
-        nng_dialer Did_ = NNG_DIALER_INITIALIZER;
         MsgqNNG(MSGQ_PROTOCOL protocol, const string& url, bool binding = true);
-        ~MsgqNNG();
+        ~MsgqNNG() override;
 
+        socket_t* getSocket();
         
         virtual void sendmsg(const string& str, int32_t flag) override;
         virtual void sendmsg(char* str, int32_t flag) override;
@@ -160,6 +160,21 @@ MsgqRMessenger
         virtual void relay(): used in MsgqRMessenger to call MsgqTSMessenger for certain cases, calling the send function respectively
 */
 
+class Sender{
+    private:
+        static shared_ptr<MsgqNNG> instance_;
+        static mutex getInstanceLock_;
+        
+    public:
+        Sender(){};
+        ~Sender(){
+            cout<<instance_.use_count()<<endl;
+        };
+        static shared_ptr<MsgqNNG> getInstance();
+};
+
+
+
 class MsgqRMessenger : public IMessenger {
  private:
     std::unique_ptr<IMsgq> msgq_receiver_;
@@ -185,20 +200,20 @@ class MsgqRMessenger : public IMessenger {
 
 class MsgqTSMessenger : public IMessenger {
  private:
+
     std::unique_ptr<IMsgq> msgq_receiver_;
-
- public:
-
+    static unordered_map<string, shared_ptr<MsgqTSMessenger>> regTable_;
     static mutex sendlock_;
-    static std::unique_ptr<IMsgq> msgq_server_;
+    std::shared_ptr<IMsgq> msgq_server_;
     static std::mutex instancelock_;
-    
+    static std::mutex regTable_lock_;
+ public:
+    void setSubscribe(const char* topic);
+
     explicit MsgqTSMessenger(const string& url_recv);
     virtual ~MsgqTSMessenger();
     
-    static shared_ptr<MsgqTSMessenger> instance_;
-
-    static shared_ptr<MsgqTSMessenger> getInstance();
+    static shared_ptr<MsgqTSMessenger> getInstance(const char* name);
     static void Send(std::shared_ptr<Msg> pmsg, int flag);
     virtual void send(std::shared_ptr<Msg> pmsg, int flag);
     virtual std::shared_ptr<Msg> recv(int flag);

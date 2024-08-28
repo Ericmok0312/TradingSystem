@@ -195,6 +195,34 @@ CMakeFiles/test.dir/src/Interface/datastruture.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test.dir/src/Interface/datastruture.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /data/home/emk/Coding/Trading_system/TradingSystem/src/Interface/datastruture.cpp -o CMakeFiles/test.dir/src/Interface/datastruture.cpp.s
 
+CMakeFiles/test.dir/src/Strategy/StrategyEngine.cpp.o: CMakeFiles/test.dir/flags.make
+CMakeFiles/test.dir/src/Strategy/StrategyEngine.cpp.o: src/Strategy/StrategyEngine.cpp
+CMakeFiles/test.dir/src/Strategy/StrategyEngine.cpp.o: CMakeFiles/test.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/home/emk/Coding/Trading_system/TradingSystem/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/test.dir/src/Strategy/StrategyEngine.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/src/Strategy/StrategyEngine.cpp.o -MF CMakeFiles/test.dir/src/Strategy/StrategyEngine.cpp.o.d -o CMakeFiles/test.dir/src/Strategy/StrategyEngine.cpp.o -c /data/home/emk/Coding/Trading_system/TradingSystem/src/Strategy/StrategyEngine.cpp
+
+CMakeFiles/test.dir/src/Strategy/StrategyEngine.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test.dir/src/Strategy/StrategyEngine.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /data/home/emk/Coding/Trading_system/TradingSystem/src/Strategy/StrategyEngine.cpp > CMakeFiles/test.dir/src/Strategy/StrategyEngine.cpp.i
+
+CMakeFiles/test.dir/src/Strategy/StrategyEngine.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test.dir/src/Strategy/StrategyEngine.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /data/home/emk/Coding/Trading_system/TradingSystem/src/Strategy/StrategyEngine.cpp -o CMakeFiles/test.dir/src/Strategy/StrategyEngine.cpp.s
+
+CMakeFiles/test.dir/src/Strategy/TradeUtil.cpp.o: CMakeFiles/test.dir/flags.make
+CMakeFiles/test.dir/src/Strategy/TradeUtil.cpp.o: src/Strategy/TradeUtil.cpp
+CMakeFiles/test.dir/src/Strategy/TradeUtil.cpp.o: CMakeFiles/test.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/home/emk/Coding/Trading_system/TradingSystem/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/test.dir/src/Strategy/TradeUtil.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/src/Strategy/TradeUtil.cpp.o -MF CMakeFiles/test.dir/src/Strategy/TradeUtil.cpp.o.d -o CMakeFiles/test.dir/src/Strategy/TradeUtil.cpp.o -c /data/home/emk/Coding/Trading_system/TradingSystem/src/Strategy/TradeUtil.cpp
+
+CMakeFiles/test.dir/src/Strategy/TradeUtil.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test.dir/src/Strategy/TradeUtil.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /data/home/emk/Coding/Trading_system/TradingSystem/src/Strategy/TradeUtil.cpp > CMakeFiles/test.dir/src/Strategy/TradeUtil.cpp.i
+
+CMakeFiles/test.dir/src/Strategy/TradeUtil.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test.dir/src/Strategy/TradeUtil.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /data/home/emk/Coding/Trading_system/TradingSystem/src/Strategy/TradeUtil.cpp -o CMakeFiles/test.dir/src/Strategy/TradeUtil.cpp.s
+
 # Object files for target test
 test_OBJECTS = \
 "CMakeFiles/test.dir/main.cpp.o" \
@@ -205,7 +233,9 @@ test_OBJECTS = \
 "CMakeFiles/test.dir/src/Helper/logger.cpp.o" \
 "CMakeFiles/test.dir/src/Interface/IEngine.cpp.o" \
 "CMakeFiles/test.dir/src/Interface/IMessenger.cpp.o" \
-"CMakeFiles/test.dir/src/Interface/datastruture.cpp.o"
+"CMakeFiles/test.dir/src/Interface/datastruture.cpp.o" \
+"CMakeFiles/test.dir/src/Strategy/StrategyEngine.cpp.o" \
+"CMakeFiles/test.dir/src/Strategy/TradeUtil.cpp.o"
 
 # External object files for target test
 test_EXTERNAL_OBJECTS =
@@ -219,10 +249,13 @@ test: CMakeFiles/test.dir/src/Helper/logger.cpp.o
 test: CMakeFiles/test.dir/src/Interface/IEngine.cpp.o
 test: CMakeFiles/test.dir/src/Interface/IMessenger.cpp.o
 test: CMakeFiles/test.dir/src/Interface/datastruture.cpp.o
+test: CMakeFiles/test.dir/src/Strategy/StrategyEngine.cpp.o
+test: CMakeFiles/test.dir/src/Strategy/TradeUtil.cpp.o
 test: CMakeFiles/test.dir/build.make
 test: /home/emk/vcpkg/installed/x64-linux/debug/lib/libjsoncpp.a
+test: /home/emk/vcpkg/installed/x64-linux/debug/lib/libzmq.a
 test: CMakeFiles/test.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/data/home/emk/Coding/Trading_system/TradingSystem/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/data/home/emk/Coding/Trading_system/TradingSystem/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable test"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/test.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

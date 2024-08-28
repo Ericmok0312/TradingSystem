@@ -14,7 +14,7 @@ namespace ts{
         public:
             friend class DataManager;
 
-            std::unique_ptr<Logger> logger_;
+            std::shared_ptr<Logger> logger_;
 
 
             DataWriter();
@@ -37,22 +37,26 @@ namespace ts{
     
             void WriteDataBase();
 
+            void addRegTable(CallBackTabletype* tb, mutex* mtx){RegTable_ = tb; RegTableMutex_ = mtx;};
+
 
             typedef std::shared_ptr<TsLMDB> TSLMDBPtr;
             typedef std::unordered_map<std::string, TSLMDBPtr> TSLMDBMap;
         
         private:
-
             TSLMDBMap quote_dbs_; 
             TSLMDBMap excahnge_m1_dbs;
             TSLMDBMap exchange_m5_dbs;
             TSLMDBMap excange_d1_dbs;
 
-            static shared_ptr<DataWriter> instance_;
 
+
+            static shared_ptr<DataWriter> instance_;
             static std::mutex q_db_mutex;   
             static std::mutex getIns_mutex;
 
+            std::mutex* RegTableMutex_;
+            CallBackTabletype* RegTable_;
             TSLMDBPtr get_q_db(const char* exg, const char* code);
     };
 

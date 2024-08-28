@@ -27,12 +27,11 @@ namespace ts{
     DataWriter::~DataWriter(){
         logger_->info("Destructing DataWriter");
         WriteDataBase();
-        instance_.reset();
-        //sleep(4);
+        //instance_.reset();
     }
 
     void DataWriter::init(){
-        logger_ = make_unique<Logger>("DataWriter");;
+        logger_ = Logger::getInstance("DataWriter");;
     }
 
 
@@ -64,12 +63,21 @@ namespace ts{
         }
 
         
+        stringstream sss;
+        sss<<nquote->exg_<<"/"<<nquote->code_;
+        lock_guard<mutex> lg(*RegTableMutex_);
+        auto temp = RegTable_->find(sss.str());
+        if (temp!=RegTable_->end()){
+            std::get<0>(temp->second)(std::get<1>(temp->second), std::get<2>(temp->second)); // calling the function AddDataReaderTask
+        }
 
         if (IS_BENCHMARK) {
             logger_->info(fmt::format("WriteQuote latency final: {}", to_string(GetTimeStamp()-init)).c_str());
-            logger_->info(fmt::format("Total latency final: {}", to_string(GetTimeStamp()-nquote->timestamp_)).c_str());}
+            logger_->info(fmt::format("Total latency final: {}", to_string(GetTimeStamp()-nquote->timestamp_)).c_str());
+            logger_->info(nquote->getString().c_str());
+            }
 
-        logger_->info(nquote->getString().c_str());
+        
     }
 
     void DataWriter::WriteDataBase(){
@@ -99,9 +107,6 @@ namespace ts{
         boost::posix_time::ptime end_of_day = boost::posix_time::ptime(boost::gregorian::date(local_time->tm_year + 1900, local_time->tm_mon + 1, local_time->tm_mday)) + boost::posix_time::seconds(86400);
         std::time_t end_timestamp = (end_of_day - boost::posix_time::ptime(boost::gregorian::date(1970, 1, 1))).total_seconds();
         std::string endtime = std::to_string(end_timestamp);
-
-        logger_->warn(midtime.c_str());
-        logger_->warn(endtime.c_str());
 
         for(auto i = quote_dbs_.begin(); i!=quote_dbs_.end(); i++){
             path = fmt::format("{}/{}/{}", BASE_FILE_LOC, i->first, time);

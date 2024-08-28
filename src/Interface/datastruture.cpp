@@ -50,7 +50,7 @@ namespace ts{
     char* Msg::serialize(){
         stringstream ss;
         ss<<destination_<<SERIALIZATION_SEP<<source_<<SERIALIZATION_SEP<<msgtype_<<SERIALIZATION_SEP<<(data_)<<SERIALIZATION_SEP<<to_string(timestamp_);
-        char* temp = reinterpret_cast<char*>(nng_alloc(ss.str().size()+1));
+        char* temp = new char[ss.str().size()+1];
         strcpy(temp, ss.str().c_str());
         return temp;
     } 
@@ -89,6 +89,22 @@ namespace ts{
         msgtype_ = static_cast<MSG_TYPE>(stoi(info[2]));
         data_ = info[3];
         timestamp_ = stoull(info[4]);
+    }
+
+
+    const PositionInformation* Position::getData() const{
+        return &pos_;
+    }
+
+
+    void Position::changePosition(double volume, double price){
+        pos_.first += volume;
+        pos_.second = (pos_.second*(pos_.first-volume)+price*volume)/pos_.second;
+    }
+
+
+
+    Position::Position(const char* code, const char* exg):code_(code), exg_(exg){
     }
 
    

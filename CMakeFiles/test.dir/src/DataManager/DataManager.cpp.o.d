@@ -208,7 +208,10 @@ CMakeFiles/test.dir/src/DataManager/DataManager.cpp.o: \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/internal/itoa.h \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/stringbuffer.h \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/stringbuffer.h \
- /usr/include/c++/8/iostream \
+ /usr/include/c++/8/iostream /usr/include/c++/8/unordered_map \
+ /usr/include/c++/8/bits/hashtable.h \
+ /usr/include/c++/8/bits/hashtable_policy.h \
+ /usr/include/c++/8/bits/unordered_map.h \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/thread/thread.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/thread/thread_only.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/thread/detail/platform.hpp \
@@ -908,9 +911,6 @@ CMakeFiles/test.dir/src/DataManager/DataManager.cpp.o: \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/details/registry.h \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/details/periodic_worker.h \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/details/periodic_worker-inl.h \
- /usr/include/c++/8/unordered_map /usr/include/c++/8/bits/hashtable.h \
- /usr/include/c++/8/bits/hashtable_policy.h \
- /usr/include/c++/8/bits/unordered_map.h \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/details/registry-inl.h \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/logger.h \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/details/backtracer.h \
@@ -1025,8 +1025,9 @@ CMakeFiles/test.dir/src/DataManager/DataManager.cpp.o: \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/chrono/floor.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/chrono/round.hpp \
  /data/home/emk/Coding/Trading_system/TradingSystem/src/Interface/IMessenger.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/nng-1.8.0/include/nng/nng.h \
- /usr/lib/gcc/x86_64-linux-gnu/8/include/stdbool.h \
+ /home/emk/vcpkg/installed/x64-linux/include/zmq.hpp \
+ /home/emk/vcpkg/installed/x64-linux/include/zmq.h \
+ /usr/include/c++/8/iomanip /usr/include/c++/8/bits/quoted_string.h \
  /data/home/emk/Coding/Trading_system/TradingSystem/src/Interface/IEngine.h \
  /data/home/emk/Coding/Trading_system/TradingSystem/src/DataManager/DataWriter.h \
  /data/home/emk/Coding/Trading_system/TradingSystem/src/DataManager/tslmdb.hpp \

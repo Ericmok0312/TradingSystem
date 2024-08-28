@@ -17,6 +17,10 @@ file(REMOVE_RECURSE
   "CMakeFiles/test.dir/src/Interface/IMessenger.cpp.o.d"
   "CMakeFiles/test.dir/src/Interface/datastruture.cpp.o"
   "CMakeFiles/test.dir/src/Interface/datastruture.cpp.o.d"
+  "CMakeFiles/test.dir/src/Strategy/StrategyEngine.cpp.o"
+  "CMakeFiles/test.dir/src/Strategy/StrategyEngine.cpp.o.d"
+  "CMakeFiles/test.dir/src/Strategy/TradeUtil.cpp.o"
+  "CMakeFiles/test.dir/src/Strategy/TradeUtil.cpp.o.d"
   "test"
   "test.pdb"
 )

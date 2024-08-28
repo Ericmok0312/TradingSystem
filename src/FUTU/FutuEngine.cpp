@@ -1,6 +1,7 @@
 #include <FUTU/FutuEngine.h>
 #include <Helper/util.h>
 #include <json/json.h>
+#include "boost/thread/thread.hpp"
 using namespace std;
 
 namespace ts{
@@ -18,7 +19,7 @@ namespace ts{
     /// @brief Destructor, e ster  and release futuQotApi_ and futuTrdApi_ as requried
     FutuEngine::~FutuEngine(){
         std::lock_guard<mutex> lk(getIns_mutex);
-        logger_->info("des called");
+        logger_->info("Destructing FutuEngine");
         //instance_.reset();
         if(futuQotApi_ != nullptr){
             futuQotApi_->UnregisterQotSpi();
@@ -33,6 +34,7 @@ namespace ts{
             futuTrdApi_ = nullptr;
         }
         FTAPI::UnInit();
+        sleep(2);
     }
 
 
@@ -57,7 +59,7 @@ namespace ts{
         futuTrdApi_->RegisterConnSpi(this);
         futuTrdApi_->RegisterTrdSpi(this);
 
-        logger_ = make_shared<Logger>("FutuEngine");
+        logger_ = Logger::getInstance("FutuEngine");
         messenger_ = std::make_unique<MsgqTSMessenger>(PROXY_SERVER_URL);
         estate_.store(STOP);
 
@@ -79,9 +81,13 @@ namespace ts{
         futuQotApi_->InitConnect("127.0.0.1", 11111, false);
         futuTrdApi_->InitConnect("127.0.0.1", 11111, false);
         logger_->info("Futu engine start");
+        boost::thread thread(bind(&FutuEngine::running, this));
+    }
+
+    void FutuEngine::running(){
         std::shared_ptr<Msg> msg;
-        while(estate_.load() != STOP){
-            msg = messenger_->recv(NNG_FLAG_NONBLOCK+NNG_FLAG_ALLOC); // nonblock + ALLOC
+        while(estate_.load() == CONNECTED){
+            msg = messenger_->recv(0); // nonblock + ALLOC
             if(!msg || msg->destination_!="FutuEngine"){
                 continue;
             }
@@ -180,7 +186,7 @@ namespace ts{
     void FutuEngine::OnPush_UpdateTicker(const Qot_UpdateTicker::Response &stRsp){
         std::shared_ptr<Msg> msg = std::make_shared<Msg>("DataManager", "FutuEngine", MSG_TYPE_STORE_TICKER, "");
         ProtoBufToString(stRsp, msg->data_);
-        messenger_->send(msg, NNG_FLAG_ALLOC);
+        messenger_->send(msg, 0);
     }
 
 
@@ -189,7 +195,7 @@ namespace ts{
         std::shared_ptr<Msg> msg = std::make_shared<Msg>("DataManager", "FutuEngine", MSG_TYPE_STORE_QUOTE, "");
         ProtoBufToString(stRsp, msg->data_);
         msg->timestamp_ = init;
-        messenger_->send(msg, NNG_FLAG_ALLOC);
+        messenger_->send(msg, 0);
     }
 
     /// @brief  Function for getting fund in Futu account, with given id, market and mode (all need to be retrieved using getAccessList)

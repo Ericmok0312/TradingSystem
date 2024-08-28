@@ -43,29 +43,29 @@ namespace ts
             
             string name_;
 
-            static std::mutex mutex_;
+            static shared_ptr<Logger> getInstance(const char* name);
 
             inline void info(const char* context){
-                std::lock_guard<std::mutex> lock(mutex_);
-                if(this->spdlogger_) this->spdlogger_->info(context);
+                this->spdlogger_->info(context);
             }
             inline void warn(const char* context){
-                std::lock_guard<std::mutex> lock(mutex_);
                 this->spdlogger_->warn(context);
             }
             inline void error(const char* context){
-                std::lock_guard<std::mutex> lock(mutex_);
+               
                 this->spdlogger_->error(context);
             }
             inline void debug(const char* context){
-                std::lock_guard<std::mutex> lock(mutex_);
+
                 SPDLOG_DEBUG(spdlogger_, context);
             }
             inline void trace(const char* context){
-                std::lock_guard<std::mutex> lock(mutex_);
+
                 SPDLOG_TRACE(spdlogger_, context);
             }
-
+        private:
+            static unordered_map<string, shared_ptr<Logger>> regTable_;
+            static mutex regTable_lock;
     };
 
     
