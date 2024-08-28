@@ -125,7 +125,7 @@ namespace ts{
         MSG_TYPE_GET_ACCOUNTINFO = 2001,
         MSG_TYPE_GET_ACCESSLIST = 2002,
         MSG_TYPE_REGCALLBACK = 2003,
-
+        MSG_TYPE_NEW_STRATEGY = 2004, //adding new strategy by dynamic library
 
         MSG_TYPE_GET_QUOTE = 2500,
         MSG_TYPE_GET_QUOTE_BLOCK = 2501,
@@ -179,7 +179,7 @@ namespace ts{
             string code_;
             string exg_;
         public:
-            Position(const char* code, const char* exg);
+            Position(const char* code, const char* exg, double price, double volume);
             const PositionInformation* getData() const;
             void changePosition(double volume, double price);
     };

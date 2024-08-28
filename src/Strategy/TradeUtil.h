@@ -58,7 +58,7 @@ namespace ts{
 
             void regRequest();
             void OnDataUpdate();
-            void addStrategy(IStrategy* stg);
+           
 
             void init();
 
@@ -73,7 +73,7 @@ namespace ts{
 
             const BaseData* getCur(); //going to depricate
             BaseData* getSlice(); //going to depreciate
-
+            void addStrategy(IStrategy* stg);
 
     };
 }

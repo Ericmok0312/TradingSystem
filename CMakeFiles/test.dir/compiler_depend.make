@@ -1052,22 +1052,6 @@ CMakeFiles/test.dir/main.cpp.o: main.cpp \
   libs/boost/chrono/round.hpp \
   src/FUTU/FutuEngine.h \
   src/Interface/IEngine.h \
-  src/Strategy/TradeUtil.h \
-  src/Strategy/Strategy.h \
-  /home/emk/vcpkg/installed/x64-linux/include/json/json.h \
-  /home/emk/vcpkg/installed/x64-linux/include/json/config.h \
-  /home/emk/vcpkg/installed/x64-linux/include/json/allocator.h \
-  /home/emk/vcpkg/installed/x64-linux/include/json/version.h \
-  /home/emk/vcpkg/installed/x64-linux/include/json/json_features.h \
-  /home/emk/vcpkg/installed/x64-linux/include/json/forwards.h \
-  /home/emk/vcpkg/installed/x64-linux/include/json/reader.h \
-  /home/emk/vcpkg/installed/x64-linux/include/json/value.h \
-  /usr/include/c++/8/deque \
-  /usr/include/c++/8/bits/stl_deque.h \
-  /usr/include/c++/8/bits/deque.tcc \
-  /usr/include/c++/8/stack \
-  /usr/include/c++/8/bits/stl_stack.h \
-  /home/emk/vcpkg/installed/x64-linux/include/json/writer.h \
   libs/futu/include/futu/FTAPI.h \
   libs/futu/include/futu/FTAPI_Define.h \
   libs/futu/include/futu/Include_Proto.h \
@@ -1202,6 +1186,20 @@ CMakeFiles/test.dir/main.cpp.o: main.cpp \
   libs/futu/include/futu/FTAPIChannel.h \
   libs/futu/include/futu/FTAPIChannel_Define.h \
   libs/futu/include/futu/FTSPI.h \
+  /home/emk/vcpkg/installed/x64-linux/include/json/json.h \
+  /home/emk/vcpkg/installed/x64-linux/include/json/config.h \
+  /home/emk/vcpkg/installed/x64-linux/include/json/allocator.h \
+  /home/emk/vcpkg/installed/x64-linux/include/json/version.h \
+  /home/emk/vcpkg/installed/x64-linux/include/json/json_features.h \
+  /home/emk/vcpkg/installed/x64-linux/include/json/forwards.h \
+  /home/emk/vcpkg/installed/x64-linux/include/json/reader.h \
+  /home/emk/vcpkg/installed/x64-linux/include/json/value.h \
+  /usr/include/c++/8/deque \
+  /usr/include/c++/8/bits/stl_deque.h \
+  /usr/include/c++/8/bits/deque.tcc \
+  /usr/include/c++/8/stack \
+  /usr/include/c++/8/bits/stl_stack.h \
+  /home/emk/vcpkg/installed/x64-linux/include/json/writer.h \
   src/DataManager/DataManager.h \
   src/Helper/ThreadPool.h \
   /usr/include/c++/8/queue \
@@ -1281,7 +1279,9 @@ CMakeFiles/test.dir/main.cpp.o: main.cpp \
   /usr/include/x86_64-linux-gnu/c++/8/bits/opt_random.h \
   /usr/include/c++/8/bits/random.tcc \
   /usr/include/c++/8/numeric \
-  /usr/include/c++/8/bits/stl_numeric.h
+  /usr/include/c++/8/bits/stl_numeric.h \
+  src/Strategy/TradeUtil.h \
+  src/Strategy/Strategy.h
 
 CMakeFiles/test.dir/src/DataManager/DataManager.cpp.o: src/DataManager/DataManager.cpp \
   /usr/include/stdc-predef.h \
@@ -2388,8 +2388,6 @@ CMakeFiles/test.dir/src/DataManager/DataManager.cpp.o: src/DataManager/DataManag
   /usr/include/c++/8/iomanip \
   /usr/include/c++/8/bits/quoted_string.h \
   src/Interface/IEngine.h \
-  src/Strategy/TradeUtil.h \
-  src/Strategy/Strategy.h \
   src/DataManager/DataWriter.h \
   src/DataManager/tslmdb.hpp \
   libs/lmdb/liblmdb/lmdb.h \
@@ -5436,22 +5434,6 @@ CMakeFiles/test.dir/src/FUTU/FutuEngine.cpp.o: src/FUTU/FutuEngine.cpp \
   /usr/include/c++/8/iomanip \
   /usr/include/c++/8/bits/quoted_string.h \
   src/Interface/IEngine.h \
-  src/Strategy/TradeUtil.h \
-  src/Strategy/Strategy.h \
-  /home/emk/vcpkg/installed/x64-linux/include/json/json.h \
-  /home/emk/vcpkg/installed/x64-linux/include/json/config.h \
-  /home/emk/vcpkg/installed/x64-linux/include/json/allocator.h \
-  /home/emk/vcpkg/installed/x64-linux/include/json/version.h \
-  /home/emk/vcpkg/installed/x64-linux/include/json/json_features.h \
-  /home/emk/vcpkg/installed/x64-linux/include/json/forwards.h \
-  /home/emk/vcpkg/installed/x64-linux/include/json/reader.h \
-  /home/emk/vcpkg/installed/x64-linux/include/json/value.h \
-  /usr/include/c++/8/deque \
-  /usr/include/c++/8/bits/stl_deque.h \
-  /usr/include/c++/8/bits/deque.tcc \
-  /usr/include/c++/8/stack \
-  /usr/include/c++/8/bits/stl_stack.h \
-  /home/emk/vcpkg/installed/x64-linux/include/json/writer.h \
   libs/futu/include/futu/FTAPI.h \
   libs/futu/include/futu/FTAPI_Define.h \
   libs/futu/include/futu/Include_Proto.h \
@@ -5990,6 +5972,20 @@ CMakeFiles/test.dir/src/FUTU/FutuEngine.cpp.o: src/FUTU/FutuEngine.cpp \
   libs/boost/chrono/ceil.hpp \
   libs/boost/chrono/floor.hpp \
   libs/boost/chrono/round.hpp \
+  /home/emk/vcpkg/installed/x64-linux/include/json/json.h \
+  /home/emk/vcpkg/installed/x64-linux/include/json/config.h \
+  /home/emk/vcpkg/installed/x64-linux/include/json/allocator.h \
+  /home/emk/vcpkg/installed/x64-linux/include/json/version.h \
+  /home/emk/vcpkg/installed/x64-linux/include/json/json_features.h \
+  /home/emk/vcpkg/installed/x64-linux/include/json/forwards.h \
+  /home/emk/vcpkg/installed/x64-linux/include/json/reader.h \
+  /home/emk/vcpkg/installed/x64-linux/include/json/value.h \
+  /usr/include/c++/8/deque \
+  /usr/include/c++/8/bits/stl_deque.h \
+  /usr/include/c++/8/bits/deque.tcc \
+  /usr/include/c++/8/stack \
+  /usr/include/c++/8/bits/stl_stack.h \
+  /home/emk/vcpkg/installed/x64-linux/include/json/writer.h \
   libs/boost/thread/thread.hpp \
   libs/boost/thread/thread_only.hpp \
   libs/boost/thread/detail/platform.hpp \
@@ -6974,23 +6970,7 @@ CMakeFiles/test.dir/src/Interface/IEngine.cpp.o: src/Interface/IEngine.cpp \
   /usr/include/x86_64-linux-gnu/bits/types/struct_sigstack.h \
   /usr/include/x86_64-linux-gnu/bits/sigthread.h \
   /usr/include/c++/8/iomanip \
-  /usr/include/c++/8/bits/quoted_string.h \
-  src/Strategy/TradeUtil.h \
-  src/Strategy/Strategy.h \
-  /home/emk/vcpkg/installed/x64-linux/include/json/json.h \
-  /home/emk/vcpkg/installed/x64-linux/include/json/config.h \
-  /home/emk/vcpkg/installed/x64-linux/include/json/allocator.h \
-  /home/emk/vcpkg/installed/x64-linux/include/json/version.h \
-  /home/emk/vcpkg/installed/x64-linux/include/json/json_features.h \
-  /home/emk/vcpkg/installed/x64-linux/include/json/forwards.h \
-  /home/emk/vcpkg/installed/x64-linux/include/json/reader.h \
-  /home/emk/vcpkg/installed/x64-linux/include/json/value.h \
-  /usr/include/c++/8/deque \
-  /usr/include/c++/8/bits/stl_deque.h \
-  /usr/include/c++/8/bits/deque.tcc \
-  /usr/include/c++/8/stack \
-  /usr/include/c++/8/bits/stl_stack.h \
-  /home/emk/vcpkg/installed/x64-linux/include/json/writer.h
+  /usr/include/c++/8/bits/quoted_string.h
 
 CMakeFiles/test.dir/src/Interface/IMessenger.cpp.o: src/Interface/IMessenger.cpp \
   /usr/include/stdc-predef.h \
@@ -9604,65 +9584,7 @@ CMakeFiles/test.dir/src/Strategy/StrategyEngine.cpp.o: src/Strategy/StrategyEngi
   /usr/include/c++/8/iomanip \
   /usr/include/c++/8/bits/quoted_string.h \
   src/Strategy/TradeUtil.h \
-  src/Strategy/Strategy.h \
-  src/Strategy/TradeUtil.cpp \
-  src/Helper/util.h \
-  libs/futu/include/google/protobuf/stubs/common.h \
-  /usr/include/c++/8/set \
-  /usr/include/c++/8/bits/stl_set.h \
-  /usr/include/c++/8/bits/stl_multiset.h \
-  libs/futu/include/google/protobuf/stubs/port.h \
-  libs/futu/include/google/protobuf/stubs/platform_macros.h \
-  /usr/include/x86_64-linux-gnu/sys/param.h \
-  /usr/include/x86_64-linux-gnu/bits/param.h \
-  /usr/include/linux/param.h \
-  /usr/include/x86_64-linux-gnu/asm/param.h \
-  /usr/include/asm-generic/param.h \
-  /usr/include/byteswap.h \
-  libs/futu/include/google/protobuf/stubs/macros.h \
-  libs/futu/include/google/protobuf/stubs/logging.h \
-  libs/futu/include/google/protobuf/stubs/scoped_ptr.h \
-  libs/futu/include/google/protobuf/stubs/mutex.h \
-  libs/futu/include/google/protobuf/stubs/callback.h \
-  libs/futu/include/google/protobuf/stubs/type_traits.h \
-  libs/futu/include/google/protobuf/stubs/template_util.h \
-  libs/futu/include/google/protobuf/message_lite.h \
-  libs/futu/include/google/protobuf/stubs/once.h \
-  libs/futu/include/google/protobuf/stubs/atomicops.h \
-  libs/futu/include/google/protobuf/stubs/atomicops_internals_x86_gcc.h \
-  libs/futu/include/google/protobuf/message.h \
-  libs/futu/include/google/protobuf/arena.h \
-  libs/futu/include/google/protobuf/arena_impl.h \
-  libs/futu/include/google/protobuf/stubs/atomic_sequence_num.h \
-  libs/futu/include/google/protobuf/descriptor.h \
-  libs/futu/include/google/protobuf/util/json_util.h \
-  libs/futu/include/google/protobuf/util/type_resolver.h \
-  libs/futu/include/google/protobuf/stubs/status.h \
-  libs/futu/include/google/protobuf/stubs/stringpiece.h \
-  libs/futu/include/google/protobuf/stubs/hash.h \
-  /usr/include/c++/8/unordered_set \
-  /usr/include/c++/8/bits/unordered_set.h \
-  libs/futu/include/google/protobuf/stubs/bytestream.h \
-  libs/boost/chrono.hpp \
-  libs/boost/chrono/include.hpp \
-  libs/boost/chrono/chrono.hpp \
-  libs/boost/chrono/chrono_io.hpp \
-  libs/boost/chrono/io_v1/chrono_io.hpp \
-  libs/boost/chrono/process_cpu_clocks.hpp \
-  libs/boost/chrono/thread_clock.hpp \
-  libs/boost/ratio/ratio_io.hpp \
-  libs/boost/type_traits/is_scalar.hpp \
-  libs/boost/type_traits/is_signed.hpp \
-  libs/boost/integer/common_factor_rt.hpp \
-  libs/boost/chrono/detail/scan_keyword.hpp \
-  libs/boost/move/unique_ptr.hpp \
-  libs/boost/move/detail/unique_ptr_meta_utils.hpp \
-  libs/boost/move/default_delete.hpp \
-  libs/boost/move/adl_move_swap.hpp \
-  libs/boost/chrono/detail/no_warning/signed_unsigned_cmp.hpp \
-  libs/boost/chrono/io/utility/to_string.hpp \
-  libs/boost/chrono/floor.hpp \
-  libs/boost/chrono/round.hpp
+  src/Strategy/Strategy.h
 
 CMakeFiles/test.dir/src/Strategy/TradeUtil.cpp.o: src/Strategy/TradeUtil.cpp \
   /usr/include/stdc-predef.h \
@@ -10065,7 +9987,6 @@ CMakeFiles/test.dir/src/Strategy/TradeUtil.cpp.o: src/Strategy/TradeUtil.cpp \
   /usr/include/c++/8/stack \
   /usr/include/c++/8/bits/stl_stack.h \
   /home/emk/vcpkg/installed/x64-linux/include/json/writer.h \
-  src/Interface/IEngine.h \
   src/Helper/util.h \
   libs/futu/include/google/protobuf/stubs/common.h \
   /usr/include/c++/8/set \
@@ -12843,11 +12764,11 @@ libs/boost/date_time/time_formatting_streams.hpp:
 
 libs/boost/predef/os.h:
 
-/home/emk/vcpkg/installed/x64-linux/include/json/json.h:
-
 libs/boost/preprocessor/seq/transform.hpp:
 
 libs/futu/include/Proto/Qot_Common.pb.h:
+
+/home/emk/vcpkg/installed/x64-linux/include/json/json.h:
 
 /home/emk/vcpkg/installed/x64-linux/include/zmq.hpp:
 
@@ -13197,36 +13118,6 @@ libs/boost/chrono/round.hpp:
 
 src/FUTU/FutuEngine.h:
 
-src/Strategy/TradeUtil.h:
-
-src/Strategy/Strategy.h:
-
-libs/futu/include/Proto/Qot_UpdatePriceReminder.pb.h:
-
-/home/emk/vcpkg/installed/x64-linux/include/json/forwards.h:
-
-/home/emk/vcpkg/installed/x64-linux/include/json/reader.h:
-
-libs/boost/mpl/aux_/preprocessed/gcc/placeholders.hpp:
-
-libs/boost/predef/os/hpux.h:
-
-libs/boost/filesystem/file_status.hpp:
-
-/usr/include/c++/8/typeinfo:
-
-/usr/include/c++/8/bits/stl_list.h:
-
-/usr/include/c++/8/deque:
-
-/usr/include/c++/8/stack:
-
-/usr/include/c++/8/bits/stl_stack.h:
-
-/home/emk/vcpkg/installed/x64-linux/include/json/writer.h:
-
-libs/boost/utility.hpp:
-
 libs/boost/container_hash/detail/mulx.hpp:
 
 libs/futu/include/futu/FTAPI_Define.h:
@@ -13387,6 +13278,10 @@ libs/futu/include/Proto/Qot_GetIpoList.pb.h:
 
 libs/futu/include/Proto/Qot_SetPriceReminder.pb.h:
 
+libs/futu/include/Proto/Qot_UpdatePriceReminder.pb.h:
+
+src/Strategy/Strategy.h:
+
 libs/futu/include/Proto/Qot_GetUserSecurityGroup.pb.h:
 
 libs/boost/version.hpp:
@@ -13431,6 +13326,30 @@ libs/boost/mp11/bind.hpp:
 
 libs/futu/include/futu/FTAPIChannel_Define.h:
 
+/home/emk/vcpkg/installed/x64-linux/include/json/forwards.h:
+
+/home/emk/vcpkg/installed/x64-linux/include/json/reader.h:
+
+libs/boost/mpl/aux_/preprocessed/gcc/placeholders.hpp:
+
+libs/boost/predef/os/hpux.h:
+
+libs/boost/filesystem/file_status.hpp:
+
+/usr/include/c++/8/typeinfo:
+
+/usr/include/c++/8/bits/stl_list.h:
+
+/usr/include/c++/8/deque:
+
+/usr/include/c++/8/stack:
+
+/usr/include/c++/8/bits/stl_stack.h:
+
+/home/emk/vcpkg/installed/x64-linux/include/json/writer.h:
+
+libs/boost/utility.hpp:
+
 libs/boost/date_time/date_format_simple.hpp:
 
 libs/futu/include/google/protobuf/util/json_util.h:
@@ -13444,10 +13363,6 @@ libs/futu/include/google/protobuf/stubs/status.h:
 libs/boost/iterator/detail/facade_iterator_category.hpp:
 
 libs/futu/include/google/protobuf/stubs/stringpiece.h:
-
-libs/boost/container/detail/std_fwd.hpp:
-
-src/DataManager/tslmdb.hpp:
 
 src/Helper/ThreadPool.hpp:
 
@@ -13532,6 +13447,12 @@ libs/boost/mpl/protect.hpp:
 /usr/include/x86_64-linux-gnu/bits/types/time_t.h:
 
 /usr/include/c++/8/bits/stl_numeric.h:
+
+src/Strategy/TradeUtil.h:
+
+src/DataManager/tslmdb.hpp:
+
+libs/boost/container/detail/std_fwd.hpp:
 
 src/DataManager/FutuParser.h:
 

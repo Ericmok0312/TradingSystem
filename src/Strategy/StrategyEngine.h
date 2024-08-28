@@ -49,7 +49,8 @@ namespace ts{
         public:
 
 
-            typedef unordered_map<string, StrategyCtx> QuoteLoaderMap;
+            typedef unordered_map<string, StrategyCtx*> QuoteLoaderMap;// "exg/code" as key
+            typedef unordered_map<string, IStrategy*> StrategyMap; // using pointer to accept polymorphism
             //typedef unordered_map<stirng, Loader<KlineSlice>> KlineLoaderMap;
             //typedef unordered_map<string, Loader<TickerSlice> TickerLoaderMap;
 
@@ -62,12 +63,14 @@ namespace ts{
         private:
             static shared_ptr<StrategyEngine> instance_;
             QuoteLoaderMap quoteMap_;
+            StrategyMap strategyMap_;
             //KlineLoaderMap klineMap_;
             //TickerLoaderMap tickermap_
             
 
             void init() override;
             void running() override;
+            void addStrategy(IStrategy* stg);
 
     };
 

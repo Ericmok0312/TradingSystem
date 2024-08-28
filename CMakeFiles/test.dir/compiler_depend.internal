@@ -1053,22 +1053,6 @@ CMakeFiles/test.dir/main.cpp.o
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/chrono/round.hpp
  /data/home/emk/Coding/Trading_system/TradingSystem/src/FUTU/FutuEngine.h
  /data/home/emk/Coding/Trading_system/TradingSystem/src/Interface/IEngine.h
- /data/home/emk/Coding/Trading_system/TradingSystem/src/Strategy/TradeUtil.h
- /data/home/emk/Coding/Trading_system/TradingSystem/src/Strategy/Strategy.h
- /home/emk/vcpkg/installed/x64-linux/include/json/json.h
- /home/emk/vcpkg/installed/x64-linux/include/json/config.h
- /home/emk/vcpkg/installed/x64-linux/include/json/allocator.h
- /home/emk/vcpkg/installed/x64-linux/include/json/version.h
- /home/emk/vcpkg/installed/x64-linux/include/json/json_features.h
- /home/emk/vcpkg/installed/x64-linux/include/json/forwards.h
- /home/emk/vcpkg/installed/x64-linux/include/json/reader.h
- /home/emk/vcpkg/installed/x64-linux/include/json/value.h
- /usr/include/c++/8/deque
- /usr/include/c++/8/bits/stl_deque.h
- /usr/include/c++/8/bits/deque.tcc
- /usr/include/c++/8/stack
- /usr/include/c++/8/bits/stl_stack.h
- /home/emk/vcpkg/installed/x64-linux/include/json/writer.h
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/futu/FTAPI.h
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/futu/FTAPI_Define.h
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/futu/Include_Proto.h
@@ -1203,6 +1187,20 @@ CMakeFiles/test.dir/main.cpp.o
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/futu/FTAPIChannel.h
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/futu/FTAPIChannel_Define.h
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/futu/FTSPI.h
+ /home/emk/vcpkg/installed/x64-linux/include/json/json.h
+ /home/emk/vcpkg/installed/x64-linux/include/json/config.h
+ /home/emk/vcpkg/installed/x64-linux/include/json/allocator.h
+ /home/emk/vcpkg/installed/x64-linux/include/json/version.h
+ /home/emk/vcpkg/installed/x64-linux/include/json/json_features.h
+ /home/emk/vcpkg/installed/x64-linux/include/json/forwards.h
+ /home/emk/vcpkg/installed/x64-linux/include/json/reader.h
+ /home/emk/vcpkg/installed/x64-linux/include/json/value.h
+ /usr/include/c++/8/deque
+ /usr/include/c++/8/bits/stl_deque.h
+ /usr/include/c++/8/bits/deque.tcc
+ /usr/include/c++/8/stack
+ /usr/include/c++/8/bits/stl_stack.h
+ /home/emk/vcpkg/installed/x64-linux/include/json/writer.h
  /data/home/emk/Coding/Trading_system/TradingSystem/src/DataManager/DataManager.h
  /data/home/emk/Coding/Trading_system/TradingSystem/src/Helper/ThreadPool.h
  /usr/include/c++/8/queue
@@ -1283,6 +1281,8 @@ CMakeFiles/test.dir/main.cpp.o
  /usr/include/c++/8/bits/random.tcc
  /usr/include/c++/8/numeric
  /usr/include/c++/8/bits/stl_numeric.h
+ /data/home/emk/Coding/Trading_system/TradingSystem/src/Strategy/TradeUtil.h
+ /data/home/emk/Coding/Trading_system/TradingSystem/src/Strategy/Strategy.h
 
 CMakeFiles/test.dir/src/DataManager/DataManager.cpp.o
  /data/home/emk/Coding/Trading_system/TradingSystem/src/DataManager/DataManager.cpp
@@ -2390,8 +2390,6 @@ CMakeFiles/test.dir/src/DataManager/DataManager.cpp.o
  /usr/include/c++/8/iomanip
  /usr/include/c++/8/bits/quoted_string.h
  /data/home/emk/Coding/Trading_system/TradingSystem/src/Interface/IEngine.h
- /data/home/emk/Coding/Trading_system/TradingSystem/src/Strategy/TradeUtil.h
- /data/home/emk/Coding/Trading_system/TradingSystem/src/Strategy/Strategy.h
  /data/home/emk/Coding/Trading_system/TradingSystem/src/DataManager/DataWriter.h
  /data/home/emk/Coding/Trading_system/TradingSystem/src/DataManager/tslmdb.hpp
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/lmdb/liblmdb/lmdb.h
@@ -5441,22 +5439,6 @@ CMakeFiles/test.dir/src/FUTU/FutuEngine.cpp.o
  /usr/include/c++/8/iomanip
  /usr/include/c++/8/bits/quoted_string.h
  /data/home/emk/Coding/Trading_system/TradingSystem/src/Interface/IEngine.h
- /data/home/emk/Coding/Trading_system/TradingSystem/src/Strategy/TradeUtil.h
- /data/home/emk/Coding/Trading_system/TradingSystem/src/Strategy/Strategy.h
- /home/emk/vcpkg/installed/x64-linux/include/json/json.h
- /home/emk/vcpkg/installed/x64-linux/include/json/config.h
- /home/emk/vcpkg/installed/x64-linux/include/json/allocator.h
- /home/emk/vcpkg/installed/x64-linux/include/json/version.h
- /home/emk/vcpkg/installed/x64-linux/include/json/json_features.h
- /home/emk/vcpkg/installed/x64-linux/include/json/forwards.h
- /home/emk/vcpkg/installed/x64-linux/include/json/reader.h
- /home/emk/vcpkg/installed/x64-linux/include/json/value.h
- /usr/include/c++/8/deque
- /usr/include/c++/8/bits/stl_deque.h
- /usr/include/c++/8/bits/deque.tcc
- /usr/include/c++/8/stack
- /usr/include/c++/8/bits/stl_stack.h
- /home/emk/vcpkg/installed/x64-linux/include/json/writer.h
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/futu/FTAPI.h
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/futu/FTAPI_Define.h
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/futu/Include_Proto.h
@@ -5995,6 +5977,20 @@ CMakeFiles/test.dir/src/FUTU/FutuEngine.cpp.o
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/chrono/ceil.hpp
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/chrono/floor.hpp
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/chrono/round.hpp
+ /home/emk/vcpkg/installed/x64-linux/include/json/json.h
+ /home/emk/vcpkg/installed/x64-linux/include/json/config.h
+ /home/emk/vcpkg/installed/x64-linux/include/json/allocator.h
+ /home/emk/vcpkg/installed/x64-linux/include/json/version.h
+ /home/emk/vcpkg/installed/x64-linux/include/json/json_features.h
+ /home/emk/vcpkg/installed/x64-linux/include/json/forwards.h
+ /home/emk/vcpkg/installed/x64-linux/include/json/reader.h
+ /home/emk/vcpkg/installed/x64-linux/include/json/value.h
+ /usr/include/c++/8/deque
+ /usr/include/c++/8/bits/stl_deque.h
+ /usr/include/c++/8/bits/deque.tcc
+ /usr/include/c++/8/stack
+ /usr/include/c++/8/bits/stl_stack.h
+ /home/emk/vcpkg/installed/x64-linux/include/json/writer.h
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/thread/thread.hpp
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/thread/thread_only.hpp
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/thread/detail/platform.hpp
@@ -6982,22 +6978,6 @@ CMakeFiles/test.dir/src/Interface/IEngine.cpp.o
  /usr/include/x86_64-linux-gnu/bits/sigthread.h
  /usr/include/c++/8/iomanip
  /usr/include/c++/8/bits/quoted_string.h
- /data/home/emk/Coding/Trading_system/TradingSystem/src/Strategy/TradeUtil.h
- /data/home/emk/Coding/Trading_system/TradingSystem/src/Strategy/Strategy.h
- /home/emk/vcpkg/installed/x64-linux/include/json/json.h
- /home/emk/vcpkg/installed/x64-linux/include/json/config.h
- /home/emk/vcpkg/installed/x64-linux/include/json/allocator.h
- /home/emk/vcpkg/installed/x64-linux/include/json/version.h
- /home/emk/vcpkg/installed/x64-linux/include/json/json_features.h
- /home/emk/vcpkg/installed/x64-linux/include/json/forwards.h
- /home/emk/vcpkg/installed/x64-linux/include/json/reader.h
- /home/emk/vcpkg/installed/x64-linux/include/json/value.h
- /usr/include/c++/8/deque
- /usr/include/c++/8/bits/stl_deque.h
- /usr/include/c++/8/bits/deque.tcc
- /usr/include/c++/8/stack
- /usr/include/c++/8/bits/stl_stack.h
- /home/emk/vcpkg/installed/x64-linux/include/json/writer.h
 
 CMakeFiles/test.dir/src/Interface/IMessenger.cpp.o
  /data/home/emk/Coding/Trading_system/TradingSystem/src/Interface/IMessenger.cpp
@@ -9615,64 +9595,6 @@ CMakeFiles/test.dir/src/Strategy/StrategyEngine.cpp.o
  /usr/include/c++/8/bits/quoted_string.h
  /data/home/emk/Coding/Trading_system/TradingSystem/src/Strategy/TradeUtil.h
  /data/home/emk/Coding/Trading_system/TradingSystem/src/Strategy/Strategy.h
- /data/home/emk/Coding/Trading_system/TradingSystem/src/Strategy/TradeUtil.cpp
- /data/home/emk/Coding/Trading_system/TradingSystem/src/Helper/util.h
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/stubs/common.h
- /usr/include/c++/8/set
- /usr/include/c++/8/bits/stl_set.h
- /usr/include/c++/8/bits/stl_multiset.h
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/stubs/port.h
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/stubs/platform_macros.h
- /usr/include/x86_64-linux-gnu/sys/param.h
- /usr/include/x86_64-linux-gnu/bits/param.h
- /usr/include/linux/param.h
- /usr/include/x86_64-linux-gnu/asm/param.h
- /usr/include/asm-generic/param.h
- /usr/include/byteswap.h
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/stubs/macros.h
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/stubs/logging.h
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/stubs/scoped_ptr.h
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/stubs/mutex.h
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/stubs/callback.h
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/stubs/type_traits.h
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/stubs/template_util.h
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/message_lite.h
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/stubs/once.h
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/stubs/atomicops.h
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/stubs/atomicops_internals_x86_gcc.h
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/message.h
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/arena.h
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/arena_impl.h
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/stubs/atomic_sequence_num.h
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/descriptor.h
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/util/json_util.h
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/util/type_resolver.h
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/stubs/status.h
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/stubs/stringpiece.h
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/stubs/hash.h
- /usr/include/c++/8/unordered_set
- /usr/include/c++/8/bits/unordered_set.h
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/stubs/bytestream.h
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/chrono.hpp
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/chrono/include.hpp
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/chrono/chrono.hpp
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/chrono/chrono_io.hpp
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/chrono/io_v1/chrono_io.hpp
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/chrono/process_cpu_clocks.hpp
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/chrono/thread_clock.hpp
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/ratio/ratio_io.hpp
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/is_scalar.hpp
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/type_traits/is_signed.hpp
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/integer/common_factor_rt.hpp
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/chrono/detail/scan_keyword.hpp
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/move/unique_ptr.hpp
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/move/detail/unique_ptr_meta_utils.hpp
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/move/default_delete.hpp
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/move/adl_move_swap.hpp
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/chrono/detail/no_warning/signed_unsigned_cmp.hpp
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/chrono/io/utility/to_string.hpp
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/chrono/floor.hpp
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/boost/chrono/round.hpp
 
 CMakeFiles/test.dir/src/Strategy/TradeUtil.cpp.o
  /data/home/emk/Coding/Trading_system/TradingSystem/src/Strategy/TradeUtil.cpp
@@ -10076,7 +9998,6 @@ CMakeFiles/test.dir/src/Strategy/TradeUtil.cpp.o
  /usr/include/c++/8/stack
  /usr/include/c++/8/bits/stl_stack.h
  /home/emk/vcpkg/installed/x64-linux/include/json/writer.h
- /data/home/emk/Coding/Trading_system/TradingSystem/src/Interface/IEngine.h
  /data/home/emk/Coding/Trading_system/TradingSystem/src/Helper/util.h
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/stubs/common.h
  /usr/include/c++/8/set
