@@ -91,6 +91,22 @@ namespace ts{
         timestamp_ = stoull(info[4]);
     }
 
+
+    const PositionInformation* Position::getData() const{
+        return &pos_;
+    }
+
+
+    void Position::changePosition(double volume, double price){
+        pos_.first += volume;
+        pos_.second = (pos_.second*(pos_.first-volume)+price*volume)/pos_.second;
+    }
+
+
+
+    Position::Position(const char* code, const char* exg):code_(code), exg_(exg){
+    }
+
    
 
 }

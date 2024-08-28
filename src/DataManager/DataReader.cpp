@@ -21,7 +21,7 @@ namespace ts{
     }
 
     void DataReader::init(){
-        logger_ = make_unique<Logger>("DataReader");
+        logger_ = Logger::getInstance("DataReader");
     }
 
 

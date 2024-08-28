@@ -9,15 +9,7 @@
 namespace ts{
 
 
-    struct ARG{
-        char exg[MAX_EXG_SIZE];
-        char code[MAX_SYMBOL_SIZE];
-        uint32_t  count;
-        uint64_t  etime;
-        string des; 
-        std::function<void(string&&, string&& des)> callback {};
-        ARG(){};
-    };
+    
 
     class DataReader: public ThreadPool<std::function<void(shared_ptr<ARG>)>, shared_ptr<ARG>>{
         //exg, code, count, etime
@@ -26,7 +18,7 @@ namespace ts{
 
 
             #define BASE_FILE_LOC "./src/DataBase"
-            std::unique_ptr<Logger> logger_;
+            std::shared_ptr<Logger> logger_;
 
             
             DataReader();

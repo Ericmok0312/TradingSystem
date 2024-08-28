@@ -8,6 +8,9 @@
 #include <sstream>
 #include <iostream>
 #include <vector>
+#include <unordered_map>
+#include <functional>
+#include <memory>
 #if defined(_WIN32) || defined(_WIN64)
 #ifdef DLL_EXPORT
 #define DLL_EXPORT_IMPORT  __declspec(dllexport)   // export DLL information
@@ -35,6 +38,18 @@ namespace ts{
     #define MAX_SYMBOL_SIZE 20
     #define MAX_TIME_SIZE 20
     #define MAX_EXG_SIZE 5
+
+    struct ARG{
+        char exg[MAX_EXG_SIZE];
+        char code[MAX_SYMBOL_SIZE];
+        uint32_t  count;
+        uint64_t  etime;
+        string des; 
+        std::function<void(string&&, string&& des)> callback {};
+        ARG(){};
+    };
+
+    typedef unordered_map<string, tuple<function<void(function<void(shared_ptr<ARG>)>, shared_ptr<ARG>)>, function<void(shared_ptr<ARG>)>, shared_ptr<ARG>>> CallBackTabletype;
 
     /*
         Engine state
@@ -106,7 +121,7 @@ namespace ts{
         MSG_TYPE_ACCOUNTINFO = 1999,
         
         //operations on TS
-        MSG_TYPE_SUBSCRIBE_MARKET_DATA = 2000,
+        MSG_TYPE_SUBSCRIBE_MARKET_DATA = 2000, // use to initiate the registration of loader
         MSG_TYPE_GET_ACCOUNTINFO = 2001,
         MSG_TYPE_GET_ACCESSLIST = 2002,
         MSG_TYPE_REGCALLBACK = 2003,
@@ -136,8 +151,6 @@ namespace ts{
         KLINE_1D = 2,
         QUOTE = 3,
 
-
-
         ALL = 1000
     };
 
@@ -158,6 +171,20 @@ namespace ts{
     };
 
 
+    typedef pair<double,double> PositionInformation;
+
+    class Position{
+        private:
+            PositionInformation pos_;
+            string code_;
+            string exg_;
+        public:
+            Position(const char* code, const char* exg);
+            const PositionInformation* getData() const;
+            void changePosition(double volume, double price);
+    };
+
+
 
     /// @brief abstract class for all data class
     class BaseData{
@@ -165,6 +192,8 @@ namespace ts{
             BaseData(){};
             virtual ~BaseData(){};
             virtual string getString() const {return NULL;}
+            virtual uint32_t getCount(){return 0;}
+            virtual const BaseData* at(int32_t){return nullptr;};
     };
 
 

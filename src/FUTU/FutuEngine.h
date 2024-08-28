@@ -28,6 +28,7 @@ namespace ts
             virtual void init();
             virtual void start();
             virtual void stop(); 
+            virtual void running();
             virtual void setTradeMode(){};
             virtual void lockTXN(){};
             virtual void unlockTXN(){};

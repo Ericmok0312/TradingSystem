@@ -21,7 +21,7 @@ namespace ts{
     - getting logger_ using Logger::getInstance();
     */
     IMessenger::IMessenger(const char* name){
-        logger_ = make_shared<Logger>(name);
+        logger_ = Logger::getInstance(name);
     }
 
     IMessenger::~IMessenger(){}; // default destructor
@@ -38,10 +38,9 @@ namespace ts{
     -set up logger using getInstance();
     */
     IMsgq::IMsgq(MSGQ_PROTOCOL protocol, const string& url){
-        logger_ = make_shared<Logger>("IMsgq");
+        logger_ = Logger::getInstance("IMsgq");
         protocol_ = protocol;
         url_ = url;
-        context_ = Context::getInstance();
     }
 
 
@@ -50,34 +49,6 @@ namespace ts{
     };    //default destructor
 
 
-    //Context
-    
-    context_t* Context::ctx_;
-    shared_ptr<Context> Context::instance_;
-    mutex Context::getInstanceLock_;
-
-    shared_ptr<Context> Context::getInstance(){
-        lock_guard<mutex> lg(getInstanceLock_);
-        if(!instance_){
-            instance_ = make_shared<Context>();
-            instance_->logger_ = make_shared<Logger>("Context");
-        }
-        return instance_;
-    }
-
-    context_t* Context::GetContext(){
-        return ctx_;
-    }
-
-    Context::Context(){
-        ctx_ = new context_t;
-    }
-
-    Context::~Context(){
-        logger_->info("Context destructed");
-        delete ctx_;
-    }
-    
 
     // End of IMsgq
 
@@ -102,7 +73,7 @@ namespace ts{
         return &(this->sock_);
     }
 
-    MsgqNNG::MsgqNNG(MSGQ_PROTOCOL protocol,const string& url, bool binding):IMsgq(protocol, url), sock_(*context_->GetContext(), getSockType(protocol)){
+    MsgqNNG::MsgqNNG(MSGQ_PROTOCOL protocol,const string& url, bool binding):IMsgq(protocol, url), sock_(ctx_, getSockType(protocol)){
         int svalid = 0;
         switch(protocol_){
 
@@ -170,7 +141,7 @@ namespace ts{
     void MsgqNNG::sendmsg(char* str, int32_t immediate){ // as is char*, temp string as input will not call this
         try{
             zmq::message_t msg(static_cast<void*>(str), strlen(str)+1, [](void* a, void* b){delete[] static_cast<char*>(a);}, nullptr);
-            if(!sock_.send(move(msg), zmq::send_flags::none)){
+            if(!sock_.send(move(msg), zmq::send_flags::dontwait)){
                 throw std::runtime_error("NNG send msg error");
             }
         }catch(const zmq::error_t& e) {
@@ -195,9 +166,9 @@ namespace ts{
 
     char* MsgqNNG::recmsg(int32_t blockingflags){
         zmq::message_t msg;
-        auto success = sock_.recv(msg, zmq::recv_flags::none);
+        auto success = sock_.recv(msg, zmq::recv_flags::dontwait);
         //
-        if (msg.data()!=nullptr){
+        if (success && msg.data()!=nullptr){
             char* nbuf = new char[strlen(static_cast<char*>(msg.data()))+1]; 
             strcpy(nbuf, static_cast<char*>(msg.data()));
             return nbuf;
@@ -292,11 +263,11 @@ namespace ts{
     //Start of MsgqTSMessenger
     std::mutex MsgqTSMessenger::sendlock_; //initialize sendlock_
 
-    //std::shared_ptr<IMsgq> MsgqTSMessenger::msgq_server_;
-
-    shared_ptr<MsgqTSMessenger> MsgqTSMessenger::instance_ = nullptr;
+    unordered_map<string, shared_ptr<MsgqTSMessenger>> MsgqTSMessenger::regTable_;
 
     std::mutex MsgqTSMessenger::instancelock_;
+
+    std::mutex MsgqTSMessenger::regTable_lock_;
 
     //Construcotor of MsgqTSMessenger
     MsgqTSMessenger::MsgqTSMessenger(const string& url_recv):IMessenger("MsgqTSMessenger"){
@@ -310,7 +281,6 @@ namespace ts{
     //Default destructor
     MsgqTSMessenger::~MsgqTSMessenger(){
         logger_->info("Destructing MsgqTSessenger");
-        instance_.reset();
     }
 
 
@@ -344,7 +314,7 @@ namespace ts{
             std::shared_ptr<Msg> msgheader = std::make_shared<Msg>();
             msgheader->deserialize(msgin);
             delete[] msgin; // msgin is allocated in serialization and not deleted
-            return msgheader;
+            return move(msgheader);
         }
         catch(std::exception& e){
             logger_->error(fmt::format("{} [Original msg]: {}",e.what(),msgin).c_str());
@@ -353,12 +323,18 @@ namespace ts{
     }
 
 
-    shared_ptr<MsgqTSMessenger> MsgqTSMessenger::getInstance(){
-        // if(!instance_){
-        //     instance_ = make_shared<MsgqTSMessenger>(PROXY_SERVER_URL);
-        // }
-        // return instance_;
-        return make_shared<MsgqTSMessenger>(PROXY_SERVER_URL);
+    shared_ptr<MsgqTSMessenger> MsgqTSMessenger::getInstance(const char* name){
+
+        auto it = regTable_.find(name);
+        if(it != regTable_.end()){
+            return it->second;
+        }
+        shared_ptr<MsgqTSMessenger> temp = make_shared<MsgqTSMessenger>(PROXY_SERVER_URL);
+
+        lock_guard<mutex> lg(regTable_lock_);
+        regTable_.insert({move(name), temp});
+        return move(temp);
+
     }
 
     void MsgqTSMessenger::relay(){}; // relay function will not be called in MsgqTSMessenger

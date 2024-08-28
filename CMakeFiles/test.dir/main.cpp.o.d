@@ -1205,5 +1205,5 @@ CMakeFiles/test.dir/main.cpp.o: \
  /usr/include/x86_64-linux-gnu/c++/8/bits/opt_random.h \
  /usr/include/c++/8/bits/random.tcc /usr/include/c++/8/numeric \
  /usr/include/c++/8/bits/stl_numeric.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/src/Strategy/TradeUtil.hpp \
- /data/home/emk/Coding/Trading_system/TradingSystem/src/Strategy/TradeUtil.h
+ /data/home/emk/Coding/Trading_system/TradingSystem/src/Strategy/TradeUtil.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/src/Strategy/Strategy.h

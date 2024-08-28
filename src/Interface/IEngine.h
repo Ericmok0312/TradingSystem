@@ -57,23 +57,27 @@ namespace ts
             IEngine();
             virtual ~IEngine();
 
-            virtual void init() = 0;
+
             virtual void start() = 0;
             virtual void stop()= 0; 
-            virtual void setTradeMode()= 0;
-            virtual void lockTXN()= 0;
-            virtual void unlockTXN()= 0;
-            virtual void subscribe(const char* code, int32_t subtype) = 0;
-            //virtual bool connect() = 0;
-        
-        protected: 
 
-            std::shared_ptr<ts::Logger> logger_;
-            std::atomic<ts::Estate> estate_;
-            std::atomic<ts::ETmode> etrademode_;
-            std::atomic<ts::ETlock> etradelock_;
-            std::unique_ptr<ts::IMessenger> messenger_;
+            // virtual void setTradeMode()= 0;
+            // virtual void lockTXN()= 0;
+            // virtual void unlockTXN()= 0;
+            // virtual void subscribe(const char* code, int32_t subtype) = 0;
+            //virtual bool connect() = 0;
+            atomic<ts::Estate> estate_;
+        protected: 
+            shared_ptr<ts::Logger> logger_;
+            
+            shared_ptr<ts::IMessenger> messenger_;
+            
+            virtual void init() = 0;
+            virtual void running() = 0;
     };
+
+
+
 
 } // namespace ts
 

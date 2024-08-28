@@ -72,20 +72,6 @@ IMsgq
 
 */
 
-class Context{
-        static context_t* ctx_;
-        static shared_ptr<Context> instance_;
-        shared_ptr<Logger> logger_;
-        static mutex getInstanceLock_;
-    public:
-
-        context_t* GetContext();
-        
-        static shared_ptr<Context> getInstance();
-        Context();
-        ~Context();
-
-};
 
 class IMsgq{
 
@@ -93,7 +79,6 @@ class IMsgq{
         MSGQ_PROTOCOL protocol_;
         string url_;
         std::shared_ptr<Logger> logger_;
-        shared_ptr<Context> context_;
     public:
         IMsgq(MSGQ_PROTOCOL protocol, const string& url);
         virtual ~IMsgq();
@@ -101,7 +86,7 @@ class IMsgq{
         virtual void sendmsg(const string& str, int32_t immediate = 1){};
         virtual void sendmsg(char* str, int32_t immediate = 1){};
 
-        virtual char* recmsg(int32_t blockingflags = 1){};
+        virtual char* recmsg(int32_t blockingflags = 1){return nullptr;};
 };
 
 
@@ -134,8 +119,9 @@ MsgqNNG
 
 class MsgqNNG : public IMsgq {
     private:
+        context_t ctx_;
         socket_t sock_;
-
+        
     public:
         MsgqNNG(MSGQ_PROTOCOL protocol, const string& url, bool binding = true);
         ~MsgqNNG() override;
@@ -214,20 +200,20 @@ class MsgqRMessenger : public IMessenger {
 
 class MsgqTSMessenger : public IMessenger {
  private:
-    std::unique_ptr<IMsgq> msgq_receiver_;
 
- public:
-    void setSubscribe(const char* topic);
+    std::unique_ptr<IMsgq> msgq_receiver_;
+    static unordered_map<string, shared_ptr<MsgqTSMessenger>> regTable_;
     static mutex sendlock_;
     std::shared_ptr<IMsgq> msgq_server_;
     static std::mutex instancelock_;
-    
+    static std::mutex regTable_lock_;
+ public:
+    void setSubscribe(const char* topic);
+
     explicit MsgqTSMessenger(const string& url_recv);
     virtual ~MsgqTSMessenger();
     
-    static shared_ptr<MsgqTSMessenger> instance_;
-
-    static shared_ptr<MsgqTSMessenger> getInstance();
+    static shared_ptr<MsgqTSMessenger> getInstance(const char* name);
     static void Send(std::shared_ptr<Msg> pmsg, int flag);
     virtual void send(std::shared_ptr<Msg> pmsg, int flag);
     virtual std::shared_ptr<Msg> recv(int flag);

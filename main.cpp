@@ -13,7 +13,7 @@ using namespace ts;
 #include <DataManager/DataReader.h>
 #include <functional>
 #include <random>
-#include <Strategy/TradeUtil.hpp>
+#include <Strategy/TradeUtil.h>
 
     class Tester{
     public:
@@ -24,7 +24,7 @@ using namespace ts;
             boost::this_thread::sleep_for(boost::chrono::seconds(10));
             std::shared_ptr<Logger> LOG = make_shared<Logger>("fun1");
             std::shared_ptr<Msg> msg = std::make_shared<Msg>();
-            shared_ptr<MsgqTSMessenger> ms = MsgqTSMessenger::getInstance();
+            shared_ptr<MsgqTSMessenger> ms = MsgqTSMessenger::getInstance("fun1");
             LOG->info("Futu Called");
 
             string code = "TCHmain";
@@ -126,6 +126,7 @@ using namespace ts;
             std::shared_ptr<Logger> LOG = make_shared<Logger>("fun3");
             ts::FutuEngine eng;
             eng.start();
+            while(eng.estate_.load()==CONNECTED){}
         }
 
 
@@ -157,7 +158,7 @@ using namespace ts;
 
             std::mt19937 rng(std::random_device{}()); // Mersenne Twister engine
             std::uniform_int_distribution<int> dist(0, 10); // [0, 10) range
-            shared_ptr<MsgqTSMessenger> ms = MsgqTSMessenger::getInstance();
+            shared_ptr<MsgqTSMessenger> ms = MsgqTSMessenger::getInstance("datawriter");
 
 
             //q.reset();
@@ -184,7 +185,7 @@ using namespace ts;
         void test_dataWriter1(){
             std::mt19937 rng(std::random_device{}()); // Mersenne Twister engine
             std::uniform_int_distribution<int> dist(0, 20); // [0, 10) range
-            shared_ptr<MsgqTSMessenger> ms = MsgqTSMessenger::getInstance();
+            shared_ptr<MsgqTSMessenger> ms = MsgqTSMessenger::getInstance("dw1");
 
 
             //q.reset();
@@ -211,7 +212,7 @@ using namespace ts;
         void test_dataWriter2(){
             std::mt19937 rng(std::random_device{}()); // Mersenne Twister engine
             std::uniform_int_distribution<int> dist(0, 10); // [0, 10) range
-            shared_ptr<MsgqTSMessenger> ms = MsgqTSMessenger::getInstance();
+            shared_ptr<MsgqTSMessenger> ms = MsgqTSMessenger::getInstance("dw2");
 
 
             //q.reset();
@@ -246,6 +247,7 @@ using namespace ts;
             //boost::this_thread::sleep_for(boost::chrono::minutes(5));
             FutuEngine eng;
             eng.start();
+            while(eng.estate_.load() == CONNECTED);
         }
 
         void test_counter(){
@@ -256,7 +258,7 @@ using namespace ts;
             de->stop();
 
             std::shared_ptr<Msg> msg = std::make_shared<Msg>();
-            shared_ptr<MsgqTSMessenger> ms = MsgqTSMessenger::getInstance();
+            shared_ptr<MsgqTSMessenger> ms = MsgqTSMessenger::getInstance("counter");
             msg->msgtype_ = MSG_TYPE_STOP;
             msg->destination_ = "FutuEngine";
             msg->source_ = "Tester";
@@ -265,9 +267,9 @@ using namespace ts;
         }
 
         void test_reader(bool* indicator){
-            boost::this_thread::sleep_for(boost::chrono::seconds(20));
+            boost::this_thread::sleep_for(boost::chrono::minutes(10));
             std::shared_ptr<Msg> msg = std::make_shared<Msg>();
-            shared_ptr<MsgqTSMessenger> ms = MsgqTSMessenger::getInstance();
+            shared_ptr<MsgqTSMessenger> ms = MsgqTSMessenger::getInstance("testreader");
             msg->msgtype_ = MSG_TYPE_GET_QUOTE_BLOCK;
             msg->source_ = "Tester";
             msg->destination_ = "DataManager";
@@ -281,14 +283,14 @@ using namespace ts;
 
         void test_getData(bool* indicator){
             std::shared_ptr<Logger> LOG = make_shared<Logger>("GetData");
-            shared_ptr<MsgqTSMessenger> ms = MsgqTSMessenger::getInstance();
+            shared_ptr<MsgqTSMessenger> ms = MsgqTSMessenger::getInstance("getData");
             std::shared_ptr<Msg> msg;
             std::shared_ptr<Msg> dataMsg = make_shared<Msg>();
             dataMsg->destination_ = "WebApp";
             uint64_t last = 0;
             dataMsg->source_ = "Tester";
             dataMsg->msgtype_ = MSG_TYPE_DEBUG;
-            while(indicator){
+            while(*indicator){
                 msg = ms->recv(0);
                 if(msg && strcmp(msg->destination_.c_str(),"TesterReader")==0){
                     QuoteSlice* ptr = reinterpret_cast<QuoteSlice*>(std::strtoull(msg->data_.c_str(), nullptr, 16));
@@ -309,25 +311,24 @@ using namespace ts;
         void test_Loader(bool* indicator){
             sleep(10);
             std::shared_ptr<Logger> LOG = make_shared<Logger>("Loader");
-            shared_ptr<MsgqTSMessenger> ms = MsgqTSMessenger::getInstance();
-            Loader<QuoteSlice> ld("HSImain", "FUTU", 5, LoaderType::QUOTE, indicator, 500);
+            shared_ptr<MsgqTSMessenger> ms = MsgqTSMessenger::getInstance("Loadertester");
+            StrategyCtx ld("HSImain", "FUTU", 5, SubType::QUOTE,500);
+            ld.start();
             std::shared_ptr<Msg> dataMsg = make_shared<Msg>();
             dataMsg->destination_ = "WebApp";
             dataMsg->source_ = "Tester";
             dataMsg->msgtype_ = MSG_TYPE_DEBUG;
-            int count = 0;
-            while(count<10){
+            while(*indicator){
                 if(ld.getCur()){
                     const ts::Quote* temp = static_cast<const ts::Quote*>(ld.getCur());
                     if(temp){
                         dataMsg->data_ = temp->getJson();
                         ms->send(dataMsg, 0);
-                        LOG->info(temp->getJson().c_str());   
-                        count++;
+                        //LOG->info(temp->getJson().c_str());   
                     }
                 }
             }
-            *indicator = false;
+            ld.stop();
         }
         
 
@@ -356,8 +357,8 @@ using namespace ts;
             
 
             thread_test_counter.join();
-            
-            
+            fg = false;
+            sleep(5);
         }
     };
 

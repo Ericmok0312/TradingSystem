@@ -8,9 +8,10 @@ namespace ts
 {
 
     
-    
+    unordered_map<string, shared_ptr<Logger>> Logger::regTable_;
 
-    std::mutex Logger::mutex_;
+    mutex Logger::regTable_lock;
+
     /*
     Logger::getInstance() : static function for getting logger_ in other parts of the system
 
@@ -35,11 +36,9 @@ namespace ts
     */
 
     Logger::Logger(const char* name){
+
         name_ = name;
         spdlogger_ = spdlog::get(name); 
-        if (spdlogger_ != nullptr){
-            return;
-        }
 
         std::time_t temp = std::chrono::system_clock::to_time_t(std::chrono::system_clock::now());
         std::ostringstream fpath;
@@ -64,6 +63,16 @@ namespace ts
         spdlogger_->set_level(spdlog::level::trace);
     }
 
+    shared_ptr<Logger> Logger::getInstance(const char* name){
+        auto it = regTable_.find(name);
+        if(it!=regTable_.end()){
+            return it->second;
+        }
+        lock_guard<mutex> lg(regTable_lock);
+        shared_ptr<Logger> temp = make_shared<Logger>(name);
+        regTable_.insert({move(name), temp});
+        return move(temp);
+    }
 
     /*
     ~Logger()
