@@ -30,6 +30,7 @@ namespace ts{
 
             void readQuoteSlicefromCSV(shared_ptr<ARG>);
             void readQuoteSlicefromLMDB(shared_ptr<ARG>);
+            void readCurQuoteSlicefromLMDB(shared_ptr<ARG>);
 
             
             typedef std::shared_ptr<TsLMDB> TSLMDBPtr;

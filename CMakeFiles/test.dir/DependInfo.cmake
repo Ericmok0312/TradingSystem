@@ -18,6 +18,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/data/home/emk/Coding/Trading_system/TradingSystem/src/Interface/IMessenger.cpp" "CMakeFiles/test.dir/src/Interface/IMessenger.cpp.o" "gcc" "CMakeFiles/test.dir/src/Interface/IMessenger.cpp.o.d"
   "/data/home/emk/Coding/Trading_system/TradingSystem/src/Interface/datastruture.cpp" "CMakeFiles/test.dir/src/Interface/datastruture.cpp.o" "gcc" "CMakeFiles/test.dir/src/Interface/datastruture.cpp.o.d"
   "/data/home/emk/Coding/Trading_system/TradingSystem/src/Strategy/StrategyEngine.cpp" "CMakeFiles/test.dir/src/Strategy/StrategyEngine.cpp.o" "gcc" "CMakeFiles/test.dir/src/Strategy/StrategyEngine.cpp.o.d"
+  "/data/home/emk/Coding/Trading_system/TradingSystem/src/Strategy/TestStrategy.cpp" "CMakeFiles/test.dir/src/Strategy/TestStrategy.cpp.o" "gcc" "CMakeFiles/test.dir/src/Strategy/TestStrategy.cpp.o.d"
   "/data/home/emk/Coding/Trading_system/TradingSystem/src/Strategy/TradeUtil.cpp" "CMakeFiles/test.dir/src/Strategy/TradeUtil.cpp.o" "gcc" "CMakeFiles/test.dir/src/Strategy/TradeUtil.cpp.o.d"
   )
 

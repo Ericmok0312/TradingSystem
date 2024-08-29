@@ -77,5 +77,14 @@ namespace ts{
         logger_->info(fmt::format("Added New Strategy: {}", stg->getName()).c_str());
     }
 
+    shared_ptr<StrategyEngine> StrategyEngine::instance_;
+    mutex StrategyEngine::getInstanceMutex_;
 
+    shared_ptr<StrategyEngine> StrategyEngine::getInstance(){
+        lock_guard<mutex> lg(getInstanceMutex_);
+        if(!instance_){
+            instance_ = make_shared<StrategyEngine>();
+        }
+        return instance_;
+    }
 }

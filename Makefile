@@ -369,6 +369,30 @@ src/Strategy/StrategyEngine.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Strategy/StrategyEngine.cpp.s
 .PHONY : src/Strategy/StrategyEngine.cpp.s
 
+src/Strategy/TestStrategy.o: src/Strategy/TestStrategy.cpp.o
+.PHONY : src/Strategy/TestStrategy.o
+
+# target to build an object file
+src/Strategy/TestStrategy.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Strategy/TestStrategy.cpp.o
+.PHONY : src/Strategy/TestStrategy.cpp.o
+
+src/Strategy/TestStrategy.i: src/Strategy/TestStrategy.cpp.i
+.PHONY : src/Strategy/TestStrategy.i
+
+# target to preprocess a source file
+src/Strategy/TestStrategy.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Strategy/TestStrategy.cpp.i
+.PHONY : src/Strategy/TestStrategy.cpp.i
+
+src/Strategy/TestStrategy.s: src/Strategy/TestStrategy.cpp.s
+.PHONY : src/Strategy/TestStrategy.s
+
+# target to generate assembly for a file
+src/Strategy/TestStrategy.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Strategy/TestStrategy.cpp.s
+.PHONY : src/Strategy/TestStrategy.cpp.s
+
 src/Strategy/TradeUtil.o: src/Strategy/TradeUtil.cpp.o
 .PHONY : src/Strategy/TradeUtil.o
 
@@ -432,6 +456,9 @@ help:
 	@echo "... src/Strategy/StrategyEngine.o"
 	@echo "... src/Strategy/StrategyEngine.i"
 	@echo "... src/Strategy/StrategyEngine.s"
+	@echo "... src/Strategy/TestStrategy.o"
+	@echo "... src/Strategy/TestStrategy.i"
+	@echo "... src/Strategy/TestStrategy.s"
 	@echo "... src/Strategy/TradeUtil.o"
 	@echo "... src/Strategy/TradeUtil.i"
 	@echo "... src/Strategy/TradeUtil.s"

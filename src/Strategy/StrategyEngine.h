@@ -7,6 +7,7 @@
 #include "Strategy/TradeUtil.h"
 #include "json/json.h"
 #include "functional"
+#include "mutex"
 namespace ts{
 
     typedef rapidjson::Document Parameter;
@@ -59,9 +60,12 @@ namespace ts{
             
             void start() override;
             void stop() override;
+            void addStrategy(IStrategy* stg);
+            static shared_ptr<StrategyEngine> getInstance();
 
         private:
             static shared_ptr<StrategyEngine> instance_;
+            static mutex getInstanceMutex_;
             QuoteLoaderMap quoteMap_;
             StrategyMap strategyMap_;
             //KlineLoaderMap klineMap_;
@@ -70,7 +74,7 @@ namespace ts{
 
             void init() override;
             void running() override;
-            void addStrategy(IStrategy* stg);
+
 
     };
 

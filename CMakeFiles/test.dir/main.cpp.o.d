@@ -1116,6 +1116,11 @@ CMakeFiles/test.dir/main.cpp.o: \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/futu/FTAPIChannel.h \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/futu/FTAPIChannel_Define.h \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/futu/FTSPI.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/src/DataManager/DataManager.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/src/Helper/ThreadPool.h \
+ /usr/include/c++/8/queue /usr/include/c++/8/deque \
+ /usr/include/c++/8/bits/stl_deque.h /usr/include/c++/8/bits/deque.tcc \
+ /usr/include/c++/8/bits/stl_queue.h \
  /home/emk/vcpkg/installed/x64-linux/include/json/json.h \
  /home/emk/vcpkg/installed/x64-linux/include/json/config.h \
  /home/emk/vcpkg/installed/x64-linux/include/json/allocator.h \
@@ -1124,13 +1129,8 @@ CMakeFiles/test.dir/main.cpp.o: \
  /home/emk/vcpkg/installed/x64-linux/include/json/forwards.h \
  /home/emk/vcpkg/installed/x64-linux/include/json/reader.h \
  /home/emk/vcpkg/installed/x64-linux/include/json/value.h \
- /usr/include/c++/8/deque /usr/include/c++/8/bits/stl_deque.h \
- /usr/include/c++/8/bits/deque.tcc /usr/include/c++/8/stack \
- /usr/include/c++/8/bits/stl_stack.h \
+ /usr/include/c++/8/stack /usr/include/c++/8/bits/stl_stack.h \
  /home/emk/vcpkg/installed/x64-linux/include/json/writer.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/src/DataManager/DataManager.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/src/Helper/ThreadPool.h \
- /usr/include/c++/8/queue /usr/include/c++/8/bits/stl_queue.h \
  /data/home/emk/Coding/Trading_system/TradingSystem/src/Helper/util.h \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/util/json_util.h \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/util/type_resolver.h \
@@ -1206,4 +1206,6 @@ CMakeFiles/test.dir/main.cpp.o: \
  /usr/include/c++/8/bits/random.tcc /usr/include/c++/8/numeric \
  /usr/include/c++/8/bits/stl_numeric.h \
  /data/home/emk/Coding/Trading_system/TradingSystem/src/Strategy/TradeUtil.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/src/Strategy/Strategy.h
+ /data/home/emk/Coding/Trading_system/TradingSystem/src/Strategy/Strategy.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/src/Strategy/StrategyEngine.h \
+ /data/home/emk/Coding/Trading_system/TradingSystem/src/Strategy/TestStrategy.h

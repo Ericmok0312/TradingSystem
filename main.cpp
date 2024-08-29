@@ -7,13 +7,15 @@ using namespace ts;
 #include <boost/chrono.hpp>
 #include <memory>
 #include <FUTU/FutuEngine.h>
-#include <json/json.h>
+#include <rapidjson/document.h>
 #include <DataManager/DataManager.h>
 #include <DataManager/DataWriter.h>
 #include <DataManager/DataReader.h>
 #include <functional>
 #include <random>
 #include <Strategy/TradeUtil.h>
+#include <Strategy/StrategyEngine.h>
+#include <Strategy/TestStrategy.h>
 
     class Tester{
     public:
@@ -251,10 +253,11 @@ using namespace ts;
         }
 
         void test_counter(){
-            boost::this_thread::sleep_for(boost::chrono::seconds(30));
+            boost::this_thread::sleep_for(boost::chrono::seconds(300));
             
             shared_ptr<DataManager> de = DataManager::getInstance();
-
+            shared_ptr<StrategyEngine> eng = StrategyEngine::getInstance();
+            eng->stop();
             de->stop();
 
             std::shared_ptr<Msg> msg = std::make_shared<Msg>();
@@ -330,6 +333,34 @@ using namespace ts;
             }
             ld.stop();
         }
+
+        void test_strategy(){
+            shared_ptr<StrategyEngine> eng = StrategyEngine::getInstance();
+            rapidjson::Document d;
+            
+            const char* arg =R"(
+            {
+                "Name" : "TestStrategy",
+                "TargetCode":["HSImain"],
+                "Exchange":"FUTU",
+                "Type":3,
+                "Position":
+                    {
+                       "HSImain":[0.0, 0.0]
+                    }
+                ,
+                "Size":5
+            })";
+
+            d.Parse(arg);
+            if(IStrategy::checkValidParam(d)){
+                ts::TestStrategy* tp = new TestStrategy(d);
+                eng->addStrategy(tp);
+                eng->start();}
+            else{
+                cout<<"error";
+            }
+        }
         
 
         void run(){
@@ -345,17 +376,17 @@ using namespace ts;
             bool fg = true;
             
             boost::thread thread_run_FUTU(bind(&Tester::test_futu, this));
-            boost::thread thread_get_from_Futu(bind(&Tester::func_1, this));
+            //boost::thread thread_get_from_Futu(bind(&Tester::func_1, this));
             boost::thread thread_DataManager(bind(&Tester::test_DataManager, this));
             boost::thread thread_test_counter(bind(&Tester::test_counter, this));
-            boost::thread thread_Loader(bind(&Tester::test_Loader,this, placeholders::_1), &fg);
+            //boost::thread thread_Loader(bind(&Tester::test_Loader,this, placeholders::_1), &fg);
             //boost::thread thread_reader(bind(&Tester::test_reader,this, placeholders::_1), &fg);
             //boost::thread thread_getdata(bind(&Tester::test_getData,this, placeholders::_1), &fg);
             //thread_get_from_Futu.join();
 
             //thread_run_FUTU.join();
             
-
+            boost::thread thread_test_Strategy(bind(&Tester::test_strategy, this));
             thread_test_counter.join();
             fg = false;
             sleep(5);

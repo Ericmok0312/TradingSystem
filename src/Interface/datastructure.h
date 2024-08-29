@@ -179,7 +179,7 @@ namespace ts{
             string code_;
             string exg_;
         public:
-            Position(const char* code, const char* exg, double price, double volume);
+            Position(const char* code, const char* exg, double volume, double price);
             const PositionInformation* getData() const;
             void changePosition(double volume, double price);
     };

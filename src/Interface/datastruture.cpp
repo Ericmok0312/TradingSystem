@@ -104,7 +104,7 @@ namespace ts{
 
 
 
-    Position::Position(const char* code, const char* exg):code_(code), exg_(exg){
+    Position::Position(const char* code, const char* exg, double volume, double price):code_(code), exg_(exg), pos_(make_pair(volume, price)){
     }
 
    

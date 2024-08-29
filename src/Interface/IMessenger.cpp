@@ -141,7 +141,7 @@ namespace ts{
     void MsgqNNG::sendmsg(char* str, int32_t immediate){ // as is char*, temp string as input will not call this
         try{
             zmq::message_t msg(static_cast<void*>(str), strlen(str)+1, [](void* a, void* b){delete[] static_cast<char*>(a);}, nullptr);
-            if(!sock_.send(move(msg), zmq::send_flags::dontwait)){
+            if(!sock_.send(move(msg), zmq::send_flags::none)){
                 throw std::runtime_error("NNG send msg error");
             }
         }catch(const zmq::error_t& e) {
@@ -166,7 +166,7 @@ namespace ts{
 
     char* MsgqNNG::recmsg(int32_t blockingflags){
         zmq::message_t msg;
-        auto success = sock_.recv(msg, zmq::recv_flags::dontwait);
+        auto success = sock_.recv(msg, zmq::recv_flags::none);
         //
         if (success && msg.data()!=nullptr){
             char* nbuf = new char[strlen(static_cast<char*>(msg.data()))+1]; 

@@ -324,18 +324,6 @@ CMakeFiles/test.dir/src/Strategy/TradeUtil.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/sigthread.h \
  /usr/include/c++/8/iomanip /usr/include/c++/8/bits/quoted_string.h \
  /data/home/emk/Coding/Trading_system/TradingSystem/src/Strategy/Strategy.h \
- /home/emk/vcpkg/installed/x64-linux/include/json/json.h \
- /home/emk/vcpkg/installed/x64-linux/include/json/config.h \
- /home/emk/vcpkg/installed/x64-linux/include/json/allocator.h \
- /home/emk/vcpkg/installed/x64-linux/include/json/version.h \
- /home/emk/vcpkg/installed/x64-linux/include/json/json_features.h \
- /home/emk/vcpkg/installed/x64-linux/include/json/forwards.h \
- /home/emk/vcpkg/installed/x64-linux/include/json/reader.h \
- /home/emk/vcpkg/installed/x64-linux/include/json/value.h \
- /usr/include/c++/8/deque /usr/include/c++/8/bits/stl_deque.h \
- /usr/include/c++/8/bits/deque.tcc /usr/include/c++/8/stack \
- /usr/include/c++/8/bits/stl_stack.h \
- /home/emk/vcpkg/installed/x64-linux/include/json/writer.h \
  /data/home/emk/Coding/Trading_system/TradingSystem/src/Helper/util.h \
  /data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include/google/protobuf/stubs/common.h \
  /usr/include/c++/8/set /usr/include/c++/8/bits/stl_set.h \
