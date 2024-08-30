@@ -51,18 +51,18 @@ namespace ts{
     void StrategyCtx::OnDataUpdate(){
         //messenger_->setSubscribe(name_.c_str());
         std::shared_ptr<Msg> msg;
-        cout<<"this name: "<<name_<<endl;
+
         while(estate_.load() != STOP){
-            cout<<"OndataUpdate running"<<endl;
+
             msg = messenger_->recv(0);
-            cout<<"destination in stgctx: "<<msg->destination_<<endl;
+            
             if(msg && msg->destination_ == name_){
-                cout<<"called1"<<endl;
+
                 std::lock_guard<std::mutex> lg(mutexData_);
                 delete data_;
                 data_ = reinterpret_cast<BaseData*>(std::strtoull(msg->data_.c_str(), nullptr, 16));
                 for(auto it = StrategyMap_.begin(); it!=StrategyMap_.end(); ++it){
-                    //cout<<it->first<<endl;
+
                     it->second->onUpdateData(this);
                 }
                 }
@@ -120,13 +120,12 @@ namespace ts{
         if(temp && temp->getCount() > 0){
             if(temp->at(temp->at(temp->getCount()-1)->cPrice_ != lprice_)){
                 lprice_ = temp->at(temp->getCount()-1)->cPrice_;  
-                cout<<"successfully get data"<<endl;     
+    
                 return temp->at(temp->getCount()-1);
             }
-        cout<<"failed get data"<<endl; 
+
         return nullptr;
-        
-        
+
     }}
 
     BaseData* StrategyCtx::getSlice(){
@@ -149,12 +148,10 @@ namespace ts{
     }
 
     void StrategyCtx::SendMessage(shared_ptr<Msg> msg){
-        cout<<"called44"<<endl;
         messenger_->send(msg, 0);
     }
 
     void StrategyCtx::LoggingInfo(const char* info){
-        cout<<"called55"<<endl;
         logger_->info(info);
     }
 

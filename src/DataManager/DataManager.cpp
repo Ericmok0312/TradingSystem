@@ -89,10 +89,15 @@ namespace ts{
             case MSG_TYPE_ACCESSLIST:
             case MSG_TYPE_ACCOUNTINFO:
             case MSG_TYPE_STORE_TICKER:
-            case MSG_TYPE_STORE_KLINE_1M:
-            break;
+            case MSG_TYPE_STORE_KLINE_1Min:
+                break;
+            case MSG_TYPE_STORE_KLINE_1D:
+                FutuKline2TsKline(msg->data_, list);
+                for(int i=0; i<list.size(); ++i){
+                    datawritter_->AddTask(bind(&DataWriter::WriteKline, datawritter_, placeholders::_1), list[i]);
+                }
+                break;
             case MSG_TYPE_GET_QUOTE:{
-
             }   
             break;
             case MSG_TYPE_GET_QUOTE_BLOCK:{
@@ -106,8 +111,7 @@ namespace ts{
                 arguments->etime = static_cast<uint64_t>(stoull(param[3]));
                 arguments->des = move(param[4]);
                 lock_guard<mutex> lg(RegTableMutex_);
-                RegTable_.insert(make_pair(param[0]+move("/")+param[1], make_tuple(bind(&DataManager::AddDataReaderTask, this, placeholders::_1, placeholders::_2), bind(&DataReader::readCurQuoteSlicefromLMDB, datareader_, placeholders::_1), arguments)));
-                cout<<param[0]+move("/")+param[1]<<endl;
+                RegTable_.insert(make_pair(param[0]+move("/")+param[1]+move("/QUOTE"), make_tuple(bind(&DataManager::AddDataReaderTask, this, placeholders::_1, placeholders::_2), bind(&DataReader::readCurQuoteSlicefromLMDB, datareader_, placeholders::_1), arguments)));
             }
             break;
         }
@@ -117,13 +121,10 @@ namespace ts{
     }
 
     void DataManager::AddDataReaderTask(std::function<void(std::shared_ptr<ARG>)> callback, std::shared_ptr<ARG> arg){
-        cout<<arg->des<<endl;
         datareader_->AddTask(callback, arg);
     }
 
     void DataManager::sendData(string&& address, string&& des){
-        cout<<"callback called"<<endl;
-        cout<<"destinatino: "<<des<<endl;
         shared_ptr<Msg> msg = make_shared<Msg>(move(des), "DataManager", MSG_TYPE_GET_QUOTE_RESPONSE, move(address));
         messenger_->send(msg, 0);
     }

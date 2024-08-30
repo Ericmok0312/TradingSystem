@@ -356,10 +356,9 @@ using namespace ts;
             if(IStrategy::checkValidParam(d)){
                 ts::TestStrategy* tp = new TestStrategy(d);
                 eng->addStrategy(tp);
-                eng->start();}
-            else{
-                cout<<"error";
+                eng->start();
             }
+            
         }
         
 

@@ -7,7 +7,7 @@ namespace ts{
     }
 
 
-    void TestStrategy::onSessionBegin(){}
+    void TestStrategy::onSessionBegin(StrategyCtx* ctx){}
 
     void TestStrategy::onUpdateData(StrategyCtx* ctx){
         //cout<<"stg called"<<endl;
@@ -25,6 +25,9 @@ namespace ts{
            
             ctx->LoggingInfo(temp->getJson().c_str());
             }
-        }
+    }
+
+    void TestStrategy::init(){};
+
 }
    

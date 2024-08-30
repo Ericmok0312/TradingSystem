@@ -35,7 +35,6 @@ namespace ts{
 
 
     void DataReader::readQuoteSlicefromLMDB(shared_ptr<ARG> arg){
-        cout<<"called33"<<endl;
         char* temp = new char[strlen(arg->exg)+strlen(arg->code)+2];
         strcpy(temp, arg->exg);
         strcat(temp, "/");
@@ -110,10 +109,8 @@ namespace ts{
 
 
 
-
-
+    //copy of readQuoteSlicefromLMDB, but change to read from the most current data
      void DataReader::readCurQuoteSlicefromLMDB(shared_ptr<ARG> arg){
-        cout<<"called33"<<endl;
         char* temp = new char[strlen(arg->exg)+strlen(arg->code)+2];
         strcpy(temp, arg->exg);
         strcat(temp, "/");

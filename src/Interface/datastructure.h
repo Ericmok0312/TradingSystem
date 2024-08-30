@@ -108,12 +108,11 @@ namespace ts{
         MSG_TYPE_OPTIONS_QUOTE = 1005,
 
         MSG_TYPE_STORE_TICKER = 1500,
-        MSG_TYPE_STORE_KLINE_1M = 1501,
-        MSG_TYPE_STORE_QUOTE = 1502,
+        MSG_TYPE_STORE_KLINE_1Min = 1501,
+        MSG_TYPE_STORE_KLINE_1D = 1502,
+        MSG_TYPE_STORE_QUOTE = 1503,
 
 
-        
-        MSG_TYPE_HIST_KLINE_DAY = 1700,
         
 
         //account information
@@ -126,6 +125,8 @@ namespace ts{
         MSG_TYPE_GET_ACCESSLIST = 2002,
         MSG_TYPE_REGCALLBACK = 2003,
         MSG_TYPE_NEW_STRATEGY = 2004, //adding new strategy by dynamic library
+        MSG_TYPE_GET_HISTORY_KLINE = 2005,
+
 
         MSG_TYPE_GET_QUOTE = 2500,
         MSG_TYPE_GET_QUOTE_BLOCK = 2501,
@@ -289,8 +290,79 @@ namespace ts{
             Kline(){};
             ~Kline(){};
 
-            string symbol_;
-            string time_;
+            Kline(const string& input){
+                vector<string> values;
+                stringstream ss(input);
+                string token;
+                while (getline(ss, token, ',')) {
+                    values.push_back(token);
+                }
+
+                // Assign the parsed values to the respective variables
+                strcpy(code_,values[0].c_str());
+                strcpy(time_,values[1].c_str());
+                strcpy(exg_,values[2].c_str());
+
+                hPrice_ = stod(values[3]);
+                oPrice_ = stod(values[4]);
+                lPrice_ = stod(values[5]);
+                cPrice_ = stod(values[6]);
+                lcPrice_ = stod(values[7]);
+                volume_ = stoll(values[8]);
+                turnover_ = stod(values[9]);
+                turnoverRate_ = stod(values[10]);
+                pe_ = stod(values[11]);
+                changeRate_ = stod(values[12]);
+                type_ = static_cast<SubType>(stoi(values[13]));
+                timestamp_ = stoull(values[14]);
+                updateTimestamp_ = stoull(values[15]);
+            }
+                        
+            string getString() const{
+                stringstream ss;
+                ss<<code_<<','<<time_<<','<<exg_<<','<<hPrice_<<','<<oPrice_<<','
+                <<lPrice_<<','<<cPrice_<<','<<lcPrice_<<','
+                <<volume_<<','<<turnover_<<','<<turnoverRate_<<','<<pe_<<','<<changeRate_<<','
+                <<type_<<','<<timestamp_<<','<<updateTimestamp_;
+                return move(ss.str());
+            }
+
+            
+            string getJson() const{
+                rapidjson::Document d;
+                d.SetObject();
+
+                rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
+                d.AddMember("code", rapidjson::StringRef(code_), allocator);
+                d.AddMember("time", rapidjson::StringRef(time_), allocator);
+                d.AddMember("exg", rapidjson::StringRef(exg_), allocator);
+                d.AddMember("hPrice", hPrice_, allocator);
+                d.AddMember("oPrice", oPrice_, allocator);
+                d.AddMember("lPrice", lPrice_, allocator);
+                d.AddMember("cPrice", cPrice_, allocator);
+                d.AddMember("lcPrice", lcPrice_, allocator);
+                d.AddMember("volume", volume_, allocator);
+                d.AddMember("turnover", turnover_, allocator);
+                d.AddMember("turnoverRate", turnoverRate_, allocator);
+                d.AddMember("pe", pe_, allocator);
+                d.AddMember("changeRate", changeRate_, allocator);
+                d.AddMember("timestamp", static_cast<uint64_t>(timestamp_), allocator);
+                d.AddMember("updateTimestamp", static_cast<uint64_t>(timestamp_), allocator);
+                d.AddMember("type", type_, allocator);
+                rapidjson::StringBuffer buffer;
+                rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
+                d.Accept(writer);
+
+                return move(buffer.GetString());
+
+            }
+
+
+
+            char code_[MAX_SYMBOL_SIZE];
+            char time_[MAX_TIME_SIZE];
+            char exg_[MAX_EXG_SIZE];
+
             double hPrice_ {0.0}; 
             double oPrice_ {0.0};
             double lPrice_ {0.0};
@@ -303,7 +375,10 @@ namespace ts{
             double turnoverRate_ {0.0};
             double pe_ {0.0};
             double changeRate_ {0.0};
-            double timestamp_ {0.0};
+            uint64_t timestamp_ {0};
+            uint64_t updateTimestamp_{0};
+
+            SubType type_{ALL};
 
     };
 
@@ -319,7 +394,7 @@ namespace ts{
     hPrice : highest price 
     oPrice : open price
     lPrice : low price
-    cPrice : close price
+    cPrice : current price
     lcPrice : last close price
     sPread : price spread
     volume : transaction volume
@@ -396,11 +471,11 @@ namespace ts{
                     cPrice_ = stod(values[6]);
                     lcPrice_ = stod(values[7]);
                     pSpread_ = stod(values[8]);
-                    volume_ = stod(values[9]);
+                    volume_ = stoll(values[9]);
                     turnover_ = stod(values[10]);
                     turnoverRate_ = stod(values[11]);
                     amplitude_ = stod(values[12]);
-                    timestamp_ = stod(values[13]);
+                    timestamp_ = stoll(values[13]);
                     sPrice_ = stod(values[14]);
                     conSize_ = stod(values[15]);
                     opInterest_ = stod(values[16]);
@@ -413,8 +488,10 @@ namespace ts{
                     lsprice_ = stod(values[23]);
                     position_ = stod(values[24]);
                     pChange_ = stod(values[25]);
-                    updateTimestamp_ = stod(values[26]);
+                    updateTimestamp_ = stoll(values[26]);
                 }
+
+
             string getString() const{
                 stringstream ss;
                 ss<<code_<<','<<time_<<','<<exg_<<','<<hPrice_<<','<<oPrice_<<','
@@ -581,6 +658,72 @@ namespace ts{
             }
     };
 
+    class KlineSlice : public BaseData{
+        private:
+            char code_[MAX_SYMBOL_SIZE];
+            typedef std::pair<Kline*, uint32_t> KlineBlock;
+            std::vector<KlineBlock> block_;
+            uint32_t count_;
+
+        protected:
+           
+
+            inline int32_t translateIdx(int32_t idx) const{
+                if (idx<0){
+                    return max(0, (int32_t)count_+idx);
+                }
+                return idx;
+            }
+
+        public:
+            KlineSlice(){this->block_.clear();}
+
+            static inline KlineSlice* create (const char* code, Kline* kline = nullptr, uint32_t count = 0){
+                KlineSlice* slice = new KlineSlice();
+                strcpy(slice->code_, code);
+                if(kline != nullptr){
+                    slice->block_.emplace_back(KlineBlock(kline, count));
+                    slice->count_ = count;
+                }
+                return slice;
+            }
+
+
+            inline bool appendBlock(Kline* kline, uint32_t count)
+            {
+                if (kline == nullptr || count == 0)
+                    return false;
+
+                this->count_ += count;
+                this->block_.emplace_back(KlineBlock(kline, count));
+                return true;
+            }
+
+            inline vector<KlineBlock>* getBlock(){
+                return &this->block_;
+            }
+            
+            inline uint32_t getCount(){
+                return this->count_;
+            }
+
+            inline const Kline* at(int32_t idx){
+                if(count_==0){
+                    return nullptr;
+                }
+
+                idx = translateIdx(idx);
+                do{
+                    for(auto& item: block_){
+                        if ((uint32_t)idx >= item.second)
+                            idx -= item.second;
+                        else
+                            return item.first+idx; 
+                    }
+                }while (false);
+                return nullptr;
+            }
+    };
 }
 
 #endif

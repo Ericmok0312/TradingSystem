@@ -77,6 +77,7 @@ namespace ts{
             BaseData* getSlice(); //going to depreciate
             void addStrategy(IStrategy* stg);
 
+            
 
             //Strategy Interface
             void SendMessage(shared_ptr<Msg> msg);
