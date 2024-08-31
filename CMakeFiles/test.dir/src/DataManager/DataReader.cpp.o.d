@@ -148,40 +148,13 @@ CMakeFiles/test.dir/src/DataManager/DataReader.cpp.o: \
  /usr/include/c++/8/system_error \
  /usr/include/x86_64-linux-gnu/c++/8/bits/error_constants.h \
  /usr/include/c++/8/bits/std_mutex.h /usr/include/c++/8/atomic \
- /home/emk/vcpkg/installed/x64-linux/include/json/json.h \
- /home/emk/vcpkg/installed/x64-linux/include/json/config.h \
- /usr/include/c++/8/cstddef /usr/include/c++/8/istream \
- /usr/include/c++/8/ios /usr/include/c++/8/bits/ios_base.h \
- /usr/include/c++/8/bits/locale_classes.h \
- /usr/include/c++/8/bits/locale_classes.tcc /usr/include/c++/8/streambuf \
- /usr/include/c++/8/bits/streambuf.tcc \
- /usr/include/c++/8/bits/basic_ios.h \
- /usr/include/c++/8/bits/locale_facets.h /usr/include/c++/8/cwctype \
- /usr/include/wctype.h /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
- /usr/include/x86_64-linux-gnu/c++/8/bits/ctype_base.h \
- /usr/include/c++/8/bits/streambuf_iterator.h \
- /usr/include/x86_64-linux-gnu/c++/8/bits/ctype_inline.h \
- /usr/include/c++/8/bits/locale_facets.tcc \
- /usr/include/c++/8/bits/basic_ios.tcc /usr/include/c++/8/ostream \
- /usr/include/c++/8/bits/ostream.tcc /usr/include/c++/8/bits/istream.tcc \
- /usr/include/c++/8/sstream /usr/include/c++/8/bits/sstream.tcc \
- /home/emk/vcpkg/installed/x64-linux/include/json/allocator.h \
- /usr/include/c++/8/cstring /usr/include/string.h /usr/include/strings.h \
- /home/emk/vcpkg/installed/x64-linux/include/json/version.h \
- /home/emk/vcpkg/installed/x64-linux/include/json/json_features.h \
- /home/emk/vcpkg/installed/x64-linux/include/json/forwards.h \
- /home/emk/vcpkg/installed/x64-linux/include/json/reader.h \
- /home/emk/vcpkg/installed/x64-linux/include/json/value.h \
- /usr/include/c++/8/map /usr/include/c++/8/bits/stl_tree.h \
- /usr/include/c++/8/bits/stl_map.h /usr/include/c++/8/bits/stl_multimap.h \
- /usr/include/c++/8/stack /usr/include/c++/8/bits/stl_stack.h \
- /home/emk/vcpkg/installed/x64-linux/include/json/writer.h \
  /usr/include/c++/8/condition_variable \
  /home/emk/Coding/Trading_system/TradingSystem/src/Interface/datastructure.h \
  /home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/document.h \
  /home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/reader.h \
  /home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/allocators.h \
  /home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/rapidjson.h \
+ /usr/include/c++/8/cstring /usr/include/string.h /usr/include/strings.h \
  /usr/include/inttypes.h /usr/include/c++/8/cassert /usr/include/assert.h \
  /home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/stream.h \
  /home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/encodings.h \
@@ -202,13 +175,29 @@ CMakeFiles/test.dir/src/DataManager/DataReader.cpp.o: \
  /home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/internal/strfunc.h \
  /home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/internal/../stream.h \
  /home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/internal/../rapidjson.h \
- /usr/include/c++/8/iterator /usr/include/c++/8/bits/stream_iterator.h \
+ /usr/include/c++/8/iterator /usr/include/c++/8/ostream \
+ /usr/include/c++/8/ios /usr/include/c++/8/bits/ios_base.h \
+ /usr/include/c++/8/bits/locale_classes.h \
+ /usr/include/c++/8/bits/locale_classes.tcc /usr/include/c++/8/streambuf \
+ /usr/include/c++/8/bits/streambuf.tcc \
+ /usr/include/c++/8/bits/basic_ios.h \
+ /usr/include/c++/8/bits/locale_facets.h /usr/include/c++/8/cwctype \
+ /usr/include/wctype.h /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
+ /usr/include/x86_64-linux-gnu/c++/8/bits/ctype_base.h \
+ /usr/include/c++/8/bits/streambuf_iterator.h \
+ /usr/include/x86_64-linux-gnu/c++/8/bits/ctype_inline.h \
+ /usr/include/c++/8/bits/locale_facets.tcc \
+ /usr/include/c++/8/bits/basic_ios.tcc \
+ /usr/include/c++/8/bits/ostream.tcc /usr/include/c++/8/istream \
+ /usr/include/c++/8/bits/istream.tcc \
+ /usr/include/c++/8/bits/stream_iterator.h \
  /home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/writer.h \
  /home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/internal/dtoa.h \
  /home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/internal/itoa.h \
  /home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/internal/itoa.h \
  /home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/stringbuffer.h \
  /home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/stringbuffer.h \
+ /usr/include/c++/8/sstream /usr/include/c++/8/bits/sstream.tcc \
  /usr/include/c++/8/iostream /usr/include/c++/8/unordered_map \
  /usr/include/c++/8/bits/hashtable.h \
  /usr/include/c++/8/bits/hashtable_policy.h \
@@ -220,6 +209,7 @@ CMakeFiles/test.dir/src/DataManager/DataReader.cpp.o: \
  /home/emk/Coding/Trading_system/TradingSystem/libs/boost/config/user.hpp \
  /home/emk/Coding/Trading_system/TradingSystem/libs/boost/config/detail/select_compiler_config.hpp \
  /home/emk/Coding/Trading_system/TradingSystem/libs/boost/config/compiler/gcc.hpp \
+ /usr/include/c++/8/cstddef \
  /home/emk/Coding/Trading_system/TradingSystem/libs/boost/config/detail/select_stdlib_config.hpp \
  /home/emk/Coding/Trading_system/TradingSystem/libs/boost/config/stdlib/libstdcpp3.hpp \
  /usr/include/unistd.h /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
@@ -792,6 +782,8 @@ CMakeFiles/test.dir/src/DataManager/DataReader.cpp.o: \
  /home/emk/Coding/Trading_system/TradingSystem/libs/boost/enable_shared_from_this.hpp \
  /home/emk/Coding/Trading_system/TradingSystem/libs/boost/smart_ptr/enable_shared_from_this.hpp \
  /home/emk/Coding/Trading_system/TradingSystem/libs/boost/smart_ptr/weak_ptr.hpp \
+ /usr/include/c++/8/map /usr/include/c++/8/bits/stl_tree.h \
+ /usr/include/c++/8/bits/stl_map.h /usr/include/c++/8/bits/stl_multimap.h \
  /home/emk/Coding/Trading_system/TradingSystem/libs/boost/thread/detail/thread.hpp \
  /home/emk/Coding/Trading_system/TradingSystem/libs/boost/thread/interruption.hpp \
  /home/emk/Coding/Trading_system/TradingSystem/libs/boost/thread/detail/thread_heap_alloc.hpp \

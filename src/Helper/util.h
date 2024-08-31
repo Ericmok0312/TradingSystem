@@ -97,6 +97,57 @@ namespace ts{
     inline uint64_t GetTimeStamp(){
         return static_cast<uint64_t>(boost::chrono::duration_cast<boost::chrono::microseconds>(boost::chrono::system_clock::now().time_since_epoch()).count());
     }
+
+
+
+    inline std::string dateNDaysBefore(int N) {
+    
+        auto now = std::chrono::system_clock::now();
+        
+        // Calculate N days before
+        auto daysBefore = std::chrono::duration_cast<std::chrono::days>(std::chrono::hours(24 * N));
+        auto targetDate = now - daysBefore;
+
+        // Convert to time_t for formatting
+        std::time_t targetTime = std::chrono::system_clock::to_time_t(targetDate);
+        
+        // Convert to tm structure
+        std::tm* tmPtr = std::localtime(&targetTime);
+        
+        // Format the date as YYYY-MM-DD
+        std::ostringstream oss;
+        oss << std::put_time(tmPtr, "%Y-%m-%d");
+        
+        return move(oss.str());
+    }
+
+    inline uint64_t Date2TimeStamp(const char* date){
+        std::tm tm = {};
+        std::istringstream ss(date);
+        
+        // Parse the date
+        ss >> std::get_time(&tm, "%Y-%m-%d");
+        if (ss.fail()) {
+            throw std::invalid_argument("Invalid date format. Use YYYY-MM-DD.");
+        }
+        
+        // Convert to time_t
+        std::time_t time = std::mktime(&tm);
+        
+        // Check if conversion was successful
+        if (time == -1) {
+            throw std::runtime_error("Failed to convert date to time_t.");
+        }
+        
+        // Convert to microseconds since epoch
+        auto timestamp = std::chrono::time_point<std::chrono::system_clock>(
+            std::chrono::seconds(time)
+        ).time_since_epoch();
+        
+        // Return timestamp in microseconds
+        return static_cast<uint64_t>(std::chrono::duration_cast<std::chrono::microseconds>(timestamp));
+    }
+
 }
 
 

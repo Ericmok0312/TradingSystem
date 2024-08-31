@@ -7,7 +7,6 @@
 #include <functional>
 #include <mutex>
 #include <atomic>
-#include <json/json.h>
 #include <condition_variable>
 #include <Interface/datastructure.h>
 #include "boost/thread/thread.hpp"

@@ -101,19 +101,19 @@ namespace ts{
             }   
             break;
             case MSG_TYPE_GET_QUOTE_BLOCK:{
-                vector<string> param;
-                split(msg->data_.c_str(), ARGV_SEP, param);
                 shared_ptr<ts::ARG> arguments = make_shared<ts::ARG>();
                 arguments->callback = bind(&DataManager::sendData, this, placeholders::_1, placeholders::_2);
-                strcpy(arguments->exg, param[0].c_str());
-                strcpy(arguments->code, param[1].c_str());
-                arguments->count = static_cast<uint32_t>(stoul(param[2]));
-                arguments->etime = static_cast<uint64_t>(stoull(param[3]));
-                arguments->des = move(param[4]);
+                arguments->deserialize(msg->data_);
                 lock_guard<mutex> lg(RegTableMutex_);
                 RegTable_.insert(make_pair(param[0]+move("/")+param[1]+move("/QUOTE"), make_tuple(bind(&DataManager::AddDataReaderTask, this, placeholders::_1, placeholders::_2), bind(&DataReader::readCurQuoteSlicefromLMDB, datareader_, placeholders::_1), arguments)));
             }
             break;
+            case MSG_TYPE_GET_KLINE_BLOCK_HIST:{
+                shared_ptr<ts::ARG> arguments = make_shared<ts::ARG>();
+                arguments->callback = bind(&DataManager::sendData, this, placeholders::_1, placeholders::_2);
+                arguments->deserialize(msg->data_);
+                datareader_->AddTask(bind(&DataReader::readHistKlineSlicefromLMDB, datareader_, placeholders::_1), arguments);
+            }
         }
         
         // if (IS_BENCHMARK)

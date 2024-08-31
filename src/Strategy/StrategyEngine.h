@@ -5,7 +5,6 @@
 #include "Helper/ThreadPool.hpp"
 #include "Interface/IEngine.h"
 #include "Strategy/TradeUtil.h"
-#include "json/json.h"
 #include "functional"
 #include "mutex"
 namespace ts{

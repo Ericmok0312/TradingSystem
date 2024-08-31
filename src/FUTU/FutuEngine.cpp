@@ -1,6 +1,5 @@
 #include <FUTU/FutuEngine.h>
 #include <Helper/util.h>
-#include <json/json.h>
 #include "boost/thread/thread.hpp"
 using namespace std;
 

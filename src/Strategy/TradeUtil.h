@@ -83,6 +83,8 @@ namespace ts{
             void SendMessage(shared_ptr<Msg> msg);
             void LoggingInfo(const char * info);
 
+            unique_ptr<BaseData> StratgeyGetOneTimeData(shared_ptr<Msg> msg2futu, shared_ptr<Msg> msg, const char* returnName);
+
     };
 }
 

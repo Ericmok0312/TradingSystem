@@ -22,7 +22,7 @@ namespace ts{
 
         DualThrust(const rapidjson::Document& config);
 
-        void init();
+        void init(ts::StrategyCtx*) override;
 
         virtual void onSessionBegin(ts::StrategyCtx*) override;
 

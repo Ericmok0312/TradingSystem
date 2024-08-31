@@ -76,16 +76,17 @@ namespace ts{
                 }
                 size_ = move(config["Size"].GetInt());
             };
+
             const char* getName() {return name_.c_str();};
-            virtual void init() = 0;
+            virtual void init(ts::StrategyCtx*) = 0;
             virtual void onUpdateData(ts::StrategyCtx*)=0;
             virtual void onSessionBegin(ts::StrategyCtx*)  = 0;
             const char* getExg(){return exg_.c_str();};
             vector<string>& getTargetCode(){return targetCode_;};
             int getSize() {return size_;};
             SubType getType() {return type_;};
-            
 
+        
     };
 
 }

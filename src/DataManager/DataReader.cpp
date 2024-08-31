@@ -58,7 +58,7 @@ namespace ts{
             }
         } while (false);
         
-        TSLMDBPtr db = get_q_db(arg->exg, arg->code);
+        TSLMDBPtr db = get_q_db(arg->exg, arg->code, this->quote_dbs_, QUOTE);
         if(db == nullptr) return;
         if (reload_flag == 1){
             TSQryLMDB query(*db);
@@ -122,7 +122,7 @@ namespace ts{
         uint32_t reload_flag = 0;
         do
         {
-            if (quotelist.quotes_.capacity()<count){ // not enough data in cache
+            if (quotelist.quotes_.capacity()<count){ // cache size is smaller than required
                 reload_flag = 2;
                 quotelist.quotes_.rset_capacity(count);
                 quotelist.quotes_.clear();
@@ -135,7 +135,7 @@ namespace ts{
             }
         } while (false);
         
-        TSLMDBPtr db = get_q_db(arg->exg, arg->code);
+        TSLMDBPtr db = get_q_db(arg->exg, arg->code, this->quote_dbs_, QUOTE);
         if(db == nullptr) return;
         if (reload_flag == 1){
             TSQryLMDB query(*db);
@@ -185,24 +185,129 @@ namespace ts{
     }
 
 
+    //this function will not modify cache and will not read from cache, might need to think of new way of caching
+    void DataReader::readHistKlineSlicefromLMDB(shared_ptr<ARG> arg){
+        char* temp = new char[strlen(arg->exg)+strlen(arg->code)+2];
+        strcpy(temp, arg->exg);
+        strcat(temp, "/");
+        strcat(temp, arg->code);
+        uint32_t count = arg->count;
 
 
-
-
-
-
-    DataReader::TSLMDBPtr DataReader::get_q_db(const char* exg, const char* code){
         
+        KlineCache* cache;
+        switch(arg->type){
+            case KLINE_1D:
+                cache = &d1_kline_hist_cache_;
+                break;
+            case KLINE_1MIN:
+                cache = &m1_kline_hist_cache_;
+                break;
+            default:
+                cache = &m5_kline_hist_cache_;
+                break;
+        }
+
+        
+        KlineList& klinelist = (*cache)[temp];
+
+        auto startit = lower_bound(klinelist.klines_.begin(), klinelist.klines_.end(), Date2TimeStamp(arg->start), 
+        [](Kline& a, uint64_t val){return a.updateTimestamp_<val;});
+
+        auto endit = upper_bound(klinelist.klines_.begin(), klinelist.klines_.end(), Date2TimeStamp(arg->end), 
+        [](Kline& a, uint64_t val){return a.updateTimestamp_>val;});
+
+        int flag;
+
+        if(klinelist.klines_.size() == 0){ // no data
+            flag = 0;
+        }
+        if(startit!=klinelist.klines_.begin()&&startit!=klinelist.klines_.end()&&endit!=klinelist.klines_.begin()&&endit!=klinelist.klines_.end()){ //range of cache larger than required
+            flag = 1;
+        }
+        else if(startit == klinelist.klines_.begin() && endit!=klinelist.klines_.begin() && endit != klinelist.klines_.end()){
+            flag = 2;
+        } // got some/none of the data, but some earlier data are needed
+        else if(startit != klinelist.klines_.start()&&startit!=klinelist.klines_.end() && endit==klinelist.klines_.end()){
+            flag = 3;
+        } // got some/none of the data, but some later data are needed
+        else if(startit == klinelist.klines_.begin()&&startit==klinelist.klines_.end()){
+            flag = 4;
+        } // got some of the data but both the earlier and later data are needed
+  
+
+
+        TSLMDBPtr db;
+        switch(arg->type){
+            case KLINE_1D:
+                db = get_q_db(arg->exg, arg->code, kline_d1_dbs_, arg->type_);
+                break;
+            case KLINE_1MIN:
+                db = get_q_db(arg->exg, arg->code, kline_m1_dbs_, arg->type_);
+                break;
+            default:
+                db = get_q_db(arg->exg, arg->code, kline_m5_dbs_, arg->type_);
+                break;
+        }
+        if(db == nullptr) return;
+        
+        TSQryLMDB query(*db);
+
+        LMDBKey lkey(arg->exg, arg->code, Date2TimeStamp(arg->start));
+        LMDBKey rkey(arg->exg, arg->code, Date2TimeStamp(arg->end));
+        
+        int cnt = query.get_range(lkey.getString(), rkey.getString(), [this, &quotelist](const ValueArray& ayKeys, const ValueArray& ayVals){
+            for(const std::string& item: ayVals){
+                Quote q(item);
+                quotelist.quotes_.push_back(q);
+            }
+        });
+
+
+        
+
+        
+        stringstream ss;
+        ss<<ret;
+        arg->callback(move(ss.str()), move(arg->des));
+    }
+
+
+
+
+
+
+    DataReader::TSLMDBPtr DataReader::get_q_db(const char* exg, const char* code, TSLMDBMap& source, SubType type){
+        
+        uint64_t init = GetTimeStamp();
         string key = fmt::format("{}/{}", exg, code);
 
-        auto it = quote_dbs_.find(key);
-        if(it != quote_dbs_.end()){
+        auto it = source.find(key);
+        if(it != source.end()){
+            if(IS_BENCHMARK)
+                logger_->info(fmt::format("Get_q_db latency: {}", to_string(GetTimeStamp()-init)).c_str());
             return it->second; 
         }
 
         TSLMDBPtr dbPtr(new TsLMDB(false)); // not found
 
-        std::string path = fmt::format("{}/{}/{}", BASE_FILE_LOC, exg, code); //create the dir
+        string tn;
+        switch (type)
+        {
+        case QUOTE:
+            tn = move("QUOTE");
+            break;
+        case KLINE_1D:
+            tn = move("KLINE_1D");
+            break;
+        case KLINE_1MIN:
+            tn = move("KLINE_1MIN");
+            break;
+        default:
+            tn = move("UNKOWN");
+            break;
+        }
+        std::string path = fmt::format("{}/{}/{}/{}", BASE_FILE_LOC, tn, exg, code); //create the dir
 
         boost::filesystem::create_directories(path);
 
@@ -211,7 +316,9 @@ namespace ts{
             return std::move(TSLMDBPtr()); // return an empty one;
         }
         std::lock_guard<mutex> lock (q_db_mutex); // modifying unordered map
-        quote_dbs_[key] = dbPtr;
+        source[key] = dbPtr;
+        if(IS_BENCHMARK)
+        logger_->info(fmt::format("Get_db latency: {}", to_string(GetTimeStamp()-init)).c_str());
         return dbPtr;
     }   
 

@@ -42,11 +42,50 @@ namespace ts{
     struct ARG{
         char exg[MAX_EXG_SIZE];
         char code[MAX_SYMBOL_SIZE];
-        uint32_t  count;
+        uint32_t  count; //SliceSize for getCurrent, period count for get history data
         uint64_t  etime;
-        string des; 
-        std::function<void(string&&, string&& des)> callback {};
+        string des;
+        SubType type; // classifing which type of data to get
+        std::function<void(string&&, string&& des)> callback {};//callback is added only by DataManager
+        
+        char start[11];
+        char end[11];
+        
         ARG(){};
+        ARG(const char* eg, const char* cd, uint32_t ct, uint64_t et, const char* ds, SubType tp, const char* st = "NA", uint64_t ed = "NA")
+        :exg(ex)
+        ,code(cd)
+        ,count(ct)
+        ,etime(et)
+        ,des(ds)
+        ,type(tp)
+        ,start(st)
+        ,end(ed){}
+
+        string seriralize(){
+            stringstream ss;
+            ss<<exg<<ARGV_SEP<<code<<ARGV_SEP<<count<<ARGV_SEP<<etime<<ARGV_SEP<<des<<ARGV_SEP<<type<<ARGV_SEP<<start
+            <<ARGV_SEP<<end;
+            return move(ss.str());
+        }
+
+        void deserialize(const string& argin){
+            vector<string> info;
+            split(msgin.c_str(), ARGV_SEP, info);
+
+            if(info.size()!=8){
+                throw std::out_of_range("OutofRange in ARG deserialize.");
+            }
+
+            strcpy(exg, info[0]);
+            strcpy(code, info[1]);
+            count = stoul(info[2]);
+            etime = stoull(info[3]);
+            des = move(info[4]);
+            type = static_cast<SubType>(info[5]);
+            strcpy(start, info[6]);
+            strcpy(end, info[7]);
+        }
     };
 
     typedef unordered_map<string, tuple<function<void(function<void(shared_ptr<ARG>)>, shared_ptr<ARG>)>, function<void(shared_ptr<ARG>)>, shared_ptr<ARG>>> CallBackTabletype;
@@ -119,18 +158,20 @@ namespace ts{
         MSG_TYPE_ACCESSLIST = 1998,
         MSG_TYPE_ACCOUNTINFO = 1999,
         
-        //operations on TS
+        //operations on FutuEngine
         MSG_TYPE_SUBSCRIBE_MARKET_DATA = 2000, // use to initiate the registration of loader
         MSG_TYPE_GET_ACCOUNTINFO = 2001,
         MSG_TYPE_GET_ACCESSLIST = 2002,
         MSG_TYPE_REGCALLBACK = 2003,
-        MSG_TYPE_NEW_STRATEGY = 2004, //adding new strategy by dynamic library
-        MSG_TYPE_GET_HISTORY_KLINE = 2005,
+        MSG_TYPE_GET_HISTORY_KLINE = 2004,
 
 
+        //Strategy related message
+        MSG_TYPE_NEW_STRATEGY = 2499, //adding new strategy by dynamic library
         MSG_TYPE_GET_QUOTE = 2500,
         MSG_TYPE_GET_QUOTE_BLOCK = 2501,
 
+        MSG_TYPE_GET_KLINE_BLOCK_HIST = 2502,
         MSG_TYPE_GET_QUOTE_RESPONSE = 3000,
 
         //debug

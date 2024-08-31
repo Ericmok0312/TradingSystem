@@ -22,12 +22,11 @@ namespace ts{
         msg->msgtype_ = MSG_TYPE_GET_QUOTE_BLOCK;
         
         stringstream ss;
-        ss<<exg_<<"^"<<code_<<"^"<<size_<<"^"<<to_string(GetTimeStamp())<<"^"<<name_;
-        msg->data_ = move(ss.str());
+        shared_ptr<ARG> arg = make_shared<ARG>(exg_.c_str(), code_.c_str(), size_, GetTimeStamp(),name_.c_str(), QUOTE);
+        msg->data_ = move(arg->seriralize());
         messenger_->send(msg, 0);
         boost::this_thread::sleep_for(boost::chrono::milliseconds(frequency_));
         
-
         //registrating sub in corresponding broker, by default FUTU
         std::shared_ptr<Msg> regmsg = std::make_shared<Msg>();
         if(exg_ == "FUTU"){
@@ -62,7 +61,6 @@ namespace ts{
                 delete data_;
                 data_ = reinterpret_cast<BaseData*>(std::strtoull(msg->data_.c_str(), nullptr, 16));
                 for(auto it = StrategyMap_.begin(); it!=StrategyMap_.end(); ++it){
-
                     it->second->onUpdateData(this);
                 }
                 }
@@ -155,6 +153,20 @@ namespace ts{
         logger_->info(info);
     }
 
+    unique_ptr<BaseData> StrategyCtx::StratgeyGetOneTimeData(shared_ptr<Msg> msg2futu,shared_ptr<Msg> msg, const char* returnName){
+
+        messenger_->send(msg2futu, 0); //for strategy that requires history data/ one-time data
+
+        messenger_->send(msg,0);
+        shared_ptr<Msg> returnmsg;
+        while(true){
+            returnmsg = messenger_->recv();
+            if(returnmsg->destination_ == returnName){
+                return move(unique_ptr<Basedata>(reinterpret_cast<BaseData*>(std::strtoull(msg->data_.c_str(), nullptr, 16))));
+            }
+        }
+
+    }
 
 
 
