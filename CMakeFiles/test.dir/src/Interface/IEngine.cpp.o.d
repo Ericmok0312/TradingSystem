@@ -1,7 +1,7 @@
 CMakeFiles/test.dir/src/Interface/IEngine.cpp.o: \
- /data/home/emk/Coding/Trading_system/TradingSystem/src/Interface/IEngine.cpp \
+ /home/emk/Coding/Trading_system/TradingSystem/src/Interface/IEngine.cpp \
  /usr/include/stdc-predef.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/src/Interface/IEngine.h \
+ /home/emk/Coding/Trading_system/TradingSystem/src/Interface/IEngine.h \
  /usr/include/c++/8/cstdint \
  /usr/include/x86_64-linux-gnu/c++/8/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/8/bits/os_defines.h \
@@ -22,11 +22,11 @@ CMakeFiles/test.dir/src/Interface/IEngine.cpp.o: \
  /usr/include/c++/8/bits/atomic_lockfree_defines.h \
  /usr/include/c++/8/bits/move.h /usr/include/c++/8/bits/concept_check.h \
  /usr/include/c++/8/type_traits \
- /data/home/emk/Coding/Trading_system/TradingSystem/src/Interface/datastructure.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/document.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/reader.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/allocators.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/rapidjson.h \
+ /home/emk/Coding/Trading_system/TradingSystem/src/Interface/datastructure.h \
+ /home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/document.h \
+ /home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/reader.h \
+ /home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/allocators.h \
+ /home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/rapidjson.h \
  /usr/include/c++/8/cstdlib /usr/include/stdlib.h \
  /usr/lib/gcc/x86_64-linux-gnu/8/include/stddef.h \
  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
@@ -56,26 +56,26 @@ CMakeFiles/test.dir/src/Interface/IEngine.cpp.o: \
  /usr/include/c++/8/bits/std_abs.h /usr/include/c++/8/cstring \
  /usr/include/string.h /usr/include/strings.h /usr/include/inttypes.h \
  /usr/include/c++/8/cassert /usr/include/assert.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/stream.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/encodings.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/encodedstream.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/memorystream.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/internal/meta.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/internal/../rapidjson.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/internal/stack.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/internal/../allocators.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/internal/swap.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/internal/strtod.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/internal/ieee754.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/internal/biginteger.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/internal/diyfp.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/internal/pow10.h \
+ /home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/stream.h \
+ /home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/encodings.h \
+ /home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/encodedstream.h \
+ /home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/memorystream.h \
+ /home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/internal/meta.h \
+ /home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/internal/../rapidjson.h \
+ /home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/internal/stack.h \
+ /home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/internal/../allocators.h \
+ /home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/internal/swap.h \
+ /home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/internal/strtod.h \
+ /home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/internal/ieee754.h \
+ /home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/internal/biginteger.h \
+ /home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/internal/diyfp.h \
+ /home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/internal/pow10.h \
  /usr/include/c++/8/limits \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/error/error.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/error/../rapidjson.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/internal/strfunc.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/internal/../stream.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/internal/../rapidjson.h \
+ /home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/error/error.h \
+ /home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/error/../rapidjson.h \
+ /home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/internal/strfunc.h \
+ /home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/internal/../stream.h \
+ /home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/internal/../rapidjson.h \
  /usr/include/c++/8/new /usr/include/c++/8/exception \
  /usr/include/c++/8/bits/exception.h \
  /usr/include/c++/8/bits/exception_ptr.h \
@@ -167,12 +167,12 @@ CMakeFiles/test.dir/src/Interface/IEngine.cpp.o: \
  /usr/include/c++/8/bits/istream.tcc \
  /usr/include/c++/8/bits/stream_iterator.h /usr/include/c++/8/utility \
  /usr/include/c++/8/bits/stl_relops.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/writer.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/internal/dtoa.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/internal/itoa.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/internal/itoa.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/stringbuffer.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/stringbuffer.h \
+ /home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/writer.h \
+ /home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/internal/dtoa.h \
+ /home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/internal/itoa.h \
+ /home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/internal/itoa.h \
+ /home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/stringbuffer.h \
+ /home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include/rapidjson/stringbuffer.h \
  /usr/include/c++/8/sstream /usr/include/c++/8/bits/sstream.tcc \
  /usr/include/c++/8/iostream /usr/include/c++/8/vector \
  /usr/include/c++/8/bits/stl_construct.h \
@@ -195,7 +195,7 @@ CMakeFiles/test.dir/src/Interface/IEngine.cpp.o: \
  /usr/include/c++/8/bits/allocated_ptr.h \
  /usr/include/c++/8/bits/shared_ptr_atomic.h \
  /usr/include/c++/8/backward/auto_ptr.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/src/Helper/logger.h \
+ /home/emk/Coding/Trading_system/TradingSystem/src/Helper/logger.h \
  /usr/include/c++/8/fstream /usr/include/c++/8/bits/codecvt.h \
  /usr/include/x86_64-linux-gnu/c++/8/bits/basic_file.h \
  /usr/include/x86_64-linux-gnu/c++/8/bits/c++io.h \
@@ -203,16 +203,16 @@ CMakeFiles/test.dir/src/Interface/IEngine.cpp.o: \
  /usr/include/c++/8/chrono /usr/include/c++/8/ratio \
  /usr/include/c++/8/ctime /usr/include/c++/8/bits/parse_numbers.h \
  /usr/include/c++/8/bits/std_mutex.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/spdlog.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/common.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/details/null_mutex.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/tweakme.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/fmt/fmt.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/fmt/bundled/core.h \
+ /home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/spdlog.h \
+ /home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/common.h \
+ /home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/details/null_mutex.h \
+ /home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/tweakme.h \
+ /home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/fmt/fmt.h \
+ /home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/fmt/bundled/core.h \
  /usr/include/c++/8/cstddef /usr/include/c++/8/experimental/string_view \
  /usr/include/c++/8/experimental/bits/lfts_config.h \
  /usr/include/c++/8/experimental/bits/string_view.tcc \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/fmt/bundled/format.h \
+ /home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/fmt/bundled/format.h \
  /usr/include/c++/8/cmath /usr/include/math.h \
  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
@@ -223,8 +223,8 @@ CMakeFiles/test.dir/src/Interface/IEngine.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
  /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/fmt/bundled/core.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/fmt/bundled/format-inl.h \
+ /home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/fmt/bundled/core.h \
+ /home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/fmt/bundled/format-inl.h \
  /usr/include/c++/8/algorithm /usr/include/c++/8/bits/stl_algo.h \
  /usr/include/c++/8/bits/algorithmfwd.h \
  /usr/include/c++/8/bits/stl_heap.h \
@@ -242,21 +242,21 @@ CMakeFiles/test.dir/src/Interface/IEngine.cpp.o: \
  /usr/include/x86_64-linux-gnu/c++/8/bits/messages_members.h \
  /usr/include/libintl.h /usr/include/c++/8/bits/locale_facets_nonio.tcc \
  /usr/include/c++/8/bits/locale_conv.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/fmt/bundled/format.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/common-inl.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/details/registry.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/details/periodic_worker.h \
+ /home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/fmt/bundled/format.h \
+ /home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/common-inl.h \
+ /home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/details/registry.h \
+ /home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/details/periodic_worker.h \
  /usr/include/c++/8/condition_variable /usr/include/c++/8/thread \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/details/periodic_worker-inl.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/details/registry-inl.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/logger.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/details/backtracer.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/details/circular_q.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/details/log_msg_buffer.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/details/log_msg.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/details/log_msg-inl.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/details/os.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/details/os-inl.h \
+ /home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/details/periodic_worker-inl.h \
+ /home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/details/registry-inl.h \
+ /home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/logger.h \
+ /home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/details/backtracer.h \
+ /home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/details/circular_q.h \
+ /home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/details/log_msg_buffer.h \
+ /home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/details/log_msg.h \
+ /home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/details/log_msg-inl.h \
+ /home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/details/os.h \
+ /home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/details/os-inl.h \
  /usr/include/x86_64-linux-gnu/sys/stat.h \
  /usr/include/x86_64-linux-gnu/bits/stat.h \
  /usr/include/x86_64-linux-gnu/bits/statx.h /usr/include/fcntl.h \
@@ -275,31 +275,31 @@ CMakeFiles/test.dir/src/Interface/IEngine.cpp.o: \
  /usr/include/x86_64-linux-gnu/asm/unistd.h \
  /usr/include/x86_64-linux-gnu/asm/unistd_64.h \
  /usr/include/x86_64-linux-gnu/bits/syscall.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/details/log_msg_buffer-inl.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/details/backtracer-inl.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/logger-inl.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/pattern_formatter.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/formatter.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/pattern_formatter-inl.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/details/fmt_helper.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/mdc.h \
+ /home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/details/log_msg_buffer-inl.h \
+ /home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/details/backtracer-inl.h \
+ /home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/logger-inl.h \
+ /home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/pattern_formatter.h \
+ /home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/formatter.h \
+ /home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/pattern_formatter-inl.h \
+ /home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/details/fmt_helper.h \
+ /home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/mdc.h \
  /usr/include/c++/8/map /usr/include/c++/8/bits/stl_tree.h \
  /usr/include/c++/8/bits/stl_map.h /usr/include/c++/8/bits/stl_multimap.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/sinks/sink.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/sinks/sink-inl.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/sinks/ansicolor_sink.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/details/console_globals.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/sinks/ansicolor_sink-inl.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/details/synchronous_factory.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/version.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/spdlog-inl.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/sinks/basic_file_sink.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/details/file_helper.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/details/file_helper-inl.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/sinks/base_sink.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/sinks/base_sink-inl.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/sinks/basic_file_sink-inl.h \
- /data/home/emk/Coding/Trading_system/TradingSystem/src/Interface/IMessenger.h \
+ /home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/sinks/sink.h \
+ /home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/sinks/sink-inl.h \
+ /home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/sinks/ansicolor_sink.h \
+ /home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/details/console_globals.h \
+ /home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/sinks/ansicolor_sink-inl.h \
+ /home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/details/synchronous_factory.h \
+ /home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/version.h \
+ /home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/spdlog-inl.h \
+ /home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/sinks/basic_file_sink.h \
+ /home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/details/file_helper.h \
+ /home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/details/file_helper-inl.h \
+ /home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/sinks/base_sink.h \
+ /home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/sinks/base_sink-inl.h \
+ /home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include/spdlog/sinks/basic_file_sink-inl.h \
+ /home/emk/Coding/Trading_system/TradingSystem/src/Interface/IMessenger.h \
  /home/emk/vcpkg/installed/x64-linux/include/zmq.hpp \
  /home/emk/vcpkg/installed/x64-linux/include/zmq.h /usr/include/signal.h \
  /usr/include/x86_64-linux-gnu/bits/signum.h \

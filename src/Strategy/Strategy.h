@@ -21,7 +21,6 @@ namespace ts{
 
             //vector of list of profolio, in form of <volume, price>
         public:
-                
             /*
             config
 

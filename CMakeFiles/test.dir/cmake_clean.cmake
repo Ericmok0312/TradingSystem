@@ -17,6 +17,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/test.dir/src/Interface/IMessenger.cpp.o.d"
   "CMakeFiles/test.dir/src/Interface/datastruture.cpp.o"
   "CMakeFiles/test.dir/src/Interface/datastruture.cpp.o.d"
+  "CMakeFiles/test.dir/src/Strategy/DualThrust.cpp.o"
+  "CMakeFiles/test.dir/src/Strategy/DualThrust.cpp.o.d"
   "CMakeFiles/test.dir/src/Strategy/StrategyEngine.cpp.o"
   "CMakeFiles/test.dir/src/Strategy/StrategyEngine.cpp.o.d"
   "CMakeFiles/test.dir/src/Strategy/TestStrategy.cpp.o"

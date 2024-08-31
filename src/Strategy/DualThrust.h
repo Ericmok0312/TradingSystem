@@ -2,10 +2,11 @@
 #define SRC_STRATEGY_DUALTHRUST_H
 
 #include "Strategy/Strategy.h"
-#include "Strategy/StrategyManufacturer.h"
+#include <rapidjson/document.h>
 
-class DualThrust : public IStrategy{
-    friend class StrategyManufacturer;
+
+namespace ts{
+    class DualThrust:public IStrategy{
     
     private:
         int n;
@@ -23,15 +24,12 @@ class DualThrust : public IStrategy{
 
         void init();
 
-        void onSessionBegin(ts::StrategyCtx*) override;
+        virtual void onSessionBegin(ts::StrategyCtx*) override;
 
-        void onUpdateData(ts::StrategyCtx*) override;
+        virtual void onUpdateData(ts::StrategyCtx*) override;
 
+    };
 }
-
-
-
-
 
 
 
