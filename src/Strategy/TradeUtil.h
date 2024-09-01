@@ -82,7 +82,8 @@ namespace ts{
             //Strategy Interface
             void SendMessage(shared_ptr<Msg> msg);
             void LoggingInfo(const char * info);
-
+            const char* getCode(){return code_.c_str();}
+            const char* getExchange(){return exg_.c_str();}
             unique_ptr<BaseData> StratgeyGetOneTimeData(shared_ptr<Msg> msg2futu, shared_ptr<Msg> msg, const char* returnName);
 
     };

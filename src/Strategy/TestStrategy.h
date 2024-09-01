@@ -13,7 +13,7 @@ namespace ts{
 
             TestStrategy(const rapidjson::Document& config);
         
-            void init();
+            void init(ts::StrategyCtx*);
 
             void onSessionBegin(ts::StrategyCtx*) override;
 

@@ -11,6 +11,7 @@
 #include <unordered_map>
 #include <functional>
 #include <memory>
+#include "Helper/util.h"
 #if defined(_WIN32) || defined(_WIN64)
 #ifdef DLL_EXPORT
 #define DLL_EXPORT_IMPORT  __declspec(dllexport)   // export DLL information
@@ -39,56 +40,7 @@ namespace ts{
     #define MAX_TIME_SIZE 20
     #define MAX_EXG_SIZE 5
 
-    struct ARG{
-        char exg[MAX_EXG_SIZE];
-        char code[MAX_SYMBOL_SIZE];
-        uint32_t  count; //SliceSize for getCurrent, period count for get history data
-        uint64_t  etime;
-        string des;
-        SubType type; // classifing which type of data to get
-        std::function<void(string&&, string&& des)> callback {};//callback is added only by DataManager
-        
-        char start[11];
-        char end[11];
-        
-        ARG(){};
-        ARG(const char* eg, const char* cd, uint32_t ct, uint64_t et, const char* ds, SubType tp, const char* st = "NA", uint64_t ed = "NA")
-        :exg(ex)
-        ,code(cd)
-        ,count(ct)
-        ,etime(et)
-        ,des(ds)
-        ,type(tp)
-        ,start(st)
-        ,end(ed){}
 
-        string seriralize(){
-            stringstream ss;
-            ss<<exg<<ARGV_SEP<<code<<ARGV_SEP<<count<<ARGV_SEP<<etime<<ARGV_SEP<<des<<ARGV_SEP<<type<<ARGV_SEP<<start
-            <<ARGV_SEP<<end;
-            return move(ss.str());
-        }
-
-        void deserialize(const string& argin){
-            vector<string> info;
-            split(msgin.c_str(), ARGV_SEP, info);
-
-            if(info.size()!=8){
-                throw std::out_of_range("OutofRange in ARG deserialize.");
-            }
-
-            strcpy(exg, info[0]);
-            strcpy(code, info[1]);
-            count = stoul(info[2]);
-            etime = stoull(info[3]);
-            des = move(info[4]);
-            type = static_cast<SubType>(info[5]);
-            strcpy(start, info[6]);
-            strcpy(end, info[7]);
-        }
-    };
-
-    typedef unordered_map<string, tuple<function<void(function<void(shared_ptr<ARG>)>, shared_ptr<ARG>)>, function<void(shared_ptr<ARG>)>, shared_ptr<ARG>>> CallBackTabletype;
 
     /*
         Engine state
@@ -765,6 +717,65 @@ namespace ts{
                 return nullptr;
             }
     };
+
+
+
+     struct ARG{
+        char exg[MAX_EXG_SIZE];
+        char code[MAX_SYMBOL_SIZE];
+        uint32_t  count; //SliceSize for getCurrent, period count for get history data
+        uint64_t  etime;
+        string des;
+        ts::SubType type; // classifing which type of data to get
+        std::function<void(string&&, string&& des)> callback {};//callback is added only by DataManager
+        
+        char start[11];
+        char end[11];
+        
+        ARG(){};
+        ARG(const char* eg, const char* cd, uint32_t ct, uint64_t et, const char* ds, ts::SubType tp, const char* st = "NA", const char* ed = "NA")
+        :count(ct)
+        ,etime(et)
+        ,des(ds)
+        {
+            memcpy(exg, eg, strlen(eg)+1);
+            memcpy(code, cd, strlen(cd)+1);
+            type = tp;
+            memcpy(start, st, strlen(st)+1); 
+            memcpy(end, ed, strlen(ed)+1);
+        }
+
+        string seriralize(){
+            stringstream ss;
+            ss<<exg<<ARGV_SEP<<code<<ARGV_SEP<<count<<ARGV_SEP<<etime<<ARGV_SEP<<des<<ARGV_SEP<<type<<ARGV_SEP<<start
+            <<ARGV_SEP<<end;
+            return move(ss.str());
+        }
+
+        void deserialize(const string& argin){
+            vector<string> info;
+            ts::split(argin.c_str(), ARGV_SEP, info);
+
+            if(info.size()!=8){
+                throw std::out_of_range("OutofRange in ARG deserialize.");
+            }
+
+            strcpy(exg, info[0].c_str());
+            strcpy(code, info[1].c_str());
+            count = stoul(info[2]);
+            etime = stoull(info[3]);
+            des = move(info[4]);
+            type = static_cast<SubType>(stoi(info[5]));
+            strcpy(start, info[6].c_str());
+            strcpy(end, info[7].c_str());
+        }
+    };
+
+    typedef unordered_map<string, tuple<function<void(function<void(shared_ptr<ARG>)>, shared_ptr<ARG>)>, function<void(shared_ptr<ARG>)>, shared_ptr<ARG>>> CallBackTabletype;
+
 }
 
+
+
+   
 #endif

@@ -27,7 +27,7 @@ namespace ts{
             }
     }
 
-    void TestStrategy::init(){};
+    void TestStrategy::init(ts::StrategyCtx* ctx){};
 
 }
    

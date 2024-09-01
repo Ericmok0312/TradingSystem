@@ -13,10 +13,7 @@ namespace ts{
         float k1;  
         float k2;
 
-        double HH; // maximum of high in past N days
-        double HC; // maximum of close price in past N days
-        double LC; // minimum of close price in past N days
-        double LL; // minimum of low price in past N days
+        double range;
 
     public:
 

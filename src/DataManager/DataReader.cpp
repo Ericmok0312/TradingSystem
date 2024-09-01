@@ -212,10 +212,10 @@ namespace ts{
         KlineList& klinelist = (*cache)[temp];
 
         auto startit = lower_bound(klinelist.klines_.begin(), klinelist.klines_.end(), Date2TimeStamp(arg->start), 
-        [](Kline& a, uint64_t val){return a.updateTimestamp_<val;});
+        [](const Kline& a, const uint64_t& val){return a.updateTimestamp_<val;});
 
         auto endit = upper_bound(klinelist.klines_.begin(), klinelist.klines_.end(), Date2TimeStamp(arg->end), 
-        [](Kline& a, uint64_t val){return a.updateTimestamp_>val;});
+        [](const uint64_t& val, const Kline& a){return a.updateTimestamp_>val;});
 
         int flag;
 
@@ -228,45 +228,120 @@ namespace ts{
         else if(startit == klinelist.klines_.begin() && endit!=klinelist.klines_.begin() && endit != klinelist.klines_.end()){
             flag = 2;
         } // got some/none of the data, but some earlier data are needed
-        else if(startit != klinelist.klines_.start()&&startit!=klinelist.klines_.end() && endit==klinelist.klines_.end()){
+        else if(startit != klinelist.klines_.begin()&&startit!=klinelist.klines_.end() && endit==klinelist.klines_.end()){
             flag = 3;
         } // got some/none of the data, but some later data are needed
         else if(startit == klinelist.klines_.begin()&&startit==klinelist.klines_.end()){
             flag = 4;
         } // got some of the data but both the earlier and later data are needed
   
-
+        delete[] temp;
 
         TSLMDBPtr db;
         switch(arg->type){
             case KLINE_1D:
-                db = get_q_db(arg->exg, arg->code, kline_d1_dbs_, arg->type_);
+                db = get_q_db(arg->exg, arg->code, kline_d1_dbs_, arg->type);
                 break;
             case KLINE_1MIN:
-                db = get_q_db(arg->exg, arg->code, kline_m1_dbs_, arg->type_);
+                db = get_q_db(arg->exg, arg->code, kline_m1_dbs_, arg->type);
                 break;
             default:
-                db = get_q_db(arg->exg, arg->code, kline_m5_dbs_, arg->type_);
+                db = get_q_db(arg->exg, arg->code, kline_m5_dbs_, arg->type);
                 break;
         }
         if(db == nullptr) return;
         
         TSQryLMDB query(*db);
-
-        LMDBKey lkey(arg->exg, arg->code, Date2TimeStamp(arg->start));
-        LMDBKey rkey(arg->exg, arg->code, Date2TimeStamp(arg->end));
-        
-        int cnt = query.get_range(lkey.getString(), rkey.getString(), [this, &quotelist](const ValueArray& ayKeys, const ValueArray& ayVals){
-            for(const std::string& item: ayVals){
-                Quote q(item);
-                quotelist.quotes_.push_back(q);
+        KlineSlice* ret;
+        int cnt;
+        switch(flag){
+            case 0:
+            { 
+                LMDBKey lkey(arg->exg, arg->code, Date2TimeStamp(arg->start));
+                LMDBKey rkey(arg->exg, arg->code, Date2TimeStamp(arg->end));
+                
+                cnt = query.get_range(lkey.getString(), rkey.getString(), [this, &klinelist](const ValueArray& ayKeys, const ValueArray& ayVals){
+                    for(const std::string& item: ayVals){
+                        if(klinelist.klines_.size() == klinelist.klines_.capacity()){
+                            klinelist.klines_.resize(klinelist.klines_.size()*2);
+                        }
+                        Kline q(item);
+                        klinelist.klines_.push_back(q);
+                    }
+                });
+                ret = KlineSlice::create(arg->code, &klinelist.klines_[0], cnt);
+                break;
             }
-        });
+            case 1:
+            {
+                ret = KlineSlice::create(arg->code, &(*startit), std::distance(startit, endit)+1);
+                break;
+            }
+            case 2:
+            {
+                LMDBKey lkey(arg->exg, arg->code, Date2TimeStamp(arg->start));
+                LMDBKey rkey(arg->exg, arg->code, startit->updateTimestamp_);
+                cnt = distance(startit, endit)+1;
+                cnt += query.get_range(lkey.getString(), rkey.getString(), [this, &klinelist](const ValueArray& ayKeys, const ValueArray& ayVals){
+                    for(const std::string& item: ayVals){
+                        if(klinelist.klines_.size() == klinelist.klines_.capacity()){
+                            klinelist.klines_.resize(klinelist.klines_.size()*2);
+                        }
+                        Kline q(item);
+                        klinelist.klines_.push_front(q);
+                    }
+                });
+                ret = KlineSlice::create(arg->code, &klinelist.klines_[0], cnt);
+                break;
+            }
+            case 3:
+            {
+                LMDBKey lkey(arg->exg, arg->code, endit->updateTimestamp_);
+                LMDBKey rkey(arg->exg, arg->code, Date2TimeStamp(arg->end));
+                cnt = distance(startit, endit)+1;
+                cnt += query.get_range(lkey.getString(), rkey.getString(), [this, &klinelist](const ValueArray& ayKeys, const ValueArray& ayVals){
+                    for(const std::string& item: ayVals){
+                        if(klinelist.klines_.size() == klinelist.klines_.capacity()){
+                            klinelist.klines_.resize(klinelist.klines_.size()*2);
+                        }
+                        Kline q(item);
+                        klinelist.klines_.push_back(q);
+                    }
+                });
+                ret = KlineSlice::create(arg->code, &(*startit), cnt);
+                break;
+            }
+            default:
+            {
+                LMDBKey lkey(arg->exg, arg->code, Date2TimeStamp(arg->start));
+                LMDBKey rkey(arg->exg, arg->code, klinelist.klines_.begin()->updateTimestamp_);
+                cnt = distance(startit, endit)+1;
+                cnt += query.get_range(lkey.getString(), rkey.getString(), [this, &klinelist](const ValueArray& ayKeys, const ValueArray& ayVals){
+                    for(const std::string& item: ayVals){
+                        if(klinelist.klines_.size() == klinelist.klines_.capacity()){
+                            klinelist.klines_.resize(klinelist.klines_.size()*2);
+                        }
+                        Kline q(item);
+                        klinelist.klines_.push_front(q);
+                    }
+                });
 
+                LMDBKey lkey2(arg->exg, arg->code, (klinelist.klines_.end()-1)->updateTimestamp_);
+                LMDBKey rkey2(arg->exg, arg->code, Date2TimeStamp(arg->end));
+                cnt += query.get_range(lkey2.getString(), rkey2.getString(), [this, &klinelist](const ValueArray& ayKeys, const ValueArray& ayVals){
+                    for(const std::string& item: ayVals){
+                        if(klinelist.klines_.size() == klinelist.klines_.capacity()){
+                            klinelist.klines_.resize(klinelist.klines_.size()*2);
+                        }
+                        Kline q(item);
+                        klinelist.klines_.push_back(q);
+                    }
+                });
+                ret = KlineSlice::create(arg->code, &klinelist.klines_[0], cnt);
+                break;
+            }
+        }
 
-        
-
-        
         stringstream ss;
         ss<<ret;
         arg->callback(move(ss.str()), move(arg->des));

@@ -8,33 +8,78 @@ namespace ts{
 
     void DualThrust::init(StrategyCtx* ctx){
 
-
-
         shared_ptr<Msg> msg2futu = make_shared<Msg>();
         msg2futu->destination_ = move("FutuEngine");
         msg2futu->msgtype_ = MSG_TYPE_GET_HISTORY_KLINE;
         msg2futu->source_ = name_;
         rapidjson::Document d;
         d.SetObject();
-        d.AddMember("code", rapidjson::Value(code_, code_.size(), d.GetAllocator()), d.GetAllocator());
+        d.AddMember("code", rapidjson::Value(ctx->getCode(), strlen(ctx->getCode())+1, d.GetAllocator()), d.GetAllocator());
         d.AddMember("subtype", rapidjson::Value(KLINE_1MIN), d.GetAllocator());
         string start = move(dateNDaysBefore(this->n));
-        d.AddMember("start", rapidjson::Value(start, start.size(), d.GetAllocator()), d.GetAllocator());
+        d.AddMember("start", rapidjson::Value(start.c_str(), start.size(), d.GetAllocator()), d.GetAllocator());
         string end = move(dateNDaysBefore(1));
-        d.AddMember("end", rapidjson::Value(end, end.size(), d.GetAllocator()), d.GetAllocator());
+        d.AddMember("end", rapidjson::Value(end.c_str(), end.size(), d.GetAllocator()), d.GetAllocator());
         Json2String(d, msg2futu->data_);
 
 
         shared_ptr<Msg> msg = make_shared<Msg>();
         msg->destination_ = move("DataManager");
-        msg->source_-> = name_;
+        msg->source_ = name_;
         msg->msgtype_ = MSG_TYPE_GET_KLINE_BLOCK_HIST;
-        ARG arg(ctx->code_.c_str(), ctx->code_.c_str(), this->n, GetTimeStamp(), (this->name_+move("_init")).c_str(), KLINE_1MIN);
+        ARG arg(ctx->getExchange(), ctx->getCode(), this->n, GetTimeStamp(), (this->name_+move("_init")).c_str(), KLINE_1MIN);
         msg->data_ = move(arg.seriralize());
+
         unique_ptr<BaseData> data = ctx->StratgeyGetOneTimeData(msg2futu, msg, arg.des.c_str());
 
+        KlineSlice* temp = dynamic_cast<KlineSlice*>(data.get());
 
+        double HH = -std::numeric_limits<double>::infinity();
+        double LL = std::numeric_limits<double>::infinity();
+        double HC = -std::numeric_limits<double>::infinity();
+        double LC = std::numeric_limits<double>::infinity();
+
+        for (int i = 0; i < temp->getCount(); ++i) {
+            HH = std::max(HH, temp->at(i)->hPrice_);
+            LL = std::min(LL, temp->at(i)->lPrice_);
+            HC = std::max(HC, temp->at(i)->cPrice_);
+            LC = std::min(LC, temp->at(i)->cPrice_);
+        }
+
+        range = max(HH-LC, HC-LL);
 
     }
+
+    void DualThrust::onSessionBegin(ts::StrategyCtx* ctx){};
+
+
+    void DualThrust::onUpdateData(ts::StrategyCtx* ctx){
+        std::shared_ptr<Msg> dataMsg = make_shared<Msg>();
+        dataMsg->destination_ = "WebApp";
+        dataMsg->source_ = "Tester";
+        dataMsg->msgtype_ = MSG_TYPE_DEBUG;
+
+        if(ctx->getCur()){
+            const ts::Quote* temp = static_cast<const ts::Quote*>(ctx->getCur());
+            double buy = temp->oPrice_ + k1 * range;
+            double sell = temp->oPrice_ - k2 * range;
+
+            rapidjson::Document d;
+            d.SetObject();
+
+            d.AddMember("BuyLine", rapidjson::Value(buy), d.GetAllocator());
+            d.AddMember("SellLine", rapidjson::Value(sell), d.GetAllocator());
+            d.AddMember("cPrice", rapidjson::Value(temp->cPrice_), d.GetAllocator());
+
+            Json2String(d, dataMsg->data_);
+
+            ctx->SendMessage(dataMsg);
+            ctx->LoggingInfo(dataMsg->data_.c_str());
+
+        }
+    }
+
+
+
 
 }

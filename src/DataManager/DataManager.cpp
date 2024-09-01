@@ -105,7 +105,7 @@ namespace ts{
                 arguments->callback = bind(&DataManager::sendData, this, placeholders::_1, placeholders::_2);
                 arguments->deserialize(msg->data_);
                 lock_guard<mutex> lg(RegTableMutex_);
-                RegTable_.insert(make_pair(param[0]+move("/")+param[1]+move("/QUOTE"), make_tuple(bind(&DataManager::AddDataReaderTask, this, placeholders::_1, placeholders::_2), bind(&DataReader::readCurQuoteSlicefromLMDB, datareader_, placeholders::_1), arguments)));
+                RegTable_.insert(make_pair(move(string(arguments->exg))+move("/")+move(string(arguments->code))+move("/QUOTE"), make_tuple(bind(&DataManager::AddDataReaderTask, this, placeholders::_1, placeholders::_2), bind(&DataReader::readCurQuoteSlicefromLMDB, datareader_, placeholders::_1), arguments)));
             }
             break;
             case MSG_TYPE_GET_KLINE_BLOCK_HIST:{

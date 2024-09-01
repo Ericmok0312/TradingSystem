@@ -160,9 +160,9 @@ namespace ts{
         messenger_->send(msg,0);
         shared_ptr<Msg> returnmsg;
         while(true){
-            returnmsg = messenger_->recv();
+            returnmsg = messenger_->recv(0);
             if(returnmsg->destination_ == returnName){
-                return move(unique_ptr<Basedata>(reinterpret_cast<BaseData*>(std::strtoull(msg->data_.c_str(), nullptr, 16))));
+                return move(unique_ptr<BaseData>(reinterpret_cast<BaseData*>(std::strtoull(msg->data_.c_str(), nullptr, 16))));
             }
         }
 

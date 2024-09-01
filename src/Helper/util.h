@@ -13,10 +13,14 @@
 #include <iostream>
 #include <sstream>
 #include <boost/chrono.hpp>
-
+#include "chrono"
+#include "boost/date_time/gregorian/gregorian.hpp"
+#include "boost/date_time/posix_time/posix_time.hpp"
 
 using namespace std;
 using namespace google;
+using namespace boost::posix_time;   
+using namespace boost::gregorian;  
 
 namespace ts{
     
@@ -101,53 +105,41 @@ namespace ts{
 
 
     inline std::string dateNDaysBefore(int N) {
-    
-        auto now = std::chrono::system_clock::now();
-        
-        // Calculate N days before
-        auto daysBefore = std::chrono::duration_cast<std::chrono::days>(std::chrono::hours(24 * N));
-        auto targetDate = now - daysBefore;
 
-        // Convert to time_t for formatting
-        std::time_t targetTime = std::chrono::system_clock::to_time_t(targetDate);
-        
-        // Convert to tm structure
-        std::tm* tmPtr = std::localtime(&targetTime);
-        
+
+        // Get current date
+       ptime now = second_clock::local_time();
+        date today = now.date();
+
+        // Calculate N days before
+        date targetDate = today - days(N);
+
         // Format the date as YYYY-MM-DD
         std::ostringstream oss;
-        oss << std::put_time(tmPtr, "%Y-%m-%d");
-        
-        return move(oss.str());
+        oss << to_iso_extended_string(targetDate);
+
+        return oss.str();
     }
 
-    inline uint64_t Date2TimeStamp(const char* date){
-        std::tm tm = {};
-        std::istringstream ss(date);
-        
-        // Parse the date
-        ss >> std::get_time(&tm, "%Y-%m-%d");
+    inline uint64_t Date2TimeStamp(const char* dt){
+        std::istringstream ss(dt);
+        date d;
+        ss >> d;
         if (ss.fail()) {
             throw std::invalid_argument("Invalid date format. Use YYYY-MM-DD.");
         }
-        
-        // Convert to time_t
-        std::time_t time = std::mktime(&tm);
-        
-        // Check if conversion was successful
-        if (time == -1) {
-            throw std::runtime_error("Failed to convert date to time_t.");
-        }
-        
-        // Convert to microseconds since epoch
-        auto timestamp = std::chrono::time_point<std::chrono::system_clock>(
-            std::chrono::seconds(time)
-        ).time_since_epoch();
-        
-        // Return timestamp in microseconds
-        return static_cast<uint64_t>(std::chrono::duration_cast<std::chrono::microseconds>(timestamp));
-    }
 
+        // Create a ptime object from the date at midnight
+        boost::posix_time::ptime dateTime(d, time_duration(0, 0, 0));
+
+        // Convert ptime to time_t
+        ptime epoch(date(1970, 1, 1));
+        time_duration diff = dateTime - epoch;
+
+        // Convert to microseconds since epoch
+        return static_cast<uint64_t>(diff.total_microseconds());
+
+    }
 }
 
 
