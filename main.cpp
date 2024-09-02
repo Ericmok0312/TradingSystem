@@ -16,6 +16,7 @@ using namespace ts;
 #include <Strategy/TradeUtil.h>
 #include <Strategy/StrategyEngine.h>
 #include <Strategy/TestStrategy.h>
+#include <Strategy/DualThrust.h>
 
     class Tester{
     public:
@@ -349,12 +350,15 @@ using namespace ts;
                        "HSImain":[0.0, 0.0]
                     }
                 ,
-                "Size":5
+                "Size":5,
+                "N" : 7,
+                "K1" : 0.2,
+                "K2" : 0.2
             })";
 
             d.Parse(arg);
             if(IStrategy::checkValidParam(d)){
-                ts::TestStrategy* tp = new TestStrategy(d);
+                ts::IStrategy* tp = new DualThrust(d);
                 eng->addStrategy(tp);
                 eng->start();
             }

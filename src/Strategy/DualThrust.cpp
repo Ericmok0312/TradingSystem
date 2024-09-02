@@ -4,6 +4,9 @@
 namespace ts{
 
     DualThrust::DualThrust(const rapidjson::Document& config):IStrategy(config){
+        n = config["N"].GetInt();
+        k1 = config["K1"].GetDouble();
+        k2 = config["K2"].GetDouble();
     }
 
     void DualThrust::init(StrategyCtx* ctx){
@@ -31,7 +34,7 @@ namespace ts{
         msg->data_ = move(arg.seriralize());
 
         unique_ptr<BaseData> data = ctx->StratgeyGetOneTimeData(msg2futu, msg, arg.des.c_str());
-
+        
         KlineSlice* temp = dynamic_cast<KlineSlice*>(data.get());
 
         double HH = -std::numeric_limits<double>::infinity();

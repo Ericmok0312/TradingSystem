@@ -108,7 +108,7 @@ namespace ts{
 
 
         // Get current date
-       ptime now = second_clock::local_time();
+        ptime now = second_clock::local_time();
         date today = now.date();
 
         // Calculate N days before
@@ -117,27 +117,41 @@ namespace ts{
         // Format the date as YYYY-MM-DD
         std::ostringstream oss;
         oss << to_iso_extended_string(targetDate);
-
+        cout<<oss.str()<<endl;
         return oss.str();
     }
 
-    inline uint64_t Date2TimeStamp(const char* dt){
-        std::istringstream ss(dt);
-        date d;
-        ss >> d;
-        if (ss.fail()) {
-            throw std::invalid_argument("Invalid date format. Use YYYY-MM-DD.");
+    inline uint64_t Date2TimeStamp(const char* dateStr){
+        int year, month, day;
+        std::tm timeInfo = {};
+
+        if (std::sscanf(dateStr, "%d-%d-%d", &year, &month, &day) == 3) {
+            timeInfo.tm_year = year - 1900; // Years since 1900
+            timeInfo.tm_mon = month - 1;    // Months are 0-based
+            timeInfo.tm_mday = day;
+        } else {
+            // Handle invalid input
+            return -1; // Return an error value
         }
 
-        // Create a ptime object from the date at midnight
-        boost::posix_time::ptime dateTime(d, time_duration(0, 0, 0));
+        // Set other time components (e.g., hours, minutes, seconds)
+        // For simplicity, let's assume midnight (00:00:00)
+        timeInfo.tm_hour = 0;
+        timeInfo.tm_min = 0;
+        timeInfo.tm_sec = 0;
+         std::time_t timestamp = std::mktime(&timeInfo);
+        if (timestamp == -1) {
+            std::cerr << "Invalid date format: " << dateStr << std::endl;
+            return static_cast<uint64_t>(std::chrono::microseconds(0).count()); // Return an error value
+        }
 
-        // Convert ptime to time_t
-        ptime epoch(date(1970, 1, 1));
-        time_duration diff = dateTime - epoch;
+        // Convert to microseconds
+        auto epochTime = std::chrono::system_clock::from_time_t(timestamp);
+        cout<<static_cast<uint64_t>(std::chrono::duration_cast<std::chrono::microseconds>(
+            epochTime.time_since_epoch()).count())<<endl;
+        return static_cast<uint64_t>(std::chrono::duration_cast<std::chrono::microseconds>(
+            epochTime.time_since_epoch()).count());
 
-        // Convert to microseconds since epoch
-        return static_cast<uint64_t>(diff.total_microseconds());
 
     }
 }

@@ -219,10 +219,10 @@ namespace ts{
 
         int flag;
 
-        if(klinelist.klines_.size() == 0){ // no data
+        if(klinelist.klines_.empty()){ // no data
             flag = 0;
         }
-        if(startit!=klinelist.klines_.begin()&&startit!=klinelist.klines_.end()&&endit!=klinelist.klines_.begin()&&endit!=klinelist.klines_.end()){ //range of cache larger than required
+        else if(startit!=klinelist.klines_.begin()&&startit!=klinelist.klines_.end()&&endit!=klinelist.klines_.begin()&&endit!=klinelist.klines_.end()){ //range of cache larger than required
             flag = 1;
         }
         else if(startit == klinelist.klines_.begin() && endit!=klinelist.klines_.begin() && endit != klinelist.klines_.end()){
@@ -236,7 +236,7 @@ namespace ts{
         } // got some of the data but both the earlier and later data are needed
   
         delete[] temp;
-
+        cout<<flag<<endl;
         TSLMDBPtr db;
         switch(arg->type){
             case KLINE_1D:
@@ -311,7 +311,7 @@ namespace ts{
                 ret = KlineSlice::create(arg->code, &(*startit), cnt);
                 break;
             }
-            default:
+            case 4:
             {
                 LMDBKey lkey(arg->exg, arg->code, Date2TimeStamp(arg->start));
                 LMDBKey rkey(arg->exg, arg->code, klinelist.klines_.begin()->updateTimestamp_);

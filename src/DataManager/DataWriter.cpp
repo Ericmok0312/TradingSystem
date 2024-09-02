@@ -77,6 +77,7 @@ namespace ts{
             logger_->error(fmt::format("wrtie tick of {} error {}", nkline->code_, db->errmsg()).c_str());
         }
 
+        logger_->info(nkline->getJson().c_str());
         lock_guard<mutex> lg(*RegTableMutex_);
         auto temp = RegTable_->find(sss.str());
         if (temp!=RegTable_->end()){

@@ -156,13 +156,17 @@ namespace ts{
     unique_ptr<BaseData> StrategyCtx::StratgeyGetOneTimeData(shared_ptr<Msg> msg2futu,shared_ptr<Msg> msg, const char* returnName){
 
         messenger_->send(msg2futu, 0); //for strategy that requires history data/ one-time data
-
+        sleep(100);
         messenger_->send(msg,0);
         shared_ptr<Msg> returnmsg;
         while(true){
             returnmsg = messenger_->recv(0);
             if(returnmsg->destination_ == returnName){
-                return move(unique_ptr<BaseData>(reinterpret_cast<BaseData*>(std::strtoull(msg->data_.c_str(), nullptr, 16))));
+                cout<<reinterpret_cast<BaseData*>(std::strtoull(returnmsg->data_.c_str(), nullptr, 16))<<endl;
+                if(reinterpret_cast<BaseData*>(std::strtoull(returnmsg->data_.c_str(), nullptr, 16))){
+                   return move(unique_ptr<BaseData>(reinterpret_cast<BaseData*>(std::strtoull(returnmsg->data_.c_str(), nullptr, 16)))); 
+                }
+                
             }
         }
 

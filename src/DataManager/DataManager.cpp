@@ -89,9 +89,9 @@ namespace ts{
             case MSG_TYPE_ACCESSLIST:
             case MSG_TYPE_ACCOUNTINFO:
             case MSG_TYPE_STORE_TICKER:
-            case MSG_TYPE_STORE_KLINE_1Min:
-                break;
             case MSG_TYPE_STORE_KLINE_1D:
+                break;
+            case MSG_TYPE_STORE_KLINE_1Min:
                 FutuKline2TsKline(msg->data_, list);
                 for(int i=0; i<list.size(); ++i){
                     datawritter_->AddTask(bind(&DataWriter::WriteKline, datawritter_, placeholders::_1), list[i]);

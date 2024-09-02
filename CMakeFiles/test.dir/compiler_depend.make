@@ -1192,8 +1192,8 @@ CMakeFiles/test.dir/main.cpp.o: main.cpp \
   libs/boost/date_time/posix_time/conversion.hpp \
   libs/boost/date_time/filetime_functions.hpp \
   libs/boost/date_time/posix_time/time_parsers.hpp \
-  /home/emk/vcpkg/installed/x64-linux/include/zmq.hpp \
-  /home/emk/vcpkg/installed/x64-linux/include/zmq.h \
+  /home/Eric/vcpkg/installed/x64-linux/include/zmq.hpp \
+  /home/Eric/vcpkg/installed/x64-linux/include/zmq.h \
   libs/boost/thread/thread.hpp \
   libs/boost/thread/thread_only.hpp \
   libs/boost/thread/detail/platform.hpp \
@@ -1469,7 +1469,8 @@ CMakeFiles/test.dir/main.cpp.o: main.cpp \
   src/Strategy/TradeUtil.h \
   src/Strategy/Strategy.h \
   src/Strategy/StrategyEngine.h \
-  src/Strategy/TestStrategy.h
+  src/Strategy/TestStrategy.h \
+  src/Strategy/DualThrust.h
 
 CMakeFiles/test.dir/src/DataManager/DataManager.cpp.o: src/DataManager/DataManager.cpp \
   /usr/include/stdc-predef.h \
@@ -2786,8 +2787,8 @@ CMakeFiles/test.dir/src/DataManager/DataManager.cpp.o: src/DataManager/DataManag
   libs/spdlog-1.14.1/include/spdlog/sinks/base_sink-inl.h \
   libs/spdlog-1.14.1/include/spdlog/sinks/basic_file_sink-inl.h \
   src/Interface/IMessenger.h \
-  /home/emk/vcpkg/installed/x64-linux/include/zmq.hpp \
-  /home/emk/vcpkg/installed/x64-linux/include/zmq.h \
+  /home/Eric/vcpkg/installed/x64-linux/include/zmq.hpp \
+  /home/Eric/vcpkg/installed/x64-linux/include/zmq.h \
   src/Interface/IEngine.h \
   src/DataManager/DataWriter.h \
   src/DataManager/tslmdb.hpp \
@@ -6739,8 +6740,8 @@ CMakeFiles/test.dir/src/FUTU/FutuEngine.cpp.o: src/FUTU/FutuEngine.cpp \
   libs/spdlog-1.14.1/include/spdlog/sinks/base_sink.h \
   libs/spdlog-1.14.1/include/spdlog/sinks/base_sink-inl.h \
   libs/spdlog-1.14.1/include/spdlog/sinks/basic_file_sink-inl.h \
-  /home/emk/vcpkg/installed/x64-linux/include/zmq.hpp \
-  /home/emk/vcpkg/installed/x64-linux/include/zmq.h \
+  /home/Eric/vcpkg/installed/x64-linux/include/zmq.hpp \
+  /home/Eric/vcpkg/installed/x64-linux/include/zmq.h \
   src/Interface/IEngine.h \
   libs/futu/include/futu/FTAPI.h \
   libs/futu/include/futu/FTAPI_Define.h \
@@ -8490,8 +8491,8 @@ CMakeFiles/test.dir/src/Interface/IEngine.cpp.o: src/Interface/IEngine.cpp \
   libs/spdlog-1.14.1/include/spdlog/sinks/base_sink-inl.h \
   libs/spdlog-1.14.1/include/spdlog/sinks/basic_file_sink-inl.h \
   src/Interface/IMessenger.h \
-  /home/emk/vcpkg/installed/x64-linux/include/zmq.hpp \
-  /home/emk/vcpkg/installed/x64-linux/include/zmq.h
+  /home/Eric/vcpkg/installed/x64-linux/include/zmq.hpp \
+  /home/Eric/vcpkg/installed/x64-linux/include/zmq.h
 
 CMakeFiles/test.dir/src/Interface/IMessenger.cpp.o: src/Interface/IMessenger.cpp \
   /usr/include/stdc-predef.h \
@@ -9684,8 +9685,8 @@ CMakeFiles/test.dir/src/Interface/IMessenger.cpp.o: src/Interface/IMessenger.cpp
   libs/boost/date_time/posix_time/conversion.hpp \
   libs/boost/date_time/filetime_functions.hpp \
   libs/boost/date_time/posix_time/time_parsers.hpp \
-  /home/emk/vcpkg/installed/x64-linux/include/zmq.hpp \
-  /home/emk/vcpkg/installed/x64-linux/include/zmq.h \
+  /home/Eric/vcpkg/installed/x64-linux/include/zmq.hpp \
+  /home/Eric/vcpkg/installed/x64-linux/include/zmq.h \
   src/Interface/datastructure.h
 
 CMakeFiles/test.dir/src/Interface/datastruture.cpp.o: src/Interface/datastruture.cpp \
@@ -12008,8 +12009,8 @@ CMakeFiles/test.dir/src/Strategy/DualThrust.cpp.o: src/Strategy/DualThrust.cpp \
   libs/spdlog-1.14.1/include/spdlog/sinks/base_sink.h \
   libs/spdlog-1.14.1/include/spdlog/sinks/base_sink-inl.h \
   libs/spdlog-1.14.1/include/spdlog/sinks/basic_file_sink-inl.h \
-  /home/emk/vcpkg/installed/x64-linux/include/zmq.hpp \
-  /home/emk/vcpkg/installed/x64-linux/include/zmq.h
+  /home/Eric/vcpkg/installed/x64-linux/include/zmq.hpp \
+  /home/Eric/vcpkg/installed/x64-linux/include/zmq.h
 
 CMakeFiles/test.dir/src/Strategy/StrategyEngine.cpp.o: src/Strategy/StrategyEngine.cpp \
   /usr/include/stdc-predef.h \
@@ -13328,8 +13329,8 @@ CMakeFiles/test.dir/src/Strategy/StrategyEngine.cpp.o: src/Strategy/StrategyEngi
   libs/spdlog-1.14.1/include/spdlog/sinks/base_sink-inl.h \
   libs/spdlog-1.14.1/include/spdlog/sinks/basic_file_sink-inl.h \
   src/Interface/IMessenger.h \
-  /home/emk/vcpkg/installed/x64-linux/include/zmq.hpp \
-  /home/emk/vcpkg/installed/x64-linux/include/zmq.h \
+  /home/Eric/vcpkg/installed/x64-linux/include/zmq.hpp \
+  /home/Eric/vcpkg/installed/x64-linux/include/zmq.h \
   src/Strategy/TradeUtil.h \
   src/Strategy/Strategy.h
 
@@ -14527,8 +14528,8 @@ CMakeFiles/test.dir/src/Strategy/TestStrategy.cpp.o: src/Strategy/TestStrategy.c
   libs/spdlog-1.14.1/include/spdlog/sinks/base_sink.h \
   libs/spdlog-1.14.1/include/spdlog/sinks/base_sink-inl.h \
   libs/spdlog-1.14.1/include/spdlog/sinks/basic_file_sink-inl.h \
-  /home/emk/vcpkg/installed/x64-linux/include/zmq.hpp \
-  /home/emk/vcpkg/installed/x64-linux/include/zmq.h \
+  /home/Eric/vcpkg/installed/x64-linux/include/zmq.hpp \
+  /home/Eric/vcpkg/installed/x64-linux/include/zmq.h \
   libs/boost/thread/thread.hpp \
   libs/boost/thread/thread_only.hpp \
   libs/boost/thread/detail/platform.hpp \
@@ -15842,8 +15843,8 @@ CMakeFiles/test.dir/src/Strategy/TradeUtil.cpp.o: src/Strategy/TradeUtil.cpp \
   libs/spdlog-1.14.1/include/spdlog/sinks/base_sink.h \
   libs/spdlog-1.14.1/include/spdlog/sinks/base_sink-inl.h \
   libs/spdlog-1.14.1/include/spdlog/sinks/basic_file_sink-inl.h \
-  /home/emk/vcpkg/installed/x64-linux/include/zmq.hpp \
-  /home/emk/vcpkg/installed/x64-linux/include/zmq.h \
+  /home/Eric/vcpkg/installed/x64-linux/include/zmq.hpp \
+  /home/Eric/vcpkg/installed/x64-linux/include/zmq.h \
   src/Strategy/Strategy.h \
   libs/boost/thread/thread.hpp \
   libs/boost/thread/thread_only.hpp \
@@ -15972,6 +15973,8 @@ src/Strategy/TestStrategy.cpp:
 src/Strategy/StrategyEngine.cpp:
 
 src/Strategy/DualThrust.cpp:
+
+libs/nng-1.8.0/include/nng/nng.h:
 
 /usr/include/c++/8/bits/locale_classes.tcc:
 
@@ -16164,10 +16167,6 @@ libs/boost/predef/hardware.h:
 libs/boost/predef/platform/ios.h:
 
 libs/boost/predef/platform/windows_store.h:
-
-src/Strategy/DualThrust.h:
-
-libs/boost/preprocessor/comparison/limits/not_equal_256.hpp:
 
 libs/boost/predef/platform/windows_phone.h:
 
@@ -16445,6 +16444,8 @@ libs/boost/predef/make.h:
 
 libs/boost/algorithm/string/compare.hpp:
 
+libs/boost/predef/os/aix.h:
+
 libs/boost/iterator/iterator_adaptor.hpp:
 
 libs/boost/mpl/limits/arity.hpp:
@@ -16675,8 +16676,6 @@ libs/boost/type_traits/enable_if.hpp:
 
 /usr/include/c++/8/bits/locale_facets.tcc:
 
-/home/emk/vcpkg/installed/x64-linux/include/zmq.h:
-
 /usr/include/x86_64-linux-gnu/c++/8/bits/c++io.h:
 
 libs/futu/include/Proto/Trd_GetOrderList.pb.h:
@@ -16688,6 +16687,8 @@ libs/futu/include/Proto/Qot_RequestHistoryKLQuota.pb.h:
 /usr/include/c++/8/bits/stl_map.h:
 
 libs/lmdb/liblmdb/lmdb.h:
+
+/home/Eric/vcpkg/installed/x64-linux/include/zmq.h:
 
 libs/boost/range/detail/implementation_help.hpp:
 
@@ -16794,6 +16795,8 @@ libs/boost/mpl/aux_/nttp_decl.hpp:
 /usr/include/pthread.h:
 
 /usr/include/c++/8/bits/basic_ios.tcc:
+
+/home/Eric/vcpkg/installed/x64-linux/include/zmq.hpp:
 
 libs/boost/predef/architecture/sys370.h:
 
@@ -18033,10 +18036,6 @@ libs/boost/concept/assert.hpp:
 
 libs/boost/filesystem/detail/header.hpp:
 
-libs/boost/predef/os/aix.h:
-
-/home/emk/vcpkg/installed/x64-linux/include/zmq.hpp:
-
 /usr/include/c++/8/cerrno:
 
 libs/boost/date_time/date_clock_device.hpp:
@@ -18927,6 +18926,10 @@ libs/boost/circular_buffer/space_optimized.hpp:
 
 /usr/include/c++/8/bits/stl_numeric.h:
 
+libs/boost/preprocessor/comparison/limits/not_equal_256.hpp:
+
+src/Strategy/DualThrust.h:
+
 src/DataManager/FutuParser.h:
 
 libs/boost/predef/library/std/_prefix.h:
@@ -18960,5 +18963,3 @@ src/Helper/logger.cpp:
 libs/boost/date_time/date_names_put.hpp:
 
 src/Interface/IMessenger.cpp:
-
-libs/nng-1.8.0/include/nng/nng.h:

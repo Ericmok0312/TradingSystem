@@ -55,6 +55,7 @@ namespace ts{
 
 
     void StrategyEngine::addStrategy(IStrategy* stg){
+        
         string tempexg = stg->getExg();
         if(strategyMap_.find(stg->getName())!=strategyMap_.end()){
             logger_->info("Duplicate Strategy");
@@ -68,9 +69,11 @@ namespace ts{
             if(temp == quoteMap_.end()){
                 quoteMap_[tempexg+move("/")+*it] = new StrategyCtx(it->c_str(), tempexg.c_str(), stg->getSize(), stg->getType());
                 quoteMap_[tempexg+move("/")+*it]->addStrategy(stg);
+                stg->init(quoteMap_[tempexg+move("/")+*it]);
                 quoteMap_[tempexg+move("/")+*it]->start();
             }
             else{
+                stg->init(temp->second);
                 temp->second->addStrategy(stg);
             }
         }
