@@ -17,6 +17,7 @@ namespace ts
             Futu::FTAPI_Trd* futuTrdApi_;
             static std::mutex getIns_mutex;
             static shared_ptr<FutuEngine> instance_;
+            unordered_map<uint32_t, SubType> klineSerialMap_;
         public:
             FutuEngine();
             virtual ~FutuEngine();
@@ -38,7 +39,7 @@ namespace ts
             //virtual void getFund(Json::Value&& param);
             virtual void getAccessList();
 
-
+            virtual void getHistoryKline(const char* code, int32_t subtype, const char* start, const char* end);
             virtual void regCallBack(const char* code, int32_t subtype);
             // overriding Futu's pure virtual functions
 
@@ -57,7 +58,7 @@ namespace ts
             virtual void OnReply_GetRT(Futu::u32_t nSerialNo, const Qot_GetRT::Response &stRsp){}
             virtual void OnReply_GetBroker(Futu::u32_t nSerialNo, const Qot_GetBroker::Response &stRsp){}
             virtual void OnReply_RequestRehab(Futu::u32_t nSerialNo, const Qot_RequestRehab::Response &stRsp){}
-            virtual void OnReply_RequestHistoryKL(Futu::u32_t nSerialNo, const Qot_RequestHistoryKL::Response &stRsp){}
+            virtual void OnReply_RequestHistoryKL(Futu::u32_t nSerialNo, const Qot_RequestHistoryKL::Response &stRsp);
             virtual void OnReply_RequestHistoryKLQuota(Futu::u32_t nSerialNo, const Qot_RequestHistoryKLQuota::Response &stRsp){}
             virtual void OnReply_GetTradeDate(Futu::u32_t nSerialNo, const Qot_GetTradeDate::Response &stRsp){}
             virtual void OnReply_GetStaticInfo(Futu::u32_t nSerialNo, const Qot_GetStaticInfo::Response &stRsp){}

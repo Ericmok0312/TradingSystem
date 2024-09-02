@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /data/home/emk/Coding/Trading_system/TradingSystem
+CMAKE_SOURCE_DIR = /home/emk/Coding/Trading_system/TradingSystem
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /data/home/emk/Coding/Trading_system/TradingSystem
+CMAKE_BINARY_DIR = /home/emk/Coding/Trading_system/TradingSystem
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /data/home/emk/Coding/Trading_system/TradingSystem/CMakeFiles /data/home/emk/Coding/Trading_system/TradingSystem//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/emk/Coding/Trading_system/TradingSystem/CMakeFiles /home/emk/Coding/Trading_system/TradingSystem//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /data/home/emk/Coding/Trading_system/TradingSystem/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/emk/Coding/Trading_system/TradingSystem/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -345,6 +345,30 @@ src/Interface/datastruture.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Interface/datastruture.cpp.s
 .PHONY : src/Interface/datastruture.cpp.s
 
+src/Strategy/DualThrust.o: src/Strategy/DualThrust.cpp.o
+.PHONY : src/Strategy/DualThrust.o
+
+# target to build an object file
+src/Strategy/DualThrust.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Strategy/DualThrust.cpp.o
+.PHONY : src/Strategy/DualThrust.cpp.o
+
+src/Strategy/DualThrust.i: src/Strategy/DualThrust.cpp.i
+.PHONY : src/Strategy/DualThrust.i
+
+# target to preprocess a source file
+src/Strategy/DualThrust.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Strategy/DualThrust.cpp.i
+.PHONY : src/Strategy/DualThrust.cpp.i
+
+src/Strategy/DualThrust.s: src/Strategy/DualThrust.cpp.s
+.PHONY : src/Strategy/DualThrust.s
+
+# target to generate assembly for a file
+src/Strategy/DualThrust.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Strategy/DualThrust.cpp.s
+.PHONY : src/Strategy/DualThrust.cpp.s
+
 src/Strategy/StrategyEngine.o: src/Strategy/StrategyEngine.cpp.o
 .PHONY : src/Strategy/StrategyEngine.o
 
@@ -368,6 +392,30 @@ src/Strategy/StrategyEngine.s: src/Strategy/StrategyEngine.cpp.s
 src/Strategy/StrategyEngine.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Strategy/StrategyEngine.cpp.s
 .PHONY : src/Strategy/StrategyEngine.cpp.s
+
+src/Strategy/TestStrategy.o: src/Strategy/TestStrategy.cpp.o
+.PHONY : src/Strategy/TestStrategy.o
+
+# target to build an object file
+src/Strategy/TestStrategy.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Strategy/TestStrategy.cpp.o
+.PHONY : src/Strategy/TestStrategy.cpp.o
+
+src/Strategy/TestStrategy.i: src/Strategy/TestStrategy.cpp.i
+.PHONY : src/Strategy/TestStrategy.i
+
+# target to preprocess a source file
+src/Strategy/TestStrategy.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Strategy/TestStrategy.cpp.i
+.PHONY : src/Strategy/TestStrategy.cpp.i
+
+src/Strategy/TestStrategy.s: src/Strategy/TestStrategy.cpp.s
+.PHONY : src/Strategy/TestStrategy.s
+
+# target to generate assembly for a file
+src/Strategy/TestStrategy.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Strategy/TestStrategy.cpp.s
+.PHONY : src/Strategy/TestStrategy.cpp.s
 
 src/Strategy/TradeUtil.o: src/Strategy/TradeUtil.cpp.o
 .PHONY : src/Strategy/TradeUtil.o
@@ -429,9 +477,15 @@ help:
 	@echo "... src/Interface/datastruture.o"
 	@echo "... src/Interface/datastruture.i"
 	@echo "... src/Interface/datastruture.s"
+	@echo "... src/Strategy/DualThrust.o"
+	@echo "... src/Strategy/DualThrust.i"
+	@echo "... src/Strategy/DualThrust.s"
 	@echo "... src/Strategy/StrategyEngine.o"
 	@echo "... src/Strategy/StrategyEngine.i"
 	@echo "... src/Strategy/StrategyEngine.s"
+	@echo "... src/Strategy/TestStrategy.o"
+	@echo "... src/Strategy/TestStrategy.i"
+	@echo "... src/Strategy/TestStrategy.s"
 	@echo "... src/Strategy/TradeUtil.o"
 	@echo "... src/Strategy/TradeUtil.i"
 	@echo "... src/Strategy/TradeUtil.s"

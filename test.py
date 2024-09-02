@@ -1,9 +1,18 @@
-from pynng import Sub0
+import lmdb
 
 
-with Sub0() as s1:
-    s1.subscribe("WebApp")
-    s1.dial("tcp://localhost:8888")
-    while(True):
-        msg = s1.recv_msg()
-        print(msg.bytes.decode())
+db_path = 'src/DataBase/KLINE_1MIN/FUTU/HSImain/'
+env = lmdb.open(db_path, readonly=True)
+
+count = 0
+with env.begin() as txn:
+    cursor = txn.cursor()
+    for key, value in cursor:
+        # Assuming the value contains image data (e.g., bytes)
+        count+=1
+
+        # Process the image as needed (e.g., display, save, etc.)
+        # ...
+
+env.close()
+print(count)

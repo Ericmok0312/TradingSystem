@@ -13,14 +13,18 @@
 #include <iostream>
 #include <sstream>
 #include <boost/chrono.hpp>
-
+#include "chrono"
+#include "boost/date_time/gregorian/gregorian.hpp"
+#include "boost/date_time/posix_time/posix_time.hpp"
 
 using namespace std;
 using namespace google;
+using namespace boost::posix_time;   
+using namespace boost::gregorian;  
 
 namespace ts{
     
-    #define IS_BENCHMARK 1
+    #define IS_BENCHMARK 0
 
     inline void split(const char* src, char sep, vector<string>& result){
 
@@ -96,6 +100,50 @@ namespace ts{
 
     inline uint64_t GetTimeStamp(){
         return static_cast<uint64_t>(boost::chrono::duration_cast<boost::chrono::microseconds>(boost::chrono::system_clock::now().time_since_epoch()).count());
+    }
+
+
+
+    inline std::string dateNDaysBefore(int N) {
+
+
+        // Get current date
+        ptime now = second_clock::local_time();
+        date today = now.date();
+
+        // Calculate N days before
+        date targetDate = today - days(N);
+
+        // Format the date as YYYY-MM-DD
+        std::ostringstream oss;
+        oss << targetDate.year() << "-" 
+        << std::setw(2) << std::setfill('0') << targetDate.month().as_number() << "-" 
+        << std::setw(2) << std::setfill('0') << targetDate.day().as_number();
+        cout<<oss.str()<<endl;
+        return oss.str();
+    }
+
+    inline uint64_t Date2TimeStamp(const char* dateStr){
+        cout<<dateStr<<endl;
+        std::istringstream iss(dateStr);
+        std::string year, month, day;
+
+        // Split the input string by '-'
+        std::getline(iss, year, '-');
+        std::getline(iss, month, '-');
+        std::getline(iss, day);
+
+    // Convert to integers and create the date
+        
+    // Convert to boost::posix_time::ptime
+        boost::posix_time::ptime ptime(boost::gregorian::date(std::stoi(year), std::stoi(month), std::stoi(day)));
+
+        auto epochTime = std::chrono::system_clock::from_time_t((ptime - boost::posix_time::from_time_t(0)).total_seconds());
+
+        return static_cast<uint64_t>(std::chrono::duration_cast<std::chrono::microseconds>(
+            epochTime.time_since_epoch()).count());
+
+
     }
 }
 

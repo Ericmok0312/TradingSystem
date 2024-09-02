@@ -4,6 +4,8 @@ import { format } from 'path';
 
 export interface Row {
   price : number;
+  buyline : number;
+  sellline : number;
   timestamp: string;
 
 };
@@ -30,6 +32,8 @@ export class DataManipulator {
   static generateRow(serverResponds: ServerRespond[]):Row {
     return{
       price: serverResponds[0]['cPrice'],
+      buyline : serverResponds[0]['BuyLine'],
+      sellline : serverResponds[0]['SellLine'],
       timestamp: formatTimestamp(serverResponds[0]['updateTimestamp']*10),
     };
     }

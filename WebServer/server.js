@@ -68,17 +68,11 @@ class DataReceiver {
     }
     getData() {
         console.log("Constructing DataReceiver");
-        let last = BigInt(0);
-        let cprice = 0;
         this.sub.on('message', (msg) => {
             const data = msg.toString().split('|');
             const message = JSON.parse(data[3]); // Adjusted to parse the correct part
-            if (message["updateTimestamp"] > last || message["updateTimestamp"] == message["updateTimestamp"] && message["cPrice"] != cprice) {
-                last = message["updateTimestamp"];
-                cprice = message["cPrice"];
-                database.enqueue(message);
-                console.log(message);
-            }
+            database.enqueue(message);
+            console.log(message);
         });
     }
 }

@@ -84,31 +84,36 @@ namespace ts{
                     datawritter_->AddTask(bind(&DataWriter::WriteQuote, datawritter_, placeholders::_1), temp); // add task to DataWriter ThreadPool
                 }
                 break;
-            
-            
             case MSG_TYPE_ACCESSLIST:
             case MSG_TYPE_ACCOUNTINFO:
             case MSG_TYPE_STORE_TICKER:
-            case MSG_TYPE_STORE_KLINE_1M:
-            break;
+            case MSG_TYPE_STORE_KLINE_1D:
+                break;
+            case MSG_TYPE_STORE_KLINE_1Min:
+                FutuKline2TsKline(msg->data_, list, KLINE_1MIN);
+                for(int i=0; i<list.size(); ++i){
+                    datawritter_->AddTask(bind(&DataWriter::WriteKline, datawritter_, placeholders::_1), list[i]);
+                }
+                break;
             case MSG_TYPE_GET_QUOTE:{
-
             }   
             break;
             case MSG_TYPE_GET_QUOTE_BLOCK:{
-                vector<string> param;
-                split(msg->data_.c_str(), ARGV_SEP, param);
                 shared_ptr<ts::ARG> arguments = make_shared<ts::ARG>();
                 arguments->callback = bind(&DataManager::sendData, this, placeholders::_1, placeholders::_2);
-                strcpy(arguments->exg, param[0].c_str());
-                strcpy(arguments->code, param[1].c_str());
-                arguments->count = static_cast<uint32_t>(stoul(param[2]));
-                arguments->etime = static_cast<uint64_t>(stoull(param[3]));
-                arguments->des = move(param[4]);
+                arguments->deserialize(msg->data_);
                 lock_guard<mutex> lg(RegTableMutex_);
-                RegTable_.insert(make_pair(param[0]+move("/")+param[1], make_tuple(bind(&DataManager::AddDataReaderTask, this, placeholders::_1, placeholders::_2), bind(&DataReader::readQuoteSlicefromLMDB, datareader_, placeholders::_1), arguments)));
+                RegTable_.insert(make_pair(move(string(arguments->exg))+move("/")+move(string(arguments->code))+move("/QUOTE"), make_tuple(bind(&DataManager::AddDataReaderTask, this, placeholders::_1, placeholders::_2), bind(&DataReader::readCurQuoteSlicefromLMDB, datareader_, placeholders::_1), arguments)));
+                break;
             }
-            break;
+            
+            case MSG_TYPE_GET_KLINE_BLOCK_HIST:{
+                shared_ptr<ts::ARG> arguments = make_shared<ts::ARG>();
+                arguments->callback = bind(&DataManager::sendData, this, placeholders::_1, placeholders::_2);
+                logger_->info(msg->data_.c_str());
+                arguments->deserialize(msg->data_);
+                datareader_->AddTask(bind(&DataReader::readHistKlineSlicefromLMDB, datareader_, placeholders::_1), arguments);
+            }
         }
         
         // if (IS_BENCHMARK)

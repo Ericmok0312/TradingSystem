@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -DZMQ_STATIC
 
-CXX_INCLUDES = -I/data/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include -I/data/home/emk/Coding/Trading_system/TradingSystem/libs/nng-1.8.0/include -I/data/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include -I/data/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include -I/data/home/emk/Coding/Trading_system/TradingSystem/libs/lmdb -I/data/home/emk/Coding/Trading_system/TradingSystem/libs -I/data/home/emk/Coding/Trading_system/TradingSystem/src -isystem /home/emk/vcpkg/installed/x64-linux/include
+CXX_INCLUDES = -I/home/emk/Coding/Trading_system/TradingSystem/libs/spdlog-1.14.1/include -I/home/emk/Coding/Trading_system/TradingSystem/libs/nng-1.8.0/include -I/home/emk/Coding/Trading_system/TradingSystem/libs/futu/include -I/home/emk/Coding/Trading_system/TradingSystem/libs/rapidjson/include -I/home/emk/Coding/Trading_system/TradingSystem/libs/lmdb -I/home/emk/Coding/Trading_system/TradingSystem/libs -I/home/emk/Coding/Trading_system/TradingSystem/src -isystem /home/emk/vcpkg/installed/x64-linux/include
 
 CXX_FLAGS =  -g -fsanitize=address   -pthread
 

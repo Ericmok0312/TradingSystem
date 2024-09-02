@@ -1,6 +1,5 @@
 #include <FUTU/FutuEngine.h>
 #include <Helper/util.h>
-#include <json/json.h>
 #include "boost/thread/thread.hpp"
 using namespace std;
 
@@ -107,6 +106,9 @@ namespace ts{
                     case MSG_TYPE_REGCALLBACK:
                         this->regCallBack(root["code"].GetString(),  root["subtype"].GetInt());
                         break;
+                    case MSG_TYPE_GET_HISTORY_KLINE:
+                        this->getHistoryKline(root["code"].GetString(), root["subtype"].GetInt(), root["start"].GetString(), root["end"].GetString());
+                        break;
                     case MSG_TYPE_DEBUG:
                         break;
                     case MSG_TYPE_STOP:
@@ -158,7 +160,7 @@ namespace ts{
 		c2s->set_isregorunregpush(true);
 		c2s->set_issuborunsub(true);
 
-        int32_t serial = futuQotApi_->Sub(req);
+        uint32_t serial = futuQotApi_->Sub(req);
         logger_->info(fmt::format("Subscribing: {} for SubType: {} Serial No. {}",code,to_string(subtype),to_string(serial)).c_str());
     }
 
@@ -211,28 +213,25 @@ namespace ts{
 		header->set_trdenv(mode);
 		header->set_trdmarket(market);
 
-        int serial = futuTrdApi_->GetFunds(req);
+        uint32_t serial = futuTrdApi_->GetFunds(req);
         logger_->info(fmt::format("getFund called, with id: {}, market: {}, mode: {}. Return serial: {}",id, market, mode, serial).c_str());
 
     }
 
 
     void FutuEngine::OnReply_GetFunds(Futu::u32_t nSerialNo, const Trd_GetFunds::Response &stRs){
-
         logger_->info(fmt::format("OnReply_GetFunds, serial: {}", nSerialNo).c_str());
         std::shared_ptr<Msg> msg = std::make_shared<Msg>("DataManager", "FutuEngine", MSG_TYPE_ACCOUNTINFO, "");
         ProtoBufToString(stRs, msg->data_);
         messenger_->send(msg, 0);
-
     }
     
     void FutuEngine::getAccessList(){
-
         Trd_GetAccList::Request req;
         Trd_GetAccList::C2S* c2s = req.mutable_c2s();
         c2s->set_userid(0);
         c2s->set_needgeneralsecaccount(true);
-        int serial = futuTrdApi_->GetAccList(req);
+        uint32_t serial = futuTrdApi_->GetAccList(req);
         logger_->info(fmt::format("getAccessList called. Returned serial: {}", serial).c_str());
 
     }
@@ -244,5 +243,48 @@ namespace ts{
         ProtoBufToString(stRsp, msg->data_);
         messenger_->send(msg);
     }
+
+
+    void FutuEngine::getHistoryKline(const char* code, int32_t subtype, const char* start, const char* end){
+        Qot_RequestHistoryKL::Request req;
+        Qot_RequestHistoryKL::C2S* c2s = req.mutable_c2s();
+        c2s->set_rehabtype(1);
+        switch (static_cast<SubType>(subtype)){
+            case KLINE_1D:
+                c2s->set_kltype(Qot_Common::KLType::KLType_Day);
+                break;
+            case KLINE_1MIN:
+                c2s->set_kltype(Qot_Common::KLType::KLType_1Min);
+                break;
+            default:
+                c2s->set_kltype(Qot_Common::KLType::KLType_1Min);
+                break;
+        }
+
+        Qot_Common::Security *sec = c2s->mutable_security();
+        sec->set_code(code);
+        sec->set_market(Qot_Common::QotMarket::QotMarket_HK_Security);
+        c2s->set_begintime(start);
+		c2s->set_endtime(end);
+        uint32_t m_RequestHistoryKLSerialNo = futuQotApi_->RequestHistoryKL(req);
+        klineSerialMap_[m_RequestHistoryKLSerialNo] = static_cast<SubType>(subtype);
+        logger_->info(fmt::format("getHistoryKline called, code : {}, Start Date : {}, End Date : {}, Serial Number : {}.", code, start, end, m_RequestHistoryKLSerialNo).c_str());
+    }
+
+    void FutuEngine::OnReply_RequestHistoryKL(Futu::u32_t nSerialNo, const Qot_RequestHistoryKL::Response &stRsp){
+        uint64_t init = GetTimeStamp();
+        std::shared_ptr<Msg> msg;
+        switch(klineSerialMap_.find(nSerialNo)->second){
+            case KLINE_1D:
+                msg = std::make_shared<Msg>("DataManager", "FutuEngine", MSG_TYPE_STORE_KLINE_1D, "");
+                break;
+            case KLINE_1MIN:
+                msg = std::make_shared<Msg>("DataManager", "FutuEngine", MSG_TYPE_STORE_KLINE_1Min, "");
+        }
+         
+        ProtoBufToString(stRsp, msg->data_);
+        messenger_->send(msg, 0);
+    }
+
 
 }

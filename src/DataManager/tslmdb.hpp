@@ -291,7 +291,7 @@ namespace ts{
                 }
             }
 
-            int get_all(LMDBCB callback){
+            int get_all(LMDBCB callback){ //pure callback as input will lead to compilation error
                 MDB_cursor* cursor;
                 int errorno_ = mdb_cursor_open(txn_, dbi_, &cursor);
                 if (errorno_ != MDB_SUCCESS) return 0;

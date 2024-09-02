@@ -55,7 +55,7 @@ class App extends Component<{}, IState> {
         if (this.socket) {
             this.socket.send("requestData");
         }
-    },10);
+    },100);
 }
     
   

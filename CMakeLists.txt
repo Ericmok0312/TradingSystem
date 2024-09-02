@@ -1,4 +1,4 @@
-set(CMAKE_TOOLCHAIN_FILE "./home/emk/vcpkg/scripts/buildsystems/vcpkg.cmake"
+set(CMAKE_TOOLCHAIN_FILE "/home/emk/vcpkg/scripts/buildsystems/vcpkg.cmake"
   CACHE STRING "Vcpkg toolchain file")
 
 
@@ -26,11 +26,10 @@ endif()
 
 
 add_definitions(-pthread)
-include(/home/emk/vcpkg/scripts/buildsystems/vcpkg.cmake)
+
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -fsanitize=address")
 
-find_package(jsoncpp REQUIRED)
 find_package(cppzmq)
 
 
@@ -53,7 +52,6 @@ target_link_libraries(test PRIVATE nng.a)
 target_link_libraries(test PRIVATE FTAPI.a)
 target_link_libraries(test PRIVATE FTAPIChannel.so)
 target_link_libraries(test PRIVATE protobuf.a)
-target_link_libraries(test PRIVATE JsonCpp::JsonCpp)
 target_link_libraries(test PRIVATE lmdb.a)
 target_link_libraries(test PRIVATE boost_filesystem.a)
 target_link_libraries(test PRIVATE boost_thread.a)

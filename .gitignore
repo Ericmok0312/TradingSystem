@@ -1,3 +1,7 @@
 Web/node_modules/
 WebServer/node_modules/
 logfiles/
+CMakeCache.txt
+CMakeFiles/
+*.cmake
+test

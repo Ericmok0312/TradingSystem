@@ -31,6 +31,8 @@ namespace ts{
 
    // ctx in WonderTrader
     */
+
+    class IStrategy;
     class StrategyCtx{
         private:
             BaseData* data_; 
@@ -58,7 +60,7 @@ namespace ts{
 
             void regRequest();
             void OnDataUpdate();
-            void addStrategy(IStrategy* stg);
+           
 
             void init();
 
@@ -73,7 +75,16 @@ namespace ts{
 
             const BaseData* getCur(); //going to depricate
             BaseData* getSlice(); //going to depreciate
+            void addStrategy(IStrategy* stg);
 
+            
+
+            //Strategy Interface
+            void SendMessage(shared_ptr<Msg> msg);
+            void LoggingInfo(const char * info);
+            const char* getCode(){return code_.c_str();}
+            const char* getExchange(){return exg_.c_str();}
+            unique_ptr<BaseData> StratgeyGetOneTimeData(shared_ptr<Msg> msg2futu, shared_ptr<Msg> msg, const char* returnName);
 
     };
 }

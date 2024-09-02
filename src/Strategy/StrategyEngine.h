@@ -5,8 +5,8 @@
 #include "Helper/ThreadPool.hpp"
 #include "Interface/IEngine.h"
 #include "Strategy/TradeUtil.h"
-#include "json/json.h"
 #include "functional"
+#include "mutex"
 namespace ts{
 
     typedef rapidjson::Document Parameter;
@@ -49,7 +49,8 @@ namespace ts{
         public:
 
 
-            typedef unordered_map<string, StrategyCtx> QuoteLoaderMap;
+            typedef unordered_map<string, StrategyCtx*> QuoteLoaderMap;// "exg/code" as key
+            typedef unordered_map<string, IStrategy*> StrategyMap; // using pointer to accept polymorphism
             //typedef unordered_map<stirng, Loader<KlineSlice>> KlineLoaderMap;
             //typedef unordered_map<string, Loader<TickerSlice> TickerLoaderMap;
 
@@ -58,16 +59,21 @@ namespace ts{
             
             void start() override;
             void stop() override;
+            void addStrategy(IStrategy* stg);
+            static shared_ptr<StrategyEngine> getInstance();
 
         private:
             static shared_ptr<StrategyEngine> instance_;
+            static mutex getInstanceMutex_;
             QuoteLoaderMap quoteMap_;
+            StrategyMap strategyMap_;
             //KlineLoaderMap klineMap_;
             //TickerLoaderMap tickermap_
             
 
             void init() override;
             void running() override;
+
 
     };
 

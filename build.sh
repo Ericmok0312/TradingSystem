@@ -26,3 +26,5 @@ gnome-terminal -- bash -c "cd \"$current_directory\"/Web && npm run start"
 echo "Invalid choice. Please select a number between 1 and 4."
 ;;
 esac
+
+#rm -rf CMakeCache.txt CMakeFiles

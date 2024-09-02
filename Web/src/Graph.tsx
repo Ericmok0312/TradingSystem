@@ -25,6 +25,8 @@ class Graph extends Component<IProps, {}> {
 
     const schema = {
       price : "float",
+      buyline : "float",
+      sellline : "float",
       timestamp :"string",
     };
 
@@ -37,10 +39,11 @@ class Graph extends Component<IProps, {}> {
       elem.setAttribute('view', 'y_line');
       //elem.setAttribute('group_by', '"timeStamp"')
       elem.setAttribute('row-pivots', '["timestamp"]');
-      elem.setAttribute('columns', '["price"]');
+      elem.setAttribute('columns', '["price", "buyline", "sellline"]');
       elem.setAttribute('aggregates', JSON.stringify({
         price: "avg",
-        //ratio: "avg",
+        buyline: "avg",
+        sellline : "avg",
         timeStamp: "distinct count"
       }));
       //elem.setAttribute("x_axis", "timestamp");

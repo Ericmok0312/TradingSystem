@@ -27,7 +27,7 @@ namespace ts{
 
             void WriteTick(std::shared_ptr<BaseData> ticker){};
 
-            void WriteKline(std::shared_ptr<BaseData> kline){};
+            void WriteKline(std::shared_ptr<BaseData> kline);
 
             void WriteAccessList(std::shared_ptr<BaseData> list){};
 
@@ -45,19 +45,21 @@ namespace ts{
         
         private:
             TSLMDBMap quote_dbs_; 
-            TSLMDBMap excahnge_m1_dbs;
-            TSLMDBMap exchange_m5_dbs;
-            TSLMDBMap excange_d1_dbs;
+            TSLMDBMap kline_m1_dbs_;
+            TSLMDBMap kline_m5_dbs_;
+            TSLMDBMap kline_d1_dbs_;
 
+            void storeQuote2CSV();
+            void storeKline1D2CSV();
 
-
+            
             static shared_ptr<DataWriter> instance_;
             static std::mutex q_db_mutex;   
             static std::mutex getIns_mutex;
 
             std::mutex* RegTableMutex_;
             CallBackTabletype* RegTable_;
-            TSLMDBPtr get_q_db(const char* exg, const char* code);
+            TSLMDBPtr get_q_db(const char* exg, const char* code, TSLMDBMap& source, SubType type);
     };
 
 
