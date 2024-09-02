@@ -116,39 +116,30 @@ namespace ts{
 
         // Format the date as YYYY-MM-DD
         std::ostringstream oss;
-        oss << to_iso_extended_string(targetDate);
+        oss << targetDate.year() << "-" 
+        << std::setw(2) << std::setfill('0') << targetDate.month().as_number() << "-" 
+        << std::setw(2) << std::setfill('0') << targetDate.day().as_number();
         cout<<oss.str()<<endl;
         return oss.str();
     }
 
     inline uint64_t Date2TimeStamp(const char* dateStr){
-        int year, month, day;
-        std::tm timeInfo = {};
+        cout<<dateStr<<endl;
+        std::istringstream iss(dateStr);
+        std::string year, month, day;
 
-        if (std::sscanf(dateStr, "%d-%d-%d", &year, &month, &day) == 3) {
-            timeInfo.tm_year = year - 1900; // Years since 1900
-            timeInfo.tm_mon = month - 1;    // Months are 0-based
-            timeInfo.tm_mday = day;
-        } else {
-            // Handle invalid input
-            return -1; // Return an error value
-        }
+        // Split the input string by '-'
+        std::getline(iss, year, '-');
+        std::getline(iss, month, '-');
+        std::getline(iss, day);
 
-        // Set other time components (e.g., hours, minutes, seconds)
-        // For simplicity, let's assume midnight (00:00:00)
-        timeInfo.tm_hour = 0;
-        timeInfo.tm_min = 0;
-        timeInfo.tm_sec = 0;
-         std::time_t timestamp = std::mktime(&timeInfo);
-        if (timestamp == -1) {
-            std::cerr << "Invalid date format: " << dateStr << std::endl;
-            return static_cast<uint64_t>(std::chrono::microseconds(0).count()); // Return an error value
-        }
+    // Convert to integers and create the date
+        
+    // Convert to boost::posix_time::ptime
+        boost::posix_time::ptime ptime(boost::gregorian::date(std::stoi(year), std::stoi(month), std::stoi(day)));
 
-        // Convert to microseconds
-        auto epochTime = std::chrono::system_clock::from_time_t(timestamp);
-        cout<<static_cast<uint64_t>(std::chrono::duration_cast<std::chrono::microseconds>(
-            epochTime.time_since_epoch()).count())<<endl;
+        auto epochTime = std::chrono::system_clock::from_time_t((ptime - boost::posix_time::from_time_t(0)).total_seconds());
+
         return static_cast<uint64_t>(std::chrono::duration_cast<std::chrono::microseconds>(
             epochTime.time_since_epoch()).count());
 

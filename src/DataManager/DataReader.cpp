@@ -120,6 +120,7 @@ namespace ts{
         QuoteList& quotelist = quote_cache_[temp];
         uint64_t last_access_time = 0;
         uint32_t reload_flag = 0;
+        logger_->info("calling get quote");
         do
         {
             if (quotelist.quotes_.capacity()<count){ // cache size is smaller than required
@@ -236,7 +237,7 @@ namespace ts{
         } // got some of the data but both the earlier and later data are needed
   
         delete[] temp;
-        cout<<flag<<endl;
+
         TSLMDBPtr db;
         switch(arg->type){
             case KLINE_1D:
@@ -257,13 +258,15 @@ namespace ts{
         switch(flag){
             case 0:
             { 
+                klinelist.klines_.set_capacity(2);
                 LMDBKey lkey(arg->exg, arg->code, Date2TimeStamp(arg->start));
                 LMDBKey rkey(arg->exg, arg->code, Date2TimeStamp(arg->end));
                 
                 cnt = query.get_range(lkey.getString(), rkey.getString(), [this, &klinelist](const ValueArray& ayKeys, const ValueArray& ayVals){
                     for(const std::string& item: ayVals){
                         if(klinelist.klines_.size() == klinelist.klines_.capacity()){
-                            klinelist.klines_.resize(klinelist.klines_.size()*2);
+                            klinelist.klines_.set_capacity(klinelist.klines_.size()*2);
+                            this->logger_->info(fmt::format("Expanding size of klinelist cache to : {}", klinelist.klines_.size()).c_str());
                         }
                         Kline q(item);
                         klinelist.klines_.push_back(q);
@@ -285,7 +288,8 @@ namespace ts{
                 cnt += query.get_range(lkey.getString(), rkey.getString(), [this, &klinelist](const ValueArray& ayKeys, const ValueArray& ayVals){
                     for(const std::string& item: ayVals){
                         if(klinelist.klines_.size() == klinelist.klines_.capacity()){
-                            klinelist.klines_.resize(klinelist.klines_.size()*2);
+                            klinelist.klines_.set_capacity(klinelist.klines_.size()*2);
+                            this->logger_->info(fmt::format("Expanding size of klinelist cache to : {}", klinelist.klines_.size()).c_str());
                         }
                         Kline q(item);
                         klinelist.klines_.push_front(q);
@@ -299,16 +303,18 @@ namespace ts{
                 LMDBKey lkey(arg->exg, arg->code, endit->updateTimestamp_);
                 LMDBKey rkey(arg->exg, arg->code, Date2TimeStamp(arg->end));
                 cnt = distance(startit, endit)+1;
+                int loc = distance(klinelist.klines_.begin(), startit);
                 cnt += query.get_range(lkey.getString(), rkey.getString(), [this, &klinelist](const ValueArray& ayKeys, const ValueArray& ayVals){
                     for(const std::string& item: ayVals){
                         if(klinelist.klines_.size() == klinelist.klines_.capacity()){
-                            klinelist.klines_.resize(klinelist.klines_.size()*2);
+                            klinelist.klines_.set_capacity(klinelist.klines_.size()*2);
+                            this->logger_->info(fmt::format("Expanding size of klinelist cache to : {}", klinelist.klines_.size()).c_str());
                         }
                         Kline q(item);
                         klinelist.klines_.push_back(q);
                     }
                 });
-                ret = KlineSlice::create(arg->code, &(*startit), cnt);
+                ret = KlineSlice::create(arg->code, &klinelist.klines_[loc], cnt);
                 break;
             }
             case 4:
@@ -319,7 +325,8 @@ namespace ts{
                 cnt += query.get_range(lkey.getString(), rkey.getString(), [this, &klinelist](const ValueArray& ayKeys, const ValueArray& ayVals){
                     for(const std::string& item: ayVals){
                         if(klinelist.klines_.size() == klinelist.klines_.capacity()){
-                            klinelist.klines_.resize(klinelist.klines_.size()*2);
+                            klinelist.klines_.set_capacity(klinelist.klines_.size()*2);
+                            this->logger_->info(fmt::format("Expanding size of klinelist cache to : {}", klinelist.klines_.size()).c_str());
                         }
                         Kline q(item);
                         klinelist.klines_.push_front(q);
@@ -331,7 +338,8 @@ namespace ts{
                 cnt += query.get_range(lkey2.getString(), rkey2.getString(), [this, &klinelist](const ValueArray& ayKeys, const ValueArray& ayVals){
                     for(const std::string& item: ayVals){
                         if(klinelist.klines_.size() == klinelist.klines_.capacity()){
-                            klinelist.klines_.resize(klinelist.klines_.size()*2);
+                            klinelist.klines_.set_capacity(klinelist.klines_.size()*2);
+                            this->logger_->info(fmt::format("Expanding size of klinelist cache to : {}", klinelist.klines_.size()).c_str());
                         }
                         Kline q(item);
                         klinelist.klines_.push_back(q);

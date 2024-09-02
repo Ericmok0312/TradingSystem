@@ -66,8 +66,9 @@ namespace ts{
                 break;
             default:
                 logger_->error(fmt::format("Invalid type: {} passed to WriteKline.", static_cast<int>(nkline->type_)).c_str());
-                break;
+                return;
         }
+        //logger_->info(nkline->getJson().c_str());
 
         TSQryLMDB query(*db); // create a query object
         
@@ -77,17 +78,17 @@ namespace ts{
             logger_->error(fmt::format("wrtie tick of {} error {}", nkline->code_, db->errmsg()).c_str());
         }
 
-        logger_->info(nkline->getJson().c_str());
-        lock_guard<mutex> lg(*RegTableMutex_);
-        auto temp = RegTable_->find(sss.str());
-        if (temp!=RegTable_->end()){
-            std::get<0>(temp->second)(std::get<1>(temp->second), std::get<2>(temp->second)); // calling the function AddDataReaderTask
-        }
+
+        // lock_guard<mutex> lg(*RegTableMutex_);
+        // auto temp = RegTable_->find(sss.str());
+        // if (temp!=RegTable_->end()){
+        //     std::get<0>(temp->second)(std::get<1>(temp->second), std::get<2>(temp->second)); // calling the function AddDataReaderTask
+        // }
 
         if (IS_BENCHMARK) {
             logger_->info(fmt::format("WriteKline latency final: {}", to_string(GetTimeStamp()-init)).c_str());
             logger_->info(fmt::format("Total latency final: {}", to_string(GetTimeStamp()-nkline->timestamp_)).c_str());
-            logger_->info(nkline->getString().c_str());
+            logger_->info(nkline->getJson().c_str());
         }
     }
 
@@ -113,7 +114,7 @@ namespace ts{
 
         
         stringstream sss;
-        sss<<nquote->exg_<<"/"<<nquote->code_<<"QUOTE";
+        sss<<nquote->exg_<<"/"<<nquote->code_<<"/QUOTE";
         lock_guard<mutex> lg(*RegTableMutex_);
         auto temp = RegTable_->find(sss.str());
         if (temp!=RegTable_->end()){
@@ -178,7 +179,7 @@ namespace ts{
     void DataWriter::storeKline1D2CSV() {
         int count = 0;
         std::string path;
-        for(auto i = kline_d1_dbs_.begin(); i!=quote_dbs_.end(); i++){
+        for(auto i = kline_d1_dbs_.begin(); i!=kline_d1_dbs_.end(); i++){
             path = fmt::format("{}/KLINE_1D/{}", BASE_FILE_LOC, i->first);
             boost::filesystem::create_directories(path);
             std::ofstream file(path+"/data.csv");
@@ -192,7 +193,7 @@ namespace ts{
             logger_->info(fmt::format("Writting {} of Kline_1Day from {} into csv", count, i->first).c_str());
         }  
 
-        for(auto i = kline_m1_dbs_.begin(); i!=quote_dbs_.end(); i++){
+        for(auto i = kline_m1_dbs_.begin(); i!=kline_m1_dbs_.end(); i++){
             path = fmt::format("{}/KLINE_1MIN/{}", BASE_FILE_LOC, i->first);
             boost::filesystem::create_directories(path);
             std::ofstream file(path+"/data.csv");
@@ -206,7 +207,7 @@ namespace ts{
             logger_->info(fmt::format("Writting {} of Kline_1Min from {} into csv", count, i->first).c_str());
         }
 
-        for(auto i = kline_m5_dbs_.begin(); i!=quote_dbs_.end(); i++){
+        for(auto i = kline_m5_dbs_.begin(); i!=kline_m5_dbs_.end(); i++){
             path = fmt::format("{}/KLINE_5MIN/{}", BASE_FILE_LOC, i->first);
             boost::filesystem::create_directories(path);
             std::ofstream file(path+"/data.csv");
@@ -260,6 +261,7 @@ namespace ts{
             tn = move("UNKOWN");
             break;
         }
+
         std::string path = fmt::format("{}/{}/{}/{}", BASE_FILE_LOC, tn, exg, code); //create the dir
 
         boost::filesystem::create_directories(path);

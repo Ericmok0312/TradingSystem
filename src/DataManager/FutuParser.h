@@ -66,21 +66,21 @@ namespace ts{
 
 
 
-    inline void FutuKline2TsKline(const std::string& src, std::vector<shared_ptr<BaseData>>& des){
+    inline void FutuKline2TsKline(const std::string& src, std::vector<shared_ptr<BaseData>>& des, SubType type){
         rapidjson::Document doc;
         String2Json(src, doc);
         const rapidjson::Value& list = doc["s2c"]["klList"];
 
         for(rapidjson::SizeType i = 0; i<list.Size(); i++){
             std::unique_ptr<ts::Kline> temp = make_unique<ts::Kline>();
-            strcpy(temp->code_, list[i]["security"]["code"].GetString());
+            strcpy(temp->code_, doc["s2c"]["security"]["code"].GetString());
             strcpy(temp->time_, list[i]["time"].GetString());
             strcpy(temp->exg_, "FUTU");
 
             temp->hPrice_ = list[i]["highPrice"].GetDouble();
             temp->oPrice_ = list[i]["openPrice"].GetDouble();
             temp->lPrice_ = list[i]["lowPrice"].GetDouble();
-            temp->cPrice_ = list[i]["curPrice"].GetDouble();
+            temp->cPrice_ = list[i]["closePrice"].GetDouble();
             temp->lcPrice_ = list[i]["lastClosePrice"].GetDouble();
             temp->volume_ = stoll(list[i]["volume"].GetString());
             temp->turnover_ = list[i]["turnover"].GetDouble();
@@ -89,7 +89,7 @@ namespace ts{
             temp->changeRate_ = list[i]["changeRate"].GetDouble();
             temp->timestamp_ = GetTimeStamp();
             temp->updateTimestamp_ = static_cast<uint64_t>(list[i]["timestamp"].GetDouble()*100);
-
+            temp->type_ = type;
             des.emplace_back(move(temp));
         }
     }

@@ -6,37 +6,44 @@ import zmq from 'zeromq';
 
 
 
-interface ServerRespond {
-    code: string;
-    time: string;
-    exg: string;
-    hPrice: number;
-    oPrice: number;
-    lPrice: number;
-    cPrice: number;
-    lcPrice: number;
-    pSpread: number;
-    volume: bigint;
-    turnover: number;
-    turnoverRate: number;
-    amplitude: number;
-    timestamp: bigint;
-    sPrice: number;
-    conSize: number;
-    opInterest: bigint;
-    impVolatility: number;
-    premium: number;
-    delta: number;
-    gamma: number;
-    vega: number;
-    theta: number;
-    rho: number;
-    lsprice: number;
-    position: bigint;
-    pChange: bigint;
-    updateTimestamp: bigint;
-  }
+// interface ServerRespond {
+//     code: string;
+//     time: string;
+//     exg: string;
+//     hPrice: number;
+//     oPrice: number;
+//     lPrice: number;
+//     cPrice: number;
+//     lcPrice: number;
+//     pSpread: number;
+//     volume: bigint;
+//     turnover: number;
+//     turnoverRate: number;
+//     amplitude: number;
+//     timestamp: bigint;
+//     sPrice: number;
+//     conSize: number;
+//     opInterest: bigint;
+//     impVolatility: number;
+//     premium: number;
+//     delta: number;
+//     gamma: number;
+//     vega: number;
+//     theta: number;
+//     rho: number;
+//     lsprice: number;
+//     position: bigint;
+//     pChange: bigint;
+//     updateTimestamp: bigint;
+//   }
   
+
+interface ServerRespond {
+    BuyLine : number,
+    SellLine : number,
+    cPrice : number,
+    updateTimestamp: number,
+}
   
 
 const app = express();
@@ -126,20 +133,16 @@ class DataReceiver {
 
     getData() {
         console.log("Constructing DataReceiver");
-        let last:bigint = BigInt(0);
-        let cprice:number = 0;
+
         this.sub.on('message', (msg:Buffer) => {
             const data = msg.toString().split('|');
                 const message:ServerRespond = JSON.parse(data[3]); // Adjusted to parse the correct part
-                if(message["updateTimestamp"]> last || message["updateTimestamp"]==message["updateTimestamp"]&&message["cPrice"]!=cprice){
-                    last = message["updateTimestamp"];
-                    cprice = message["cPrice"];
                     database.enqueue(message);
                     console.log(message);
                 }
 
-            }
-        );
+        )
+        
     }
 }
 

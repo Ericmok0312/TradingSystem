@@ -85,6 +85,7 @@ namespace ts{
             vector<string>& getTargetCode(){return targetCode_;};
             int getSize() {return size_;};
             SubType getType() {return type_;};
+            virtual ~IStrategy(){}; 
 
         
     };

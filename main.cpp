@@ -254,7 +254,7 @@ using namespace ts;
         }
 
         void test_counter(){
-            boost::this_thread::sleep_for(boost::chrono::seconds(300));
+            boost::this_thread::sleep_for(boost::chrono::minutes(30));
             
             shared_ptr<DataManager> de = DataManager::getInstance();
             shared_ptr<StrategyEngine> eng = StrategyEngine::getInstance();
@@ -341,7 +341,7 @@ using namespace ts;
             
             const char* arg =R"(
             {
-                "Name" : "TestStrategy",
+                "Name" : "DualThrust",
                 "TargetCode":["HSImain"],
                 "Exchange":"FUTU",
                 "Type":3,
@@ -351,9 +351,9 @@ using namespace ts;
                     }
                 ,
                 "Size":5,
-                "N" : 7,
-                "K1" : 0.2,
-                "K2" : 0.2
+                "N" : 10,
+                "K1" : 0.01,
+                "K2" : 0.05
             })";
 
             d.Parse(arg);

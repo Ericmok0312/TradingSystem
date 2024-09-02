@@ -9,6 +9,8 @@ namespace ts{
         k2 = config["K2"].GetDouble();
     }
 
+    DualThrust::~DualThrust(){}
+
     void DualThrust::init(StrategyCtx* ctx){
 
         shared_ptr<Msg> msg2futu = make_shared<Msg>();
@@ -30,26 +32,29 @@ namespace ts{
         msg->destination_ = move("DataManager");
         msg->source_ = name_;
         msg->msgtype_ = MSG_TYPE_GET_KLINE_BLOCK_HIST;
-        ARG arg(ctx->getExchange(), ctx->getCode(), this->n, GetTimeStamp(), (this->name_+move("_init")).c_str(), KLINE_1MIN);
+        ARG arg(ctx->getExchange(), ctx->getCode(), this->n, GetTimeStamp(), (this->name_+move("_init")).c_str(), KLINE_1MIN, dateNDaysBefore(this->n).c_str(), dateNDaysBefore(0).c_str());
         msg->data_ = move(arg.seriralize());
 
         unique_ptr<BaseData> data = ctx->StratgeyGetOneTimeData(msg2futu, msg, arg.des.c_str());
         
-        KlineSlice* temp = dynamic_cast<KlineSlice*>(data.get());
+        KlineSlice* temp = static_cast<KlineSlice*>(data.get());
 
-        double HH = -std::numeric_limits<double>::infinity();
-        double LL = std::numeric_limits<double>::infinity();
-        double HC = -std::numeric_limits<double>::infinity();
-        double LC = std::numeric_limits<double>::infinity();
+        double HH = 0;
+        double LL = std::numeric_limits<double>::max();
+        double HC = 0;
+        double LC = std::numeric_limits<double>::max();
 
+        cout<<"Getting required data"<<endl;
         for (int i = 0; i < temp->getCount(); ++i) {
-            HH = std::max(HH, temp->at(i)->hPrice_);
-            LL = std::min(LL, temp->at(i)->lPrice_);
-            HC = std::max(HC, temp->at(i)->cPrice_);
-            LC = std::min(LC, temp->at(i)->cPrice_);
-        }
-
-        range = max(HH-LC, HC-LL);
+            if(temp->at(i)){
+                HH = std::max(HH, temp->at(i)->hPrice_);
+                LL = std::min(LL, temp->at(i)->lPrice_);
+                HC = std::max(HC, temp->at(i)->cPrice_);
+                LC = std::min(LC, temp->at(i)->cPrice_);
+            }
+            }
+        range = max(HH-LC, HC-LL); 
+        cout<<range<<endl;
 
     }
 
@@ -73,7 +78,7 @@ namespace ts{
             d.AddMember("BuyLine", rapidjson::Value(buy), d.GetAllocator());
             d.AddMember("SellLine", rapidjson::Value(sell), d.GetAllocator());
             d.AddMember("cPrice", rapidjson::Value(temp->cPrice_), d.GetAllocator());
-
+            d.AddMember("updateTimestamp",  rapidjson::Value(temp->updateTimestamp_), d.GetAllocator());
             Json2String(d, dataMsg->data_);
 
             ctx->SendMessage(dataMsg);

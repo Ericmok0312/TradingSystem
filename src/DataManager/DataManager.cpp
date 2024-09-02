@@ -84,15 +84,13 @@ namespace ts{
                     datawritter_->AddTask(bind(&DataWriter::WriteQuote, datawritter_, placeholders::_1), temp); // add task to DataWriter ThreadPool
                 }
                 break;
-            
-            
             case MSG_TYPE_ACCESSLIST:
             case MSG_TYPE_ACCOUNTINFO:
             case MSG_TYPE_STORE_TICKER:
             case MSG_TYPE_STORE_KLINE_1D:
                 break;
             case MSG_TYPE_STORE_KLINE_1Min:
-                FutuKline2TsKline(msg->data_, list);
+                FutuKline2TsKline(msg->data_, list, KLINE_1MIN);
                 for(int i=0; i<list.size(); ++i){
                     datawritter_->AddTask(bind(&DataWriter::WriteKline, datawritter_, placeholders::_1), list[i]);
                 }
@@ -106,11 +104,13 @@ namespace ts{
                 arguments->deserialize(msg->data_);
                 lock_guard<mutex> lg(RegTableMutex_);
                 RegTable_.insert(make_pair(move(string(arguments->exg))+move("/")+move(string(arguments->code))+move("/QUOTE"), make_tuple(bind(&DataManager::AddDataReaderTask, this, placeholders::_1, placeholders::_2), bind(&DataReader::readCurQuoteSlicefromLMDB, datareader_, placeholders::_1), arguments)));
+                break;
             }
-            break;
+            
             case MSG_TYPE_GET_KLINE_BLOCK_HIST:{
                 shared_ptr<ts::ARG> arguments = make_shared<ts::ARG>();
                 arguments->callback = bind(&DataManager::sendData, this, placeholders::_1, placeholders::_2);
+                logger_->info(msg->data_.c_str());
                 arguments->deserialize(msg->data_);
                 datareader_->AddTask(bind(&DataReader::readHistKlineSlicefromLMDB, datareader_, placeholders::_1), arguments);
             }
