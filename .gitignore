@@ -4,3 +4,4 @@ logfiles/
 CMakeCache.txt
 CMakeFiles/
 *.cmake
+test
