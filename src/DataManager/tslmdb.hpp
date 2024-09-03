@@ -44,7 +44,7 @@ namespace ts{
                 return dbi_;
             }
 
-            inline bool open(const char* path, size_t mapsize = 16*1024*1024){
+            inline bool open(const char* path, long long mapsize = 1099511627776){
                 int ret = access(path, 0);
 
                 if(ret!=0){ //does not exist
