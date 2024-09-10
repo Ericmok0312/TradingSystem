@@ -165,11 +165,13 @@ namespace ts{
     };
 
 
-    typedef pair<double,double> PositionInformation;
+    typedef pair<double,double> PositionInformation; //volume, price, negative volume indicates a short position
+
 
     class Position{
         private:
             PositionInformation pos_;
+
             string code_;
             string exg_;
         public:

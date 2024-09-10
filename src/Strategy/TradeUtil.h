@@ -78,13 +78,18 @@ namespace ts{
             void addStrategy(IStrategy* stg);
 
             
-
             //Strategy Interface
             void SendMessage(shared_ptr<Msg> msg);
             void LoggingInfo(const char * info);
-            const char* getCode(){return code_.c_str();}
-            const char* getExchange(){return exg_.c_str();}
+            const char* getCode()const {return code_.c_str();}
+            const char* getExchange() const {return exg_.c_str();}
+            const Position* getPosition() const {return &position_;}
             unique_ptr<BaseData> StratgeyGetOneTimeData(shared_ptr<Msg> msg2futu, shared_ptr<Msg> msg, const char* returnName);
+            void StgExitAndLong(double price, double volume, const char* msg){};
+            void StgExitAndShort(double price, double volume, const char* msg){};
+            void StgEnterLong(double price, double volume, const char* msg){};
+            void StgEnterShort(double price, double volume, const char* msg){};
+
 
     };
 }

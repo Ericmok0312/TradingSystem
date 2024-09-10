@@ -72,6 +72,8 @@ namespace ts{
             double buy = temp->oPrice_ + k1 * range;
             double sell = temp->oPrice_ - k2 * range;
 
+
+            //writing message to UI display using RapidJson, to be encapsulated
             rapidjson::Document d;
             d.SetObject();
 
@@ -80,6 +82,28 @@ namespace ts{
             d.AddMember("cPrice", rapidjson::Value(temp->cPrice_), d.GetAllocator());
             d.AddMember("updateTimestamp",  rapidjson::Value(temp->updateTimestamp_), d.GetAllocator());
             Json2String(d, dataMsg->data_);
+
+
+            uint32_t tradUnit = 1;
+            //Trading decision
+
+            if (ge(temp->cPrice_, buy)){
+                if(lt(ctx->getPosition()->getData()->first, 0.0)){
+                    ctx->StgExitAndLong(temp->cPrice_, ctx->getPosition()->getData()->first*2, "DT_ExitAndLong"); // tradeUnit*2 indicating buy in the opposite the current position with quantity multiplied by 2
+                }//volume<0 indicating short position
+                else if(eq(ctx->getPosition()->getData()->first, 0.0)){
+                    ctx->StgEnterLong(temp->cPrice_, tradUnit, "DT_EnterLong");
+                }
+            }
+            else if(le(temp->cPrice_, sell)){
+                if(lt(ctx->getPosition()->getData()->first, 0.0)){
+                    ctx->StgExitAndShort(temp->cPrice_, ctx->getPosition()->getData()->first*2, "DT_ExitAndShort");
+                }
+                else if(eq(ctx->getPosition()->getData()->first, 0.0)){
+                    ctx->StgEnterShort(temp->cPrice_, tradUnit, "DT_EnterShort");
+                }
+            }   
+            
 
             ctx->SendMessage(dataMsg);
             ctx->LoggingInfo(dataMsg->data_.c_str());

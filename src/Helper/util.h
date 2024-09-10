@@ -145,6 +145,37 @@ namespace ts{
 
 
     }
+
+
+    const double EPSILON = 1e-8;
+
+    inline bool eq(double a, double b = 0.0) noexcept
+	{
+		return(fabs(a - b) < EPSILON);
+	}
+
+	inline bool gt(double a, double b = 0.0) noexcept
+	{
+		return a - b > EPSILON;
+	}
+
+	inline bool lt(double a, double b = 0.0) noexcept
+	{
+		return b - a > EPSILON;
+	}
+
+	inline bool ge(double a, double b = 0.0) noexcept
+	{
+		return gt(a, b) || eq(a, b);
+	}
+
+	inline bool le(double a, double b = 0.0) noexcept
+	{
+		return lt(a, b) || eq(a, b);
+	}
+
+
+
 }
 
 
