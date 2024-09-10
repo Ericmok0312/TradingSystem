@@ -69,8 +69,14 @@ The communication within the server is done by memory sharing(kungfu) and messag
 
 
 ## TODO
-1. transfer Loader into StrategyCtx
-2. encapsulate rapidjson
-3. transfer initialization parameters into encapsulated rapidjson 
-4. implementing DualThrust 
-5. implementing strategyEngine
+C++ engine
+1. Implementation of Position
+2. Create BasicDataSlice to replace the base class of slice objects to reduce type checking
+3. Encapsulate RapidJson to replace ARG
+4. Integrate everything into one StartEngine
+
+Typescript UI
+1. Setting up template objects needed => may not use the JPM module?
+
+Typescript Server
+1. Implementation of better Messenger to receive data from C++ engine and send data to typescript UI
