@@ -1,4 +1,4 @@
-set(CMAKE_TOOLCHAIN_FILE "/home/emk/vcpkg/scripts/buildsystems/vcpkg.cmake"
+set(CMAKE_TOOLCHAIN_FILE "/home/Eric/vcpkg/scripts/buildsystems/vcpkg.cmake"
   CACHE STRING "Vcpkg toolchain file")
 
 

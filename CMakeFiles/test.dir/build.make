@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/emk/Coding/Trading_system/TradingSystem
+CMAKE_SOURCE_DIR = /data/home/Eric/TradingSystem
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/emk/Coding/Trading_system/TradingSystem
+CMAKE_BINARY_DIR = /data/home/Eric/TradingSystem
 
 # Include any dependencies generated for this target.
 include CMakeFiles/test.dir/depend.make
@@ -72,184 +72,184 @@ include CMakeFiles/test.dir/flags.make
 CMakeFiles/test.dir/main.cpp.o: CMakeFiles/test.dir/flags.make
 CMakeFiles/test.dir/main.cpp.o: main.cpp
 CMakeFiles/test.dir/main.cpp.o: CMakeFiles/test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/emk/Coding/Trading_system/TradingSystem/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/test.dir/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/main.cpp.o -MF CMakeFiles/test.dir/main.cpp.o.d -o CMakeFiles/test.dir/main.cpp.o -c /home/emk/Coding/Trading_system/TradingSystem/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/home/Eric/TradingSystem/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/test.dir/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/main.cpp.o -MF CMakeFiles/test.dir/main.cpp.o.d -o CMakeFiles/test.dir/main.cpp.o -c /data/home/Eric/TradingSystem/main.cpp
 
 CMakeFiles/test.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/emk/Coding/Trading_system/TradingSystem/main.cpp > CMakeFiles/test.dir/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /data/home/Eric/TradingSystem/main.cpp > CMakeFiles/test.dir/main.cpp.i
 
 CMakeFiles/test.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/emk/Coding/Trading_system/TradingSystem/main.cpp -o CMakeFiles/test.dir/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /data/home/Eric/TradingSystem/main.cpp -o CMakeFiles/test.dir/main.cpp.s
 
 CMakeFiles/test.dir/src/DataManager/DataManager.cpp.o: CMakeFiles/test.dir/flags.make
 CMakeFiles/test.dir/src/DataManager/DataManager.cpp.o: src/DataManager/DataManager.cpp
 CMakeFiles/test.dir/src/DataManager/DataManager.cpp.o: CMakeFiles/test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/emk/Coding/Trading_system/TradingSystem/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/test.dir/src/DataManager/DataManager.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/src/DataManager/DataManager.cpp.o -MF CMakeFiles/test.dir/src/DataManager/DataManager.cpp.o.d -o CMakeFiles/test.dir/src/DataManager/DataManager.cpp.o -c /home/emk/Coding/Trading_system/TradingSystem/src/DataManager/DataManager.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/home/Eric/TradingSystem/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/test.dir/src/DataManager/DataManager.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/src/DataManager/DataManager.cpp.o -MF CMakeFiles/test.dir/src/DataManager/DataManager.cpp.o.d -o CMakeFiles/test.dir/src/DataManager/DataManager.cpp.o -c /data/home/Eric/TradingSystem/src/DataManager/DataManager.cpp
 
 CMakeFiles/test.dir/src/DataManager/DataManager.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test.dir/src/DataManager/DataManager.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/emk/Coding/Trading_system/TradingSystem/src/DataManager/DataManager.cpp > CMakeFiles/test.dir/src/DataManager/DataManager.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /data/home/Eric/TradingSystem/src/DataManager/DataManager.cpp > CMakeFiles/test.dir/src/DataManager/DataManager.cpp.i
 
 CMakeFiles/test.dir/src/DataManager/DataManager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test.dir/src/DataManager/DataManager.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/emk/Coding/Trading_system/TradingSystem/src/DataManager/DataManager.cpp -o CMakeFiles/test.dir/src/DataManager/DataManager.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /data/home/Eric/TradingSystem/src/DataManager/DataManager.cpp -o CMakeFiles/test.dir/src/DataManager/DataManager.cpp.s
 
 CMakeFiles/test.dir/src/DataManager/DataReader.cpp.o: CMakeFiles/test.dir/flags.make
 CMakeFiles/test.dir/src/DataManager/DataReader.cpp.o: src/DataManager/DataReader.cpp
 CMakeFiles/test.dir/src/DataManager/DataReader.cpp.o: CMakeFiles/test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/emk/Coding/Trading_system/TradingSystem/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/test.dir/src/DataManager/DataReader.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/src/DataManager/DataReader.cpp.o -MF CMakeFiles/test.dir/src/DataManager/DataReader.cpp.o.d -o CMakeFiles/test.dir/src/DataManager/DataReader.cpp.o -c /home/emk/Coding/Trading_system/TradingSystem/src/DataManager/DataReader.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/home/Eric/TradingSystem/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/test.dir/src/DataManager/DataReader.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/src/DataManager/DataReader.cpp.o -MF CMakeFiles/test.dir/src/DataManager/DataReader.cpp.o.d -o CMakeFiles/test.dir/src/DataManager/DataReader.cpp.o -c /data/home/Eric/TradingSystem/src/DataManager/DataReader.cpp
 
 CMakeFiles/test.dir/src/DataManager/DataReader.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test.dir/src/DataManager/DataReader.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/emk/Coding/Trading_system/TradingSystem/src/DataManager/DataReader.cpp > CMakeFiles/test.dir/src/DataManager/DataReader.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /data/home/Eric/TradingSystem/src/DataManager/DataReader.cpp > CMakeFiles/test.dir/src/DataManager/DataReader.cpp.i
 
 CMakeFiles/test.dir/src/DataManager/DataReader.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test.dir/src/DataManager/DataReader.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/emk/Coding/Trading_system/TradingSystem/src/DataManager/DataReader.cpp -o CMakeFiles/test.dir/src/DataManager/DataReader.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /data/home/Eric/TradingSystem/src/DataManager/DataReader.cpp -o CMakeFiles/test.dir/src/DataManager/DataReader.cpp.s
 
 CMakeFiles/test.dir/src/DataManager/DataWriter.cpp.o: CMakeFiles/test.dir/flags.make
 CMakeFiles/test.dir/src/DataManager/DataWriter.cpp.o: src/DataManager/DataWriter.cpp
 CMakeFiles/test.dir/src/DataManager/DataWriter.cpp.o: CMakeFiles/test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/emk/Coding/Trading_system/TradingSystem/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/test.dir/src/DataManager/DataWriter.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/src/DataManager/DataWriter.cpp.o -MF CMakeFiles/test.dir/src/DataManager/DataWriter.cpp.o.d -o CMakeFiles/test.dir/src/DataManager/DataWriter.cpp.o -c /home/emk/Coding/Trading_system/TradingSystem/src/DataManager/DataWriter.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/home/Eric/TradingSystem/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/test.dir/src/DataManager/DataWriter.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/src/DataManager/DataWriter.cpp.o -MF CMakeFiles/test.dir/src/DataManager/DataWriter.cpp.o.d -o CMakeFiles/test.dir/src/DataManager/DataWriter.cpp.o -c /data/home/Eric/TradingSystem/src/DataManager/DataWriter.cpp
 
 CMakeFiles/test.dir/src/DataManager/DataWriter.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test.dir/src/DataManager/DataWriter.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/emk/Coding/Trading_system/TradingSystem/src/DataManager/DataWriter.cpp > CMakeFiles/test.dir/src/DataManager/DataWriter.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /data/home/Eric/TradingSystem/src/DataManager/DataWriter.cpp > CMakeFiles/test.dir/src/DataManager/DataWriter.cpp.i
 
 CMakeFiles/test.dir/src/DataManager/DataWriter.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test.dir/src/DataManager/DataWriter.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/emk/Coding/Trading_system/TradingSystem/src/DataManager/DataWriter.cpp -o CMakeFiles/test.dir/src/DataManager/DataWriter.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /data/home/Eric/TradingSystem/src/DataManager/DataWriter.cpp -o CMakeFiles/test.dir/src/DataManager/DataWriter.cpp.s
 
 CMakeFiles/test.dir/src/FUTU/FutuEngine.cpp.o: CMakeFiles/test.dir/flags.make
 CMakeFiles/test.dir/src/FUTU/FutuEngine.cpp.o: src/FUTU/FutuEngine.cpp
 CMakeFiles/test.dir/src/FUTU/FutuEngine.cpp.o: CMakeFiles/test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/emk/Coding/Trading_system/TradingSystem/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/test.dir/src/FUTU/FutuEngine.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/src/FUTU/FutuEngine.cpp.o -MF CMakeFiles/test.dir/src/FUTU/FutuEngine.cpp.o.d -o CMakeFiles/test.dir/src/FUTU/FutuEngine.cpp.o -c /home/emk/Coding/Trading_system/TradingSystem/src/FUTU/FutuEngine.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/home/Eric/TradingSystem/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/test.dir/src/FUTU/FutuEngine.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/src/FUTU/FutuEngine.cpp.o -MF CMakeFiles/test.dir/src/FUTU/FutuEngine.cpp.o.d -o CMakeFiles/test.dir/src/FUTU/FutuEngine.cpp.o -c /data/home/Eric/TradingSystem/src/FUTU/FutuEngine.cpp
 
 CMakeFiles/test.dir/src/FUTU/FutuEngine.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test.dir/src/FUTU/FutuEngine.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/emk/Coding/Trading_system/TradingSystem/src/FUTU/FutuEngine.cpp > CMakeFiles/test.dir/src/FUTU/FutuEngine.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /data/home/Eric/TradingSystem/src/FUTU/FutuEngine.cpp > CMakeFiles/test.dir/src/FUTU/FutuEngine.cpp.i
 
 CMakeFiles/test.dir/src/FUTU/FutuEngine.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test.dir/src/FUTU/FutuEngine.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/emk/Coding/Trading_system/TradingSystem/src/FUTU/FutuEngine.cpp -o CMakeFiles/test.dir/src/FUTU/FutuEngine.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /data/home/Eric/TradingSystem/src/FUTU/FutuEngine.cpp -o CMakeFiles/test.dir/src/FUTU/FutuEngine.cpp.s
 
 CMakeFiles/test.dir/src/Helper/logger.cpp.o: CMakeFiles/test.dir/flags.make
 CMakeFiles/test.dir/src/Helper/logger.cpp.o: src/Helper/logger.cpp
 CMakeFiles/test.dir/src/Helper/logger.cpp.o: CMakeFiles/test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/emk/Coding/Trading_system/TradingSystem/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/test.dir/src/Helper/logger.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/src/Helper/logger.cpp.o -MF CMakeFiles/test.dir/src/Helper/logger.cpp.o.d -o CMakeFiles/test.dir/src/Helper/logger.cpp.o -c /home/emk/Coding/Trading_system/TradingSystem/src/Helper/logger.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/home/Eric/TradingSystem/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/test.dir/src/Helper/logger.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/src/Helper/logger.cpp.o -MF CMakeFiles/test.dir/src/Helper/logger.cpp.o.d -o CMakeFiles/test.dir/src/Helper/logger.cpp.o -c /data/home/Eric/TradingSystem/src/Helper/logger.cpp
 
 CMakeFiles/test.dir/src/Helper/logger.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test.dir/src/Helper/logger.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/emk/Coding/Trading_system/TradingSystem/src/Helper/logger.cpp > CMakeFiles/test.dir/src/Helper/logger.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /data/home/Eric/TradingSystem/src/Helper/logger.cpp > CMakeFiles/test.dir/src/Helper/logger.cpp.i
 
 CMakeFiles/test.dir/src/Helper/logger.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test.dir/src/Helper/logger.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/emk/Coding/Trading_system/TradingSystem/src/Helper/logger.cpp -o CMakeFiles/test.dir/src/Helper/logger.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /data/home/Eric/TradingSystem/src/Helper/logger.cpp -o CMakeFiles/test.dir/src/Helper/logger.cpp.s
 
 CMakeFiles/test.dir/src/Interface/IEngine.cpp.o: CMakeFiles/test.dir/flags.make
 CMakeFiles/test.dir/src/Interface/IEngine.cpp.o: src/Interface/IEngine.cpp
 CMakeFiles/test.dir/src/Interface/IEngine.cpp.o: CMakeFiles/test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/emk/Coding/Trading_system/TradingSystem/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/test.dir/src/Interface/IEngine.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/src/Interface/IEngine.cpp.o -MF CMakeFiles/test.dir/src/Interface/IEngine.cpp.o.d -o CMakeFiles/test.dir/src/Interface/IEngine.cpp.o -c /home/emk/Coding/Trading_system/TradingSystem/src/Interface/IEngine.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/home/Eric/TradingSystem/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/test.dir/src/Interface/IEngine.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/src/Interface/IEngine.cpp.o -MF CMakeFiles/test.dir/src/Interface/IEngine.cpp.o.d -o CMakeFiles/test.dir/src/Interface/IEngine.cpp.o -c /data/home/Eric/TradingSystem/src/Interface/IEngine.cpp
 
 CMakeFiles/test.dir/src/Interface/IEngine.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test.dir/src/Interface/IEngine.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/emk/Coding/Trading_system/TradingSystem/src/Interface/IEngine.cpp > CMakeFiles/test.dir/src/Interface/IEngine.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /data/home/Eric/TradingSystem/src/Interface/IEngine.cpp > CMakeFiles/test.dir/src/Interface/IEngine.cpp.i
 
 CMakeFiles/test.dir/src/Interface/IEngine.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test.dir/src/Interface/IEngine.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/emk/Coding/Trading_system/TradingSystem/src/Interface/IEngine.cpp -o CMakeFiles/test.dir/src/Interface/IEngine.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /data/home/Eric/TradingSystem/src/Interface/IEngine.cpp -o CMakeFiles/test.dir/src/Interface/IEngine.cpp.s
 
 CMakeFiles/test.dir/src/Interface/IMessenger.cpp.o: CMakeFiles/test.dir/flags.make
 CMakeFiles/test.dir/src/Interface/IMessenger.cpp.o: src/Interface/IMessenger.cpp
 CMakeFiles/test.dir/src/Interface/IMessenger.cpp.o: CMakeFiles/test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/emk/Coding/Trading_system/TradingSystem/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/test.dir/src/Interface/IMessenger.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/src/Interface/IMessenger.cpp.o -MF CMakeFiles/test.dir/src/Interface/IMessenger.cpp.o.d -o CMakeFiles/test.dir/src/Interface/IMessenger.cpp.o -c /home/emk/Coding/Trading_system/TradingSystem/src/Interface/IMessenger.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/home/Eric/TradingSystem/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/test.dir/src/Interface/IMessenger.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/src/Interface/IMessenger.cpp.o -MF CMakeFiles/test.dir/src/Interface/IMessenger.cpp.o.d -o CMakeFiles/test.dir/src/Interface/IMessenger.cpp.o -c /data/home/Eric/TradingSystem/src/Interface/IMessenger.cpp
 
 CMakeFiles/test.dir/src/Interface/IMessenger.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test.dir/src/Interface/IMessenger.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/emk/Coding/Trading_system/TradingSystem/src/Interface/IMessenger.cpp > CMakeFiles/test.dir/src/Interface/IMessenger.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /data/home/Eric/TradingSystem/src/Interface/IMessenger.cpp > CMakeFiles/test.dir/src/Interface/IMessenger.cpp.i
 
 CMakeFiles/test.dir/src/Interface/IMessenger.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test.dir/src/Interface/IMessenger.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/emk/Coding/Trading_system/TradingSystem/src/Interface/IMessenger.cpp -o CMakeFiles/test.dir/src/Interface/IMessenger.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /data/home/Eric/TradingSystem/src/Interface/IMessenger.cpp -o CMakeFiles/test.dir/src/Interface/IMessenger.cpp.s
 
 CMakeFiles/test.dir/src/Interface/datastruture.cpp.o: CMakeFiles/test.dir/flags.make
 CMakeFiles/test.dir/src/Interface/datastruture.cpp.o: src/Interface/datastruture.cpp
 CMakeFiles/test.dir/src/Interface/datastruture.cpp.o: CMakeFiles/test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/emk/Coding/Trading_system/TradingSystem/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/test.dir/src/Interface/datastruture.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/src/Interface/datastruture.cpp.o -MF CMakeFiles/test.dir/src/Interface/datastruture.cpp.o.d -o CMakeFiles/test.dir/src/Interface/datastruture.cpp.o -c /home/emk/Coding/Trading_system/TradingSystem/src/Interface/datastruture.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/home/Eric/TradingSystem/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/test.dir/src/Interface/datastruture.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/src/Interface/datastruture.cpp.o -MF CMakeFiles/test.dir/src/Interface/datastruture.cpp.o.d -o CMakeFiles/test.dir/src/Interface/datastruture.cpp.o -c /data/home/Eric/TradingSystem/src/Interface/datastruture.cpp
 
 CMakeFiles/test.dir/src/Interface/datastruture.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test.dir/src/Interface/datastruture.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/emk/Coding/Trading_system/TradingSystem/src/Interface/datastruture.cpp > CMakeFiles/test.dir/src/Interface/datastruture.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /data/home/Eric/TradingSystem/src/Interface/datastruture.cpp > CMakeFiles/test.dir/src/Interface/datastruture.cpp.i
 
 CMakeFiles/test.dir/src/Interface/datastruture.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test.dir/src/Interface/datastruture.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/emk/Coding/Trading_system/TradingSystem/src/Interface/datastruture.cpp -o CMakeFiles/test.dir/src/Interface/datastruture.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /data/home/Eric/TradingSystem/src/Interface/datastruture.cpp -o CMakeFiles/test.dir/src/Interface/datastruture.cpp.s
 
 CMakeFiles/test.dir/src/Strategy/DualThrust.cpp.o: CMakeFiles/test.dir/flags.make
 CMakeFiles/test.dir/src/Strategy/DualThrust.cpp.o: src/Strategy/DualThrust.cpp
 CMakeFiles/test.dir/src/Strategy/DualThrust.cpp.o: CMakeFiles/test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/emk/Coding/Trading_system/TradingSystem/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/test.dir/src/Strategy/DualThrust.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/src/Strategy/DualThrust.cpp.o -MF CMakeFiles/test.dir/src/Strategy/DualThrust.cpp.o.d -o CMakeFiles/test.dir/src/Strategy/DualThrust.cpp.o -c /home/emk/Coding/Trading_system/TradingSystem/src/Strategy/DualThrust.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/home/Eric/TradingSystem/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/test.dir/src/Strategy/DualThrust.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/src/Strategy/DualThrust.cpp.o -MF CMakeFiles/test.dir/src/Strategy/DualThrust.cpp.o.d -o CMakeFiles/test.dir/src/Strategy/DualThrust.cpp.o -c /data/home/Eric/TradingSystem/src/Strategy/DualThrust.cpp
 
 CMakeFiles/test.dir/src/Strategy/DualThrust.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test.dir/src/Strategy/DualThrust.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/emk/Coding/Trading_system/TradingSystem/src/Strategy/DualThrust.cpp > CMakeFiles/test.dir/src/Strategy/DualThrust.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /data/home/Eric/TradingSystem/src/Strategy/DualThrust.cpp > CMakeFiles/test.dir/src/Strategy/DualThrust.cpp.i
 
 CMakeFiles/test.dir/src/Strategy/DualThrust.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test.dir/src/Strategy/DualThrust.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/emk/Coding/Trading_system/TradingSystem/src/Strategy/DualThrust.cpp -o CMakeFiles/test.dir/src/Strategy/DualThrust.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /data/home/Eric/TradingSystem/src/Strategy/DualThrust.cpp -o CMakeFiles/test.dir/src/Strategy/DualThrust.cpp.s
 
 CMakeFiles/test.dir/src/Strategy/StrategyEngine.cpp.o: CMakeFiles/test.dir/flags.make
 CMakeFiles/test.dir/src/Strategy/StrategyEngine.cpp.o: src/Strategy/StrategyEngine.cpp
 CMakeFiles/test.dir/src/Strategy/StrategyEngine.cpp.o: CMakeFiles/test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/emk/Coding/Trading_system/TradingSystem/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/test.dir/src/Strategy/StrategyEngine.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/src/Strategy/StrategyEngine.cpp.o -MF CMakeFiles/test.dir/src/Strategy/StrategyEngine.cpp.o.d -o CMakeFiles/test.dir/src/Strategy/StrategyEngine.cpp.o -c /home/emk/Coding/Trading_system/TradingSystem/src/Strategy/StrategyEngine.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/home/Eric/TradingSystem/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/test.dir/src/Strategy/StrategyEngine.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/src/Strategy/StrategyEngine.cpp.o -MF CMakeFiles/test.dir/src/Strategy/StrategyEngine.cpp.o.d -o CMakeFiles/test.dir/src/Strategy/StrategyEngine.cpp.o -c /data/home/Eric/TradingSystem/src/Strategy/StrategyEngine.cpp
 
 CMakeFiles/test.dir/src/Strategy/StrategyEngine.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test.dir/src/Strategy/StrategyEngine.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/emk/Coding/Trading_system/TradingSystem/src/Strategy/StrategyEngine.cpp > CMakeFiles/test.dir/src/Strategy/StrategyEngine.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /data/home/Eric/TradingSystem/src/Strategy/StrategyEngine.cpp > CMakeFiles/test.dir/src/Strategy/StrategyEngine.cpp.i
 
 CMakeFiles/test.dir/src/Strategy/StrategyEngine.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test.dir/src/Strategy/StrategyEngine.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/emk/Coding/Trading_system/TradingSystem/src/Strategy/StrategyEngine.cpp -o CMakeFiles/test.dir/src/Strategy/StrategyEngine.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /data/home/Eric/TradingSystem/src/Strategy/StrategyEngine.cpp -o CMakeFiles/test.dir/src/Strategy/StrategyEngine.cpp.s
 
 CMakeFiles/test.dir/src/Strategy/TestStrategy.cpp.o: CMakeFiles/test.dir/flags.make
 CMakeFiles/test.dir/src/Strategy/TestStrategy.cpp.o: src/Strategy/TestStrategy.cpp
 CMakeFiles/test.dir/src/Strategy/TestStrategy.cpp.o: CMakeFiles/test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/emk/Coding/Trading_system/TradingSystem/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/test.dir/src/Strategy/TestStrategy.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/src/Strategy/TestStrategy.cpp.o -MF CMakeFiles/test.dir/src/Strategy/TestStrategy.cpp.o.d -o CMakeFiles/test.dir/src/Strategy/TestStrategy.cpp.o -c /home/emk/Coding/Trading_system/TradingSystem/src/Strategy/TestStrategy.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/home/Eric/TradingSystem/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/test.dir/src/Strategy/TestStrategy.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/src/Strategy/TestStrategy.cpp.o -MF CMakeFiles/test.dir/src/Strategy/TestStrategy.cpp.o.d -o CMakeFiles/test.dir/src/Strategy/TestStrategy.cpp.o -c /data/home/Eric/TradingSystem/src/Strategy/TestStrategy.cpp
 
 CMakeFiles/test.dir/src/Strategy/TestStrategy.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test.dir/src/Strategy/TestStrategy.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/emk/Coding/Trading_system/TradingSystem/src/Strategy/TestStrategy.cpp > CMakeFiles/test.dir/src/Strategy/TestStrategy.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /data/home/Eric/TradingSystem/src/Strategy/TestStrategy.cpp > CMakeFiles/test.dir/src/Strategy/TestStrategy.cpp.i
 
 CMakeFiles/test.dir/src/Strategy/TestStrategy.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test.dir/src/Strategy/TestStrategy.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/emk/Coding/Trading_system/TradingSystem/src/Strategy/TestStrategy.cpp -o CMakeFiles/test.dir/src/Strategy/TestStrategy.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /data/home/Eric/TradingSystem/src/Strategy/TestStrategy.cpp -o CMakeFiles/test.dir/src/Strategy/TestStrategy.cpp.s
 
 CMakeFiles/test.dir/src/Strategy/TradeUtil.cpp.o: CMakeFiles/test.dir/flags.make
 CMakeFiles/test.dir/src/Strategy/TradeUtil.cpp.o: src/Strategy/TradeUtil.cpp
 CMakeFiles/test.dir/src/Strategy/TradeUtil.cpp.o: CMakeFiles/test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/emk/Coding/Trading_system/TradingSystem/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/test.dir/src/Strategy/TradeUtil.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/src/Strategy/TradeUtil.cpp.o -MF CMakeFiles/test.dir/src/Strategy/TradeUtil.cpp.o.d -o CMakeFiles/test.dir/src/Strategy/TradeUtil.cpp.o -c /home/emk/Coding/Trading_system/TradingSystem/src/Strategy/TradeUtil.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/home/Eric/TradingSystem/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/test.dir/src/Strategy/TradeUtil.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/src/Strategy/TradeUtil.cpp.o -MF CMakeFiles/test.dir/src/Strategy/TradeUtil.cpp.o.d -o CMakeFiles/test.dir/src/Strategy/TradeUtil.cpp.o -c /data/home/Eric/TradingSystem/src/Strategy/TradeUtil.cpp
 
 CMakeFiles/test.dir/src/Strategy/TradeUtil.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test.dir/src/Strategy/TradeUtil.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/emk/Coding/Trading_system/TradingSystem/src/Strategy/TradeUtil.cpp > CMakeFiles/test.dir/src/Strategy/TradeUtil.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /data/home/Eric/TradingSystem/src/Strategy/TradeUtil.cpp > CMakeFiles/test.dir/src/Strategy/TradeUtil.cpp.i
 
 CMakeFiles/test.dir/src/Strategy/TradeUtil.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test.dir/src/Strategy/TradeUtil.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/emk/Coding/Trading_system/TradingSystem/src/Strategy/TradeUtil.cpp -o CMakeFiles/test.dir/src/Strategy/TradeUtil.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /data/home/Eric/TradingSystem/src/Strategy/TradeUtil.cpp -o CMakeFiles/test.dir/src/Strategy/TradeUtil.cpp.s
 
 # Object files for target test
 test_OBJECTS = \
@@ -284,9 +284,9 @@ test: CMakeFiles/test.dir/src/Strategy/StrategyEngine.cpp.o
 test: CMakeFiles/test.dir/src/Strategy/TestStrategy.cpp.o
 test: CMakeFiles/test.dir/src/Strategy/TradeUtil.cpp.o
 test: CMakeFiles/test.dir/build.make
-test: /home/emk/vcpkg/installed/x64-linux/debug/lib/libzmq.a
+test: /home/Eric/vcpkg/installed/x64-linux/debug/lib/libzmq.a
 test: CMakeFiles/test.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/emk/Coding/Trading_system/TradingSystem/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX executable test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/data/home/Eric/TradingSystem/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX executable test"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/test.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -298,6 +298,6 @@ CMakeFiles/test.dir/clean:
 .PHONY : CMakeFiles/test.dir/clean
 
 CMakeFiles/test.dir/depend:
-	cd /home/emk/Coding/Trading_system/TradingSystem && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/emk/Coding/Trading_system/TradingSystem /home/emk/Coding/Trading_system/TradingSystem /home/emk/Coding/Trading_system/TradingSystem /home/emk/Coding/Trading_system/TradingSystem /home/emk/Coding/Trading_system/TradingSystem/CMakeFiles/test.dir/DependInfo.cmake --color=$(COLOR)
+	cd /data/home/Eric/TradingSystem && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /data/home/Eric/TradingSystem /data/home/Eric/TradingSystem /data/home/Eric/TradingSystem /data/home/Eric/TradingSystem /data/home/Eric/TradingSystem/CMakeFiles/test.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/test.dir/depend
 
